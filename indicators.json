@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ind-001",
+    "category": "CONTACT",
+    "title": "Kontaktförsök via privata kanaler",
+    "desc": "En extern person som normalt kontaktar organisationen via tjänstekanaler börjar skicka meddelanden via privat e-post, telefon eller sociala medier.",
+    "severity": "HIGH",
+    "actors": ["criminal-network", "foreign-power"],
+    "sectors": ["ALL"],
+    "source": "Brå 2024"
+  },
+  {
+    "id": "ind-002",
+    "category": "BEHAVIOUR",
+    "title": "Motstånd mot rotation eller ledighetsuttag",
+    "desc": "Medarbetare med känslig tillgång undviker semester, rotation eller ledighet utan sakliga skäl. Kan indikera oro för att avvikelser ska upptäckas i frånvaro.",
+    "severity": "MEDIUM",
+    "actors": ["criminal-network", "foreign-power"],
+    "sectors": ["IT", "CRIMINAL_JUSTICE", "AUTHORITY"],
+    "source": "CERT-SE; intern riskhanteringsguide"
+  },
+  {
+    "id": "ind-003",
+    "category": "ACCESS",
+    "title": "Slagningar utan koppling till arbetsuppgifter",
+    "desc": "Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete, särskilt om slagningarna är återkommande.",
+    "severity": "HIGH",
+    "actors": ["criminal-network"],
+    "sectors": ["CRIMINAL_JUSTICE", "SOCIAL", "AUTHORITY"],
+    "source": "Riksrevisionen 2023; Brå 2024"
+  },
+  {
+    "id": "ind-004",
+    "category": "SOCIAL",
+    "title": "Plötslig ekonomisk förbättring utan förklaring",
+    "desc": "Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd lön och ekonomisk situation.",
+    "severity": "HIGH",
+    "actors": ["criminal-network", "foreign-power", "economic-interest"],
+    "sectors": ["ALL"],
+    "source": "CIA insider threat indicators; Säpo"
+  },
+  {
+    "id": "ind-005",
+    "category": "DIGITAL",
+    "title": "Uthängning av personuppgifter online",
+    "desc": "Medarbetarens namn, adress, bild eller familjeuppgifter publiceras på externa plattformar, ofta koordinerat och i samband med ett pågående ärende.",
+    "severity": "HIGH",
+    "actors": ["extremist"],
+    "sectors": ["SOCIAL", "COMMS"],
+    "source": "Statskontoret 2024"
+  },
+  {
+    "id": "ind-006",
+    "category": "PROCUREMENT",
+    "title": "Leverantörskontakt utanför dokumenterade kanaler",
+    "desc": "Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen.",
+    "severity": "HIGH",
+    "actors": ["economic-interest", "criminal-network"],
+    "sectors": ["PROCUREMENT"],
+    "source": "Ekobrottsmyndigheten; Upphandlingsmyndigheten"
+  },
+  {
+    "id": "ind-007",
+    "category": "BEHAVIOUR",
+    "title": "Onormalt intresse för kollegors ärenden",
+    "desc": "En medarbetare frågar om kollegors specifika ärenden, tillgångar eller rutiner utan tydlig arbetsmässig anledning.",
+    "severity": "MEDIUM",
+    "actors": ["criminal-network", "foreign-power"],
+    "sectors": ["ALL"],
+    "source": "Brå 2024 – Möjliggörare"
+  },
+  {
+    "id": "ind-008",
+    "category": "SOCIAL",
+    "title": "Nya relationer kring känsliga ärenden",
+    "desc": "En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett känsligt eller högt profil-ärende.",
+    "severity": "MEDIUM",
+    "actors": ["criminal-network", "economic-interest"],
+    "sectors": ["SOCIAL", "PROCUREMENT", "PERMITS"],
+    "source": "Brå 2024"
+  },
+  {
+    "id": "ind-009",
+    "category": "DIGITAL",
+    "title": "Samordnade narrativ mot enskild tjänsteperson",
+    "desc": "Flera konton på sociala medier sprider likartade anklagelser eller negativa uppgifter om en specifik medarbetare under kort tid — möjlig koordination.",
+    "severity": "HIGH",
+    "actors": ["extremist", "foreign-power"],
+    "sectors": ["COMMS", "SOCIAL", "AUTHORITY"],
+    "source": "Statskontoret 2024; MSB FIMI 2024"
+  },
+  {
+    "id": "ind-010",
+    "category": "PROCUREMENT",
+    "title": "Konsulter med ostyrkt bred behörighet",
+    "desc": "Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov, utan formell behörighetsgranskning.",
+    "severity": "HIGH",
+    "actors": ["criminal-network", "economic-interest", "foreign-power"],
+    "sectors": ["IT", "PROCUREMENT"],
+    "source": "Riksrevisionen 2023"
+  },
+  {
+    "id": "ind-011",
+    "category": "BEHAVIOUR",
+    "title": "Försämrad prestation kopplad till externt tryck",
+    "desc": "Medarbetare vars prestationer försämras markant utan intern orsak — kan indikera extern pressning, beroende eller psykologisk belastning.",
+    "severity": "MEDIUM",
+    "actors": ["criminal-network", "extremist"],
+    "sectors": ["ALL"],
+    "source": "Intern riskhanteringsguide; Statskontoret"
+  },
+  {
+    "id": "ind-012",
+    "category": "ACCESS",
+    "title": "Tillgång som lever kvar efter ändrad roll",
+    "desc": "Medarbetare, konsulter eller avgångna anställda som fortfarande har systemåtkomst, behörigheter eller passertillstånd efter att behov har upphört.",
+    "severity": "HIGH",
+    "actors": ["criminal-network", "foreign-power"],
+    "sectors": ["IT", "CRIMINAL_JUSTICE", "AUTHORITY"],
+    "source": "Riksrevisionen 2023"
+  }
+]

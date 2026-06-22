@@ -1,0 +1,82 @@
+[
+  {
+    "id": "criminal-network",
+    "name": "Kriminellt nätverk",
+    "sub": "Organiserad brottslighet",
+    "color": "#C45C2E",
+    "goal": "Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst",
+    "horizon": "Kort–medellång",
+    "methods": ["Relationsbygge", "Möjliggörare", "Hot och skrämseltaktik", "Vänskapskorruption", "Informationsinhämtning"],
+    "sectors": ["SOCIAL", "PROCUREMENT", "CRIMINAL_JUSTICE", "PERMITS"],
+    "exposure": "HIGH",
+    "note": "Kriminella nätverk börjar ofta rekrytering i den egna familje- och bekantskapskretsen för att identifiera personer med användbara arbeten.",
+    "source": "Brå 2024 – Möjliggörare i kriminella nätverk",
+    "indicators": [
+      "Kontaktförsök från okända med koppling till ärenden",
+      "Erbjudanden om tjänster, presenter eller socialt umgänge",
+      "Otillbörligt intresse för vem som hanterar specifika ärenden",
+      "Frågor om interna rutiner, frånvaro eller driftstörningar"
+    ],
+    "cases": ["case-001", "case-002", "case-003", "case-007", "case-008"]
+  },
+  {
+    "id": "foreign-power",
+    "name": "Främmande makt",
+    "sub": "Statligt eller statsunderstött",
+    "color": "#B8973A",
+    "goal": "Strategisk information, teknologitillgång, långsiktigt politiskt inflytande",
+    "horizon": "Lång (år–decennier)",
+    "methods": ["Systematisk OSINT-kartläggning", "Rekrytering av insiders", "Informationspåverkan", "Teknologistöld", "Täckidentiteter"],
+    "sectors": ["AUTHORITY", "IT", "RESEARCH", "DEFENCE"],
+    "exposure": "HIGH",
+    "note": "Säkerhetspolisen har bekräftat rysk ökad riskbenägenhet och sabotage mot nordisk kritisk infrastruktur.",
+    "source": "Säpo årsberättelse 2024; MSB FIMI-rapport 2024",
+    "indicators": [
+      "Kontaktförsök från utländska organisationer med otydligt syfte",
+      "Oväntat intresse för infrastrukturdetaljer eller beslutsprocesser",
+      "Medarbetare med plötsliga ekonomiska förbättringar utan förklaring",
+      "Förfrågningar om känslig teknisk information under täckmantel av samarbete"
+    ],
+    "cases": ["case-006"]
+  },
+  {
+    "id": "extremist",
+    "name": "Extremistisk miljö",
+    "sub": "Ideologiskt driven",
+    "color": "#9B4FBB",
+    "goal": "Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet",
+    "horizon": "Kort–medellång",
+    "methods": ["Uthängning och doxxning", "Samordnade trakasserier", "Informationspåverkan mot beslutsprocess", "Belastning via massanmälningar"],
+    "sectors": ["SOCIAL", "COMMS", "PERMITS", "HR"],
+    "exposure": "MEDIUM",
+    "note": "Statskontoret: skadorna kan träffa individen, anhöriga, verksamheten och tilltron till den offentliga förvaltningen.",
+    "source": "Statskontoret 2024; CVE-rapport 2023",
+    "indicators": [
+      "Ökning av hotfulla eller kränkande meddelanden kring specifikt ärende",
+      "Publicering av personuppgifter om medarbetare på externa plattformar",
+      "Samordnade negativa narrativ mot enskild tjänsteperson eller beslut",
+      "Kombination av digitala trakasserier och fysisk närvaro"
+    ],
+    "cases": ["case-004", "case-005", "case-006"]
+  },
+  {
+    "id": "economic-interest",
+    "name": "Ekonomiskt intresse",
+    "sub": "Kommersiell aktör",
+    "color": "#4A7B6F",
+    "goal": "Avtal, tillstånd, fördelaktig behandling i upphandling eller tillsyn",
+    "horizon": "Medellång",
+    "methods": ["Relationsbygge över tid", "Informella leverantörskontakter", "Gåvor och representation", "Värvning av nyckelpersoner"],
+    "sectors": ["PROCUREMENT", "PERMITS", "IT"],
+    "exposure": "MEDIUM",
+    "note": "Nära en tredjedel av alla mutgivare är verksamma inom bygg- och anläggningssektorn.",
+    "source": "Ekobrottsmyndigheten; Transparency International Sverige",
+    "indicators": [
+      "Leverantörskontakter utanför dokumenterade upphandlingskanaler",
+      "Erbjudanden om framtida anställning till upphandlande personal",
+      "Onormalt intensivt socialt umgänge under pågående upphandling",
+      "Informell marknadsdialog som påverkar kravspecifikationer"
+    ],
+    "cases": ["case-003"]
+  }
+]
