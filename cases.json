@@ -1574,5 +1574,287 @@
         "t": "media"
       }
     ]
+  },
+  {
+    "id": "c63",
+    "title": "Polisen 'Elin' — poliskvinna inledde relation via dejtingapp och läckte information i 4 år",
+    "date": "2024-04",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Kvinna under polisutbildning träffade man ('Jonas') på dejtingapp. Under fyra år genomförde hon olagliga slagningar i polisens register för Jonas och hans associerade, samt läckte information om pågående utredningar. DN:s granskning 2024: över 514 misstänkta informationsläckor från svensk polis till kriminella gäng sedan 2018. Minst 30 polisanställda identifierade som säkerhetsrisker. I minst fyra fall ledde läckorna till våldsamma hämndattacker inklusive mord. Statsminister Kristersson: 'väldigt allvarligt.'",
+    "sources": [
+      {
+        "l": "DN-granskning 2024 — 514 informationsläckor från polisen",
+        "t": "media"
+      },
+      {
+        "l": "The Local — What do we know about Sweden's police leaks",
+        "t": "media"
+      },
+      {
+        "l": "Euronews 2024 — Swedish police to investigate reports",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c64",
+    "title": "Polisanställd — kriminella utnyttjar spelberoende och skulder för att pressa fram information",
+    "date": "2024-04",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Kriminella gäng har systematiskt utnyttjat polisanställdas ekonomiska problem, spelberoende eller missbruksproblem för att tvinga dem att läcka information. Mönster: skuldnätverket skapar beroendeförhållande, sedan ges 'hjälp' i utbyte mot informationsleveranser. DN 2024: bland de 30 identifierade polisanställda som säkerhetsrisker ingick individer under ekonomisk press som inte nått åtalsgränsen. Fallet illustrerar hur MICE-modellens 'Coercion' och 'Money' samverkar.",
+    "sources": [
+      {
+        "l": "DN-granskning 2024 — Polisläckor till kriminella gäng",
+        "t": "media"
+      },
+      {
+        "l": "Euronews 2024",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c65",
+    "title": "Ericsson-fallet Bavand — spionage åt Ryssland via relationsbygge med rysk ingenjör",
+    "date": "2002-01",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Civilingenjör vid Volvo/Scania rekryterades av påstådd rysk underrättelseoffier (O.O) och sålde företagshemligheter till Ryssland. Bavand hade tillgång till Ericssons känsligaste nätverk och stjäl dokument från projekt. Sex månader efter avslutad anställning kontaktades han av en rysk ingenjör. Motiverad av ekonomiska svårigheter och lockelse av kontantbetalningar. Medbrottslig: Mansour Rokkgireh (15 år hos Ericsson) och Alireza Rafiei Bejarkenari. Ericsson: 'de läckta dokumenten verkar inte vara kopplade till militära projekt, trots Ericssons roll i JAS 39 Gripen-systemet.'",
+    "sources": [
+      {
+        "l": "Handledningen kap 1.5 — Statligt spionage fallet Bavand",
+        "t": "report"
+      },
+      {
+        "l": "Stockholms tingsrätt",
+        "t": "court"
+      }
+    ]
+  },
+  {
+    "id": "c66",
+    "title": "Ericsson — IT-konsult Csaba Richter dömdes till 3 år för att ha hackat och stulit källkod",
+    "date": "2005-04",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Ungersk IT-konsult (26 år) dömdes den 4 april 2005 i Stockholms tingsrätt till tre års fängelse för grovt företagsspioneri. Hackade Ericssons system och stal källkod från Sony Ericsson. Försökte sälja källkoden på internet. Stockholms tingsrätt: 'intrång i Ericssons nätverk, stöld av hemlig information.' Richter rapporterades ha fortsatt göra intrång i Ericssons nätverk även efter frigivning. Fallet lyfte behovet av starkare skydd för företagshemligheter och bättre interna säkerhetsrutiner.",
+    "sources": [
+      {
+        "l": "Ny Teknik — Ericssonspionen fick tre år",
+        "t": "media"
+      },
+      {
+        "l": "Stockholms tingsrätt 2005",
+        "t": "court"
+      }
+    ]
+  },
+  {
+    "id": "c67",
+    "title": "Norrtälje serverhall — ryskregistrerad skåpbil utanför kritisk telekominfrastruktur",
+    "date": "2018-12",
+    "loc": {
+      "m": "Norrtälje",
+      "r": "Stockholm",
+      "lat": 59.76,
+      "lng": 18.7,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "December 2018: polis larmades till underjordisk serverhall i Norrtälje efter rapporter om misstänkt aktivitet. Ryskregistrerad skåpbil utanför anläggningen. Tre män försökte bryta sig in. Serverhallen använde av Telia, Telenor och Tele2 — kritisk kommunikationsinfrastruktur för Sverige. Fallet tas upp som exempel på hur infrastruktur och samhällsfunktioner är lovligt byte i hybridkrigsföring. Utreds som möjlig förberedelse till sabotage.",
+    "sources": [
+      {
+        "l": "Handledningen — Incidenten vid Serverhallen i Norrtälje",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c68",
+    "title": "Lantmäteriet — systembrister möjliggjorde datainsamling utan enskild insider (2018-2024)",
+    "date": "2024-01",
+    "loc": {
+      "m": "Gävle",
+      "r": "Gävleborg",
+      "lat": 60.67,
+      "lng": 17.14,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Lantmäteriet drabbades av systematisk datainsamling som möjliggjordes av systembrister snarare än av en enskild rekryterad insider. Riksrevisionen (RiR 2024) och Säpo identifierade att känslig geospatial data om kritisk infrastruktur kunnat samlas in via tjänsternas offentliga gränssnitt utan att en insider behövde rekryteras. Illustrerar att strukturella systemsårbarheter kan ersätta rekryteringen av möjliggörare — den öppna attackytan som skapar insidertillgång utan insider.",
+    "sources": [
+      {
+        "l": "Riksrevisionen RiR 2024:4",
+        "t": "report"
+      },
+      {
+        "l": "Säkerhetspolisen årsberättelse 2024",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c69",
+    "title": "Skatteverket — IT-tekniker skapar sig tillgång till skyddade personuppgifter via systemsårbarhet",
+    "date": "2020-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "IT-tekniker vid Skatteverket lyckas via en systembrist skaffa sig tillgång till förteckning över personer med skyddade personuppgifter och säljer listan till en antagonist. Fallet nämns i handledningens kapitel om typiska insiderincidenter. Illustrerar hur skyddade personuppgifter — adressuppgifter för hotade individer — kan bli handelsvara via en insider med systemtillgång. Konsekvensen: stalking, hot, och i värsta fall dödligt våld mot skyddsbehövande.",
+    "sources": [
+      {
+        "l": "Handledningen kap 1 — Typiska insiderincidenter",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c70",
+    "title": "Försäkringskassan — handläggare beviljar förmåner på instruktion från klannätverk",
+    "date": "2021-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Socialförsäkringshandläggare beviljar socialförsäkringsförmåner på direkta instruktioner från ett släktbaserat kriminellt nätverk. Typfall: handläggaren tillhör eller har nära koppling till ett klannätverk som utnyttjar sin insiderposition för att styra utbetalningar till nätverksmedlemmar. Brå (2024): mönstret av 'integrerade klaner' i välfärdssystemet är väldokumenterat — handläggaren är den centrala möjliggöraren utan vilken systemet inte kan utnyttjas i den skala som dokumenterats.",
+    "sources": [
+      {
+        "l": "Handledningen kap 1 — Typiska insiderincidenter",
+        "t": "report"
+      },
+      {
+        "l": "Brå 2024 — Möjliggörare i kriminella nätverk",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c71",
+    "title": "PDA-teknik — företagare lämnar produkter med dubbla användningsområden till Ryssland",
+    "date": "2019-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Person driver teknikföretag och överlämnar under lång tid produkter med dubbla användningsområden (PDA/dual-use) till Ryssland. Produkterna är civilt tillgängliga men har militär tillämpning. Fallet illustrerar hur exportkontrollregelverket (lagen om kontroll av produkter med dubbla användningsområden) kringgås via ett legitimt bolag. Möjliggöraren är den legala affärsmannen vars affärsrelationer med ryska intressen undgår kontroll.",
+    "sources": [
+      {
+        "l": "Handledningen kap 1 — Typiska insiderincidenter",
+        "t": "report"
+      },
+      {
+        "l": "ISP — Inspektionen för strategiska produkter",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c72",
+    "title": "Byggprojekt — ekonomiansvarig säljer underleverantörsuppdrag mot betalning, sprängmedel till kriminella",
+    "date": "2022-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Ekonomiansvarig vid ett stort byggprojekt ser till att ett specifikt bolag mot betalning anlitas som underleverantör för sprängningsarbeten. Underleverantören säljer sedan sprängmedel tänkt för byggprojektet till kriminella och felredovisar svinnet. Fallet illustrerar kedjan: korrupt upphandlare → kriminellt underentreprenörsbolag → utflöde av sprängmedel till kriminella nätverk. Fair Play Bygg (2023): detta är ett väldokumenterat mönster i byggbranschen.",
+    "sources": [
+      {
+        "l": "Handledningen kap 1 — Typiska insiderincidenter",
+        "t": "report"
+      },
+      {
+        "l": "Fair Play Bygg 2023",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c73",
+    "title": "Databasadministratör säljer klienters finansiella uppgifter på darknet",
+    "date": "2023-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "FINANCE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Databasadministratör med tillgång till klienters finansiella information säljer informationen systematiskt på darknet. Fallet illustrerar hur breda systembehörigheter för IT-administratörer kombineras med dålig loggning och skapar möjligheten att tömma databaser utan att utlösa larm. CERT-SE: IT-administratörer med root-access är den högsta riskkategorin för insiderstöld av data.",
+    "sources": [
+      {
+        "l": "Handledningen kap 1 — Typiska insiderincidenter",
+        "t": "report"
+      },
+      {
+        "l": "CERT-SE insider threat rapport",
+        "t": "report"
+      }
+    ]
   }
 ]
