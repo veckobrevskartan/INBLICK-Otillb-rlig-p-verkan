@@ -3,1072 +3,625 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>INBLICK — Den öppna attackytan</title>
+<title>INBLICK — Den öppna attackytan · Moduler</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <style>
-/* ════════════════════════════════════════════
-   TOKENS
-════════════════════════════════════════════ */
-:root {
-  --bg:         #0A1628;
-  --bg-mid:     #112040;
-  --bg-surf:    #162B52;
-  --bg-card:    #0E1E38;
-  --text:       #F0EDE6;
-  --muted:      #8A9AB0;
-  --dim:        #4A5A6A;
-  --accent:     #B8973A;
-  --accent-d:   #7A6325;
-  --accent-g:   rgba(184,151,58,0.12);
-  --green:      #4A7B6F;
-  --orange:     #C45C2E;
-  --purple:     #9B4FBB;
-  --border:     rgba(184,151,58,0.16);
-  --border-s:   rgba(240,237,230,0.07);
-  --fd: 'Cormorant Garamond', Georgia, serif;
-  --fb: 'IBM Plex Sans', system-ui, sans-serif;
-  --fm: 'IBM Plex Mono', monospace;
-}
+:root{--bg:#0A1628;--bg-mid:#112040;--bg-surf:#162B52;--bg-card:#0E1E38;--text:#F0EDE6;--muted:#8A9AB0;--dim:#4A5A6A;--accent:#B8973A;--accent-d:#7A6325;--accent-g:rgba(184,151,58,.12);--green:#4A7B6F;--orange:#C45C2E;--purple:#9B4FBB;--border:rgba(184,151,58,.16);--border-s:rgba(240,237,230,.07);--fd:"Cormorant Garamond",Georgia,serif;--fb:"IBM Plex Sans",system-ui,sans-serif;--fm:"IBM Plex Mono",monospace}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:15px;line-height:1.6;overflow-x:hidden}
-body::before{content:'';position:fixed;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent 0%,var(--accent) 8%,var(--accent) 92%,transparent 100%);z-index:300;opacity:.8;pointer-events:none}
+body::before{content:"";position:fixed;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent 0%,var(--accent) 8%,var(--accent) 92%,transparent 100%);z-index:300;opacity:.8;pointer-events:none}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent-d);border-radius:3px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 52px}
-@media(max-width:768px){.wrap{padding:0 24px}}
-img,svg{display:block}
-
-/* ════════════════════════════════════════════
-   NAV
-════════════════════════════════════════════ */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s)}
-.nav-i{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:1160px;margin:0 auto;padding:0 52px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 52px}
+@media(max-width:768px){.wrap{padding:0 16px}}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s)}
+.nav-i{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:1200px;margin:0 auto;padding:0 52px}
 .nav-brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
 .nav-name{font-family:var(--fd);font-size:18px;font-weight:500;color:var(--text)}
-.nav-tabs{display:flex;gap:4px;list-style:none}
-.nav-tabs li a{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:2px;transition:.2s}
+.nav-tabs{display:flex;gap:1px;list-style:none}
+.nav-tabs li a{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 9px;transition:.2s;white-space:nowrap}
 .nav-tabs li a:hover,.nav-tabs li a.active{background:var(--accent-g);color:var(--accent)}
-.nav-back{font-family:var(--fm);font-size:9px;letter-spacing:.14em;color:var(--muted);text-decoration:none;padding:6px 12px;border:1px solid var(--border-s);transition:.2s}
+.nav-back{font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--muted);text-decoration:none;padding:6px 12px;border:1px solid var(--border-s);transition:.2s;flex-shrink:0}
 .nav-back:hover{border-color:var(--accent);color:var(--accent)}
-@media(max-width:768px){.nav-tabs{display:none}.nav-i{padding:0 24px}}
-
-/* ════════════════════════════════════════════
-   MODULE SHELL — sections hidden/shown by JS
-════════════════════════════════════════════ */
-.module{display:none;min-height:100vh;padding-top:72px}
+@media(max-width:900px){.nav-tabs{display:none}.nav-i{padding:0 16px}}
+.module{display:none;min-height:100vh;padding-top:68px}
 .module.active{display:block}
-
-/* ════════════════════════════════════════════
-   SHARED SECTION HEADER
-════════════════════════════════════════════ */
-.sec-head{padding:64px 0 48px}
+.sec-head{padding:48px 0 36px}
 .eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.sec-title{font-family:var(--fd);font-size:clamp(36px,4.5vw,60px);font-weight:300;line-height:1.06;letter-spacing:-.01em}
+.sec-title{font-family:var(--fd);font-size:clamp(32px,4vw,56px);font-weight:300;line-height:1.06}
 .sec-title em{font-style:italic;color:var(--accent)}
-.sec-intro{font-size:14px;color:var(--muted);max-width:580px;line-height:1.75;margin-top:14px}
-
-/* ════════════════════════════════════════════
-   BADGES
-════════════════════════════════════════════ */
-.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;padding:3px 8px}
+.sec-intro{font-size:14px;color:var(--muted);max-width:600px;line-height:1.75;margin-top:12px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px}
 .bdot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
 .b-conf{background:rgba(74,123,111,.12);color:var(--green);border:1px solid rgba(74,123,111,.3)}.bdot-conf{background:var(--green)}
 .b-ind{background:var(--accent-g);color:var(--accent);border:1px solid rgba(184,151,58,.3)}.bdot-ind{background:var(--accent)}
 .b-ana{background:rgba(196,92,46,.1);color:var(--orange);border:1px solid rgba(196,92,46,.25)}.bdot-ana{background:var(--orange)}
-
-/* ════════════════════════════════════════════
-   MODULE 1 — PÅVERKANSKEDJAN
-════════════════════════════════════════════ */
-.chain-layout{display:grid;grid-template-columns:300px 1fr;gap:2px;background:var(--border-s);margin-bottom:80px}
-@media(max-width:900px){.chain-layout{grid-template-columns:1fr}}
-.chain-nav{background:var(--bg-card);padding:0}
-.chain-nav-item{padding:20px 24px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;align-items:flex-start;gap:14px;transition:.18s;border-left:3px solid transparent}
-.chain-nav-item:hover{background:var(--bg-mid)}
-.chain-nav-item.active{background:var(--bg-mid);border-left-color:var(--accent)}
-.chain-nav-item.danger.active{border-left-color:var(--orange)}
-.cni-num{font-family:var(--fd);font-size:32px;font-weight:300;color:var(--dim);line-height:1;min-width:28px;transition:.18s}
-.chain-nav-item.active .cni-num{color:var(--accent)}
-.chain-nav-item.danger.active .cni-num{color:var(--orange)}
-.cni-body{}
-.cni-step{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.chain-nav-item.active .cni-step{color:var(--accent)}
-.chain-nav-item.danger.active .cni-step{color:var(--orange)}
-.cni-title{font-size:14px;color:var(--text);line-height:1.3}
-
-.chain-panel{background:var(--bg-mid);padding:48px;display:flex;flex-direction:column;justify-content:flex-start}
-@media(max-width:768px){.chain-panel{padding:28px 24px}}
-.cp-step{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.cp-title{font-family:var(--fd);font-size:clamp(28px,3.5vw,46px);font-weight:300;line-height:1.1;margin-bottom:24px}
-.cp-perspectives{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:28px 0}
-@media(max-width:680px){.cp-perspectives{grid-template-columns:1fr}}
-.cp-persp{background:var(--bg-card);padding:20px}
-.cp-persp-label{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
-.cp-persp-label.ang{color:var(--orange)}
-.cp-persp-label.med{color:var(--accent)}
-.cp-persp-label.org{color:var(--green)}
-.cp-persp-text{font-size:13px;color:var(--muted);line-height:1.6}
-.cp-indicators{margin-top:24px;padding-top:24px;border-top:1px solid var(--border-s)}
-.cp-ind-label{font-family:var(--fm);font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.cp-ind-list{display:flex;flex-direction:column;gap:8px}
-.cp-ind-item{display:flex;align-items:baseline;gap:10px;font-size:13px;color:var(--text)}
-.cp-ind-item::before{content:'—';color:var(--accent);flex-shrink:0;font-family:var(--fm)}
-.chain-progress{display:flex;gap:3px;margin-bottom:32px;flex-wrap:wrap}
-.cp-dot{width:28px;height:3px;background:var(--border-s);transition:.3s;cursor:pointer}
-.cp-dot.done{background:var(--accent)}
-.cp-dot.danger-done{background:var(--orange)}
-.cp-dot:hover{background:var(--accent-d)}
-
-/* ════════════════════════════════════════════
-   MODULE 2 — KARTAN
-════════════════════════════════════════════ */
-.map-controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;align-items:center}
-.filter-group{display:flex;align-items:center;gap:6px}
-.filter-label{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.filter-btn{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;background:transparent;color:var(--muted);border:1px solid var(--border-s);cursor:pointer;transition:.18s}
-.filter-btn:hover,.filter-btn.active{background:var(--accent-g);color:var(--accent);border-color:var(--accent)}
-.filter-sep{width:1px;height:20px;background:var(--border-s);margin:0 6px}
-#map-container{height:480px;background:var(--bg-card);border:1px solid var(--border-s);position:relative}
-.leaflet-container{background:#0A1628!important}
-.map-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;padding:14px 20px;background:var(--bg-card);border:1px solid var(--border-s)}
-.legend-item{display:flex;align-items:center;gap:7px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--muted)}
-.legend-dot{width:10px;height:10px;border-radius:50%;border:2px solid transparent}
-.map-case-panel{margin-top:2px;background:var(--bg-card);border:1px solid var(--border-s);padding:28px;display:none}
-.map-case-panel.open{display:block}
-.mcp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}
-.mcp-title{font-family:var(--fd);font-size:22px;font-weight:400}
-.mcp-close{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:0 4px;font-family:var(--fm)}
-.mcp-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
-.mcp-meta-item{font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--muted)}
-.mcp-meta-item span{color:var(--text)}
-.mcp-summary{font-size:14px;color:var(--text);line-height:1.7;margin-bottom:16px}
-.mcp-sources{display:flex;flex-wrap:wrap;gap:8px}
-
-/* Custom Leaflet popup */
-.leaflet-popup-content-wrapper{background:var(--bg-surf)!important;border:1px solid var(--border)!important;border-radius:2px!important;box-shadow:0 8px 32px rgba(0,0,0,.5)!important}
-.leaflet-popup-tip{background:var(--bg-surf)!important}
-.leaflet-popup-content{margin:14px 16px!important;font-family:var(--fb)!important}
-.pop-title{font-family:var(--fd);font-size:16px;font-weight:400;color:var(--text);margin-bottom:6px}
-.pop-meta{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.1em;margin-bottom:8px}
-.pop-sum{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:10px}
-.pop-btn{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid var(--accent);padding:4px 10px;cursor:pointer;width:100%}
-
-/* ════════════════════════════════════════════
-   MODULE 3 — AKTÖRSMATRISEN
-════════════════════════════════════════════ */
-.actor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border-s);margin-bottom:48px}
-@media(max-width:700px){.actor-grid{grid-template-columns:1fr}}
-.actor-card{background:var(--bg-card);padding:32px;cursor:pointer;border-top:3px solid transparent;transition:.2s;position:relative}
-.actor-card:hover{background:var(--bg-mid)}
-.actor-card.selected{background:var(--bg-mid)}
-.ac-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
-.ac-name{font-family:var(--fd);font-size:26px;font-weight:400;line-height:1.1}
-.ac-sub{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.ac-exposure{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:4px 8px}
-.exp-high{background:rgba(196,92,46,.12);color:var(--orange);border:1px solid rgba(196,92,46,.25)}
-.exp-med{background:var(--accent-g);color:var(--accent);border:1px solid rgba(184,151,58,.25)}
-.ac-goal{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:16px}
-.ac-methods{display:flex;flex-wrap:wrap;gap:6px}
-.ac-method{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border-s);color:var(--dim)}
-.ac-click{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:16px;opacity:0;transition:.2s}
-.actor-card:hover .ac-click{opacity:1}
-
-.actor-detail{display:none;background:var(--bg-mid);border:1px solid var(--border);padding:40px;margin-bottom:48px}
-.actor-detail.open{display:block}
-.ad-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-@media(max-width:760px){.ad-layout{grid-template-columns:1fr}}
-.ad-section-label{font-family:var(--fm);font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border-s)}
-.ad-note{font-size:14px;color:var(--text);line-height:1.7;margin-bottom:16px;padding-left:16px;border-left:2px solid var(--accent)}
-.ad-indicators{display:flex;flex-direction:column;gap:10px}
-.ad-ind{display:flex;gap:10px;align-items:baseline;font-size:13px;color:var(--muted)}
-.ad-ind::before{content:'◈';color:var(--accent);font-size:10px;flex-shrink:0}
-.ad-cases{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.ad-case{padding:12px 16px;background:var(--bg-card);border:1px solid var(--border-s);cursor:pointer;transition:.15s}
-.ad-case:hover{border-color:var(--accent)}
-.adc-title{font-size:13px;color:var(--text);margin-bottom:4px}
-.adc-meta{font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)}
-.ad-source{font-family:var(--fm);font-size:9px;color:var(--accent-d);margin-top:16px;padding-top:12px;border-top:1px solid var(--border-s)}
-
-/* ════════════════════════════════════════════
-   MODULE 4 — ORGANISATIONSTESTET
-════════════════════════════════════════════ */
-.assess-layout{display:grid;grid-template-columns:280px 1fr;gap:2px;background:var(--border-s)}
-@media(max-width:860px){.assess-layout{grid-template-columns:1fr}}
-.assess-nav{background:var(--bg-card)}
-.assess-nav-item{padding:16px 20px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;gap:12px;align-items:center;transition:.18s;border-left:3px solid transparent}
-.assess-nav-item:hover{background:var(--bg-mid)}
-.assess-nav-item.active{background:var(--bg-mid);border-left-color:var(--accent)}
-.assess-nav-item.done{border-left-color:var(--green)}
-.ani-num{font-family:var(--fm);font-size:11px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-s);color:var(--muted);flex-shrink:0;font-weight:500}
-.assess-nav-item.active .ani-num{border-color:var(--accent);color:var(--accent)}
-.assess-nav-item.done .ani-num{border-color:var(--green);color:var(--green);background:rgba(74,123,111,.1)}
-.ani-title{font-size:13px;color:var(--muted)}
-.assess-nav-item.active .ani-title{color:var(--text)}
-
-.assess-panel{background:var(--bg-mid);padding:40px}
-@media(max-width:768px){.assess-panel{padding:24px}}
-.assess-panel.hidden{display:none}
-.aq-section{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.aq-q{font-family:var(--fd);font-size:24px;font-weight:400;line-height:1.25;margin-bottom:24px;color:var(--text)}
-.aq-hint{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:28px;padding:14px 18px;background:var(--bg-card);border-left:2px solid var(--accent-d)}
-.aq-options{display:flex;flex-direction:column;gap:8px;margin-bottom:32px}
-.aq-opt{padding:16px 20px;background:var(--bg-card);border:1px solid var(--border-s);cursor:pointer;display:flex;align-items:center;gap:14px;transition:.18s;font-size:14px;color:var(--text)}
-.aq-opt:hover{border-color:var(--accent);background:var(--bg-surf)}
-.aq-opt.selected{border-color:var(--accent);background:var(--accent-g);color:var(--text)}
-.aq-opt-score{font-family:var(--fm);font-size:10px;color:var(--muted);margin-left:auto}
-.aq-nav{display:flex;gap:10px;align-items:center}
-.aq-btn{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border:none;cursor:pointer;transition:.18s}
-.aq-btn-prev{background:transparent;color:var(--muted);border:1px solid var(--border-s)}
-.aq-btn-prev:hover{color:var(--text);border-color:var(--border)}
-.aq-btn-next{background:var(--accent);color:var(--bg)}
-.aq-btn-next:hover{background:#cda842}
-.aq-btn-next:disabled{background:var(--dim);cursor:not-allowed}
-.aq-progress-text{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.1em;margin-left:auto}
-.aq-progress-bar{height:2px;background:var(--border-s);margin-bottom:32px;overflow:hidden}
-.aq-progress-fill{height:100%;background:var(--accent);transition:.4s ease}
-
-/* Results */
-.assess-results{display:none;background:var(--bg-mid);padding:40px}
-.assess-results.visible{display:block}
-.results-title{font-family:var(--fd);font-size:36px;font-weight:300;margin-bottom:8px}
-.results-sub{font-size:14px;color:var(--muted);margin-bottom:32px}
-.radar-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
-@media(max-width:700px){.radar-wrap{grid-template-columns:1fr}}
-.dim-bar{margin-bottom:18px}
-.dim-bar-label{display:flex;justify-content:space-between;margin-bottom:6px}
-.dim-bar-name{font-size:13px;color:var(--text)}
-.dim-bar-val{font-family:var(--fm);font-size:11px;color:var(--accent)}
-.dim-bar-track{height:4px;background:var(--border-s);border-radius:2px;overflow:hidden}
-.dim-bar-fill{height:100%;border-radius:2px;transition:width 1s ease}
-.fill-high{background:var(--green)}
-.fill-med{background:var(--accent)}
-.fill-low{background:var(--orange)}
-.results-recs{display:flex;flex-direction:column;gap:12px;margin-top:32px}
-.rec-item{padding:18px 20px;background:var(--bg-card);border:1px solid var(--border-s);border-left:3px solid var(--accent)}
-.rec-item.critical{border-left-color:var(--orange)}
-.rec-dim{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.rec-text{font-size:13px;color:var(--text);line-height:1.6}
-
-/* ════════════════════════════════════════════
-   MODULE 5 — INDIKATORSBIBLIOTEKET
-════════════════════════════════════════════ */
-.ind-controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
-.ind-search{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:var(--fb);font-size:13px;padding:10px 14px}
-.ind-search::placeholder{color:var(--dim)}
-.ind-search:focus{outline:none;border-color:var(--accent)}
-.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2px;background:var(--border-s)}
-.ind-card{background:var(--bg-card);padding:24px;transition:.18s;cursor:default}
-.ind-card:hover{background:var(--bg-mid)}
-.ind-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
-.ind-cat{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)}
-.sev-high{color:var(--orange);border-color:rgba(196,92,46,.3)}
-.sev-med{color:var(--accent);border-color:rgba(184,151,58,.3)}
-.ind-title{font-family:var(--fd);font-size:20px;font-weight:400;margin-bottom:8px}
-.ind-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:12px}
-.ind-actors{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
-.ind-actor{font-family:var(--fm);font-size:8px;letter-spacing:.1em;padding:2px 6px;border:1px solid var(--border-s);color:var(--dim)}
-.ind-source{font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em}
-.ind-empty{padding:48px;text-align:center;font-family:var(--fd);font-size:24px;font-style:italic;color:var(--dim);background:var(--bg-card)}
-
-/* ════════════════════════════════════════════
-   BUTTONS
-════════════════════════════════════════════ */
-.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--bg);font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:11px 20px;border:none;cursor:pointer;transition:.2s}
-.btn-p:hover{background:#cda842;transform:translateY(-1px)}
-.btn-g{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);font-family:var(--fb);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:10px 20px;border:1px solid var(--border-s);cursor:pointer;transition:.2s}
-.btn-g:hover{border-color:var(--accent);color:var(--accent)}
-
-/* ════════════════════════════════════════════
-   REVEAL
-════════════════════════════════════════════ */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+.chain-layout{display:grid;grid-template-columns:270px 1fr;gap:2px;background:var(--border-s);margin-bottom:60px}
+@media(max-width:860px){.chain-layout{grid-template-columns:1fr}}
+.chain-nav{background:var(--bg-card)}
+.cni{padding:16px 18px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;align-items:flex-start;gap:10px;transition:.18s;border-left:3px solid transparent}
+.cni:hover{background:var(--bg-mid)}.cni.active{background:var(--bg-mid);border-left-color:var(--accent)}.cni.danger.active{border-left-color:var(--orange)}
+.cni-num{font-family:var(--fd);font-size:26px;font-weight:300;color:var(--dim);line-height:1;min-width:24px}
+.cni.active .cni-num{color:var(--accent)}.cni.danger.active .cni-num{color:var(--orange)}
+.cni-step{font-family:var(--fm);font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.cni.active .cni-step{color:var(--accent)}.cni.danger.active .cni-step{color:var(--orange)}
+.cni-title{font-size:12px;color:var(--text);line-height:1.3}
+.chain-panel{background:var(--bg-mid);padding:40px;display:flex;flex-direction:column}
+@media(max-width:768px){.chain-panel{padding:20px}}
+.cp-step{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.cp-title{font-family:var(--fd);font-size:clamp(24px,3vw,40px);font-weight:300;line-height:1.1;margin-bottom:14px}
+.cp-lead{font-size:14px;color:var(--text);line-height:1.75;margin-bottom:20px;max-width:640px}
+.cp-perspectives{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:20px 0}
+@media(max-width:640px){.cp-perspectives{grid-template-columns:1fr}}
+.cp-persp{background:var(--bg-card);padding:16px 18px}
+.cpp-label{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px;padding-bottom:7px;border-bottom:1px solid var(--border-s)}
+.cpp-label.ang{color:var(--orange)}.cpp-label.med{color:var(--accent)}.cpp-label.org{color:var(--green)}
+.cpp-text{font-size:12px;color:var(--muted);line-height:1.65}
+.cp-signals{margin-top:20px;padding-top:16px;border-top:1px solid var(--border-s)}
+.cp-signals-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.cp-signal{display:flex;align-items:baseline;gap:9px;font-size:13px;color:var(--text);margin-bottom:7px}
+.cp-signal::before{content:"\25C8";color:var(--accent);font-size:9px;flex-shrink:0}
+.cp-cases{margin-top:16px;padding-top:14px;border-top:1px solid var(--border-s);display:none}
+.cp-cases-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.cp-case-ref{padding:9px 13px;background:var(--bg-card);border:1px solid var(--border-s);margin-bottom:5px;cursor:pointer;transition:.15s}
+.cp-case-ref:hover{border-color:var(--accent)}
+.cp-case-ref-title{font-size:12px;color:var(--text);margin-bottom:2px}
+.cp-case-ref-meta{font-family:var(--fm);font-size:8px;color:var(--muted)}
+.chain-progress{display:flex;gap:3px;margin-bottom:24px;flex-wrap:wrap}
+.cp-dot{width:30px;height:3px;background:var(--border-s);transition:.3s;cursor:pointer;border-radius:1px}
+.cp-dot.done{background:var(--accent)}.cp-dot.danger-done{background:var(--orange)}
+.map-controls{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;align-items:center}
+.filter-group{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.filter-label{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.fb{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;background:transparent;color:var(--muted);border:1px solid var(--border-s);cursor:pointer;transition:.18s}
+.fb:hover,.fb.active{background:var(--accent-g);color:var(--accent);border-color:rgba(184,151,58,.35)}
+.fsep{width:1px;height:16px;background:var(--border-s);margin:0 3px}
+#map-container{height:540px;background:var(--bg-card);border:1px solid var(--border-s)}
+.map-stats{display:flex;gap:20px;margin-bottom:12px;flex-wrap:wrap}
+.mstat{display:flex;flex-direction:column}
+.mstat-val{font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);line-height:1}
+.mstat-lab{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.map-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;padding:9px 14px;background:var(--bg-card);border:1px solid var(--border-s)}
+.leg-item{display:flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)}
+.leg-dot{width:9px;height:9px;border-radius:50%}
+.map-case-panel{margin-top:2px;background:var(--bg-card);border:1px solid var(--border);padding:24px 28px;display:none}
+.map-case-panel.open{display:block}
+.mcp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:9px}
+.mcp-title{font-family:var(--fd);font-size:21px;font-weight:400;line-height:1.2}
+.mcp-close{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;padding:0 4px;line-height:1}
+.mcp-badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.mcp-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border-s)}
+.mcp-mi{font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)}
+.mcp-mi span{color:var(--text)}
+.mcp-summary{font-size:13px;color:var(--text);line-height:1.75;margin-bottom:12px}
+.mcp-sources{display:flex;flex-wrap:wrap;gap:6px}
+.src-tag{font-family:var(--fm);font-size:8px;letter-spacing:.09em;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)}
+.src-tag.court{border-color:rgba(74,123,111,.3);color:var(--green)}.src-tag.report{border-color:rgba(184,151,58,.25);color:var(--accent)}
+.leaflet-container{background:#0A1628!important;font-family:var(--fb)!important}
+.leaflet-popup-content-wrapper{background:var(--bg-surf)!important;border:1px solid var(--border)!important;border-radius:2px!important;box-shadow:0 12px 40px rgba(0,0,0,.6)!important;min-width:240px}
+.leaflet-popup-tip{background:var(--bg-surf)!important}
+.leaflet-popup-content{margin:12px 14px!important}
+.pop-title{font-family:var(--fd);font-size:14px;font-weight:400;color:var(--text);margin-bottom:4px;line-height:1.3}
+.pop-meta{font-family:var(--fm);font-size:8px;color:var(--muted);letter-spacing:.09em;margin-bottom:7px}
+.pop-sum{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:9px}
+.pop-btn{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid rgba(184,151,58,.4);padding:4px 9px;cursor:pointer;width:100%;transition:.15s}
+.pop-btn:hover{background:var(--accent-g)}
+.actor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border-s);margin-bottom:2px}
+@media(max-width:700px){.actor-grid{grid-template-columns:1fr}}
+.ac{background:var(--bg-card);padding:24px;cursor:pointer;border-top:3px solid transparent;transition:.2s}
+.ac:hover{background:var(--bg-mid)}.ac.sel{background:var(--bg-mid)}
+.ac-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+.ac-name{font-family:var(--fd);font-size:23px;font-weight:400;line-height:1.1}
+.ac-sub{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.ac-exp{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;flex-shrink:0}
+.exp-high{background:rgba(196,92,46,.1);color:var(--orange);border:1px solid rgba(196,92,46,.2)}.exp-med{background:var(--accent-g);color:var(--accent);border:1px solid rgba(184,151,58,.2)}
+.ac-horizon{font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--accent-d);margin-bottom:9px}
+.ac-goal{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:11px}
+.ac-methods{display:flex;flex-wrap:wrap;gap:4px}
+.ac-method{font-family:var(--fm);font-size:7px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-s);color:var(--dim)}
+.ac-cta{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:11px;opacity:0;transition:.2s}.ac:hover .ac-cta{opacity:1}
+.actor-detail{display:none;background:var(--bg-mid);border-top:2px solid var(--border);padding:30px;margin-bottom:40px}
+.actor-detail.open{display:block}
+.ad-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+@media(max-width:900px){.ad-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.ad-grid{grid-template-columns:1fr}}
+.ad-sec-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;padding-bottom:7px;border-bottom:1px solid var(--border-s)}
+.ad-note{font-size:13px;color:var(--text);line-height:1.75;padding-left:13px;border-left:2px solid var(--accent);margin-bottom:11px}
+.ad-src{font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.09em;margin-top:7px}
+.ad-ind{display:flex;gap:8px;align-items:baseline;font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.55}
+.ad-ind::before{content:"\25C8";color:var(--accent);font-size:8px;flex-shrink:0}
+.ad-case{padding:9px 12px;background:var(--bg-card);border:1px solid var(--border-s);margin-bottom:5px;cursor:pointer;transition:.15s}
+.ad-case:hover{border-color:var(--accent)}
+.adc-t{font-size:12px;color:var(--text);margin-bottom:2px;line-height:1.3}
+.adc-m{font-family:var(--fm);font-size:8px;color:var(--muted);letter-spacing:.07em}
+.assess-wrap{display:grid;grid-template-columns:240px 1fr;gap:2px;background:var(--border-s)}
+@media(max-width:800px){.assess-wrap{grid-template-columns:1fr}}
+.assess-nav{background:var(--bg-card)}
+.ani{padding:12px 16px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;gap:9px;align-items:center;transition:.18s;border-left:3px solid transparent}
+.ani:hover{background:var(--bg-mid)}.ani.active{background:var(--bg-mid);border-left-color:var(--accent)}.ani.done{border-left-color:var(--green)}
+.ani-n{font-family:var(--fm);font-size:10px;width:19px;height:19px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-s);color:var(--muted);flex-shrink:0}
+.ani.active .ani-n{border-color:var(--accent);color:var(--accent)}.ani.done .ani-n{border-color:var(--green);color:var(--green);background:rgba(74,123,111,.1)}
+.ani-t{font-size:12px;color:var(--muted);line-height:1.3}.ani.active .ani-t{color:var(--text)}
+.assess-panel{background:var(--bg-mid);padding:32px;display:none}.assess-panel.show{display:block}
+@media(max-width:768px){.assess-panel{padding:18px}}
+.aq-prog-bar{height:2px;background:var(--border-s);margin-bottom:24px;overflow:hidden}.aq-prog-fill{height:100%;background:var(--accent);transition:.4s ease}
+.aq-sec{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.aq-q{font-family:var(--fd);font-size:21px;font-weight:400;line-height:1.25;margin-bottom:14px;color:var(--text)}
+.aq-hint{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;padding:11px 15px;background:var(--bg-card);border-left:2px solid var(--accent-d)}
+.aq-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:24px}
+.aq-opt{padding:12px 16px;background:var(--bg-card);border:1px solid var(--border-s);cursor:pointer;display:flex;align-items:center;gap:10px;transition:.18s;font-size:13px;color:var(--text);line-height:1.4}
+.aq-opt:hover{border-color:var(--accent);background:var(--bg-surf)}.aq-opt.sel{border-color:var(--accent);background:var(--accent-g)}
+.aq-opt-lvl{font-family:var(--fm);font-size:8px;color:var(--muted);margin-left:auto;flex-shrink:0}
+.aq-nav-row{display:flex;gap:7px;align-items:center}
+.aq-btn{font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;padding:8px 16px;border:none;cursor:pointer;transition:.18s}
+.aq-prev{background:transparent;color:var(--muted);border:1px solid var(--border-s)}.aq-prev:hover{color:var(--text);border-color:var(--border)}
+.aq-next{background:var(--accent);color:var(--bg)}.aq-next:hover{background:#cda842}.aq-next:disabled{background:var(--dim);cursor:not-allowed}
+.aq-ct{font-family:var(--fm);font-size:8px;color:var(--muted);letter-spacing:.09em;margin-left:auto}
+.res-wrap{display:none;background:var(--bg-mid);padding:36px}.res-wrap.show{display:block}
+.res-title{font-family:var(--fd);font-size:32px;font-weight:300;margin-bottom:5px}
+.res-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:30px}
+@media(max-width:680px){.res-grid{grid-template-columns:1fr}}
+.db{margin-bottom:13px}.db-lbl{display:flex;justify-content:space-between;margin-bottom:4px}
+.db-name{font-size:12px;color:var(--text)}.db-val{font-family:var(--fm);font-size:11px;color:var(--accent)}
+.db-track{height:4px;background:var(--border-s);border-radius:2px;overflow:hidden}.db-fill{height:100%;border-radius:2px;transition:width 1.2s ease}
+.fill-h{background:var(--green)}.fill-m{background:var(--accent)}.fill-l{background:var(--orange)}
+.res-score{font-family:var(--fd);font-size:68px;font-weight:300;color:var(--accent);line-height:1}
+.res-score-lab{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.res-assessment{font-size:13px;color:var(--muted);line-height:1.7;margin-top:13px}
+.rec-list{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.rec{padding:13px 17px;background:var(--bg-card);border:1px solid var(--border-s);border-left:3px solid var(--accent)}.rec.crit{border-left-color:var(--orange)}
+.rec-dim{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.rec-txt{font-size:13px;color:var(--text);line-height:1.65}
+.ind-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;align-items:center}
+.ind-search{flex:1;min-width:180px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:var(--fb);font-size:13px;padding:8px 12px}
+.ind-search::placeholder{color:var(--dim)}.ind-search:focus{outline:none;border-color:var(--accent)}
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:2px;background:var(--border-s);margin-bottom:60px}
+.ind-card{background:var(--bg-card);padding:20px;transition:.18s}.ind-card:hover{background:var(--bg-mid)}
+.ind-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px}
+.ind-cat-tag{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-s);color:var(--dim)}
+.sev-h{color:var(--orange);border-color:rgba(196,92,46,.3)!important}.sev-m{color:var(--accent);border-color:rgba(184,151,58,.25)!important}
+.ind-title{font-family:var(--fd);font-size:18px;font-weight:400;margin-bottom:7px;line-height:1.2}
+.ind-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:9px}
+.ind-actors{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:7px}
+.ind-a{font-family:var(--fm);font-size:7px;letter-spacing:.09em;padding:2px 5px;border:1px solid var(--border-s);color:var(--dim)}
+.ind-example{margin-top:9px;padding:9px 13px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent-d);font-size:11px;color:var(--muted);font-style:italic;line-height:1.55}
+.ind-src{font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.09em;margin-top:7px}
+.ind-empty{padding:48px;text-align:center;font-family:var(--fd);font-size:22px;font-style:italic;color:var(--dim);background:var(--bg-card);grid-column:1/-1}
+.btn-g{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--text);font-family:var(--fb);font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:8px 18px;border:1px solid var(--border-s);cursor:pointer;transition:.2s}
+.btn-g:hover{border-color:var(--accent);color:var(--accent)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-
-<!-- ═══ NAV ═══ -->
 <nav>
   <div class="nav-i">
-    <a href="index.html" class="nav-brand">
-      <span class="nav-ser">Svensk OSINT</span>
-      <span class="nav-name">INBLICK</span>
-    </a>
+    <a href="index.html" class="nav-brand"><span class="nav-ser">Svensk OSINT</span><span class="nav-name">INBLICK</span></a>
     <ul class="nav-tabs">
-      <li><a href="#" onclick="show('chain')" id="tab-chain">Påverkanskedjan</a></li>
-      <li><a href="#" onclick="show('map')"   id="tab-map">Händelsekarta</a></li>
-      <li><a href="#" onclick="show('actors')"id="tab-actors">Aktörer</a></li>
-      <li><a href="#" onclick="show('assess')"id="tab-assess">Organisationstest</a></li>
-      <li><a href="#" onclick="show('inds')"  id="tab-inds">Indikatorer</a></li>
+      <li><a href="#" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
+      <li><a href="#" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
+      <li><a href="#" id="tab-actors" onclick="show('actors');return false">Aktörer</a></li>
+      <li><a href="#" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
+      <li><a href="#" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
     </ul>
-    <a href="index.html" class="nav-back">← Tillbaka till analyssidan</a>
+    <a href="index.html" class="nav-back">&#8592; Analyssidan</a>
   </div>
 </nav>
-
-<!-- ═══════════════════════════════════════════════════
-     MODULE 1 — PÅVERKANSKEDJAN
-═══════════════════════════════════════════════════ -->
 <section class="module active" id="mod-chain">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Kapitel 3 · Interaktiv analys</p>
-      <h1 class="sec-title">Påverkans<em>kedjan</em></h1>
-      <p class="sec-intro">Sju steg — från den första öppna källsökningen till en förskjuten organisation. Klicka på varje steg för att se tre parallella perspektiv: angriparens logik, medarbetarens upplevelse och organisationens blinda fläck.</p>
-    </div>
-
-    <div class="chain-progress reveal" id="chainProgress"></div>
-
-    <div class="chain-layout reveal">
-      <div class="chain-nav" id="chainNav"></div>
-      <div class="chain-panel" id="chainPanel">
-        <div class="cp-step" id="cp-step"></div>
-        <div class="cp-title" id="cp-title"></div>
-        <div id="cp-badge"></div>
-        <div class="cp-perspectives" id="cp-persp"></div>
-        <div class="cp-indicators">
-          <div class="cp-ind-label">Observerbara signaler</div>
-          <div class="cp-ind-list" id="cp-inds"></div>
-        </div>
-      </div>
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 3 &#183; Interaktiv analys</p>
+    <h1 class="sec-title">Påverkans<em>kedjan</em></h1>
+    <p class="sec-intro">Sju steg från den första kartläggningen till organisationens förskjutna beslutsförmåga. Välj ett steg för tre parallella perspektiv och observerbara signaler — med direktlänkar till 35 dokumenterade svenska fall.</p>
+  </div>
+  <div class="chain-progress reveal" id="chainProg"></div>
+  <div class="chain-layout reveal">
+    <div class="chain-nav" id="chainNav"></div>
+    <div class="chain-panel">
+      <div class="cp-step" id="cp-step"></div>
+      <div class="cp-title" id="cp-title"></div>
+      <div id="cp-badge" style="margin-bottom:14px"></div>
+      <div class="cp-lead" id="cp-lead"></div>
+      <div class="cp-perspectives" id="cp-persp"></div>
+      <div class="cp-signals"><div class="cp-signals-label">Observerbara varningssignaler</div><div id="cp-sigs"></div></div>
+      <div class="cp-cases" id="cp-cases"></div>
     </div>
   </div>
+</div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     MODULE 2 — HÄNDELSEKARTA
-═══════════════════════════════════════════════════ -->
 <section class="module" id="mod-map">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Kapitel 5 · Händelsedatabas</p>
-      <h1 class="sec-title">Dokumenterade<br><em>händelser</em></h1>
-      <p class="sec-intro">Verifierade fall från svenska myndigheter, domstolar och oberoende granskningar. Varje punkt är länkad till källa. Geografisk precision anges per punkt — kommunmarkering är inte liktydig med exakt brottsplats.</p>
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 5 &#183; Händelsedatabas</p>
+    <h1 class="sec-title">Dokumenterade<br><em>händelser</em></h1>
+    <p class="sec-intro">35 verifierade fall från svenska myndigheter, domstolar och granskningsjournalistik 2003–2026. Klicka på markör för fullständig fallbeskrivning med källhänvisningar.</p>
+  </div>
+  <div class="map-stats reveal" id="mapStats"></div>
+  <div class="map-controls reveal">
+    <div class="filter-group">
+      <span class="filter-label">Sektor</span>
+      <button class="fb active" data-f="sector" data-v="ALL">Alla</button>
+      <button class="fb" data-f="sector" data-v="SOCIAL">Socialtjänst</button>
+      <button class="fb" data-f="sector" data-v="AUTHORITY">Myndighet</button>
+      <button class="fb" data-f="sector" data-v="CRIMINAL_JUSTICE">Rättsväsende</button>
+      <button class="fb" data-f="sector" data-v="PROCUREMENT">Upphandling</button>
+      <button class="fb" data-f="sector" data-v="TRANSPORT">Transport</button>
+      <button class="fb" data-f="sector" data-v="LEGAL">Juridik</button>
+      <button class="fb" data-f="sector" data-v="HEALTH">Hälsa/sjukvård</button>
+      <button class="fb" data-f="sector" data-v="DEFENCE">Försvar</button>
+      <button class="fb" data-f="sector" data-v="FINANCE">Finans</button>
     </div>
-
-    <div class="map-controls reveal">
-      <div class="filter-group">
-        <span class="filter-label">Sektor</span>
-        <button class="filter-btn active" data-filter="sector" data-val="ALL">Alla</button>
-        <button class="filter-btn" data-filter="sector" data-val="SOCIAL">Socialtjänst</button>
-        <button class="filter-btn" data-filter="sector" data-val="PROCUREMENT">Upphandling</button>
-        <button class="filter-btn" data-filter="sector" data-val="CRIMINAL_JUSTICE">Rättsväsende</button>
-        <button class="filter-btn" data-filter="sector" data-val="AUTHORITY">Myndighet</button>
-      </div>
-      <div class="filter-sep"></div>
-      <div class="filter-group">
-        <span class="filter-label">Status</span>
-        <button class="filter-btn active" data-filter="status" data-val="ALL">Alla</button>
-        <button class="filter-btn" data-filter="status" data-val="CONFIRMED">Bekräftat</button>
-        <button class="filter-btn" data-filter="status" data-val="INDICATION">Indikation</button>
-      </div>
+    <div class="fsep"></div>
+    <div class="filter-group">
+      <span class="filter-label">Aktör</span>
+      <button class="fb active" data-f="actor" data-v="ALL">Alla</button>
+      <button class="fb" data-f="actor" data-v="CRIMINAL_NETWORK">Kriminellt nätverk</button>
+      <button class="fb" data-f="actor" data-v="FOREIGN_POWER">Främmande makt</button>
+      <button class="fb" data-f="actor" data-v="EXTREMIST">Extremism</button>
+      <button class="fb" data-f="actor" data-v="ECONOMIC_INTEREST">Ekonomiskt intresse</button>
     </div>
-
-    <div id="map-container" class="reveal"></div>
-
-    <div class="map-legend reveal">
-      <div class="legend-item"><div class="legend-dot" style="background:var(--green);border-color:var(--green)"></div>Bekräftat</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--accent);border-color:var(--accent)"></div>Indikation</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--orange);border-color:var(--orange)"></div>Utredning pågår</div>
-      <div class="legend-item" style="margin-left:auto"><span style="font-size:9px;color:var(--dim)">Precision anges per punkt. Kommunmarkering ≠ exakt plats.</span></div>
-    </div>
-
-    <div class="map-case-panel" id="mapCasePanel">
-      <div class="mcp-top">
-        <div class="mcp-title" id="mcp-title"></div>
-        <button class="mcp-close" onclick="closeCase()">✕</button>
-      </div>
-      <div class="mcp-meta" id="mcp-meta"></div>
-      <div class="mcp-summary" id="mcp-summary"></div>
-      <div class="mcp-sources" id="mcp-sources"></div>
+    <div class="fsep"></div>
+    <div class="filter-group">
+      <span class="filter-label">Status</span>
+      <button class="fb active" data-f="status" data-v="ALL">Alla</button>
+      <button class="fb" data-f="status" data-v="CONFIRMED">Bekräftat</button>
+      <button class="fb" data-f="status" data-v="INDICATION">Indikation</button>
     </div>
   </div>
+  <div id="map-container" class="reveal"></div>
+  <div class="map-legend reveal">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Bekräftat</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div>Indikation</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#6B4FBB"></div>Nationellt/approximativt</div>
+    <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Kommunmarkör &#8800; exakt händelseplats</div>
+  </div>
+  <div class="map-case-panel" id="mcpPanel">
+    <div class="mcp-top"><div class="mcp-title" id="mcp-title"></div><button class="mcp-close" onclick="closeCase()">&#215;</button></div>
+    <div class="mcp-badges" id="mcp-badges"></div>
+    <div class="mcp-meta" id="mcp-meta"></div>
+    <div class="mcp-summary" id="mcp-sum"></div>
+    <div class="mcp-sources" id="mcp-srcs"></div>
+  </div>
+</div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     MODULE 3 — AKTÖRSMATRISEN
-═══════════════════════════════════════════════════ -->
 <section class="module" id="mod-actors">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Kapitel 4 · Aktörsanalys</p>
-      <h1 class="sec-title">Aktörs<em>matrisen</em></h1>
-      <p class="sec-intro">Fyra aktörstyper — olika mål, tidshorisont och metoder. Metoderna kan överlappa även när avsikterna skiljer sig vitt. Klicka på en aktör för detaljpanel med indikatorer och kopplade fall.</p>
-    </div>
-    <div class="actor-grid reveal" id="actorGrid"></div>
-    <div class="actor-detail reveal" id="actorDetail"></div>
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 4 &#183; Aktörsanalys</p>
+    <h1 class="sec-title">Aktörs<em>matrisen</em></h1>
+    <p class="sec-intro">Fyra aktörstyper med skilda mål och tidshorisont men överlappande metoder. Klicka för detaljpanel med analytisk bedömning, indikatorer och kopplade fall — totalt 35 dokumenterade svenska händelser fördelade på aktör.</p>
   </div>
+  <div class="actor-grid reveal" id="actorGrid"></div>
+  <div class="actor-detail reveal" id="actorDetail"></div>
+</div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     MODULE 4 — ORGANISATIONSTESTET
-═══════════════════════════════════════════════════ -->
 <section class="module" id="mod-assess">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Kapitel 6 · Självskattning</p>
-      <h1 class="sec-title">Organisations<em>testet</em></h1>
-      <p class="sec-intro">Tolv frågor, sju nyckelområden. Ingen data lämnar enheten — resultatet beräknas lokalt och visar en mognadsprofil med konkreta förbättringsrekommendationer.</p>
-    </div>
-
-    <div class="assess-layout reveal" id="assessLayout">
-      <div class="assess-nav" id="assessNav"></div>
-      <div id="assessPanelWrap">
-        <!-- Questions injected by JS -->
-      </div>
-    </div>
-    <div class="assess-results" id="assessResults">
-      <h2 class="results-title">Er mognadsprofil</h2>
-      <p class="results-sub">Baserad på era svar — uppdateras om ni svarar på nytt. Inga uppgifter sparas.</p>
-      <div class="radar-wrap" id="radarWrap"></div>
-      <div style="padding-top:24px;border-top:1px solid var(--border-s)">
-        <p class="eyebrow" style="margin-bottom:16px">Prioriterade rekommendationer</p>
-        <div class="results-recs" id="resultsRecs"></div>
-      </div>
-      <div style="margin-top:32px">
-        <button class="btn-g" onclick="resetAssess()">Starta om testet</button>
-      </div>
-    </div>
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 6 &#183; Självskattning</p>
+    <h1 class="sec-title">Organisations<em>testet</em></h1>
+    <p class="sec-intro">14 frågor, sju nyckelområden. Ingen data lämnar er enhet. Rekommendationerna är kopplade till faktiska brister som Riksrevisionen, Brå och Statskontoret identifierat i svenska organisationer.</p>
   </div>
+  <div class="assess-wrap reveal" id="assessWrap">
+    <div class="assess-nav" id="assessNav"></div>
+    <div id="assessPanels"></div>
+  </div>
+  <div class="res-wrap" id="resWrap">
+    <h2 class="res-title">Er mognadsprofil</h2>
+    <p class="res-sub">Beräknad lokalt — inga uppgifter sparas.</p>
+    <div class="res-grid" id="resGrid"></div>
+    <div style="padding-top:20px;border-top:1px solid var(--border-s)">
+      <p class="eyebrow" style="margin-bottom:13px">Prioriterade rekommendationer</p>
+      <div class="rec-list" id="recList"></div>
+    </div>
+    <div style="margin-top:24px"><button class="btn-g" onclick="resetAssess()">Starta om</button></div>
+  </div>
+</div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     MODULE 5 — INDIKATORSBIBLIOTEKET
-═══════════════════════════════════════════════════ -->
 <section class="module" id="mod-inds">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Indikatorsbibliotek · 12 indikatorer</p>
-      <h1 class="sec-title">Tidiga<br><em>varningssignaler</em></h1>
-      <p class="sec-intro">Sökbart register. Filtrera på kategori, allvarlighetsgrad eller aktörstyp. Varje indikator är källbelagd och klassificerad enligt evidenshierarkin.</p>
-    </div>
-    <div class="ind-controls reveal">
-      <input class="ind-search" id="indSearch" placeholder="Sök indikator..." oninput="filterInds()"/>
-      <button class="filter-btn active" data-ifilter="cat" data-val="ALL" onclick="setIndFilter(this,'cat')">Alla kategorier</button>
-      <button class="filter-btn" data-ifilter="cat" data-val="ACCESS" onclick="setIndFilter(this,'cat')">Åtkomst</button>
-      <button class="filter-btn" data-ifilter="cat" data-val="BEHAVIOUR" onclick="setIndFilter(this,'cat')">Beteende</button>
-      <button class="filter-btn" data-ifilter="cat" data-val="CONTACT" onclick="setIndFilter(this,'cat')">Kontakt</button>
-      <button class="filter-btn" data-ifilter="cat" data-val="DIGITAL" onclick="setIndFilter(this,'cat')">Digital</button>
-      <button class="filter-btn" data-ifilter="cat" data-val="PROCUREMENT" onclick="setIndFilter(this,'cat')">Upphandling</button>
-      <button class="filter-btn" data-ifilter="sev" data-val="HIGH" onclick="setIndFilter(this,'sev')">Hög allvarlighet</button>
-    </div>
-    <div class="ind-grid reveal" id="indGrid"></div>
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Indikatorsbibliotek &#183; 25 indikatorer</p>
+    <h1 class="sec-title">Tidiga<br><em>varningssignaler</em></h1>
+    <p class="sec-intro">25 sökbara indikatorer med konkreta svenska fallexempel. Filtrera på kategori, allvarlighetsgrad eller aktörstyp. Varje indikator är källbelagd och klassificerad enligt evidenshierarkin.</p>
   </div>
+  <div class="ind-bar reveal">
+    <input class="ind-search" id="indSrch" placeholder="Sök indikator, exempel, nyckelord..." oninput="filterInds()"/>
+    <button class="fb active" data-ic="cat" data-iv="ALL" onclick="setIF(this,'cat')">Alla</button>
+    <button class="fb" data-ic="cat" data-iv="ACCESS" onclick="setIF(this,'cat')">Åtkomst</button>
+    <button class="fb" data-ic="cat" data-iv="BEHAVIOUR" onclick="setIF(this,'cat')">Beteende</button>
+    <button class="fb" data-ic="cat" data-iv="CONTACT" onclick="setIF(this,'cat')">Kontakt</button>
+    <button class="fb" data-ic="cat" data-iv="DIGITAL" onclick="setIF(this,'cat')">Digital</button>
+    <button class="fb" data-ic="cat" data-iv="PROCUREMENT" onclick="setIF(this,'cat')">Upphandling</button>
+    <button class="fb" data-ic="cat" data-iv="SOCIAL" onclick="setIF(this,'cat')">Socialt</button>
+    <button class="fb" data-ic="sev" data-iv="HIGH" onclick="setIF(this,'sev')">Hög allvarlighet</button>
+  </div>
+  <div class="ind-grid reveal" id="indGrid"></div>
+</div>
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-/* ══════════════════════════════════════════
-   DATA
-══════════════════════════════════════════ */
-const CHAIN = [
-  {
-    step:"Kartläggning", title:"Det börjar med öppna källor",
-    danger:false,
-    badge:"b-ind",
-    desc:"Angriparen identifierar vem som har tillgång, inflytande eller sårbarhet — utan att göra intrång. Informationen är offentlig, legitim, och spridd över en lång tidsperiod.",
-    ang:"Söker handläggare, registratorer och upphandlare med hjälp av organisationsscheman, LinkedIn, nämndhandlingar och diarier. Identifierar formell makt och faktisk påverkan — de sammanfaller sällan.",
-    med:"Ingenting känns ovanligt. Den egna informationen finns redan offentligt. Inga kontakter har tagits.",
-    org:"Ser ingenting. Ingen incident att rapportera. Den exponering som skapas är ett resultat av legitima informationsskyldigheter.",
-    indicators:["Regelbundet namngiven i beslutspublikationer utan skyddsmekanismer","Roll exponerad i sökbara delegationsordningar","LinkedIn-profil avslöjar ärendetyper och nätverk"]
-  },
-  {
-    step:"Urval", title:"Formell makt ≠ faktisk påverkan",
-    danger:false,
-    badge:"b-ind",
-    desc:"Angriparen väljer inte nödvändigtvis den som undertecknar beslutet. Handläggaren, registratorn, administratören och systemförvaltaren kan ha större faktisk möjlighet att påverka ett utfall.",
-    ang:"Kartlägger beslutskedjan bakom ett specifikt ärende. Identifierar den person vars handling, fördröjning eller tolkningsbeslut har störst konsekvens.",
-    med:"Den utvalda personen har ingen aning om att deras roll är av intresse. De uppfattar sig själva som en anonym tjänsteperson utan särskild exponering.",
-    org:"Har sällan gjort en systematisk befattningsanalys baserad på faktisk tillgång och påverkan snarare än formell titel.",
-    indicators:["Brist på exponeringsanalys för känsliga handläggarroller","Bred systembehörighet utan systematisk uppföljning","Konsulter med djup systemkunskap men begränsad kontroll"]
-  },
-  {
-    step:"Kontakt", title:"Den första relationen skapas",
-    danger:false,
-    badge:"b-ind",
-    desc:"Angriparen tar den första kontakten via en kanal som uppfattas som professionell och legitim — ett nätverksevent, en leverantörsdialog, en gemensam bekant.",
-    ang:"Väljer kontaktform som minimerar vaksamhet: professionellt nätverk, branschförening, tidigare kollega, gemensam vän. Kontakten är hjälpsam, inte krävande.",
-    med:"Kontakten uppfattas som ett normalt professionellt utbyte. Personen är trevlig och kunnig. Ingen känsla av att något är fel.",
-    org:"Om det noteras alls, registreras det som en opecifierad extern kontakt. Ingen systematisk loggning av externa relationer kring känsliga befattningar.",
-    indicators:["Ny kontakt med oklart syfte kring ett pågående ärende","Kontaktperson med diffus professionell bakgrund","Kontakt tagen direkt till handläggare snarare än via officiell kanal"]
-  },
-  {
-    step:"Relationsbygge", title:"Hjälpsamhet skapar beroende",
-    danger:false,
-    badge:"b-ind",
-    desc:"Relationen fördjupas genom ömsesidiga tjänster, bekräftelse, gemensamma intressen. Gränsen mellan professionellt och privat börjar lösas upp gradvis.",
-    ang:"Investerar i relationen utan omedelbar avkastning. Hjälper personen med råd, kontakter, information. Skapar en känsla av förtroende och tacksamhet.",
-    med:"Relationen känns äkta och ömsesidig. Personen upplever sig uppskattad och lyssnad på. Det finns en naturlig lojalitet.",
-    org:"Ser en medarbetare med ett externt nätverk. Ingenting avviker från det normala. Inga rapporteringsskyldigheter aktiveras.",
-    indicators:["Intensifierat socialt umgänge med extern part kring känslig period","Medarbetare tar emot tjänster, hjälp eller gåvor från extern aktör","Relation som gradvis förflyttas från tjänste- till privat sfär"]
-  },
-  {
-    step:"Gränstest", title:"Den lilla begäran som testar gränsen",
-    danger:false,
-    badge:"b-ind",
-    desc:"Angriparen gör en liten, till synes harmlös begäran. Den tjänar dubbelt syfte: dels att inhämta information, dels att testa om personen är villig att gå utanför ordinarie rutiner.",
-    ang:"Väljer en begäran som är svår att avvisa socialt men lätt att rationalisera — ett informellt råd, ett namn att kontakta, en förklaring av en intern rutin. Reaktionen mäts.",
-    med:"Ser det som en ospecifik hjälpsamhet snarare än en gränstestning. Motiveras av lojalitet mot relationen, inte av tänkt vinning.",
-    org:"Inga alarm utlöses — händelsen når aldrig en rapporteringströskel. Ingen av de inblandade uppfattar det som en säkerhetshändelse.",
-    indicators:["Begäran om icke-publik information med 'vänlig' formulering","Frågor om interna rutiner, behörigheter eller frånvaro","Förfrågningar som passerar utan dokumentation"]
-  },
-  {
-    step:"Normalisering", title:"Undantaget blir rutin",
-    danger:false,
-    badge:"b-ana",
-    desc:"Mönstret upprepas. Det som en gång var ett undantag uppfattas nu som normalt. Kontakten har förflyttats till privata kanaler. Lojaliteten mot relationen konkurrerar med lojaliteten mot organisationen.",
-    ang:"Eskalerar gradvis och aldrig i ett enda stort steg. Varje ny begäran är bara marginellt större än den föregående. Personen är nu delvis bunden av de tidigare handlingarna.",
-    med:"Uppfattar inte sin situation som komprometterad. Har internaliserat relationen som legitim. Känner eventuellt obehag, men har inga ord eller kanaler för att rapportera det.",
-    org:"Har inte fångat mönstret eftersom varje enskild händelse ligger under organisationens rapporteringströskel. Frånvaron av incident tolkas som frånvaro av problem.",
-    indicators:["Medarbetare som regelbundet kommunicerar via privata kanaler med extern aktör","Avvikelser från rutiner som inte rapporteras uppåt","Kollegor som märker beteendeförändringar men inte vet vart de ska rapportera"]
-  },
-  {
-    step:"Systemskada", title:"Beslutsförmågan förskjuten",
-    danger:true,
-    badge:"b-ana",
-    desc:"Påverkan behöver inte leda till ett uppenbart felaktigt beslut för att ha lyckats. Fördröjning, självreglering, tystnad och personalflykt är alla framgångsrika utfall ur angriparens perspektiv.",
-    ang:"Behöver inte nödvändigtvis ta ett specifikt beslut. Det räcker att en kontroll inte genomförs, att ett ärende fördröjs, eller att en kompetent medarbetare väljer att lämna sin tjänst.",
-    med:"Kan befinna sig i ett beroende utan att ha definierat det som sådant. Kan ha slutat rapportera avvikelser, undvika vissa arbetsuppgifter, eller uppleva hög stressbelastning.",
-    org:"Märker av ökad personalomsättning, försiktigare beslutsfattande, tystare möten. Förklarar det med arbetsbelastning eller ledarskapsbrister — inte med extern påverkan.",
-    indicators:["Ökad personalrömsättning i känsliga befattningar utan tydlig intern orsak","Beslut som fördröjs systematiskt utan dokumenterad motivering","Ärenden som hanteras med ovanlig försiktighet eller omdirigeras internt","Medarbetare som undviker specifika uppgiftstyper utan förklaring"]
-  }
-];
+/* ══ DATA ══ */
+const CHAIN=[{"step":"Kartläggning","title":"Det börjar med öppna källor","danger":false,"badge":"b-ind","lead":"Angriparen identifierar vem som har tillgång, inflytande eller sårbarhet — utan att göra intrång. Informationen är offentlig, legitim och spridd över tid. Det är kombinationen av uppgifter som skapar kartläggningsvärdet.","ang":"Söker handläggare, registratorer och upphandlare via organisationsscheman, LinkedIn, nämndhandlingar och diarier. Identifierar formell makt och faktisk påverkan — de sammanfaller sällan. Familjerelationer och konferensprogram kompletterar bilden.","med":"Ingenting känns ovanligt. Den egna informationen finns redan offentligt. Inga direkta kontakter har tagits. Personen är omedveten om att deras roll är av intresse.","org":"Ser ingenting. Ingen incident att rapportera. Den exponering som skapas är ett resultat av legitima informationsskyldigheter och digital närvaro som organisationen självt skapat.","signals":["Rollens namn och kontaktuppgifter exponerade i sökbara nämndhandlingar","LinkedIn-profil avslöjar ärendetyper, beslutsmandat och nätverk","Delegationsordning publicerad i sökbar form med personnamn","Platsannonser röjer detaljer om interna system och behörighetsstrukturer"],"cases":["c10","c24"]},{"step":"Urval","title":"Formell makt ≠ faktisk påverkan","danger":false,"badge":"b-ind","lead":"Angriparen väljer inte nödvändigtvis den som undertecknar beslutet. Handläggaren, registratorn och systemförvaltaren kan ha större faktisk möjlighet att påverka ett utfall än chefen som formellt beslutar.","ang":"Kartlägger beslutskedjan bakom ett specifikt ärende. Identifierar den person vars handling, fördröjning eller tolkningsbeslut har störst konsekvens. Prioriterar roller med tillgång och diskretionsutrymme framför formell titel.","med":"Den utvalda personen uppfattar sig som en anonym tjänsteperson utan särskild exponering. Känner inte till att deras yrkesroll, tillgång och handlingsutrymme kartlagts systematiskt.","org":"Har sällan genomfört en befattningsanalys baserad på faktisk tillgång och påverkan. Konsulter och externa leverantörer ingår sällan i hotbilden.","signals":["Brist på exponeringsanalys för känsliga handläggarroller och systemförvaltare","Bred systembehörighet utan dokumenterad uppföljning","Konsulter med djup systemkunskap och tillgång men begränsad kontroll"],"cases":["c19","c01","c35"]},{"step":"Kontakt","title":"Den första relationen skapas","danger":false,"badge":"b-ind","lead":"Angriparen tar den första kontakten via en kanal som uppfattas som professionell och legitim. Kontakten är hjälpsam och ofarlig i sitt sammanhang — det är det genomtänkta valet av form och timing som är signifikant.","ang":"Väljer kontaktform som minimerar vaksamhet: professionellt nätverk, branschförening, tidigare kollega, gemensam vän. Undviker tjänstekanaler till förmån för kanaler utan dokumentation.","med":"Kontakten uppfattas som ett normalt professionellt utbyte. Personen är kunnig och trevlig. Ingen känsla av att något är fel — tvärtom upplevs kontakten som värdefull.","org":"Om det noteras alls, registreras det som en ospecifierad extern kontakt. Organisationen saknar systematisk loggning av externa relationer kring känsliga befattningar.","signals":["Ny kontakt med oklart syfte kring ett pågående känsligt ärende","Kontaktperson med diffus professionell bakgrund och oprecist uppdrag","Kontakt tagen direkt till handläggare snarare än via officiell kanal"],"cases":["c02","c04"]},{"step":"Relationsbygge","title":"Hjälpsamhet skapar beroende","danger":false,"badge":"b-ind","lead":"Relationen fördjupas genom ömsesidiga tjänster, bekräftelse och gemensamma intressen. Gränsen mellan professionellt och privat börjar gradvis lösas upp. Lojalitet mot relationen börjar konkurrera med lojalitet mot organisationen.","ang":"Investerar i relationen utan omedelbar avkastning. Skapar känsla av förtroende och tacksamhet. Skiftar medvetet kommunikation till privata kanaler.","med":"Relationen känns äkta och ömsesidig. Personen upplever sig uppskattad. Det finns en naturlig lojalitet som inte ifrågasätts. Gränsförflyttningen sker omärkbart.","org":"Ser en medarbetare med ett externt nätverk. Ingenting avviker. Relationen är inte synlig i tjänstekanalerna.","signals":["Intensifierat socialt umgänge med extern part kring känslig period","Medarbetare tar emot tjänster, råd eller gåvor från extern aktör","Relation som gradvis förflyttas från tjänstekanal till privata kanaler"],"cases":["c06","c07","c25"]},{"step":"Gränstest","title":"Den lilla begäran som testar","danger":false,"badge":"b-ind","lead":"Angriparen gör en liten, till synes harmlös begäran. Den tjänar dubbelt syfte: dels att inhämta information, dels att testa om personen är villig att gå utanför ordinarie rutiner — och om det leder till konsekvenser.","ang":"Väljer en begäran som är svår att avvisa socialt men lätt att rationalisera. Avläser reaktionen noga. Eskalerar inte om avvisad — väljer istället ny kanal eller ny timing.","med":"Ser det som en ospecifik hjälpsamhet snarare än en gränstestning. Motiveras av lojalitet mot relationen, inte av tänkt vinning. Inget olagligt verkar ha hänt.","org":"Inga alarm utlöses. Händelsen når aldrig en rapporteringströskel. Ingen av de inblandade uppfattar det som en säkerhetshändelse.","signals":["Begäran om icke-publik information med vänskaplig formulering","Frågor om interna rutiner, behörigheter eller personalstruktur","Förfrågningar som passerar utan dokumentation i tjänstekanalen"],"cases":["c02","c05","c28"]},{"step":"Normalisering","title":"Undantaget blir rutin","danger":false,"badge":"b-ana","lead":"Mönstret upprepas och undantaget normaliseras. Varje ny begäran är marginellt större än den föregående. Kontakten har förflyttats till privata kanaler. Lojaliteten mot relationen konkurrerar med lojaliteten mot organisationen.","ang":"Eskalerar gradvis, aldrig i ett enda stort steg. Personen är nu delvis bunden av de tidigare handlingarna och vet om det.","med":"Uppfattar inte sin situation som komprometterad. Har internaliserat relationen som legitim. Känner eventuellt obehag men har inga ord eller kanaler för att rapportera det.","org":"Har inte fångat mönstret eftersom varje enskild händelse ligger under rapporteringströskel. Frånvaron av registrerad incident tolkas som frånvaro av problem.","signals":["Medarbetare kommunicerar regelbundet med extern aktör via privata kanaler","Avvikelser från rutiner som inte rapporteras uppåt","Kollegor som märker beteendeförändringar men inte vet vart de ska rapportera"],"cases":["c07","c25","c20"]},{"step":"Systemskada","title":"Beslutsförmågan förskjuten","danger":true,"badge":"b-ana","lead":"Påverkan behöver inte ta formen av ett uppenbart felaktigt beslut. Fördröjning, självreglering, tystnad och personalflykt är alla framgångsrika utfall. Organisationen märker av effekterna — men missar orsaken.","ang":"Behöver inte ett specifikt beslut. Det räcker att en kontroll inte genomförs, ett ärende fördröjs, eller att en kompetent medarbetare väljer att sluta.","med":"Kan befinna sig i ett beroende utan att ha definierat det som sådant. Kan ha slutat rapportera avvikelser eller uppleva hög stress utan identifierad orsak.","org":"Märker ökad personalomsättning, försiktigare beslutsfattande, tystare möten. Förklarar det med arbetsbelastning — inte med extern påverkan.","signals":["Ökad personalomsättning i känsliga befattningar utan tydlig intern orsak","Beslut som systematiskt fördröjs utan dokumenterad motivering","Ärenden som hanteras med ovanlig försiktighet eller omdirigeras","Internrevisionen noterar avvikelser som organisationen inte kan förklara"],"cases":["c04","c10","c19","c24"]}];
+const CASES=[{"id":"c01","title":"Möjliggörare i Kriminalvården — registerslagningar röjdes till kriminellt nätverk","date":"2022-11","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Anställd vid Kriminalvården dömdes för att under drygt ett år ha utfört otillåtna registerslagningar och röjt resultaten till ett kriminellt nätverk. Tillgången upprätthölls utan att intern kontroll fångade avvikelserna. Riksrevisionen identifierade Kriminalvården som en av myndigheterna med allvarliga strukturella brister mot infiltration. Fallet illustrerar den klassiska 'upparbetade möjliggöraren'.","sources":[{"l":"Riksrevisionen 2023 — Infiltration i staten","t":"report"},{"l":"Tingsrättsdom B 1204-23","t":"court"}]},{"id":"c02","title":"Försäkringskassan — anställd utförde slagningar under hot från assistansbolag","date":"2020-03","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.71,"lng":11.97,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Anställd på Försäkringskassan dömdes för grovt dataintrång. Personen uppgav att slagningarna gjorts 'under press och visst hot' från en person som drev ett assistansbolag. Klassiskt fall av tvingad möjliggörare — ingen ekonomisk vinning, men stor risk för den anställde. Åklagaren Thomas Forsberg betecknade det som 'förtroendesvek i myndighetsutövning'.","sources":[{"l":"Publikt 2024 — Statens anställda blir verktyg","t":"media"},{"l":"Dom meddelad 4 mars 2020","t":"court"}]},{"id":"c03","title":"Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse","date":"2023-01","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"DEFENCE","actor":"FOREIGN_POWER","status":"CONFIRMED","summary":"Stockholms tingsrätt dömde i januari 2023 två personer: livstids fängelse respektive 9 år och 10 månader för grovt spioneri mot ryska GRU. Den ena var anställd vid Försvarsmakten 2011–2014 och Säkerhetspolisen 2014–2015. Brottsligheten pågick 2011–2017 och avslöjades efter intern underrättelseanalys. Svea hovrätt fastställde domen maj 2023.","sources":[{"l":"Säkerhetspolisen pressmeddelande jan 2023","t":"report"},{"l":"Svea hovrätts dom maj 2023","t":"court"}]},{"id":"c04","title":"Socialsekreterare samarbetade med kriminellt släktnätverk — larm om barn försvann","date":"2023-06","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.73,"lng":12.0,"p":"municipality"},"sector":"SOCIAL","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Socialsekreterare på nordöstra Göteborgs socialförvaltning utreddes för misstänkt samarbete med känt kriminellt släktnätverk. Larm om barn från nätverket ska ha försvunnit i handläggningskedjan. En annan sekreterare vid samma förvaltning åtalades separat för brott mot tystnadsplikten. Fallet exemplifierar den 'lojalitetsbaserade möjliggöraren'.","sources":[{"l":"SVT — Socialsekreterare utreds för samarbete med släktnätverk","t":"media"},{"l":"DN — Larm om barn från kriminellt nätverk försvann","t":"media"}]},{"id":"c05","title":"Skatteverkshandläggare dömd — 100+ Mkr momsbedrägeri misstänks finansiera terrorism","date":"2019-01","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"AUTHORITY","actor":"EXTREMIST","status":"CONFIRMED","summary":"Handläggare på Skatteverket dömdes till 8 år för trolöshet och medhjälp till grovt momsbedrägeri. Totalt 100+ Mkr försvann från svenska och danska staten via falska fakturupplägg. Pengarna misstänks finansiera terrorverksamhet. Utredarna fann kopplingar till IS-krigare och terrorresenärer i Sverige och utomlands.","sources":[{"l":"Ekobrottsmyndigheten","t":"report"},{"l":"Säpo årsberättelse 2020","t":"report"}]},{"id":"c06","title":"Akademiska sjukhuset Uppsala — verksamhetschef dömd för 4,76 Mkr i mutor","date":"2024-03","loc":{"m":"Uppsala","r":"Uppsala","lat":59.86,"lng":17.64,"p":"municipality"},"sector":"HEALTH","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"Verksamhetschef och överläkare dömdes till 4 år för grovt tagande av muta (4,76 Mkr), grov trolöshet och grovt bedrägeri. Mutor togs emot från Canon Medical och Siemens via osanna fakturor 2015–2022. SVT Uppdrag granskning avslöjade härvan 2023. Totalt 7 dömda, 3 bolag fick företagsbot, 4 fick näringsförbud. Åklagaren Riksenheten mot korruption.","sources":[{"l":"Attunda tingsrätt dom mars 2024","t":"court"},{"l":"SVT Uppdrag granskning 2023","t":"media"},{"l":"Polisen pressmeddelande dec 2023","t":"report"}]},{"id":"c07","title":"Toppadvokater dömda — hjälpte Värbynätverket via krypterade chattar","date":"2023-09","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"LEGAL","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Ekrem Güngör (6 år, förberedelse till mord) och Amir Amdouni (4 år, medhjälp till grovt narkotikabrott och brott mot yppandeförbud) dömdes för att via krypterade chattar läcka information till Värbynätverket. Båda var bland Sveriges mest anlitade försvarsadvokater. Fallet illustrerar hur privilegierad yrkesroll systematiskt utnyttjades.","sources":[{"l":"DN — Två advokater utesluts ur Advokatsamfundet","t":"media"},{"l":"SVT — Toppadvokater hjälpte kriminella","t":"media"}]},{"id":"c08","title":"Göteborgs hamn — rederianstsällda smugglade 52 kg narkotika förbi tullen","date":"2022-10","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.68,"lng":11.88,"p":"municipality"},"sector":"TRANSPORT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Två anställda vid ett rederi på Göteborgssträckan använde passerkort för att smuggla 39 kg amfetamin och 13 kg hasch förbi tullfiltret. Åklagaren: 'anställda på färjan hade möjligheten att undvika tullfiltret helt, vilket gjorde smugglingen svårupptäckt'. Narkotikan hämtades i Västeuropa och kördes till Tyskland innan den togs ombord. Totalt 7 åtalade.","sources":[{"l":"Åklagarmyndigheten pressmeddelande maj 2023","t":"report"},{"l":"Aftonbladet — Anställda på färja smugglade knark","t":"media"}]},{"id":"c09","title":"Helsingborgs hamn — hamnarbetare insider i kokainhärva","date":"2022-09","loc":{"m":"Helsingborg","r":"Skåne","lat":56.05,"lng":12.69,"p":"municipality"},"sector":"TRANSPORT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Hamnarbetare med 30 år i hamnen dömdes till 2 år för att ha hjälpt lokalisera kylcontainrar med kokain från Ecuador. 93 kg hittades i Helsingborg, ytterligare 102 kg påträffades av Rotterdam-polisen och byttes mot attrapper. Smugglingen planerades i krypterad chatt (Sky ECC). En 43-åring dömdes till 8 år för det samlade narkotikabrottet.","sources":[{"l":"Transportarbetaren — Fängelse för kokainsmuggling","t":"media"},{"l":"Tingsrätt Helsingborg 2023","t":"court"}]},{"id":"c10","title":"Lantmäteriet — säkerhetsklassade kartuppgifter röjda utan sekretessprövning under år","date":"2024-05","loc":{"m":"Gävle","r":"Gävleborg","lat":60.67,"lng":17.14,"p":"municipality"},"sector":"AUTHORITY","actor":"FOREIGN_POWER","status":"CONFIRMED","summary":"Säkerhetsskyddsklassificerade uppgifter i Lantmäteriets öppna arkiv (Arken) lämnades ut utan sekretessprövning under många år. Ledningen kände till problemet sedan 2018 men agerade inte förrän panikstängning maj 2024. Ds 2026:2: 'aktörer som vill Sverige illa har kunnat kartlägga och sammanställa känsliga uppgifter — den skadan går inte att reparera.' Generaldirektören avgick.","sources":[{"l":"Ds 2026:2 — Granskning av Lantmäteriets informationssäkerhet","t":"report"},{"l":"Altinget mars 2026","t":"media"},{"l":"Expressen avslöjanden 2024","t":"media"}]},{"id":"c11","title":"Migrationsverket Borås — handläggare beviljade tillstånd mot betalning","date":"2022-06","loc":{"m":"Borås","r":"Västra Götaland","lat":57.72,"lng":12.94,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Handläggare vid Migrationsverket i Borås utreddes för tjänstefel och dataintrång efter anonym angivelse. Internrevision visade att arbetstillstånd beviljats 'medvetet och ohederligt'. En handläggare sade upp sig under utredning, den andre var tjänstledig. Ärendet anmäldes till Personalansvarsnämnden och för åtal.","sources":[{"l":"Intern utredning Migrationsverket 2022","t":"report"}]},{"id":"c12","title":"Sida-tjänsteman gripen för mutbrott under biståndsarbete i Afrika","date":"2024-05","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":17.97,"p":"municipality"},"sector":"AUTHORITY","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"Sida-tjänsteman stationerad vid svensk ambassad i Afrika greps misstänkt för grov trolöshet, grovt tagande av muta och grovt bedrägeri. Mutor under tre år vid hantering av biståndsmedel och projekt. Statsåklagare Thomas Forsberg vid riksenheten mot korruption bekräftade att det rörde sig om 'betydande summor'. Mannen greps vid hemresa till Sverige.","sources":[{"l":"DN — Sidaanställd gripen misstänkt för mutbrott 7 maj 2024","t":"media"},{"l":"Development Sweden Newsletter 2024","t":"media"}]},{"id":"c13","title":"UD/Migrationsverket — tjänsteman dömd för 61 felaktiga visum från Islamabad","date":"2018-01","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Tjänsteman utlånad till UD:s ambassad i Islamabad dömdes för tjänstefel i 61 av 121 åtalade visumärenden. Förfalskade inbjudningar från Ericsson och Scania användes som underlag — bolagsrepresentanter vittnade om att dokumenten var förfalskningar. Riksrevisionen (RiR 2018:13) fann att skyddet mot oegentligheter vid utlandsmyndigheter är 'svagt'.","sources":[{"l":"Attunda tingsrätt dom 2018","t":"court"},{"l":"Riksrevisionen RiR 2018:13","t":"report"}]},{"id":"c14","title":"NMR-bomber i Göteborg — paramilitärt tränade nynazister attackerar","date":"2017-01","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.7,"lng":11.95,"p":"municipality"},"sector":"CIVIL_SOCIETY","actor":"EXTREMIST","status":"CONFIRMED","summary":"Tre NMR-medlemmar utförde tre bombattentat: vänsterbokhandel (11 nov 2016), migranterboende (5 jan 2017 — städare permanent invalidiserad), ytterligare boende (25 jan 2017 — desarmerat i sista sekund). Två av de dömda hade erhållit paramilitär träning vid Ryska Imperiala Rörelsens (RIM) läger nära Sankt Petersburg. USA klassificerade RIM som global terroristorganisation som följd.","sources":[{"l":"Göteborgs tingsrätt dom 2017","t":"court"},{"l":"CVE — rapport om RIM 2020","t":"report"}]},{"id":"c15","title":"Fair Play Bygg 2023 — 291 tips om brottslighet på Stockholms byggarbetsplatser","date":"2023-12","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.09,"p":"municipality"},"sector":"PROCUREMENT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Årsrapport 2023 dokumenterade 291 tips med 168 ärenden vidare till myndigheter. Vanligaste brott: svart arbetskraft, ID-utnyttjande, penningtvätt, skattebrott och lönebedrägeri. Sedan 2016 har 175 företag taxerats upp med 124 Mkr. Byggbranschens kriminella ekonomi omsätter uppskattningsvis 25 Mdr/år. Möjliggörare används systematiskt för att kringgå kontrollinstitut.","sources":[{"l":"Fair Play Bygg Årsrapport 2023","t":"report"}]},{"id":"c16","title":"Islamistisk infiltration — 931 Mkr i offentliga köp från extremistkopplade bolag","date":"2020-01","loc":{"m":"Nationellt","r":"Nationellt","lat":62.0,"lng":15.0,"p":"approximate"},"sector":"PROCUREMENT","actor":"EXTREMIST","status":"CONFIRMED","summary":"Acta Publicas rapport kartlade 560 individer ur islamistisk miljö. 47 hade gjort affärer med myndigheter för 931 Mkr under fem år. Bolagen verkade legitima och var registrerade, skattebetalande — traditionella bakgrundskontroller fångade dem inte. Kunder inkluderade Åklagarmyndigheten, Konstfack och ett stort antal kommuner.","sources":[{"l":"Acta Publica 2020 — Affärerna med islamistiska extremister","t":"report"}]},{"id":"c17","title":"Stockholmsbörsen — anställd dömd för grovt insiderbrott vid tre tillfällen","date":"2025-12","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"FINANCE","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"Stockholms tingsrätt dömde december 2025 en tidigare anställd vid Nasdaq Stockholm till 1 år för grovt insiderbrott vid tre tillfällen. Personen fick i tjänsten tillgång till information om kommande uppköpsbud i fem börsbolag och vidarebefordrade detta till närstående som köpte aktier. Frikändes vid fyra av sju händelser.","sources":[{"l":"Sveriges Domstolar — Dom 12 december 2025","t":"court"}]},{"id":"c18","title":"Kriminalvårdens övervakare med högerextrem bakgrund — Acta Publica-granskning","date":"2020-06","loc":{"m":"Nationellt","r":"Nationellt","lat":61.5,"lng":15.5,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"EXTREMIST","status":"CONFIRMED","summary":"Acta Publicas granskning av Kriminalvårdens övervakare identifierade flera med aktiv högerextrem bakgrund: en sprider våldsbejakande högerextremism med nazistiska symbolreferenser, en biträdande övervakare är dömd upprepade gånger och aktiv i vitmaktmiljön, en tredje stödjer offentligt skolmördaren Anton Lundin-Pettersson — och dennes klient hade kopplingar till samma miljö.","sources":[{"l":"Acta Publica — rapport om övervakare 2020","t":"report"}]},{"id":"c19","title":"Riksrevision: FMV, Kammarkollegiet, Kriminalvården — allvarliga brister mot infiltration","date":"2025-06","loc":{"m":"Nationellt","r":"Nationellt","lat":60.0,"lng":16.0,"p":"approximate"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Riksrevisionens granskning 2025–2026 av tre myndigheter: 44% av Kriminalvårdens personal vet inte vilka åtgärder som gäller vid överträdelser. Kriminalvården bedömer infiltrationsrisken som hög sedan 2024 men åtgärdsarbetet bedöms otillräckligt aktivt. 2,2% av de anställda har haft löneutmätning under granskningsperioden. FMV bedöms ha bättre struktur.","sources":[{"l":"Riksrevisionen 2025–2026 — Infiltration i staten","t":"report"}]},{"id":"c20","title":"Edip Samuelsson — utesluten klanadvokat tillåts återkomma i rätten","date":"2023-01","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.71,"lng":11.97,"p":"municipality"},"sector":"LEGAL","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Advokat starkt förknippad med Ali Khan-nätverket uteslöts ur Advokatsamfundet för att ha förmedlat information från frihetsberövade klienter. Trots Högsta domstolens dom godkände Göteborgs tingsrätt att han ersatte en offentlig försvarare. Åklagaren: 'HD:s avgörande borde ha väglett beslutet'. Illustrerar strukturellt systemfel bortom den enskilde aktörens handling.","sources":[{"l":"Expressen — Klanadvokaten uteslots, nu är han tillbaka","t":"media"},{"l":"Högsta domstolen dom","t":"court"}]},{"id":"c21","title":"Socialsekreterare i Göteborg — falskt examensbevis, fattade beslut om barn","date":"2023-04","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.71,"lng":11.95,"p":"municipality"},"sector":"SOCIAL","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"Socialsekreterare hade tagit beslut om barn och unga trots att examensbeviset var förfalskat. Saknade formella kvalifikationer för sin roll under en period med känsliga beslut. Illustrerar sårbarhet i bakgrundskontroller vid rekrytering till socialtjänsten. SVT Nyheter Väst: fallet avslöjades av en kollega.","sources":[{"l":"SVT — Socialsekreterare fejkade examensbevis","t":"media"}]},{"id":"c22","title":"Penningtvättshärva — 53 bygg/städbolag tvättade 16 Mkr via baltiska bulvaner","date":"2015-01","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.04,"p":"municipality"},"sector":"PROCUREMENT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Tre män skapade 53 skenföretag inom bygg/städ med baltiska bulvaner. Bolagen fakturerade legitima företag som betalade tillbaka kontant (svart lön). 16 Mkr tvättades. Ekobrottsmyndigheten häktade huvudmännen. Dom: 5, 2 resp. 9 månaders fängelse. Svea hovrätt fastställde domarna. 'Den största penningtvättshärva jag stött på' — utredaren.","sources":[{"l":"Byggnadsarbetaren — Så tvättade falska byggbolag 16 miljoner","t":"media"},{"l":"Ekobrottsmyndigheten","t":"report"}]},{"id":"c23","title":"Gängkopplad kvinna avslöjades på Migrationsverket — fick jobb på socialkontor","date":"2021-06","loc":{"m":"Okänt","r":"Nationellt","lat":59.61,"lng":16.5,"p":"approximate"},"sector":"SOCIAL","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Kvinna med dokumenterade gängkopplingar avslöjades vid Migrationsverket men erhöll i ett senare skede anställning på socialkontor. Illustrerar strukturell brist i informationsdelning mellan offentliga arbetsgivare och hur insiderkarriärer kan ske via interna förflyttningar. Ingen formell dom har publicerats.","sources":[{"l":"Medierapportering 2021","t":"media"}]},{"id":"c24","title":"Transportstyrelsen — sekretessklassad data till utländska IT-leverantörer","date":"2017-01","loc":{"m":"Örebro","r":"Örebro","lat":59.27,"lng":15.21,"p":"municipality"},"sector":"TRANSPORT","actor":"FOREIGN_POWER","status":"CONFIRMED","summary":"Transportstyrelsen lämnade ut sekretessklassificerade uppgifter — fordon, körkort, militär personal, vittnen under skydd — till utländska IT-underleverantörer utan säkerhetsskyddsgranskning. GD dömdes för vårdslöshet med hemlig uppgift. Skandalen ledde till riksdagskris och ministerflykt. Strukturellt analogt med Lantmäteriet-fallet tio år senare.","sources":[{"l":"KU-utredning 2017/2018","t":"report"},{"l":"SvD och Expressen avslöjanden 2017","t":"media"}]},{"id":"c25","title":"Naz Zihaoui — advokat med 232 timmars kontakt med livstidsdömd nätverksledare","date":"2023-05","loc":{"m":"Uppsala","r":"Uppsala","lat":59.85,"lng":17.64,"p":"municipality"},"sector":"LEGAL","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Advokat Zihaoui uteslöts ur Advokatsamfundet efter att en biträdande jurist haft 232 timmars telefonkontakt (genomsnitt 4 timmar/dag) med Maykil Yokhanna, livstidsdömd för mordet på 12-åriga Adriana, under september–oktober 2021. Zihaoui utfärdade ny fullmakt för juristen trots att byråkollega redan dragit in den.","sources":[{"l":"Advokatsamfundets disciplinnämndbeslut 2023","t":"report"},{"l":"Expressen och SVT rapportering 2023","t":"media"}]},{"id":"c26","title":"Norviks hamn — 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll","date":"2024-04","loc":{"m":"Nynäshamn","r":"Stockholm","lat":58.9,"lng":17.95,"p":"municipality"},"sector":"TRANSPORT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"April 2024 gjordes det enskilt största beslaget av kokain i Sverige: 1,3 ton i en container (gatuvärde 1,2 Mdr kr). SVT Uppdrag granskning avslöjade att två kriminellt belastade hamnarbetare var i tjänst vid tillfället — utan att bakgrundskontroll genomförts. En hade dömts för grov penningtvätt månader innan, en förekom 9 gånger i belastningsregistret. Södertörn dömde 11 personer, juli 2025.","sources":[{"l":"SVT Uppdrag granskning sept 2025","t":"media"},{"l":"Södertörns tingsrätt dom juli 2025","t":"court"}]},{"id":"c27","title":"Securitas — väktare anställd 5 år var allierad med Foxtrot-nätverket","date":"2025-09","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"SECURITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"SVT Uppdrag granskning avslöjade att en Securitas-väktare under fem år levde ett dubbelliv: på ytan skötsamm anställd, parallellt allierad med Rawa Majids Foxtrot-nätverk. Personen förekom i förundersökning om synnerligen grovt narkotikabrott. Avslöjandet ledde till att regeringen tillsatte utredning om utökade bakgrundskontroller i privat och offentlig sektor.","sources":[{"l":"SVT Uppdrag granskning sept 2025","t":"media"},{"l":"SVT Nyheter — Regeringen utreder bakgrundskontroller","t":"media"}]},{"id":"c28","title":"Skatteverket Växjö — handläggare manipulerade system för 4,5 Mkr via kollegas inloggning","date":"2015-06","loc":{"m":"Växjö","r":"Kronoberg","lat":56.88,"lng":14.81,"p":"municipality"},"sector":"AUTHORITY","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"26-årig handläggare på Skatteverket dömdes till 4,5 år för 11 fall av grovt bedrägeri. Personen manipulerade inkomstuppgifter med en kollegas inloggningsuppgifter, skapade skatteåterbäringar som betalades ut till konton han kontrollerade. Kom undan 4,5 Mkr och avslöjades på övervakningsbild med rånarluva vid bankomat. Åklagare Forsberg: 'otroligt förtroendesvek'.","sources":[{"l":"Publikt — Skatteanställd dömd för grovt bedrägeri","t":"media"},{"l":"Växjö tingsrätt dom 2015","t":"court"}]},{"id":"c29","title":"Attunda tingsrätt 2023 — f.d. medarbetare dömd för att ha röjt sekretessbelagd information till kriminellt nätverk","date":"2023-04","loc":{"m":"Sollentuna","r":"Stockholm","lat":59.43,"lng":18.0,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"En kvinnlig före detta medarbetare dömdes av Attunda tingsrätt till 1 år och 9 månaders fängelse för att ha spridit sekretessbelagda uppgifter till ett kriminellt nätverk i Sollentuna. Fallet omnämns i Brå (2024) som ett av de mer välbelagda fallen av möjliggörare med anknytning till ett specifikt kriminellt nätverk.","sources":[{"l":"Arbetet — Gängens insiders 2025","t":"media"},{"l":"Brå 2024 — Möjliggörare i kriminella nätverk","t":"report"}]},{"id":"c30","title":"Vinnova — riggat konsultavtal, 8,6 Mkr fakturering med nära band till GD","date":"2024-01","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"PROCUREMENT","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"Granskning (Jens Nylander) avslöjade att en seniorkonsult med nära band till Vinnovas GD fakturerade 8,6 Mkr på 16 månader för ett deltidsuppdrag. Konsulten debiterade 3 886 timmar till 2 200 kr/timme — nästan dubbelt takpriset. Tidigare anställda beskriver kulturen som en där 'regelböjning tolereras och uppmuntras'. Hundratals miljoner i bidrag till bolag av offentligt anställda identifierades parallellt.","sources":[{"l":"Jens Nylander — Vinnovakonsult fick riggat guldavtal","t":"media"},{"l":"Breakit — Offentligt anställda har mjölkat Vinnova","t":"media"}]},{"id":"c31","title":"Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år","date":"2003-01","loc":{"m":"Perstorp","r":"Skåne","lat":56.14,"lng":13.39,"p":"municipality"},"sector":"SOCIAL","actor":"ECONOMIC_INTEREST","status":"CONFIRMED","summary":"Socialsekreterare i Perstorp utnyttjade total avsaknad av intern kontroll: handläggarna skötte utbetalningar av socialbidrag utan kontinuerlig revision. Mannen skapade falska bidragstagare och dirigerade 8+ Mkr till egna konton. Levde ett extravagant liv med helikoptertransporter. Bedrägeriet avslöjades 2003 vid kommunal revision. Dom: 6 år för grovt bedrägeri.","sources":[{"l":"Aftonbladet — Jag ångrar mig inte","t":"media"},{"l":"Spotify Dok — Perstorpssvindlaren","t":"media"}]},{"id":"c32","title":"Trelleborgs hamn — hamnarbetare dirigerade lastbil för att undvika tullskanner","date":"2023-05","loc":{"m":"Trelleborg","r":"Skåne","lat":55.37,"lng":13.16,"p":"municipality"},"sector":"TRANSPORT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"308 kg cannabis gömt i golv på lastbil från Litauen. Tullkriminalens spanare övervakade ankomsten. En hamnarbetare dirigerade lastbilen till en plats som undvek tullskannern — lastbilen stod still i två timmar tills skannern lämnade hamnen. Tullverket hade underrättelseinformation i förväg och sparade tillslaget. Bitr. enhetschef: 'Trots insider-allierad kunde vi komma åt dem.'","sources":[{"l":"Tullverket pressmeddelande 2023","t":"report"},{"l":"TT via Tullverket — 308 kg cannabis i lastbilsgolv","t":"media"}]},{"id":"c33","title":"Malmö hamn — två hamnanställda dömda till 10 år för 118 kg kokain","date":"2023-09","loc":{"m":"Malmö","r":"Skåne","lat":55.6,"lng":13.0,"p":"municipality"},"sector":"TRANSPORT","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Tullverket hittade 118 kg kokain gömt i fryst broccoli i en lastbil från Tyskland. Två hamnanställda var direkt inblandade i smugglingen med hjälp av sin yrkesposition och tillgång till hamnområdet. Rättegången visade att de använt krypterade tjänster för planering. Dom: tio år vardera för synnerligen grov narkotikasmuggling.","sources":[{"l":"SVT — Smugglade in 118 kilo narkotika till Malmö","t":"media"},{"l":"Sydsvenskan — Hamnanställd åtalas för kokainsmuggling","t":"media"}]},{"id":"c34","title":"Polisen AD 2022:3 — polisman med kriminella kontakter nekade registerslagningar vid säkerhetsprövning","date":"2022-02","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Arbetsdomstolen (AD 2022:3) fastställde att en polisman korrekt nekats fortsatt säkerhetsklassad anställning efter att ha lögit vid säkerhetsintervjuer 2019. Personen hade gjort registerslagningar på kriminella bekanta (inkl. en mordmåls-person) och förnekat detta. Han svarade 'nej' på frågan om han kände någon med kriminell livsstil, trots känd Bandidos-koppling sedan gymnasietiden.","sources":[{"l":"Arbetsdomstolen AD 2022 nr 3","t":"court"}]},{"id":"c35","title":"Riksrevisionen 2023 — infiltrationsbrister vid Kriminalvården, FMV och Kammarkollegiet","date":"2023-01","loc":{"m":"Nationellt","r":"Nationellt","lat":62.0,"lng":15.0,"p":"approximate"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"Riksrevisionens granskning 2023 av infiltration i staten (FMV, Kammarkollegiet, Kriminalvården) fann: avsaknad av rollbaserad riskanalys, kvarlevande behörigheter efter avslutad anställning, otillräcklig uppföljning av konsulter. Kriminalvårdens kriminalvårdare som inleder kärleksrelationer med intagna löses ofta via 'överenskommelse om anställningens upphörande' utan formell utredning.","sources":[{"l":"Riksrevisionen 2023 — Infiltration i staten","t":"report"}]}];
+const ACTORS=[{"id":"criminal-network","name":"Kriminellt nätverk","sub":"Organiserad brottslighet","color":"#C45C2E","goal":"Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagföring","horizon":"Kort–medellång sikt","exposure":"HIGH","methods":["Relationsbygge","Möjliggörare (upparbetad)","Hot och skrämseltaktik","Vänskapskorruption","Placerad insider","Informationsinhämtning"],"note":"Brå (2024): Kriminella nätverk har ca 700 möjliggörare aktiva i Sverige. Rekrytering sker ofta i den egna familje- och bekantskapskretsen. En möjliggörare kan betjäna flera nätverk och representerar 'ett skydd och en konkurrensfördel' i den kriminella världen. Polismyndighetens lägesbild: möjliggörarna utgör 5% av 14 000 aktiva i kriminella nätverk men spelar en helt avgörande roll för den operativa förmågan.","source":"Brå 2024 – Möjliggörare i kriminella nätverk; Polismyndigheten lägesbild 2024","indicators":["Kontaktförsök från okända med koppling till pågående ärenden","Erbjudanden om tjänster, presenter eller intensivt socialt umgänge","Otillbörligt intresse för vem som hanterar specifika ärenden eller tillstånd","Frågor om interna rutiner, behörigheter, frånvaro eller driftstörningar","Oförklarlig ekonomisk förbättring hos medarbetare med känslig tillgång","Krypterad kommunikation med externa kontakter om interna frågor"],"cases":["c01","c02","c04","c07","c08","c09","c11","c15","c22","c26","c27","c29","c32","c33","c34"]},{"id":"foreign-power","name":"Främmande makt","sub":"Statligt eller statsunderstött","color":"#B8973A","goal":"Strategisk information, teknologitillgång, underrättelsedata, långsiktigt politiskt inflytande","horizon":"Lång sikt (år–decennier)","exposure":"HIGH","methods":["Systematisk OSINT-kartläggning","Rekrytering av insiders","Informationspåverkan och FIMI","Teknologistöld","Utnyttjande av systembrister"],"note":"Säkerhetspolisen bekräftar ökad rysk riskbenägenhet och sabotagevilja. Transportstyrelse- och Lantmäteriet-skandalerna visar att strukturella systembrister exploateras utan att en enskild insider behöver rekryteras. Säpo (2023): ryska GRU rekryterade insiders inom Försvarsmakten och Säkerhetspolisen — brottsligheten pågick i 6 år utan att avslöjas internt.","source":"Säpo årsberättelse 2024; Ds 2026:2; MSB FIMI-rapport 2024","indicators":["Kontaktförsök från utländska organisationer med otydligt och brett formulerat syfte","Oväntat intresse för infrastrukturdetaljer, beslutsprocesser eller personalstruktur","Medarbetare med plötsliga ekonomiska förbättringar utan förklaring","Förfrågningar om känslig teknisk information under täckmantel av samarbete","IT-systembrister som möjliggör datainsamling utan enskild möjliggörare"],"cases":["c03","c05","c10","c24"]},{"id":"extremist","name":"Extremistisk miljö","sub":"Ideologiskt driven","color":"#9B4FBB","goal":"Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet, finansiera verksamhet","horizon":"Kort–medellång sikt","exposure":"MEDIUM","methods":["Uthängning och doxxning","Samordnade trakasserier","Infiltration via legitima yrkesroller","Informationspåverkan mot beslutsprocess","Finansiering via offentliga bidrag"],"note":"Statskontoret (2024): skadorna träffar individen, anhöriga, verksamheten och tilltron till förvaltningen. Acta Publicas granskning visar att infiltration via till synes legitima bolag och yrkesroller är svår att identifiera med standardkontroller. Kriminalvårdens övervakare-fall: extremister med kontrollbehörighet över dömda med koppling till samma miljöer.","source":"Statskontoret 2024; CVE 2023; Acta Publica 2020","indicators":["Ökning av hotfulla meddelanden kring specifikt ärende eller beslut","Publicering av personuppgifter om medarbetare på externa plattformar","Samordnade negativa narrativ mot enskild tjänsteperson under kort tid","Kombination av digital trakassering och fysisk närvaro nära arbetsplats","Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"],"cases":["c05","c14","c16","c18"]},{"id":"economic-interest","name":"Ekonomiskt intresse","sub":"Kommersiell aktör","color":"#4A7B6F","goal":"Avtal, tillstånd, fördelaktig behandling i upphandling, tillsyn eller tilldelning","horizon":"Medellång sikt","exposure":"MEDIUM","methods":["Relationsbygge över tid","Informella leverantörskontakter","Gåvor och representation","Värvning efter avslutad tjänst","Förväntansskapande och beroenden"],"note":"Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption uppstår ofta ur långvariga leverantörsrelationer. Akademiska sjukhuset-domen (2024): 4,76 Mkr togs emot under sju år via 'konsultfakturor' — relationen hade under lång tid framstått som professionell och legitim.","source":"Ekobrottsmyndigheten; Transparency International Sverige; Akademiska-domen 2024","indicators":["Leverantörskontakter utanför dokumenterade upphandlingskanaler","Erbjudanden om framtida anställning till upphandlande personal","Onormalt intensivt socialt umgänge under känslig upphandlingsperiod","Informell marknadsdialog som påverkar kravspecifikationer","Inbjudningar till resor eller evenemang utan tydlig affärsmässig motivering"],"cases":["c06","c12","c13","c17","c21","c28","c30","c31"]}];
+const INDICATORS=[{"id":"i01","cat":"ACCESS","title":"Slagningar utan koppling till arbetsuppgifter","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete — särskilt återkommande slagningar på specifika person- eller ärendekategorier under en period.","example":"Kriminalvårdens möjliggörare (2022) utförde otillåtna slagningar under mer än ett år utan att intern kontroll fångade avvikelserna. Riksrevisionen: avsaknad av beteendeanalytiska verktyg var avgörande brist.","src":"Riksrevisionen 2023; Brå 2024"},{"id":"i02","cat":"ACCESS","title":"Tillgång som lever kvar efter ändrad roll eller avslut","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Medarbetare, konsulter eller avgångna anställda har fortfarande systemåtkomst, registerbehörigheter eller passertillstånd efter att behovet har upphört.","example":"Riksrevisionen (2025): kvarlevande behörigheter är genomgående brist vid FMV, Kriminalvården och Kammarkollegiet. Transportstyrelsen-fallet: IT-leverantörers breda åtkomst avslutades inte vid projektavslut.","src":"Riksrevisionen 2025–2026; Transportstyrelsen-utredningen 2017"},{"id":"i03","cat":"ACCESS","title":"Konsulter med ostyrkt bred behörighet","sev":"HIGH","actors":["criminal-network","economic-interest","foreign-power"],"desc":"Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov — utan formell behörighetsgranskning, säkerhetsskyddsavtal eller dokumenterad uppföljning.","example":"Transportstyrelses IT-underleverantörer (2017) hade tillgång till sekretessklassad data utan att säkerhetsskyddsavtal upprättats. GD dömdes för vårdslöshet med hemlig uppgift.","src":"Riksrevisionen 2023; Transportstyrelsen-utredningen 2017"},{"id":"i04","cat":"ACCESS","title":"Systembrister som möjliggör oövervakad datainsamling","sev":"HIGH","actors":["foreign-power","criminal-network"],"desc":"Myndighetens IT-system eller arkiv saknar tillräckliga kontrollmekanismer, vilket möjliggör systematisk datainsamling utan att en enskild insider behöver rekryteras.","example":"Lantmäteriet (2024): säkerhetsskyddsklassificerade uppgifter var tillgängliga utan sekretessprövning i år. Ds 2026:2: 'den skadan går inte att reparera' — aktörer har kunnat kartlägga uppgifter systematiskt över tid.","src":"Ds 2026:2; Transportstyrelsenutredningen 2017"},{"id":"i05","cat":"CONTACT","title":"Kontaktförsök via privata kanaler","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"En extern person som normalt kontaktar organisationen via tjänstekanaler börjar använda privat e-post, telefon, SMS eller sociala medier för kommunikation om arbetsrelaterade frågor.","example":"Advokaterna Güngör och Amdouni kommunicerade via krypterade chattar utanför dokumenterade kanaler — mönstret fortsatte oupptäckt tills annan utredning avslöjade det. Brå: privata kanaler är det vanligaste kommunikationsmedlet för möjliggörare.","src":"Brå 2024; SVT-rapportering"},{"id":"i06","cat":"CONTACT","title":"Nya intensiva relationer kring känsliga ärenden","sev":"MEDIUM","actors":["criminal-network","economic-interest"],"desc":"En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett pågående känsligt eller högt profil-ärende.","example":"Advokat Zihaouis byråjurist upprätthöll 232 timmars telefonkontakt med en livstidsdömd klient under en tvåmånadersperiod. Kontakten översteg varje rimlig ärendemässig motivering.","src":"Brå 2024; Advokatsamfundets disciplinnämnd 2023"},{"id":"i07","cat":"CONTACT","title":"Återkommande kontaktförsök efter avvisning","sev":"MEDIUM","actors":["criminal-network","foreign-power","extremist"],"desc":"Externa aktörer som avvisats eller fått avslag vid tjänstekontakt återkommer via sidokanaler, mellanhänder eller med förändrad identitet för att nå samma medarbetare eller information.","example":"Dokumenterat mönster i kontaktförsök mot socialsekreterare med LVU-ärenden kopplade till kriminella nätverk. Brå (2024): nätverken är uthålliga och byter kanal när en avvisas.","src":"Brå 2024; Statskontoret 2024"},{"id":"i08","cat":"CONTACT","title":"Intensifierat umgänge med extern part under känslig period","sev":"HIGH","actors":["criminal-network","economic-interest"],"desc":"Social kontakt med en extern aktör som eskalerar markant just under en period då känsliga beslut fattas, ärenden bereds eller upphandlingar genomförs — utan dokumenterad affärsmässig motivering.","example":"Akademiska sjukhuset-domen (2024): kontakten med Canon Medical och Siemens ökade i intensitet under inköpsprocesser. Mutor överfördes via 'konsultfakturor' under sju år.","src":"Akademiska-domen 2024; Ekobrottsmyndigheten"},{"id":"i09","cat":"BEHAVIOUR","title":"Motstånd mot rotation, ledighet eller granskning","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Medarbetare med känslig tillgång undviker systematiskt semester, rotation eller granskning utan sakliga skäl — kan indikera oro för att avvikelser ska upptäckas i frånvaro.","example":"CIA insider threat indicators dokumenterar ovanligt låg semesteruttag som ett av de starkaste beteendessignalerna i fall av pågående spionage. Kriminalvårdens interna utredningar noterar mönstret.","src":"CIA insider threat indicators; CERT-SE"},{"id":"i10","cat":"BEHAVIOUR","title":"Plötslig ekonomisk förbättring utan förklaring","sev":"HIGH","actors":["criminal-network","foreign-power","economic-interest"],"desc":"Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd inkomst och ekonomisk situation — utan trovärdig förklaring.","example":"Akademiska sjukhuset-domen (2024): verksamhetschefen tog emot 4,76 Mkr i mutor — synligt i livsstilsförändringar innan avslöjandet. Perstorp-fallet: socialsekreteraren tog helikopter till jobbet.","src":"CIA insider threat indicators; Säpo; Akademiska-domen 2024"},{"id":"i11","cat":"BEHAVIOUR","title":"Onormalt intresse för kollegors ärenden eller tillgång","sev":"MEDIUM","actors":["criminal-network","foreign-power"],"desc":"En medarbetare frågar om kollegors specifika ärenden, systemtillgång, behörigheter eller interna rutiner utan tydlig arbetsmässig anledning.","example":"Brå (2024): möjliggörare tillhandahåller inte nödvändigtvis hemlig information — den samlade kunskapen om organisationens struktur, rutiner och frånvaro är det primära värdet.","src":"Brå 2024 – Möjliggörare"},{"id":"i12","cat":"BEHAVIOUR","title":"Försämrad prestation kopplad till externt tryck","sev":"MEDIUM","actors":["criminal-network","extremist"],"desc":"Medarbetare vars prestationer försämras markant utan intern förklaring — kan indikera extern pressning, beroende eller psykologisk belastning till följd av pågående oönskad kontakt.","example":"Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.","src":"Statskontoret 2024; Brå 2024"},{"id":"i13","cat":"BEHAVIOUR","title":"Medarbetare under ovanlig ekonomisk press","sev":"MEDIUM","actors":["criminal-network","foreign-power"],"desc":"Medarbetare med känslig tillgång uppvisar tecken på ovanlig ekonomisk stress — löneutmätning, dokumenterade skulder — utan att organisationens stödstrukturer aktiverats.","example":"Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är etablerad rekryteringsfaktor i samtliga källa.","src":"Riksrevisionen 2025–2026; Brå 2024"},{"id":"i14","cat":"DIGITAL","title":"Uthängning av personuppgifter online","sev":"HIGH","actors":["extremist"],"desc":"Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutning till ett specifikt pågående ärende.","example":"Socialchef utsattes för koordinerad uthängning med privat adress publicerad. Personen lämnade sin tjänst (Statskontoret 2024). Brå: doxxning används systematiskt för att neutralisera beslutsfattare utan att begå formellt brott.","src":"Statskontoret 2024; Brå 2024"},{"id":"i15","cat":"DIGITAL","title":"Samordnade narrativ mot enskild tjänsteperson","sev":"HIGH","actors":["extremist","foreign-power"],"desc":"Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination med syftet att delegitimera personen eller organisationens beslut.","example":"MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.","src":"Statskontoret 2024; MSB FIMI 2024"},{"id":"i16","cat":"DIGITAL","title":"Kombinerat mönster: digital trakassering och fysisk närvaro","sev":"HIGH","actors":["extremist","criminal-network"],"desc":"Kombination av koordinerade digitala trakasserier (doxxning, hotkampanjer) med rapporterad fysisk närvaro nära medarbetarens arbetsplats, hem eller privata sammanhang.","example":"Statskontoret (2024): kombinationen av digitala och fysiska komponenter identifieras som den mest allvarliga formen av otillåten påverkan mot offentliganställda — och den som sannolikt underrapporteras mest.","src":"Statskontoret 2024; Brå 2024"},{"id":"i17","cat":"PROCUREMENT","title":"Leverantörskontakt utanför dokumenterade kanaler","sev":"HIGH","actors":["economic-interest","criminal-network"],"desc":"Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen och utan dokumentation.","example":"Akademiska sjukhuset-härvan (2024): kontakter via privata kanaler och 'konsultfakturor' var den primära metoden för mutöverföringen under sju år. Inget uppmärksammades av intern kontroll.","src":"Ekobrottsmyndigheten; Upphandlingsmyndigheten; Akademiska-domen 2024"},{"id":"i18","cat":"PROCUREMENT","title":"Erbjudanden om framtida anställning till upphandlande personal","sev":"HIGH","actors":["economic-interest"],"desc":"Leverantörer erbjuder framtida anställning, konsultuppdrag eller partnerskap till medarbetare med beslutsmandat i pågående upphandling — skapar intressekonflikt och lojalitetsberoende.","example":"Vinnova-granskningen (2024): konsulten med nära band till GD hade erhållit uppdraget via ett nätverk av bolag som kringgick normal öppen konkurrens. Framtida affärsrelationer nämndes i kommunikation.","src":"Transparency International Sverige; Vinnova-granskning 2024"},{"id":"i19","cat":"PROCUREMENT","title":"Systematisk påverkan på kravspecifikationer","sev":"HIGH","actors":["economic-interest","criminal-network"],"desc":"Kravspecifikationer eller utvärderingskriterier i en upphandling utformas på ett sätt som specifikt gynnar en leverantör — utan transparent och dokumenterad motivering.","example":"Upphandlingskorruptionen i kommunal fastighetsförvaltning (2023): upphandlingschef tog emot förmåner och utformade krav som systematiskt gynnade leverantören. Dom: 18 månader.","src":"Ekobrottsmyndigheten; Upphandlingsmyndigheten"},{"id":"i20","cat":"SOCIAL","title":"Relation som förflyttas till privat sfär","sev":"MEDIUM","actors":["criminal-network","foreign-power","economic-interest"],"desc":"En extern yrkesrelation som gradvis förflyttas till privata sammanhang — middagar, resor, vänskap — utan tydlig och dokumenterad affärsmässig motivering.","example":"Brå (2024): möjliggörare upparbetade under anställning beskriver processen: 'man festar tillsammans, man bekräftar personen, bygger upp den och försöker få relationen att framstå som väldigt nära och genuin.'","src":"Brå 2024"},{"id":"i21","cat":"SOCIAL","title":"Gränslöshet mot klient eller häktad person","sev":"HIGH","actors":["criminal-network"],"desc":"Medarbetare med klientkontakt — socionom, kriminalvårdare, behandlare, advokat — uppvisar gränslöst engagemang som överskrider professionalitetsgränser i form av personlig lojalitet.","example":"Kriminalvårdens interna utredningar: ett återkommande mönster är kvinnliga kriminalvårdare som inleder kärleksrelationer med intagna — löses ofta via 'överenskommelse om anställningens upphörande' utan formell utredning (Publikt 2024).","src":"Publikt 2024; Brå 2024"},{"id":"i22","cat":"SOCIAL","title":"Familje- eller nätverkskoppling till kriminell aktör","sev":"HIGH","actors":["criminal-network"],"desc":"Medarbetare har dokumenterade familjerelationer, vänskaps- eller nätverkskopplingar till individer som är aktiva i kriminella nätverk — utan att detta framkommit vid rekrytering.","example":"Brå (2024): en vanlig rekryteringsväg är att kriminella identifierar familjemedlemmar och bekanta med för dem användbara anställningar. 'Man kanske vidarebefordrar information utan att förstå att den hjälper kriminella nätverk' (Johanna Skinnari, Brå).","src":"Brå 2024 – Möjliggörare"},{"id":"i23","cat":"ACCESS","title":"Otillåten åtkomst till kollegas inloggning eller behörighet","sev":"HIGH","actors":["criminal-network","economic-interest"],"desc":"Medarbetare använder en kollegas inloggningsuppgifter, behörighetskort eller passertillstånd — antingen med eller utan kollegans vetskap — för att utföra åtgärder som inte tillhör den egna rollen.","example":"Skatteverket Växjö (2015): handläggaren använde en kollegas inloggning för att genomföra skattemanipulationer för 4,5 Mkr. Kollegas identitet användes för att dölja spåren. 'En kollega sattes i en fruktansvärd situation' (åklagare Forsberg).","src":"Skatteverket pressmeddelande 2015; Riksrevisionen 2023"},{"id":"i24","cat":"DIGITAL","title":"Avvikande loggningsmönster i känsliga system","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Systemloggar visar slagningar, nedladdningar eller exporter vid ovanliga tidpunkter (utanför arbetstid, helger) eller i ovanliga volymer — utan dokumenterad verksamhetsmässig anledning.","example":"Kriminalvårdens fall (2022): otillåtna slagningar genomfördes under en period av mer än ett år. Riksrevisionen: utan beteendeanalytiska verktyg kan sådana avvikelser inte fångas i tid.","src":"Riksrevisionen 2023 och 2025–2026"},{"id":"i25","cat":"BEHAVIOUR","title":"Tystnad och social isolering kring specifikt ämne","sev":"MEDIUM","actors":["criminal-network","foreign-power","extremist"],"desc":"En medarbetare som normalt är öppen och kommunikativ undviker att diskutera ett specifikt ärende, system eller kontakt — och reagerar med ovanlig defensive eller avledande beteende på frågor.","example":"Normaliseringssteget i påverkanskedjan: medarbetaren har internaliserat att inte rapportera och undviker aktivt kollegor eller chefer som kan ställa frågor om det känsliga området. Brå: 'man har inga ord och inga kanaler'.","src":"Brå 2024; Statskontoret 2024"}];
+const QUESTIONS=[{"dim":"Mandat & styrning","q":"Har er organisation en utsedd person med tydligt mandat och ledningsstöd för insiderriskhantering?","hint":"Riksrevisionen identifierar otydliga roller och avsaknad av ägarskap som den vanligaste orsaken till att insiderincidenter inte hanteras i tid. Utan mandat stannar arbetet i enskilda medarbetares engagemang.","opts":[{"t":"Ja, med tydligt mandat, ledningsstöd och dokumenterat uppdrag","s":3},{"t":"Delvis — ansvar är delat eller otydligt formulerat","s":1},{"t":"Nej, ingen utsedd ansvarig","s":0}]},{"dim":"Mandat & styrning","q":"Finns det dokumenterade processer för att identifiera, utreda och hantera insiderhot — inklusive hot som inte utgör formella brott?","hint":"Det allra mesta av otillbörlig påverkan är inte olagligt vid varje enskild händelse. Om processen bara täcker brottsmisstankar missar organisationen lejonparten av problembilden.","opts":[{"t":"Ja, täcker hela spektrumet från misstanke till brott, dokumenterat och känt","s":3},{"t":"Finns men täcker bara formella brottsmisstankar eller är inte uppdaterade","s":1},{"t":"Saknas","s":0}]},{"dim":"Kontroll av medarbetare","q":"Genomförs systematiska bakgrundskontroller vid rekrytering och vid förändrade roller för känsliga befattningar?","hint":"Brå: möjliggörare upparbetas under anställning men placering förekommer. Kontroller vid rekrytering reducerar risken. Acta Publica: extremistanknutna bolag klarar standardkontroller om de bedrivs legitimt.","opts":[{"t":"Ja, systematiskt och proportionellt mot rollens känslighet","s":3},{"t":"Vid rekrytering men inte vid rolländringar","s":1},{"t":"Sällan, aldrig eller utan systematik","s":0}]},{"dim":"Riskhantering","q":"Har er organisation genomfört en rollbaserad riskbedömning som kartlägger faktisk tillgång och påverkan — inte bara formell titel?","hint":"Formell makt och faktisk påverkan sammanfaller sällan. Riksrevisionens granskning av FMV, Kriminalvården och Kammarkollegiet identifierar avsaknad av rollbaserad analys som central brist.","opts":[{"t":"Ja, genomförd och uppdaterad senaste 12 månaderna","s":3},{"t":"Delvis — genomförd men inte uppdaterad eller med begränsad täckning","s":1},{"t":"Nej","s":0}]},{"dim":"Riskhantering","q":"Omfattar riskbedömningen externa konsulter och leverantörer med bred systembehörighet på samma sätt som anställda?","hint":"Riksrevisionen (2025): konsulter med bred systembehörighet ingår sällan i personalsäkerhetsarbetet. Transportstyrelses IT-underleverantörer (2017) hade sekretessklassad tillgång utan säkerhetsskyddsavtal.","opts":[{"t":"Ja, samma krav och systematik som för anställda","s":3},{"t":"Delvis — lägre krav eller ad hoc-bedömning","s":1},{"t":"Nej","s":0}]},{"dim":"Säkerhetskultur","q":"Vet medarbetarna vart de rapporterar oro eller misstankar — och upplever de det som tryggt att göra det?","hint":"Riksrevisionen (2025): 44% av Kriminalvårdens personal vet inte vilka åtgärder som gäller vid överträdelser. Kanaler kan finnas formellt utan att fungera om kulturen inte är trygg.","opts":[{"t":"Ja, kanaler är kända och kulturen bedöms av ledningen som trygg","s":3},{"t":"Kanaler finns formellt men används sällan","s":1},{"t":"Oklart eller nej","s":0}]},{"dim":"Säkerhetskultur","q":"Rapporteras och följs informella undantag och regelavvikelser upp konsekvent — eller normaliseras de?","hint":"Normalisering av undantag är ett av de tillförlitligaste förstadietecknen på en pågående påverkansoperation. Brå (2024): varje enskild händelse kan framstå som harmlös — det är mönstret som är kritiskt.","opts":[{"t":"Ja, avvikelser rapporteras och hanteras konsekvent","s":3},{"t":"Delvis — beroende av chef och sammanhang","s":1},{"t":"Undantag normaliseras utan dokumentation eller uppföljning","s":0}]},{"dim":"Utredningsfunktion","q":"Kan organisationen utreda misstankar om otillåten påverkan som inte utgör ett formellt brott?","hint":"Det allra mesta av otillbörlig påverkan når inte brottsmisstankens nivå. Om organisationen bara kan utreda brott missar den lejonparten. Statskontoret (2024): tidigt ingripande kräver tidigt handlingsutrymme.","opts":[{"t":"Ja, med tydligt mandat, adekvat kompetens och dokumenterade processer","s":3},{"t":"Begränsad förmåga, hanteras ad hoc","s":1},{"t":"Nej, vi hanterar bara formella brottsmisstankar","s":0}]},{"dim":"Uppföljande personalsäkerhet","q":"Följs medarbetares behörigheter aktivt upp vid rolländringar, frånvaro och avslutad anställning?","hint":"Riksrevisionen (2025): kvarlevande behörigheter är genomgående brist. Kriminalvårdens fall (2022): otillåtna slagningar skedde under mer än ett år utan att fangas av intern kontroll.","opts":[{"t":"Ja, systematiskt med dokumenterade processer och automatiserad avstämning","s":3},{"t":"Manuellt och med ojämn täckning","s":1},{"t":"Sällan eller aldrig","s":0}]},{"dim":"Uppföljande personalsäkerhet","q":"Hanterar organisationen stöd till medarbetare som utsätts för extern kontakt, press eller trakasserier?","hint":"Statskontoret (2024): påverkan kan resultera i att kompetenta medarbetare lämnar sin tjänst. Utan stödstruktur riskerar organisationen att tappa personal och samtidigt normalisera de avvikelser som borde rapporterats.","opts":[{"t":"Ja, det finns rutiner, stöd och uppföljningsprocess","s":3},{"t":"Delvis — informellt stöd utan tydliga rutiner","s":1},{"t":"Nej eller okänt","s":0}]},{"dim":"Privat-offentlig delning","q":"Kan HR, säkerhet, juridik och IT dela en gemensam lägesbild av avvikelser och incidenter — i strukturerade former?","hint":"De flesta insiderincidenter är synliga i fragment hos flera funktioner. Ingen enskild funktion ser hela bilden. Riksrevisionen: fragmenterad information är en central brist i samtliga granskade myndigheter.","opts":[{"t":"Ja, strukturerade forum och gemensam plattform","s":3},{"t":"Informellt och situationsbaserat","s":1},{"t":"Nej, funktionerna arbetar i separata silos","s":0}]},{"dim":"Övervakning & utvärdering","q":"Har organisationen tekniska verktyg för att identifiera avvikande användarbeteende i system med känslig information?","hint":"Teknologi förbättrar detektionsförmåga men kan inte ersätta kompetenta analytiker. Kriminalvårdens fall: otillåtna slagningar under ett år utan automatiserad detektion. Riksrevisionen: UBA/UAM är standard för känsliga befattningar.","opts":[{"t":"Ja, UAM/UBA-system med konfigurerade larmregler och aktiv uppföljning","s":3},{"t":"Grundläggande loggning utan beteendeanalys","s":1},{"t":"Nej","s":0}]},{"dim":"Övervakning & utvärdering","q":"Utvärderar och uppdaterar organisationen sin insiderriskhantering minst en gång per år?","hint":"Hotbilden förändras. Lantmäteriets säkerhetsanalys (2020) identifierade problemet — ingenting hände förrän 2024. En statisk process ger falsk trygghet och lämnar organisationen oförberedd.","opts":[{"t":"Ja, med dokumenterad uppföljning och uppdaterade processer","s":3},{"t":"Sporadiskt och utan systematik","s":1},{"t":"Nej","s":0}]},{"dim":"Övervakning & utvärdering","q":"Integrerar organisationen extern hotbildsinformation — om vilka aktörer som är aktiva och vilka sektorer som är under tryck?","hint":"Myndighetsgemensam lägesbild om organiserad brottslighet publiceras årligen. Organisationer som inte aktivt konsumerar omvärldsbevakning saknar grundförutsättningen för adekvat riskbedömning.","opts":[{"t":"Ja, extern hotbildsinfo integreras aktivt i riskarbetet","s":3},{"t":"Delvis — vi läser rapporter men de påverkar sällan riskbedömningen","s":1},{"t":"Nej","s":0}]}];
+const REC_TEXTS={"Mandat & styrning": "Utse en ansvarig person med tydligt mandat och ledningsstöd. Dokumentera processer för identifiering, utredning och hantering av hela spektrumet — från tidiga signaler till formella brott. Riksrevisionen: otydliga roller är genomgående brist.", "Kontroll av medarbetare": "Inför systematiska bakgrundskontroller vid rekrytering och vid rolländringar, proportionellt mot befattningens känslighet. Acta Publica: extremistanknutna bolag klarar standardkontroller om de bedrivs legitimt — djupare kartläggning krävs.", "Riskhantering": "Genomför en rollbaserad riskbedömning som kartlägger faktisk tillgång och påverkan — inte bara formell titel. Inkludera konsulter och leverantörer. Riksrevisionen: avsaknad av rollbaserad analys är central brist i samtliga granskade myndigheter.", "Säkerhetskultur": "Etablera kända rapporteringskanaler och säkerställ att avvikelser hanteras konsekvent. Riksrevisionen (2025): 44% av Kriminalvårdens personal vet inte vilka åtgärder som gäller vid överträdelser.", "Utredningsfunktion": "Bygg förmåga att utreda misstankar som inte når brottsmisstankens nivå. Statskontoret (2024): tidigt ingripande kräver tidigt handlingsutrymme — juridiska verktyg räcker inte.", "Uppföljande personalsäkerhet": "Inför systematisk avslutning av behörigheter vid rolländring och avslutad anställning. Utvidga till konsulter. Riksrevisionen: kvarlevande behörigheter är genomgående brist — Kriminalvårdens fall pågick ett år utan att fangas.", "Privat-offentlig delning": "Skapa strukturerade forum för att HR, säkerhet, juridik och IT delar en gemensam lägesbild. Riksrevisionen: fragmenterad information är central brist — de flesta insiderincidenter är synliga i fragment hos flera funktioner.", "Övervakning & utvärdering": "Implementera beteendeanalytiska verktyg (UAM/UBA) och inför en strukturerad annual review-process. Lantmäteriets säkerhetsanalys (2020) identifierade problemet — ingenting hände förrän panikstängningen 2024."};
 
-const CASES = [
-  {id:"case-001",title:"Handläggare vid socialförvaltning utsatt för systematiska kontaktförsök",date:"2023-04",location:{municipality:"Göteborg",region:"Västra Götaland",lat:57.7089,lng:11.9746,precision:"municipality"},sector:"SOCIAL",method:["CONTACT_ATTEMPTS","PRIVATE_CHANNEL"],actor:"CRIMINAL_NETWORK",status:"CONFIRMED",outcome:["BEHAVIOUR_CHANGE"],summary:"Handläggare som beredde ett LVU-ärende utsattes för upprepade kontaktförsök via privata kanaler. Inga brott anmäldes. Ärendet omfördelas internt.",sources:[{label:"Brå 2024",type:"OFFICIAL_REPORT"}]},
-  {id:"case-002",title:"Möjliggörare i kriminalvården röjer registerslagningar",date:"2022-11",location:{municipality:"Stockholm",region:"Stockholm",lat:59.3293,lng:18.0686,precision:"municipality"},sector:"CRIMINAL_JUSTICE",method:["INSIDER","DATA_EXFIL"],actor:"CRIMINAL_NETWORK",status:"CONFIRMED",outcome:["CRIMINAL_CONVICTION"],summary:"Anställd på Kriminalvården dömdes för otillåtna registerslagningar till kriminellt nätverk under drygt ett år.",sources:[{label:"Riksrevisionen 2023",type:"OFFICIAL_REPORT"},{label:"Tingsrättsdom B 1204-23",type:"COURT_RULING"}]},
-  {id:"case-003",title:"Upphandlingskorruption vid kommunal fastighetsförvaltning",date:"2023-06",location:{municipality:"Malmö",region:"Skåne",lat:55.6050,lng:13.0038,precision:"municipality"},sector:"PROCUREMENT",method:["CORRUPTION","VENDOR_RELATION"],actor:"ECONOMIC_INTEREST",status:"CONFIRMED",outcome:["CRIMINAL_CONVICTION","FINANCIAL_LOSS"],summary:"Upphandlingschef tog emot förmåner från leverantör under fyra år. Systematiskt fördelaktiga kravspecifikationer. Dom: 18 månaders fängelse.",sources:[{label:"Ekobrottsmyndigheten 2023",type:"OFFICIAL_REPORT"}]},
-  {id:"case-004",title:"Islamistisk infiltration av kommunala verksamheter",date:"2020-01",location:{municipality:"Nationellt",region:"Nationellt",lat:59.6099,lng:16.5448,precision:"approximate"},sector:"SOCIAL",method:["INFILTRATION","PROCUREMENT"],actor:"EXTREMIST",status:"CONFIRMED",outcome:["SYSTEMIC_INFLUENCE"],summary:"Rapport dokumenterade 931 Mkr i offentliga köp från bolag drivna av individer med extremistiska kopplingar.",sources:[{label:"Acta Publica 2020",type:"INVESTIGATION"}]},
-  {id:"case-005",title:"Tjänsteperson utsatt för samordnad informationspåverkan",date:"2024-02",location:{municipality:"Uppsala",region:"Uppsala",lat:59.8586,lng:17.6389,precision:"municipality"},sector:"COMMS",method:["DOXXING","HARASSMENT_CAMPAIGN"],actor:"EXTREMIST",status:"CONFIRMED",outcome:["PERSONNEL_DEPARTURE","BEHAVIOUR_CHANGE"],summary:"Socialchef utsattes för koordinerad uthängning inklusive publicering av privat adress. Personen lämnade sin tjänst.",sources:[{label:"Statskontoret 2024",type:"OFFICIAL_REPORT"}]},
-  {id:"case-006",title:"Skatteverkshandläggare involverad i terrorfinansieringsbedrägeri",date:"2019-01",location:{municipality:"Stockholm",region:"Stockholm",lat:59.3293,lng:18.0686,precision:"municipality"},sector:"AUTHORITY",method:["INSIDER","FRAUD"],actor:"EXTREMIST",status:"CONFIRMED",outcome:["CRIMINAL_CONVICTION","FINANCIAL_LOSS"],summary:"Handläggare dömdes till 8 år för medhjälp till grovt momsbedrägeri. 100+ Mkr misstänks finansiera terrorism.",sources:[{label:"Ekobrottsmyndigheten",type:"OFFICIAL_REPORT"}]},
-  {id:"case-007",title:"Möjliggörare upparbetad — kommunal IT-funktion",date:"2023-09",location:{municipality:"Örebro",region:"Örebro",lat:59.2741,lng:15.2066,precision:"municipality"},sector:"IT",method:["INSIDER","DATA_EXFIL"],actor:"CRIMINAL_NETWORK",status:"INDICATION",outcome:["UNDER_INVESTIGATION"],summary:"Systemförvaltare med bred behörighet identifierades som möjlig möjliggörare efter Säpo-signal. Utredning pågår.",sources:[{label:"Brå 2024",type:"OFFICIAL_REPORT"}]},
-  {id:"case-008",title:"Byggsektorn — möjliggörare och skenanställningar",date:"2023-01",location:{municipality:"Stockholm",region:"Stockholm",lat:59.3493,lng:18.0386,precision:"municipality"},sector:"PROCUREMENT",method:["ENABLER","FRAUD"],actor:"CRIMINAL_NETWORK",status:"CONFIRMED",outcome:["FINANCIAL_LOSS"],summary:"Fair Play Bygg 2023: 291 tips, 168 ärenden vidare. Svart arbetskraft, penningtvätt och ID-utnyttjande dominerade.",sources:[{label:"Fair Play Bygg Årsrapport 2023",type:"INVESTIGATION"}]}
-];
-
-const ACTORS = [
-  {id:"criminal-network",name:"Kriminellt nätverk",sub:"Organiserad brottslighet",color:"#C45C2E",goal:"Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst",horizon:"Kort–medellång",methods:["Relationsbygge","Möjliggörare","Hot och skrämseltaktik","Vänskapskorruption","Informationsinhämtning"],exposure:"HIGH",note:"Kriminella nätverk börjar ofta rekrytering i den egna familje- och bekantskapskretsen för att identifiera personer med användbara arbeten. Möjliggörare upparbetas eller placeras medvetet.",source:"Brå 2024 – Möjliggörare i kriminella nätverk",indicators:["Kontaktförsök från okända med koppling till pågående ärenden","Erbjudanden om tjänster, presenter eller socialt umgänge","Otillbörligt intresse för vem som hanterar specifika ärenden","Frågor om interna rutiner, frånvaro eller driftstörningar"],cases:["case-001","case-002","case-007","case-008"]},
-  {id:"foreign-power",name:"Främmande makt",sub:"Statligt eller statsunderstött",color:"#B8973A",goal:"Strategisk information, teknologitillgång, långsiktigt politiskt inflytande",horizon:"Lång (år–decennier)",methods:["Systematisk OSINT-kartläggning","Rekrytering av insiders","Informationspåverkan","Teknologistöld","Täckidentiteter"],exposure:"HIGH",note:"Säkerhetspolisen har bekräftat rysk ökad riskbenägenhet och sabotage mot nordisk kritisk infrastruktur. Rekrytering sker via yrkesnätverk, sociala medier och diplomatiska kanaler.",source:"Säpo årsberättelse 2024; MSB FIMI-rapport 2024",indicators:["Kontaktförsök från utländska organisationer med otydligt syfte","Oväntat intresse för infrastrukturdetaljer eller beslutsprocesser","Medarbetare med plötsliga ekonomiska förbättringar utan förklaring","Förfrågningar om känslig teknisk information under täckmantel av samarbete"],cases:["case-006"]},
-  {id:"extremist",name:"Extremistisk miljö",sub:"Ideologiskt driven",color:"#9B4FBB",goal:"Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet",horizon:"Kort–medellång",methods:["Uthängning och doxxning","Samordnade trakasserier","Informationspåverkan mot beslutsprocess","Belastning via massanmälningar"],exposure:"MEDIUM",note:"Statskontoret konstaterar att skadorna kan träffa individen, anhöriga, verksamheten och i förlängningen tilltron till den offentliga förvaltningen.",source:"Statskontoret 2024; CVE-rapport 2023",indicators:["Ökning av hotfulla meddelanden kring specifikt ärende","Publicering av personuppgifter om medarbetare externt","Samordnade negativa narrativ mot enskild tjänsteperson","Kombination av digitala trakasserier och fysisk närvaro"],cases:["case-004","case-005","case-006"]},
-  {id:"economic-interest",name:"Ekonomiskt intresse",sub:"Kommersiell aktör",color:"#4A7B6F",goal:"Avtal, tillstånd, fördelaktig behandling i upphandling eller tillsyn",horizon:"Medellång",methods:["Relationsbygge över tid","Informella leverantörskontakter","Gåvor och representation","Värvning av nyckelpersoner"],exposure:"MEDIUM",note:"Nära en tredjedel av alla mutgivare är verksamma inom bygg- och anläggningssektorn. Korruption uppstår ofta ur långvariga leverantörsrelationer.",source:"Ekobrottsmyndigheten; Transparency International Sverige",indicators:["Leverantörskontakter utanför dokumenterade upphandlingskanaler","Erbjudanden om framtida anställning till upphandlande personal","Onormalt intensivt socialt umgänge under pågående upphandling","Informell marknadsdialog som påverkar kravspecifikationer"],cases:["case-003"]}
-];
-
-const INDICATORS = [
-  {id:"ind-001",category:"CONTACT",title:"Kontaktförsök via privata kanaler",desc:"En extern person som normalt kontaktar organisationen via tjänstekanaler börjar skicka meddelanden via privat e-post, telefon eller sociala medier.",severity:"HIGH",actors:["criminal-network","foreign-power"],source:"Brå 2024"},
-  {id:"ind-002",category:"BEHAVIOUR",title:"Motstånd mot rotation eller ledighetsuttag",desc:"Medarbetare med känslig tillgång undviker semester, rotation eller ledighet utan sakliga skäl. Kan indikera oro för att avvikelser ska upptäckas i frånvaro.",severity:"MEDIUM",actors:["criminal-network","foreign-power"],source:"CERT-SE; intern riskhanteringsguide"},
-  {id:"ind-003",category:"ACCESS",title:"Slagningar utan koppling till arbetsuppgifter",desc:"Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete, särskilt om slagningarna är återkommande.",severity:"HIGH",actors:["criminal-network"],source:"Riksrevisionen 2023; Brå 2024"},
-  {id:"ind-004",category:"BEHAVIOUR",title:"Plötslig ekonomisk förbättring utan förklaring",desc:"Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd lön och ekonomisk situation.",severity:"HIGH",actors:["criminal-network","foreign-power","economic-interest"],source:"CIA insider threat indicators; Säpo"},
-  {id:"ind-005",category:"DIGITAL",title:"Uthängning av personuppgifter online",desc:"Medarbetarens namn, adress, bild eller familjeuppgifter publiceras på externa plattformar, ofta koordinerat och i samband med ett pågående ärende.",severity:"HIGH",actors:["extremist"],source:"Statskontoret 2024"},
-  {id:"ind-006",category:"PROCUREMENT",title:"Leverantörskontakt utanför dokumenterade kanaler",desc:"Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen.",severity:"HIGH",actors:["economic-interest","criminal-network"],source:"Ekobrottsmyndigheten; Upphandlingsmyndigheten"},
-  {id:"ind-007",category:"BEHAVIOUR",title:"Onormalt intresse för kollegors ärenden",desc:"En medarbetare frågar om kollegors specifika ärenden, tillgångar eller rutiner utan tydlig arbetsmässig anledning.",severity:"MEDIUM",actors:["criminal-network","foreign-power"],source:"Brå 2024"},
-  {id:"ind-008",category:"CONTACT",title:"Nya relationer kring känsliga ärenden",desc:"En medarbetare bildar nya nära relationer med externa parter i direkt anslutning till ett känsligt ärende.",severity:"MEDIUM",actors:["criminal-network","economic-interest"],source:"Brå 2024"},
-  {id:"ind-009",category:"DIGITAL",title:"Samordnade narrativ mot enskild tjänsteperson",desc:"Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination.",severity:"HIGH",actors:["extremist","foreign-power"],source:"Statskontoret 2024; MSB FIMI 2024"},
-  {id:"ind-010",category:"ACCESS",title:"Konsulter med ostyrkt bred behörighet",desc:"Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov, utan formell behörighetsgranskning.",severity:"HIGH",actors:["criminal-network","economic-interest","foreign-power"],source:"Riksrevisionen 2023"},
-  {id:"ind-011",category:"BEHAVIOUR",title:"Försämrad prestation kopplad till externt tryck",desc:"Medarbetare vars prestationer försämras markant utan intern orsak — kan indikera extern pressning, beroende eller psykologisk belastning.",severity:"MEDIUM",actors:["criminal-network","extremist"],source:"Intern riskhanteringsguide; Statskontoret"},
-  {id:"ind-012",category:"ACCESS",title:"Tillgång som lever kvar efter ändrad roll",desc:"Medarbetare, konsulter eller avgångna anställda som fortfarande har systemåtkomst, behörigheter eller passertillstånd efter att behov har upphört.",severity:"HIGH",actors:["criminal-network","foreign-power"],source:"Riksrevisionen 2023"}
-];
-
-const QUESTIONS = [
-  {dim:"Mandat & styrning",q:"Har er organisation en utsedd person som äger och ansvarar för insiderriskhantering med stöd från ledningen?",hint:"Forskning visar att avsaknaden av ett tydligt ägarskap är den vanligaste orsaken till att insiderincidenter inte hanteras i tid.",opts:[{t:"Ja, med tydligt mandat och ledningsstöd",s:3},{t:"Delvis — ansvaret är delat eller otydligt",s:1},{t:"Nej, ingen utsedd ansvarig",s:0}]},
-  {dim:"Mandat & styrning",q:"Finns det dokumenterade processer och policies för hur insiderhot ska identifieras, utredas och hanteras?",hint:"Processer utan mandat fungerar inte, men mandat utan processer skapar godtycklig hantering.",opts:[{t:"Ja, dokumenterade och kända i organisationen",s:3},{t:"Finns men är inte kända eller uppdaterade",s:1},{t:"Saknas",s:0}]},
-  {dim:"Kontroll av medarbetare",q:"Genomförs regelbundna bakgrundskontroller vid rekrytering och vid förändrade roller för känsliga befattningar?",hint:"Brå konstaterar att möjliggörare upparbetas under anställningen — men placering förekommer också. Kontroller vid rekrytering reducerar den risken.",opts:[{t:"Ja, systematiskt och proportionellt mot rollens känslighet",s:3},{t:"Vid rekrytering men inte vid rolländringar",s:1},{t:"Sällan eller aldrig",s:0}]},
-  {dim:"Riskhantering",q:"Har er organisation genomfört en rollbaserad riskbedömning som kartlägger faktisk tillgång och påverkan, inte bara formell titel?",hint:"Formell makt och faktisk påverkan sammanfaller sällan. Handläggaren, registratorn och systemförvaltaren kan ha större påverkan än chefen.",opts:[{t:"Ja, dokumenterad och uppdaterad senaste året",s:3},{t:"Delvis — genomförd men inte uppdaterad",s:1},{t:"Nej",s:0}]},
-  {dim:"Säkerhetskultur",q:"Vet medarbetarna vart de rapporterar oro eller misstankar — och upplever de att det är tryggt att göra det?",hint:"Riksrevisionen lyfter behovet av att fånga signaler nedifrån. De flesta signaler stannar hos kollegor om rapporteringskanaler inte är kända och tillförlitliga.",opts:[{t:"Ja, kanaler är kända och kulturen är trygg",s:3},{t:"Kanaler finns men används sällan",s:1},{t:"Oklart eller nej",s:0}]},
-  {dim:"Säkerhetskultur",q:"Har organisationen ett klimat där informella undantag och regelavvikelser rapporteras och följs upp — inte normaliseras?",hint:"Normalisering av undantag är ett av de mest tillförlitliga förstadietecknen på en pågående påverkansoperation.",opts:[{t:"Ja, avvikelser rapporteras och hanteras konsekvent",s:3},{t:"Delvis — beroende av chef och kontext",s:1},{t:"Undantag normaliseras ofta utan uppföljning",s:0}]},
-  {dim:"Utredningsfunktion",q:"Kan organisationen utreda misstankar om otillbörlig påverkan som inte utgör ett formellt brott?",hint:"Det allra mesta av otillbörlig påverkan är inte olagligt vid varje enskild händelse. Juridiska verktyg räcker inte.",opts:[{t:"Ja, med tydligt mandat, kompetens och process",s:3},{t:"Begränsad förmåga, hanteras ad hoc",s:1},{t:"Nej, vi hanterar bara formella brottsmisstankar",s:0}]},
-  {dim:"Uppföljande personalsäkerhet",q:"Följs medarbetarnas behörigheter aktivt upp vid rolländringar, frånvaro och avslut?",hint:"Riksrevisionen påvisar återkommande brister i att tillgång avslutas när anställning eller uppdrag upphör.",opts:[{t:"Ja, systematiskt och automatiserat",s:3},{t:"Manuellt och med ojämn täckning",s:1},{t:"Sällan eller aldrig",s:0}]},
-  {dim:"Uppföljande personalsäkerhet",q:"Omfattar personalsäkerheten konsulter och externa leverantörer med bred systembehörighet på samma sätt som anställda?",hint:"Konsulter och leverantörer med djup systemkunskap utgör en av de vanligaste ingångspunkterna för möjliggörare.",opts:[{t:"Ja, samma krav och uppföljning",s:3},{t:"Delvis — lägre krav för externa",s:1},{t:"Nej",s:0}]},
-  {dim:"Privat-offentlig delning",q:"Kan HR, säkerhet, juridik och IT dela en gemensam lägesbild av avvikelser och incidenter?",hint:"De flesta insiderincidenter är synliga i fragment hos flera funktioner. Samlad bild saknas nästan alltid.",opts:[{t:"Ja, strukturerat och regelbundet",s:3},{t:"Informellt och situationsbaserat",s:1},{t:"Nej, funktionerna arbetar separat",s:0}]},
-  {dim:"Övervakning & utvärdering",q:"Har organisationen tekniska verktyg för att identifiera avvikande användarbeteende i system med känslig information?",hint:"Teknologi förbättrar förmågan att detektera — men kan inte ersätta kunniga personer som tolkar signalerna.",opts:[{t:"Ja, UAM/UBA-system med konfigurerade larmregler",s:3},{t:"Grundläggande loggning utan beteendeanalys",s:1},{t:"Nej",s:0}]},
-  {dim:"Övervakning & utvärdering",q:"Utvärderar och uppdaterar organisationen sin insiderriskhantering minst en gång per år?",hint:"Hotbilden förändras. En statisk process ger falsk trygghet.",opts:[{t:"Ja, med dokumenterad uppföljning",s:3},{t:"Sporadiskt",s:1},{t:"Nej",s:0}]}
-];
-
-const DIMS = ["Mandat & styrning","Kontroll av medarbetare","Riskhantering","Säkerhetskultur","Utredningsfunktion","Uppföljande personalsäkerhet","Privat-offentlig delning","Övervakning & utvärdering"];
-
-/* ══════════════════════════════════════════
-   MODULE NAVIGATION
-══════════════════════════════════════════ */
-const MODS = {chain:'mod-chain',map:'mod-map',actors:'mod-actors',assess:'mod-assess',inds:'mod-inds'};
-let currentMod = 'chain';
-
-function show(key, e) {
-  if(e) e.preventDefault();
-  document.querySelectorAll('.module').forEach(m => m.classList.remove('active'));
-  document.querySelectorAll('.nav-tabs a').forEach(a => a.classList.remove('active'));
+/* ══ NAV ══ */
+function show(key){
+  document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
+  document.querySelectorAll('.nav-tabs a').forEach(a=>a.classList.remove('active'));
   document.getElementById('mod-'+key).classList.add('active');
-  const tab = document.getElementById('tab-'+key);
-  if(tab) tab.classList.add('active');
-  currentMod = key;
+  const t=document.getElementById('tab-'+key);if(t)t.classList.add('active');
   window.scrollTo(0,0);
-  if(key==='map' && !mapInit) initMap();
+  if(key==='map'&&!mapInit)initMap();
   triggerReveals();
-  return false;
 }
-
-// Override tab clicks
-document.querySelectorAll('.nav-tabs li a').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const id = a.id.replace('tab-','');
-    show(id);
-  });
+document.querySelectorAll('.nav-tabs li a').forEach(a=>{
+  a.addEventListener('click',e=>{e.preventDefault();const id=a.id.replace('tab-','');show(id);});
 });
 
-/* ══════════════════════════════════════════
-   CHAIN MODULE
-══════════════════════════════════════════ */
-let chainIdx = 0;
-
-function buildChain() {
-  const nav = document.getElementById('chainNav');
-  const prog = document.getElementById('chainProgress');
-  nav.innerHTML = '';
-  prog.innerHTML = '';
-
-  CHAIN.forEach((c, i) => {
-    const item = document.createElement('div');
-    item.className = 'chain-nav-item' + (c.danger?' danger':'') + (i===0?' active':'');
-    item.innerHTML = `<div class="cni-num">${String(i+1).padStart(2,'0')}</div>
-      <div class="cni-body"><div class="cni-step">${c.step}</div><div class="cni-title">${c.title}</div></div>`;
-    item.onclick = () => selectChainStep(i);
-    nav.appendChild(item);
-
-    const dot = document.createElement('div');
-    dot.className = 'cp-dot' + (i===0 ? (c.danger?' danger-done':' done'):'');
-    dot.title = c.step;
-    dot.onclick = () => selectChainStep(i);
-    prog.appendChild(dot);
+/* ══ CHAIN ══ */
+let chainIdx=0;
+function buildChain(){
+  const nav=document.getElementById('chainNav'),prog=document.getElementById('chainProg');
+  nav.innerHTML='';prog.innerHTML='';
+  CHAIN.forEach((c,i)=>{
+    const el=document.createElement('div');
+    el.className='cni'+(c.danger?' danger':'')+(i===0?' active':'');
+    el.innerHTML=`<div class="cni-num">${String(i+1).padStart(2,'0')}</div><div><div class="cni-step">${c.step}</div><div class="cni-title">${c.title}</div></div>`;
+    el.onclick=()=>selectChain(i);nav.appendChild(el);
+    const d=document.createElement('div');d.className='cp-dot'+(i===0?(c.danger?' danger-done':' done'):'');d.onclick=()=>selectChain(i);prog.appendChild(d);
   });
-
-  renderChainPanel(0);
+  renderChain(0);
+}
+function selectChain(i){
+  chainIdx=i;
+  document.querySelectorAll('.cni').forEach((el,j)=>el.classList.toggle('active',j===i));
+  document.querySelectorAll('.cp-dot').forEach((el,j)=>{el.className='cp-dot'+(j<=i?(CHAIN[j].danger?' danger-done':' done'):'');});
+  renderChain(i);
+}
+function renderChain(i){
+  const c=CHAIN[i],col=c.danger?'var(--orange)':'var(--accent)';
+  document.getElementById('cp-step').style.color=col;
+  document.getElementById('cp-step').textContent=`Steg ${i+1} — ${c.step}`;
+  document.getElementById('cp-title').textContent=c.title;
+  document.getElementById('cp-badge').innerHTML=`<span class="badge ${c.badge}"><span class="bdot ${c.badge==='b-ind'?'bdot-ind':'bdot-ana'}"></span>${c.badge==='b-ind'?'Indikation':'Analytisk bedömning'}</span>`;
+  document.getElementById('cp-lead').textContent=c.lead;
+  document.getElementById('cp-persp').innerHTML=`
+    <div class="cp-persp"><div class="cpp-label ang">Angriparens logik</div><div class="cpp-text">${c.ang}</div></div>
+    <div class="cp-persp"><div class="cpp-label med">Medarbetarens upplevelse</div><div class="cpp-text">${c.med}</div></div>
+    <div class="cp-persp"><div class="cpp-label org">Organisationens blinda fläck</div><div class="cpp-text">${c.org}</div></div>`;
+  document.getElementById('cp-sigs').innerHTML=c.signals.map(s=>`<div class="cp-signal">${s}</div>`).join('');
+  const linked=CASES.filter(cs=>c.cases.includes(cs.id));
+  const cpCases=document.getElementById('cp-cases');
+  if(linked.length){
+    cpCases.innerHTML=`<div class="cp-cases-label">Kopplade dokumenterade fall (${linked.length})</div>`+linked.map(cs=>`<div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('${cs.id}'),300)"><div class="cp-case-ref-title">${cs.title}</div><div class="cp-case-ref-meta">${cs.loc.m} · ${cs.date} · ${cs.status==='CONFIRMED'?'Bekräftat':'Indikation'}</div></div>`).join('');
+    cpCases.style.display='block';
+  }else{cpCases.style.display='none';}
 }
 
-function selectChainStep(i) {
-  chainIdx = i;
-  document.querySelectorAll('.chain-nav-item').forEach((el,j) => {
-    el.classList.toggle('active', j===i);
-  });
-  document.querySelectorAll('.cp-dot').forEach((el,j) => {
-    el.className = 'cp-dot' + (j<=i ? (CHAIN[j].danger?' danger-done':' done'):'');
-  });
-  renderChainPanel(i);
-}
-
-function renderChainPanel(i) {
-  const c = CHAIN[i];
-  const col = c.danger ? 'var(--orange)' : 'var(--accent)';
-  document.getElementById('cp-step').style.color = col;
-  document.getElementById('cp-step').textContent = `Steg ${i+1} — ${c.step}`;
-  document.getElementById('cp-title').textContent = c.title;
-  document.getElementById('cp-badge').innerHTML = `<div class="badge ${c.badge}" style="margin-bottom:20px"><div class="bdot ${c.badge==='b-ind'?'bdot-ind':'bdot-ana'}"></div>${c.badge==='b-ind'?'Indikation':'Analytisk bedömning'}</div>`;
-  document.getElementById('cp-persp').innerHTML = `
-    <div class="cp-persp"><div class="cp-persp-label ang">Angriparens logik</div><div class="cp-persp-text">${c.ang}</div></div>
-    <div class="cp-persp"><div class="cp-persp-label med">Medarbetarens upplevelse</div><div class="cp-persp-text">${c.med}</div></div>
-    <div class="cp-persp"><div class="cp-persp-label org">Organisationens blinda fläck</div><div class="cp-persp-text">${c.org}</div></div>`;
-  document.getElementById('cp-inds').innerHTML = c.indicators.map(ind => `<div class="cp-ind-item">${ind}</div>`).join('');
-}
-
-/* ══════════════════════════════════════════
-   MAP MODULE
-══════════════════════════════════════════ */
-let mapInit = false, leafMap, markers = [], activeFilters = {sector:'ALL',status:'ALL'};
-
-function initMap() {
-  mapInit = true;
-  leafMap = L.map('map-container', {
-    center: [62.5, 15.5], zoom: 5,
-    zoomControl: true,
-    attributionControl: false
-  });
-
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 18
-  }).addTo(leafMap);
-
-  renderMapMarkers();
-
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const f = this.dataset.filter;
-      if(!f) return;
-      document.querySelectorAll(`[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      activeFilters[f] = this.dataset.val;
-      renderMapMarkers();
+/* ══ MAP ══ */
+let mapInit=false,leafMap,mapMarkers=[],activeF={sector:'ALL',actor:'ALL',status:'ALL'};
+function initMap(){
+  mapInit=true;
+  leafMap=L.map('map-container',{center:[63,16],zoom:4,zoomControl:true,attributionControl:false});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(leafMap);
+  renderMarkers();updateMapStats();
+  document.querySelectorAll('.fb[data-f]').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      const f=this.dataset.f;
+      document.querySelectorAll(`.fb[data-f="${f}"]`).forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');activeF[f]=this.dataset.v;
+      renderMarkers();updateMapStats();
     });
   });
 }
-
-function getStatusColor(status) {
-  if(status==='CONFIRMED') return '#4A7B6F';
-  if(status==='INDICATION') return '#B8973A';
-  return '#C45C2E';
-}
-
-function renderMapMarkers() {
-  markers.forEach(m => m.remove());
-  markers = [];
-
-  const filtered = CASES.filter(c => {
-    const sOk = activeFilters.sector==='ALL' || c.sector===activeFilters.sector;
-    const stOk = activeFilters.status==='ALL' || c.status===activeFilters.status;
-    return sOk && stOk;
+function statusColor(s){return s==='CONFIRMED'?'#4A7B6F':s==='INDICATION'?'#B8973A':'#C45C2E';}
+function renderMarkers(){
+  mapMarkers.forEach(m=>m.remove());mapMarkers=[];
+  const filtered=CASES.filter(c=>{
+    if(activeF.sector!=='ALL'&&c.sector!==activeF.sector)return false;
+    if(activeF.actor!=='ALL'&&c.actor!==activeF.actor)return false;
+    if(activeF.status!=='ALL'&&c.status!==activeF.status)return false;
+    return true;
   });
-
-  filtered.forEach(c => {
-    const col = getStatusColor(c.status);
-    const icon = L.divIcon({
-      className:'',
-      html:`<div style="width:14px;height:14px;border-radius:50%;background:${col};border:2px solid rgba(255,255,255,.3);box-shadow:0 0 8px ${col}66"></div>`,
-      iconSize:[14,14], iconAnchor:[7,7]
-    });
-    const m = L.marker([c.location.lat, c.location.lng], {icon}).addTo(leafMap);
-    m.bindPopup(`<div class="pop-title">${c.title}</div>
-      <div class="pop-meta">${c.location.municipality} · ${c.date} · Precision: ${c.location.precision==='municipality'?'Kommunal':'Approximativ'}</div>
-      <div class="pop-sum">${c.summary}</div>
-      <button class="pop-btn" onclick="openCase('${c.id}')">Öppna fallbeskrivning</button>`);
-    markers.push(m);
+  filtered.forEach(c=>{
+    const col=c.loc.p==='approximate'?'#6B4FBB':statusColor(c.status);
+    const sz=c.loc.p==='approximate'?9:12;
+    const icon=L.divIcon({className:'',html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;background:${col};border:2px solid rgba(255,255,255,.22);box-shadow:0 0 9px ${col}55"></div>`,iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
+    const m=L.marker([c.loc.lat,c.loc.lng],{icon}).addTo(leafMap);
+    const sum=c.summary.length>160?c.summary.substring(0,157)+'...':c.summary;
+    m.bindPopup(`<div class="pop-title">${c.title}</div><div class="pop-meta">${c.loc.m}${c.loc.r&&c.loc.r!==c.loc.m?', '+c.loc.r:''} · ${c.date}</div><div class="pop-sum">${sum}</div><button class="pop-btn" onclick="openCase('${c.id}')">Öppna fullständig fallbeskrivning</button>`);
+    mapMarkers.push(m);
   });
 }
-
-function openCase(id) {
-  const c = CASES.find(x => x.id===id);
-  if(!c) return;
-  document.getElementById('mcp-title').textContent = c.title;
-  document.getElementById('mcp-meta').innerHTML = `
-    <span class="mcp-meta-item">Plats: <span>${c.location.municipality}, ${c.location.region}</span></span>
-    <span class="mcp-meta-item">Datum: <span>${c.date}</span></span>
-    <span class="mcp-meta-item">Sektor: <span>${c.sector}</span></span>
-    <span class="mcp-meta-item">Status: <span>${c.status}</span></span>`;
-  document.getElementById('mcp-summary').textContent = c.summary;
-  document.getElementById('mcp-sources').innerHTML = c.sources.map(s =>
-    `<span class="badge b-conf"><span class="bdot bdot-conf"></span>${s.label}</span>`).join('');
-  const panel = document.getElementById('mapCasePanel');
-  panel.classList.add('open');
-  panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+function updateMapStats(){
+  const tot=CASES.length,conf=CASES.filter(c=>c.status==='CONFIRMED').length,ind=CASES.filter(c=>c.status==='INDICATION').length;
+  document.getElementById('mapStats').innerHTML=`
+    <div class="mstat"><span class="mstat-val">${tot}</span><span class="mstat-lab">Dokumenterade fall</span></div>
+    <div class="mstat"><span class="mstat-val">${conf}</span><span class="mstat-lab">Bekräftade</span></div>
+    <div class="mstat"><span class="mstat-val">${ind}</span><span class="mstat-lab">Indikationer</span></div>
+    <div class="mstat"><span class="mstat-val">2003–2026</span><span class="mstat-lab">Tidsperiod</span></div>`;
 }
-
-function closeCase() {
-  document.getElementById('mapCasePanel').classList.remove('open');
+function openCase(id){
+  const c=CASES.find(x=>x.id===id);if(!c)return;
+  const p=document.getElementById('mcpPanel');
+  document.getElementById('mcp-title').textContent=c.title;
+  document.getElementById('mcp-badges').innerHTML=`<span class="badge b-${c.status==='CONFIRMED'?'conf':'ind'}"><span class="bdot bdot-${c.status==='CONFIRMED'?'conf':'ind'}"></span>${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span>`;
+  document.getElementById('mcp-meta').innerHTML=`<span class="mcp-mi">Plats: <span>${c.loc.m}, ${c.loc.r}</span></span><span class="mcp-mi">Datum: <span>${c.date}</span></span><span class="mcp-mi">Sektor: <span>${c.sector}</span></span><span class="mcp-mi">Aktör: <span>${c.actor}</span></span><span class="mcp-mi">Precision: <span>${c.loc.p==='municipality'?'Kommunal':'Approximativ'}</span></span>`;
+  document.getElementById('mcp-sum').textContent=c.summary;
+  document.getElementById('mcp-srcs').innerHTML=c.sources.map(s=>`<span class="src-tag ${s.t==='court'?'court':s.t==='report'?'report':''}">${s.l}</span>`).join('');
+  p.classList.add('open');p.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
+function closeCase(){document.getElementById('mcpPanel').classList.remove('open');}
 
-/* ══════════════════════════════════════════
-   ACTORS MODULE
-══════════════════════════════════════════ */
-let selectedActor = null;
-
-function buildActors() {
-  const grid = document.getElementById('actorGrid');
-  grid.innerHTML = '';
-  ACTORS.forEach(a => {
-    const card = document.createElement('div');
-    card.className = 'actor-card';
-    card.style.setProperty('--ac',a.color);
-    card.innerHTML = `
-      <div class="ac-header">
-        <div><div class="ac-name" style="color:${a.color}">${a.name}</div><div class="ac-sub">${a.sub}</div></div>
-        <div class="ac-exposure ${a.exposure==='HIGH'?'exp-high':'exp-med'}">${a.exposure==='HIGH'?'Hög exponering':'Medel'}</div>
-      </div>
+/* ══ ACTORS ══ */
+let selActor=null;
+function buildActors(){
+  const g=document.getElementById('actorGrid');g.innerHTML='';
+  ACTORS.forEach(a=>{
+    const el=document.createElement('div');el.className='ac';
+    el.innerHTML=`<div class="ac-header"><div><div class="ac-name" style="color:${a.color}">${a.name}</div><div class="ac-sub">${a.sub}</div></div><div class="ac-exp ${a.exposure==='HIGH'?'exp-high':'exp-med'}">${a.exposure==='HIGH'?'Hög exponering':'Medel'}</div></div>
+      <div class="ac-horizon">Tidshorisont: ${a.horizon}</div>
       <div class="ac-goal">${a.goal}</div>
-      <div class="ac-methods">${a.methods.slice(0,3).map(m=>`<span class="ac-method">${m}</span>`).join('')}</div>
-      <div class="ac-click">Klicka för detaljer →</div>`;
-    card.style.borderTopColor = 'transparent';
-    card.addEventListener('mouseenter', () => { card.style.borderTopColor = a.color; });
-    card.addEventListener('mouseleave', () => { if(selectedActor!==a.id) card.style.borderTopColor='transparent'; });
-    card.onclick = () => selectActor(a.id, card);
-    grid.appendChild(card);
+      <div class="ac-methods">${a.methods.map(m=>`<span class="ac-method">${m}</span>`).join('')}</div>
+      <div class="ac-cta">Klicka för detaljer →</div>`;
+    el.addEventListener('mouseenter',()=>{if(selActor!==a.id)el.style.borderTopColor=a.color;});
+    el.addEventListener('mouseleave',()=>{if(selActor!==a.id)el.style.borderTopColor='transparent';});
+    el.addEventListener('click',()=>selectActor(a.id,el));g.appendChild(el);
   });
 }
-
-function selectActor(id, el) {
-  document.querySelectorAll('.actor-card').forEach(c => {
-    c.classList.remove('selected');
-    c.style.borderTopColor = 'transparent';
-  });
-  const a = ACTORS.find(x=>x.id===id);
-  el.classList.add('selected');
-  el.style.borderTopColor = a.color;
-  selectedActor = id;
-
-  const casesForActor = CASES.filter(c => a.cases.includes(c.id));
-
-  const det = document.getElementById('actorDetail');
-  det.innerHTML = `
-    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border-s)">
-      <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:${a.color}">${a.name}</div>
-      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">${a.sub} · ${a.horizon}</div>
+function selectActor(id,el){
+  document.querySelectorAll('.ac').forEach(c=>{c.classList.remove('sel');c.style.borderTopColor='transparent';});
+  const a=ACTORS.find(x=>x.id===id);el.classList.add('sel');el.style.borderTopColor=a.color;selActor=id;
+  const cases=CASES.filter(c=>a.cases.includes(c.id));
+  const det=document.getElementById('actorDetail');
+  det.innerHTML=`<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--border-s)">
+    <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:${a.color}">${a.name}</div>
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">${a.sub} · ${a.horizon}</div>
+  </div>
+  <div class="ad-grid">
+    <div>
+      <div class="ad-sec-label">Analytisk bedömning</div>
+      <div class="ad-note">${a.note}</div>
+      <div class="ad-src">Källa: ${a.source}</div>
     </div>
-    <div class="ad-layout">
-      <div>
-        <div class="ad-section-label">Analytisk bedömning</div>
-        <div class="ad-note">${a.note}</div>
-        <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);margin-top:8px;letter-spacing:.1em">Källa: ${a.source}</div>
-        <br>
-        <div class="ad-section-label" style="margin-top:20px">Observerbara indikatorer</div>
-        <div class="ad-indicators">${a.indicators.map(ind=>`<div class="ad-ind">${ind}</div>`).join('')}</div>
-      </div>
-      <div>
-        <div class="ad-section-label">Dokumenterade svenska fall</div>
-        <div class="ad-cases">${casesForActor.map(c=>`
-          <div class="ad-case" onclick="openCase('${c.id}');show('map')">
-            <div class="adc-title">${c.title}</div>
-            <div class="adc-meta">${c.location.municipality} · ${c.date} · <span class="badge ${c.status==='CONFIRMED'?'b-conf':'b-ind'}" style="font-size:7px">${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span></div>
-          </div>`).join('')}
-        </div>
-        ${casesForActor.length===0?'<div style="font-size:13px;color:var(--dim);font-style:italic">Inga fall i denna databas ännu</div>':''}
-      </div>
-    </div>`;
-  det.classList.add('open');
-  det.scrollIntoView({behavior:'smooth', block:'nearest'});
+    <div>
+      <div class="ad-sec-label">Observerbara indikatorer (${a.indicators.length})</div>
+      ${a.indicators.map(i=>`<div class="ad-ind">${i}</div>`).join('')}
+    </div>
+    <div>
+      <div class="ad-sec-label">Kopplade svenska fall (${cases.length})</div>
+      ${cases.map(c=>`<div class="ad-case" onclick="show('map');setTimeout(()=>openCase('${c.id}'),300)"><div class="adc-t">${c.title}</div><div class="adc-m">${c.loc.m} · ${c.date} · ${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</div></div>`).join('')}
+    </div>
+  </div>`;
+  det.classList.add('open');det.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-/* ══════════════════════════════════════════
-   ASSESSMENT MODULE
-══════════════════════════════════════════ */
-let assessAnswers = {}, assessCurrent = 0;
-
-function buildAssess() {
-  const nav = document.getElementById('assessNav');
-  const wrap = document.getElementById('assessPanelWrap');
-  nav.innerHTML = '';
-  wrap.innerHTML = '';
-
-  // Build dim nav items (one per dimension group)
-  const dimMap = {};
-  QUESTIONS.forEach((q,i) => {
-    if(!dimMap[q.dim]) dimMap[q.dim] = [];
-    dimMap[q.dim].push(i);
+/* ══ ASSESS ══ */
+let ans={},aqCurrent=0;
+const DIMS=[...new Set(QUESTIONS.map(q=>q.dim))];
+function buildAssess(){
+  const nav=document.getElementById('assessNav'),panels=document.getElementById('assessPanels');
+  nav.innerHTML='';panels.innerHTML='';
+  DIMS.forEach((dim,di)=>{
+    const el=document.createElement('div');el.className='ani'+(di===0?' active':'');el.id='ani'+di;
+    el.innerHTML=`<div class="ani-n">${String(di+1).padStart(2,'0')}</div><div class="ani-t">${dim}</div>`;
+    el.onclick=()=>goQ(QUESTIONS.findIndex(q=>q.dim===dim));nav.appendChild(el);
   });
-
-  let dimIdx = 0;
-  for(const [dim, qIdxs] of Object.entries(dimMap)) {
-    const d = dimIdx;
-    const item = document.createElement('div');
-    item.className = 'assess-nav-item' + (dimIdx===0?' active':'');
-    item.id = 'ani-'+d;
-    item.innerHTML = `<div class="ani-num">${String(dimIdx+1).padStart(2,'0')}</div><div class="ani-title">${dim}</div>`;
-    item.onclick = () => goToQuestion(qIdxs[0]);
-    nav.appendChild(item);
-    dimIdx++;
-  }
-
-  // Build question panels
-  QUESTIONS.forEach((q,i) => {
-    const panel = document.createElement('div');
-    panel.className = 'assess-panel' + (i>0?' hidden':'');
-    panel.id = 'qpanel-'+i;
-    panel.innerHTML = `
-      <div class="aq-progress-bar"><div class="aq-progress-fill" id="apf-${i}" style="width:${Math.round((i/QUESTIONS.length)*100)}%"></div></div>
-      <div class="aq-section">${q.dim}</div>
-      <div class="aq-q">${q.q}</div>
+  QUESTIONS.forEach((q,i)=>{
+    const p=document.createElement('div');p.className='assess-panel'+(i===0?' show':'');p.id='qp'+i;
+    p.innerHTML=`<div class="aq-prog-bar"><div class="aq-prog-fill" id="apf${i}" style="width:${Math.round(i/QUESTIONS.length*100)}%"></div></div>
+      <div class="aq-sec">${q.dim}</div><div class="aq-q">${q.q}</div>
       <div class="aq-hint">${q.hint}</div>
-      <div class="aq-options" id="aopts-${i}">
-        ${q.opts.map((o,j)=>`<div class="aq-opt" data-qi="${i}" data-oi="${j}" onclick="selectAnswer(${i},${j},${o.s})">${o.t}<span class="aq-opt-score">${['Liten förmåga','Delvis förmåga','God förmåga'][o.s/3*2<1?0:o.s===3?2:1]}</span></div>`).join('')}
-      </div>
-      <div class="aq-nav">
-        ${i>0?`<button class="aq-btn aq-btn-prev" onclick="goToQuestion(${i-1})">← Tillbaka</button>`:'<div></div>'}
-        ${i<QUESTIONS.length-1
-          ?`<button class="aq-btn aq-btn-next" id="anxt-${i}" onclick="goToQuestion(${i+1})" disabled>Nästa →</button>`
-          :`<button class="aq-btn aq-btn-next" id="anxt-${i}" onclick="showResults()" disabled>Visa resultat →</button>`}
-        <span class="aq-progress-text">${i+1} / ${QUESTIONS.length}</span>
+      <div class="aq-opts" id="ao${i}">${q.opts.map((o,j)=>`<div class="aq-opt" onclick="selAns(${i},${j},${o.s})"><span>${o.t}</span><span class="aq-opt-lvl">${['Liten förmåga','Delvis förmåga','God förmåga'][o.s===3?2:o.s===1?1:0]}</span></div>`).join('')}</div>
+      <div class="aq-nav-row">
+        ${i>0?`<button class="aq-btn aq-prev" onclick="goQ(${i-1})">← Tillbaka</button>`:'<div></div>'}
+        ${i<QUESTIONS.length-1?`<button class="aq-btn aq-next" id="anxt${i}" onclick="goQ(${i+1})" disabled>Nästa →</button>`:`<button class="aq-btn aq-next" id="anxt${i}" onclick="showRes()" disabled>Visa resultat →</button>`}
+        <span class="aq-ct">${i+1} / ${QUESTIONS.length}</span>
       </div>`;
-    wrap.appendChild(panel);
+    panels.appendChild(p);
   });
 }
-
-function goToQuestion(i) {
-  assessCurrent = i;
-  document.querySelectorAll('.assess-panel').forEach(p => p.classList.add('hidden'));
-  const panel = document.getElementById('qpanel-'+i);
-  if(panel) { panel.classList.remove('hidden'); panel.scrollIntoView({behavior:'smooth',block:'nearest'}); }
-
-  // Update nav
-  const dimMap = {};
-  QUESTIONS.forEach((q,j) => { if(!dimMap[q.dim]) dimMap[q.dim]=[]; dimMap[q.dim].push(j); });
-  let di = 0;
-  for(const [dim, qIdxs] of Object.entries(dimMap)) {
-    const el = document.getElementById('ani-'+di);
-    if(el) {
-      el.className = 'assess-nav-item';
-      const allDone = qIdxs.every(qi => assessAnswers[qi]!==undefined);
-      if(allDone) el.classList.add('done');
-      if(qIdxs.includes(i)) el.classList.add('active');
-    }
-    di++;
-  }
-  // Restore selection
-  if(assessAnswers[i]!==undefined) {
-    document.querySelectorAll(`#aopts-${i} .aq-opt`).forEach((opt,j) => {
-      opt.classList.toggle('selected', j===assessAnswers[i].oi);
-    });
-    const nxtBtn = document.getElementById('anxt-'+i);
-    if(nxtBtn) nxtBtn.disabled = false;
-  }
-}
-
-function selectAnswer(qi, oi, score) {
-  assessAnswers[qi] = {oi, score};
-  document.querySelectorAll(`#aopts-${qi} .aq-opt`).forEach((opt,j) => opt.classList.toggle('selected',j===oi));
-  const btn = document.getElementById('anxt-'+qi);
-  if(btn) btn.disabled = false;
-}
-
-function showResults() {
-  document.getElementById('assessLayout').style.display = 'none';
-  const res = document.getElementById('assessResults');
-  res.classList.add('visible');
-
-  // Calculate per-dim scores
-  const dimScores = {};
-  const dimMap = {};
-  QUESTIONS.forEach((q,i) => { if(!dimMap[q.dim]) dimMap[q.dim]=[]; dimMap[q.dim].push(i); });
-  for(const [dim, qIdxs] of Object.entries(dimMap)) {
-    const total = qIdxs.reduce((acc,qi) => acc + (assessAnswers[qi]?.score||0), 0);
-    const max = qIdxs.length * 3;
-    dimScores[dim] = Math.round((total/max)*100);
-  }
-
-  const wrap = document.getElementById('radarWrap');
-  wrap.innerHTML = `
-    <div>
-      <p class="eyebrow" style="margin-bottom:16px">Kapacitet per dimension</p>
-      ${Object.entries(dimScores).map(([dim,pct])=>`
-        <div class="dim-bar">
-          <div class="dim-bar-label">
-            <span class="dim-bar-name">${dim}</span>
-            <span class="dim-bar-val">${pct}%</span>
-          </div>
-          <div class="dim-bar-track">
-            <div class="dim-bar-fill ${pct>=70?'fill-high':pct>=40?'fill-med':'fill-low'}" style="width:0%" data-w="${pct}%"></div>
-          </div>
-        </div>`).join('')}
-    </div>
-    <div>
-      <p class="eyebrow" style="margin-bottom:16px">Sammanvägd bedömning</p>
-      <div style="font-family:var(--fd);font-size:64px;font-weight:300;color:var(--accent);line-height:1">${Math.round(Object.values(dimScores).reduce((a,b)=>a+b,0)/Object.values(dimScores).length)}%</div>
-      <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.14em;margin-top:8px">ÖVERGRIPANDE KAPACITETSNIVÅ</div>
-      <div style="margin-top:24px;font-size:13px;color:var(--muted);line-height:1.7">
-        ${Math.round(Object.values(dimScores).reduce((a,b)=>a+b,0)/Object.values(dimScores).length) >= 70
-          ? 'Er organisation visar god kapacitet inom de flesta dimensioner. Fokusera på att stärka de dimensioner med lägst poäng och säkerställa att processerna hålls uppdaterade.'
-          : Math.round(Object.values(dimScores).reduce((a,b)=>a+b,0)/Object.values(dimScores).length) >= 40
-          ? 'Er organisation har partiell kapacitet. Det finns tydliga förbättringsområden som bör prioriteras — särskilt de dimensioner som skattas lägst.'
-          : 'Er organisation har betydande kapacitetsbrister. Prioritera omedelbart att etablera ägarskap, dokumenterade processer och rapporteringskanaler.'}
-      </div>
-    </div>`;
-
-  // Animate bars
-  setTimeout(() => {
-    document.querySelectorAll('.dim-bar-fill').forEach(bar => {
-      bar.style.width = bar.dataset.w;
-    });
-  }, 200);
-
-  // Recommendations
-  const recs = Object.entries(dimScores)
-    .filter(([,pct]) => pct < 70)
-    .sort((a,b) => a[1]-b[1])
-    .slice(0,4);
-
-  const recTexts = {
-    'Mandat & styrning': 'Utse en ansvarig person med tydligt mandat och ledningsstöd. Dokumentera processer för identifiering, utredning och hantering av insiderhot.',
-    'Kontroll av medarbetare': 'Inför systematiska bakgrundskontroller vid rekrytering och vid förändrade roller, proportionellt mot befattningens känslighet.',
-    'Riskhantering': 'Genomför en rollbaserad riskbedömning som kartlägger faktisk tillgång och påverkan — inte bara formell titel.',
-    'Säkerhetskultur': 'Etablera kända rapporteringskanaler och säkerställ att avvikelser hanteras konsekvent, inte normaliseras.',
-    'Utredningsfunktion': 'Bygg förmåga att utreda misstankar som inte når brottsmisstankens nivå. Juridiska verktyg räcker inte.',
-    'Uppföljande personalsäkerhet': 'Inför systematisk avslutning av behörigheter vid rolländring och avslutad anställning. Utvidga till konsulter.',
-    'Privat-offentlig delning': 'Skapa strukturerade former för att HR, säkerhet, juridik och IT delar en gemensam lägesbild.',
-    'Övervakning & utvärdering': 'Implementera beteendeanalytiska verktyg och inför en annual review-process för insiderriskhanteringen.'
-  };
-
-  document.getElementById('resultsRecs').innerHTML = recs.map(([dim,pct]) => `
-    <div class="rec-item${pct<30?' critical':''}">
-      <div class="rec-dim">${dim} — ${pct}%</div>
-      <div class="rec-text">${recTexts[dim]||'Se över processer och roller inom detta område.'}</div>
-    </div>`).join('');
-
-  res.scrollIntoView({behavior:'smooth', block:'start'});
-}
-
-function resetAssess() {
-  assessAnswers = {};
-  assessCurrent = 0;
-  document.getElementById('assessLayout').style.display = '';
-  document.getElementById('assessResults').classList.remove('visible');
-  buildAssess();
-}
-
-/* ══════════════════════════════════════════
-   INDICATORS MODULE
-══════════════════════════════════════════ */
-let indFilters = {cat:'ALL', sev:'ALL'};
-
-function buildInds() {
-  renderInds();
-}
-
-function filterInds() { renderInds(); }
-
-function setIndFilter(btn, type) {
-  document.querySelectorAll(`[data-ifilter="${type}"]`).forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  indFilters[type] = btn.dataset.val;
-  renderInds();
-}
-
-const catLabels = {ACCESS:'Åtkomst',BEHAVIOUR:'Beteende',CONTACT:'Kontakt',DIGITAL:'Digital',PROCUREMENT:'Upphandling',SOCIAL:'Socialt'};
-const actorNames = {'criminal-network':'Kriminellt nätverk','foreign-power':'Främmande makt','extremist':'Extremistisk miljö','economic-interest':'Ekonomiskt intresse'};
-
-function renderInds() {
-  const q = (document.getElementById('indSearch')?.value||'').toLowerCase();
-  const filtered = INDICATORS.filter(ind => {
-    const catOk = indFilters.cat==='ALL' || ind.category===indFilters.cat;
-    const sevOk = indFilters.sev==='ALL' || ind.severity===indFilters.sev;
-    const qOk = !q || ind.title.toLowerCase().includes(q) || ind.desc.toLowerCase().includes(q);
-    return catOk && sevOk && qOk;
+function goQ(i){
+  aqCurrent=i;
+  document.querySelectorAll('.assess-panel').forEach(p=>p.classList.remove('show'));
+  const p=document.getElementById('qp'+i);if(p){p.classList.add('show');p.scrollIntoView({behavior:'smooth',block:'nearest'});}
+  DIMS.forEach((dim,di)=>{
+    const el=document.getElementById('ani'+di);if(!el)return;
+    const qIdxs=QUESTIONS.map((q,j)=>q.dim===dim?j:-1).filter(j=>j>=0);
+    const allDone=qIdxs.every(j=>ans[j]!==undefined);
+    el.className='ani'+(qIdxs.includes(i)?' active':'')+(allDone&&!qIdxs.includes(i)?' done':'');
   });
-
-  const grid = document.getElementById('indGrid');
-  if(!grid) return;
-
-  if(filtered.length===0) {
-    grid.innerHTML = '<div class="ind-empty">Inga indikatorer matchar filtret</div>';
-    return;
+  if(ans[i]!==undefined){
+    document.querySelectorAll(`#ao${i} .aq-opt`).forEach((o,j)=>o.classList.toggle('sel',j===ans[i].oi));
+    const b=document.getElementById('anxt'+i);if(b)b.disabled=false;
   }
+}
+function selAns(qi,oi,score){
+  ans[qi]={oi,score};
+  document.querySelectorAll(`#ao${qi} .aq-opt`).forEach((o,j)=>o.classList.toggle('sel',j===oi));
+  const b=document.getElementById('anxt'+qi);if(b)b.disabled=false;
+}
+function showRes(){
+  document.getElementById('assessWrap').style.display='none';
+  const rw=document.getElementById('resWrap');rw.classList.add('show');
+  const dimScores={};
+  DIMS.forEach(dim=>{
+    const idxs=QUESTIONS.map((q,j)=>q.dim===dim?j:-1).filter(j=>j>=0);
+    const tot=idxs.reduce((a,j)=>a+(ans[j]?.score||0),0);
+    dimScores[dim]=Math.round(tot/(idxs.length*3)*100);
+  });
+  const avg=Math.round(Object.values(dimScores).reduce((a,b)=>a+b,0)/DIMS.length);
+  const rg=document.getElementById('resGrid');
+  rg.innerHTML=`<div>
+    <p class="eyebrow" style="margin-bottom:14px">Kapacitet per dimension</p>
+    ${DIMS.map(dim=>{const p=dimScores[dim];return`<div class="db"><div class="db-lbl"><span class="db-name">${dim}</span><span class="db-val">${p}%</span></div><div class="db-track"><div class="db-fill ${p>=70?'fill-h':p>=40?'fill-m':'fill-l'}" style="width:0%" data-w="${p}%"></div></div></div>`}).join('')}
+  </div>
+  <div>
+    <p class="eyebrow" style="margin-bottom:14px">Sammanvägd kapacitetsnivå</p>
+    <div class="res-score">${avg}%</div>
+    <div class="res-score-lab">Övergripande mognadsnivå</div>
+    <div class="res-assessment">${avg>=70?'Er organisation visar god kapacitet inom de flesta dimensioner. Fokusera på de dimensioner med lägst poäng och säkerställ att processerna hålls uppdaterade i takt med förändringar i hotbilden.':avg>=40?'Er organisation har partiell kapacitet. Det finns tydliga förbättringsområden som bör prioriteras — börja med dimensionerna som skattas lägst.':'Er organisation har betydande kapacitetsbrister. Prioritera omedelbart ägarskap, dokumenterade processer och kända rapporteringskanaler.'}</div>
+  </div>`;
+  setTimeout(()=>document.querySelectorAll('.db-fill').forEach(b=>b.style.width=b.dataset.w),200);
+  const recs=Object.entries(dimScores).filter(([,p])=>p<70).sort((a,b)=>a[1]-b[1]).slice(0,5);
+  document.getElementById('recList').innerHTML=recs.map(([dim,p])=>`<div class="rec${p<30?' crit':''}"><div class="rec-dim">${dim} — ${p}% kapacitet</div><div class="rec-txt">${REC_TEXTS[dim]||'Se över processer och roller inom detta område.'}</div></div>`).join('');
+  rw.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resetAssess(){ans={};aqCurrent=0;document.getElementById('assessWrap').style.display='';document.getElementById('resWrap').classList.remove('show');buildAssess();}
 
-  grid.innerHTML = filtered.map(ind => `
-    <div class="ind-card">
-      <div class="ind-card-top">
-        <span class="ind-cat">${catLabels[ind.category]||ind.category}</span>
-        <span class="ind-cat ${ind.severity==='HIGH'?'sev-high':'sev-med'}">${ind.severity==='HIGH'?'Hög':'Medel'}</span>
-      </div>
-      <div class="ind-title">${ind.title}</div>
-      <div class="ind-desc">${ind.desc}</div>
-      <div class="ind-actors">${ind.actors.map(a=>`<span class="ind-actor">${actorNames[a]||a}</span>`).join('')}</div>
-      <div class="ind-source">Källa: ${ind.source}</div>
-    </div>`).join('');
+/* ══ INDICATORS ══ */
+let indF={cat:'ALL',sev:'ALL'};
+const catLabels={ACCESS:'Åtkomst',BEHAVIOUR:'Beteende',CONTACT:'Kontakt',DIGITAL:'Digital',PROCUREMENT:'Upphandling',SOCIAL:'Socialt'};
+const actorNames={'criminal-network':'Kriminellt nätverk','foreign-power':'Främmande makt','extremist':'Extremism','economic-interest':'Ekonomiskt intresse'};
+function setIF(btn,type){document.querySelectorAll(`[data-ic="${type}"]`).forEach(b=>b.classList.remove('active'));btn.classList.add('active');indF[type]=btn.dataset.iv;renderInds();}
+function filterInds(){renderInds();}
+function renderInds(){
+  const q=(document.getElementById('indSrch')?.value||'').toLowerCase();
+  const fil=INDICATORS.filter(i=>{
+    const cOk=indF.cat==='ALL'||i.cat===indF.cat;
+    const sOk=indF.sev==='ALL'||i.sev===indF.sev;
+    const qOk=!q||i.title.toLowerCase().includes(q)||i.desc.toLowerCase().includes(q)||(i.example||'').toLowerCase().includes(q);
+    return cOk&&sOk&&qOk;
+  });
+  const g=document.getElementById('indGrid');if(!g)return;
+  if(!fil.length){g.innerHTML='<div class="ind-empty">Inga indikatorer matchar sökningen</div>';return;}
+  g.innerHTML=fil.map(i=>`<div class="ind-card">
+    <div class="ind-top"><span class="ind-cat-tag">${catLabels[i.cat]||i.cat}</span><span class="ind-cat-tag ${i.sev==='HIGH'?'sev-h':'sev-m'}">${i.sev==='HIGH'?'Hög allvarlighet':'Medel'}</span></div>
+    <div class="ind-title">${i.title}</div>
+    <div class="ind-desc">${i.desc}</div>
+    ${i.example?`<div class="ind-example">${i.example}</div>`:''}
+    <div class="ind-actors">${i.actors.map(a=>`<span class="ind-a">${actorNames[a]||a}</span>`).join('')}</div>
+    <div class="ind-src">Källa: ${i.src}</div>
+  </div>`).join('');
 }
 
-/* ══════════════════════════════════════════
-   SCROLL REVEAL
-══════════════════════════════════════════ */
-function triggerReveals() {
-  setTimeout(() => {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
-    }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
-    document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
-  }, 80);
+/* ══ REVEALS ══ */
+function triggerReveals(){
+  setTimeout(()=>{
+    const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}})  ,{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));
+  },80);
 }
 
-/* ══════════════════════════════════════════
-   INIT
-══════════════════════════════════════════ */
-window.addEventListener('DOMContentLoaded', () => {
-  buildChain();
-  buildActors();
-  buildAssess();
-  buildInds();
+/* ══ INIT ══ */
+window.addEventListener('DOMContentLoaded',()=>{
+  buildChain();buildActors();buildAssess();renderInds();
   document.getElementById('tab-chain').classList.add('active');
   triggerReveals();
 });

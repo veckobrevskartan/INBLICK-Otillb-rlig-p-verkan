@@ -1,122 +1,328 @@
 [
   {
-    "id": "ind-001",
-    "category": "CONTACT",
-    "title": "Kontaktförsök via privata kanaler",
-    "desc": "En extern person som normalt kontaktar organisationen via tjänstekanaler börjar skicka meddelanden via privat e-post, telefon eller sociala medier.",
-    "severity": "HIGH",
-    "actors": ["criminal-network", "foreign-power"],
-    "sectors": ["ALL"],
-    "source": "Brå 2024"
-  },
-  {
-    "id": "ind-002",
-    "category": "BEHAVIOUR",
-    "title": "Motstånd mot rotation eller ledighetsuttag",
-    "desc": "Medarbetare med känslig tillgång undviker semester, rotation eller ledighet utan sakliga skäl. Kan indikera oro för att avvikelser ska upptäckas i frånvaro.",
-    "severity": "MEDIUM",
-    "actors": ["criminal-network", "foreign-power"],
-    "sectors": ["IT", "CRIMINAL_JUSTICE", "AUTHORITY"],
-    "source": "CERT-SE; intern riskhanteringsguide"
-  },
-  {
-    "id": "ind-003",
-    "category": "ACCESS",
+    "id": "i01",
+    "cat": "ACCESS",
     "title": "Slagningar utan koppling till arbetsuppgifter",
-    "desc": "Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete, särskilt om slagningarna är återkommande.",
-    "severity": "HIGH",
-    "actors": ["criminal-network"],
-    "sectors": ["CRIMINAL_JUSTICE", "SOCIAL", "AUTHORITY"],
-    "source": "Riksrevisionen 2023; Brå 2024"
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete — särskilt återkommande slagningar på specifika person- eller ärendekategorier under en period.",
+    "example": "Kriminalvårdens möjliggörare (2022) utförde otillåtna slagningar under mer än ett år utan att intern kontroll fångade avvikelserna. Riksrevisionen: avsaknad av beteendeanalytiska verktyg var avgörande brist.",
+    "src": "Riksrevisionen 2023; Brå 2024"
   },
   {
-    "id": "ind-004",
-    "category": "SOCIAL",
-    "title": "Plötslig ekonomisk förbättring utan förklaring",
-    "desc": "Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd lön och ekonomisk situation.",
-    "severity": "HIGH",
-    "actors": ["criminal-network", "foreign-power", "economic-interest"],
-    "sectors": ["ALL"],
-    "source": "CIA insider threat indicators; Säpo"
+    "id": "i02",
+    "cat": "ACCESS",
+    "title": "Tillgång som lever kvar efter ändrad roll eller avslut",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "Medarbetare, konsulter eller avgångna anställda har fortfarande systemåtkomst, registerbehörigheter eller passertillstånd efter att behovet har upphört.",
+    "example": "Riksrevisionen (2025): kvarlevande behörigheter är genomgående brist vid FMV, Kriminalvården och Kammarkollegiet. Transportstyrelsen-fallet: IT-leverantörers breda åtkomst avslutades inte vid projektavslut.",
+    "src": "Riksrevisionen 2025–2026; Transportstyrelsen-utredningen 2017"
   },
   {
-    "id": "ind-005",
-    "category": "DIGITAL",
-    "title": "Uthängning av personuppgifter online",
-    "desc": "Medarbetarens namn, adress, bild eller familjeuppgifter publiceras på externa plattformar, ofta koordinerat och i samband med ett pågående ärende.",
-    "severity": "HIGH",
-    "actors": ["extremist"],
-    "sectors": ["SOCIAL", "COMMS"],
-    "source": "Statskontoret 2024"
-  },
-  {
-    "id": "ind-006",
-    "category": "PROCUREMENT",
-    "title": "Leverantörskontakt utanför dokumenterade kanaler",
-    "desc": "Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen.",
-    "severity": "HIGH",
-    "actors": ["economic-interest", "criminal-network"],
-    "sectors": ["PROCUREMENT"],
-    "source": "Ekobrottsmyndigheten; Upphandlingsmyndigheten"
-  },
-  {
-    "id": "ind-007",
-    "category": "BEHAVIOUR",
-    "title": "Onormalt intresse för kollegors ärenden",
-    "desc": "En medarbetare frågar om kollegors specifika ärenden, tillgångar eller rutiner utan tydlig arbetsmässig anledning.",
-    "severity": "MEDIUM",
-    "actors": ["criminal-network", "foreign-power"],
-    "sectors": ["ALL"],
-    "source": "Brå 2024 – Möjliggörare"
-  },
-  {
-    "id": "ind-008",
-    "category": "SOCIAL",
-    "title": "Nya relationer kring känsliga ärenden",
-    "desc": "En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett känsligt eller högt profil-ärende.",
-    "severity": "MEDIUM",
-    "actors": ["criminal-network", "economic-interest"],
-    "sectors": ["SOCIAL", "PROCUREMENT", "PERMITS"],
-    "source": "Brå 2024"
-  },
-  {
-    "id": "ind-009",
-    "category": "DIGITAL",
-    "title": "Samordnade narrativ mot enskild tjänsteperson",
-    "desc": "Flera konton på sociala medier sprider likartade anklagelser eller negativa uppgifter om en specifik medarbetare under kort tid — möjlig koordination.",
-    "severity": "HIGH",
-    "actors": ["extremist", "foreign-power"],
-    "sectors": ["COMMS", "SOCIAL", "AUTHORITY"],
-    "source": "Statskontoret 2024; MSB FIMI 2024"
-  },
-  {
-    "id": "ind-010",
-    "category": "PROCUREMENT",
+    "id": "i03",
+    "cat": "ACCESS",
     "title": "Konsulter med ostyrkt bred behörighet",
-    "desc": "Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov, utan formell behörighetsgranskning.",
-    "severity": "HIGH",
-    "actors": ["criminal-network", "economic-interest", "foreign-power"],
-    "sectors": ["IT", "PROCUREMENT"],
-    "source": "Riksrevisionen 2023"
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "economic-interest",
+      "foreign-power"
+    ],
+    "desc": "Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov — utan formell behörighetsgranskning, säkerhetsskyddsavtal eller dokumenterad uppföljning.",
+    "example": "Transportstyrelses IT-underleverantörer (2017) hade tillgång till sekretessklassad data utan att säkerhetsskyddsavtal upprättats. GD dömdes för vårdslöshet med hemlig uppgift.",
+    "src": "Riksrevisionen 2023; Transportstyrelsen-utredningen 2017"
   },
   {
-    "id": "ind-011",
-    "category": "BEHAVIOUR",
+    "id": "i04",
+    "cat": "ACCESS",
+    "title": "Systembrister som möjliggör oövervakad datainsamling",
+    "sev": "HIGH",
+    "actors": [
+      "foreign-power",
+      "criminal-network"
+    ],
+    "desc": "Myndighetens IT-system eller arkiv saknar tillräckliga kontrollmekanismer, vilket möjliggör systematisk datainsamling utan att en enskild insider behöver rekryteras.",
+    "example": "Lantmäteriet (2024): säkerhetsskyddsklassificerade uppgifter var tillgängliga utan sekretessprövning i år. Ds 2026:2: 'den skadan går inte att reparera' — aktörer har kunnat kartlägga uppgifter systematiskt över tid.",
+    "src": "Ds 2026:2; Transportstyrelsenutredningen 2017"
+  },
+  {
+    "id": "i05",
+    "cat": "CONTACT",
+    "title": "Kontaktförsök via privata kanaler",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "En extern person som normalt kontaktar organisationen via tjänstekanaler börjar använda privat e-post, telefon, SMS eller sociala medier för kommunikation om arbetsrelaterade frågor.",
+    "example": "Advokaterna Güngör och Amdouni kommunicerade via krypterade chattar utanför dokumenterade kanaler — mönstret fortsatte oupptäckt tills annan utredning avslöjade det. Brå: privata kanaler är det vanligaste kommunikationsmedlet för möjliggörare.",
+    "src": "Brå 2024; SVT-rapportering"
+  },
+  {
+    "id": "i06",
+    "cat": "CONTACT",
+    "title": "Nya intensiva relationer kring känsliga ärenden",
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "economic-interest"
+    ],
+    "desc": "En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett pågående känsligt eller högt profil-ärende.",
+    "example": "Advokat Zihaouis byråjurist upprätthöll 232 timmars telefonkontakt med en livstidsdömd klient under en tvåmånadersperiod. Kontakten översteg varje rimlig ärendemässig motivering.",
+    "src": "Brå 2024; Advokatsamfundets disciplinnämnd 2023"
+  },
+  {
+    "id": "i07",
+    "cat": "CONTACT",
+    "title": "Återkommande kontaktförsök efter avvisning",
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "foreign-power",
+      "extremist"
+    ],
+    "desc": "Externa aktörer som avvisats eller fått avslag vid tjänstekontakt återkommer via sidokanaler, mellanhänder eller med förändrad identitet för att nå samma medarbetare eller information.",
+    "example": "Dokumenterat mönster i kontaktförsök mot socialsekreterare med LVU-ärenden kopplade till kriminella nätverk. Brå (2024): nätverken är uthålliga och byter kanal när en avvisas.",
+    "src": "Brå 2024; Statskontoret 2024"
+  },
+  {
+    "id": "i08",
+    "cat": "CONTACT",
+    "title": "Intensifierat umgänge med extern part under känslig period",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "economic-interest"
+    ],
+    "desc": "Social kontakt med en extern aktör som eskalerar markant just under en period då känsliga beslut fattas, ärenden bereds eller upphandlingar genomförs — utan dokumenterad affärsmässig motivering.",
+    "example": "Akademiska sjukhuset-domen (2024): kontakten med Canon Medical och Siemens ökade i intensitet under inköpsprocesser. Mutor överfördes via 'konsultfakturor' under sju år.",
+    "src": "Akademiska-domen 2024; Ekobrottsmyndigheten"
+  },
+  {
+    "id": "i09",
+    "cat": "BEHAVIOUR",
+    "title": "Motstånd mot rotation, ledighet eller granskning",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "Medarbetare med känslig tillgång undviker systematiskt semester, rotation eller granskning utan sakliga skäl — kan indikera oro för att avvikelser ska upptäckas i frånvaro.",
+    "example": "CIA insider threat indicators dokumenterar ovanligt låg semesteruttag som ett av de starkaste beteendessignalerna i fall av pågående spionage. Kriminalvårdens interna utredningar noterar mönstret.",
+    "src": "CIA insider threat indicators; CERT-SE"
+  },
+  {
+    "id": "i10",
+    "cat": "BEHAVIOUR",
+    "title": "Plötslig ekonomisk förbättring utan förklaring",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "foreign-power",
+      "economic-interest"
+    ],
+    "desc": "Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd inkomst och ekonomisk situation — utan trovärdig förklaring.",
+    "example": "Akademiska sjukhuset-domen (2024): verksamhetschefen tog emot 4,76 Mkr i mutor — synligt i livsstilsförändringar innan avslöjandet. Perstorp-fallet: socialsekreteraren tog helikopter till jobbet.",
+    "src": "CIA insider threat indicators; Säpo; Akademiska-domen 2024"
+  },
+  {
+    "id": "i11",
+    "cat": "BEHAVIOUR",
+    "title": "Onormalt intresse för kollegors ärenden eller tillgång",
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "En medarbetare frågar om kollegors specifika ärenden, systemtillgång, behörigheter eller interna rutiner utan tydlig arbetsmässig anledning.",
+    "example": "Brå (2024): möjliggörare tillhandahåller inte nödvändigtvis hemlig information — den samlade kunskapen om organisationens struktur, rutiner och frånvaro är det primära värdet.",
+    "src": "Brå 2024 – Möjliggörare"
+  },
+  {
+    "id": "i12",
+    "cat": "BEHAVIOUR",
     "title": "Försämrad prestation kopplad till externt tryck",
-    "desc": "Medarbetare vars prestationer försämras markant utan intern orsak — kan indikera extern pressning, beroende eller psykologisk belastning.",
-    "severity": "MEDIUM",
-    "actors": ["criminal-network", "extremist"],
-    "sectors": ["ALL"],
-    "source": "Intern riskhanteringsguide; Statskontoret"
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "extremist"
+    ],
+    "desc": "Medarbetare vars prestationer försämras markant utan intern förklaring — kan indikera extern pressning, beroende eller psykologisk belastning till följd av pågående oönskad kontakt.",
+    "example": "Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.",
+    "src": "Statskontoret 2024; Brå 2024"
   },
   {
-    "id": "ind-012",
-    "category": "ACCESS",
-    "title": "Tillgång som lever kvar efter ändrad roll",
-    "desc": "Medarbetare, konsulter eller avgångna anställda som fortfarande har systemåtkomst, behörigheter eller passertillstånd efter att behov har upphört.",
-    "severity": "HIGH",
-    "actors": ["criminal-network", "foreign-power"],
-    "sectors": ["IT", "CRIMINAL_JUSTICE", "AUTHORITY"],
-    "source": "Riksrevisionen 2023"
+    "id": "i13",
+    "cat": "BEHAVIOUR",
+    "title": "Medarbetare under ovanlig ekonomisk press",
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "Medarbetare med känslig tillgång uppvisar tecken på ovanlig ekonomisk stress — löneutmätning, dokumenterade skulder — utan att organisationens stödstrukturer aktiverats.",
+    "example": "Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är etablerad rekryteringsfaktor i samtliga källa.",
+    "src": "Riksrevisionen 2025–2026; Brå 2024"
+  },
+  {
+    "id": "i14",
+    "cat": "DIGITAL",
+    "title": "Uthängning av personuppgifter online",
+    "sev": "HIGH",
+    "actors": [
+      "extremist"
+    ],
+    "desc": "Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutning till ett specifikt pågående ärende.",
+    "example": "Socialchef utsattes för koordinerad uthängning med privat adress publicerad. Personen lämnade sin tjänst (Statskontoret 2024). Brå: doxxning används systematiskt för att neutralisera beslutsfattare utan att begå formellt brott.",
+    "src": "Statskontoret 2024; Brå 2024"
+  },
+  {
+    "id": "i15",
+    "cat": "DIGITAL",
+    "title": "Samordnade narrativ mot enskild tjänsteperson",
+    "sev": "HIGH",
+    "actors": [
+      "extremist",
+      "foreign-power"
+    ],
+    "desc": "Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination med syftet att delegitimera personen eller organisationens beslut.",
+    "example": "MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.",
+    "src": "Statskontoret 2024; MSB FIMI 2024"
+  },
+  {
+    "id": "i16",
+    "cat": "DIGITAL",
+    "title": "Kombinerat mönster: digital trakassering och fysisk närvaro",
+    "sev": "HIGH",
+    "actors": [
+      "extremist",
+      "criminal-network"
+    ],
+    "desc": "Kombination av koordinerade digitala trakasserier (doxxning, hotkampanjer) med rapporterad fysisk närvaro nära medarbetarens arbetsplats, hem eller privata sammanhang.",
+    "example": "Statskontoret (2024): kombinationen av digitala och fysiska komponenter identifieras som den mest allvarliga formen av otillåten påverkan mot offentliganställda — och den som sannolikt underrapporteras mest.",
+    "src": "Statskontoret 2024; Brå 2024"
+  },
+  {
+    "id": "i17",
+    "cat": "PROCUREMENT",
+    "title": "Leverantörskontakt utanför dokumenterade kanaler",
+    "sev": "HIGH",
+    "actors": [
+      "economic-interest",
+      "criminal-network"
+    ],
+    "desc": "Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen och utan dokumentation.",
+    "example": "Akademiska sjukhuset-härvan (2024): kontakter via privata kanaler och 'konsultfakturor' var den primära metoden för mutöverföringen under sju år. Inget uppmärksammades av intern kontroll.",
+    "src": "Ekobrottsmyndigheten; Upphandlingsmyndigheten; Akademiska-domen 2024"
+  },
+  {
+    "id": "i18",
+    "cat": "PROCUREMENT",
+    "title": "Erbjudanden om framtida anställning till upphandlande personal",
+    "sev": "HIGH",
+    "actors": [
+      "economic-interest"
+    ],
+    "desc": "Leverantörer erbjuder framtida anställning, konsultuppdrag eller partnerskap till medarbetare med beslutsmandat i pågående upphandling — skapar intressekonflikt och lojalitetsberoende.",
+    "example": "Vinnova-granskningen (2024): konsulten med nära band till GD hade erhållit uppdraget via ett nätverk av bolag som kringgick normal öppen konkurrens. Framtida affärsrelationer nämndes i kommunikation.",
+    "src": "Transparency International Sverige; Vinnova-granskning 2024"
+  },
+  {
+    "id": "i19",
+    "cat": "PROCUREMENT",
+    "title": "Systematisk påverkan på kravspecifikationer",
+    "sev": "HIGH",
+    "actors": [
+      "economic-interest",
+      "criminal-network"
+    ],
+    "desc": "Kravspecifikationer eller utvärderingskriterier i en upphandling utformas på ett sätt som specifikt gynnar en leverantör — utan transparent och dokumenterad motivering.",
+    "example": "Upphandlingskorruptionen i kommunal fastighetsförvaltning (2023): upphandlingschef tog emot förmåner och utformade krav som systematiskt gynnade leverantören. Dom: 18 månader.",
+    "src": "Ekobrottsmyndigheten; Upphandlingsmyndigheten"
+  },
+  {
+    "id": "i20",
+    "cat": "SOCIAL",
+    "title": "Relation som förflyttas till privat sfär",
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "foreign-power",
+      "economic-interest"
+    ],
+    "desc": "En extern yrkesrelation som gradvis förflyttas till privata sammanhang — middagar, resor, vänskap — utan tydlig och dokumenterad affärsmässig motivering.",
+    "example": "Brå (2024): möjliggörare upparbetade under anställning beskriver processen: 'man festar tillsammans, man bekräftar personen, bygger upp den och försöker få relationen att framstå som väldigt nära och genuin.'",
+    "src": "Brå 2024"
+  },
+  {
+    "id": "i21",
+    "cat": "SOCIAL",
+    "title": "Gränslöshet mot klient eller häktad person",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network"
+    ],
+    "desc": "Medarbetare med klientkontakt — socionom, kriminalvårdare, behandlare, advokat — uppvisar gränslöst engagemang som överskrider professionalitetsgränser i form av personlig lojalitet.",
+    "example": "Kriminalvårdens interna utredningar: ett återkommande mönster är kvinnliga kriminalvårdare som inleder kärleksrelationer med intagna — löses ofta via 'överenskommelse om anställningens upphörande' utan formell utredning (Publikt 2024).",
+    "src": "Publikt 2024; Brå 2024"
+  },
+  {
+    "id": "i22",
+    "cat": "SOCIAL",
+    "title": "Familje- eller nätverkskoppling till kriminell aktör",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network"
+    ],
+    "desc": "Medarbetare har dokumenterade familjerelationer, vänskaps- eller nätverkskopplingar till individer som är aktiva i kriminella nätverk — utan att detta framkommit vid rekrytering.",
+    "example": "Brå (2024): en vanlig rekryteringsväg är att kriminella identifierar familjemedlemmar och bekanta med för dem användbara anställningar. 'Man kanske vidarebefordrar information utan att förstå att den hjälper kriminella nätverk' (Johanna Skinnari, Brå).",
+    "src": "Brå 2024 – Möjliggörare"
+  },
+  {
+    "id": "i23",
+    "cat": "ACCESS",
+    "title": "Otillåten åtkomst till kollegas inloggning eller behörighet",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "economic-interest"
+    ],
+    "desc": "Medarbetare använder en kollegas inloggningsuppgifter, behörighetskort eller passertillstånd — antingen med eller utan kollegans vetskap — för att utföra åtgärder som inte tillhör den egna rollen.",
+    "example": "Skatteverket Växjö (2015): handläggaren använde en kollegas inloggning för att genomföra skattemanipulationer för 4,5 Mkr. Kollegas identitet användes för att dölja spåren. 'En kollega sattes i en fruktansvärd situation' (åklagare Forsberg).",
+    "src": "Skatteverket pressmeddelande 2015; Riksrevisionen 2023"
+  },
+  {
+    "id": "i24",
+    "cat": "DIGITAL",
+    "title": "Avvikande loggningsmönster i känsliga system",
+    "sev": "HIGH",
+    "actors": [
+      "criminal-network",
+      "foreign-power"
+    ],
+    "desc": "Systemloggar visar slagningar, nedladdningar eller exporter vid ovanliga tidpunkter (utanför arbetstid, helger) eller i ovanliga volymer — utan dokumenterad verksamhetsmässig anledning.",
+    "example": "Kriminalvårdens fall (2022): otillåtna slagningar genomfördes under en period av mer än ett år. Riksrevisionen: utan beteendeanalytiska verktyg kan sådana avvikelser inte fångas i tid.",
+    "src": "Riksrevisionen 2023 och 2025–2026"
+  },
+  {
+    "id": "i25",
+    "cat": "BEHAVIOUR",
+    "title": "Tystnad och social isolering kring specifikt ämne",
+    "sev": "MEDIUM",
+    "actors": [
+      "criminal-network",
+      "foreign-power",
+      "extremist"
+    ],
+    "desc": "En medarbetare som normalt är öppen och kommunikativ undviker att diskutera ett specifikt ärende, system eller kontakt — och reagerar med ovanlig defensive eller avledande beteende på frågor.",
+    "example": "Normaliseringssteget i påverkanskedjan: medarbetaren har internaliserat att inte rapportera och undviker aktivt kollegor eller chefer som kan ställa frågor om det känsliga området. Brå: 'man har inga ord och inga kanaler'.",
+    "src": "Brå 2024; Statskontoret 2024"
   }
 ]

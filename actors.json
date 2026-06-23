@@ -4,79 +4,140 @@
     "name": "Kriminellt nätverk",
     "sub": "Organiserad brottslighet",
     "color": "#C45C2E",
-    "goal": "Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst",
-    "horizon": "Kort–medellång",
-    "methods": ["Relationsbygge", "Möjliggörare", "Hot och skrämseltaktik", "Vänskapskorruption", "Informationsinhämtning"],
-    "sectors": ["SOCIAL", "PROCUREMENT", "CRIMINAL_JUSTICE", "PERMITS"],
+    "goal": "Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagföring",
+    "horizon": "Kort–medellång sikt",
     "exposure": "HIGH",
-    "note": "Kriminella nätverk börjar ofta rekrytering i den egna familje- och bekantskapskretsen för att identifiera personer med användbara arbeten.",
-    "source": "Brå 2024 – Möjliggörare i kriminella nätverk",
-    "indicators": [
-      "Kontaktförsök från okända med koppling till ärenden",
-      "Erbjudanden om tjänster, presenter eller socialt umgänge",
-      "Otillbörligt intresse för vem som hanterar specifika ärenden",
-      "Frågor om interna rutiner, frånvaro eller driftstörningar"
+    "methods": [
+      "Relationsbygge",
+      "Möjliggörare (upparbetad)",
+      "Hot och skrämseltaktik",
+      "Vänskapskorruption",
+      "Placerad insider",
+      "Informationsinhämtning"
     ],
-    "cases": ["case-001", "case-002", "case-003", "case-007", "case-008"]
+    "note": "Brå (2024): Kriminella nätverk har ca 700 möjliggörare aktiva i Sverige. Rekrytering sker ofta i den egna familje- och bekantskapskretsen. En möjliggörare kan betjäna flera nätverk och representerar 'ett skydd och en konkurrensfördel' i den kriminella världen. Polismyndighetens lägesbild: möjliggörarna utgör 5% av 14 000 aktiva i kriminella nätverk men spelar en helt avgörande roll för den operativa förmågan.",
+    "source": "Brå 2024 – Möjliggörare i kriminella nätverk; Polismyndigheten lägesbild 2024",
+    "indicators": [
+      "Kontaktförsök från okända med koppling till pågående ärenden",
+      "Erbjudanden om tjänster, presenter eller intensivt socialt umgänge",
+      "Otillbörligt intresse för vem som hanterar specifika ärenden eller tillstånd",
+      "Frågor om interna rutiner, behörigheter, frånvaro eller driftstörningar",
+      "Oförklarlig ekonomisk förbättring hos medarbetare med känslig tillgång",
+      "Krypterad kommunikation med externa kontakter om interna frågor"
+    ],
+    "cases": [
+      "c01",
+      "c02",
+      "c04",
+      "c07",
+      "c08",
+      "c09",
+      "c11",
+      "c15",
+      "c22",
+      "c26",
+      "c27",
+      "c29",
+      "c32",
+      "c33",
+      "c34"
+    ]
   },
   {
     "id": "foreign-power",
     "name": "Främmande makt",
     "sub": "Statligt eller statsunderstött",
     "color": "#B8973A",
-    "goal": "Strategisk information, teknologitillgång, långsiktigt politiskt inflytande",
-    "horizon": "Lång (år–decennier)",
-    "methods": ["Systematisk OSINT-kartläggning", "Rekrytering av insiders", "Informationspåverkan", "Teknologistöld", "Täckidentiteter"],
-    "sectors": ["AUTHORITY", "IT", "RESEARCH", "DEFENCE"],
+    "goal": "Strategisk information, teknologitillgång, underrättelsedata, långsiktigt politiskt inflytande",
+    "horizon": "Lång sikt (år–decennier)",
     "exposure": "HIGH",
-    "note": "Säkerhetspolisen har bekräftat rysk ökad riskbenägenhet och sabotage mot nordisk kritisk infrastruktur.",
-    "source": "Säpo årsberättelse 2024; MSB FIMI-rapport 2024",
-    "indicators": [
-      "Kontaktförsök från utländska organisationer med otydligt syfte",
-      "Oväntat intresse för infrastrukturdetaljer eller beslutsprocesser",
-      "Medarbetare med plötsliga ekonomiska förbättringar utan förklaring",
-      "Förfrågningar om känslig teknisk information under täckmantel av samarbete"
+    "methods": [
+      "Systematisk OSINT-kartläggning",
+      "Rekrytering av insiders",
+      "Informationspåverkan och FIMI",
+      "Teknologistöld",
+      "Utnyttjande av systembrister"
     ],
-    "cases": ["case-006"]
+    "note": "Säkerhetspolisen bekräftar ökad rysk riskbenägenhet och sabotagevilja. Transportstyrelse- och Lantmäteriet-skandalerna visar att strukturella systembrister exploateras utan att en enskild insider behöver rekryteras. Säpo (2023): ryska GRU rekryterade insiders inom Försvarsmakten och Säkerhetspolisen — brottsligheten pågick i 6 år utan att avslöjas internt.",
+    "source": "Säpo årsberättelse 2024; Ds 2026:2; MSB FIMI-rapport 2024",
+    "indicators": [
+      "Kontaktförsök från utländska organisationer med otydligt och brett formulerat syfte",
+      "Oväntat intresse för infrastrukturdetaljer, beslutsprocesser eller personalstruktur",
+      "Medarbetare med plötsliga ekonomiska förbättringar utan förklaring",
+      "Förfrågningar om känslig teknisk information under täckmantel av samarbete",
+      "IT-systembrister som möjliggör datainsamling utan enskild möjliggörare"
+    ],
+    "cases": [
+      "c03",
+      "c05",
+      "c10",
+      "c24"
+    ]
   },
   {
     "id": "extremist",
     "name": "Extremistisk miljö",
     "sub": "Ideologiskt driven",
     "color": "#9B4FBB",
-    "goal": "Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet",
-    "horizon": "Kort–medellång",
-    "methods": ["Uthängning och doxxning", "Samordnade trakasserier", "Informationspåverkan mot beslutsprocess", "Belastning via massanmälningar"],
-    "sectors": ["SOCIAL", "COMMS", "PERMITS", "HR"],
+    "goal": "Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet, finansiera verksamhet",
+    "horizon": "Kort–medellång sikt",
     "exposure": "MEDIUM",
-    "note": "Statskontoret: skadorna kan träffa individen, anhöriga, verksamheten och tilltron till den offentliga förvaltningen.",
-    "source": "Statskontoret 2024; CVE-rapport 2023",
-    "indicators": [
-      "Ökning av hotfulla eller kränkande meddelanden kring specifikt ärende",
-      "Publicering av personuppgifter om medarbetare på externa plattformar",
-      "Samordnade negativa narrativ mot enskild tjänsteperson eller beslut",
-      "Kombination av digitala trakasserier och fysisk närvaro"
+    "methods": [
+      "Uthängning och doxxning",
+      "Samordnade trakasserier",
+      "Infiltration via legitima yrkesroller",
+      "Informationspåverkan mot beslutsprocess",
+      "Finansiering via offentliga bidrag"
     ],
-    "cases": ["case-004", "case-005", "case-006"]
+    "note": "Statskontoret (2024): skadorna träffar individen, anhöriga, verksamheten och tilltron till förvaltningen. Acta Publicas granskning visar att infiltration via till synes legitima bolag och yrkesroller är svår att identifiera med standardkontroller. Kriminalvårdens övervakare-fall: extremister med kontrollbehörighet över dömda med koppling till samma miljöer.",
+    "source": "Statskontoret 2024; CVE 2023; Acta Publica 2020",
+    "indicators": [
+      "Ökning av hotfulla meddelanden kring specifikt ärende eller beslut",
+      "Publicering av personuppgifter om medarbetare på externa plattformar",
+      "Samordnade negativa narrativ mot enskild tjänsteperson under kort tid",
+      "Kombination av digital trakassering och fysisk närvaro nära arbetsplats",
+      "Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"
+    ],
+    "cases": [
+      "c05",
+      "c14",
+      "c16",
+      "c18"
+    ]
   },
   {
     "id": "economic-interest",
     "name": "Ekonomiskt intresse",
     "sub": "Kommersiell aktör",
     "color": "#4A7B6F",
-    "goal": "Avtal, tillstånd, fördelaktig behandling i upphandling eller tillsyn",
-    "horizon": "Medellång",
-    "methods": ["Relationsbygge över tid", "Informella leverantörskontakter", "Gåvor och representation", "Värvning av nyckelpersoner"],
-    "sectors": ["PROCUREMENT", "PERMITS", "IT"],
+    "goal": "Avtal, tillstånd, fördelaktig behandling i upphandling, tillsyn eller tilldelning",
+    "horizon": "Medellång sikt",
     "exposure": "MEDIUM",
-    "note": "Nära en tredjedel av alla mutgivare är verksamma inom bygg- och anläggningssektorn.",
-    "source": "Ekobrottsmyndigheten; Transparency International Sverige",
+    "methods": [
+      "Relationsbygge över tid",
+      "Informella leverantörskontakter",
+      "Gåvor och representation",
+      "Värvning efter avslutad tjänst",
+      "Förväntansskapande och beroenden"
+    ],
+    "note": "Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption uppstår ofta ur långvariga leverantörsrelationer. Akademiska sjukhuset-domen (2024): 4,76 Mkr togs emot under sju år via 'konsultfakturor' — relationen hade under lång tid framstått som professionell och legitim.",
+    "source": "Ekobrottsmyndigheten; Transparency International Sverige; Akademiska-domen 2024",
     "indicators": [
       "Leverantörskontakter utanför dokumenterade upphandlingskanaler",
       "Erbjudanden om framtida anställning till upphandlande personal",
-      "Onormalt intensivt socialt umgänge under pågående upphandling",
-      "Informell marknadsdialog som påverkar kravspecifikationer"
+      "Onormalt intensivt socialt umgänge under känslig upphandlingsperiod",
+      "Informell marknadsdialog som påverkar kravspecifikationer",
+      "Inbjudningar till resor eller evenemang utan tydlig affärsmässig motivering"
     ],
-    "cases": ["case-003"]
+    "cases": [
+      "c06",
+      "c12",
+      "c13",
+      "c17",
+      "c21",
+      "c28",
+      "c30",
+      "c31"
+    ]
   }
 ]
