@@ -1366,5 +1366,213 @@
         "t": "report"
       }
     ]
+  },
+  {
+    "id": "c55",
+    "title": "Kriminalvården Göteborg — kvinna tog häktesjobb för att hjälpa gängledaren Salam Shebani",
+    "date": "2023-04",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Kvinna tog specifikt sommarjobb på häktet i Göteborg för att hjälpa gängledaren Salam Shebani ('El Patron') som satt häktad i väntan på hovrättens dom efter livstidsdom i tingsrätten. Plan: smuggla ut brev med instruktioner till medbrottslingar om vad de skulle säga i hovrätten. Stoppades med två simkort i behåt av polisen. Amanda Envall, utredare vid polisens grupp mot demokratihotande brottslighet: 'rätt så iskallt gjort.' Expressen: minst 50 fall 2019– av Kriminalvårdsanställda som inlett relationer med fångar, utsatts för otillåten påverkan eller sökt sig till myndigheten för att hjälpa kriminella.",
+    "sources": [
+      {
+        "l": "Expressen — Kvinna tog jobb på häktet för att hjälpa gängman",
+        "t": "media"
+      },
+      {
+        "l": "Sveriges Radio — Kriminalvårdarna som byter sida",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c56",
+    "title": "Häktet Borås — anställd smugglade meddelanden från toaletten i krypterat nätverk",
+    "date": "2022-06",
+    "loc": {
+      "m": "Borås",
+      "r": "Västra Götaland",
+      "lat": 57.72,
+      "lng": 12.94,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Anställd vid häktet i Borås anhöllen misstänkt för grovt tjänstefel. Erkände omgående att hon spridit sekretessbelagd information på uppdrag av utomstående. Metod: intagen bad att gå på toaletten, lämnade ihopviken lapp (4–5 cm) i papperskorgen. Anställd fotograferade lappen med mobiltelefon och skickade vidare. Sektionschef: 'infiltrationsförsök har blivit ett vanligare problem — de kriminella har andra förmågor som visar sig i infiltrationsförsök.' Kriminalvårdens årsredovisning: 'ökade risker för otillåten påverkan och infiltration är den nu enskilt viktigaste säkerhetstrender.'",
+    "sources": [
+      {
+        "l": "SVT — Anställd på Kriminalvården smugglade meddelanden",
+        "t": "media"
+      },
+      {
+        "l": "SvD — Unga kvinnor infiltrerar häkten",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c57",
+    "title": "Folkhälsomyndigheten — IT-konsult med högerextrem bakgrund läckte vaccinregister (7 miljoner individer)",
+    "date": "2024-03",
+    "loc": {
+      "m": "Solna",
+      "r": "Stockholm",
+      "lat": 59.37,
+      "lng": 18.0,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "EXTREMIST",
+    "status": "CONFIRMED",
+    "summary": "IT-konsult anställd vid Folkhälsomyndigheten åtalad för att ha läckt sekretessbelagda uppgifter från vaccinationsregistret — 7 miljoner individers personnummer, vaccindatum, vaccintyp och klinikinformation. Konsulten har kopplingar till högerextrema kretsar och uttryckt motstånd mot Covid-19-vaccin (kontakter med framträdande högerextremister och konspirationsprofilerna). Tidigare dömd för olaga frihetsberövande, misshandel och vapenbrott. Folkhälsomyndigheten: ingen säkerhetsklassning gjordes, men 'fördjupad koll' genomfördes. Fick tillgång till systemen utan att visa belastningsregistret.",
+    "sources": [
+      {
+        "l": "Expo — Vaccinläckan: extremismkopplingar och bristande kontroll",
+        "t": "report"
+      },
+      {
+        "l": "Aftonbladet — Åtalad för vaccinläcka har extremistkoppling",
+        "t": "media"
+      },
+      {
+        "l": "Läkartidningen 2024",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c58",
+    "title": "Attunda tingsrätt/Domstolsverket — anställd läckte avlyssningstips till Turebergsnätverket",
+    "date": "2023-09",
+    "loc": {
+      "m": "Sollentuna",
+      "r": "Stockholm",
+      "lat": 59.43,
+      "lng": 18.0,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Anställd vid Attunda tingsrätt åtalad och dömd till 1 år och 9 månader för grovt brott mot tystnadsplikten och grovt dataintrång — läckte hemlig information om kommande tvångsmedel (avlyssning) till Turebergsnätverket. Kort efter beslutet om avlyssning fattades, tystnade de övervakade kanalerna. Chefsåklagare Per Nichols: brottet är av 'systemhotande karaktär — konsekvenserna kan vara oöverskådliga och potentiellt livshotande.' Kvinnan hade inte genomgått säkerhetsprövning — ingen laglig grund för sådana prövningar för dessa befattningar. Domstolsverket skickade in hemställan om lagändringar.",
+    "sources": [
+      {
+        "l": "Expressen 2023 — Domstolsanställd läckte till gäng",
+        "t": "media"
+      },
+      {
+        "l": "DN — Systemhotande brottslighet vid tingsrätten",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c59",
+    "title": "Åklagarmyndigheten — åklagare åtalad för brott mot tystnadsplikt, kusin med gängledare",
+    "date": "2024-02",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Åklagare som arbetat i mål rörande grov gängkriminalitet åtalad för två fall av brott mot tystnadsplikten — misstänks ha läckt uppgifter från pågående utredningar. Åklagaren är kusin med gängledaren Ismail Abdo. Fallet illustrerar hur familje- och nätverkskopplingar till kriminella miljöer kan bestå under yrkeskarriärer i känsliga positioner utan att bakgrundskontroller fångar dem.",
+    "sources": [
+      {
+        "l": "Medierapportering 2024 — Åklagare åtalad",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c60",
+    "title": "SEB Karlaplansbedrägeriet — anställda svindlade banken på 52 Mkr",
+    "date": "2019-01",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.34,
+      "lng": 18.08,
+      "p": "municipality"
+    },
+    "sector": "FINANCE",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Polisen slog till mot SEB:s kontor vid Karlaplan i Stockholm och avslöjade att banken svindlats på totalt 52 miljoner kronor. En handfull anställda misstänks vara direkt inblandade. Bedrägeriet involverade avancerade finansiella manipulationer. Fallet är ett av de största finansiella bedrägerierna av anställda mot sin arbetsgivare i Sverige på senare tid och fick stor medieuppmärksamhet.",
+    "sources": [
+      {
+        "l": "Aftonbladet — SEB svindlade på 52 miljoner kronor",
+        "t": "media"
+      },
+      {
+        "l": "DN — Storsvindel på SEB",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c61",
+    "title": "SEB Göteborg — bankman dömdes till 2,5 år för bolånebluffen med falska anställningsbevis",
+    "date": "2020-06",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "FINANCE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Banktjänsteman på SEB i Göteborg dömdes till 2,5 år för grovt bedrägeri och urkundsförfalskning. Upprättade falska anställningsbevis och inkomstuppgifter för att ge krediter till icke-kreditvärdiga bekanta. SEB beviljade lån på 1,5 Mkr direkt, riskerade ytterligare 16,4 Mkr om inte säkerhetsavdelningens kontroller ringt. Bankmannen förnekade brott under hela förundersökning och rättegång — menade att han 'kanske gjort fel i enskilda fall' p.g.a. stress och arbetsbelastning.",
+    "sources": [
+      {
+        "l": "GP — Bankman dömdes för att ha lurat SEB",
+        "t": "court"
+      },
+      {
+        "l": "GP — Bankman tog mutor och godkände bolån",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c62",
+    "title": "Migrationsverket — handläggare beviljade 66 arbetstillstånd sista dagen, nu polis i Region Väst",
+    "date": "2021-07",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Tidigare handläggare på Migrationsverket åtalas för grovt tjänstefel efter att ha beviljat 66 arbetstillstånd under sin sista arbetsdag i juli 2021 — ovanligt hög siffra som väckte misstankar om muta. Handläggaren sade upp sig i augusti 2021 och är nu anställd som polis i Region Väst. Migrationsverket misstänker muta. Parallellt: annan handläggare i Malmö åtalas för 55 obefogade och otillåtna sökningar.",
+    "sources": [
+      {
+        "l": "SVT — Handläggare beviljade 66 tillstånd på en dag",
+        "t": "media"
+      },
+      {
+        "l": "DN — Åtalad för att ha beviljat 66 tillstånd",
+        "t": "media"
+      }
+    ]
   }
 ]
