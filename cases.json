@@ -1146,5 +1146,225 @@
         "t": "report"
       }
     ]
+  },
+  {
+    "id": "c47",
+    "title": "Södertälje — kommuntjänsteman dömd för mutbrott inom etableringsfrågor",
+    "date": "2023-06",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.195,
+      "lng": 17.625,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Centralt placerad kommuntjänsteman i Södertälje dömdes för mutbrott efter att ha tagit emot träningstider och sponsring av matchtröjor från en fastighetsmäklare med kopplingar till Södertäljenätverket. Rättens bedömning: förmånerna var otillbörliga trots avsaknad av direkt motprestation — förtroendeskada för kommunen. 70 dagsböter. Mutbrottet var del av en större fastighetshärva där ett tiotal personer misstänktes för penningtvätt och ogiltiga lån på mångmiljonbelopp.",
+    "sources": [
+      {
+        "l": "Södertälje tingsrätt dom 2023",
+        "t": "court"
+      },
+      {
+        "l": "Acta Publica — Södertäljenätverket",
+        "t": "report"
+      },
+      {
+        "l": "Dagens Samhälle 2023",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c48",
+    "title": "Södertälje — fastighetshärva med kommunanställd och fuskrenoveringar",
+    "date": "2022-01",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.195,
+      "lng": 17.615,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Kommunanställd i Södertälje godkände fuskrenoveringar som inte uppfyllde brandkrav. Flera bostadsrättsägare tvingades lämna sina hem. Fem misstänkta, inklusive fastighetsmäklare och revisor, genomförde systematiska låbudgetrenoveringar av uppköpta fastigheter med svarta pengar. F.d. banktjänsteman dömdes 2024 för mutbrott — tog emot mutor för att bevilja bolån inför fastighetsaffärer.",
+    "sources": [
+      {
+        "l": "Ekobrottsmyndigheten — fastighetshärvan Södertälje",
+        "t": "report"
+      },
+      {
+        "l": "Aftonbladet sept 2020",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c49",
+    "title": "Södertälje — Utbetalningsmyndigheten nekades placering p.g.a. infiltrationsrisk",
+    "date": "2023-11",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.19,
+      "lng": 17.63,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Utbetalningsmyndigheten, en ny statlig myndighet för utbetalning av bidrag, nekades etablering i Södertälje till följd av dokumenterad infiltrationsrisk. Beslutet grundades på Södertäljenätverkets kända historik av att knyta till sig möjliggörare inom Arbetsförmedlingen, Försäkringskassan och kommunen. SVT: kriminella klaner har 'systematiskt lyckats knyta möjliggörare till sig' i kommunen.",
+    "sources": [
+      {
+        "l": "DN nov 2023",
+        "t": "media"
+      },
+      {
+        "l": "SVT Nyheter 2023",
+        "t": "media"
+      },
+      {
+        "l": "Dagens Arena 2024",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c50",
+    "title": "Unik Fastighetsförmedling — toppmäklare dömd för grov penningtvätt och bedrägeri",
+    "date": "2024-06",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.339,
+      "lng": 18.045,
+      "p": "municipality"
+    },
+    "sector": "LEGAL",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Stockholms tingsrätt dömde toppmäklare på Unik Fastighetsförmedling (kontor i Norra Tornen, Vasastan) för grovt bedrägeri, grovt bokföringsbrott och grov penningtvätt. Omsatte 50 Mkr/år. Brottsligheten 2015–2022: bulvaner för svart lägenhetsförmedling, hantering av svarta pengar. EBM väckte åtal 2023 efter razzia. Byrån begärdes i konkurs med 14 Mkr i skulder till staten.",
+    "sources": [
+      {
+        "l": "Stockholms tingsrätt dom 2024",
+        "t": "court"
+      },
+      {
+        "l": "Ekobrottsmyndigheten pressmeddelande 2023",
+        "t": "report"
+      },
+      {
+        "l": "TV4 — Toppmäklare döms till fängelse",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c51",
+    "title": "Randstad/Scania Södertälje — rekryterare misstänkta för att ha krävt mutor för anställning",
+    "date": "2023-10",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.2,
+      "lng": 17.64,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Lokaltidningen LT avslöjade att rekryterare på Randstad i Södertälje misstänktes för att ha krävt mutor från arbetssökande i utbyte mot anställning på Scania. Belopp: tiotusentals till hundratusentals kronor. Polisen inledde förundersökning om kopplingar till organiserad brottslighet. Scania tog över rekryteringen från Randstad. Randstad: 'Kunde inte hitta stöd för uppgifterna men delar information med polisen.'",
+    "sources": [
+      {
+        "l": "Lokaltidningen LT okt 2023",
+        "t": "media"
+      },
+      {
+        "l": "Polismyndigheten — förundersökning",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c52",
+    "title": "Kriminalvården — kärleksrelation med intagen, information om andra intagna röjdes",
+    "date": "2023-03",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Kriminalvårdare inledde otillåten kärleksrelation med intagen vid säkerhetsklassad anstalt och röjde uppgifter om andra intagna. Löstes via 'överenskommelse om anställningens upphörande' utan formell dom. Riksrevisionen (2025–2026): detta mönster är återkommande vid Kriminalvården och hanteras ofta med tyst avslutning snarare än formell utredning — ett systemproblem, inte ett individproblem.",
+    "sources": [
+      {
+        "l": "Riksrevisionen 2025–2026 — Infiltration i staten",
+        "t": "report"
+      },
+      {
+        "l": "Publikt 2024 — Statens anställda som verktyg",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c53",
+    "title": "Säpo — eritreansk diaspora utsätts för utpressning via hemlandsregimens nätverk i Sverige",
+    "date": "2024-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Säkerhetspolisen varnade 2024 för att eritreanska diaspora i Sverige systematiskt utsätts för utpressning, hot och tvång av aktörer med kopplingar till den eritreanska regimen. Syftet: kontroll av diaspora och påverkan på deras kontakter med svenska myndigheter och politiska processer. Individer med närstående i Eritrea tvingas agera som informanter eller möjliggörare mot sin vilja. Transnationell repression.",
+    "sources": [
+      {
+        "l": "Säkerhetspolisen årsberättelse 2024",
+        "t": "report"
+      },
+      {
+        "l": "MSB rapport — transnationell repression 2023",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c54",
+    "title": "IT-sabotage — systemadministratör raderade produktionsdata vid uppsägning",
+    "date": "2022-09",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Systemadministratör vid offentlig organisation raderade kritiska produktionssystem och backup i anslutning till uppsägning. Klassiskt fall av avsiktligt insiderhot med hämndemotiv. Brottet möjliggjordes av kvarlevande root-behörigheter som inte återkallats vid varsel. Mönstret dokumenterat av CERT-SE: IT-sabotage av missnöjda administratörer är en av de mest kostsammainsiderkategorierna.",
+    "sources": [
+      {
+        "l": "CERT-SE — Insider threat rapport",
+        "t": "report"
+      },
+      {
+        "l": "Riksrevisionen — kvarlevande behörigheter",
+        "t": "report"
+      }
+    ]
   }
 ]
