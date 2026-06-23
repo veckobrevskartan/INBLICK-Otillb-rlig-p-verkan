@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>INBLICK — Den öppna attackytan</title>
-<meta name="description" content="En interaktiv analyspublikation om otillbörlig påverkan mot offentlig sektor. 35 dokumenterade svenska fall, 25 indikatorer, fyra aktörstyper. Producerad av Svensk OSINT."/>
+<meta name="description" content="En interaktiv analyspublikation om otillbörlig påverkan mot offentlig sektor. 46 dokumenterade svenska fall, 25 indikatorer, fyra aktörstyper. Producerad av Svensk OSINT."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -226,14 +226,14 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <p class="hero-eyebrow">Konferensen Otillb&#246;rlig p&#229;verkan 2026 &#183; Stockholm 30 september</p>
         <h1 class="hero-title">Den &#246;ppna<br><em>attackytan</em></h1>
         <p class="hero-sub">N&#228;r det offentliga Sverige g&#229;r att p&#229;verka inifrån</p>
-        <p class="hero-lead">En interaktiv analyspublikation om hur kriminella n&#228;tverk, fr&#228;mmande makt, extremistiska milj&#246;er och ekonomiska intressen rekryterar, upparbetar och utnyttjar m&#246;jligg&#246;rare i offentlig sektor. Baserad p&#229; 35 dokumenterade svenska fall fr&#229;n 2003 till 2026.</p>
+        <p class="hero-lead">En interaktiv analyspublikation om hur kriminella n&#228;tverk, fr&#228;mmande makt, extremistiska milj&#246;er och ekonomiska intressen rekryterar, upparbetar och utnyttjar m&#246;jligg&#246;rare i offentlig sektor. Baserad p&#229; 46 dokumenterade svenska fall fr&#229;n 2003 till 2026.</p>
         <div class="hero-actions">
           <a href="modules.html" class="btn-primary">Starta analysen &#8594;</a>
-          <a href="modules.html" onclick="sessionStorage.setItem('startMod','map');return true" class="btn-ghost">Se h&#228;ndelsekarta</a>
+          <a href="modules.html#mod-map" class="btn-ghost">Se h&#228;ndelsekarta</a>
         </div>
         <div class="hero-meta">
           <div class="hero-meta-item">
-            <span class="hero-meta-val">35</span>
+            <span class="hero-meta-val">46</span>
             <span class="hero-meta-lab">Dokumenterade fall</span>
           </div>
           <div class="hero-meta-item">
@@ -245,8 +245,8 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
             <span class="hero-meta-lab">Akt&#246;rstyper</span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-val">7</span>
-            <span class="hero-meta-lab">Kapitelmoduler</span>
+            <span class="hero-meta-val">6</span>
+            <span class="hero-meta-lab">Interaktiva moduler</span>
           </div>
         </div>
       </div>
@@ -354,39 +354,46 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
   </div>
   <div class="wrap">
     <div class="module-cards reveal">
-      <a href="modules.html" class="module-card" style="border-top-color:var(--accent)">
+      <a href="modules.html#mod-chain" class="module-card" style="border-top-color:var(--accent)">
         <div class="mc-num">Kapitel 3 &mdash; Interaktiv analys</div>
         <div class="mc-title">P&#229;verkans&shy;kedjan</div>
         <div class="mc-desc">Sju klickbara steg med tre parallella perspektiv per steg &mdash; angriparens logik, medarbetarens upplevelse och organisationens blinda fl&#228;ck. Direktl&#228;nkar till dokumenterade fall.</div>
         <div class="mc-meta" style="color:var(--accent)">7 steg &middot; 3 perspektiv per steg &middot; Fallkopplingar</div>
         <div class="mc-arrow">&#8594;</div>
       </a>
-      <a href="modules.html" onclick="sessionStorage.setItem('sm','map');return true" class="module-card" style="border-top-color:var(--green)">
+      <a href="modules.html#mod-map" class="module-card" style="border-top-color:var(--green)">
         <div class="mc-num">Kapitel 5 &mdash; H&#228;ndelsedatabas</div>
         <div class="mc-title">H&#228;ndelse&shy;kartan</div>
-        <div class="mc-desc">35 verifierade svenska fall 2003&ndash;2026, plottade geografiskt med Leaflet. Filtrerbar p&#229; sektor, akt&#246;r och bekr&#228;ftelsestatus. Varje fall har fullst&#228;ndig k&#228;llh&#228;nvisning.</div>
-        <div class="mc-meta" style="color:var(--green)">35 fall &middot; Filtrering p&#229; 9 sektorer &middot; K&#228;llbelagda</div>
+        <div class="mc-desc">46 verifierade svenska fall 2003&ndash;2026, plottade geografiskt med Leaflet. Filtrerbar p&#229; sektor, akt&#246;r och bekr&#228;ftelsestatus. Varje fall har fullst&#228;ndig k&#228;llh&#228;nvisning.</div>
+        <div class="mc-meta" style="color:var(--green)">46 fall &middot; Filtrering p&#229; 9 sektorer &middot; K&#228;llbelagda</div>
         <div class="mc-arrow">&#8594;</div>
       </a>
-      <a href="modules.html" onclick="sessionStorage.setItem('sm','actors');return true" class="module-card" style="border-top-color:var(--orange)">
+      <a href="modules.html#mod-actors" class="module-card" style="border-top-color:var(--orange)">
         <div class="mc-num">Kapitel 4 &mdash; Akt&#246;rsanalys</div>
         <div class="mc-title">Akt&#246;rs&shy;matrisen</div>
         <div class="mc-desc">Fyra akt&#246;rstyper med skilda m&#229;l, tidshorisonter och metoder. Klickbara kort med analytisk bed&#246;mning, observerbara indikatorer och kopplade fall.</div>
         <div class="mc-meta" style="color:var(--orange)">4 akt&#246;rstyper &middot; 5&ndash;15 fall per akt&#246;r</div>
         <div class="mc-arrow">&#8594;</div>
       </a>
-      <a href="modules.html" onclick="sessionStorage.setItem('sm','assess');return true" class="module-card" style="border-top-color:var(--purple)">
+      <a href="modules.html#mod-assess" class="module-card" style="border-top-color:var(--purple)">
         <div class="mc-num">Kapitel 6 &mdash; Sj&#228;lvskattning</div>
         <div class="mc-title">Organisations&shy;testet</div>
         <div class="mc-desc">14 fr&#229;gor, sju nyckelomr&#229;den. Ingen data l&#228;mnar enheten. Mognadsprofil med prioriterade rekommendationer kopplade till faktiska brister fr&#229;n Riksrevisionen och Br&#229;.</div>
         <div class="mc-meta" style="color:var(--purple)">14 fr&#229;gor &middot; 7 dimensioner &middot; Lokal ber&#228;kning</div>
         <div class="mc-arrow">&#8594;</div>
       </a>
-      <a href="modules.html" onclick="sessionStorage.setItem('sm','inds');return true" class="module-card" style="border-top-color:var(--accent)">
+      <a href="modules.html#mod-inds" class="module-card" style="border-top-color:var(--accent)">
         <div class="mc-num">Indikatorsbibliotek</div>
         <div class="mc-title">Tidiga varnings&shy;signaler</div>
         <div class="mc-desc">25 s&#246;kbara indikatorer med konkreta svenska fallexempel per indikator. Filtrera p&#229; kategori, allvarlighetsgrad eller akt&#246;rstyp. K&#228;llbelagda med Riksrevisionen, Br&#229; och Statskontoret.</div>
         <div class="mc-meta" style="color:var(--accent)">25 indikatorer &middot; 6 kategorier &middot; Fallexempel</div>
+        <div class="mc-arrow">&#8594;</div>
+      </a>
+      <a href="modules.html#mod-theory" class="module-card" style="border-top-color:#4A7B6F">
+        <div class="mc-num">F&#246;rst&#229;else &mdash; Teorier och modeller</div>
+        <div class="mc-title">M&#246;jligg&#246;rarens<br>psykologi</div>
+        <div class="mc-desc">Hur rekryteras en m&#246;jligg&#246;rare? MICE-modellen, Br&#229;:s fyra kategorier, RASCLS-principerna och indikatortriangeln. Teorin bakom fallen.</div>
+        <div class="mc-meta" style="color:#4A7B6F">MICE &middot; RASCLS &middot; Br&#229; 2024 &middot; 4 typologier</div>
         <div class="mc-arrow">&#8594;</div>
       </a>
       <a href="modules.html" class="module-card" style="border-top-color:var(--border);opacity:.7;cursor:default" onclick="return false">
@@ -454,25 +461,25 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
       <p class="section-intro">Skilda m&#229;l och tidshorisonter, men &#246;verlappande metoder. En organisation som bara skyddar sig mot ett av de fyra &#228;r exponerad mot de &#246;vriga tre.</p>
     </div>
     <div class="actor-preview-grid reveal">
-      <a href="modules.html" class="ap-card" style="border-top-color:#C45C2E">
+      <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#C45C2E">
         <div class="ap-name" style="color:#C45C2E">Kriminellt n&#228;tverk</div>
         <div class="ap-sub">Organiserad brottslighet</div>
         <div class="ap-goal">Tillst&#229;nd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagf&#246;ring</div>
         <div class="ap-cases" style="color:#C45C2E">15 dokumenterade fall &#8594;</div>
       </a>
-      <a href="modules.html" class="ap-card" style="border-top-color:#B8973A">
+      <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#B8973A">
         <div class="ap-name" style="color:#B8973A">Fr&#228;mmande makt</div>
         <div class="ap-sub">Statligt eller statsunderst&#246;tt</div>
         <div class="ap-goal">Strategisk information, teknologitillg&#229;ng, underr&#228;ttelsedata, l&#229;ngsiktigt inflytande</div>
         <div class="ap-cases" style="color:#B8973A">4 dokumenterade fall &#8594;</div>
       </a>
-      <a href="modules.html" class="ap-card" style="border-top-color:#9B4FBB">
+      <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#9B4FBB">
         <div class="ap-name" style="color:#9B4FBB">Extremistisk milj&#246;</div>
         <div class="ap-sub">Ideologiskt driven</div>
         <div class="ap-goal">Stoppa beslut, skr&#228;mma tj&#228;nstepersoner, delegitimera myndighet, finansiera verksamhet</div>
         <div class="ap-cases" style="color:#9B4FBB">4 dokumenterade fall &#8594;</div>
       </a>
-      <a href="modules.html" class="ap-card" style="border-top-color:#4A7B6F">
+      <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#4A7B6F">
         <div class="ap-name" style="color:#4A7B6F">Ekonomiskt intresse</div>
         <div class="ap-sub">Kommersiell akt&#246;r</div>
         <div class="ap-goal">Avtal, tillst&#229;nd, f&#246;rdelaktig behandling i upphandling, tillsyn eller tilldelning</div>
@@ -491,7 +498,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
       <p class="section-intro">35 verifierade fall fr&#229;n 2003 till 2026. H&#228;r visas ett urval &mdash; &#246;ppna h&#228;ndelsekartans fullst&#228;ndiga databas f&#246;r alla fall med filtrering och geografisk placering.</p>
     </div>
     <div class="case-preview-list reveal">
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Spioneri mot F&#246;rsvarsmakten och S&#228;kerhetspolisen &mdash; livstids f&#228;ngelse</div>
@@ -500,7 +507,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">F&#246;rsvar</div>
         <div class="cp-year">2023</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Lantm&#228;teriet &mdash; s&#228;kerhetsklassade kartuppgifter r&#246;jda utan sekretesspr&#246;vning under &#229;r</div>
@@ -509,7 +516,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">Myndighet</div>
         <div class="cp-year">2024</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Norviks hamn &mdash; 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll</div>
@@ -518,7 +525,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">Transport</div>
         <div class="cp-year">2024</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Akademiska sjukhuset Uppsala &mdash; verksamhetschef d&#246;md f&#246;r 4,76 Mkr i mutor</div>
@@ -527,7 +534,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">H&#228;lsa</div>
         <div class="cp-year">2024</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Securitas &mdash; v&#228;ktare anst&#228;lld 5 &#229;r var allierad med Foxtrot-n&#228;tverket</div>
@@ -536,7 +543,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">S&#228;kerhet</div>
         <div class="cp-year">2025</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Toppadvokater d&#246;mda &mdash; hj&#228;lpte V&#228;rbyn&#228;tverket via krypterade chattar</div>
@@ -545,7 +552,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">Juridik</div>
         <div class="cp-year">2023</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Islamistisk infiltration &mdash; 931 Mkr i offentliga k&#246;p fr&#229;n extremistkopplade bolag</div>
@@ -554,7 +561,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         <div class="cp-sector">Upphandling</div>
         <div class="cp-year">2020</div>
       </a>
-      <a href="modules.html" class="cp-row">
+      <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
         <div class="cp-title-cell">
           <div class="cp-title">Riksrevisionen 2025&ndash;2026 &mdash; allvarliga infiltrationsbrister vid FMV, Kriminalv&#229;rden och Kammarkollegiet</div>
@@ -565,7 +572,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
       </a>
     </div>
     <div class="cp-more reveal">
-      <a href="modules.html">&#8594; Visa alla 35 fall i h&#228;ndelsekartans interaktiva databas</a>
+      <a href="modules.html#mod-map">&#8594; Visa alla 46 fall i h&#228;ndelsekartans interaktiva databas</a>
     </div>
   </div>
 </section>
@@ -605,7 +612,7 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
     <p class="cta-sub">Alla moduler är fria att använda, dela och referera till. Källorna är öppna, fallen är dokumenterade, analysen &#228;r v&#229;r.</p>
     <div class="cta-actions">
       <a href="modules.html" class="btn-primary">Starta analysen &#8594;</a>
-      <a href="modules.html" onclick="sessionStorage.setItem('sm','inds');return true" class="btn-ghost">Indikatorsbiblioteket</a>
+      <a href="modules.html#mod-inds" class="btn-ghost">Indikatorsbiblioteket</a>
     </div>
   </div>
 </section>
