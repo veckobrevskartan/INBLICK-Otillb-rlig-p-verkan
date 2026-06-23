@@ -197,6 +197,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.96
 .btn-g{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--text);font-family:var(--fb);font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:8px 18px;border:1px solid var(--border-s);cursor:pointer;transition:.2s}
 .btn-g:hover{border-color:var(--accent);color:var(--accent)}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* SECTOR MODULE */
+.sec-nav-item{padding:14px 16px;border-bottom:1px solid var(--border-s);cursor:pointer;transition:.18s;border-left:3px solid transparent}
+.sec-nav-item:hover{background:var(--bg-mid)}
+.sec-nav-item.active{background:var(--bg-mid)}
+.sector-panel{display:none}
+.sector-panel.show{display:block}
 </style>
 </head>
 <body>
@@ -210,6 +217,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.96
       <li><a href="#" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
       <li><a href="#" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
       <li><a href="#" id="tab-theory" onclick="show('theory');return false">Modeller</a></li>
+      <li><a href="#" id="tab-sectors" onclick="show('sectors');return false">Sektormilj&#246;er</a></li>
+      <li><a href="#" id="tab-graph" onclick="show('graph');return false">Sambandsgraf</a></li>
     </ul>
     <a href="index.html" class="nav-back">&#8592; Analyssidan</a>
   </div>
@@ -369,6 +378,7 @@ function show(key){
   const t=document.getElementById('tab-'+key);if(t)t.classList.add('active');
   window.scrollTo(0,0);
   if(key==='map'&&!mapInit)initMap();
+  if(key==='graph'&&!graphInit){graphInit=true;setTimeout(gInit,50);}
   triggerReveals();
 }
 document.querySelectorAll('.nav-tabs li a').forEach(a=>{
@@ -416,7 +426,7 @@ function renderChain(i){
 }
 
 /* ══ MAP ══ */
-let mapInit=false,leafMap,mapMarkers=[],activeF={sector:'ALL',actor:'ALL',status:'ALL'};
+let graphInit=false,mapInit=false,leafMap,mapMarkers=[],activeF={sector:'ALL',actor:'ALL',status:'ALL'};
 function initMap(){
   mapInit=true;
   leafMap=L.map('map-container',{center:[63,16],zoom:4,zoomControl:true,attributionControl:false});
@@ -627,7 +637,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const hash = window.location.hash;
   const modMap = {
     '#mod-chain':'chain','#mod-map':'map','#mod-actors':'actors',
-    '#mod-assess':'assess','#mod-inds':'inds','#mod-theory':'theory'
+    '#mod-assess':'assess','#mod-inds':'inds','#mod-theory':'theory','#mod-sectors':'sectors','#mod-graph':'graph'
   };
   const startMod = modMap[hash] || 'chain';
   show(startMod);
@@ -635,8 +645,1072 @@ window.addEventListener('DOMContentLoaded',()=>{
   const sm = sessionStorage.getItem('sm');
   if(sm){sessionStorage.removeItem('sm');show(sm);}
 });
+
+
+/* ══ GRAPH ENGINE ══ */
+const GRAPH_CASES = [{"id":"c01","label":"Möjliggörare i Kriminalvården — registerslagningar…","full":"Möjliggörare i Kriminalvården — registerslagningar röjdes till kriminellt nätverk","actor":"CRIMINAL_NETWORK","sector":"CRIMINAL_JUSTICE","status":"CONFIRMED","date":"2022-11","summary":"Anställd vid Kriminalvården dömdes för att under drygt ett år ha utfört otillåtna registerslagningar och röjt resultaten till ett kriminellt nätverk. Tillgången upprätthölls utan att intern kontroll f…"},{"id":"c02","label":"Försäkringskassan — anställd utförde slagningar un…","full":"Försäkringskassan — anställd utförde slagningar under hot från assistansbolag","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2020-03","summary":"Anställd på Försäkringskassan dömdes för grovt dataintrång. Personen uppgav att slagningarna gjorts 'under press och visst hot' från en person som drev ett assistansbolag. Klassiskt fall av tvingad mö…"},{"id":"c03","label":"Spioneri mot Försvarsmakten och Säkerhetspolisen —…","full":"Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse","actor":"FOREIGN_POWER","sector":"DEFENCE","status":"CONFIRMED","date":"2023-01","summary":"Stockholms tingsrätt dömde i januari 2023 två personer: livstids fängelse respektive 9 år och 10 månader för grovt spioneri mot ryska GRU. Den ena var anställd vid Försvarsmakten 2011–2014 och Säkerhe…"},{"id":"c04","label":"Socialsekreterare samarbetade med kriminellt släkt…","full":"Socialsekreterare samarbetade med kriminellt släktnätverk — larm om barn försvann","actor":"CRIMINAL_NETWORK","sector":"SOCIAL","status":"CONFIRMED","date":"2023-06","summary":"Socialsekreterare på nordöstra Göteborgs socialförvaltning utreddes för misstänkt samarbete med känt kriminellt släktnätverk. Larm om barn från nätverket ska ha försvunnit i handläggningskedjan. En an…"},{"id":"c05","label":"Skatteverkshandläggare dömd — 100+ Mkr momsbedräge…","full":"Skatteverkshandläggare dömd — 100+ Mkr momsbedrägeri misstänks finansiera terrorism","actor":"EXTREMIST","sector":"AUTHORITY","status":"CONFIRMED","date":"2019-01","summary":"Handläggare på Skatteverket dömdes till 8 år för trolöshet och medhjälp till grovt momsbedrägeri. Totalt 100+ Mkr försvann från svenska och danska staten via falska fakturupplägg. Pengarna misstänks f…"},{"id":"c06","label":"Akademiska sjukhuset Uppsala — verksamhetschef döm…","full":"Akademiska sjukhuset Uppsala — verksamhetschef dömd för 4,76 Mkr i mutor","actor":"ECONOMIC_INTEREST","sector":"HEALTH","status":"CONFIRMED","date":"2024-03","summary":"Verksamhetschef och överläkare dömdes till 4 år för grovt tagande av muta (4,76 Mkr), grov trolöshet och grovt bedrägeri. Mutor togs emot från Canon Medical och Siemens via osanna fakturor 2015–2022. …"},{"id":"c07","label":"Toppadvokater dömda — hjälpte Värbynätverket via k…","full":"Toppadvokater dömda — hjälpte Värbynätverket via krypterade chattar","actor":"CRIMINAL_NETWORK","sector":"LEGAL","status":"CONFIRMED","date":"2023-09","summary":"Ekrem Güngör (6 år, förberedelse till mord) och Amir Amdouni (4 år, medhjälp till grovt narkotikabrott och brott mot yppandeförbud) dömdes för att via krypterade chattar läcka information till Värbynä…"},{"id":"c08","label":"Göteborgs hamn — rederianstsällda smugglade 52 kg …","full":"Göteborgs hamn — rederianstsällda smugglade 52 kg narkotika förbi tullen","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2022-10","summary":"Två anställda vid ett rederi på Göteborgssträckan använde passerkort för att smuggla 39 kg amfetamin och 13 kg hasch förbi tullfiltret. Åklagaren: 'anställda på färjan hade möjligheten att undvika tul…"},{"id":"c09","label":"Helsingborgs hamn — hamnarbetare insider i kokainh…","full":"Helsingborgs hamn — hamnarbetare insider i kokainhärva","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2022-09","summary":"Hamnarbetare med 30 år i hamnen dömdes till 2 år för att ha hjälpt lokalisera kylcontainrar med kokain från Ecuador. 93 kg hittades i Helsingborg, ytterligare 102 kg påträffades av Rotterdam-polisen o…"},{"id":"c10","label":"Lantmäteriet — säkerhetsklassade kartuppgifter röj…","full":"Lantmäteriet — säkerhetsklassade kartuppgifter röjda utan sekretessprövning under år","actor":"FOREIGN_POWER","sector":"AUTHORITY","status":"CONFIRMED","date":"2024-05","summary":"Säkerhetsskyddsklassificerade uppgifter i Lantmäteriets öppna arkiv (Arken) lämnades ut utan sekretessprövning under många år. Ledningen kände till problemet sedan 2018 men agerade inte förrän panikst…"},{"id":"c11","label":"Migrationsverket Borås — handläggare beviljade til…","full":"Migrationsverket Borås — handläggare beviljade tillstånd mot betalning","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2022-06","summary":"Handläggare vid Migrationsverket i Borås utreddes för tjänstefel och dataintrång efter anonym angivelse. Internrevision visade att arbetstillstånd beviljats 'medvetet och ohederligt'. En handläggare s…"},{"id":"c12","label":"Sida-tjänsteman gripen för mutbrott under bistånds…","full":"Sida-tjänsteman gripen för mutbrott under biståndsarbete i Afrika","actor":"ECONOMIC_INTEREST","sector":"AUTHORITY","status":"CONFIRMED","date":"2024-05","summary":"Sida-tjänsteman stationerad vid svensk ambassad i Afrika greps misstänkt för grov trolöshet, grovt tagande av muta och grovt bedrägeri. Mutor under tre år vid hantering av biståndsmedel och projekt. S…"},{"id":"c13","label":"UD/Migrationsverket — tjänsteman dömd för 61 felak…","full":"UD/Migrationsverket — tjänsteman dömd för 61 felaktiga visum från Islamabad","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2018-01","summary":"Tjänsteman utlånad till UD:s ambassad i Islamabad dömdes för tjänstefel i 61 av 121 åtalade visumärenden. Förfalskade inbjudningar från Ericsson och Scania användes som underlag — bolagsrepresentanter…"},{"id":"c14","label":"NMR-bomber i Göteborg — paramilitärt tränade nynaz…","full":"NMR-bomber i Göteborg — paramilitärt tränade nynazister attackerar","actor":"EXTREMIST","sector":"CIVIL_SOCIETY","status":"CONFIRMED","date":"2017-01","summary":"Tre NMR-medlemmar utförde tre bombattentat: vänsterbokhandel (11 nov 2016), migranterboende (5 jan 2017 — städare permanent invalidiserad), ytterligare boende (25 jan 2017 — desarmerat i sista sekund)…"},{"id":"c15","label":"Fair Play Bygg 2023 — 291 tips om brottslighet på …","full":"Fair Play Bygg 2023 — 291 tips om brottslighet på Stockholms byggarbetsplatser","actor":"CRIMINAL_NETWORK","sector":"PROCUREMENT","status":"CONFIRMED","date":"2023-12","summary":"Årsrapport 2023 dokumenterade 291 tips med 168 ärenden vidare till myndigheter. Vanligaste brott: svart arbetskraft, ID-utnyttjande, penningtvätt, skattebrott och lönebedrägeri. Sedan 2016 har 175 för…"},{"id":"c16","label":"Islamistisk infiltration — 931 Mkr i offentliga kö…","full":"Islamistisk infiltration — 931 Mkr i offentliga köp från extremistkopplade bolag","actor":"EXTREMIST","sector":"PROCUREMENT","status":"CONFIRMED","date":"2020-01","summary":"Acta Publicas rapport kartlade 560 individer ur islamistisk miljö. 47 hade gjort affärer med myndigheter för 931 Mkr under fem år. Bolagen verkade legitima och var registrerade, skattebetalande — trad…"},{"id":"c17","label":"Stockholmsbörsen — anställd dömd för grovt insider…","full":"Stockholmsbörsen — anställd dömd för grovt insiderbrott vid tre tillfällen","actor":"ECONOMIC_INTEREST","sector":"FINANCE","status":"CONFIRMED","date":"2025-12","summary":"Stockholms tingsrätt dömde december 2025 en tidigare anställd vid Nasdaq Stockholm till 1 år för grovt insiderbrott vid tre tillfällen. Personen fick i tjänsten tillgång till information om kommande u…"},{"id":"c18","label":"Kriminalvårdens övervakare med högerextrem bakgrun…","full":"Kriminalvårdens övervakare med högerextrem bakgrund — Acta Publica-granskning","actor":"EXTREMIST","sector":"CRIMINAL_JUSTICE","status":"CONFIRMED","date":"2020-06","summary":"Acta Publicas granskning av Kriminalvårdens övervakare identifierade flera med aktiv högerextrem bakgrund: en sprider våldsbejakande högerextremism med nazistiska symbolreferenser, en biträdande överv…"},{"id":"c19","label":"Riksrevision: FMV, Kammarkollegiet, Kriminalvården…","full":"Riksrevision: FMV, Kammarkollegiet, Kriminalvården — allvarliga brister mot infiltration","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2025-06","summary":"Riksrevisionens granskning 2025–2026 av tre myndigheter: 44% av Kriminalvårdens personal vet inte vilka åtgärder som gäller vid överträdelser. Kriminalvården bedömer infiltrationsrisken som hög sedan …"},{"id":"c20","label":"Edip Samuelsson — utesluten klanadvokat tillåts åt…","full":"Edip Samuelsson — utesluten klanadvokat tillåts återkomma i rätten","actor":"CRIMINAL_NETWORK","sector":"LEGAL","status":"CONFIRMED","date":"2023-01","summary":"Advokat starkt förknippad med Ali Khan-nätverket uteslöts ur Advokatsamfundet för att ha förmedlat information från frihetsberövade klienter. Trots Högsta domstolens dom godkände Göteborgs tingsrätt a…"},{"id":"c21","label":"Socialsekreterare i Göteborg — falskt examensbevis…","full":"Socialsekreterare i Göteborg — falskt examensbevis, fattade beslut om barn","actor":"ECONOMIC_INTEREST","sector":"SOCIAL","status":"CONFIRMED","date":"2023-04","summary":"Socialsekreterare hade tagit beslut om barn och unga trots att examensbeviset var förfalskat. Saknade formella kvalifikationer för sin roll under en period med känsliga beslut. Illustrerar sårbarhet i…"},{"id":"c22","label":"Penningtvättshärva — 53 bygg/städbolag tvättade 16…","full":"Penningtvättshärva — 53 bygg/städbolag tvättade 16 Mkr via baltiska bulvaner","actor":"CRIMINAL_NETWORK","sector":"PROCUREMENT","status":"CONFIRMED","date":"2015-01","summary":"Tre män skapade 53 skenföretag inom bygg/städ med baltiska bulvaner. Bolagen fakturerade legitima företag som betalade tillbaka kontant (svart lön). 16 Mkr tvättades. Ekobrottsmyndigheten häktade huvu…"},{"id":"c23","label":"Gängkopplad kvinna avslöjades på Migrationsverket …","full":"Gängkopplad kvinna avslöjades på Migrationsverket — fick jobb på socialkontor","actor":"CRIMINAL_NETWORK","sector":"SOCIAL","status":"INDICATION","date":"2021-06","summary":"Kvinna med dokumenterade gängkopplingar avslöjades vid Migrationsverket men erhöll i ett senare skede anställning på socialkontor. Illustrerar strukturell brist i informationsdelning mellan offentliga…"},{"id":"c24","label":"Transportstyrelsen — sekretessklassad data till ut…","full":"Transportstyrelsen — sekretessklassad data till utländska IT-leverantörer","actor":"FOREIGN_POWER","sector":"TRANSPORT","status":"CONFIRMED","date":"2017-01","summary":"Transportstyrelsen lämnade ut sekretessklassificerade uppgifter — fordon, körkort, militär personal, vittnen under skydd — till utländska IT-underleverantörer utan säkerhetsskyddsgranskning. GD dömdes…"},{"id":"c25","label":"Naz Zihaoui — advokat med 232 timmars kontakt med …","full":"Naz Zihaoui — advokat med 232 timmars kontakt med livstidsdömd nätverksledare","actor":"CRIMINAL_NETWORK","sector":"LEGAL","status":"CONFIRMED","date":"2023-05","summary":"Advokat Zihaoui uteslöts ur Advokatsamfundet efter att en biträdande jurist haft 232 timmars telefonkontakt (genomsnitt 4 timmar/dag) med Maykil Yokhanna, livstidsdömd för mordet på 12-åriga Adriana, …"},{"id":"c26","label":"Norviks hamn — 1,3 ton kokain, kriminellt belastad…","full":"Norviks hamn — 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2024-04","summary":"April 2024 gjordes det enskilt största beslaget av kokain i Sverige: 1,3 ton i en container (gatuvärde 1,2 Mdr kr). SVT Uppdrag granskning avslöjade att två kriminellt belastade hamnarbetare var i tjä…"},{"id":"c27","label":"Securitas — väktare anställd 5 år var allierad med…","full":"Securitas — väktare anställd 5 år var allierad med Foxtrot-nätverket","actor":"CRIMINAL_NETWORK","sector":"SECURITY","status":"CONFIRMED","date":"2025-09","summary":"SVT Uppdrag granskning avslöjade att en Securitas-väktare under fem år levde ett dubbelliv: på ytan skötsamm anställd, parallellt allierad med Rawa Majids Foxtrot-nätverk. Personen förekom i förunders…"},{"id":"c28","label":"Skatteverket Växjö — handläggare manipulerade syst…","full":"Skatteverket Växjö — handläggare manipulerade system för 4,5 Mkr via kollegas inloggning","actor":"ECONOMIC_INTEREST","sector":"AUTHORITY","status":"CONFIRMED","date":"2015-06","summary":"26-årig handläggare på Skatteverket dömdes till 4,5 år för 11 fall av grovt bedrägeri. Personen manipulerade inkomstuppgifter med en kollegas inloggningsuppgifter, skapade skatteåterbäringar som betal…"},{"id":"c29","label":"Attunda tingsrätt 2023 — f.d. medarbetare dömd för…","full":"Attunda tingsrätt 2023 — f.d. medarbetare dömd för att ha röjt sekretessbelagd information till kriminellt nätverk","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2023-04","summary":"En kvinnlig före detta medarbetare dömdes av Attunda tingsrätt till 1 år och 9 månaders fängelse för att ha spridit sekretessbelagda uppgifter till ett kriminellt nätverk i Sollentuna. Fallet omnämns …"},{"id":"c30","label":"Vinnova — riggat konsultavtal, 8,6 Mkr fakturering…","full":"Vinnova — riggat konsultavtal, 8,6 Mkr fakturering med nära band till GD","actor":"ECONOMIC_INTEREST","sector":"PROCUREMENT","status":"CONFIRMED","date":"2024-01","summary":"Granskning (Jens Nylander) avslöjade att en seniorkonsult med nära band till Vinnovas GD fakturerade 8,6 Mkr på 16 månader för ett deltidsuppdrag. Konsulten debiterade 3 886 timmar till 2 200 kr/timme…"},{"id":"c31","label":"Perstorp — socialsekreterare svindlade kommunen på…","full":"Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år","actor":"ECONOMIC_INTEREST","sector":"SOCIAL","status":"CONFIRMED","date":"2003-01","summary":"Socialsekreterare i Perstorp utnyttjade total avsaknad av intern kontroll: handläggarna skötte utbetalningar av socialbidrag utan kontinuerlig revision. Mannen skapade falska bidragstagare och diriger…"},{"id":"c32","label":"Trelleborgs hamn — hamnarbetare dirigerade lastbil…","full":"Trelleborgs hamn — hamnarbetare dirigerade lastbil för att undvika tullskanner","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2023-05","summary":"308 kg cannabis gömt i golv på lastbil från Litauen. Tullkriminalens spanare övervakade ankomsten. En hamnarbetare dirigerade lastbilen till en plats som undvek tullskannern — lastbilen stod still i t…"},{"id":"c33","label":"Malmö hamn — två hamnanställda dömda till 10 år fö…","full":"Malmö hamn — två hamnanställda dömda till 10 år för 118 kg kokain","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2023-09","summary":"Tullverket hittade 118 kg kokain gömt i fryst broccoli i en lastbil från Tyskland. Två hamnanställda var direkt inblandade i smugglingen med hjälp av sin yrkesposition och tillgång till hamnområdet. R…"},{"id":"c34","label":"Polisen AD 2022:3 — polisman med kriminella kontak…","full":"Polisen AD 2022:3 — polisman med kriminella kontakter nekade registerslagningar vid säkerhetsprövning","actor":"CRIMINAL_NETWORK","sector":"CRIMINAL_JUSTICE","status":"CONFIRMED","date":"2022-02","summary":"Arbetsdomstolen (AD 2022:3) fastställde att en polisman korrekt nekats fortsatt säkerhetsklassad anställning efter att ha lögit vid säkerhetsintervjuer 2019. Personen hade gjort registerslagningar på …"},{"id":"c35","label":"Riksrevisionen 2023 — infiltrationsbrister vid Kri…","full":"Riksrevisionen 2023 — infiltrationsbrister vid Kriminalvården, FMV och Kammarkollegiet","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2023-01","summary":"Riksrevisionens granskning 2023 av infiltration i staten (FMV, Kammarkollegiet, Kriminalvården) fann: avsaknad av rollbaserad riskanalys, kvarlevande behörigheter efter avslutad anställning, otillräck…"},{"id":"c36","label":"Foxtrot-kriminalvårdare dömd — rekryterad som 'grö…","full":"Foxtrot-kriminalvårdare dömd — rekryterad som 'grön gumma' för narkotika","actor":"CRIMINAL_NETWORK","sector":"CRIMINAL_JUSTICE","status":"CONFIRMED","date":"2024-06","summary":"Kriminalvårdare som förlorat sin anställning på en säkerhetsklass 1-anstalt p.g.a. otillåten relation med intagen, rekryterades senare av Foxtrot-nätverket. Hon hotades till delaktighet och innehade/t…"},{"id":"c37","label":"Trelleborgs hamn — hamnarbetare dirigerade lastbil…","full":"Trelleborgs hamn — hamnarbetare dirigerade lastbil för att undvika tullskanner","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2023-05","summary":"308 kg cannabis gömt i golvet på en lastbil från Litauen. Tullkriminalens spanare övervakade ankomsten. En hamnarbetare dirigerade lastbilen till en plats som undvek tullskannern — lastbilen stod stil…"},{"id":"c38","label":"Malmö hamn — två hamnanställda dömda till 10 år fö…","full":"Malmö hamn — två hamnanställda dömda till 10 år för 118 kg kokain","actor":"CRIMINAL_NETWORK","sector":"TRANSPORT","status":"CONFIRMED","date":"2023-09","summary":"Tullverket hittade 118 kg kokain gömt bland fryst broccoli i en lastbil från Tyskland. Två hamnanställda var direkt inblandade i smugglingen med hjälp av sin yrkesposition och tillgång till hamnområde…"},{"id":"c39","label":"Skatteverket Växjö — handläggare manipulerade 4,5 …","full":"Skatteverket Växjö — handläggare manipulerade 4,5 Mkr via kollegas inloggning","actor":"ECONOMIC_INTEREST","sector":"AUTHORITY","status":"CONFIRMED","date":"2015-06","summary":"26-årig handläggare dömdes till 4,5 år för 11 fall av grovt bedrägeri. Personen manipulerade inkomstuppgifter med en kollegas inloggningsuppgifter, skapade skatteåterbäringar på 4,5 Mkr och avslöjades…"},{"id":"c40","label":"Perstorp — socialsekreterare svindlade kommunen på…","full":"Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år","actor":"ECONOMIC_INTEREST","sector":"SOCIAL","status":"CONFIRMED","date":"2003-05","summary":"Socialsekreterare i Perstorp utnyttjade total avsaknad av intern kontroll: handläggarna skötte utbetalningar av socialbidrag utan kontinuerlig revision. Han skapade falska bidragstagare och dirigerade…"},{"id":"c41","label":"Polisman avsattes — dolda kontakter med Bandidos, …","full":"Polisman avsattes — dolda kontakter med Bandidos, nekade registerslagningar","actor":"CRIMINAL_NETWORK","sector":"CRIMINAL_JUSTICE","status":"CONFIRMED","date":"2022-02","summary":"Arbetsdomstolen (AD 2022 nr 3) fastställde att polisman korrekt nekats säkerhetsklassad anställning. Personen hade gjort registerslagningar på kriminella bekanta (bl.a. en mordoffret) och förnekat det…"},{"id":"c42","label":"Vinnova — seniorkonsult med nära band till GD fakt…","full":"Vinnova — seniorkonsult med nära band till GD fakturerade 8,6 Mkr","actor":"ECONOMIC_INTEREST","sector":"PROCUREMENT","status":"CONFIRMED","date":"2024-01","summary":"Granskning (Jens Nylander) avslöjade att seniorkonsult med nära band till Vinnovas GD Darja Isaksson fakturerade 8,6 Mkr på 16 månader för deltidsuppdrag. 3 886 timmar debiterades till 2 200 kr/h — nä…"},{"id":"c43","label":"Attunda tingsrätt 2023 — f.d. medarbetare röjde se…","full":"Attunda tingsrätt 2023 — f.d. medarbetare röjde sekretessuppgifter till kriminellt nätverk i Sollentuna","actor":"CRIMINAL_NETWORK","sector":"AUTHORITY","status":"CONFIRMED","date":"2023-04","summary":"Kvinnlig före detta medarbetare dömdes av Attunda tingsrätt till 1 år och 9 månader för att ha spridit sekretessbelagda uppgifter till ett kriminellt nätverk i Sollentuna. Fallet nämns i Brå (2024) so…"},{"id":"c44","label":"Farmaceut sålde narkotikaklassade läkemedel — skul…","full":"Farmaceut sålde narkotikaklassade läkemedel — skulder och löneutmätning som drivkraft","actor":"CRIMINAL_NETWORK","sector":"HEALTH","status":"CONFIRMED","date":"2022-01","summary":"Farmaceut förfalskade recept och använde frikortskunder för att belasta högkostnadsskyddet. Sålde opioidläkemedel (Oxykontin, tramadol, morfin) — en del levererades till Syrien. Brottsvinst: ca 1,5 Mk…"},{"id":"c45","label":"Kommunal hemtjänst — förtroendevald och anställd d…","full":"Kommunal hemtjänst — förtroendevald och anställd dömd som central möjliggörare i bedrägerihärva","actor":"CRIMINAL_NETWORK","sector":"SOCIAL","status":"CONFIRMED","date":"2021-01","summary":"Förtroendevald och kommunanställd pekades ut som central möjliggörare i en stor bedrägerihärva inom hemtjänsten. Dömdes tillsammans med 20 andra personer. Fallet illustrerar hur insiderposition i komm…"},{"id":"c46","label":"Banklånehandläggare beviljade lån mot betalning ti…","full":"Banklånehandläggare beviljade lån mot betalning till kriminella","actor":"CRIMINAL_NETWORK","sector":"FINANCE","status":"INDICATION","date":"2020-01","summary":"Banklånehandläggare beviljade lån mot betalning till kriminella aktörer. Illustrerar hur insiderposition i finanssektorn kan utnyttjas för att ge kriminella nätverk tillgång till kapital via legitima …"}];
+const ACTOR_LABELS = {"CRIMINAL_NETWORK":"Kriminellt nätverk","FOREIGN_POWER":"Främmande makt","EXTREMIST":"Extremistisk miljö","ECONOMIC_INTEREST":"Ekonomiskt intresse"};
+const SECTOR_LABELS = {"AUTHORITY":"Myndigheter","TRANSPORT":"Transport / Hamnar","SOCIAL":"Socialtjänst","CRIMINAL_JUSTICE":"Rättsväsende","PROCUREMENT":"Upphandling","LEGAL":"Juridik","HEALTH":"Hälso/sjukvård","FINANCE":"Finans","DEFENCE":"Försvar","CIVIL_SOCIETY":"Civilt samhälle","SECURITY":"Säkerhetsbranschen"};
+
+const ACTOR_COLORS = {
+  CRIMINAL_NETWORK: '#C45C2E',
+  FOREIGN_POWER: '#B8973A',
+  EXTREMIST: '#9B4FBB',
+  ECONOMIC_INTEREST: '#4A7B6F'
+};
+
+let gNodes = [], gEdges = [], gFilter_active = 'all', gShowSectors = true, gShowLabels = false;
+let gDragging = null, gSelected = null, gTransform = {x:0,y:0,scale:1};
+let gAnimFrame = null, gCanvas, gCtx, gW, gH;
+
+function gInit(){
+  gCanvas = document.getElementById('graphCanvas');
+  if(!gCanvas) return;
+  gCtx = gCanvas.getContext('2d');
+  const wrap = document.getElementById('graphWrap');
+  gW = wrap.offsetWidth; gH = wrap.offsetHeight;
+  gCanvas.width = gW * devicePixelRatio;
+  gCanvas.height = gH * devicePixelRatio;
+  gCanvas.style.width = gW + 'px';
+  gCanvas.style.height = gH + 'px';
+  gCtx.scale(devicePixelRatio, devicePixelRatio);
+  document.getElementById('graphLoading').style.display = 'none';
+  gBuild();
+  gCanvas.addEventListener('mousedown', gOnMouseDown);
+  gCanvas.addEventListener('mousemove', gOnMouseMove);
+  gCanvas.addEventListener('mouseup', gOnMouseUp);
+  gCanvas.addEventListener('wheel', gOnWheel, {passive:false});
+  gCanvas.addEventListener('click', gOnClick);
+  gCanvas.addEventListener('mouseleave', ()=>{ gDragging=null; gCanvas.style.cursor='grab'; });
+  gLoop();
+}
+
+function gBuild(){
+  gNodes = []; gEdges = [];
+  const filter = gFilter_active;
+  
+  // Case nodes
+  const filteredCases = filter==='all' ? GRAPH_CASES : GRAPH_CASES.filter(c=>c.actor===filter);
+  const sectors = new Set(filteredCases.map(c=>c.sector));
+  const actors = new Set(filteredCases.map(c=>c.actor));
+  
+  // Place actors in a circle in centre
+  const actorArr = [...actors];
+  actorArr.forEach((a, i) => {
+    const angle = (i / actorArr.length) * Math.PI * 2 - Math.PI/2;
+    const r = 80;
+    gNodes.push({
+      id: a, type: 'actor', label: ACTOR_LABELS[a]||a,
+      x: gW/2 + Math.cos(angle)*r,
+      y: gH/2 + Math.sin(angle)*r,
+      vx:0,vy:0, fixed: false, color: ACTOR_COLORS[a]||'#888', r: 22
+    });
+  });
+  
+  // Place sectors in outer ring
+  if(gShowSectors){
+    const sectorArr = [...sectors];
+    sectorArr.forEach((s, i) => {
+      const angle = (i / sectorArr.length) * Math.PI * 2;
+      const r = Math.min(gW, gH) * 0.32;
+      gNodes.push({
+        id: s, type: 'sector', label: SECTOR_LABELS[s]||s,
+        x: gW/2 + Math.cos(angle)*r,
+        y: gH/2 + Math.sin(angle)*r,
+        vx:0,vy:0, fixed: false, color: 'rgba(184,151,58,.5)', r: 16
+      });
+    });
+  }
+  
+  // Place case nodes scattered around their actor
+  filteredCases.forEach((c, i) => {
+    const actorNode = gNodes.find(n=>n.id===c.actor);
+    if(!actorNode) return;
+    const angle = (i / filteredCases.length) * Math.PI * 2;
+    const r = 60 + Math.random()*120;
+    gNodes.push({
+      id: c.id, type: 'case', label: c.label, fullLabel: c.full,
+      actor: c.actor, sector: c.sector, status: c.status, date: c.date, summary: c.summary,
+      x: actorNode.x + Math.cos(angle)*r,
+      y: actorNode.y + Math.sin(angle)*r,
+      vx:0,vy:0, fixed: false,
+      color: ACTOR_COLORS[c.actor]||'#666', r: c.status==='CONFIRMED'?7:5
+    });
+    gEdges.push({source:c.id, target:c.actor, type:'actor'});
+    if(gShowSectors && sectors.has(c.sector)){
+      gEdges.push({source:c.id, target:c.sector, type:'sector'});
+    }
+  });
+  
+  // Clamp positions to canvas
+  gNodes.forEach(n=>{
+    n.x = Math.max(60, Math.min(gW-60, n.x));
+    n.y = Math.max(60, Math.min(gH-60, n.y));
+  });
+  
+  document.getElementById('gcount').textContent = filteredCases.length + ' fall';
+}
+
+function gNodeById(id){ return gNodes.find(n=>n.id===id); }
+
+let gTick = 0;
+function gLoop(){
+  gTick++;
+  gSimulate();
+  gDraw();
+  gAnimFrame = requestAnimationFrame(gLoop);
+}
+
+function gSimulate(){
+  const cooling = Math.max(0.01, 0.995 - gTick*0.0001);
+  const repulsion = 2200, attraction = 0.012, damping = 0.82;
+  
+  // Repulsion between all nodes
+  for(let i=0; i<gNodes.length; i++){
+    for(let j=i+1; j<gNodes.length; j++){
+      const a=gNodes[i], b=gNodes[j];
+      const dx=b.x-a.x, dy=b.y-a.y;
+      const d=Math.max(1, Math.sqrt(dx*dx+dy*dy));
+      const force = repulsion/(d*d);
+      const fx=dx/d*force, fy=dy/d*force;
+      a.vx-=fx; a.vy-=fy; b.vx+=fx; b.vy+=fy;
+    }
+  }
+  
+  // Attraction along edges
+  gEdges.forEach(e=>{
+    const s=gNodeById(e.source), t=gNodeById(e.target);
+    if(!s||!t) return;
+    const dx=t.x-s.x, dy=t.y-s.y;
+    const d=Math.max(1, Math.sqrt(dx*dx+dy*dy));
+    const idealDist = e.type==='actor' ? 120 : 200;
+    const force = (d-idealDist)*attraction;
+    const fx=dx/d*force, fy=dy/d*force;
+    if(!s.dragging){ s.vx+=fx; s.vy+=fy; }
+    if(!t.dragging){ t.vx-=fx; t.vy-=fy; }
+  });
+  
+  // Centre gravity (weak)
+  gNodes.forEach(n=>{
+    if(n.dragging) return;
+    n.vx += (gW/2 - n.x)*0.0008;
+    n.vy += (gH/2 - n.y)*0.0008;
+    n.vx *= damping; n.vy *= damping;
+    n.x += n.vx*cooling; n.y += n.vy*cooling;
+    n.x = Math.max(n.r+2, Math.min(gW-n.r-2, n.x));
+    n.y = Math.max(n.r+2, Math.min(gH-n.r-2, n.y));
+  });
+}
+
+function gWorldToScreen(wx, wy){
+  return [wx*gTransform.scale + gTransform.x, wy*gTransform.scale + gTransform.y];
+}
+function gScreenToWorld(sx, sy){
+  return [(sx-gTransform.x)/gTransform.scale, (sy-gTransform.y)/gTransform.scale];
+}
+
+function gDraw(){
+  const ctx = gCtx;
+  ctx.clearRect(0,0,gW,gH);
+  ctx.save();
+  ctx.translate(gTransform.x, gTransform.y);
+  ctx.scale(gTransform.scale, gTransform.scale);
+  
+  // Draw edges
+  gEdges.forEach(e=>{
+    const s=gNodeById(e.source), t=gNodeById(e.target);
+    if(!s||!t) return;
+    ctx.beginPath();
+    ctx.moveTo(s.x, s.y);
+    ctx.lineTo(t.x, t.y);
+    if(e.type==='actor'){
+      ctx.strokeStyle = (gSelected&&(gSelected===s||gSelected===t)) ? 'rgba(184,151,58,.6)' : 'rgba(240,237,230,.06)';
+      ctx.lineWidth = gSelected&&(gSelected===s||gSelected===t) ? 1.5 : 0.5;
+    } else {
+      ctx.strokeStyle = 'rgba(184,151,58,.06)';
+      ctx.lineWidth = 0.4;
+      ctx.setLineDash([3,3]);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+  });
+  
+  // Highlight selected connections
+  if(gSelected){
+    const connectedIds = new Set();
+    gEdges.forEach(e=>{
+      if(e.source===gSelected.id) connectedIds.add(e.target);
+      if(e.target===gSelected.id) connectedIds.add(e.source);
+    });
+    gEdges.forEach(e=>{
+      if(e.source!==gSelected.id && e.target!==gSelected.id) return;
+      const s=gNodeById(e.source), t=gNodeById(e.target);
+      if(!s||!t) return;
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(t.x, t.y);
+      ctx.strokeStyle = 'rgba(184,151,58,.45)';
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+    });
+  }
+  
+  // Draw nodes
+  gNodes.forEach(n=>{
+    const isSelected = gSelected && gSelected.id===n.id;
+    const isConnected = gSelected && gEdges.some(e=>(e.source===gSelected.id&&e.target===n.id)||(e.target===gSelected.id&&e.source===n.id));
+    const dimmed = gSelected && !isSelected && !isConnected;
+    
+    ctx.save();
+    ctx.globalAlpha = dimmed ? 0.15 : 1;
+    
+    if(n.type==='actor'){
+      // Actor: large filled circle
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r+(isSelected?4:0), 0, Math.PI*2);
+      ctx.fillStyle = n.color;
+      ctx.fill();
+      if(isSelected){
+        ctx.strokeStyle = '#F0EDE6';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+      // Label always visible for actors
+      ctx.fillStyle = '#0A1628';
+      ctx.font = `500 10px "IBM Plex Sans", system-ui`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      // Wrap label
+      const words = n.label.split(' ');
+      if(words.length > 2){
+        ctx.fillText(words.slice(0,2).join(' '), n.x, n.y-6);
+        ctx.fillText(words.slice(2).join(' '), n.x, n.y+6);
+      } else {
+        ctx.fillText(n.label, n.x, n.y);
+      }
+    } else if(n.type==='sector'){
+      // Sector: rounded rect
+      const w=n.label.length*6+16, h=22;
+      const rx=4;
+      ctx.beginPath();
+      ctx.roundRect(n.x-w/2, n.y-h/2, w, h, rx);
+      ctx.fillStyle = isSelected ? 'rgba(184,151,58,.3)' : 'rgba(240,237,230,.08)';
+      ctx.strokeStyle = isSelected ? 'rgba(184,151,58,.8)' : 'rgba(184,151,58,.3)';
+      ctx.lineWidth = 0.8;
+      ctx.fill(); ctx.stroke();
+      ctx.fillStyle = isSelected ? '#F0EDE6' : '#8A9AB0';
+      ctx.font = `400 9px "IBM Plex Mono", monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(n.label, n.x, n.y);
+    } else {
+      // Case node: small circle
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r+(isSelected?3:0), 0, Math.PI*2);
+      ctx.fillStyle = isSelected ? n.color : n.status==='CONFIRMED' ? n.color : n.color+'99';
+      ctx.fill();
+      if(isSelected || isConnected){
+        ctx.strokeStyle = '#F0EDE6';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+      // Labels only if enabled or selected
+      if(gShowLabels || isSelected){
+        ctx.fillStyle = '#F0EDE6';
+        ctx.font = `400 8px "IBM Plex Sans", system-ui`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+        const maxW = 120;
+        const lbl = n.label.length > 30 ? n.label.substring(0,28)+'…' : n.label;
+        ctx.fillText(lbl, n.x, n.y+n.r+3, maxW);
+      }
+    }
+    ctx.restore();
+  });
+  
+  ctx.restore();
+}
+
+function gGetNodeAt(sx, sy){
+  const [wx, wy] = gScreenToWorld(sx, sy);
+  // Check in reverse order (top-most first)
+  for(let i=gNodes.length-1; i>=0; i--){
+    const n=gNodes[i];
+    const hit = n.type==='sector' ? 
+      (Math.abs(wx-n.x) < n.label.length*3+8 && Math.abs(wy-n.y) < 11) :
+      (Math.sqrt((wx-n.x)**2+(wy-n.y)**2) < n.r+4);
+    if(hit) return n;
+  }
+  return null;
+}
+
+let gPanStart = null;
+function gOnMouseDown(e){
+  const rect = gCanvas.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  const node = gGetNodeAt(sx, sy);
+  if(node){
+    gDragging = node;
+    node.dragging = true;
+    gCanvas.style.cursor = 'grabbing';
+  } else {
+    gPanStart = {x:e.clientX-gTransform.x, y:e.clientY-gTransform.y};
+    gCanvas.style.cursor = 'grabbing';
+  }
+}
+
+function gOnMouseMove(e){
+  const rect = gCanvas.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  if(gDragging){
+    const [wx,wy] = gScreenToWorld(sx, sy);
+    gDragging.x = wx; gDragging.y = wy;
+    gDragging.vx = 0; gDragging.vy = 0;
+  } else if(gPanStart){
+    gTransform.x = e.clientX - gPanStart.x;
+    gTransform.y = e.clientY - gPanStart.y;
+  } else {
+    const hover = gGetNodeAt(sx, sy);
+    gCanvas.style.cursor = hover ? 'pointer' : 'grab';
+  }
+}
+
+function gOnMouseUp(e){
+  if(gDragging){ gDragging.dragging=false; gDragging=null; }
+  gPanStart = null;
+  gCanvas.style.cursor = 'grab';
+}
+
+function gOnWheel(e){
+  e.preventDefault();
+  const rect = gCanvas.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  const delta = e.deltaY > 0 ? 0.9 : 1.1;
+  const newScale = Math.max(0.3, Math.min(4, gTransform.scale*delta));
+  gTransform.x = sx - (sx-gTransform.x)*(newScale/gTransform.scale);
+  gTransform.y = sy - (sy-gTransform.y)*(newScale/gTransform.scale);
+  gTransform.scale = newScale;
+}
+
+let gLastClick = 0;
+function gOnClick(e){
+  const now = Date.now();
+  if(now - gLastClick < 300) return; // debounce
+  gLastClick = now;
+  const rect = gCanvas.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  const node = gGetNodeAt(sx, sy);
+  if(node === gSelected){ gSelected=null; hideGDetail(); return; }
+  gSelected = node;
+  if(node) showGDetail(node);
+  else hideGDetail();
+}
+
+function showGDetail(n){
+  const panel = document.getElementById('graphDetail');
+  const connectedIds = new Set();
+  const connectedEdges = [];
+  gEdges.forEach(e=>{
+    if(e.source===n.id){ connectedIds.add(e.target); connectedEdges.push(e); }
+    if(e.target===n.id){ connectedIds.add(e.source); connectedEdges.push(e); }
+  });
+  
+  if(n.type==='case'){
+    document.getElementById('gd-title').textContent = n.fullLabel || n.label;
+    document.getElementById('gd-meta').innerHTML = `
+      <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">Aktör: <span style="color:var(--text)">${ACTOR_LABELS[n.actor]||n.actor}</span></span>
+      <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">Sektor: <span style="color:var(--text)">${SECTOR_LABELS[n.sector]||n.sector}</span></span>
+      <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">Datum: <span style="color:var(--text)">${n.date}</span></span>
+      <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">Status: <span style="color:${n.status==='CONFIRMED'?'var(--green)':'var(--accent)'}">${n.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span></span>`;
+    document.getElementById('gd-summary').textContent = n.summary;
+    document.getElementById('gd-connections').textContent = `Kopplad till ${connectedIds.size} andra noder`;
+  } else if(n.type==='actor'){
+    const cases = GRAPH_CASES.filter(c=>c.actor===n.id);
+    document.getElementById('gd-title').textContent = ACTOR_LABELS[n.id]||n.id;
+    document.getElementById('gd-meta').innerHTML = `<span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">${cases.length} dokumenterade fall i databasen</span>`;
+    document.getElementById('gd-summary').textContent = cases.map(c=>c.label).join(' · ');
+    document.getElementById('gd-connections').textContent = '';
+  } else if(n.type==='sector'){
+    const cases = GRAPH_CASES.filter(c=>c.sector===n.id);
+    document.getElementById('gd-title').textContent = SECTOR_LABELS[n.id]||n.id;
+    document.getElementById('gd-meta').innerHTML = `<span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">${cases.length} fall i denna sektor</span>`;
+    const byActor = {};
+    cases.forEach(c=>{ byActor[c.actor]=(byActor[c.actor]||0)+1; });
+    document.getElementById('gd-summary').textContent = Object.entries(byActor).map(([a,n])=>`${ACTOR_LABELS[a]}: ${n} fall`).join(' · ');
+    document.getElementById('gd-connections').textContent = '';
+  }
+  panel.style.display = 'block';
+}
+
+function hideGDetail(){
+  document.getElementById('graphDetail').style.display='none';
+}
+
+function gFilter(f){
+  gFilter_active = f;
+  document.querySelectorAll('[id^="gf-"]').forEach(b=>b.classList.remove('active'));
+  const btn = document.getElementById('gf-'+{
+    'all':'all','CRIMINAL_NETWORK':'criminal','FOREIGN_POWER':'foreign','EXTREMIST':'extremist','ECONOMIC_INTEREST':'economic'
+  }[f]);
+  if(btn) btn.classList.add('active');
+  gSelected = null; hideGDetail();
+  gBuild(); gTick=0;
+}
+
+function gToggleSectors(){
+  gShowSectors = !gShowSectors;
+  document.getElementById('gv-sectors').classList.toggle('active', gShowSectors);
+  gBuild(); gTick=0;
+}
+
+function gToggleLabels(){
+  gShowLabels = !gShowLabels;
+  document.getElementById('gv-labels').classList.toggle('active', gShowLabels);
+}
+
+
+
+/* ══ SECTOR MODULE ══ */
+function selectSector(id) {
+  document.querySelectorAll('.sec-nav-item').forEach(el => {
+    el.classList.remove('active');
+    el.style.borderLeftColor = 'transparent';
+  });
+  document.querySelectorAll('.sector-panel').forEach(el => el.classList.remove('show'));
+  
+  const navEl = document.getElementById('sni-' + id);
+  const panEl = document.getElementById('sp-' + id);
+  if(navEl) { navEl.classList.add('active'); navEl.style.borderLeftColor = 'var(--accent)'; }
+  if(panEl) panEl.classList.add('show');
+}
+
 </script>
 
+<section class="module" id="mod-sectors">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 2 &#183; Milj&#246;analys</p>
+    <h1 class="sec-title">Sektor<em>milj&#246;erna</em></h1>
+    <p class="sec-intro">Åtta sektorer med egna sårbarhetsprofiler, vanliga metoder, strukturella svagheter och dokumenterade fall. Välj en miljö för ett fördjupat delkapitel.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:220px 1fr;gap:2px;background:var(--border-s);margin-bottom:60px" class="reveal">
+    <div style="background:var(--bg-card)">
+      
+    <div class="sec-nav-item active" id="sni-TRANSPORT" onclick="selectSector('TRANSPORT')" style="border-left-color:var(--accent)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Transport och hamnar</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">8 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">Hög risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-AUTHORITY" onclick="selectSector('AUTHORITY')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Statliga myndigheter</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">11 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">Hög risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-SOCIAL" onclick="selectSector('SOCIAL')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Socialtjänst</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">6 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">Hög risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-CRIMINAL_JUSTICE" onclick="selectSector('CRIMINAL_JUSTICE')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Rättsväsende och kriminalvård</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">6 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Kritisk risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-LEGAL" onclick="selectSector('LEGAL')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Juridik och advokatkåren</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">3 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">Hög risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-PROCUREMENT" onclick="selectSector('PROCUREMENT')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Upphandling och bygg</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">5 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">Hög risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-HEALTH" onclick="selectSector('HEALTH')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Hälso- och sjukvård</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">2 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Medel risk</span>
+      </div>
+    </div>
+    <div class="sec-nav-item" id="sni-DEFENCE" onclick="selectSector('DEFENCE')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:13px;color:var(--text)">Försvar och säkerhet</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 6px;border:1px solid var(--border-s);color:var(--dim)">2 fall</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Kritisk risk</span>
+      </div>
+    </div>
+    </div>
+    <div style="background:var(--bg-mid);padding:32px" id="sectorPanelWrap">
+      
+    <div class="sector-panel  show" id="sp-TRANSPORT">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Transport och hamnar</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#C45C2E;line-height:1">8</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:4px">Hög risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Hamnmiljön kombinerar tre faktorer som gör den extremt attraktiv för kriminell infiltration: geografisk nödvändighet (allt gods passerar), yrkesspecifik tillgång (passerkort, containerkoder, operativt flöde) och svår intern kontroll (skiftarbete, underleverantörer, stort personalflöde).</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Passerkort-exploatering</span> <span class="ac-method">Container-PIN-koordination</span> <span class="ac-method">Krypterad planering (Sky ECC)</span> <span class="ac-method">Omdirigering förbi tullskanner</span> <span class="ac-method">Underleverantörsled</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Hamnpersonal med passerkort kan kringgå tullfiltret helt — åklagare i Göteborg-fallet 2022</div>
+<div class="cp-signal">Kontraktsanställda via underleverantörer genomgår lägre säkerhetskontroller</div>
+<div class="cp-signal">Skiftarbete innebär lång tid utan direkt chefstillsyn</div>
+<div class="cp-signal">PIN-koder för containrar kan delas digitalt utan fysisk kontakt</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Anställd med facklig ställning eller lång tjänstetid som plötsligt är svår att nå</div>
+<div class="ad-ind">Frågor om tullscheman eller skannertider från obehöriga</div>
+<div class="ad-ind">Krypterade kommunikationsappar på jobbtelefoner utan motivering</div>
+<div class="ad-ind">Containrar som omdirigeras till 'vänteplatser' utan dokumentation</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Åklagarmyndigheten 2023; SVT Uppdrag granskning sept 2025; Tullverket 2023</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (8)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c08'),300)">
+          <div class="cp-case-ref-title">Göteborgs hamn — rederianstsällda smugglade 52 kg narkotika förbi tullen</div>
+          <div class="cp-case-ref-meta">Göteborg · 2022-10 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c09'),300)">
+          <div class="cp-case-ref-title">Helsingborgs hamn — hamnarbetare insider i kokainhärva</div>
+          <div class="cp-case-ref-meta">Helsingborg · 2022-09 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c26'),300)">
+          <div class="cp-case-ref-title">Norviks hamn — 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll</div>
+          <div class="cp-case-ref-meta">Nynäshamn · 2024-04 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c27'),300)">
+          <div class="cp-case-ref-title">Securitas — väktare anställd 5 år var allierad med Foxtrot-nätverket</div>
+          <div class="cp-case-ref-meta">Stockholm · 2025-09 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c32'),300)">
+          <div class="cp-case-ref-title">Trelleborgs hamn — hamnarbetare dirigerade lastbil för att undvika tullskanner</div>
+          <div class="cp-case-ref-meta">Trelleborg · 2023-05 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c33'),300)">
+          <div class="cp-case-ref-title">Malmö hamn — två hamnanställda dömda till 10 år för 118 kg kokain</div>
+          <div class="cp-case-ref-meta">Malmö · 2023-09 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c37'),300)">
+          <div class="cp-case-ref-title">Trelleborgs hamn — hamnarbetare dirigerade lastbil för att undvika tullskanner</div>
+          <div class="cp-case-ref-meta">Trelleborg · 2023-05 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c38'),300)">
+          <div class="cp-case-ref-title">Malmö hamn — två hamnanställda dömda till 10 år för 118 kg kokain</div>
+          <div class="cp-case-ref-meta">Malmö · 2023-09 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-AUTHORITY">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Statliga myndigheter</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#B8973A;line-height:1">11</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:4px">Hög risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Statliga myndigheter är primärmål för samtliga fyra aktörstyper — kriminella nätverk vill ha registerdata och tillstånd, främmande makt vill ha strategisk information, extremister vill störa beslutsprocesser och ekonomiska intressen vill påverka upphandlingar. Det gemensamma är att en enda komprometterad medarbetare kan ge tillgång till information om tusentals ärenden.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Registerslagningar</span> <span class="ac-method">IT-systemmissbruk</span> <span class="ac-method">Datainsamling via systembrister</span> <span class="ac-method">Tillståndskorruption</span> <span class="ac-method">Informationsläckor</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Bred systembehörighet för handläggare utan granulär loggning</div>
+<div class="cp-signal">Systembrister möjliggör datainsamling utan enskild möjliggörare (Lantmäteriet)</div>
+<div class="cp-signal">Konsulter och IT-leverantörer med tillgång till sekretessklassad data utan säkerhetsskyddsavtal</div>
+<div class="cp-signal">Lång handläggningstid utan rotation ökar sårbarhet</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Slagningar utanför normal arbetstid i ärenden utanför eget ansvarsområde</div>
+<div class="ad-ind">Konsulter med bredare systembehörighet än uppdragets faktiska krav</div>
+<div class="ad-ind">Medarbetare som avböjer rotation, semesteruttag eller granskning</div>
+<div class="ad-ind">Systembrister som rapporterats internt men inte åtgärdats</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Riksrevisionen 2023 och 2025–2026; Ds 2026:2; Brå 2024</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (11)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c01'),300)">
+          <div class="cp-case-ref-title">Möjliggörare i Kriminalvården — registerslagningar röjdes till kriminellt nätverk</div>
+          <div class="cp-case-ref-meta">Stockholm · 2022-11 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c02'),300)">
+          <div class="cp-case-ref-title">Försäkringskassan — anställd utförde slagningar under hot från assistansbolag</div>
+          <div class="cp-case-ref-meta">Göteborg · 2020-03 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c05'),300)">
+          <div class="cp-case-ref-title">Skatteverkshandläggare dömd — 100+ Mkr momsbedrägeri misstänks finansiera terrorism</div>
+          <div class="cp-case-ref-meta">Stockholm · 2019-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c10'),300)">
+          <div class="cp-case-ref-title">Lantmäteriet — säkerhetsklassade kartuppgifter röjda utan sekretessprövning under år</div>
+          <div class="cp-case-ref-meta">Gävle · 2024-05 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c11'),300)">
+          <div class="cp-case-ref-title">Migrationsverket Borås — handläggare beviljade tillstånd mot betalning</div>
+          <div class="cp-case-ref-meta">Borås · 2022-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c12'),300)">
+          <div class="cp-case-ref-title">Sida-tjänsteman gripen för mutbrott under biståndsarbete i Afrika</div>
+          <div class="cp-case-ref-meta">Stockholm · 2024-05 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c13'),300)">
+          <div class="cp-case-ref-title">UD/Migrationsverket — tjänsteman dömd för 61 felaktiga visum från Islamabad</div>
+          <div class="cp-case-ref-meta">Stockholm · 2018-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c19'),300)">
+          <div class="cp-case-ref-title">Riksrevision: FMV, Kammarkollegiet, Kriminalvården — allvarliga brister mot infiltration</div>
+          <div class="cp-case-ref-meta">Nationellt · 2025-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c24'),300)">
+          <div class="cp-case-ref-title">Transportstyrelsen — sekretessklassad data till utländska IT-leverantörer</div>
+          <div class="cp-case-ref-meta">Örebro · 2017-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c39'),300)">
+          <div class="cp-case-ref-title">Skatteverket Växjö — handläggare manipulerade 4,5 Mkr via kollegas inloggning</div>
+          <div class="cp-case-ref-meta">Växjö · 2015-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c43'),300)">
+          <div class="cp-case-ref-title">Attunda tingsrätt 2023 — f.d. medarbetare röjde sekretessuppgifter till kriminellt nätverk i Sollentuna</div>
+          <div class="cp-case-ref-meta">Sollentuna · 2023-04 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-SOCIAL">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Socialtjänst</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#9B4FBB;line-height:1">6</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:4px">Hög risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Socialtjänsten hanterar information om de mest utsatta — barn under LVU, ekonomiskt bistånd, hemtjänst. Handläggare med tillgång till dessa ärenden är primärmål för kriminella nätverk med familjekopplingar i kommunen. Kombinationen av hög caseload, låg lön och emotionellt pressade arbetsförhållanden ökar sårbarhet för lojalitetsbaserad påverkan.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Tystnadspliktsbrott</span> <span class="ac-method">Informationsläckor till kriminellt nätverk</span> <span class="ac-method">Falskt examensbevis</span> <span class="ac-method">Ärendemanipulation</span> <span class="ac-method">Utbetalningsbedrägeri</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Handläggare delar geografisk eller familjekoppling med klienter i kriminella nätverk</div>
+<div class="cp-signal">Högt ärendetryck minskar möjlighet för kollegor att notera avvikelser</div>
+<div class="cp-signal">Rekryteringskontroller saknar systematisk validering av examensbevis</div>
+<div class="cp-signal">Biståndsbeslut kan fattas av enskild handläggare utan second opinion</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Handläggare som konsekvent hanterar ärenden kopplade till ett specifikt nätverk</div>
+<div class="ad-ind">Larm om barn eller klienter som försvinner i handläggningskedjan</div>
+<div class="ad-ind">Kollegor som ifrågasätter beslut som fattas utan dokumentation</div>
+<div class="ad-ind">Medarbetare med dokumenterade personliga kopplingar till klientkretsen</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Brå 2024; SVT Nyheter; DN 2023; Statskontoret 2024</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (6)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c04'),300)">
+          <div class="cp-case-ref-title">Socialsekreterare samarbetade med kriminellt släktnätverk — larm om barn försvann</div>
+          <div class="cp-case-ref-meta">Göteborg · 2023-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c21'),300)">
+          <div class="cp-case-ref-title">Socialsekreterare i Göteborg — falskt examensbevis, fattade beslut om barn</div>
+          <div class="cp-case-ref-meta">Göteborg · 2023-04 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c23'),300)">
+          <div class="cp-case-ref-title">Gängkopplad kvinna avslöjades på Migrationsverket — fick jobb på socialkontor</div>
+          <div class="cp-case-ref-meta">Okänt · 2021-06 · <span style="color:var(--accent)">Indikation</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c31'),300)">
+          <div class="cp-case-ref-title">Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år</div>
+          <div class="cp-case-ref-meta">Perstorp · 2003-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c40'),300)">
+          <div class="cp-case-ref-title">Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år</div>
+          <div class="cp-case-ref-meta">Perstorp · 2003-05 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c45'),300)">
+          <div class="cp-case-ref-title">Kommunal hemtjänst — förtroendevald och anställd dömd som central möjliggörare i bedrägerihärva</div>
+          <div class="cp-case-ref-meta">Nationellt · 2021-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-CRIMINAL_JUSTICE">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Rättsväsende och kriminalvård</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#C45C2E;line-height:1">6</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-top:4px">Kritisk risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Kriminalvård och polis är de miljöer där insiderhotet är mest direkt — handläggare och kriminalvårdare är i daglig kontakt med individer vars enda mål kan vara att utnyttja dem. Ledarna i kriminella nätverk har, sedan Encrochat-avslöjandena satt dem bakom galler, intensifierat arbetet med att rekrytera eller tvinga till sig möjliggörare inifrån systemet.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Otillåtna registerslagningar</span> <span class="ac-method">Informationsläckor om brottsutredningar</span> <span class="ac-method">Kärleksrelationer med intagna</span> <span class="ac-method">Tvång och utpressning</span> <span class="ac-method">Nekande vid säkerhetsprövning</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Kriminalvårdare i daglig kontakt med intagna med hög manipulativ förmåga</div>
+<div class="cp-signal">Riksrevisionen: 44% av Kriminalvårdens personal vet inte reglerna — rapporteringskulturen otillräcklig</div>
+<div class="cp-signal">Timanställda och korttidspersonal har lägre formell kontroll</div>
+<div class="cp-signal">Polismän med gamla kopplingar i kriminell miljö genomgår för sällan förnyad säkerhetsprövning</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Kriminalvårdare som intensifierar kontakten med specifik intagen utöver vad arbetsuppgifterna kräver</div>
+<div class="ad-ind">Polisman med hög frånvaro, plötslig ekonomisk förbättring och undvikande vid kollegors frågor</div>
+<div class="ad-ind">Personal som avböjer att delta i säkerhetskampanjer eller dilemmadiskussioner</div>
+<div class="ad-ind">Intagna som konsekvent verkar ha information om pågående utredningar</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Riksrevisionen 2023 och 2025–2026; Arbetsdomstolen AD 2022:3; Örebro tingsrätt B 832-24; Publikt 2024</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (6)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c01'),300)">
+          <div class="cp-case-ref-title">Möjliggörare i Kriminalvården — registerslagningar röjdes till kriminellt nätverk</div>
+          <div class="cp-case-ref-meta">Stockholm · 2022-11 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c18'),300)">
+          <div class="cp-case-ref-title">Kriminalvårdens övervakare med högerextrem bakgrund — Acta Publica-granskning</div>
+          <div class="cp-case-ref-meta">Nationellt · 2020-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c19'),300)">
+          <div class="cp-case-ref-title">Riksrevision: FMV, Kammarkollegiet, Kriminalvården — allvarliga brister mot infiltration</div>
+          <div class="cp-case-ref-meta">Nationellt · 2025-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c35'),300)">
+          <div class="cp-case-ref-title">Riksrevisionen 2023 — infiltrationsbrister vid Kriminalvården, FMV och Kammarkollegiet</div>
+          <div class="cp-case-ref-meta">Nationellt · 2023-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c36'),300)">
+          <div class="cp-case-ref-title">Foxtrot-kriminalvårdare dömd — rekryterad som 'grön gumma' för narkotika</div>
+          <div class="cp-case-ref-meta">Örebro · 2024-06 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c41'),300)">
+          <div class="cp-case-ref-title">Polisman avsattes — dolda kontakter med Bandidos, nekade registerslagningar</div>
+          <div class="cp-case-ref-meta">Stockholm · 2022-02 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-LEGAL">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Juridik och advokatkåren</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#4A7B6F;line-height:1">3</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:4px">Hög risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Försvarsadvokater och ombud har lagstadgad tillgång till sin klient — en klientsekretess som är samhällsnödvändig men som systematiskt exploateras av kriminella nätverk. Tre svenska fall visar på ett mönster: krypterad kommunikation med klienter, brott mot yppandeförbud och gränslösa kontaktmönster som normaliseras gradvis. Advokatsamfundets disciplinnämnd kan utesluta men inte hindra återkomst.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Krypterad klientkommunikation med tredje part</span> <span class="ac-method">Brott mot yppandeförbud</span> <span class="ac-method">Förmedling av information till kriminellt nätverk</span> <span class="ac-method">Substitutionsfullmakter som instrument</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Klientsekretessen ger laglig rätt till privat kommunikation utan insyn</div>
+<div class="cp-signal">Substitutionsfullmakter möjliggör att uteslutna advokater återkommer via kollegor</div>
+<div class="cp-signal">Advokatsamfundets uteslutning hindrar inte tingsrätten från att godkänna ersättande roll</div>
+<div class="cp-signal">Lång tid med intensiv klientkontakt normaliserar gränslösheten</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Telefonkontakt med klient som vida överstiger ärendets krav (Zihaoui: 232 tim på 60 dagar)</div>
+<div class="ad-ind">Krypterade chattar om icke-ärenderelaterade frågor med klient</div>
+<div class="ad-ind">Utesluten advokat som söker substitutionsuppdrag via kollegor</div>
+<div class="ad-ind">Klient med kännedom om interna utredningsdetaljer som bara advokaten borde känna till</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Advokatsamfundets disciplinnämnd 2023; DN och SVT 2023; Expressen 2023</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (3)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c07'),300)">
+          <div class="cp-case-ref-title">Toppadvokater dömda — hjälpte Värbynätverket via krypterade chattar</div>
+          <div class="cp-case-ref-meta">Stockholm · 2023-09 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c20'),300)">
+          <div class="cp-case-ref-title">Edip Samuelsson — utesluten klanadvokat tillåts återkomma i rätten</div>
+          <div class="cp-case-ref-meta">Göteborg · 2023-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c25'),300)">
+          <div class="cp-case-ref-title">Naz Zihaoui — advokat med 232 timmars kontakt med livstidsdömd nätverksledare</div>
+          <div class="cp-case-ref-meta">Uppsala · 2023-05 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-PROCUREMENT">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Upphandling och bygg</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#B8973A;line-height:1">5</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:4px">Hög risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Bygg- och upphandlingssektorn är den sektor med högst antal mutgivare per capita — nära en tredjedel av alla mutbrott i Sverige enligt Brå. Offentlig upphandling hanterar ibland miljarder per projekt, och kravspecifikationer, utvärderingskriterier och tilldelningsbeslut kan styras av en enskild handläggare som dessutom kan vara upparbetad under en lång leverantörsrelation.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Kravspecifiering som gynnar en leverantör</span> <span class="ac-method">Informell marknadsdialog</span> <span class="ac-method">Bluffbolag och bulvaner</span> <span class="ac-method">Penningtvätt via skenföretag</span> <span class="ac-method">Lönebedrägeri och svart arbetskraft</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Lång leverantörsrelation normaliserar informella kontakter</div>
+<div class="cp-signal">Upphandlaren fattar ensam beslut om kravspecifikation utan intern granskning</div>
+<div class="cp-signal">Konsultupphandling möjliggör direkttillsättning via ramavtal (Vinnova-fallet)</div>
+<div class="cp-signal">Bygg: stor personalrörlighet, underleverantörsled och kontantflöden</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Upphandlare med intensiv social kontakt med en leverantör under pågående process</div>
+<div class="ad-ind">Kravspecifikationer som är extremt specifika utan saklig motivering</div>
+<div class="ad-ind">Konsultfakturor för diffusa tjänster utan dokumentation av leverans</div>
+<div class="ad-ind">Byggprojekt med stor differens mellan offert och slutkostnad</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Fair Play Bygg 2023; Ekobrottsmyndigheten; Vinnova-granskning 2024; Byggnadsarbetaren</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (5)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c03'),300)">
+          <div class="cp-case-ref-title">Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse</div>
+          <div class="cp-case-ref-meta">Stockholm · 2023-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c15'),300)">
+          <div class="cp-case-ref-title">Fair Play Bygg 2023 — 291 tips om brottslighet på Stockholms byggarbetsplatser</div>
+          <div class="cp-case-ref-meta">Stockholm · 2023-12 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c22'),300)">
+          <div class="cp-case-ref-title">Penningtvättshärva — 53 bygg/städbolag tvättade 16 Mkr via baltiska bulvaner</div>
+          <div class="cp-case-ref-meta">Stockholm · 2015-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c31'),300)">
+          <div class="cp-case-ref-title">Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år</div>
+          <div class="cp-case-ref-meta">Perstorp · 2003-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c42'),300)">
+          <div class="cp-case-ref-title">Vinnova — seniorkonsult med nära band till GD fakturerade 8,6 Mkr</div>
+          <div class="cp-case-ref-meta">Stockholm · 2024-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-HEALTH">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Hälso- och sjukvård</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#4A7B6F;line-height:1">2</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:4px">Medel risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Sjukvården kombinerar stora inköpsbudgetar, teknisk komplexitet och en yrkeskultur där läkares och chefers bedömning sällan ifrågasätts — tre faktorer som skapar ideal miljö för korruption. Akademiska sjukhuset-fallet visade att mutor kan pågå i sju år utan att intern kontroll reagerar, och att leverantörskontakter i klinisk miljö uppfattas som legitim vetenskaplig dialog.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Leverantörsmutor via konsultfakturor</span> <span class="ac-method">Recept­manipulation för narkotikaklassade läkemedel</span> <span class="ac-method">Inköpspåverkan</span> <span class="ac-method">Falska medicinska intyg</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Läkares och chefers bedömning av medicinsk utrustning ifrågasätts sällan av ekonomiavdelning</div>
+<div class="cp-signal">Leverantörskontakter i form av konferenser och utbildning uppfattas som legitima</div>
+<div class="cp-signal">Farmaceuters tillgång till narkotikaklassade läkemedel utan tillräcklig spårning</div>
+<div class="cp-signal">Regionala inköp utan central samordning ger enskilda chefer stor diskretionär makt</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Läkare eller chef som konsekvent föredrar en leverantör trots alternativ</div>
+<div class="ad-ind">Konferensresor och representation från specifik leverantör utan dokumenterad nytta</div>
+<div class="ad-ind">Farmaceut med löneutmätning och skulder hos Kronofogden</div>
+<div class="ad-ind">Inköpsbeslut som fattas utan formell upphandlingsprocess</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Akademiska sjukhuset-domen mars 2024; SVT Uppdrag granskning 2023; Läkartidningen</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (2)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c06'),300)">
+          <div class="cp-case-ref-title">Akademiska sjukhuset Uppsala — verksamhetschef dömd för 4,76 Mkr i mutor</div>
+          <div class="cp-case-ref-meta">Uppsala · 2024-03 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c44'),300)">
+          <div class="cp-case-ref-title">Farmaceut sålde narkotikaklassade läkemedel — skulder och löneutmätning som drivkraft</div>
+          <div class="cp-case-ref-meta">Nationellt · 2022-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector-panel" id="sp-DEFENCE">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Sektormiljö</div>
+          <div style="font-family:var(--fd);font-size:32px;font-weight:300;color:var(--text);line-height:1.1">Försvar och säkerhet</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:#B8973A;line-height:1">2</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Dokumenterade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-top:4px">Kritisk risk</div>
+        </div>
+      </div>
+
+      <div style="font-size:14px;color:var(--text);line-height:1.75;margin-bottom:22px;padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent)">Försvarssektorn är statlig spionages primärmål. GRU-fallet 2023 visade att en rekryterad insider kan röja uppgifter i sex år utan att avslöjas internt — och att avslöjandet krävde proaktivt underrättelsearbete, inte rutinkontroll. Securitas-fallet illustrerar att säkerhetsbranschen paradoxalt nog är attraktiv för kriminell infiltration — väktaruppdraget ger tillgång till objekt, rutiner och information.</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px">
+        <div>
+          <div class="ad-sec-label">Vanliga metoder</div>
+          <div class="ac-methods" style="flex-direction:column;gap:6px;align-items:flex-start">
+            <span class="ac-method">Rekrytering via utländsk underrättelsetjänst</span> <span class="ac-method">Systematisk uppgiftsöverföring</span> <span class="ac-method">Infiltration via säkerhetsföretag</span> <span class="ac-method">Dold dubbellojalitet under lång tid</span>
+          </div>
+          <div class="ad-sec-label" style="margin-top:18px">Strukturella sårbarheter</div>
+          <div class="cp-signals-label" style="display:none"></div>
+          <div class="cp-signal">Säkerhetsprövning genomförs vid rekrytering men förnyelse är otillräcklig</div>
+<div class="cp-signal">Underrättelsearbete kräver kontakter som kan utnyttjas mot personen</div>
+<div class="cp-signal">Säkerhetsföretag genomför bakgrundskontroller men inte på sina egna anställda (Securitas-fallet)</div>
+<div class="cp-signal">Långt tidsperspektiv — spioneri kan pågå i decennier innan det avslöjas</div>
+        </div>
+        <div>
+          <div class="ad-sec-label">Observerbara indikatorer</div>
+          <div class="ad-ind">Anställd med plötsliga ekonomiska förbättringar utan identifierbar källa</div>
+<div class="ad-ind">Kontaktmönster med utländska aktörer utanför tjänsteresor</div>
+<div class="ad-ind">Säkerhetsväktare som ställer frågor om rutiner utöver sitt eget ansvarsområde</div>
+<div class="ad-ind">Nekande eller undvikande vid säkerhetsintervju kring specifika kontakter</div>
+          <div style="font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.1em;margin-top:10px">Källa: Säkerhetspolisen jan 2023; Svea hovrätt maj 2023; SVT Uppdrag granskning sept 2025; Riksrevisionen</div>
+        </div>
+      </div>
+
+      <div class="cp-cases-label">Dokumenterade fall i denna miljö (2)</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+        <div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c03'),300)">
+          <div class="cp-case-ref-title">Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse</div>
+          <div class="cp-case-ref-meta">Stockholm · 2023-01 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div><div class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('c27'),300)">
+          <div class="cp-case-ref-title">Securitas — väktare anställd 5 år var allierad med Foxtrot-nätverket</div>
+          <div class="cp-case-ref-meta">Stockholm · 2025-09 · <span style="color:var(--green)">Bekräftat</span></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="module" id="mod-graph">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Sambands­analys &#183; 46 fall</p>
+    <h1 class="sec-title">Sambands<em>grafen</em></h1>
+    <p class="sec-intro">Interaktiv nätverksvy över relationer mellan fall, aktörer och sektorer. Klicka en nod för att se kopplingar och falldetaljer. Filtrera efter aktörs- eller sektortyp. Dra noder för att utforska strukturen.</p>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="reveal" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center">
+    <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Visa</span>
+    <button class="fb active" id="gf-all" onclick="gFilter('all')">Alla</button>
+    <button class="fb" id="gf-criminal" onclick="gFilter('CRIMINAL_NETWORK')">Kriminellt nätverk</button>
+    <button class="fb" id="gf-foreign" onclick="gFilter('FOREIGN_POWER')">Främmande makt</button>
+    <button class="fb" id="gf-extremist" onclick="gFilter('EXTREMIST')">Extremism</button>
+    <button class="fb" id="gf-economic" onclick="gFilter('ECONOMIC_INTEREST')">Ekonomiskt intresse</button>
+    <div style="width:1px;height:18px;background:var(--border-s);margin:0 4px"></div>
+    <button class="fb active" id="gv-sectors" onclick="gToggleSectors()">Visa sektorer</button>
+    <button class="fb" id="gv-labels" onclick="gToggleLabels()">Visa etiketter</button>
+    <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--dim);margin-left:auto">
+      <span id="gcount">46 fall</span>
+    </span>
+  </div>
+
+  <!-- GRAPH CANVAS -->
+  <div class="reveal" style="position:relative;background:var(--bg-card);border:1px solid var(--border-s);height:560px;overflow:hidden" id="graphWrap">
+    <canvas id="graphCanvas" style="width:100%;height:100%;cursor:grab"></canvas>
+    <div id="graphLoading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Initierar sambandsgraf…</div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="reveal" style="display:flex;flex-wrap:wrap;gap:16px;margin-top:10px;padding:10px 16px;background:var(--bg-card);border:1px solid var(--border-s)">
+    <div style="display:flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">
+      <div style="width:10px;height:10px;border-radius:50%;background:#C45C2E"></div>Kriminellt nätverk
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">
+      <div style="width:10px;height:10px;border-radius:50%;background:#B8973A"></div>Främmande makt
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">
+      <div style="width:10px;height:10px;border-radius:50%;background:#9B4FBB"></div>Extremism
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">
+      <div style="width:10px;height:10px;border-radius:50%;background:#4A7B6F"></div>Ekonomiskt intresse
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)">
+      <div style="width:10px;height:10px;border-radius:3px;background:rgba(240,237,230,.15);border:1px solid rgba(184,151,58,.4)"></div>Sektor
+    </div>
+    <div style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Dra noder &#183; Scrolla för zoom &#183; Klicka för detaljer</div>
+  </div>
+
+  <!-- DETAIL PANEL -->
+  <div id="graphDetail" style="display:none;background:var(--bg-card);border:1px solid var(--border);padding:24px 28px;margin-top:2px;animation:fadeIn .2s ease">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+      <div id="gd-title" style="font-family:var(--fd);font-size:20px;font-weight:400;line-height:1.2;max-width:680px"></div>
+      <button onclick="document.getElementById('graphDetail').style.display='none'" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:0 4px;line-height:1">&#215;</button>
+    </div>
+    <div id="gd-meta" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border-s)"></div>
+    <div id="gd-summary" style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:12px"></div>
+    <div id="gd-connections" style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;color:var(--muted)"></div>
+  </div>
+</div>
+</section>
 <section class="module" id="mod-theory">
 <div class="wrap">
   <div class="sec-head reveal">
