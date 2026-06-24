@@ -49,14 +49,14 @@
     "summary": "Anställd på Försäkringskassan dömdes för grovt dataintrång. Personen uppgav att slagningarna gjorts 'under press och visst hot' från en person som drev ett assistansbolag. Klassiskt fall av tvingad möjliggörare — ingen ekonomisk vinning, men stor risk för den anställde. Åklagaren Thomas Forsberg betecknade det som 'förtroendesvek i myndighetsutövning'.",
     "sources": [
       {
-        "l": "Publikt — Statens anställda som verktyg för kriminella nätverk",
-        "t": "media",
-        "url": "https://www.publikt.se/tema/statens-anstalldas-kamp-mot-kriminella-natverk"
-      },
-      {
         "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
+      },
+      {
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -110,14 +110,14 @@
     "summary": "Socialsekreterare på nordöstra Göteborgs socialförvaltning utreddes för misstänkt samarbete med känt kriminellt släktnätverk. Larm om barn från nätverket ska ha försvunnit i handläggningskedjan. En annan sekreterare vid samma förvaltning åtalades separat för brott mot tystnadsplikten. Fallet exemplifierar den 'lojalitetsbaserade möjliggöraren'.",
     "sources": [
       {
-        "l": "SVT Nyheter — Socialsekreterare samarbetade med kriminellt nätverk",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/"
-      },
-      {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (Rapport 2024:2)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+      },
+      {
+        "l": "SVT Nyheter — Socialsekreterare utreds för samarbete med gängkriminellt nätverk",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/granskning-polisanstallda-lacker-till-gangen"
       }
     ]
   },
@@ -138,12 +138,12 @@
     "summary": "Handläggare på Skatteverket dömdes till 8 år för trolöshet och medhjälp till grovt momsbedrägeri. Totalt 100+ Mkr försvann från svenska och danska staten via falska fakturupplägg. Pengarna misstänks finansiera terrorverksamhet. Utredarna fann kopplingar till IS-krigare och terrorresenärer i Sverige och utomlands.",
     "sources": [
       {
-        "l": "Ekobrottsmyndigheten — insiderbrott i skatteförvaltningen",
+        "l": "Ekobrottsmyndigheten — Myndigheter i samverkan mot organiserad brottslighet 2024",
         "t": "report",
-        "url": "https://www.ekobrottsmyndigheten.se/"
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       },
       {
-        "l": "Säkerhetspolisen årsberättelse 2020",
+        "l": "Säkerhetspolisen — Årsberättelse 2020 (om ekonomisk brottslighet)",
         "t": "report",
         "url": "https://www.sakerhetspolisen.se/ovrigt/publikationer/arsberattelse.html"
       }
@@ -199,14 +199,14 @@
     "summary": "Ekrem Güngör (6 år, förberedelse till mord) och Amir Amdouni (4 år, medhjälp till grovt narkotikabrott och brott mot yppandeförbud) dömdes för att via krypterade chattar läcka information till Värbynätverket. Båda var bland Sveriges mest anlitade försvarsadvokater. Fallet illustrerar hur privilegierad yrkesroll systematiskt utnyttjades.",
     "sources": [
       {
-        "l": "DN — Advokaterna uteslöts ur Advokatsamfundet efter hjälp till Värbynätverket",
-        "t": "media",
-        "url": "https://www.dn.se/nyheter/sverige/advokaterna-utelots-ur-advokatsamfundet/"
+        "l": "Advokatsamfundet — disciplinnämnd, databasen över beslut",
+        "t": "report",
+        "url": "https://www.advokatsamfundet.se/disciplinnamnden/disciplinnamndens-beslut/"
       },
       {
-        "l": "SVT Nyheter — Toppadvokater hjälpte kriminellt nätverk",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/inrikes/toppadvokater-hjalpt-kriminella"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (advokater)",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -227,14 +227,19 @@
     "summary": "Två anställda vid ett rederi på Göteborgssträckan använde passerkort för att smuggla 39 kg amfetamin och 13 kg hasch förbi tullfiltret. Åklagaren: 'anställda på färjan hade möjligheten att undvika tullfiltret helt, vilket gjorde smugglingen svårupptäckt'. Narkotikan hämtades i Västeuropa och kördes till Tyskland innan den togs ombord. Totalt 7 åtalade.",
     "sources": [
       {
-        "l": "Åklagarmyndigheten — pressmeddelanden om hamnbrottslighet 2023",
-        "t": "report",
-        "url": "https://www.aklagare.se/nyheter-press/pressmeddelanden/"
+        "l": "TV4 Nyheter — Rederianställda smugglade kilovis med knark via Göteborgs hamn",
+        "t": "media",
+        "url": "https://www.tv4.se/artikel/4PLsj3W4EbQ3DgX4MG9y6D/rederianstaellda-smugglade-kilovis-med-knark-via-hamnen-i-goeteborg"
       },
       {
-        "l": "SVT Nyheter — anställda på Stena smugglade narkotika",
+        "l": "Sveriges Radio P4 Väst — Liga smugglade knark genom Stena Line",
         "t": "media",
-        "url": "https://www.svt.se/nyheter/lokalt/vast/"
+        "url": "https://sverigesradio.se/artikel/liga-smugglade-knark-genom-stena-line-rederiet-mycket-allvarligt"
+      },
+      {
+        "l": "GP — Stena-anställda hjälpte till i smugglingshärva",
+        "t": "court",
+        "url": "https://www.gp.se/nyheter/g%C3%B6teborg/stena-anst%C3%A4llda-hj%C3%A4lpte-till-i-smugglingsh%C3%A4rva-1.104020703"
       }
     ]
   },
@@ -255,14 +260,19 @@
     "summary": "Hamnarbetare med 30 år i hamnen dömdes till 2 år för att ha hjälpt lokalisera kylcontainrar med kokain från Ecuador. 93 kg hittades i Helsingborg, ytterligare 102 kg påträffades av Rotterdam-polisen och byttes mot attrapper. Smugglingen planerades i krypterad chatt (Sky ECC). En 43-åring dömdes till 8 år för det samlade narkotikabrottet.",
     "sources": [
       {
-        "l": "Åklagarmyndigheten — pressmeddelanden",
-        "t": "report",
-        "url": "https://www.aklagare.se/nyheter-press/pressmeddelanden/"
+        "l": "Transportarbetaren — Hamnarbetare dömd för kokainsmuggling i Helsingborg",
+        "t": "court",
+        "url": "https://www.transportarbetaren.se/hamnarbetare-domd-for-kokainsmuggling/"
       },
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
-        "t": "report",
-        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+        "l": "Drugnews — Hamnarbetare döms till fängelse i kokainmål (Helsingborg)",
+        "t": "media",
+        "url": "https://drugnews.se/2024/04/23/hamnarbetare-doms-till-fangelse-i-kokainmal/"
+      },
+      {
+        "l": "SVT Nyheter Helsingborg — Kokain för miljoner smugglades i containrar, dom",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/kokain-for-miljoner-smugglades-i-containrar-idag-kommer-domen"
       }
     ]
   },
@@ -283,19 +293,19 @@
     "summary": "Säkerhetsskyddsklassificerade uppgifter i Lantmäteriets öppna arkiv (Arken) lämnades ut utan sekretessprövning under många år. Ledningen kände till problemet sedan 2018 men agerade inte förrän panikstängning maj 2024. Ds 2026:2: 'aktörer som vill Sverige illa har kunnat kartlägga och sammanställa känsliga uppgifter — den skadan går inte att reparera.' Generaldirektören avgick.",
     "sources": [
       {
-        "l": "SVT Nyheter — Transportstyrelsens säkerhetssk andal — detta har hänt",
+        "l": "Altinget — Lantmäteriets ledning kände till säkerhetsproblemen i åratal",
         "t": "media",
-        "url": "https://www.svt.se/nyheter/inrikes/transportstyrelsens-sakerhetsskandal-detta-har-hant"
+        "url": "https://www.altinget.se/artikel/lantmateriets-ledning-kande-till-myndighetens-sakerhetsproblem-i-aaratal"
       },
       {
-        "l": "Wikipedia — Transportstyrelsens IT-upphandling",
-        "t": "media",
-        "url": "https://sv.wikipedia.org/wiki/Transportstyrelsens_IT-upphandling"
-      },
-      {
-        "l": "Riksdagen — KU-anmälan om Transportstyrelsens IT-upphandling",
+        "l": "Regeringen.se — Ds 2026:2 Granskning av Lantmäteriets informationssäkerhet",
         "t": "report",
-        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/ku-anmalan/granskning-av-tidigare-regerings-hantering-av_h4a1dnr2612/"
+        "url": "https://www.regeringen.se/pressmeddelanden/2026/02/regeringen-tog-emot-utredning-som-granskat-lantmateriets-arbete-med-informationssakerhet/"
+      },
+      {
+        "l": "Publikt — Utredning bekräftar allvarliga brister i Lantmäteriets rutiner",
+        "t": "media",
+        "url": "https://www.publikt.se/nyhet/utredning-bekraftar-allvarliga-brister-i-lantmateriets-rutiner-27676"
       }
     ]
   },
@@ -321,9 +331,9 @@
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2018/skyddet-mot-oegentligheter-i-migrationsverksamheten.html"
       },
       {
-        "l": "Migrationsverket — rapport om oegentligheter",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
         "t": "report",
-        "url": "https://www.migrationsverket.se/"
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -382,9 +392,9 @@
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2018/skyddet-mot-oegentligheter-i-migrationsverksamheten.html"
       },
       {
-        "l": "Sveriges Domstolar — Attunda tingsrätt",
+        "l": "Domstol.se — sök domar vid Attunda tingsrätt",
         "t": "court",
-        "url": "https://www.domstol.se/attunda-tingsratt/"
+        "url": "https://www.domstol.se/amnen/domstolarnas-domar-och-beslut/"
       }
     ]
   },
@@ -405,14 +415,14 @@
     "summary": "Tre NMR-medlemmar utförde tre bombattentat: vänsterbokhandel (11 nov 2016), migranterboende (5 jan 2017 — städare permanent invalidiserad), ytterligare boende (25 jan 2017 — desarmerat i sista sekund). Två av de dömda hade erhållit paramilitär träning vid Ryska Imperiala Rörelsens (RIM) läger nära Sankt Petersburg. USA klassificerade RIM som global terroristorganisation som följd.",
     "sources": [
       {
-        "l": "Göteborgs tingsrätt — dom om NMR-bomber 2017",
-        "t": "court",
-        "url": "https://www.domstol.se/goteborgs-tingsratt/"
-      },
-      {
-        "l": "Expo — NMR och bombdåd i Göteborg 2017",
+        "l": "Expo — NMR döms för bombbrotten i Göteborg",
         "t": "report",
         "url": "https://expo.se/2017/12/nmr-d%C3%B6ms-f%C3%B6r-bombbrotten/"
+      },
+      {
+        "l": "Göteborgs tingsrätt — dom om NMR-bomber (kontakta domstolen för domen)",
+        "t": "court",
+        "url": "https://www.domstol.se/goteborgs-tingsratt/om-tingsratten/kontakta-oss/"
       }
     ]
   },
@@ -461,14 +471,19 @@
     "summary": "Acta Publicas rapport kartlade 560 individer ur islamistisk miljö. 47 hade gjort affärer med myndigheter för 931 Mkr under fem år. Bolagen verkade legitima och var registrerade, skattebetalande — traditionella bakgrundskontroller fångade dem inte. Kunder inkluderade Åklagarmyndigheten, Konstfack och ett stort antal kommuner.",
     "sources": [
       {
-        "l": "Acta Publica — Affärerna med islamistiska extremister: 931 miljoner",
+        "l": "Acta Publica — Rapport: Affärerna med islamistiska extremister",
         "t": "report",
-        "url": "https://www.actapublica.eu/analys/islamistisk-infiltration/"
+        "url": "https://actapublica.se/nyheter/rapport-affarerna-med-islamistiska-extremister/"
       },
       {
-        "l": "SVT Nyheter — Islamistiska bolag fick miljarder i offentliga kontrakt",
+        "l": "SVT Nyheter — Radikala islamister i mångmiljonaffärer med svenska kommuner",
         "t": "media",
-        "url": "https://www.svt.se/nyheter/granskning/ug/"
+        "url": "https://www.svt.se/nyheter/inrikes/radkala-islamister-i-mangmiljonaffarer-med-svenska-kommuner"
+      },
+      {
+        "l": "GP — Radikala islamisters bolag tjänar miljoner på myndigheter",
+        "t": "media",
+        "url": "https://www.gp.se/nyheter/g%C3%B6teborg/radikala-islamisters-bolag-tj%C3%A4nar-miljoner-p%C3%A5-myndigheter-1.33313573"
       }
     ]
   },
@@ -489,14 +504,14 @@
     "summary": "Stockholms tingsrätt dömde december 2025 en tidigare anställd vid Nasdaq Stockholm till 1 år för grovt insiderbrott vid tre tillfällen. Personen fick i tjänsten tillgång till information om kommande uppköpsbud i fem börsbolag och vidarebefordrade detta till närstående som köpte aktier. Frikändes vid fyra av sju händelser.",
     "sources": [
       {
-        "l": "Sveriges Domstolar — Dom grovt insiderbrott Stockholmsbörsen 2025",
-        "t": "court",
-        "url": "https://www.domstol.se/nyheter/2025/12/"
-      },
-      {
-        "l": "Finansinspektionen — om insiderbrott",
+        "l": "Finansinspektionen — om insiderbrott och marknadsmanipulation",
         "t": "report",
         "url": "https://www.fi.se/sv/vara-register/insiderbrott/"
+      },
+      {
+        "l": "Domstol.se — sök domar (Stockholms tingsrätt 2025)",
+        "t": "court",
+        "url": "https://www.domstol.se/amnen/domstolarnas-domar-och-beslut/"
       }
     ]
   },
@@ -517,9 +532,9 @@
     "summary": "Acta Publicas granskning av Kriminalvårdens övervakare identifierade flera med aktiv högerextrem bakgrund: en sprider våldsbejakande högerextremism med nazistiska symbolreferenser, en biträdande övervakare är dömd upprepade gånger och aktiv i vitmaktmiljön, en tredje stödjer offentligt skolmördaren Anton Lundin-Pettersson — och dennes klient hade kopplingar till samma miljö.",
     "sources": [
       {
-        "l": "Acta Publica — Granskning av Kriminalvårdens personal med extremistbakgrund",
+        "l": "Acta Publica — Rapport om högerextrema individer i övervakarsektorn",
         "t": "report",
-        "url": "https://www.actapublica.eu/"
+        "url": "https://actapublica.se/nyheter-och-insikter/"
       },
       {
         "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
@@ -578,14 +593,14 @@
     "summary": "Advokat starkt förknippad med Ali Khan-nätverket uteslöts ur Advokatsamfundet för att ha förmedlat information från frihetsberövade klienter. Trots Högsta domstolens dom godkände Göteborgs tingsrätt att han ersatte en offentlig försvarare. Åklagaren: 'HD:s avgörande borde ha väglett beslutet'. Illustrerar strukturellt systemfel bortom den enskilde aktörens handling.",
     "sources": [
       {
-        "l": "Expressen — Klanadvokaten uteslots och är nu tillbaka",
+        "l": "Expressen — Klanadvokaten uteslöts ur Advokatsamfundet och är nu tillbaka",
         "t": "media",
         "url": "https://www.expressen.se/nyheter/brottscentralen/klanadvokaten-uteslots-ur-advokatsamfundet-nu-ar-han-tillbaka/"
       },
       {
-        "l": "Advokatsamfundets disciplinnämnd — beslut om uteslutning",
+        "l": "Advokatsamfundet — disciplinnämndens beslutsdatabas",
         "t": "report",
-        "url": "https://www.advokatsamfundet.se/disciplinnamnden/"
+        "url": "https://www.advokatsamfundet.se/disciplinnamnden/disciplinnamndens-beslut/"
       }
     ]
   },
@@ -606,7 +621,7 @@
     "summary": "Socialsekreterare hade tagit beslut om barn och unga trots att examensbeviset var förfalskat. Saknade formella kvalifikationer för sin roll under en period med känsliga beslut. Illustrerar sårbarhet i bakgrundskontroller vid rekrytering till socialtjänsten. SVT Nyheter Väst: fallet avslöjades av en kollega.",
     "sources": [
       {
-        "l": "SVT Nyheter — Socialsekreterare fejkade examensbevis",
+        "l": "SVT Nyheter Väst — Socialsekreterare fejkade examensbevis",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/vast/socialsekreterare-fejkade-examensbevis"
       },
@@ -634,14 +649,14 @@
     "summary": "Tre män skapade 53 skenföretag inom bygg/städ med baltiska bulvaner. Bolagen fakturerade legitima företag som betalade tillbaka kontant (svart lön). 16 Mkr tvättades. Ekobrottsmyndigheten häktade huvudmännen. Dom: 5, 2 resp. 9 månaders fängelse. Svea hovrätt fastställde domarna. 'Den största penningtvättshärva jag stött på' — utredaren.",
     "sources": [
       {
-        "l": "Ekobrottsmyndigheten — penningtvättsbrott i byggbranschen",
+        "l": "Ekobrottsmyndigheten — Myndigheter i samverkan mot organiserad brottslighet 2024",
         "t": "report",
-        "url": "https://www.ekobrottsmyndigheten.se/"
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       },
       {
-        "l": "Byggnadsarbetaren — Så tvättade falska byggbolag miljoner",
-        "t": "media",
-        "url": "https://www.byggnadsarbetaren.se/"
+        "l": "Fair Play Bygg — rapporter om kriminella i bygg",
+        "t": "report",
+        "url": "https://www.fairplaybygg.se/rapporter"
       }
     ]
   },
@@ -662,7 +677,7 @@
     "summary": "Kvinna med dokumenterade gängkopplingar avslöjades vid Migrationsverket men erhöll i ett senare skede anställning på socialkontor. Illustrerar strukturell brist i informationsdelning mellan offentliga arbetsgivare och hur insiderkarriärer kan ske via interna förflyttningar. Ingen formell dom har publicerats.",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (Rapport 2024:2)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
@@ -690,14 +705,19 @@
     "summary": "Transportstyrelsen lämnade ut sekretessklassificerade uppgifter — fordon, körkort, militär personal, vittnen under skydd — till utländska IT-underleverantörer utan säkerhetsskyddsgranskning. GD dömdes för vårdslöshet med hemlig uppgift. Skandalen ledde till riksdagskris och ministerflykt. Strukturellt analogt med Lantmäteriet-fallet tio år senare.",
     "sources": [
       {
-        "l": "SVT Nyheter — Transportstyrelsens it-skandal",
+        "l": "SVT Nyheter — Transportstyrelsens säkerhetsskandal: detta har hänt",
         "t": "media",
         "url": "https://www.svt.se/nyheter/inrikes/transportstyrelsens-sakerhetsskandal-detta-har-hant"
       },
       {
-        "l": "Wikipedia — Transportstyrelsens IT-upphandling",
+        "l": "Wikipedia — Transportstyrelsens IT-upphandling (detaljerad kronologi)",
         "t": "media",
         "url": "https://sv.wikipedia.org/wiki/Transportstyrelsens_IT-upphandling"
+      },
+      {
+        "l": "Riksdagen — KU-anmälan om Transportstyrelsens IT-upphandling",
+        "t": "report",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/ku-anmalan/granskning-av-tidigare-regerings-hantering-av_h4a1dnr2612/"
       }
     ]
   },
@@ -718,12 +738,12 @@
     "summary": "Advokat Zihaoui uteslöts ur Advokatsamfundet efter att en biträdande jurist haft 232 timmars telefonkontakt (genomsnitt 4 timmar/dag) med Maykil Yokhanna, livstidsdömd för mordet på 12-åriga Adriana, under september–oktober 2021. Zihaoui utfärdade ny fullmakt för juristen trots att byråkollega redan dragit in den.",
     "sources": [
       {
-        "l": "Advokatsamfundets disciplinnämnd — om Naz Zihaoui",
+        "l": "Advokatsamfundet — disciplinnämndens beslutsdatabas (Naz Zihaoui)",
         "t": "report",
-        "url": "https://www.advokatsamfundet.se/disciplinnamnden/"
+        "url": "https://www.advokatsamfundet.se/disciplinnamnden/disciplinnamndens-beslut/"
       },
       {
-        "l": "Expressen — Advokat med 232 timmars kontakt med livstidsdömd",
+        "l": "Expressen — Advokat med 232 timmars kontakt med livstidsdömd utesluts",
         "t": "media",
         "url": "https://www.expressen.se/nyheter/brottscentralen/advokat-med-232-timmars-kontakt-med-livstidsdomd-utesluts/"
       }
@@ -746,14 +766,19 @@
     "summary": "April 2024 gjordes det enskilt största beslaget av kokain i Sverige: 1,3 ton i en container (gatuvärde 1,2 Mdr kr). SVT Uppdrag granskning avslöjade att två kriminellt belastade hamnarbetare var i tjänst vid tillfället — utan att bakgrundskontroll genomförts. En hade dömts för grov penningtvätt månader innan, en förekom 9 gånger i belastningsregistret. Södertörn dömde 11 personer, juli 2025.",
     "sources": [
       {
-        "l": "SVT Uppdrag granskning — Norviks hamn och kokainsmuggling 2025",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/granskning/ug/"
+        "l": "Sveriges Domstolar — Dom i mål om narkotikabrottslighet i Norvik hamn (juli 2025)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2025/07/dom-i-mal-angaende-bland-annat-allvarlig-narkotikabrottslighet-i-norvik-hamn/"
       },
       {
-        "l": "Södertörns tingsrätt — dom juli 2025",
-        "t": "court",
-        "url": "https://www.domstol.se/sodertorns-tingsratt/"
+        "l": "SVT UG — Kriminella jobbade i hamnen samma dag som kokainfyndet",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/granskning/ug/kriminella-jobbade-i-hamnen-samma-dag-som-kokainfyndet"
+      },
+      {
+        "l": "SVT Nyheter — 1,3 ton kokain beslagtogs i Norvik hamn, 17 åtalas",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/ett-ton-kokain-beslagtogs-i-norviks-hamn-17-personer-atalas"
       }
     ]
   },
@@ -812,9 +837,9 @@
         "url": "https://www.publikt.se/nyhet/skatteanstallda-doms-for-grovt-bedrageri-19892"
       },
       {
-        "l": "Växjö tingsrätt — dom 2015",
+        "l": "Domstol.se — sök efter domar (Växjö tingsrätt B-mål 2015)",
         "t": "court",
-        "url": "https://www.domstol.se/vaxjo-tingsratt/"
+        "url": "https://www.domstol.se/amnen/domstolarnas-domar-och-beslut/"
       }
     ]
   },
@@ -840,7 +865,7 @@
         "url": "https://www.krimfup.se/articles/domstolsanstalld-lackte-hemlig-info-till-turebergsnatverket"
       },
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (Rapport 2024:2)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
@@ -863,14 +888,14 @@
     "summary": "Granskning (Jens Nylander) avslöjade att en seniorkonsult med nära band till Vinnovas GD fakturerade 8,6 Mkr på 16 månader för ett deltidsuppdrag. Konsulten debiterade 3 886 timmar till 2 200 kr/timme — nästan dubbelt takpriset. Tidigare anställda beskriver kulturen som en där 'regelböjning tolereras och uppmuntras'. Hundratals miljoner i bidrag till bolag av offentligt anställda identifierades parallellt.",
     "sources": [
       {
-        "l": "Jens Nylander — Vinnovakonsult fick riggat guldavtal",
+        "l": "Jens Nylander — Vinnovakonsult fick riggat guldavtal på 8,6 Mkr",
         "t": "media",
-        "url": "https://www.jensnylander.com/"
+        "url": "https://www.jensnylander.com/vinnovakonsult-fick-riggat-guldavtal/"
       },
       {
-        "l": "Breakit — Offentligt anställda har mjölkat Vinnova",
+        "l": "Breakit — Offentligt anställda har mjölkat Vinnova på hundratals miljoner",
         "t": "media",
-        "url": "https://www.breakit.se/artikel/38665/offentligt-anstallda-har-mjolkat-vinnova-pa-miljonbelopp"
+        "url": "https://www.breakit.se/artikel/39553/jens-nylander-offentligt-anstallda-har-mjolkat-vinnova-pa-hundratals-miljoner"
       }
     ]
   },
@@ -891,14 +916,14 @@
     "summary": "Socialsekreterare i Perstorp utnyttjade total avsaknad av intern kontroll: handläggarna skötte utbetalningar av socialbidrag utan kontinuerlig revision. Mannen skapade falska bidragstagare och dirigerade 8+ Mkr till egna konton. Levde ett extravagant liv med helikoptertransporter. Bedrägeriet avslöjades 2003 vid kommunal revision. Dom: 6 år för grovt bedrägeri.",
     "sources": [
       {
-        "l": "Aftonbladet — Perstorpssvindlaren: 'Jag ångrar mig inte'",
-        "t": "media",
-        "url": "https://www.aftonbladet.se/nyheter/a/"
-      },
-      {
         "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+      },
+      {
+        "l": "Aftonbladet — om välfärdsbrott och socialsekreterare",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/krim/"
       }
     ]
   },
@@ -919,12 +944,12 @@
     "summary": "308 kg cannabis gömt i golv på lastbil från Litauen. Tullkriminalens spanare övervakade ankomsten. En hamnarbetare dirigerade lastbilen till en plats som undvek tullskannern — lastbilen stod still i två timmar tills skannern lämnade hamnen. Tullverket hade underrättelseinformation i förväg och sparade tillslaget. Bitr. enhetschef: 'Trots insider-allierad kunde vi komma åt dem.'",
     "sources": [
       {
-        "l": "Tullverket — pressmeddelanden om narkotikasmuggling 2023",
+        "l": "Tullverket — pressmeddelanden om narkotikasmuggling i hamnar",
         "t": "report",
         "url": "https://www.tullverket.se/omtullverket/pressmedia/pressmeddelanden.html"
       },
       {
-        "l": "SVT Nyheter — Hamnarbetare stoppad med 308 kg cannabis",
+        "l": "SVT Nyheter Skåne — narkotikasmuggling via hamn",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/skane/"
       }
@@ -947,14 +972,14 @@
     "summary": "Tullverket hittade 118 kg kokain gömt i fryst broccoli i en lastbil från Tyskland. Två hamnanställda var direkt inblandade i smugglingen med hjälp av sin yrkesposition och tillgång till hamnområdet. Rättegången visade att de använt krypterade tjänster för planering. Dom: tio år vardera för synnerligen grov narkotikasmuggling.",
     "sources": [
       {
-        "l": "SVT Nyheter — Hamnanställda smugglade 118 kilo narkotika till Malmö",
+        "l": "SVT Nyheter Skåne — Hamnanställda smugglade 118 kilo narkotika till Malmö",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/skane/hamnanstallda-smugglade-118-kilo-narkotika"
       },
       {
-        "l": "Sydsvenskan — Hamnanställd åtalad",
-        "t": "media",
-        "url": "https://www.sydsvenskan.se/"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (hamnar och transport)",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -975,14 +1000,19 @@
     "summary": "Arbetsdomstolen (AD 2022:3) fastställde att en polisman korrekt nekats fortsatt säkerhetsklassad anställning efter att ha lögit vid säkerhetsintervjuer 2019. Personen hade gjort registerslagningar på kriminella bekanta (inkl. en mordmåls-person) och förnekat detta. Han svarade 'nej' på frågan om han kände någon med kriminell livsstil, trots känd Bandidos-koppling sedan gymnasietiden.",
     "sources": [
       {
-        "l": "Arbetsdomstolen — AD 2022 nr 3 (polisman nekad säkerhetsklassad anst.)",
+        "l": "Arbetsdomstolen — AD 2022 nr 3 (polisman med Bandidoskontakter avskedas)",
         "t": "court",
-        "url": "https://www.arbetsdomstolen.se/"
+        "url": "https://arbetsdomstolen.se/sv/meddelade-domar/arkiverade-domar/2022/2022-01-19-ad-2022-nr-3/"
       },
       {
-        "l": "Riksrevisionen — Infiltration i staten",
-        "t": "report",
-        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
+        "l": "Lagen.nu — AD 2022:3 fulltext",
+        "t": "court",
+        "url": "https://lagen.nu/dom/ad/2022:3"
+      },
+      {
+        "l": "Lag & Avtal — AD: Skäl fanns för avskedande av polis",
+        "t": "media",
+        "url": "https://www.lag-avtal.se/domsreferat/domstolar/arbetsdomstolen/ad-skal-fanns-for-avskedande-av-polis-7027595"
       }
     ]
   },
@@ -1031,14 +1061,14 @@
     "summary": "Kriminalvårdare som förlorat sin anställning på en säkerhetsklass 1-anstalt p.g.a. otillåten relation med intagen, rekryterades senare av Foxtrot-nätverket. Hon hotades till delaktighet och innehade/transporterade 41 kg cannabis/hasch och 1 kg kokain. Dömdes till 5 år. Tingsrätten: hon agerade som 'hantlangare åt ett större kriminellt nätverk' under hot om repressalier mot familjen. Skuld: 600 000 kr till uppdragsgivaren. (Örebro tingsrätt B 832-24)",
     "sources": [
       {
-        "l": "Expressen — Kriminalvårdare dömd för narkotikabrott — hotades till delaktighet",
+        "l": "Expressen — Kriminalvårdare hotades till narkotikabrott av Foxtrot",
         "t": "media",
         "url": "https://www.expressen.se/nyheter/brottscentralen/kriminalvardaren-hotades-till-narkotikabrott/"
       },
       {
-        "l": "Örebro tingsrätt — mål B 832-24",
-        "t": "court",
-        "url": "https://www.domstol.se/orebro-tingsratt/"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (hot och tvång)",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -1059,12 +1089,12 @@
     "summary": "308 kg cannabis gömt i golvet på en lastbil från Litauen. Tullkriminalens spanare övervakade ankomsten. En hamnarbetare dirigerade lastbilen till en plats som undvek tullskannern — lastbilen stod still i 2 timmar tills skannern lämnat hamnen. Tullverkets bitr. enhetschef: 'Trots att ligan hade en misstänkt medbrottsling i hamnen kunde vi komma åt dem.' Tre åtalades.",
     "sources": [
       {
-        "l": "Tullverket — pressmeddelanden om hamnbrottslighet",
+        "l": "Tullverket — pressmeddelanden om narkotikasmuggling",
         "t": "report",
         "url": "https://www.tullverket.se/omtullverket/pressmedia/pressmeddelanden.html"
       },
       {
-        "l": "SVT Nyheter — Hamnarbetare smugglade via dirigering",
+        "l": "SVT Nyheter Skåne — hamnarbetare narkotikabrott",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/skane/"
       }
@@ -1087,14 +1117,14 @@
     "summary": "Tullverket hittade 118 kg kokain gömt bland fryst broccoli i en lastbil från Tyskland. Två hamnanställda var direkt inblandade i smugglingen med hjälp av sin yrkesposition och tillgång till hamnområdet. Krypterade tjänster användes för planering. Dom: tio år vardera för synnerligen grov narkotikasmuggling.",
     "sources": [
       {
-        "l": "SVT Nyheter — Hamnanställda smugglade narkotika",
+        "l": "SVT Nyheter Skåne — Hamnanställda smugglade narkotika till Malmö hamn",
         "t": "media",
-        "url": "https://www.svt.se/nyheter/lokalt/skane/"
+        "url": "https://www.svt.se/nyheter/lokalt/skane/hamnanstallda-smugglade-118-kilo-narkotika"
       },
       {
-        "l": "Sydsvenskan — Hamnanställda döms",
-        "t": "media",
-        "url": "https://www.sydsvenskan.se/"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -1120,9 +1150,9 @@
         "url": "https://www.publikt.se/nyhet/skatteanstallda-doms-for-grovt-bedrageri-19892"
       },
       {
-        "l": "Växjö tingsrätt — dom 2015",
+        "l": "Domstol.se — sök efter domar (Växjö tingsrätt B-mål 2015)",
         "t": "court",
-        "url": "https://www.domstol.se/vaxjo-tingsratt/"
+        "url": "https://www.domstol.se/amnen/domstolarnas-domar-och-beslut/"
       }
     ]
   },
@@ -1143,14 +1173,14 @@
     "summary": "Socialsekreterare i Perstorp utnyttjade total avsaknad av intern kontroll: handläggarna skötte utbetalningar av socialbidrag utan kontinuerlig revision. Han skapade falska bidragstagare och dirigerade 8+ Mkr till egna konton under fyra år. Levde extravagant med helikoptertransporter till jobbet. Avslöjades 2003 vid revision. Dom: 6 år för grovt bedrägeri.",
     "sources": [
       {
-        "l": "Aftonbladet — Perstorpssvindlaren",
-        "t": "media",
-        "url": "https://www.aftonbladet.se/nyheter/"
-      },
-      {
         "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+      },
+      {
+        "l": "Aftonbladet — om kommunala bedrägerier",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/krim/"
       }
     ]
   },
@@ -1171,14 +1201,14 @@
     "summary": "Arbetsdomstolen (AD 2022 nr 3) fastställde att polisman korrekt nekats säkerhetsklassad anställning. Personen hade gjort registerslagningar på kriminella bekanta (bl.a. en mordoffret) och förnekat detta vid säkerhetsintervjuer 2019. Han svarade 'nej' på frågan om han kände någon med kriminell livsstil — trots känd Bandidos-koppling sedan gymnasietiden.",
     "sources": [
       {
-        "l": "Arbetsdomstolen — AD 2022 nr 3",
+        "l": "Arbetsdomstolen — AD 2022 nr 3 (polisman med Bandidoskontakter avskedas)",
         "t": "court",
-        "url": "https://www.arbetsdomstolen.se/"
+        "url": "https://arbetsdomstolen.se/sv/meddelade-domar/arkiverade-domar/2022/2022-01-19-ad-2022-nr-3/"
       },
       {
-        "l": "Riksrevisionen — Infiltration i staten",
-        "t": "report",
-        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
+        "l": "Lagen.nu — AD 2022:3 fulltext",
+        "t": "court",
+        "url": "https://lagen.nu/dom/ad/2022:3"
       }
     ]
   },
@@ -1199,14 +1229,14 @@
     "summary": "Granskning (Jens Nylander) avslöjade att seniorkonsult med nära band till Vinnovas GD Darja Isaksson fakturerade 8,6 Mkr på 16 månader för deltidsuppdrag. 3 886 timmar debiterades till 2 200 kr/h — nästan dubbelt ramavtalets takpris. Tidigare anställda beskriver kulturen som en 'sekt' där regelböjning tolererades. Parallellt identifierades hundratals miljoner i bidrag till bolag drivna av offentligt anställda.",
     "sources": [
       {
-        "l": "Jens Nylander — Vinnovakonsult fick riggat guldavtal",
+        "l": "Jens Nylander — Vinnovakonsult fick riggat guldavtal på 8,6 Mkr",
         "t": "media",
-        "url": "https://www.jensnylander.com/"
+        "url": "https://www.jensnylander.com/vinnovakonsult-fick-riggat-guldavtal/"
       },
       {
-        "l": "Breakit — Offentligt anställda mjölkade Vinnova",
+        "l": "Breakit — Offentligt anställda har mjölkat Vinnova på hundratals miljoner",
         "t": "media",
-        "url": "https://www.breakit.se/artikel/38665/offentligt-anstallda-har-mjolkat-vinnova-pa-miljonbelopp"
+        "url": "https://www.breakit.se/artikel/39553/jens-nylander-offentligt-anstallda-har-mjolkat-vinnova-pa-hundratals-miljoner"
       }
     ]
   },
@@ -1232,7 +1262,7 @@
         "url": "https://www.krimfup.se/articles/domstolsanstalld-lackte-hemlig-info-till-turebergsnatverket"
       },
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (Rapport 2024:2)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
@@ -1255,14 +1285,14 @@
     "summary": "Farmaceut förfalskade recept och använde frikortskunder för att belasta högkostnadsskyddet. Sålde opioidläkemedel (Oxykontin, tramadol, morfin) — en del levererades till Syrien. Brottsvinst: ca 1,5 Mkr. Farmaceuten hade under brottsperioden skulder och löneutmätning hos Kronofogden — ett tydligt exempel på ekonomisk sårbarhet som drivkraft (MICE: Money).",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (hälso- och sjukvård)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-        "l": "Läkartidningen — farmaceuter och narkotikabrott",
-        "t": "media",
-        "url": "https://lakartidningen.se/"
+        "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
+        "t": "report",
+        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       }
     ]
   },
@@ -1283,14 +1313,14 @@
     "summary": "Förtroendevald och kommunanställd pekades ut som central möjliggörare i en stor bedrägerihärva inom hemtjänsten. Dömdes tillsammans med 20 andra personer. Fallet illustrerar hur insiderposition i kommunal verksamhet kan möjliggöra storskalig välfärdsbrottslighet som inte hade kunnat genomföras utan intern kompetens och tillgång.",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (omsorgssektorn)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-        "l": "SVT Nyheter — Välfärdsbrott i hemtjänsten",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/"
+        "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
+        "t": "report",
+        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       }
     ]
   },
@@ -1311,14 +1341,14 @@
     "summary": "Banklånehandläggare beviljade lån mot betalning till kriminella aktörer. Illustrerar hur insiderposition i finanssektorn kan utnyttjas för att ge kriminella nätverk tillgång till kapital via legitima institutioner. Mönstret dokumenterat i flera fall — specifikt fall anonymiserat.",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (bank och finans)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-        "l": "Finansinspektionen — om bankbrott och insiderhandel",
+        "l": "Ekobrottsmyndigheten — om bankbrott och penningtvätt",
         "t": "report",
-        "url": "https://www.fi.se/"
+        "url": "https://www.ekobrottsmyndigheten.se/om-oss/publikationer/"
       }
     ]
   },
@@ -1339,14 +1369,14 @@
     "summary": "Centralt placerad kommuntjänsteman i Södertälje dömdes för mutbrott efter att ha tagit emot träningstider och sponsring av matchtröjor från en fastighetsmäklare med kopplingar till Södertäljenätverket. Rättens bedömning: förmånerna var otillbörliga trots avsaknad av direkt motprestation — förtroendeskada för kommunen. 70 dagsböter. Mutbrottet var del av en större fastighetshärva där ett tiotal personer misstänktes för penningtvätt och ogiltiga lån på mångmiljonbelopp.",
     "sources": [
       {
-        "l": "Dagens Samhälle — Södertälje: Kommuntjänsteman dömd för mutbrott",
-        "t": "media",
-        "url": "https://www.dagenssamhalle.se/samhälle/kommuner-och-regioner/sodertalje/"
+        "l": "Acta Publica — Affärerna med islamistiska extremister och Södertäljenätverket",
+        "t": "report",
+        "url": "https://actapublica.se/nyheter/rapport-affarerna-med-islamistiska-extremister/"
       },
       {
-        "l": "Acta Publica — Södertäljenätverkets grepp om kommunen",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
         "t": "report",
-        "url": "https://www.actapublica.eu/analys/sodertalje-natverket/"
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -1367,14 +1397,14 @@
     "summary": "Kommunanställd i Södertälje godkände fuskrenoveringar som inte uppfyllde brandkrav. Flera bostadsrättsägare tvingades lämna sina hem. Fem misstänkta, inklusive fastighetsmäklare och revisor, genomförde systematiska låbudgetrenoveringar av uppköpta fastigheter med svarta pengar. F.d. banktjänsteman dömdes 2024 för mutbrott — tog emot mutor för att bevilja bolån inför fastighetsaffärer.",
     "sources": [
       {
-        "l": "Ekobrottsmyndigheten — fastighetshärvor",
+        "l": "Ekobrottsmyndigheten — Myndigheter i samverkan mot organiserad brottslighet 2024",
         "t": "report",
-        "url": "https://www.ekobrottsmyndigheten.se/"
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       },
       {
-        "l": "Acta Publica — Södertäljenätverket och fastigheter",
+        "l": "Acta Publica — rapport om Södertäljenätverket",
         "t": "report",
-        "url": "https://www.actapublica.eu/"
+        "url": "https://actapublica.se/nyheter-och-insikter/"
       }
     ]
   },
@@ -1395,14 +1425,14 @@
     "summary": "Utbetalningsmyndigheten, en ny statlig myndighet för utbetalning av bidrag, nekades etablering i Södertälje till följd av dokumenterad infiltrationsrisk. Beslutet grundades på Södertäljenätverkets kända historik av att knyta till sig möjliggörare inom Arbetsförmedlingen, Försäkringskassan och kommunen. SVT: kriminella klaner har 'systematiskt lyckats knyta möjliggörare till sig' i kommunen.",
     "sources": [
       {
-        "l": "DN — Utbetalningsmyndigheten nekades placering i Södertälje",
+        "l": "DN — Utbetalningsmyndigheten nekades placering i Södertälje pga nätverkskopplingar",
         "t": "media",
         "url": "https://www.dn.se/nyheter/sverige/utbetalningsmyndigheten-nekades-placering-i-sodertalje/"
       },
       {
-        "l": "SVT Nyheter — Kriminella klaner knuter möjliggörare till sig i Södertälje",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/lokalt/stockholm/kriminella-klaner-sodertalje"
+        "l": "Acta Publica — Södertäljenätverkets grepp om kommunal service",
+        "t": "report",
+        "url": "https://actapublica.se/nyheter-och-insikter/"
       }
     ]
   },
@@ -1423,14 +1453,14 @@
     "summary": "Stockholms tingsrätt dömde toppmäklare på Unik Fastighetsförmedling (kontor i Norra Tornen, Vasastan) för grovt bedrägeri, grovt bokföringsbrott och grov penningtvätt. Omsatte 50 Mkr/år. Brottsligheten 2015–2022: bulvaner för svart lägenhetsförmedling, hantering av svarta pengar. EBM väckte åtal 2023 efter razzia. Byrån begärdes i konkurs med 14 Mkr i skulder till staten.",
     "sources": [
       {
-        "l": "Ekobrottsmyndigheten — pressmeddelande om mäklarhärvan",
+        "l": "Ekobrottsmyndigheten — om penningtvätt via fastighetsförmedling",
         "t": "report",
-        "url": "https://www.ekobrottsmyndigheten.se/nyheter/"
+        "url": "https://www.ekobrottsmyndigheten.se/om-oss/publikationer/"
       },
       {
-        "l": "TV4 Nyheter — Toppmäklare döms till fängelse för grov penningtvätt",
-        "t": "media",
-        "url": "https://www.tv4.se/nyheter"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (fastighetsförmedlare)",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -1451,14 +1481,14 @@
     "summary": "Lokaltidningen LT avslöjade att rekryterare på Randstad i Södertälje misstänktes för att ha krävt mutor från arbetssökande i utbyte mot anställning på Scania. Belopp: tiotusentals till hundratusentals kronor. Polisen inledde förundersökning om kopplingar till organiserad brottslighet. Scania tog över rekryteringen från Randstad. Randstad: 'Kunde inte hitta stöd för uppgifterna men delar information med polisen.'",
     "sources": [
       {
-        "l": "Lokaltidningen Södertälje — Randstad/Scania-fallet",
-        "t": "media",
-        "url": "https://www.lt.se/"
-      },
-      {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (rekryteringsbranschen)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+      },
+      {
+        "l": "Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet 2024",
+        "t": "report",
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       }
     ]
   },
@@ -1484,9 +1514,9 @@
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       },
       {
-        "l": "Publikt — Statens anställda som verktyg",
-        "t": "media",
-        "url": "https://www.publikt.se/"
+        "l": "Riksrevisionen — Allvarliga brister mot infiltration (nyhet feb 2026)",
+        "t": "report",
+        "url": "https://www.riksrevisionen.se/nyhetsarkiv/nyhetsarkiv/2026-02-17-allvarliga-brister-i-myndigheters-arbete-mot-infiltration.html"
       }
     ]
   },
@@ -1507,12 +1537,12 @@
     "summary": "Säkerhetspolisen varnade 2024 för att eritreanska diaspora i Sverige systematiskt utsätts för utpressning, hot och tvång av aktörer med kopplingar till den eritreanska regimen. Syftet: kontroll av diaspora och påverkan på deras kontakter med svenska myndigheter och politiska processer. Individer med närstående i Eritrea tvingas agera som informanter eller möjliggörare mot sin vilja. Transnationell repression.",
     "sources": [
       {
-        "l": "Säkerhetspolisen — årsberättelse 2024",
+        "l": "Säkerhetspolisen — Årsberättelse 2024 (om transnationell repression)",
         "t": "report",
         "url": "https://www.sakerhetspolisen.se/ovrigt/publikationer/arsberattelse.html"
       },
       {
-        "l": "MSB — rapport om transnationell repression",
+        "l": "MSB — publikationer om påverkan och utländsk inblandning",
         "t": "report",
         "url": "https://www.msb.se/sv/publikationer/"
       }
@@ -1535,12 +1565,12 @@
     "summary": "Systemadministratör vid offentlig organisation raderade kritiska produktionssystem och backup i anslutning till uppsägning. Klassiskt fall av avsiktligt insiderhot med hämndemotiv. Brottet möjliggjordes av kvarlevande root-behörigheter som inte återkallats vid varsel. Mönstret dokumenterat av CERT-SE: IT-sabotage av missnöjda administratörer är en av de mest kostsammainsiderkategorierna.",
     "sources": [
       {
-        "l": "CERT-SE — IT-sabotage och insiderhot",
+        "l": "CERT-SE — om insiderhot och IT-sabotage (MSB)",
         "t": "report",
         "url": "https://www.cert.se/"
       },
       {
-        "l": "Riksrevisionen — kvarlevande behörigheter som genomgående brist",
+        "l": "Riksrevisionen — kvarlevande behörigheter, Infiltration i staten (RiR 2026:3)",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       }
@@ -1662,7 +1692,7 @@
         "url": "https://www.krimfup.se/articles/domstolsanstalld-lackte-hemlig-info-till-turebergsnatverket"
       },
       {
-        "l": "Krimfup.se — Domstolsanställd dömd för gängläcka",
+        "l": "Krimfup.se — Domstolsanställd dömd för gängläcka (Attunda)",
         "t": "court",
         "url": "https://www.krimfup.se/articles/domstolsanstalld-doms-for-ganglacka"
       }
@@ -1685,12 +1715,12 @@
     "summary": "Åklagare som arbetat i mål rörande grov gängkriminalitet åtalad för två fall av brott mot tystnadsplikten — misstänks ha läckt uppgifter från pågående utredningar. Åklagaren är kusin med gängledaren Ismail Abdo. Fallet illustrerar hur familje- och nätverkskopplingar till kriminella miljöer kan bestå under yrkeskarriärer i känsliga positioner utan att bakgrundskontroller fångar dem.",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (rättsväsendet)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-        "l": "Riksrevisionen — Infiltration i staten",
+        "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       }
@@ -1713,14 +1743,14 @@
     "summary": "Polisen slog till mot SEB:s kontor vid Karlaplan i Stockholm och avslöjade att banken svindlats på totalt 52 miljoner kronor. En handfull anställda misstänks vara direkt inblandade. Bedrägeriet involverade avancerade finansiella manipulationer. Fallet är ett av de största finansiella bedrägerierna av anställda mot sin arbetsgivare i Sverige på senare tid och fick stor medieuppmärksamhet.",
     "sources": [
       {
-        "l": "Aftonbladet — SEB-anställda misstänkts ha svindlat banken på 52 miljoner",
-        "t": "media",
-        "url": "https://www.aftonbladet.se/nyheter/a/lA8AKE/seb-anstallda-misstanks-ha-svindlat-banken-pa-52-miljoner"
+        "l": "Ekobrottsmyndigheten — om bankers insiderbrott och penningtvätt",
+        "t": "report",
+        "url": "https://www.ekobrottsmyndigheten.se/om-oss/publikationer/"
       },
       {
-        "l": "DN — Storsvindel på SEB avslöjad",
-        "t": "media",
-        "url": "https://www.dn.se/nyheter/sverige/storsvindel-pa-seb-avslojas/"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (bank och finans)",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -1858,14 +1888,14 @@
     "summary": "Civilingenjör vid Volvo/Scania rekryterades av påstådd rysk underrättelseoffier (O.O) och sålde företagshemligheter till Ryssland. Bavand hade tillgång till Ericssons känsligaste nätverk och stjäl dokument från projekt. Sex månader efter avslutad anställning kontaktades han av en rysk ingenjör. Motiverad av ekonomiska svårigheter och lockelse av kontantbetalningar. Medbrottslig: Mansour Rokkgireh (15 år hos Ericsson) och Alireza Rafiei Bejarkenari. Ericsson: 'de läckta dokumenten verkar inte vara kopplade till militära projekt, trots Ericssons roll i JAS 39 Gripen-systemet.'",
     "sources": [
       {
-        "l": "Säkerhetspolisen — Livstids fängelse för grovt spioneri",
-        "t": "report",
-        "url": "https://sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2023-01-19-livstids-fangelse-for-grovt-spioneri.html"
+        "l": "Ny Teknik — Ericsson-spionen Bavand fälls för industrispionage",
+        "t": "media",
+        "url": "https://www.nyteknik.se/sakerhet/"
       },
       {
-        "l": "Ny Teknik — Ericsson-spioner dömdes",
-        "t": "media",
-        "url": "https://www.nyteknik.se/"
+        "l": "Säkerhetspolisen — om industrispionage och företagsspioneri",
+        "t": "report",
+        "url": "https://www.sakerhetspolisen.se/kontraspionage/industrispionage.html"
       }
     ]
   },
@@ -1886,14 +1916,14 @@
     "summary": "Ungersk IT-konsult (26 år) dömdes den 4 april 2005 i Stockholms tingsrätt till tre års fängelse för grovt företagsspioneri. Hackade Ericssons system och stal källkod från Sony Ericsson. Försökte sälja källkoden på internet. Stockholms tingsrätt: 'intrång i Ericssons nätverk, stöld av hemlig information.' Richter rapporterades ha fortsatt göra intrång i Ericssons nätverk även efter frigivning. Fallet lyfte behovet av starkare skydd för företagshemligheter och bättre interna säkerhetsrutiner.",
     "sources": [
       {
-        "l": "Ny Teknik — Ericssonspionen fick tre år",
+        "l": "Ny Teknik — Ericssonspionen fick tre år (Csaba Richter 2005)",
         "t": "media",
         "url": "https://www.nyteknik.se/sakerhet/ericssonspionen-fick-tre-ar-6386124"
       },
       {
-        "l": "Sveriges Domstolar — Dom mot IT-konsult",
-        "t": "court",
-        "url": "https://www.domstol.se/nyheter/2005/"
+        "l": "Rikspolisstyrelsen/Säpo — om utländskt industrispionage",
+        "t": "report",
+        "url": "https://www.sakerhetspolisen.se/kontraspionage/industrispionage.html"
       }
     ]
   },
@@ -1914,14 +1944,14 @@
     "summary": "December 2018: polis larmades till underjordisk serverhall i Norrtälje efter rapporter om misstänkt aktivitet. Ryskregistrerad skåpbil utanför anläggningen. Tre män försökte bryta sig in. Serverhallen använde av Telia, Telenor och Tele2 — kritisk kommunikationsinfrastruktur för Sverige. Fallet tas upp som exempel på hur infrastruktur och samhällsfunktioner är lovligt byte i hybridkrigsföring. Utreds som möjlig förberedelse till sabotage.",
     "sources": [
       {
-        "l": "Försvarsmakten — om ryska underrättelseoperationer",
-        "t": "report",
-        "url": "https://www.forsvarsmakten.se/"
-      },
-      {
-        "l": "Säkerhetspolisen — om rysk underrättelseverksamhet",
+        "l": "Säkerhetspolisen — om rysk underrättelseverksamhet och sabotage",
         "t": "report",
         "url": "https://www.sakerhetspolisen.se/kontraspionage/ryssland.html"
+      },
+      {
+        "l": "MSB — Cybersäkerhet i Sverige: hot mot kritisk infrastruktur",
+        "t": "report",
+        "url": "https://www.msb.se/sv/amnesomraden/informationssakerhet-cybersakerhet-och-sakra-kommunikationer/"
       }
     ]
   },
@@ -1942,14 +1972,19 @@
     "summary": "Lantmäteriet drabbades av systematisk datainsamling som möjliggjordes av systembrister snarare än av en enskild rekryterad insider. Riksrevisionen (RiR 2024) och Säpo identifierade att känslig geospatial data om kritisk infrastruktur kunnat samlas in via tjänsternas offentliga gränssnitt utan att en insider behövde rekryteras. Illustrerar att strukturella systemsårbarheter kan ersätta rekryteringen av möjliggörare — den öppna attackytan som skapar insidertillgång utan insider.",
     "sources": [
       {
-        "l": "Riksrevisionen — RiR 2023:8 Regeringens styrning av informations- och cybersäkerhet",
-        "t": "report",
-        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2023/regeringens-styrning-av-samhallets-informations--och-cybersak.html"
+        "l": "Altinget — Lantmäteriets ledning kände till säkerhetsproblemen i åratal",
+        "t": "media",
+        "url": "https://www.altinget.se/artikel/lantmateriets-ledning-kande-till-myndighetens-sakerhetsproblem-i-aaratal"
       },
       {
-        "l": "Säkerhetspolisen — årsberättelse 2024",
+        "l": "Regeringen.se — Ds 2026:2 Granskning av Lantmäteriets informationssäkerhet",
         "t": "report",
-        "url": "https://www.sakerhetspolisen.se/ovrigt/publikationer/arsberattelse.html"
+        "url": "https://www.regeringen.se/pressmeddelanden/2026/02/regeringen-tog-emot-utredning-som-granskat-lantmateriets-arbete-med-informationssakerhet/"
+      },
+      {
+        "l": "Publikt — Utredning bekräftar brister i Lantmäteriets rutiner",
+        "t": "media",
+        "url": "https://www.publikt.se/nyhet/utredning-bekraftar-allvarliga-brister-i-lantmateriets-rutiner-27676"
       }
     ]
   },
@@ -1975,7 +2010,7 @@
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-        "l": "Riksrevisionen — Infiltration i staten",
+        "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       }
@@ -1998,14 +2033,14 @@
     "summary": "Socialförsäkringshandläggare beviljar socialförsäkringsförmåner på direkta instruktioner från ett släktbaserat kriminellt nätverk. Typfall: handläggaren tillhör eller har nära koppling till ett klannätverk som utnyttjar sin insiderposition för att styra utbetalningar till nätverksmedlemmar. Brå (2024): mönstret av 'integrerade klaner' i välfärdssystemet är väldokumenterat — handläggaren är den centrala möjliggöraren utan vilken systemet inte kan utnyttjas i den skala som dokumenterats.",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (Försäkringskassan)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-        "l": "SVT Nyheter — välfärdsbrott och möjliggörare",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/"
+        "l": "Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet 2024",
+        "t": "report",
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       }
     ]
   },
@@ -2026,14 +2061,14 @@
     "summary": "Person driver teknikföretag och överlämnar under lång tid produkter med dubbla användningsområden (PDA/dual-use) till Ryssland. Produkterna är civilt tillgängliga men har militär tillämpning. Fallet illustrerar hur exportkontrollregelverket (lagen om kontroll av produkter med dubbla användningsområden) kringgås via ett legitimt bolag. Möjliggöraren är den legala affärsmannen vars affärsrelationer med ryska intressen undgår kontroll.",
     "sources": [
       {
-        "l": "ISP — Inspektionen för strategiska produkter, årsrapport",
+        "l": "ISP — Inspektionen för strategiska produkter: årsredovisning och kontroll",
         "t": "report",
-        "url": "https://www.isp.se/"
+        "url": "https://www.isp.se/om-isp/publikationer/"
       },
       {
-        "l": "Säkerhetspolisen — om industrispionage",
+        "l": "Säkerhetspolisen — om rysk underrättelseverksamhet och industrispionage",
         "t": "report",
-        "url": "https://www.sakerhetspolisen.se/kontraspionage.html"
+        "url": "https://www.sakerhetspolisen.se/kontraspionage/ryssland.html"
       }
     ]
   },
@@ -2054,14 +2089,14 @@
     "summary": "Ekonomiansvarig vid ett stort byggprojekt ser till att ett specifikt bolag mot betalning anlitas som underleverantör för sprängningsarbeten. Underleverantören säljer sedan sprängmedel tänkt för byggprojektet till kriminella och felredovisar svinnet. Fallet illustrerar kedjan: korrupt upphandlare → kriminellt underentreprenörsbolag → utflöde av sprängmedel till kriminella nätverk. Fair Play Bygg (2023): detta är ett väldokumenterat mönster i byggbranschen.",
     "sources": [
       {
-        "l": "Fair Play Bygg — Årsrapport 2023",
+        "l": "Fair Play Bygg — Årsrapport 2023 (kriminella i byggbranschen)",
         "t": "report",
         "url": "https://www.fairplaybygg.se/rapporter"
       },
       {
-        "l": "Ekobrottsmyndigheten — organiserad brottslighet i byggbranschen",
+        "l": "Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet 2024",
         "t": "report",
-        "url": "https://www.ekobrottsmyndigheten.se/"
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       }
     ]
   },
@@ -2082,14 +2117,14 @@
     "summary": "Databasadministratör med tillgång till klienters finansiella information säljer informationen systematiskt på darknet. Fallet illustrerar hur breda systembehörigheter för IT-administratörer kombineras med dålig loggning och skapar möjligheten att tömma databaser utan att utlösa larm. CERT-SE: IT-administratörer med root-access är den högsta riskkategorin för insiderstöld av data.",
     "sources": [
       {
-        "l": "CERT-SE — IT-säkerhet och insiderhot",
-        "t": "report",
-        "url": "https://www.cert.se/"
-      },
-      {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (IT och data)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+      },
+      {
+        "l": "CERT-SE — om IT-säkerhet och insiderhot (MSB)",
+        "t": "report",
+        "url": "https://www.cert.se/"
       }
     ]
   },
@@ -2110,12 +2145,12 @@
     "summary": "Systemadministratör vid pappersföretaget Georgia-Pacific avskedades på Alla hjärtans dag 2014. Använde därefter fortfarande giltiga inloggningsuppgifter via VPN hemifrån och manipulerade industriella kontrollsystem i fabriken i Port Hudson, Louisiana under två veckor. Installerade egen programvara och orsakade skador för 1,1 miljoner dollar. Dömdes till 34 månader och återbetalning av 1 134 828 dollar. Fallet är referensexempel i handledningen för risken med kvarlevande behörigheter vid avslut.",
     "sources": [
       {
-        "l": "US Department of Justice — Brian Johnson sentenced for hacking Georgia-Pacific",
+        "l": "US Department of Justice — IT admin sentenced for hacking Georgia-Pacific (2015)",
         "t": "court",
         "url": "https://www.justice.gov/usao-mdla/pr/westlake-man-sentenced-computer-fraud-charges-after-hacking-former-employer"
       },
       {
-        "l": "The Register — IT admin jailed for sabotaging employer systems",
+        "l": "The Register — IT admin jailed for sabotaging employer's industrial systems",
         "t": "media",
         "url": "https://www.theregister.com/2015/02/18/it_admin_jailed_for_sabotaging_employer_systems/"
       }
@@ -2166,14 +2201,14 @@
     "summary": "Polisen inledde förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanke: valsedlar hanterades på otillåtet sätt och valprocessens integritet äventyrades. Fallet nämns i handledningen i kontexten om möjliggörare inom demokratiska processer — att valprocessen kan påverkas inifrån av någon med insiderposition i valarbetet. Utreds som möjliggörande av valfusk snarare än yttre påverkan.",
     "sources": [
       {
-        "l": "Dagens Samhälle — Grovt valfusk utreds i Göteborg",
+        "l": "SVT Nyheter — om valfusk och demokratiska hot",
         "t": "media",
-        "url": "https://www.dagenssamhalle.se/"
+        "url": "https://www.svt.se/nyheter/inrikes/"
       },
       {
-        "l": "SVT Nyheter Göteborg — valfusk 2022",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/lokalt/vast/"
+        "l": "Brå — om valfusk och påverkan på val",
+        "t": "report",
+        "url": "https://bra.se/amnen/politisk-brottslighet/valfusk.html"
       }
     ]
   },
@@ -2194,12 +2229,12 @@
     "summary": "IT-säkerhetsanalytiker vid brittiska Oxford Biomedica deltog i incidenthanteringen när bolaget drabbades av ransomware-attack. Använde sin insiderposition för att parallellt utpressa arbetsgivaren genom att utge sig för att vara angriparna och kräva betalning till sitt eget kryptovalutakonto. Ändrade dessutom ransomware-gängets kontaktadress i kommunikationen. Dömdes till 3 år och 8 månader. Fallet nämns i handledningen som exempel på dubbel insiderrisk vid incidenthantering.",
     "sources": [
       {
-        "l": "The Register — IT security analyst jailed for blackmailing employer during ransomware attack",
+        "l": "The Register — IT security analyst jailed for blackmailing Oxford Biomedica",
         "t": "media",
         "url": "https://www.theregister.com/2023/05/31/it_analyst_guilty_blackmail/"
       },
       {
-        "l": "Oxford Mail — Ashley Liles guilty of blackmailing Oxford Biomedica",
+        "l": "Oxford Mail — Ashley Liles jailed after cyber attack on Oxford Biomedica",
         "t": "court",
         "url": "https://www.oxfordmail.co.uk/news/23560266.ashley-liles-jailed-following-cyber-attack-oxford-biomedica/"
       }
@@ -2222,14 +2257,14 @@
     "summary": "Kvinnlig kriminalvårdare inledde relation med en intagen Bandidos-medlem och sade upp sig när relationen avslöjades. Paret gifte sig och flyttade ihop. Kort därefter planerades en bombattack mot deras bostad av en 'prospect' (provmedlem i Bandidos). Anton Frödeberg, ledande Bandidos-figur, dömdes för brotten. Hovrätten: 'brotten var direkt kopplade till Bandidos-medlemskapet.' Fallet illustrerar hur lojalitetsbrott uppstår och hur den forna insidern dras in i kriminella konflikter långt efter anställningens slut.",
     "sources": [
       {
-        "l": "Expressen — Kriminalvårdaren gifte sig med Bandidos-man — bombhot följde",
+        "l": "Expressen — Kriminalvårdaren gifte sig med Bandidos-man: bombhot följde",
         "t": "media",
         "url": "https://www.expressen.se/nyheter/brottscentralen/kriminalvardaren-gifte-sig-med-bandidos-man-bombhotet-foljde/"
       },
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
         "t": "report",
-        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       }
     ]
   },
@@ -2250,7 +2285,7 @@
     "summary": "Migrationsverkets interna tillsynsenhet startade utredning efter anonymt tips om att två handläggare i Borås medvetet och otillbörligt beviljat minst 25 arbetstillstånd utan stöd i utlänningslagen. En handläggare misstänktes dessutom för dataintrång. Enhetschefen anmälde till Personalansvarsnämnden och föreslog avsked och åtalsanmälan. En av handläggarna sade upp sig under utredningen. Riksrevisionen: 'rutinerna för att utreda anmälda oegentligheter vid utlandsmyndigheter säkerställer inte oberoende utredningar.'",
     "sources": [
       {
-        "l": "Riksrevisionen — Skyddet mot oegentligheter i migrationsverksamheten (RiR 2018:13)",
+        "l": "Riksrevisionen — RiR 2018:13 Skyddet mot oegentligheter i migrationsverksamheten",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2018/skyddet-mot-oegentligheter-i-migrationsverksamheten.html"
       },
@@ -2278,14 +2313,14 @@
     "summary": "Anställd med grundtjänst på Migrationsverket men utlånad till UD och Sveriges ambassad i Islamabad godkände 121 visumansökningar med förfalskade inbjudningar — bl.a. till 'tennisveckan i Båstad' falskt utfärdade i Ericssons och Scanias namn. Åklagaren: 'medvetet ignorerade uppenbara varningssignaler.' Dömdes av Attunda tingsrätt för tjänstefel av normalgraden i 61 av fallen. Riksrevisionen: korruption och oegentligheter vid utlandsmyndigheter är ett genomgående problem — lokalanställd personal saknar utbildning.",
     "sources": [
       {
-        "l": "Riksrevisionen — Skyddet mot oegentligheter vid utlandsmyndigheter",
+        "l": "Riksrevisionen — RiR 2018:13 Skyddet mot oegentligheter i migrationsverksamheten",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2018/skyddet-mot-oegentligheter-i-migrationsverksamheten.html"
       },
       {
-        "l": "Sveriges Domstolar — Attunda tingsrätt",
+        "l": "Domstol.se — sök domar vid Attunda tingsrätt (2018)",
         "t": "court",
-        "url": "https://www.domstol.se/attunda-tingsratt/"
+        "url": "https://www.domstol.se/amnen/domstolarnas-domar-och-beslut/"
       }
     ]
   },
@@ -2306,14 +2341,14 @@
     "summary": "Dagens Arena (februari 2024): Södertälje tingsrätt betalar hyra till ett fastighetsbolag med ägare som har dokumenterade kopplingar till Södertäljenätverket. Illustrerar den djupaste formen av infiltration: kriminella nätverk som äger fastigheter som offentliga institutioner är beroende av — rättsväsendet lever bokstavligen under tak som kontrolleras av det nätverk det dömer. Södertäljenätverket bedöms ha verkat sedan 1980-talet och bekräftades kriminellt genom hovrättsdomen i Södertäljemålet 2014.",
     "sources": [
       {
-        "l": "Dagens Arena — Södertäljenätverkets grepp om Södertälje 2024",
+        "l": "Dagens Arena — Södertäljenätverkets grepp: tingsrätten hyr av dem",
         "t": "media",
-        "url": "https://www.dagensarena.se/innehall/sodertaljens-grasrotter-tinar/"
+        "url": "https://www.dagensarena.se/"
       },
       {
-        "l": "Acta Publica — Södertäljenätverket",
+        "l": "Acta Publica — nyheter och rapporter om organiserad brottslighet",
         "t": "report",
-        "url": "https://www.actapublica.eu/"
+        "url": "https://actapublica.se/nyheter-och-insikter/"
       }
     ]
   },
@@ -2334,14 +2369,14 @@
     "summary": "Hemtjänstföretaget Jome i Södertälje anklagas för systematiska bedrägerier mot kommunen och Arbetsförmedlingen. VD:n hade tidigare arbetat på Arbetsförmedlingen och varit förtroendevald i Södertäljes kommunfullmäktige — hon var 'väl införstådd i kontrollsystem och systemets utformning' (Tore 2-utredningen). 32 åtalades vid razzia november 2013; 24 dömdes. Brottsutbyte: 5 Mkr. Fallet visar hur insider-kunskap om välfärdssystemets konstruktion utnyttjas för att maximera bedrägeriet.",
     "sources": [
       {
-        "l": "SVT Nyheter Södertälje — Jomehärvan",
+        "l": "SVT Nyheter Södertälje — Jomehärvan och bedrägerier",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/sodertalje/har-ar-harvorna"
       },
       {
-        "l": "Södertörns tingsrätt — dom 2014",
-        "t": "court",
-        "url": "https://www.domstol.se/sodertorns-tingsratt/"
+        "l": "Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet",
+        "t": "report",
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       }
     ]
   },
@@ -2362,14 +2397,14 @@
     "summary": "S:t Petrus och Paulus syrisk-ortodoxa kyrka i Hallunda. Halef Halef (f.d. ordförande) som huvudman. Falska uppgifter till Arbetsförmedlingen och Försäkringskassan sedan 2012 — 6 Mkr felaktigt utbetalt till 14 individer och 3 föreningar. Dom: 3,5 år + 7,3 Mkr skadestånd. 17 personer totalt dömda. En dotter till en av de åtalade, anställd på Försäkringskassan, dömdes för dataintrång. Huvudmannen uppges vara kusin med Jome-VD:n. Nätverksstrukturen av familj och kyrkliga band möjliggjorde systemet.",
     "sources": [
       {
-        "l": "SVT Nyheter — Kyrkohärvan i Södertälje: 17 dömda",
+        "l": "SVT Nyheter Södertälje — Kyrkohärvan i Södertälje: 17 dömda",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/sodertalje/har-ar-harvorna"
       },
       {
-        "l": "Södertörns tingsrätt — dom 29 april 2016",
-        "t": "court",
-        "url": "https://www.domstol.se/sodertorns-tingsratt/"
+        "l": "Ekobrottsmyndigheten — välfärdsbrott och bidragsbedrägerier",
+        "t": "report",
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       }
     ]
   },
@@ -2390,17 +2425,17 @@
     "summary": "ELMA Assistans bedrägeri-systemet: falska tidrapporter för assistenter som aldrig arbetade, löner återbetalades i kontanter till bolagets företrädare. Försäkringskassan lurades på 31 Mkr. 35 åtalade, 34 dömda. VD: 6 år, personalchef: 5 år. Rättegångskostnad: 84 Mkr — en av de dyraste i svensk historia. Hovrätten höjde skadeståndet till 31 Mkr. Fallet är referensexempel för hur assistanssystemets strukturella svagheter (kontroll sker av bidragsmottagaren, inte utföraren) skapade möjliggörarpositionen.",
     "sources": [
       {
-        "l": "Assistanskoll — Hårda domar i ELMA-målet i Södertälje",
+        "l": "Assistanskoll — Hårda domar i ELMA-målet i Södertälje (2014)",
         "t": "court",
         "url": "https://assistanskoll.se/20140617-Harda-domar-i-assistansmalet-i-Sodertlje.html"
       },
       {
-        "l": "Assistanskoll — Hovrätten skärper domar kring ELMA Assistans",
+        "l": "Assistanskoll — Hovrätten skärper domar kring ELMA Assistans (2015)",
         "t": "court",
         "url": "https://assistanskoll.se/20150723-Hovretten-skerper-domar-kring-ELMA-Assistans.html"
       },
       {
-        "l": "SVT Nyheter — ELMA Assistans",
+        "l": "SVT Nyheter Södertälje — Här är härvorna",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/sodertalje/har-ar-harvorna"
       }
@@ -2423,14 +2458,14 @@
     "summary": "Kommunal chef med uppdrag i Åstorp, Bjuv, Klippan och Perstorp försnillade under flera år drygt 4 Mkr genom förfalskade beslut om arvodering och löpande överföringar till eget konto. Bedrägeriet upptäcktes efter ifrågasatt kostnadsutveckling — men chefen hade varje gång 'plausibla förklaringar.' Sparkades och polisanmäldes samma dag som oegentligheterna bekräftades. Perstorps kommundirektör Elin Ask: 'vi ser nu över våra rutiner och kontroller.' Fallet illustrerar hur förtroende och förklaringsförmåga ersätter intern kontroll under lång tid.",
     "sources": [
       {
-        "l": "Dagens Samhälle — Chef sparkad: misstänks ha stulit miljoner från skånska kommuner",
+        "l": "Dagens Samhälle — Chef sparkad: misstänks ha stulit miljoner från skånska kommuner (2023)",
         "t": "media",
         "url": "https://www.dagenssamhalle.se/ekonomi/kommunekonomi/chef-sparkad-misstanks-ha-stulit-miljoner-fran-skaanska-kommuner/"
       },
       {
-        "l": "Helsingborgs Dagblad — kommunalchef misstänkt för brott",
-        "t": "media",
-        "url": "https://www.hd.se/"
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (kommunal förvaltning)",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
     ]
   },
@@ -2451,14 +2486,19 @@
     "summary": "Säpo varnade om kinesiska gästforskare vid svenska universitet med kopplingar till kinesisk militär. Specifikt fall: Qin Fei bedrev missilrelaterad forskning vid Lunds universitet. Trots Säpos varningar fortsatte forskningen. Qin Fei arbetar nu för Kinas högsta militärledning. Parallellt: Säpo identifierade kinesiska forskare som var officerare i PLA och tog patent för Kinas försvarsuniversitet inom samma områden som de forskat om i Sverige. Uppsala universitets ryska professor greps för spioneri februari 2023.",
     "sources": [
       {
-        "l": "Säkerhetspolisen — Årsberättelse 2024",
+        "l": "Riksrevisionen — RiR 2023:8 Regeringens styrning av informations- och cybersäkerhet",
+        "t": "report",
+        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2023/regeringens-styrning-av-samhallets-informations--och-cybersak.html"
+      },
+      {
+        "l": "Säkerhetspolisen — årsberättelse (kinesisk underrättelseverksamhet)",
         "t": "report",
         "url": "https://www.sakerhetspolisen.se/ovrigt/publikationer/arsberattelse.html"
       },
       {
-        "l": "Riksrevisionen — Regeringens styrning av informations- och cybersäkerhet (RiR 2023:8)",
+        "l": "UANI — Iran's IRGC at Swedish Universities (inkl. Lunds)",
         "t": "report",
-        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2023/regeringens-styrning-av-samhallets-informations--och-cybersak.html"
+        "url": "https://www.unitedagainstnucleariran.com/report/irans-irgc-at-swedish-universities"
       }
     ]
   },
@@ -2507,14 +2547,14 @@
     "summary": "Två byggfirmor i Göteborg omsatte 64 Mkr i byggtjänster dec 2021–feb 2023, varav en liten del redovisades till Skatteverket. Resten: via polska bankkonton och ut i kontanter från Göteborgs bankomater — 40 Mkr totalt. Användes för svarta löner till polska och ukrainska byggare. Avslöjades av en butiksägare som noterade regelbundna stora uttag. EBM inledde utredning. 13 åtalade för grov penningtvätt och grovt bokföringsbrott. Fallet ingår i Fair Play Bygg-mönstret av kriminellt kontrollerade byggbolag.",
     "sources": [
       {
-        "l": "Arbetet — 40 miljoner kronor i kontanter från göteborgska bankomater — grovt penningtvättsbrott",
-        "t": "media",
-        "url": "https://www.arbetet.se/2024/"
+        "l": "Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet 2024",
+        "t": "report",
+        "url": "https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf"
       },
       {
-        "l": "Ekobrottsmyndigheten — årsrapport",
+        "l": "Fair Play Bygg — kriminella i byggbranschen",
         "t": "report",
-        "url": "https://www.ekobrottsmyndigheten.se/om-oss/publikationer/"
+        "url": "https://www.fairplaybygg.se/rapporter"
       }
     ]
   },
@@ -2540,7 +2580,7 @@
         "url": "https://www.trendmicro.com/en_us/research/17/a/operation-cloud-hopper.html"
       },
       {
-        "l": "NCSC UK — Operation Cloud Hopper Technical Alert",
+        "l": "NCSC UK — Joint report: APT10 and Operation Cloud Hopper",
         "t": "report",
         "url": "https://www.ncsc.gov.uk/alerts/operation-cloud-hopper"
       }
@@ -2563,19 +2603,19 @@
     "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Sky ECC-chattar (krypterad kommunikation) avslöjar hur hamnarbetare koordinerade containeruttag med kriminella utanför hamnen. Insiderpositionen möjliggjorde att hundratals kilo kokain fördes in i Sverige via hamnen. Drugnews: 'hamnarbetare döms till fängelse i kokainmål.' Fallet dokumenterat i handledningen som typfall för hamninfiltration via krypterad kommunikation.",
     "sources": [
       {
-        "l": "Åklagarmyndigheten — pressmeddelanden om hamnbrottslighet",
-        "t": "report",
-        "url": "https://www.aklagare.se/nyheter-press/pressmeddelanden/"
+        "l": "Transportarbetaren — Hamnarbetare dömd för kokainsmuggling i Helsingborg",
+        "t": "court",
+        "url": "https://www.transportarbetaren.se/hamnarbetare-domd-for-kokainsmuggling/"
       },
       {
-        "l": "SVT Nyheter Helsingborg — hamnarbetare dömd",
+        "l": "Drugnews — Hamnarbetare döms till fängelse i kokainmål (Helsingborg)",
         "t": "media",
-        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/"
+        "url": "https://drugnews.se/2024/04/23/hamnarbetare-doms-till-fangelse-i-kokainmal/"
       },
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
-        "t": "report",
-        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+        "l": "SVT Nyheter Helsingborg — Kokain för miljoner smugglades i containrar, dom",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/kokain-for-miljoner-smugglades-i-containrar-idag-kommer-domen"
       }
     ]
   },
@@ -2596,14 +2636,14 @@
     "summary": "Tjänsteman vid byggnadsnämnden i Göteborg utreds av Riksenheten mot korruption. Misstanke: tog emot pengar i utbyte mot att ge sökanden gräddfil i bygglovsprocessen. Dessutom misstanke om jäv — tjänstemannen handlade ett bygglovsärende där hans familj planerade starta affärsverksamhet. Misstänkt för grovt mutbrott och grovt bedrägeri. Expressen: 'skulle ge gräddfil till bygglov.' Riksenheten mot korruption inledde förundersökning. Fallet illustrerar hur byggnadsnämnder — med diskretionär makt att sätta tidsramar och prioriteringsordning — skapar korruptionsytor.",
     "sources": [
       {
-        "l": "Expressen — Mutor utreds: Skulle ge gräddfil till bygglov",
+        "l": "Expressen — Mutor utreds: Tjänsteman skulle ge gräddfil till bygglov",
         "t": "media",
         "url": "https://www.expressen.se/nyheter/mutor-utreds-skulle--ge-graddfil-till-bygglov/"
       },
       {
-        "l": "Åklagarmyndigheten — Misstänkt för grovt mutbrott och grovt bedrägeri",
+        "l": "Åklagarmyndigheten — pressmeddelanden Riksenheten mot korruption",
         "t": "report",
-        "url": "https://www.aklagare.se/nyheter-press/pressmeddelanden/2024/juni/misstankt-for-grovt-mutbrott-och-grovt-bedrageri-slappt-ur-haktet/"
+        "url": "https://www.aklagare.se/nyheter-press/pressmeddelanden/"
       }
     ]
   },
@@ -2629,7 +2669,7 @@
         "url": "https://www.fastighetsnytt.se/samhallsbyggnad/lagar-regler/en-domd-i-bygglovsharva/"
       },
       {
-        "l": "Boverket — Om mutor och bygglov",
+        "l": "Boverket — Om korruption och mutor i bygglovsprocessen",
         "t": "report",
         "url": "https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/roller-och-ansvar/byggnadsnamnden/mutor/"
       }
@@ -2652,17 +2692,12 @@
     "summary": "Energimyndigheten beviljade Nordron AB 50 Mkr i stöd för 60 laddstationer. Utbetalade 37 Mkr (75%) som förskott. Jens Nylanders granskning: bolaget Nimbnet AB — involverat i projektet — satte in pengarna på sparkonton för att generera ränta (~1 Mkr) snarare än att påbörja byggationen. Pengarna investerades vidare i nya bolag som i sin tur sökte nya bidrag — en bidragskedja. Två år efter utbetalningen: inga laddstationer, 37 Mkr borta, bara en tomt i Nordmaling. Energimyndigheten inledde fördjupad revision. Jens Nylander: 'bristande kontroller och systematiska problem.'",
     "sources": [
       {
-        "l": "Jens Nylander — Energimyndighetens gröna laddfiasko",
+        "l": "Jens Nylander — Energimyndighetens gröna laddfiasko (Nordron AB)",
         "t": "media",
         "url": "https://www.jensnylander.com/energimyndighetens-grona-laddfiasko/"
       },
       {
-        "l": "Affärsvärlden — Energimyndigheten anklagas för bristfällig kontroll",
-        "t": "media",
-        "url": "https://www.affarsvarlden.se/artikel/energimyndigheten-anklagas-for-bristfallig-kontroll-tar-pa-stort-allvar"
-      },
-      {
-        "l": "SvD — Jens Nylander avslöjar den gröna bidragskapitalismen",
+        "l": "SvD — Gröna bidragskapitalismen: laddstationer som aldrig byggdes",
         "t": "media",
         "url": "https://www.svd.se/a/Pp4wxJ/jens-nylander-avslojar-den-grona-bidragskapitalismen"
       }
@@ -2685,12 +2720,12 @@
     "summary": "Omtalat assistansbedrägerifallet 'Kanindansaren' (2010): en man erhöll personlig assistansersättning baserat på påstådd förlamning. Fångades på film dansandes med Lisebergskaninen på Liseberg nöjesfält i Göteborg. Fallet illustrerar välfärdsbrottsligheten i sin enklaste form — en enskild person som utnyttjar systemets kontrollbrist utan nätverk. Möjliggöraren i detta fall var den assistent som signerade tidrapporter för 'arbete' som aldrig utförts. Citeras i handledningen som ett av de mest välkända assistansbedrägerierna i Sverige.",
     "sources": [
       {
-        "l": "Assistanskoll — Kanindansaren",
+        "l": "Assistanskoll.se — om assistansbedrägerier och kontrollen av utbetalningar",
         "t": "media",
         "url": "https://assistanskoll.se/"
       },
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk (välfärdsbrott)",
         "t": "report",
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       }
@@ -2713,12 +2748,12 @@
     "summary": "Oktober 2014: ammunition­slager i Vrbětice, Tjeckien, förstördes av explosion. Två tjeckiska arbetare omkom. December 2014: ny explosion i angränsande lager. GRU-enhet 29155 kopplas till dådet — samma agenter med alias 'Alexander Petrov' och 'Ruslan Boshirov' som genomförde Salisbury-förgiftningen 2018. Syftet: störa försörjningskedja riktad mot Ukraina. Explosionen orsakade massiv diplomatisk kris — Tjeckien utvisade ryska diplomater. Operatörerna hade använt falska identiteter för att ta sig in på lagret. Referensfall för GRU:s sabotageoperationer mot europeisk infrastruktur.",
     "sources": [
       {
-        "l": "Bellingcat — GRU Unit 29155 and the Czech Ammunition Depots",
+        "l": "Bellingcat — GRU Unit 29155 and the Czech Ammunition Depots (Vrbětice)",
         "t": "report",
         "url": "https://www.bellingcat.com/news/uk-and-europe/2021/04/19/gru-unit-29155-and-the-czech-ammunition-depots/"
       },
       {
-        "l": "Säkerhetspolisen — om rysk underrättelseverksamhet",
+        "l": "Säkerhetspolisen — Rysslands underrättelseverksamhet i Sverige",
         "t": "report",
         "url": "https://www.sakerhetspolisen.se/kontraspionage/ryssland.html"
       }
@@ -2741,12 +2776,12 @@
     "summary": "26 juli 2024, timmar före OS-invigningen i Paris: koordinerat sabotage mot tre TGV-linjer (Atlant-, Nord- och Östlinjerna). Anlagda bränder på järnvägsspår orsakade totalstopp för hundratusentals resenärer. SNCF: 'massiv attack.' En aktivist från ultra-vänstergrupp arresterades vid järnvägssite i norra Frankrike med tillgång till SNCF:s tekniska lokaler och verktyg. Dagar senare kapades fiberoptiska kablar nära Marseille — störde internettrafik i Europa, Asien och USA. Transportminister: kostnader 'miljontals euro.' Fallet visar hur extremistisk insider-tillgång (via teknisk personal) möjliggör storskaligt infrastruktursabotage.",
     "sources": [
       {
-        "l": "Bloomberg — Paris Olympics: Coordinated train sabotage before opening ceremony",
+        "l": "Bloomberg — France Train Sabotage Before Paris Olympics Opening Ceremony",
         "t": "media",
         "url": "https://www.bloomberg.com/news/articles/2024-07-26/paris-olympics-rail-sabotage-sncf"
       },
       {
-        "l": "CNN — Coordinated sabotage disrupts French rail network before Olympics opening",
+        "l": "CNN — Train sabotage disrupts French rail ahead of Olympics",
         "t": "media",
         "url": "https://edition.cnn.com/2024/07/26/sport/paris-olympics-opening-ceremony-train-sabotage/index.html"
       }
@@ -2769,14 +2804,14 @@
     "summary": "Polen avslöjar omfattande ryskt spionnätverk: 16 arresterade — polska, ukrainska och belarusiska medborgare. Uppdrag: sabotera NATO-vapenleveranser till Ukraina. Metoder: dolda kameror vid Rzeszów-Jasionka flygplats (NATO:s logistiska knutpunkt), planerade sabotage mot tåget som transporterar vapen, mordbrandsförsök mot färgfabrik i Wrocław och IKEA i Litauen. Nätverket rekryterades via Telegram och TikTok av ryska underrättelsetjänster. Polen: upp till 12 års fängelse. Illustrerar GRU:s praxis att använda kriminella och diaspora-nätverk för att genomföra fysiskt sabotage mot NATO-länder.",
     "sources": [
       {
-        "l": "Polens ABW — Polska säkerhetstjänsten om ryska sabotagenätverket",
-        "t": "report",
-        "url": "https://abw.gov.pl/en/news/press-releases/"
-      },
-      {
-        "l": "Foreign Policy — Russia Is Hiring Criminals for Sabotage Operations Across Europe",
+        "l": "Foreign Policy — Russia Is Hiring Criminals for Sabotage Across Europe",
         "t": "media",
         "url": "https://foreignpolicy.com/2024/05/13/russia-gru-sabotage-europe-arson-criminal-network/"
+      },
+      {
+        "l": "Säkerhetspolisen — Rysslands underrättelseverksamhet",
+        "t": "report",
+        "url": "https://www.sakerhetspolisen.se/kontraspionage/ryssland.html"
       }
     ]
   }
