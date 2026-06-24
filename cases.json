@@ -2290,5 +2290,195 @@
         "t": "media"
       }
     ]
+  },
+  {
+    "id": "c91",
+    "title": "Göteborg bygglovskorruption — tjänsteman erbjöd gräddfil mot betalning, jäv i familjeärende",
+    "date": "2024-03",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Tjänsteman vid byggnadsnämnden i Göteborg utreds av Riksenheten mot korruption. Misstanke: tog emot pengar i utbyte mot att ge sökanden gräddfil i bygglovsprocessen. Dessutom misstanke om jäv — tjänstemannen handlade ett bygglovsärende där hans familj planerade starta affärsverksamhet. Misstänkt för grovt mutbrott och grovt bedrägeri. Expressen: 'skulle ge gräddfil till bygglov.' Riksenheten mot korruption inledde förundersökning. Fallet illustrerar hur byggnadsnämnder — med diskretionär makt att sätta tidsramar och prioriteringsordning — skapar korruptionsytor.",
+    "sources": [
+      {
+        "l": "Expressen — Mutor utreds: Skulle ge gräddfil till bygglov",
+        "t": "media"
+      },
+      {
+        "l": "Åklagarmyndigheten pressmeddelande 2024 — Misstänkt för grovt mutbrott och grovt bedrägeri",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c92",
+    "title": "Lysekil bygglovshärva — lokalpolitiker och byggkonsult förfalskade bygglovsdokument",
+    "date": "2022-01",
+    "loc": {
+      "m": "Lysekil",
+      "r": "Västra Götaland",
+      "lat": 58.27,
+      "lng": 11.44,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Lokalpolitiker och byggkonsult i Lysekils kommun polisanmäldes för att ha förfalskat bygglovsdokument och missbrukat sin förtroendeställning. Tre byggnader uppförda utan giltiga bygglov — politikern hade lovat familjerna att ordna tillstånden. Åtalades för två fall av grov trolöshet mot huvudman. Dom: villkorlig dom och 110 dagsböter. Friades från grov urkundsförfalskning — domstolen ansåg att de förfalskade dokumenten 'saknade tillräcklig information för att uppfattas som giltiga.' Fallet visar hur trolöshet mot huvudman tillämpas när förtroendeposition missbrukas utan penningtransaktioner.",
+    "sources": [
+      {
+        "l": "Fastighetsnytt — En dömd i bygglovshärva",
+        "t": "court"
+      },
+      {
+        "l": "Handledningen kap 3 — Lokala myndigheter och kommuner",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c93",
+    "title": "Energimyndigheten — Nordron AB fick 37 Mkr, investerade i ränta istället för laddstationer",
+    "date": "2024-06",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Energimyndigheten beviljade Nordron AB 50 Mkr i stöd för 60 laddstationer. Utbetalade 37 Mkr (75%) som förskott. Jens Nylanders granskning: bolaget Nimbnet AB — involverat i projektet — satte in pengarna på sparkonton för att generera ränta (~1 Mkr) snarare än att påbörja byggationen. Pengarna investerades vidare i nya bolag som i sin tur sökte nya bidrag — en bidragskedja. Två år efter utbetalningen: inga laddstationer, 37 Mkr borta, bara en tomt i Nordmaling. Energimyndigheten inledde fördjupad revision. Jens Nylander: 'bristande kontroller och systematiska problem.'",
+    "sources": [
+      {
+        "l": "Jens Nylander — Energimyndighetens gröna laddfiasko",
+        "t": "media"
+      },
+      {
+        "l": "Affärsvärlden — Energimyndigheten anklagas för bristfällig kontroll",
+        "t": "media"
+      },
+      {
+        "l": "SvD — Jens Nylander avslöjar den gröna bidragskapitalismen",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c94",
+    "title": "Kanindansaren — assistansbluffaren dansade med Lisebergskaninen medan han påstods vara förlamad",
+    "date": "2010-01",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.7,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "HEALTH",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Omtalat assistansbedrägerifallet 'Kanindansaren' (2010): en man erhöll personlig assistansersättning baserat på påstådd förlamning. Fångades på film dansandes med Lisebergskaninen på Liseberg nöjesfält i Göteborg. Fallet illustrerar välfärdsbrottsligheten i sin enklaste form — en enskild person som utnyttjar systemets kontrollbrist utan nätverk. Möjliggöraren i detta fall var den assistent som signerade tidrapporter för 'arbete' som aldrig utförts. Citeras i handledningen som ett av de mest välkända assistansbedrägerierna i Sverige.",
+    "sources": [
+      {
+        "l": "Handledningen kap 3 — Assistansbidragsbrott",
+        "t": "report"
+      },
+      {
+        "l": "Aftonbladet — Kanindansaren",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c95",
+    "title": "GRU-enhet 29155 — Vrbětice-explosionen i Tjeckien, samma agenter som Salisbury",
+    "date": "2014-10",
+    "loc": {
+      "m": "Vrbětice",
+      "r": "Tjeckien",
+      "lat": 49.05,
+      "lng": 18.01,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Oktober 2014: ammunition­slager i Vrbětice, Tjeckien, förstördes av explosion. Två tjeckiska arbetare omkom. December 2014: ny explosion i angränsande lager. GRU-enhet 29155 kopplas till dådet — samma agenter med alias 'Alexander Petrov' och 'Ruslan Boshirov' som genomförde Salisbury-förgiftningen 2018. Syftet: störa försörjningskedja riktad mot Ukraina. Explosionen orsakade massiv diplomatisk kris — Tjeckien utvisade ryska diplomater. Operatörerna hade använt falska identiteter för att ta sig in på lagret. Referensfall för GRU:s sabotageoperationer mot europeisk infrastruktur.",
+    "sources": [
+      {
+        "l": "Handledningen kap 3 — GRU 29155",
+        "t": "report"
+      },
+      {
+        "l": "Bellingcat — GRU Unit 29155",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c96",
+    "title": "Frankrike OS 2024 — koordinerat tågsabotage timmar före invigning, ultra-vänster gripen",
+    "date": "2024-07",
+    "loc": {
+      "m": "Paris",
+      "r": "Frankrike",
+      "lat": 48.86,
+      "lng": 2.35,
+      "p": "approximate"
+    },
+    "sector": "TRANSPORT",
+    "actor": "EXTREMIST",
+    "status": "CONFIRMED",
+    "summary": "26 juli 2024, timmar före OS-invigningen i Paris: koordinerat sabotage mot tre TGV-linjer (Atlant-, Nord- och Östlinjerna). Anlagda bränder på järnvägsspår orsakade totalstopp för hundratusentals resenärer. SNCF: 'massiv attack.' En aktivist från ultra-vänstergrupp arresterades vid järnvägssite i norra Frankrike med tillgång till SNCF:s tekniska lokaler och verktyg. Dagar senare kapades fiberoptiska kablar nära Marseille — störde internettrafik i Europa, Asien och USA. Transportminister: kostnader 'miljontals euro.' Fallet visar hur extremistisk insider-tillgång (via teknisk personal) möjliggör storskaligt infrastruktursabotage.",
+    "sources": [
+      {
+        "l": "Bloomberg — Paris Olympic Games Train Sabotage",
+        "t": "media"
+      },
+      {
+        "l": "CNN — Coordinated sabotage Paris Olympics",
+        "t": "media"
+      },
+      {
+        "l": "Handledningen kap 3 — Frankrike inför OS 2024",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c97",
+    "title": "Polskt sabotagenätverk — 16 gripna, rysk GRU-operation mot NATO-vapenleveranser till Ukraina",
+    "date": "2024-05",
+    "loc": {
+      "m": "Rzeszów",
+      "r": "Polen",
+      "lat": 50.04,
+      "lng": 22.0,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Polen avslöjar omfattande ryskt spionnätverk: 16 arresterade — polska, ukrainska och belarusiska medborgare. Uppdrag: sabotera NATO-vapenleveranser till Ukraina. Metoder: dolda kameror vid Rzeszów-Jasionka flygplats (NATO:s logistiska knutpunkt), planerade sabotage mot tåget som transporterar vapen, mordbrandsförsök mot färgfabrik i Wrocław och IKEA i Litauen. Nätverket rekryterades via Telegram och TikTok av ryska underrättelsetjänster. Polen: upp till 12 års fängelse. Illustrerar GRU:s praxis att använda kriminella och diaspora-nätverk för att genomföra fysiskt sabotage mot NATO-länder.",
+    "sources": [
+      {
+        "l": "Handledningen kap 3 — Polskt sabotagenätverk",
+        "t": "report"
+      },
+      {
+        "l": "Foreign Policy — Russia's Hybrid Warfare",
+        "t": "media"
+      }
+    ]
   }
 ]
