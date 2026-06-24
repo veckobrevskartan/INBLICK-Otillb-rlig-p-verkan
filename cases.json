@@ -1856,5 +1856,439 @@
         "t": "report"
       }
     ]
+  },
+  {
+    "id": "c74",
+    "title": "Brian Johnson (USA) — avskedstanke systemadm. saboterade Georgia-Pacific via kvarlevande VPN-åtkomst",
+    "date": "2014-02",
+    "loc": {
+      "m": "Port Hudson, Louisiana",
+      "r": "USA",
+      "lat": 30.71,
+      "lng": -91.04,
+      "p": "approximate"
+    },
+    "sector": "IT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Systemadministratör vid pappersföretaget Georgia-Pacific avskedades på Alla hjärtans dag 2014. Använde därefter fortfarande giltiga inloggningsuppgifter via VPN hemifrån och manipulerade industriella kontrollsystem i fabriken i Port Hudson, Louisiana under två veckor. Installerade egen programvara och orsakade skador för 1,1 miljoner dollar. Dömdes till 34 månader och återbetalning av 1 134 828 dollar. Fallet är referensexempel i handledningen för risken med kvarlevande behörigheter vid avslut.",
+    "sources": [
+      {
+        "l": "US Department of Justice — Sentenced for Hacking Industrial Facility",
+        "t": "court"
+      },
+      {
+        "l": "The Register — IT Admin Sentenced After Revenge Hack",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c75",
+    "title": "1177-skandalen — MedHelp lät 2,7 miljoner patienters samtal ligga okrypterade nåbara via internet",
+    "date": "2019-02",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "HEALTH",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Leverantören MedHelp hade sedan 2013 låtit 2,7 miljoner samtal till 1177 Vårdguiden lagras okrypterat och nåbart via öppet internet — inga lösenord, inga åtkomstkontroller. Journalisten Jens Lapidus avslöjde. Inspektionen för vård och omsorg utfärdade sanktionsavgift på 12 Mkr mot MedHelp och 250 000 kr mot Region Sörmland. Fallet illustrerar leverantörskedjerisken (tredjepartshot): den offentliga aktören delegerar ansvar till privat leverantör utan tillräcklig kontroll av säkerhetskrav.",
+    "sources": [
+      {
+        "l": "SVT — Region Sörmland får betala 250 000 kr",
+        "t": "media"
+      },
+      {
+        "l": "Läkartidningen — MedHelp ska betala 12 miljoner",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c76",
+    "title": "Göteborg valfusk 2022 — grovt valfusk utreds, valsedlar manipulerade",
+    "date": "2022-09",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "EXTREMIST",
+    "status": "INDICATION",
+    "summary": "Polisen inledde förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanke: valsedlar hanterades på otillåtet sätt och valprocessens integritet äventyrades. Fallet nämns i handledningen i kontexten om möjliggörare inom demokratiska processer — att valprocessen kan påverkas inifrån av någon med insiderposition i valarbetet. Utreds som möjliggörande av valfusk snarare än yttre påverkan.",
+    "sources": [
+      {
+        "l": "Dagens Samhälle — Grovt valfusk utreds i Göteborg",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c77",
+    "title": "Ashley Liles (UK) — IT-säkerhetsanalytiker utpressade sin arbetsgivare under pågående ransomware-attack",
+    "date": "2023-05",
+    "loc": {
+      "m": "Letchworth, UK",
+      "r": "UK",
+      "lat": 51.97,
+      "lng": -0.22,
+      "p": "approximate"
+    },
+    "sector": "IT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "IT-säkerhetsanalytiker vid brittiska Oxford Biomedica deltog i incidenthanteringen när bolaget drabbades av ransomware-attack. Använde sin insiderposition för att parallellt utpressa arbetsgivaren genom att utge sig för att vara angriparna och kräva betalning till sitt eget kryptovalutakonto. Ändrade dessutom ransomware-gängets kontaktadress i kommunikationen. Dömdes till 3 år och 8 månader. Fallet nämns i handledningen som exempel på dubbel insiderrisk vid incidenthantering.",
+    "sources": [
+      {
+        "l": "The Register — IT Security Analyst Blackmail",
+        "t": "media"
+      },
+      {
+        "l": "Oxford Mail — Ashley Liles guilty of Oxford Biomedica blackmail",
+        "t": "court"
+      }
+    ]
+  },
+  {
+    "id": "c78",
+    "title": "Kriminalvårdare gifte sig med Bandidos-man — hamnade mitt i bombhotskonflikt",
+    "date": "2022-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Kvinnlig kriminalvårdare inledde relation med en intagen Bandidos-medlem och sade upp sig när relationen avslöjades. Paret gifte sig och flyttade ihop. Kort därefter planerades en bombattack mot deras bostad av en 'prospect' (provmedlem i Bandidos). Anton Frödeberg, ledande Bandidos-figur, dömdes för brotten. Hovrätten: 'brotten var direkt kopplade till Bandidos-medlemskapet.' Fallet illustrerar hur lojalitetsbrott uppstår och hur den forna insidern dras in i kriminella konflikter långt efter anställningens slut.",
+    "sources": [
+      {
+        "l": "Expressen — Kriminalvårdaren gifte sig med Bandidos-man",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c79",
+    "title": "Migrationsverket Borås 2018 — handläggare beviljade minst 25 otillåtna arbetstillstånd",
+    "date": "2018-01",
+    "loc": {
+      "m": "Borås",
+      "r": "Västra Götaland",
+      "lat": 57.72,
+      "lng": 12.94,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Migrationsverkets interna tillsynsenhet startade utredning efter anonymt tips om att två handläggare i Borås medvetet och otillbörligt beviljat minst 25 arbetstillstånd utan stöd i utlänningslagen. En handläggare misstänktes dessutom för dataintrång. Enhetschefen anmälde till Personalansvarsnämnden och föreslog avsked och åtalsanmälan. En av handläggarna sade upp sig under utredningen. Riksrevisionen: 'rutinerna för att utreda anmälda oegentligheter vid utlandsmyndigheter säkerställer inte oberoende utredningar.'",
+    "sources": [
+      {
+        "l": "Migrationsverkets tillsynsenhet — intern utredning 2018",
+        "t": "report"
+      },
+      {
+        "l": "Riksrevisionen — skyddet mot oegentligheter inom migrationsverksamheten",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c80",
+    "title": "UD/Migrationsverket — handläggare godkände 121 visumansökningar med förfalskade Ericsson/Scania-inbjudningar",
+    "date": "2015-01",
+    "loc": {
+      "m": "Islamabad",
+      "r": "Pakistan",
+      "lat": 33.68,
+      "lng": 73.05,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Anställd med grundtjänst på Migrationsverket men utlånad till UD och Sveriges ambassad i Islamabad godkände 121 visumansökningar med förfalskade inbjudningar — bl.a. till 'tennisveckan i Båstad' falskt utfärdade i Ericssons och Scanias namn. Åklagaren: 'medvetet ignorerade uppenbara varningssignaler.' Dömdes av Attunda tingsrätt för tjänstefel av normalgraden i 61 av fallen. Riksrevisionen: korruption och oegentligheter vid utlandsmyndigheter är ett genomgående problem — lokalanställd personal saknar utbildning.",
+    "sources": [
+      {
+        "l": "Attunda tingsrätt dom",
+        "t": "court"
+      },
+      {
+        "l": "Riksrevisionen — skyddet mot oegentligheter vid utlandsmyndigheter",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c81",
+    "title": "Södertälje Tingsrätten — hyr lokal av fastighetsbolag ägt av Södertäljenätverket",
+    "date": "2024-02",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.195,
+      "lng": 17.625,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Dagens Arena (februari 2024): Södertälje tingsrätt betalar hyra till ett fastighetsbolag med ägare som har dokumenterade kopplingar till Södertäljenätverket. Illustrerar den djupaste formen av infiltration: kriminella nätverk som äger fastigheter som offentliga institutioner är beroende av — rättsväsendet lever bokstavligen under tak som kontrolleras av det nätverk det dömer. Södertäljenätverket bedöms ha verkat sedan 1980-talet och bekräftades kriminellt genom hovrättsdomen i Södertäljemålet 2014.",
+    "sources": [
+      {
+        "l": "Dagens Arena — Södertäljenätverkets grepp om Södertälje 2024",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c82",
+    "title": "Jomehärvan — hemtjänst-VD f.d. Arbetsförmedlingsanställd lurade kommunen på 5 Mkr",
+    "date": "2013-11",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.195,
+      "lng": 17.635,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Hemtjänstföretaget Jome i Södertälje anklagas för systematiska bedrägerier mot kommunen och Arbetsförmedlingen. VD:n hade tidigare arbetat på Arbetsförmedlingen och varit förtroendevald i Södertäljes kommunfullmäktige — hon var 'väl införstådd i kontrollsystem och systemets utformning' (Tore 2-utredningen). 32 åtalades vid razzia november 2013; 24 dömdes. Brottsutbyte: 5 Mkr. Fallet visar hur insider-kunskap om välfärdssystemets konstruktion utnyttjas för att maximera bedrägeriet.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Jomehärvan",
+        "t": "media"
+      },
+      {
+        "l": "Södertörns tingsrätt dom",
+        "t": "court"
+      }
+    ]
+  },
+  {
+    "id": "c83",
+    "title": "Kyrkohärvan Södertälje — 17 dömda för 6 Mkr i bidragsbrott mot AF och FK",
+    "date": "2016-04",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.2,
+      "lng": 17.62,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "S:t Petrus och Paulus syrisk-ortodoxa kyrka i Hallunda. Halef Halef (f.d. ordförande) som huvudman. Falska uppgifter till Arbetsförmedlingen och Försäkringskassan sedan 2012 — 6 Mkr felaktigt utbetalt till 14 individer och 3 föreningar. Dom: 3,5 år + 7,3 Mkr skadestånd. 17 personer totalt dömda. En dotter till en av de åtalade, anställd på Försäkringskassan, dömdes för dataintrång. Huvudmannen uppges vara kusin med Jome-VD:n. Nätverksstrukturen av familj och kyrkliga band möjliggjorde systemet.",
+    "sources": [
+      {
+        "l": "Södertörns tingsrätt dom 29 april 2016",
+        "t": "court"
+      },
+      {
+        "l": "SVT Nyheter — Kyrkohärvan",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c84",
+    "title": "ELMA Assistans Södertälje — 31 Mkr assistansbedrägerier, 34 av 35 dömda",
+    "date": "2015-01",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.195,
+      "lng": 17.63,
+      "p": "municipality"
+    },
+    "sector": "HEALTH",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "ELMA Assistans bedrägeri-systemet: falska tidrapporter för assistenter som aldrig arbetade, löner återbetalades i kontanter till bolagets företrädare. Försäkringskassan lurades på 31 Mkr. 35 åtalade, 34 dömda. VD: 6 år, personalchef: 5 år. Rättegångskostnad: 84 Mkr — en av de dyraste i svensk historia. Hovrätten höjde skadeståndet till 31 Mkr. Fallet är referensexempel för hur assistanssystemets strukturella svagheter (kontroll sker av bidragsmottagaren, inte utföraren) skapade möjliggörarpositionen.",
+    "sources": [
+      {
+        "l": "Hovrätten dom — ELMA Assistans",
+        "t": "court"
+      },
+      {
+        "l": "SVT Nyheter — Elma assistans",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c85",
+    "title": "Kommunal chef — försnillade 4 Mkr från fyra skånska kommuner via falska arvoderingsbeslut",
+    "date": "2023-11",
+    "loc": {
+      "m": "Perstorp",
+      "r": "Skåne",
+      "lat": 56.14,
+      "lng": 13.39,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Kommunal chef med uppdrag i Åstorp, Bjuv, Klippan och Perstorp försnillade under flera år drygt 4 Mkr genom förfalskade beslut om arvodering och löpande överföringar till eget konto. Bedrägeriet upptäcktes efter ifrågasatt kostnadsutveckling — men chefen hade varje gång 'plausibla förklaringar.' Sparkades och polisanmäldes samma dag som oegentligheterna bekräftades. Perstorps kommundirektör Elin Ask: 'vi ser nu över våra rutiner och kontroller.' Fallet illustrerar hur förtroende och förklaringsförmåga ersätter intern kontroll under lång tid.",
+    "sources": [
+      {
+        "l": "Dagens Samhälle — Chef sparkad misstänkts ha stulit miljoner från skånska kommuner 2023",
+        "t": "media"
+      },
+      {
+        "l": "Helsingborgs Dagblad 2023",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c86",
+    "title": "Lunds universitet — Qin Fei forskade om missiler, arbetar nu för Kinas militärledning",
+    "date": "2023-01",
+    "loc": {
+      "m": "Lund",
+      "r": "Skåne",
+      "lat": 55.7,
+      "lng": 13.19,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Säpo varnade om kinesiska gästforskare vid svenska universitet med kopplingar till kinesisk militär. Specifikt fall: Qin Fei bedrev missilrelaterad forskning vid Lunds universitet. Trots Säpos varningar fortsatte forskningen. Qin Fei arbetar nu för Kinas högsta militärledning. Parallellt: Säpo identifierade kinesiska forskare som var officerare i PLA och tog patent för Kinas försvarsuniversitet inom samma områden som de forskat om i Sverige. Uppsala universitets ryska professor greps för spioneri februari 2023.",
+    "sources": [
+      {
+        "l": "Säkerhetspolisen årsberättelse 2024",
+        "t": "report"
+      },
+      {
+        "l": "Riksrevisionen 2023 — brister i informationssäkerhet vid lärosäten",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c87",
+    "title": "Iran-IRGC — 8 svenska universitet i avtal där all forskning ska tillfalla revolutionsgardet",
+    "date": "2021-01",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 62.0,
+      "lng": 15.0,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "UANI-rapport (maj 2024): 8 svenska lärosäten (Lunds, Luleå, Mittuniversitetet, Malmö, SLU, Borås, Uppsala, Linnéuniversitetet) har samarbeten med iranska universitet bundna av 'The Comprehensive Act on Science and Technology in the Defense and Security Field' (2021) — all forskning i samarbetena ska överföras till IRGC. Områden: drönare, flygframdrivning, AI, avancerad elektronik. IRGC:s iranska universitetspartners är lagstiftningsvis skyldiga att leverera forskningsresultat till den väpnade styrkan.",
+    "sources": [
+      {
+        "l": "UANI rapport maj 2024 — Iran's IRGC at Swedish Universities",
+        "t": "report"
+      },
+      {
+        "l": "Säkerhetspolisen — om Irans underrättelseverksamhet",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c88",
+    "title": "Göteborg ekobrottshärva — 40 Mkr i bankomaten, svarta löner till polska och ukrainska byggare",
+    "date": "2024-01",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Två byggfirmor i Göteborg omsatte 64 Mkr i byggtjänster dec 2021–feb 2023, varav en liten del redovisades till Skatteverket. Resten: via polska bankkonton och ut i kontanter från Göteborgs bankomater — 40 Mkr totalt. Användes för svarta löner till polska och ukrainska byggare. Avslöjades av en butiksägare som noterade regelbundna stora uttag. EBM inledde utredning. 13 åtalade för grov penningtvätt och grovt bokföringsbrott. Fallet ingår i Fair Play Bygg-mönstret av kriminellt kontrollerade byggbolag.",
+    "sources": [
+      {
+        "l": "Ekobrottsmyndigheten — Göteborg penningtvättshärva 2024",
+        "t": "report"
+      },
+      {
+        "l": "Arbetet — 40 miljoner från bankomater 2024",
+        "t": "media"
+      }
+    ]
+  },
+  {
+    "id": "c89",
+    "title": "Operation Cloud Hopper — kinesisk APT10 stals data från Ericsson och SKF via IT-leverantörer",
+    "date": "2017-04",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Nationellt",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "APT10 (kinesisk hackergrupp) riktade sig mot IT-tjänsteleverantörer (MSP) för att komma åt deras kunders data. Bland de drabbade: Ericsson och SKF. Spear-phishing och fjärråtkomsttrojaner gav access. Attacken illustrerar hur insiderrisken i leverantörskedjan utnyttjas — angriparna komprometterade IT-leverantören med 'betrodd tillgång' hos kunderna. MSB och Säpo: 'belyser behovet av stärkt cybersäkerhet i hela leverantörskedjan.' Cloud Hopper ledde till ny EU-lagstiftning om IKT-leveranskedjesäkerhet.",
+    "sources": [
+      {
+        "l": "Trend Micro — Operation Cloud Hopper rapport 2017",
+        "t": "report"
+      },
+      {
+        "l": "MSB Cybersäkerhet i Sverige 2020",
+        "t": "report"
+      }
+    ]
+  },
+  {
+    "id": "c90",
+    "title": "Helsingborgs hamn — hamnarbetare dömd för kokainsmuggling via Sky ECC-koordination",
+    "date": "2024-04",
+    "loc": {
+      "m": "Helsingborg",
+      "r": "Skåne",
+      "lat": 56.04,
+      "lng": 12.69,
+      "p": "municipality"
+    },
+    "sector": "TRANSPORT",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Sky ECC-chattar (krypterad kommunikation) avslöjar hur hamnarbetare koordinerade containeruttag med kriminella utanför hamnen. Insiderpositionen möjliggjorde att hundratals kilo kokain fördes in i Sverige via hamnen. Drugnews: 'hamnarbetare döms till fängelse i kokainmål.' Fallet dokumenterat i handledningen som typfall för hamninfiltration via krypterad kommunikation.",
+    "sources": [
+      {
+        "l": "Åklagarmyndigheten pressmeddelande febr 2024",
+        "t": "report"
+      },
+      {
+        "l": "Drugnews — hamnarbetare döms",
+        "t": "media"
+      },
+      {
+        "l": "SVT Nyheter Helsingborg",
+        "t": "media"
+      }
+    ]
   }
 ]
