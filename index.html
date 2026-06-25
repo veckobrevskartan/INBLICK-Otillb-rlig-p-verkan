@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>INBLICK — Den öppna attackytan</title>
-<meta name="description" content="En interaktiv analyspublikation om otillbörlig påverkan mot offentlig sektor. 97 dokumenterade svenska fall, 25 indikatorer, fyra aktörstyper. Producerad av Svensk OSINT."/>
+<title>INBLICK — Den öppna attackytan | Svensk OSINT</title>
+<meta name="description" content="Ett encyklopediskt referensverk om otillbörlig påverkan mot svensk offentlig sektor. 110 dokumenterade fall, 14 analysmoduler, 749 källor. Strukturerat i tre delar: Förstå, Bedöma, Agera. Producerat av Svensk OSINT."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 :root{
   --bg:#0A1628;--bg-mid:#112040;--bg-surf:#162B52;--bg-card:#0E1E38;
   --text:#F0EDE6;--muted:#8A9AB0;--dim:#4A5A6A;
-  --accent:#B8973A;--accent-d:#7A6325;--accent-g:rgba(184,151,58,.12);
+  --accent:#B8973A;--accent-l:#CDA842;--accent-d:#7A6325;--accent-g:rgba(184,151,58,.12);
   --green:#4A7B6F;--orange:#C45C2E;--purple:#9B4FBB;
   --border:rgba(184,151,58,.16);--border-s:rgba(240,237,230,.07);
   --fd:"Cormorant Garamond",Georgia,serif;
@@ -24,182 +24,240 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:15px;line-height:1.6;overflow-x:hidden}
 body::before{content:"";position:fixed;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent 0%,var(--accent) 8%,var(--accent) 92%,transparent 100%);z-index:300;opacity:.8;pointer-events:none}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent-d);border-radius:3px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 52px}
-@media(max-width:768px){.wrap{padding:0 20px}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 52px}
+@media(max-width:768px){.wrap{padding:0 22px}}
+em{font-style:italic}
+a{color:inherit}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s)}
-.nav-i{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:1160px;margin:0 auto;padding:0 52px}
-.nav-brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+/* ─── NAV ─── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border-s)}
+.nav-i{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1180px;margin:0 auto;padding:0 52px}
+.nav-brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;flex-shrink:0}
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
-.nav-name{font-family:var(--fd);font-size:18px;font-weight:500;color:var(--text)}
-.nav-links{display:flex;gap:2px;list-style:none}
-.nav-links a{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 10px;transition:.2s}
-.nav-links a:hover{background:var(--accent-g);color:var(--accent)}
-.nav-cta{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--accent);text-decoration:none;padding:7px 14px;transition:.2s;flex-shrink:0}
-.nav-cta:hover{background:#cda842}
-@media(max-width:860px){.nav-links{display:none}.nav-i{padding:0 20px}}
+.nav-name{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--text);letter-spacing:.02em}
+.nav-links{display:flex;gap:0;list-style:none;align-items:center}
+.nav-links a{font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 13px;transition:.2s;position:relative}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a .nl-rom{font-family:var(--fd);font-style:italic;font-size:12px;color:var(--accent);opacity:.6;margin-right:5px}
+.nav-cta{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--accent);text-decoration:none;padding:8px 16px;transition:.2s;flex-shrink:0;margin-left:8px}
+.nav-cta:hover{background:var(--accent-l)}
+@media(max-width:900px){.nav-links{display:none}.nav-i{padding:0 22px}}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding-top:52px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
-.hero-bg{position:absolute;inset:0;opacity:.03}
-.hero-bg-grid{width:100%;height:100%;background-image:linear-gradient(rgba(184,151,58,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(184,151,58,.4) 1px,transparent 1px);background-size:80px 80px}
-.hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1;padding:80px 0}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:48px;padding:60px 0}}
-.hero-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:12px}
-.hero-eyebrow::before{content:"";display:block;width:32px;height:1px;background:var(--accent)}
-.hero-title{font-family:var(--fd);font-size:clamp(48px,6vw,84px);font-weight:300;line-height:1.02;letter-spacing:-.02em;margin-bottom:16px}
+/* ─── HERO ─── */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:56px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(transparent,var(--bg));pointer-events:none;z-index:2}
+.hero-bg{position:absolute;inset:0;opacity:.035;pointer-events:none}
+.hero-bg-grid{width:100%;height:100%;background-image:linear-gradient(rgba(184,151,58,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(184,151,58,.4) 1px,transparent 1px);background-size:72px 72px}
+.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center;position:relative;z-index:1;padding:72px 0}
+@media(max-width:980px){.hero-layout{grid-template-columns:1fr;gap:48px;padding:56px 0}}
+.hero-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-eyebrow::before{content:"";display:block;width:30px;height:1px;background:var(--accent)}
+.hero-kicker{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.hero-title{font-family:var(--fd);font-size:clamp(46px,6.2vw,88px);font-weight:300;line-height:1.0;letter-spacing:-.02em;margin-bottom:20px}
 .hero-title em{font-style:italic;color:var(--accent)}
-.hero-sub{font-family:var(--fd);font-size:clamp(20px,2.4vw,28px);font-weight:300;color:var(--muted);line-height:1.4;margin-bottom:28px}
-.hero-lead{font-size:14px;color:var(--muted);line-height:1.8;max-width:480px;margin-bottom:36px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:var(--bg);font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:13px 24px;transition:.2s}
-.btn-primary:hover{background:#cda842;transform:translateY(-1px)}
-.btn-ghost{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--text);font-family:var(--fb);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:12px 24px;border:1px solid var(--border-s);transition:.2s}
+.hero-sub{font-family:var(--fd);font-size:clamp(19px,2.3vw,27px);font-weight:300;color:var(--muted);line-height:1.4;margin-bottom:26px;font-style:italic}
+.hero-lead{font-size:14px;color:var(--muted);line-height:1.8;max-width:490px;margin-bottom:34px}
+.hero-lead strong{color:var(--text);font-weight:500}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.btn-primary{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:var(--bg);font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 26px;transition:.2s}
+.btn-primary:hover{background:var(--accent-l);transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--text);font-family:var(--fb);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:13px 26px;border:1px solid var(--border-s);transition:.2s}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-.hero-meta{display:flex;gap:24px;margin-top:40px;padding-top:28px;border-top:1px solid var(--border-s)}
-.hero-meta-item{display:flex;flex-direction:column;gap:3px}
-.hero-meta-val{font-family:var(--fd);font-size:32px;font-weight:300;color:var(--accent);line-height:1}
-.hero-meta-lab{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero-meta{display:grid;grid-template-columns:repeat(4,auto);gap:30px;padding-top:30px;border-top:1px solid var(--border-s);justify-content:start}
+@media(max-width:520px){.hero-meta{grid-template-columns:repeat(2,1fr);gap:24px}}
+.hero-meta-item{display:flex;flex-direction:column;gap:4px}
+.hero-meta-val{font-family:var(--fd);font-size:34px;font-weight:300;color:var(--accent);line-height:1}
+.hero-meta-lab{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);line-height:1.3}
 
-/* CHAIN VIS */
+/* ─── CHAIN VIS (hero höger) ─── */
 .chain-vis{position:relative}
-.chain-vis-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;padding-left:16px}
+.chain-vis-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;padding-left:2px;display:flex;align-items:center;justify-content:space-between}
+.chain-vis-label span:last-child{color:var(--dim)}
 .chain-steps{display:flex;flex-direction:column;gap:2px}
-.chain-step{display:flex;align-items:stretch;gap:0;opacity:0;animation:chainIn .5s ease forwards}
-.chain-step:nth-child(1){animation-delay:.1s}
-.chain-step:nth-child(2){animation-delay:.25s}
-.chain-step:nth-child(3){animation-delay:.4s}
-.chain-step:nth-child(4){animation-delay:.55s}
-.chain-step:nth-child(5){animation-delay:.7s}
-.chain-step:nth-child(6){animation-delay:.85s}
-.chain-step:nth-child(7){animation-delay:1s}
+.chain-step{display:flex;align-items:stretch;gap:0;opacity:0;animation:chainIn .5s ease forwards;text-decoration:none}
+.chain-step:nth-child(1){animation-delay:.1s}.chain-step:nth-child(2){animation-delay:.22s}
+.chain-step:nth-child(3){animation-delay:.34s}.chain-step:nth-child(4){animation-delay:.46s}
+.chain-step:nth-child(5){animation-delay:.58s}.chain-step:nth-child(6){animation-delay:.7s}
+.chain-step:nth-child(7){animation-delay:.82s}
 @keyframes chainIn{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
-.cs-num{font-family:var(--fm);font-size:10px;font-weight:500;color:var(--accent);writing-mode:vertical-rl;text-orientation:mixed;padding:12px 8px;background:var(--bg-card);border-left:2px solid var(--accent);min-width:28px;display:flex;align-items:center;justify-content:center;letter-spacing:.1em}
+.cs-num{font-family:var(--fm);font-size:10px;font-weight:500;color:var(--accent);padding:13px 9px;background:var(--bg-card);border-left:2px solid var(--accent);min-width:34px;display:flex;align-items:center;justify-content:center;letter-spacing:.06em;transition:.2s}
 .chain-step:last-child .cs-num{border-left-color:var(--orange);color:var(--orange)}
-.cs-body{flex:1;background:var(--bg-card);padding:14px 18px;border-bottom:1px solid var(--border-s)}
-.cs-step-label{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.cs-body{flex:1;background:var(--bg-card);padding:13px 18px;border-bottom:1px solid var(--border-s);transition:.2s}
+.chain-step:hover .cs-body{background:var(--bg-mid)}
+.chain-step:hover .cs-num{background:var(--bg-mid)}
+.cs-step-label{font-family:var(--fm);font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
 .chain-step:last-child .cs-step-label{color:var(--orange)}
-.cs-title{font-size:13px;color:var(--text);font-weight:500}
-.cs-lead{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+.cs-title{font-size:13px;color:var(--text);font-weight:500;line-height:1.25}
+.cs-lead{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.45}
 
-/* DIVIDER */
-.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+/* ─── DIVIDER ─── */
+.sdiv{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
 
-/* STATS BAR */
-.stats-bar{padding:40px 0;background:var(--bg-mid);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s)}
-@media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
-.stat-cell{background:var(--bg-mid);padding:28px 32px}
-.stat-val{font-family:var(--fd);font-size:clamp(40px,5vw,60px);font-weight:300;color:var(--accent);line-height:1}
-.stat-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-.stat-note{font-size:12px;color:var(--dim);margin-top:6px;line-height:1.4}
+/* ─── THESIS-SEKTION (encyklopedisk positionering) ─── */
+.thesis{padding:88px 0;background:var(--bg-mid);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s)}
+.thesis-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:860px){.thesis-grid{grid-template-columns:1fr;gap:36px}}
+.thesis-lead{font-family:var(--fd);font-size:clamp(26px,3.2vw,40px);font-weight:300;line-height:1.25;letter-spacing:-.01em}
+.thesis-lead em{font-style:italic;color:var(--accent)}
+.thesis-body{font-size:14.5px;color:var(--muted);line-height:1.85}
+.thesis-body p{margin-bottom:18px}
+.thesis-body p:last-child{margin-bottom:0}
+.thesis-body strong{color:var(--text);font-weight:500}
 
-/* MODULES SECTION */
-.modules-section{padding:80px 0}
-.section-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.section-title{font-family:var(--fd);font-size:clamp(34px,4vw,52px);font-weight:300;line-height:1.08;margin-bottom:14px}
+/* ─── SECTION HEADERS ─── */
+.section-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:11px}
+.section-eyebrow .se-rom{font-family:var(--fd);font-style:italic;font-size:15px;opacity:.7}
+.section-title{font-family:var(--fd);font-size:clamp(32px,4vw,50px);font-weight:300;line-height:1.08;margin-bottom:16px;letter-spacing:-.01em}
 .section-title em{font-style:italic;color:var(--accent)}
-.section-intro{font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:48px}
-.module-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s)}
-@media(max-width:860px){.module-cards{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.module-cards{grid-template-columns:1fr}}
-.module-card{background:var(--bg-card);padding:28px;text-decoration:none;display:flex;flex-direction:column;gap:14px;transition:.2s;border-top:2px solid transparent;position:relative;overflow:hidden}
-.module-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border-s)}
-.module-card:hover{background:var(--bg-mid)}
-.mc-num{font-family:var(--fm);font-size:9px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
-.mc-title{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--text);line-height:1.1}
-.mc-desc{font-size:13px;color:var(--muted);line-height:1.65}
-.mc-meta{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;margin-top:auto;padding-top:14px;border-top:1px solid var(--border-s)}
-.mc-arrow{color:var(--accent);font-size:11px;margin-top:2px;transition:.2s}
-.module-card:hover .mc-arrow{transform:translateX(4px)}
+.section-intro{font-size:14px;color:var(--muted);max-width:600px;line-height:1.8}
 
-/* EVIDENCE HIERARCHY */
-.evidence-section{padding:64px 0;background:var(--bg-mid);border-top:1px solid var(--border-s)}
-.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin-top:40px}
-@media(max-width:640px){.evidence-grid{grid-template-columns:1fr}}
-.ev-cell{background:var(--bg-card);padding:28px}
-.ev-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;margin-bottom:14px}
+/* ─── DE TRE DELARNA (Förstå/Bedöma/Agera) ─── */
+.parts-section{padding:88px 0}
+.parts-intro{margin-bottom:8px}
+.part-block{margin-top:64px}
+.part-block:first-of-type{margin-top:52px}
+.part-head{display:flex;align-items:baseline;gap:20px;margin-bottom:6px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.part-roman{font-family:var(--fd);font-size:clamp(40px,5vw,64px);font-weight:300;font-style:italic;color:var(--accent);line-height:.9;flex-shrink:0}
+.part-headtext{flex:1}
+.part-name{font-family:var(--fd);font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.05;margin-bottom:4px}
+.part-q{font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.part-desc{font-size:13.5px;color:var(--muted);line-height:1.75;max-width:560px;margin:18px 0 26px}
+.part-conf{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:26px;display:flex;align-items:center;gap:8px}
+.part-conf::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+/* Modulkort i del */
+.part-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s)}
+@media(max-width:860px){.part-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.part-cards{grid-template-columns:1fr}}
+.mcard{background:var(--bg-card);padding:26px 24px 22px;text-decoration:none;display:flex;flex-direction:column;gap:11px;transition:.2s;position:relative;border-top:2px solid transparent;min-height:180px}
+.mcard:hover{background:var(--bg-mid)}
+.mcard.is-new::after{content:"Ny";position:absolute;top:14px;right:16px;font-family:var(--fm);font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:2px 7px}
+.mc-kicker{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.mc-title{font-family:var(--fd);font-size:23px;font-weight:400;color:var(--text);line-height:1.08}
+.mc-desc{font-size:12.5px;color:var(--muted);line-height:1.6;flex:1}
+.mc-foot{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;margin-top:auto;padding-top:13px;border-top:1px solid var(--border-s);display:flex;align-items:center;justify-content:space-between}
+.mc-arrow{font-size:12px;transition:.2s}
+.mcard:hover .mc-arrow{transform:translateX(4px)}
+.mc-conf{font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--dim);font-style:normal;text-transform:none;display:block;margin-top:9px;padding-top:9px;border-top:1px dotted var(--border-s);line-height:1.4}
+.mc-conf b{color:var(--muted);font-weight:500}
+
+/* ─── STATS BAR ─── */
+.stats-bar{padding:0;background:var(--bg-mid);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-s)}
+@media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-cell{background:var(--bg-mid);padding:34px 30px}
+.stat-val{font-family:var(--fd);font-size:clamp(38px,4.6vw,56px);font-weight:300;color:var(--accent);line-height:1}
+.stat-label{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);margin-top:8px;line-height:1.4}
+.stat-note{font-size:11.5px;color:var(--dim);margin-top:8px;line-height:1.5}
+
+/* ─── EVIDENCE ─── */
+.evidence-section{padding:80px 0}
+.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin-top:42px}
+@media(max-width:680px){.evidence-grid{grid-template-columns:1fr}}
+.ev-cell{background:var(--bg-card);padding:28px 26px}
+.ev-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:8px;letter-spacing:.15em;text-transform:uppercase;padding:4px 11px;margin-bottom:16px}
 .ev-badge.conf{background:rgba(74,123,111,.12);color:var(--green);border:1px solid rgba(74,123,111,.3)}
 .ev-badge.ind{background:var(--accent-g);color:var(--accent);border:1px solid rgba(184,151,58,.3)}
 .ev-badge.ana{background:rgba(196,92,46,.1);color:var(--orange);border:1px solid rgba(196,92,46,.25)}
 .ev-dot{width:6px;height:6px;border-radius:50%}
 .ev-dot.conf{background:var(--green)}.ev-dot.ind{background:var(--accent)}.ev-dot.ana{background:var(--orange)}
-.ev-title{font-family:var(--fd);font-size:20px;font-weight:400;margin-bottom:8px}
-.ev-desc{font-size:13px;color:var(--muted);line-height:1.7}
-.ev-examples{margin-top:14px;padding-top:14px;border-top:1px solid var(--border-s);display:flex;flex-direction:column;gap:7px}
-.ev-ex{font-family:var(--fm);font-size:9px;letter-spacing:.1em;color:var(--dim);display:flex;align-items:baseline;gap:8px}
-.ev-ex::before{content:"—";color:var(--accent-d);flex-shrink:0}
+.ev-count{font-family:var(--fd);font-size:30px;font-weight:300;color:var(--text);line-height:1;margin-bottom:10px}
+.ev-count span{font-size:13px;color:var(--muted);font-family:var(--fm)}
+.ev-title{font-family:var(--fd);font-size:19px;font-weight:400;margin-bottom:8px}
+.ev-desc{font-size:12.5px;color:var(--muted);line-height:1.7}
 
-/* ACTOR PREVIEW */
-.actors-section{padding:64px 0}
-.actor-preview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin-top:40px}
-@media(max-width:860px){.actor-preview-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.actor-preview-grid{grid-template-columns:1fr}}
-.ap-card{background:var(--bg-card);padding:22px 24px;border-top:3px solid;text-decoration:none;display:block;transition:.2s}
-.ap-card:hover{background:var(--bg-mid)}
-.ap-name{font-family:var(--fd);font-size:20px;font-weight:400;margin-bottom:5px}
-.ap-sub{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.ap-goal{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px}
-.ap-cases{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding-top:12px;border-top:1px solid var(--border-s)}
+/* ─── ACTORS ─── */
+.actors-section{padding:80px 0;background:var(--bg-mid);border-top:1px solid var(--border-s)}
+.actor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin-top:42px}
+@media(max-width:860px){.actor-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.actor-grid{grid-template-columns:1fr}}
+.ap-card{background:var(--bg-card);padding:24px 22px;border-top:3px solid;text-decoration:none;display:block;transition:.2s}
+.ap-card:hover{background:var(--bg-surf)}
+.ap-name{font-family:var(--fd);font-size:21px;font-weight:400;margin-bottom:5px}
+.ap-sub{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.ap-goal{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.ap-horizon{font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.ap-cases{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding-top:13px;border-top:1px solid var(--border-s)}
 
-/* CASE PREVIEW */
-.cases-section{padding:64px 0;background:var(--bg-mid);border-top:1px solid var(--border-s)}
-.case-preview-list{display:flex;flex-direction:column;gap:2px;background:var(--border-s);margin-top:40px}
-.cp-row{background:var(--bg-card);padding:18px 24px;display:flex;align-items:center;gap:20px;text-decoration:none;transition:.15s;border-left:3px solid transparent}
+/* ─── CASE PREVIEW ─── */
+.cases-section{padding:80px 0}
+.case-list{display:flex;flex-direction:column;gap:1px;background:var(--border-s);margin-top:42px}
+.cp-row{background:var(--bg-card);padding:17px 24px;display:flex;align-items:center;gap:20px;text-decoration:none;transition:.15s;border-left:3px solid transparent}
 .cp-row:hover{background:var(--bg-surf);border-left-color:var(--accent)}
-.cp-row.ind{border-left-color:transparent}
 .cp-status{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .cp-status.conf{background:var(--green)}.cp-status.ind{background:var(--accent)}
-.cp-title-cell{flex:1;min-width:0}
-.cp-title{font-size:13px;color:var(--text);margin-bottom:2px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cp-meta{font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--muted)}
-.cp-sector{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--border-s);color:var(--dim);flex-shrink:0;white-space:nowrap}
-.cp-year{font-family:var(--fm);font-size:9px;color:var(--dim);flex-shrink:0;min-width:38px;text-align:right}
-.cp-more{background:var(--bg-card);padding:16px 24px;text-align:center;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.cp-tcell{flex:1;min-width:0}
+.cp-title{font-size:13px;color:var(--text);margin-bottom:3px;line-height:1.3}
+.cp-meta{font-family:var(--fm);font-size:8px;letter-spacing:.06em;color:var(--muted)}
+.cp-sector{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border-s);color:var(--dim);flex-shrink:0;white-space:nowrap}
+.cp-year{font-family:var(--fm);font-size:9px;color:var(--dim);flex-shrink:0;min-width:36px;text-align:right}
+.cp-more{background:var(--bg-card);padding:18px 24px;text-align:center;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
 .cp-more a{color:var(--accent);text-decoration:none}
 .cp-more a:hover{text-decoration:underline}
+@media(max-width:600px){.cp-sector{display:none}}
 
-/* OSINT BOX */
-.osint-section{padding:64px 0;border-top:1px solid var(--border-s)}
-.osint-box{background:var(--bg-mid);border:1px solid var(--border);padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-@media(max-width:640px){.osint-box{grid-template-columns:1fr}}
-.osint-label{font-family:var(--fm);font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.osint-title{font-family:var(--fd);font-size:28px;font-weight:400;margin-bottom:10px}
-.osint-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:520px}
-.osint-stats{display:flex;flex-direction:column;gap:16px;min-width:160px;border-left:1px solid var(--border-s);padding-left:36px}
-@media(max-width:640px){.osint-stats{border-left:none;border-top:1px solid var(--border-s);padding-left:0;padding-top:24px;flex-direction:row;flex-wrap:wrap;gap:20px}}
-.os-stat{display:flex;flex-direction:column;gap:2px}
-.os-val{font-family:var(--fd);font-size:28px;font-weight:300;color:var(--accent);line-height:1}
-.os-lab{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* ─── CONFERENCE MAPPING ─── */
+.conf-section{padding:80px 0;background:var(--bg-mid);border-top:1px solid var(--border-s)}
+.conf-table{margin-top:42px;border:1px solid var(--border-s)}
+.conf-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--border-s)}
+.conf-row:last-child{border-bottom:none}
+@media(max-width:680px){.conf-row{grid-template-columns:1fr}}
+.conf-pass{padding:20px 24px;border-right:1px solid var(--border-s)}
+@media(max-width:680px){.conf-pass{border-right:none;border-bottom:1px solid var(--border-s);background:var(--bg-card)}}
+.conf-passlabel{font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.conf-passtitle{font-size:13.5px;color:var(--text);line-height:1.4;font-weight:500}
+.conf-speaker{font-family:var(--fm);font-size:9px;color:var(--dim);margin-top:5px}
+.conf-cover{padding:20px 24px;display:flex;flex-direction:column;justify-content:center;text-decoration:none;transition:.15s}
+.conf-cover:hover{background:var(--bg-card)}
+.conf-coverlabel{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.conf-coverlabel .cc-rom{font-family:var(--fd);font-style:italic;font-size:12px}
+.conf-covertext{font-size:13px;color:var(--muted);line-height:1.5}
+.conf-covertext b{color:var(--text);font-weight:500}
 
-/* CTA */
-.cta-section{padding:80px 0;background:var(--bg-mid);border-top:1px solid var(--border-s);text-align:center}
-.cta-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.cta-title{font-family:var(--fd);font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.06;margin-bottom:14px}
+/* ─── OSINT BOX ─── */
+.osint-section{padding:80px 0}
+.osint-box{background:var(--bg-mid);border:1px solid var(--border);padding:44px;display:grid;grid-template-columns:1fr auto;gap:44px;align-items:center}
+@media(max-width:680px){.osint-box{grid-template-columns:1fr;padding:32px}}
+.osint-label{font-family:var(--fm);font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.osint-title{font-family:var(--fd);font-size:29px;font-weight:400;margin-bottom:12px;line-height:1.1}
+.osint-desc{font-size:13px;color:var(--muted);line-height:1.75;max-width:540px}
+.osint-stats{display:flex;flex-direction:column;gap:18px;min-width:160px;border-left:1px solid var(--border-s);padding-left:38px}
+@media(max-width:680px){.osint-stats{border-left:none;border-top:1px solid var(--border-s);padding-left:0;padding-top:26px;flex-direction:row;flex-wrap:wrap;gap:24px}}
+.os-stat{display:flex;flex-direction:column;gap:3px}
+.os-val{font-family:var(--fd);font-size:29px;font-weight:300;color:var(--accent);line-height:1}
+.os-lab{font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+
+/* ─── CTA ─── */
+.cta-section{padding:96px 0;background:var(--bg-mid);border-top:1px solid var(--border-s);text-align:center}
+.cta-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.cta-title{font-family:var(--fd);font-size:clamp(36px,5vw,62px);font-weight:300;line-height:1.04;margin-bottom:16px}
 .cta-title em{font-style:italic;color:var(--accent)}
-.cta-sub{font-size:14px;color:var(--muted);max-width:500px;margin:0 auto 36px;line-height:1.75}
+.cta-sub{font-size:14px;color:var(--muted);max-width:520px;margin:0 auto 38px;line-height:1.8}
 .cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* FOOTER */
-footer{padding:32px 0;border-top:1px solid var(--border-s)}
+/* ─── FOOTER ─── */
+footer{padding:36px 0;border-top:1px solid var(--border-s)}
 .footer-i{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-brand{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .footer-brand span{color:var(--accent)}
 .footer-note{font-family:var(--fm);font-size:9px;color:var(--dim);letter-spacing:.08em}
-.footer-links{display:flex;gap:16px}
+.footer-links{display:flex;gap:18px}
 .footer-links a{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
 .footer-links a:hover{color:var(--accent)}
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+/* ─── REVEAL ─── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .chain-step{animation:none;opacity:1}
+  *{scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ═══ NAV ═══ -->
 <nav>
   <div class="nav-i">
     <a href="index.html" class="nav-brand">
@@ -207,417 +265,578 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
       <span class="nav-name">INBLICK</span>
     </a>
     <ul class="nav-links">
-      <li><a href="modules.html#mod-chain">P&#229;verkanskedjan</a></li>
-      <li><a href="modules.html#mod-map">H&#228;ndelsekarta</a></li>
-      <li><a href="modules.html#mod-actors">Akt&#246;rer</a></li>
-      <li><a href="modules.html#mod-assess">Organisationstestet</a></li>
-      <li><a href="modules.html#mod-inds">Indikatorer</a></li>
+      <li><a href="modules.html#mod-chain"><span class="nl-rom">I</span>Förstå</a></li>
+      <li><a href="modules.html#mod-map"><span class="nl-rom">II</span>Bedöma</a></li>
+      <li><a href="modules.html#mod-tools"><span class="nl-rom">III</span>Agera</a></li>
+      <li><a href="modules.html#mod-sources">Källor</a></li>
     </ul>
-    <a href="modules.html" class="nav-cta">Starta analysen &#8594;</a>
+    <a href="modules.html" class="nav-cta">Öppna verket →</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-bg"><div class="hero-bg-grid"></div></div>
   <div class="wrap" style="width:100%">
     <div class="hero-layout">
       <div>
-        <p class="hero-eyebrow">Konferensen Otillb&#246;rlig p&#229;verkan 2026 &#183; Stockholm 30 september</p>
-        <h1 class="hero-title">Den &#246;ppna<br><em>attackytan</em></h1>
-        <p class="hero-sub">N&#228;r det offentliga Sverige g&#229;r att p&#229;verka inifrån</p>
-        <p class="hero-lead">En interaktiv analyspublikation om hur kriminella n&#228;tverk, fr&#228;mmande makt, extremistiska milj&#246;er och ekonomiska intressen rekryterar, upparbetar och utnyttjar m&#246;jligg&#246;rare i offentlig sektor. Baserad p&#229; 97 dokumenterade svenska fall fr&#229;n 2003 till 2026.</p>
+        <p class="hero-eyebrow">Ett referensverk från Svensk OSINT</p>
+        <p class="hero-kicker">Otillbörlig påverkan i offentlig sektor · 2002–2026</p>
+        <h1 class="hero-title">Den öppna<br><em>attackytan</em></h1>
+        <p class="hero-sub">När det offentliga Sverige går att påverka inifrån</p>
+        <p class="hero-lead">Ett samlat, källbelagt kunskapsverk om hur kriminella nätverk, främmande makt, extremistiska miljöer och ekonomiska intressen rekryterar, upparbetar och utnyttjar möjliggörare i offentlig sektor. <strong>110 dokumenterade fall, 14 analysmoduler och 749 verifierade källor</strong> — strukturerat så att den som läser har svaren innan frågan ställs.</p>
         <div class="hero-actions">
-          <a href="modules.html" class="btn-primary">Starta analysen &#8594;</a>
-          <a href="modules.html#mod-map" class="btn-ghost">Se h&#228;ndelsekarta</a>
+          <a href="modules.html" class="btn-primary">Öppna verket →</a>
+          <a href="modules.html#mod-map" class="btn-ghost">Se händelsekartan</a>
         </div>
         <div class="hero-meta">
           <div class="hero-meta-item">
-            <span class="hero-meta-val">97</span>
-            <span class="hero-meta-lab">Dokumenterade fall</span>
+            <span class="hero-meta-val">110</span>
+            <span class="hero-meta-lab">Dokumenterade<br>fall</span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-val">25</span>
-            <span class="hero-meta-lab">Indikatorer</span>
+            <span class="hero-meta-val">14</span>
+            <span class="hero-meta-lab">Analys-<br>moduler</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-val">749</span>
+            <span class="hero-meta-lab">Verifierade<br>källor</span>
           </div>
           <div class="hero-meta-item">
             <span class="hero-meta-val">4</span>
-            <span class="hero-meta-lab">Akt&#246;rstyper</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="hero-meta-val">10</span>
-            <span class="hero-meta-lab">Interaktiva moduler</span>
+            <span class="hero-meta-lab">Aktörs-<br>miljöer</span>
           </div>
         </div>
       </div>
 
-      <!-- PÅVERKANSKEDJAN ANIMATION -->
+      <!-- PÅVERKANSKEDJAN -->
       <div class="chain-vis reveal">
-        <p class="chain-vis-label">P&#229;verkanskedjan &mdash; sju steg</p>
+        <p class="chain-vis-label"><span>Påverkanskedjan</span><span>sju steg →</span></p>
         <div class="chain-steps">
-          <div class="chain-step">
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">01</div>
             <div class="cs-body">
-              <div class="cs-step-label">Kartl&#228;ggning</div>
-              <div class="cs-title">Det b&#246;rjar med &#246;ppna k&#228;llor</div>
+              <div class="cs-step-label">Kartläggning</div>
+              <div class="cs-title">Det börjar med öppna källor</div>
               <div class="cs-lead">Nämndhandlingar, LinkedIn, delegationsordningar, platsannonser</div>
             </div>
-          </div>
-          <div class="chain-step">
+          </a>
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">02</div>
             <div class="cs-body">
               <div class="cs-step-label">Urval</div>
-              <div class="cs-title">Formell makt &#8800; faktisk p&#229;verkan</div>
-              <div class="cs-lead">Handl&#228;ggaren, registratorn, systemf&#246;rvaltaren</div>
+              <div class="cs-title">Formell makt ≠ faktisk påverkan</div>
+              <div class="cs-lead">Handläggaren, registratorn, systemförvaltaren</div>
             </div>
-          </div>
-          <div class="chain-step">
+          </a>
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">03</div>
             <div class="cs-body">
               <div class="cs-step-label">Kontakt</div>
-              <div class="cs-title">Den f&#246;rsta relationen skapas</div>
+              <div class="cs-title">Den första relationen skapas</div>
               <div class="cs-lead">Professionell kanal, gemensam bekant, nätverksevent</div>
             </div>
-          </div>
-          <div class="chain-step">
+          </a>
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">04</div>
             <div class="cs-body">
               <div class="cs-step-label">Relationsbygge</div>
-              <div class="cs-title">Hj&#228;lpsamhet skapar beroende</div>
-              <div class="cs-lead">Bekr&#228;ftelse, tj&#228;nster, privata kanaler</div>
+              <div class="cs-title">Hjälpsamhet skapar beroende</div>
+              <div class="cs-lead">Bekräftelse, tjänster, privata kanaler</div>
             </div>
-          </div>
-          <div class="chain-step">
+          </a>
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">05</div>
             <div class="cs-body">
-              <div class="cs-step-label">Gr&#228;nstest</div>
-              <div class="cs-title">Den lilla beg&#228;ran som testar</div>
-              <div class="cs-lead">Harml&#246;s p&#229; ytan, systemtestande i funktion</div>
+              <div class="cs-step-label">Gränstest</div>
+              <div class="cs-title">Den lilla begäran som testar</div>
+              <div class="cs-lead">Harmlös på ytan, systemtestande i funktion</div>
             </div>
-          </div>
-          <div class="chain-step">
+          </a>
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">06</div>
             <div class="cs-body">
               <div class="cs-step-label">Normalisering</div>
               <div class="cs-title">Undantaget blir rutin</div>
-              <div class="cs-lead">Varje steg marginellt st&#246;rre &mdash; aldrig i ett spr&#229;ng</div>
+              <div class="cs-lead">Varje steg marginellt större — aldrig i ett språng</div>
             </div>
-          </div>
-          <div class="chain-step">
+          </a>
+          <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">07</div>
             <div class="cs-body">
               <div class="cs-step-label">Systemskada</div>
-              <div class="cs-title">Beslutskraft&#246;rm&#229;gan f&#246;rskjuten</div>
-              <div class="cs-lead">F&#246;rdr&#246;jning, tystnad, sj&#228;lvreglering, personalflykt</div>
+              <div class="cs-title">Beslutsförmågan förskjuten</div>
+              <div class="cs-lead">Fördröjning, tystnad, självreglering, personalflykt</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar reveal">
+<!-- ═══ THESIS ═══ -->
+<section class="thesis">
   <div class="wrap">
-    <div class="stats-grid">
+    <div class="thesis-grid reveal">
+      <div class="thesis-lead">Inte en konferens. Ett <em>uppslagsverk</em> du kan läsa, dela och referera till — när du vill, utan kostnad.</div>
+      <div class="thesis-body">
+        <p>Otillbörlig påverkan är inte en serie enskilda skandaler. Det är ett <strong>strukturellt mönster</strong> där samma mekanismer återkommer oavsett sektor: en öppen attackyta, en upparbetad relation, en gräns som testas, en norm som glider.</p>
+        <p>INBLICK samlar mönstret på ett ställe. Varje påstående bär en evidensmärkning. Varje fall har minst en verifierad källa. Varje modul kopplar teori till dokumenterad svensk verklighet — från spioneridomar och muthärvor till infiltrerade HVB-hem och insiders i hamnar.</p>
+        <p>Det är byggt av en enskild analytiker, med öppna källor, för att visa vad öppen källanalys kan åstadkomma. <strong>Allt är fritt att använda.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DE TRE DELARNA ═══ -->
+<section class="parts-section">
+  <div class="wrap">
+    <div class="parts-intro reveal">
+      <p class="section-eyebrow">Verkets struktur</p>
+      <h2 class="section-title">Tre delar, fjorton moduler,<br><em>en sammanhängande väg</em></h2>
+      <p class="section-intro">Verket följer den logik en organisation behöver: först förstå hotet, sedan bedöma den egna exponeringen, till sist agera. Varje modul är fristående men samspelar med de andra.</p>
+    </div>
+
+    <!-- DEL I — FÖRSTÅ -->
+    <div class="part-block reveal">
+      <div class="part-head">
+        <div class="part-roman">I</div>
+        <div class="part-headtext">
+          <div class="part-name">Förstå</div>
+          <div class="part-q">Vad är hotet — och hur fungerar det?</div>
+        </div>
+      </div>
+      <p class="part-desc">Det analytiska underlaget. Mekanismen bakom påverkan, miljöerna där den frodas, aktörerna som driver den, den juridiska ramen och den informationspåverkan som riktas mot enskilda tjänstemän.</p>
+      <div class="part-cards">
+        <a href="modules.html#mod-chain" class="mcard" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Kärnmodell</div>
+          <div class="mc-title">Påverkanskedjan</div>
+          <div class="mc-desc">Sju steg från kartläggning till systemskada, med tre parallella perspektiv per steg: angriparens logik, medarbetarens upplevelse, organisationens blinda fläck.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>7 steg · fallkopplat</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-sectors" class="mcard" style="border-top-color:#9B4FBB">
+          <div class="mc-kicker">Miljöanalys</div>
+          <div class="mc-title">Sektormiljöer</div>
+          <div class="mc-desc">Tolv sektorer med egen sårbarhetsprofil, typiska metoder och strukturella svagheter — nu med SMOB:s registerdata och MCF:s transportskyddsanalys inarbetad.</div>
+          <div class="mc-foot" style="color:#9B4FBB"><span>12 miljöer · SMOB-data</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-actors" class="mcard" style="border-top-color:var(--orange)">
+          <div class="mc-kicker">Aktörsanalys</div>
+          <div class="mc-title">Aktörsmatrisen</div>
+          <div class="mc-desc">Fyra aktörsmiljöer med skilda mål, tidshorisonter och metoder. Klickbara kort med analytisk bedömning, observerbara indikatorer och kopplade fall.</div>
+          <div class="mc-foot" style="color:var(--orange)"><span>4 miljöer · indikatorkopplat</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-legal" class="mcard is-new" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Rättslig ram</div>
+          <div class="mc-title">Juridisk ram</div>
+          <div class="mc-desc">Den brottsliga trappan från mutbrott och tjänstefel till gråzon och normglidning. Otillbörlighetsrekvisitet, anmälningsskyldighet och varför så få fälls.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>BrB 10 & 20 kap · RiR 2026:3</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-infopav" class="mcard is-new" style="border-top-color:#9B4FBB">
+          <div class="mc-kicker">Kognitiv påverkan</div>
+          <div class="mc-title">Informations&shy;påverkan</div>
+          <div class="mc-desc">När påverkan riktas mot personal: tre vektorer, fem kognitiva mekanismer, statliga aktörers kombinerade operationer mot enskilda beslutsfattare.</div>
+          <div class="mc-foot" style="color:#9B4FBB"><span>Säpo · MSB · SKR</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-theory" class="mcard" style="border-top-color:var(--green)">
+          <div class="mc-kicker">Förståelse</div>
+          <div class="mc-title">Möjliggörarens psykologi</div>
+          <div class="mc-desc">Hur rekryteras en möjliggörare? MICE-modellen, Brå:s fyra kategorier, RASCLS-principerna och indikatortriangeln. Teorin bakom fallen.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>MICE · RASCLS · Brå 2024</span><span class="mc-arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- DEL II — BEDÖMA -->
+    <div class="part-block reveal">
+      <div class="part-head">
+        <div class="part-roman">II</div>
+        <div class="part-headtext">
+          <div class="part-name">Bedöma</div>
+          <div class="part-q">Var är min organisation exponerad?</div>
+        </div>
+      </div>
+      <p class="part-desc">Verktygen för att läsa det egna läget. Den geografiska fallkartan, indikatorbiblioteket, organisationens självskattning och sambandsgrafen som visar strukturen bakom alla fall.</p>
+      <div class="part-cards">
+        <a href="modules.html#mod-map" class="mcard" style="border-top-color:var(--green)">
+          <div class="mc-kicker">Händelsedatabas</div>
+          <div class="mc-title">Händelsekartan</div>
+          <div class="mc-desc">110 verifierade svenska fall 2002–2026, plottade geografiskt. Filtrerbar på sektor, aktör och bekräftelsestatus. Varje fall fullständigt källbelagt.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>110 fall · 12 sektorer</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-assess" class="mcard" style="border-top-color:var(--purple)">
+          <div class="mc-kicker">Självskattning</div>
+          <div class="mc-title">Organisations&shy;testet</div>
+          <div class="mc-desc">14 frågor, sju nyckelområden. Ingen data lämnar enheten. Mognadsprofil med rekommendationer kopplade till faktiska brister från Riksrevisionen och Brå.</div>
+          <div class="mc-foot" style="color:var(--purple)"><span>14 frågor · lokal beräkning</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-inds" class="mcard" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Indikatorbibliotek</div>
+          <div class="mc-title">Tidiga varnings&shy;signaler</div>
+          <div class="mc-desc">25 sökbara indikatorer med konkreta svenska fallexempel. Filtrera på kategori, allvarlighetsgrad eller aktörstyp. Källbelagda med RiR, Brå och Statskontoret.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>25 indikatorer · 6 kategorier</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-graph" class="mcard" style="border-top-color:var(--green)">
+          <div class="mc-kicker">Nätverksgraf</div>
+          <div class="mc-title">Sambandsgrafen</div>
+          <div class="mc-desc">Interaktiv force-directed graf över relationer mellan alla fall, fyra aktörsmiljöer och tolv sektorer. Klicka, dra, filtrera. Visar strukturen bakom fallen.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>Klickbar · filtrerbar</span><span class="mc-arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- DEL III — AGERA -->
+    <div class="part-block reveal">
+      <div class="part-head">
+        <div class="part-roman">III</div>
+        <div class="part-headtext">
+          <div class="part-name">Agera</div>
+          <div class="part-q">Hur bygger jag motståndskraft?</div>
+        </div>
+      </div>
+      <p class="part-desc">Det operativa lagret. Befattningsanalys och säkerhetsprövning, säkerhetskultur som skyddsbarriär, ärendehantering steg för steg, och modellerna som förklarar.</p>
+      <div class="part-cards">
+        <a href="modules.html#mod-tools" class="mcard is-new" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Operativa verktyg</div>
+          <div class="mc-title">Verktygslådan</div>
+          <div class="mc-desc">Befattningsanalys med SMOB:s riskyrken, BROP-modellen för säkerhetsprövning, bow-tie-analys för insiderhot och checklistor för rekrytering, drift och händelse.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>MCF0079 · RiR 2026:3</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-culture" class="mcard is-new" style="border-top-color:var(--green)">
+          <div class="mc-kicker">Organisationskultur</div>
+          <div class="mc-title">Säkerhetskultur</div>
+          <div class="mc-desc">Kultur som skyddsbarriär. Stark kultur mot tystnadskultur, ledningens fyra roller, visselblåsarstruktur och övning. Varför kultur slår system.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>RiR 2026:3 · SKR · MCF</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-handle" class="mcard" style="border-top-color:var(--orange)">
+          <div class="mc-kicker">Ärendehantering</div>
+          <div class="mc-title">Hantera ett ärende</div>
+          <div class="mc-desc">Utredningsprocessen i sex steg, indikatormatriser per nivå, osjälvständiga brottsformer som definierar möjliggörarens rättsliga ansvar, och crime proofing-metoden.</div>
+          <div class="mc-foot" style="color:var(--orange)"><span>6 steg · 3 nivåer</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-visuals" class="mcard" style="border-top-color:#9B4FBB">
+          <div class="mc-kicker">Visuella modeller</div>
+          <div class="mc-title">Modellerna som förklarar</div>
+          <div class="mc-desc">Påverkanspyramiden, insidertypologin, infiltrationsprocessen, rolltyper i kriminella nätverk, rekryteringstrappan och ERRC-matrisen — interaktiv SVG-grafik.</div>
+          <div class="mc-foot" style="color:#9B4FBB"><span>6 modeller · källbelagda</span><span class="mc-arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═══ -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid reveal">
       <div class="stat-cell">
-        <div class="stat-val">700</div>
-        <div class="stat-label">Aktiva m&#246;jligg&#246;rare i Sverige</div>
-        <div class="stat-note">Polismyndighetens kartl&#228;ggning 2024 &mdash; varav m&#229;nga betj&#228;nar flera n&#228;tverk</div>
+        <div class="stat-val">~700</div>
+        <div class="stat-label">Aktiva möjliggörare i Sverige</div>
+        <div class="stat-note">Polismyndighetens kartläggning 2024 — många betjänar flera nätverk samtidigt</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">352 mdkr</div>
+        <div class="stat-label">Kriminell ekonomi per år</div>
+        <div class="stat-note">SMOB SGL 2026 — motsvarar omkring 5,5 % av Sveriges BNP</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">22/29</div>
+        <div class="stat-label">Myndigheter med infiltrationsbrister</div>
+        <div class="stat-note">Riksrevisionen RiR 2026:3 — säkerhetsprövning otillräcklig</div>
       </div>
       <div class="stat-cell">
         <div class="stat-val">931 Mkr</div>
-        <div class="stat-label">Offentliga k&#246;p fr&#229;n extremistkopplade bolag</div>
-        <div class="stat-note">Acta Publica 2020 &mdash; bolagen klarade standardkontroller</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-val">44%</div>
-        <div class="stat-label">Kriminalv&#229;rdens personal vet ej reglerna</div>
-        <div class="stat-note">Riksrevisionen 2025&ndash;2026 &mdash; infiltrationsrisk bed&#246;ms som h&#246;g</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-val">1,3 ton</div>
-        <div class="stat-label">Kokain i Norviks hamn, april 2024</div>
-        <div class="stat-note">Gatuvärde 1,2 Mdr kr &mdash; kriminellt belastade hamnarbetare utan bakgrundskontroll</div>
+        <div class="stat-label">Offentliga köp från extremistkopplade bolag</div>
+        <div class="stat-note">Acta Publica 2020 — bolagen klarade standardkontroller</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MODULES -->
-<section class="modules-section">
-  <div class="wrap reveal">
-    <p class="section-eyebrow">Fem interaktiva moduler</p>
-    <h2 class="section-title">V&#228;lj din<br><em>ing&#229;ngspunkt</em></h2>
-    <p class="section-intro">Varje modul &#228;r frist&#229;ende men samspelar med de andra. B&#246;rja med p&#229;verkanskedjan f&#246;r det analytiska ramverket, eller g&#229; direkt till h&#228;ndelsekartans 35 fall om du vill f&#246;rst&#229; n&#228;r, var och hur det h&#228;nt.</p>
-  </div>
-  <div class="wrap">
-    <div class="module-cards reveal">
-      <a href="modules.html#mod-chain" class="module-card" style="border-top-color:var(--accent)">
-        <div class="mc-num">Kapitel 3 &mdash; Interaktiv analys</div>
-        <div class="mc-title">P&#229;verkans&shy;kedjan</div>
-        <div class="mc-desc">Sju klickbara steg med tre parallella perspektiv per steg &mdash; angriparens logik, medarbetarens upplevelse och organisationens blinda fl&#228;ck. Direktl&#228;nkar till dokumenterade fall.</div>
-        <div class="mc-meta" style="color:var(--accent)">7 steg &middot; 3 perspektiv per steg &middot; Fallkopplingar</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-map" class="module-card" style="border-top-color:var(--green)">
-        <div class="mc-num">Kapitel 5 &mdash; H&#228;ndelsedatabas</div>
-        <div class="mc-title">H&#228;ndelse&shy;kartan</div>
-        <div class="mc-desc">54 verifierade svenska fall 2003&ndash;2026, plottade geografiskt med Leaflet. Filtrerbar p&#229; sektor, akt&#246;r och bekr&#228;ftelsestatus. Varje fall har fullst&#228;ndig k&#228;llh&#228;nvisning.</div>
-        <div class="mc-meta" style="color:var(--green)">97 fall &middot; Filtrering p&#229; 9 sektorer &middot; K&#228;llbelagda</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-actors" class="module-card" style="border-top-color:var(--orange)">
-        <div class="mc-num">Kapitel 4 &mdash; Akt&#246;rsanalys</div>
-        <div class="mc-title">Akt&#246;rs&shy;matrisen</div>
-        <div class="mc-desc">Fyra akt&#246;rstyper med skilda m&#229;l, tidshorisonter och metoder. Klickbara kort med analytisk bed&#246;mning, observerbara indikatorer och kopplade fall.</div>
-        <div class="mc-meta" style="color:var(--orange)">4 akt&#246;rstyper &middot; 5&ndash;15 fall per akt&#246;r</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-assess" class="module-card" style="border-top-color:var(--purple)">
-        <div class="mc-num">Kapitel 6 &mdash; Sj&#228;lvskattning</div>
-        <div class="mc-title">Organisations&shy;testet</div>
-        <div class="mc-desc">14 fr&#229;gor, sju nyckelomr&#229;den. Ingen data l&#228;mnar enheten. Mognadsprofil med prioriterade rekommendationer kopplade till faktiska brister fr&#229;n Riksrevisionen och Br&#229;.</div>
-        <div class="mc-meta" style="color:var(--purple)">14 fr&#229;gor &middot; 7 dimensioner &middot; Lokal ber&#228;kning</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-inds" class="module-card" style="border-top-color:var(--accent)">
-        <div class="mc-num">Indikatorsbibliotek</div>
-        <div class="mc-title">Tidiga varnings&shy;signaler</div>
-        <div class="mc-desc">25 s&#246;kbara indikatorer med konkreta svenska fallexempel per indikator. Filtrera p&#229; kategori, allvarlighetsgrad eller akt&#246;rstyp. K&#228;llbelagda med Riksrevisionen, Br&#229; och Statskontoret.</div>
-        <div class="mc-meta" style="color:var(--accent)">25 indikatorer &middot; 6 kategorier &middot; Fallexempel</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-theory" class="module-card" style="border-top-color:#4A7B6F">
-        <div class="mc-num">F&#246;rst&#229;else &mdash; Teorier och modeller</div>
-        <div class="mc-title">M&#246;jligg&#246;rarens<br>psykologi</div>
-        <div class="mc-desc">Hur rekryteras en m&#246;jligg&#246;rare? MICE-modellen, Br&#229;:s fyra kategorier, RASCLS-principerna och indikatortriangeln. Teorin bakom fallen.</div>
-        <div class="mc-meta" style="color:#4A7B6F">MICE &middot; RASCLS &middot; Br&#229; 2024 &middot; 4 typologier</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-sectors" class="module-card" style="border-top-color:#9B4FBB">
-        <div class="mc-num">Kapitel 2 &#183; Milj&#246;analys</div>
-        <div class="mc-title">Sektor<shy>milj&#246;erna</div>
-        <div class="mc-desc">&#197;tta sektorer med egna delkapitel: s&#229;rbarhetsprofil, typiska metoder, strukturella svagheter och dokumenterade fall. Hamnar, myndigheter, socialtj&#228;nst, r&#228;ttsv&#228;sende och mer.</div>
-        <div class="mc-meta" style="color:#9B4FBB">8 milj&#246;er &#183; Egna delkapitel &#183; 54 fall f&#246;rdelade</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-graph" class="module-card" style="border-top-color:#4A7B6F">
-        <div class="mc-num">Sambands­analys &#183; Nätverksgraf</div>
-        <div class="mc-title">Sambands<shy>grafen</div>
-        <div class="mc-desc">Interaktiv D3-graf &#246;ver relationer mellan alla 54 fall, fyra akt&#246;rstyper och elva sektorer. Klicka, dra, filtrera. Visar strukturen bakom fallen.</div>
-        <div class="mc-meta" style="color:#4A7B6F">Force-directed &#183; Klickbar &#183; Filtrerbar</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-visuals" class="module-card" style="border-top-color:#9B4FBB">
-        <div class="mc-num">Visuella modeller &#183; 6 grafik</div>
-        <div class="mc-title">Modellerna som<br><em>f&#246;rklarar</em></div>
-        <div class="mc-desc">P&#229;verkanspyramiden, insidertypologin, infiltrationsprocessen, rolltyper i kriminella n&#228;tverk, rekryteringstrappan och ERRC-matrisen — interaktiva SVG-grafik ur handledningen.</div>
-        <div class="mc-meta" style="color:#9B4FBB">6 modeller &#183; SVG-grafik &#183; K&#228;llbelagda</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html#mod-handle" class="module-card" style="border-top-color:var(--orange)">
-        <div class="mc-num">Kapitel 7 &#183; &#196;rendehantering</div>
-        <div class="mc-title">Hantera ett &#228;rende</div>
-        <div class="mc-desc">Utredningsprocessen i 6 steg, indikatormatriser per niv&#229; (anst&#228;lld/grupp/organisation), osjälvständiga brottsformer som def&#246;r m&#246;jligg&#246;rarens r&#228;ttsliga ansvar, och crime proofing-metoden.</div>
-        <div class="mc-meta" style="color:var(--orange)">6-steg process &#183; 3 niv&#229;er &#183; 5 brottsformer &#183; Crime proofing</div>
-        <div class="mc-arrow">&#8594;</div>
-      </a>
-      <a href="modules.html" class="module-card" style="border-top-color:var(--border);opacity:.7;cursor:default" onclick="return false">
-        <div class="mc-num">Under produktion</div>
-        <div class="mc-title">OSINT-kartl&#228;ggningen</div>
-        <div class="mc-desc">En interaktiv genomg&#229;ng av hur &#246;ppen k&#228;llinformation anv&#228;nds f&#246;r att identifiera och kartl&#228;gga tjänstepersoner &mdash; med konkret exempel p&#229; vad som g&#229;r att h&#228;mta fr&#229;n offentliga register.</div>
-        <div class="mc-meta" style="color:var(--dim)">Publiceras september 2026</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- EVIDENCE HIERARCHY -->
+<!-- ═══ EVIDENSHIERARKI ═══ -->
 <section class="evidence-section">
   <div class="wrap">
     <div class="reveal">
-      <p class="section-eyebrow">Evidenshierarki</p>
-      <h2 class="section-title">Hur vi<br><em>klassar k&#228;llor</em></h2>
-      <p class="section-intro">Varje p&#229;st&#229;ende i analysen b&#228;r en av tre m&#228;rkningar. Kombinationen av m&#228;rkning och k&#228;llangivelse avg&#246;r hur tungt ett uttalande b&#246;r v&#228;ga.</p>
+      <p class="section-eyebrow"><span class="se-rom">§</span>Metod</p>
+      <h2 class="section-title">Hur vi <em>klassar källor</em></h2>
+      <p class="section-intro">Varje påstående i verket bär en av tre märkningar. Kombinationen av märkning och källangivelse avgör hur tungt ett uttalande väger. Av 110 fall är 93 bekräftade genom primärkälla.</p>
     </div>
     <div class="evidence-grid reveal">
       <div class="ev-cell">
-        <div class="ev-badge conf"><div class="ev-dot conf"></div>Bekr&#228;ftat</div>
-        <div class="ev-title">Verifierat genom prim&#228;rk&#228;lla</div>
-        <div class="ev-desc">Dom, tillsynsrapport, myndighetsutredning eller v&#228;lbelagd granskningsjournalistik d&#228;r mer&#228;n en k&#228;lla bekr&#228;ftar. H&#228;ndelsef&#246;rloppet &#228;r fastst&#228;llt.</div>
-        <div class="ev-examples">
-          <div class="ev-ex">Domstolsavg&#246;randen</div>
-          <div class="ev-ex">Riksrevisionens granskningsrapporter</div>
-          <div class="ev-ex">&#197;klagarmyndighetens &#229;talsbeslut</div>
-          <div class="ev-ex">Ds 2026:2, RiR 2023:x</div>
-        </div>
+        <div class="ev-badge conf"><div class="ev-dot conf"></div>Bekräftat</div>
+        <div class="ev-count">93 <span>av 110 fall</span></div>
+        <div class="ev-title">Verifierat genom primärkälla</div>
+        <div class="ev-desc">Dom, tillsynsrapport, myndighetsutredning eller välbelagd granskningsjournalistik där mer än en källa bekräftar. Händelseförloppet är fastställt.</div>
       </div>
       <div class="ev-cell">
         <div class="ev-badge ind"><div class="ev-dot ind"></div>Indikation</div>
-        <div class="ev-title">St&#246;dd av trolighetsbedömning</div>
-        <div class="ev-desc">Tillr&#228;ckligt empiriskt underlag f&#246;r analytisk slutsats, men utan en formell dom eller myndighetsbest&#228;mning. M&#246;nstret &#228;r troligt men inte juridiskt fastst&#228;llt.</div>
-        <div class="ev-examples">
-          <div class="ev-ex">P&#229;g&#229;ende f&#246;runderss&#246;kningar</div>
-          <div class="ev-ex">Journalistisk granskning ej dom&#228;nd</div>
-          <div class="ev-ex">Myndighetssignaler utan utfall</div>
-          <div class="ev-ex">Intern rapport med begr&#228;nsad insyn</div>
-        </div>
+        <div class="ev-count">17 <span>av 110 fall</span></div>
+        <div class="ev-title">Stödd av trolighetsbedömning</div>
+        <div class="ev-desc">Tillräckligt empiriskt underlag för analytisk slutsats, men utan formell dom eller myndighetsbestämning. Mönstret är troligt men inte juridiskt fastställt.</div>
       </div>
       <div class="ev-cell">
-        <div class="ev-badge ana"><div class="ev-dot ana"></div>Analytisk bed&#246;mning</div>
-        <div class="ev-title">Baserad p&#229; m&#246;nsterigenkänning</div>
-        <div class="ev-desc">En informerad slutsats om mekanismer, drivkrafter eller sannolika utfall &mdash; med st&#246;d i etablerad forskning och j&#228;mf&#246;rbart material, men utan direkt empirisk bekr&#228;ftelse.</div>
-        <div class="ev-examples">
-          <div class="ev-ex">Br&#229;-baserade slutledningar</div>
-          <div class="ev-ex">M&#246;nsterjämf&#246;relser internationellt</div>
-          <div class="ev-ex">Modellerade konsekvenskedjor</div>
-          <div class="ev-ex">Redaktionella bed&#246;mningar</div>
-        </div>
+        <div class="ev-badge ana"><div class="ev-dot ana"></div>Analytisk bedömning</div>
+        <div class="ev-count">— <span>genomgående</span></div>
+        <div class="ev-title">Baserad på mönsterigenkänning</div>
+        <div class="ev-desc">En informerad slutsats om mekanismer, drivkrafter eller sannolika utfall — med stöd i etablerad forskning och jämförbart material, men utan direkt empirisk bekräftelse.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ACTOR PREVIEW -->
+<!-- ═══ AKTÖRSMILJÖER ═══ -->
 <section class="actors-section">
   <div class="wrap">
     <div class="reveal">
-      <p class="section-eyebrow">Kapitel 4</p>
-      <h2 class="section-title">Fyra akt&#246;rs<em>typer</em></h2>
-      <p class="section-intro">Skilda m&#229;l och tidshorisonter, men &#246;verlappande metoder. En organisation som bara skyddar sig mot ett av de fyra &#228;r exponerad mot de &#246;vriga tre.</p>
+      <p class="section-eyebrow"><span class="se-rom">I</span>Förstå · Aktörer</p>
+      <h2 class="section-title">Fyra <em>aktörsmiljöer</em></h2>
+      <p class="section-intro">Skilda mål och tidshorisonter, men överlappande metoder. En organisation som bara skyddar sig mot en av de fyra är exponerad mot de övriga tre.</p>
     </div>
-    <div class="actor-preview-grid reveal">
+    <div class="actor-grid reveal">
       <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#C45C2E">
-        <div class="ap-name" style="color:#C45C2E">Kriminellt n&#228;tverk</div>
+        <div class="ap-name" style="color:#C45C2E">Kriminellt nätverk</div>
         <div class="ap-sub">Organiserad brottslighet</div>
-        <div class="ap-goal">Tillst&#229;nd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagf&#246;ring</div>
-        <div class="ap-cases" style="color:#C45C2E">15 dokumenterade fall &#8594;</div>
+        <div class="ap-goal">Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagföring</div>
+        <div class="ap-horizon">Kort–medellång sikt</div>
+        <div class="ap-cases" style="color:#C45C2E">15 dokumenterade fall →</div>
       </a>
       <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#B8973A">
-        <div class="ap-name" style="color:#B8973A">Fr&#228;mmande makt</div>
-        <div class="ap-sub">Statligt eller statsunderst&#246;tt</div>
-        <div class="ap-goal">Strategisk information, teknologitillg&#229;ng, underr&#228;ttelsedata, l&#229;ngsiktigt inflytande</div>
-        <div class="ap-cases" style="color:#B8973A">4 dokumenterade fall &#8594;</div>
+        <div class="ap-name" style="color:#B8973A">Främmande makt</div>
+        <div class="ap-sub">Statligt eller statsunderstött</div>
+        <div class="ap-goal">Strategisk information, teknologitillgång, underrättelsedata, långsiktigt inflytande</div>
+        <div class="ap-horizon">Lång sikt — år till decennier</div>
+        <div class="ap-cases" style="color:#B8973A">4 dokumenterade fall →</div>
       </a>
       <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#9B4FBB">
-        <div class="ap-name" style="color:#9B4FBB">Extremistisk milj&#246;</div>
+        <div class="ap-name" style="color:#9B4FBB">Extremistisk miljö</div>
         <div class="ap-sub">Ideologiskt driven</div>
-        <div class="ap-goal">Stoppa beslut, skr&#228;mma tj&#228;nstepersoner, delegitimera myndighet, finansiera verksamhet</div>
-        <div class="ap-cases" style="color:#9B4FBB">4 dokumenterade fall &#8594;</div>
+        <div class="ap-goal">Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet, finansiera verksamhet</div>
+        <div class="ap-horizon">Kort–medellång sikt</div>
+        <div class="ap-cases" style="color:#9B4FBB">4 dokumenterade fall →</div>
       </a>
       <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#4A7B6F">
         <div class="ap-name" style="color:#4A7B6F">Ekonomiskt intresse</div>
-        <div class="ap-sub">Kommersiell akt&#246;r</div>
-        <div class="ap-goal">Avtal, tillst&#229;nd, f&#246;rdelaktig behandling i upphandling, tillsyn eller tilldelning</div>
-        <div class="ap-cases" style="color:#4A7B6F">8 dokumenterade fall &#8594;</div>
+        <div class="ap-sub">Kommersiell aktör</div>
+        <div class="ap-goal">Avtal, tillstånd, fördelaktig behandling i upphandling, tillsyn eller tilldelning</div>
+        <div class="ap-horizon">Medellång sikt</div>
+        <div class="ap-cases" style="color:#4A7B6F">8 dokumenterade fall →</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- CASE PREVIEW -->
+<!-- ═══ FALLURVAL ═══ -->
 <section class="cases-section">
   <div class="wrap">
     <div class="reveal">
-      <p class="section-eyebrow">Kapitel 5 &mdash; Urval ur falldatabasen</p>
-      <h2 class="section-title">Dokumenterade<br><em>svenska fall</em></h2>
-      <p class="section-intro">35 verifierade fall fr&#229;n 2003 till 2026. H&#228;r visas ett urval &mdash; &#246;ppna h&#228;ndelsekartans fullst&#228;ndiga databas f&#246;r alla fall med filtrering och geografisk placering.</p>
+      <p class="section-eyebrow"><span class="se-rom">II</span>Bedöma · Falldatabasen</p>
+      <h2 class="section-title">Dokumenterade <em>svenska fall</em></h2>
+      <p class="section-intro">Ett urval ur de 110 verifierade fallen 2002–2026. Öppna händelsekartan för fullständig databas med filtrering, geografisk placering och källhänvisning per fall.</p>
     </div>
-    <div class="case-preview-list reveal">
+    <div class="case-list reveal">
       <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Spioneri mot F&#246;rsvarsmakten och S&#228;kerhetspolisen &mdash; livstids f&#228;ngelse</div>
-          <div class="cp-meta">Stockholm &middot; Bekr&#228;ftat &middot; GRU &middot; Dom: jan 2023</div>
+        <div class="cp-tcell">
+          <div class="cp-title">Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse</div>
+          <div class="cp-meta">Stockholm · Bekräftat · GRU · Dom jan 2023</div>
         </div>
-        <div class="cp-sector">F&#246;rsvar</div>
+        <div class="cp-sector">Försvar</div>
         <div class="cp-year">2023</div>
       </a>
       <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Lantm&#228;teriet &mdash; s&#228;kerhetsklassade kartuppgifter r&#246;jda utan sekretesspr&#246;vning under &#229;r</div>
-          <div class="cp-meta">G&#228;vle &middot; Bekr&#228;ftat &middot; Ds 2026:2 &middot; Stängning maj 2024</div>
+        <div class="cp-tcell">
+          <div class="cp-title">Åklagare dömd för brott mot tystnadsplikt — kusin med gängledaren Ismail Abdo</div>
+          <div class="cp-meta">Stockholm · Bekräftat · Södertörns tingsrätt nov 2024</div>
+        </div>
+        <div class="cp-sector">Rättsväsende</div>
+        <div class="cp-year">2024</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Norrtäljeanstalten — kriminalvårdare smugglade mobiler till gängledare, åtta dömda</div>
+          <div class="cp-meta">Norrtälje · Bekräftat · Göteborgs tingsrätt maj 2026</div>
+        </div>
+        <div class="cp-sector">Kriminalvård</div>
+        <div class="cp-year">2026</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Region Västerbotten — finansstrateg dömd för 9,5 Mkr i mutor via luftfakturor</div>
+          <div class="cp-meta">Umeå · Bekräftat · Umeå tingsrätt mars 2026</div>
+        </div>
+        <div class="cp-sector">Finans</div>
+        <div class="cp-year">2026</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Norviks hamn — 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll</div>
+          <div class="cp-meta">Nynäshamn · Bekräftat · SVT UG sept 2025 · Dom juli 2025</div>
+        </div>
+        <div class="cp-sector">Transport</div>
+        <div class="cp-year">2025</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Think Pink — Sveriges största miljöbrottmål, kvarts miljard i skadestånd</div>
+          <div class="cp-meta">Botkyrka · Bekräftat · Södertörns tingsrätt juni 2025</div>
+        </div>
+        <div class="cp-sector">Upphandling</div>
+        <div class="cp-year">2025</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Akademiska sjukhuset Uppsala — verksamhetschef dömd för 4,6 Mkr i mutor</div>
+          <div class="cp-meta">Uppsala · Bekräftat · Svea hovrätt mars 2025</div>
+        </div>
+        <div class="cp-sector">Hälsa</div>
+        <div class="cp-year">2025</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Lantmäteriet — säkerhetsklassade kartuppgifter röjda utan sekretessprövning</div>
+          <div class="cp-meta">Gävle · Bekräftat · Ds 2026:2 · Stängning maj 2024</div>
         </div>
         <div class="cp-sector">Myndighet</div>
         <div class="cp-year">2024</div>
       </a>
       <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Norviks hamn &mdash; 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll</div>
-          <div class="cp-meta">Nynäshamn &middot; Bekr&#228;ftat &middot; SVT UG sept 2025 &middot; Dom juli 2025</div>
-        </div>
-        <div class="cp-sector">Transport</div>
-        <div class="cp-year">2024</div>
-      </a>
-      <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Akademiska sjukhuset Uppsala &mdash; verksamhetschef d&#246;md f&#246;r 4,76 Mkr i mutor</div>
-          <div class="cp-meta">Uppsala &middot; Bekr&#228;ftat &middot; Attunda tingsrätt mars 2024</div>
-        </div>
-        <div class="cp-sector">H&#228;lsa</div>
-        <div class="cp-year">2024</div>
-      </a>
-      <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Securitas &mdash; v&#228;ktare anst&#228;lld 5 &#229;r var allierad med Foxtrot-n&#228;tverket</div>
-          <div class="cp-meta">Stockholm &middot; Bekr&#228;ftat &middot; SVT Uppdrag granskning sept 2025</div>
-        </div>
-        <div class="cp-sector">S&#228;kerhet</div>
-        <div class="cp-year">2025</div>
-      </a>
-      <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Toppadvokater d&#246;mda &mdash; hj&#228;lpte V&#228;rbyn&#228;tverket via krypterade chattar</div>
-          <div class="cp-meta">Stockholm &middot; Bekr&#228;ftat &middot; 6 resp. 4 &#229;rs f&#228;ngelse</div>
+        <div class="cp-tcell">
+          <div class="cp-title">Toppadvokater dömda — hjälpte Värbynätverket via krypterade chattar</div>
+          <div class="cp-meta">Stockholm · Bekräftat · 6 resp. 4 års fängelse</div>
         </div>
         <div class="cp-sector">Juridik</div>
         <div class="cp-year">2023</div>
       </a>
-      <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Islamistisk infiltration &mdash; 931 Mkr i offentliga k&#246;p fr&#229;n extremistkopplade bolag</div>
-          <div class="cp-meta">Nationellt &middot; Bekr&#228;ftat &middot; Acta Publica 2020</div>
-        </div>
-        <div class="cp-sector">Upphandling</div>
-        <div class="cp-year">2020</div>
-      </a>
-      <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
-        <div class="cp-title-cell">
-          <div class="cp-title">Riksrevisionen 2025&ndash;2026 &mdash; allvarliga infiltrationsbrister vid FMV, Kriminalv&#229;rden och Kammarkollegiet</div>
-          <div class="cp-meta">Nationellt &middot; Bekr&#228;ftat &middot; Riksrevisionens granskningsrapport</div>
-        </div>
-        <div class="cp-sector">Myndighet</div>
-        <div class="cp-year">2025</div>
-      </a>
     </div>
     <div class="cp-more reveal">
-      <a href="modules.html#mod-map">&#8594; Visa alla 97 fall i h&#228;ndelsekartans interaktiva databas</a>
+      <a href="modules.html#mod-map">→ Öppna alla 110 fall i händelsekartans interaktiva databas</a>
     </div>
   </div>
 </section>
 
-<!-- OSINT BOX -->
+<!-- ═══ KONFERENSMAPPNING ═══ -->
+<section class="conf-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="section-eyebrow"><span class="se-rom">↔</span>Täckning</p>
+      <h2 class="section-title">Konferensen den 30 september —<br><em>redan besvarad</em></h2>
+      <p class="section-intro">Ability Partners konferens Otillbörlig påverkan i offentlig sektor samlar tio talare under en dag. Varje pass har en motsvarande del i detta verk — fritt tillgänglig, källbelagd och läsbar redan idag.</p>
+    </div>
+    <div class="conf-table reveal">
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Lägesbild</div>
+          <div class="conf-passtitle">Aktuell hotbild för otillbörlig påverkan mot offentlig sektor</div>
+          <div class="conf-speaker">Försvarshögskolan</div>
+        </div>
+        <a href="modules.html#mod-sectors" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
+          <div class="conf-covertext"><b>Sektormiljöer + Aktörsmatrisen</b> — 12 sektorer med SMOB-registerdata och fyra aktörsmiljöer</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Granskning</div>
+          <div class="conf-passtitle">Infiltration i staten — Riksrevisionens granskning (RiR 2026:3)</div>
+          <div class="conf-speaker">Riksrevisionen</div>
+        </div>
+        <a href="modules.html#mod-legal" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
+          <div class="conf-covertext"><b>Juridisk ram</b> — RiR 2026:3 inarbetad: 22 av 29 myndigheter med brister, säkerhetsprövningens svagheter</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Praktik</div>
+          <div class="conf-passtitle">Säkerhetsprövning i praktiken — befattningsanalys och intervju</div>
+          <div class="conf-speaker">Svenska kraftnät</div>
+        </div>
+        <a href="modules.html#mod-tools" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">III</span>Agera</div>
+          <div class="conf-covertext"><b>Verktygslådan</b> — befattningsanalys, BROP-modellen, registerkontroll och intervjustruktur steg för steg</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Kommun & region</div>
+          <div class="conf-passtitle">Otillåten påverkan i kommuner och regioner</div>
+          <div class="conf-speaker">SKR</div>
+        </div>
+        <a href="modules.html#mod-assess" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">II</span>Bedöma</div>
+          <div class="conf-covertext"><b>Organisationstestet</b> — självskattning i 14 frågor med rekommendationer per mognadsnivå</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Identifiera</div>
+          <div class="conf-passtitle">Identifiera och hantera otillåten påverkan</div>
+          <div class="conf-speaker">Göteborgs stad</div>
+        </div>
+        <a href="modules.html#mod-inds" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">II</span>Bedöma</div>
+          <div class="conf-covertext"><b>Indikatorer + Hantera ärende</b> — 25 varningssignaler och utredningsprocess i sex steg</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Juridik</div>
+          <div class="conf-passtitle">Juridiken — gränsen mellan brott och gråzon</div>
+          <div class="conf-speaker">Uppsala universitet</div>
+        </div>
+        <a href="modules.html#mod-legal" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
+          <div class="conf-covertext"><b>Juridisk ram</b> — mutbrott, tjänstefel, otillbörlighetsrekvisitet, normglidning och varför så få fälls</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Kultur</div>
+          <div class="conf-passtitle">Bygga en säkerhetskultur som håller</div>
+          <div class="conf-speaker">Stockholms tingsrätt</div>
+        </div>
+        <a href="modules.html#mod-culture" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">III</span>Agera</div>
+          <div class="conf-covertext"><b>Säkerhetskultur</b> — stark kultur mot tystnadskultur, ledningens roll, visselblåsarstruktur och övning</div>
+        </a>
+      </div>
+      <div class="conf-row">
+        <div class="conf-pass">
+          <div class="conf-passlabel">Informationspåverkan</div>
+          <div class="conf-passtitle">När påverkan riktas mot personal och beslutsfattande</div>
+          <div class="conf-speaker">Cparta · SRS</div>
+        </div>
+        <a href="modules.html#mod-infopav" class="conf-cover">
+          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
+          <div class="conf-covertext"><b>Informationspåverkan</b> — tre vektorer, fem kognitiva mekanismer, statliga aktörers kombinerade operationer</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OSINT BOX ═══ -->
 <section class="osint-section">
   <div class="wrap">
     <div class="osint-box reveal">
       <div>
         <div class="osint-label">Om Svensk OSINT</div>
         <div class="osint-title">Öppen källanalys för svenska säkerhetspraktiker</div>
-        <div class="osint-desc">Svensk OSINT producerar veckovisa underr&#228;ttelsebrev, djupanalysrapporter och interaktiva publiceringar med fokus p&#229; s&#228;kerhetshot mot Sverige. INBLICK &#228;r v&#229;r konferensformat-produkt f&#246;r Otillb&#246;rlig p&#229;verkan 2026 &mdash; en öppen analys avsedd att spridas och anv&#228;ndas av svenska organisationer.</div>
+        <div class="osint-desc">Svensk OSINT producerar veckovisa underrättelsebrev, djupanalysrapporter och interaktiva publikationer med fokus på säkerhetshot mot Sverige. INBLICK är vår öppna analys för fältet — avsedd att spridas, användas och refereras fritt av svenska organisationer, oberoende av konferenser och betalväggar.</div>
       </div>
       <div class="osint-stats">
         <div class="os-stat">
           <span class="os-val">~13k</span>
-          <span class="os-lab">LinkedIn-f&#246;ljare</span>
+          <span class="os-lab">LinkedIn-följare</span>
         </div>
         <div class="os-stat">
           <span class="os-val">V.25</span>
@@ -625,46 +844,43 @@ footer{padding:32px 0;border-top:1px solid var(--border-s)}
         </div>
         <div class="os-stat">
           <span class="os-val">590+</span>
-          <span class="os-lab">RSS-k&#228;llor (Argus)</span>
+          <span class="os-lab">RSS-källor (Argus)</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ═══ CTA ═══ -->
 <section class="cta-section reveal">
   <div class="wrap">
-    <p class="cta-eyebrow">Starta analysen</p>
-    <h2 class="cta-title">&#214;ppna<br><em>attackytan</em></h2>
-    <p class="cta-sub">Alla moduler är fria att använda, dela och referera till. Källorna är öppna, fallen är dokumenterade, analysen &#228;r v&#229;r.</p>
+    <p class="cta-eyebrow">Börja läsa</p>
+    <h2 class="cta-title">Öppna<br><em>attackytan</em></h2>
+    <p class="cta-sub">Alla fjorton moduler är fria att använda, dela och referera till. Källorna är öppna, fallen är dokumenterade, analysen är vår.</p>
     <div class="cta-actions">
-      <a href="modules.html" class="btn-primary">Starta analysen &#8594;</a>
-      <a href="modules.html#mod-inds" class="btn-ghost">Indikatorsbiblioteket</a>
+      <a href="modules.html" class="btn-primary">Öppna verket →</a>
+      <a href="modules.html#mod-sources" class="btn-ghost">Se källförteckningen</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="wrap">
     <div class="footer-i">
-      <div class="footer-brand">Svensk OSINT &mdash; <span>INBLICK</span> &mdash; Den &#246;ppna attackytan &mdash; 2026</div>
+      <div class="footer-brand">Svensk OSINT — <span>INBLICK</span> — Den öppna attackytan — 2026</div>
       <div class="footer-links">
-        <a href="modules.html">Moduler</a>
-        <a href="modules.html">Karta</a>
-        <a href="modules.html">Test</a>
+        <a href="modules.html#mod-chain">Förstå</a>
+        <a href="modules.html#mod-map">Bedöma</a>
+        <a href="modules.html#mod-tools">Agera</a>
+        <a href="modules.html#mod-sources">Källor</a>
       </div>
-      <div class="footer-note">Konferensen Otillb&#246;rlig p&#229;verkan &middot; Stockholm 30 september 2026</div>
+      <div class="footer-note">Fritt att sprida · Stockholm 2026</div>
     </div>
   </div>
 </footer>
 
 <script>
-// Handle sessionStorage module routing for modules.html
-// (links that set sm key are caught in modules.html's init)
-
-// Scroll reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
