@@ -29,6 +29,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .nav-tabs li a{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 8px;white-space:nowrap;display:block;transition:.15s}
 .nav-tabs li a:hover,.nav-tabs li a.active{background:var(--accent-g);color:var(--accent)}
 /* Global search */
+/* ── Kategori-navigation Förstå / Bedöma / Agera ── */
+.cat-nav{display:flex;align-items:stretch;gap:0;height:52px;overflow:visible;position:relative}
+.cat-group{position:relative;display:flex;align-items:center}
+.cat-label{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);cursor:pointer;padding:6px 14px;
+  background:none;border:none;border-bottom:2px solid transparent;
+  transition:.15s;white-space:nowrap;height:100%
+}
+.cat-label:hover{color:var(--accent);background:var(--accent-g)}
+.cat-label.open{color:var(--accent);border-bottom-color:var(--accent);background:var(--accent-g)}
+.cat-roman{font-family:var(--fd);font-size:11px;font-style:italic;opacity:.55;margin-right:2px}
+.cat-chevron{font-size:10px;opacity:.4;margin-left:2px;transition:.2s}
+.cat-label.open .cat-chevron{transform:rotate(90deg)}
+.cat-tabs{
+  display:none;position:absolute;top:52px;left:0;
+  background:rgba(10,22,40,.97);backdrop-filter:blur(16px);
+  border:1px solid var(--border);border-top:2px solid var(--accent);
+  min-width:200px;list-style:none;padding:6px 0;z-index:300;
+  box-shadow:0 12px 40px rgba(0,0,0,.5)
+}
+.cat-tabs.open{display:block}
+.cat-tabs li a{
+  display:block;padding:8px 18px;
+  font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:.12s;white-space:nowrap
+}
+.cat-tabs li a:hover,.cat-tabs li a.active{
+  color:var(--accent);background:var(--accent-g);
+  padding-left:22px
+}
+/* Mobile kategori-headers */
+.mob-cat-hdr{
+  font-family:var(--fd);font-size:13px;font-style:italic;
+  color:var(--accent);padding:18px 0 6px;
+  border-top:1px solid var(--border-s);margin-top:8px;
+  letter-spacing:.02em
+}
+.mob-cat-hdr:first-child{border-top:none;margin-top:0;padding-top:6px}
 .nav-search-wrap{position:relative;flex-shrink:0}
 #globalSearchInput{background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:var(--fb);font-size:12px;padding:5px 30px 5px 10px;width:180px;transition:.2s}
 #globalSearchInput:focus{outline:none;border-color:var(--accent);width:240px}
@@ -308,18 +348,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
       <span class="nav-ser">Svensk OSINT</span>
       <span class="nav-name">INBLICK</span>
     </a>
-    <ul class="nav-tabs">
-      <li><a href="#" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
-      <li><a href="#" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
-      <li><a href="#" id="tab-sectors" onclick="show('sectors');return false">Sektormiljöer</a></li>
-      <li><a href="#" id="tab-actors" onclick="show('actors');return false">Aktörsmatrisen</a></li>
-      <li><a href="#" id="tab-theory" onclick="show('theory');return false">Modeller</a></li>
-      <li><a href="#" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
-      <li><a href="#" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
-      <li><a href="#" id="tab-handle" onclick="show('handle');return false">Hantera &#228;rende</a></li>
-      <li><a href="#" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
-      <li><a href="#" id="tab-graph" onclick="show('graph');return false">Sambandsgraf</a></li>
-    </ul>
+    <nav class="cat-nav" id="catNav">
+      <!-- FÖRSTÅ -->
+      <div class="cat-group">
+        <button class="cat-label" id="cat-forsta" onclick="toggleCat('forsta')">
+          <span class="cat-roman">I</span>Förstå<span class="cat-chevron">›</span>
+        </button>
+        <ul class="cat-tabs" id="ctabs-forsta">
+          <li><a href="#" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
+          <li><a href="#" id="tab-sectors" onclick="show('sectors');return false">Sektormiljöer</a></li>
+          <li><a href="#" id="tab-actors" onclick="show('actors');return false">Aktörsmatrisen</a></li>
+          <li><a href="#" id="tab-legal" onclick="show('legal');return false">Juridisk ram</a></li>
+          <li><a href="#" id="tab-infopav" onclick="show('infopav');return false">Informationspåverkan</a></li>
+        </ul>
+      </div>
+      <!-- BEDÖMA -->
+      <div class="cat-group">
+        <button class="cat-label" id="cat-bedoma" onclick="toggleCat('bedoma')">
+          <span class="cat-roman">II</span>Bedöma<span class="cat-chevron">›</span>
+        </button>
+        <ul class="cat-tabs" id="ctabs-bedoma">
+          <li><a href="#" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
+          <li><a href="#" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
+          <li><a href="#" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
+          <li><a href="#" id="tab-graph" onclick="show('graph');return false">Sambandsgraf</a></li>
+        </ul>
+      </div>
+      <!-- AGERA -->
+      <div class="cat-group">
+        <button class="cat-label" id="cat-agera" onclick="toggleCat('agera')">
+          <span class="cat-roman">III</span>Agera<span class="cat-chevron">›</span>
+        </button>
+        <ul class="cat-tabs" id="ctabs-agera">
+          <li><a href="#" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
+          <li><a href="#" id="tab-culture" onclick="show('culture');return false">Säkerhetskultur</a></li>
+          <li><a href="#" id="tab-handle" onclick="show('handle');return false">Hantera ärende</a></li>
+          <li><a href="#" id="tab-theory" onclick="show('theory');return false">Modeller</a></li>
+          <li><a href="#" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
+        </ul>
+      </div>
+    </nav>
     <div style="display:flex;align-items:center;gap:10px">
       <div class="nav-search-wrap">
         <input id="globalSearchInput" placeholder="Sök fall, indikator…" autocomplete="off"/>
@@ -335,26 +403,50 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 
 <!-- ═══ MOBILE DRAWER ═══ -->
 <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mob-cat-hdr">I — Förstå</div>
     <button class="mobile-tab-btn" id="mtab-chain" onclick="show('chain');closeMobileDrawer()">
       <span class="mtb-num">01</span>Påverkanskedjan
     </button>
-    <button class="mobile-tab-btn" id="mtab-map" onclick="show('map');closeMobileDrawer()">
-      <span class="mtb-num">02</span>Händelsekarta
-    </button>
     <button class="mobile-tab-btn" id="mtab-sectors" onclick="show('sectors');closeMobileDrawer()">
-      <span class="mtb-num">03</span>Sektormiljöer
+      <span class="mtb-num">02</span>Sektormiljöer
     </button>
     <button class="mobile-tab-btn" id="mtab-actors" onclick="show('actors');closeMobileDrawer()">
-      <span class="mtb-num">04</span>Aktörsmatrisen
+      <span class="mtb-num">03</span>Aktörsmatrisen
     </button>
-    <button class="mobile-tab-btn" id="mtab-theory" onclick="show('theory');closeMobileDrawer()">
-      <span class="mtb-num">05</span>Modeller
+    <button class="mobile-tab-btn" id="mtab-legal" onclick="show('legal');closeMobileDrawer()">
+      <span class="mtb-num">04</span>Juridisk ram
     </button>
-    <button class="mobile-tab-btn" id="mtab-inds" onclick="show('inds');closeMobileDrawer()">
-      <span class="mtb-num">06</span>Indikatorer
+    <button class="mobile-tab-btn" id="mtab-infopav" onclick="show('infopav');closeMobileDrawer()">
+      <span class="mtb-num">05</span>Informationspåverkan
+    </button>
+    <div class="mob-cat-hdr">II — Bedöma</div>
+    <button class="mobile-tab-btn" id="mtab-map" onclick="show('map');closeMobileDrawer()">
+      <span class="mtb-num">06</span>Händelsekarta
     </button>
     <button class="mobile-tab-btn" id="mtab-assess" onclick="show('assess');closeMobileDrawer()">
       <span class="mtb-num">07</span>Organisationstestet
+    </button>
+    <button class="mobile-tab-btn" id="mtab-inds" onclick="show('inds');closeMobileDrawer()">
+      <span class="mtb-num">08</span>Indikatorer
+    </button>
+    <button class="mobile-tab-btn" id="mtab-graph" onclick="show('graph');closeMobileDrawer()">
+      <span class="mtb-num">09</span>Sambandsgraf
+    </button>
+    <div class="mob-cat-hdr">III — Agera</div>
+    <button class="mobile-tab-btn" id="mtab-tools" onclick="show('tools');closeMobileDrawer()">
+      <span class="mtb-num">10</span>Verktygslådan
+    </button>
+    <button class="mobile-tab-btn" id="mtab-culture" onclick="show('culture');closeMobileDrawer()">
+      <span class="mtb-num">11</span>Säkerhetskultur
+    </button>
+    <button class="mobile-tab-btn" id="mtab-handle" onclick="show('handle');closeMobileDrawer()">
+      <span class="mtb-num">12</span>Hantera ärende
+    </button>
+    <button class="mobile-tab-btn" id="mtab-theory" onclick="show('theory');closeMobileDrawer()">
+      <span class="mtb-num">13</span>Modeller
+    </button>
+    <button class="mobile-tab-btn" id="mtab-visuals" onclick="show('visuals');closeMobileDrawer()">
+      <span class="mtb-num">14</span>Visuella modeller
     </button>
     <button class="mobile-tab-btn" id="mtab-visuals" onclick="show('visuals');closeMobileDrawer()">
       <span class="mtb-num">09</span>Visuella modeller
@@ -1357,9 +1449,35 @@ const actorNames={'criminal-network':'Kriminellt nätverk','foreign-power':'Frä
 
 /* ══ NAV ══ */
 let graphReady=false,mapReady=false;
+// Kategori → modular mapping
+const CAT_MAP={
+  forsta:['chain','sectors','actors','legal','infopav'],
+  bedoma:['map','assess','inds','graph'],
+  agera:['tools','culture','handle','theory','visuals']
+};
+function getCat(key){
+  for(const[cat,keys]of Object.entries(CAT_MAP)){if(keys.includes(key))return cat;}
+  return null;
+}
+function toggleCat(cat){
+  const btn=document.getElementById('cat-'+cat);
+  const tabs=document.getElementById('ctabs-'+cat);
+  const isOpen=tabs.classList.contains('open');
+  // Stäng alla
+  document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
+  document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
+  if(!isOpen){tabs.classList.add('open');btn.classList.add('open');}
+}
+// Stäng dropdowns vid klick utanför
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.cat-group')){
+    document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
+    document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
+  }
+});
 function show(key){
   document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
-  document.querySelectorAll('.nav-tabs a').forEach(a=>a.classList.remove('active'));
+  document.querySelectorAll('.cat-tabs a').forEach(a=>a.classList.remove('active'));
   document.querySelectorAll('.mobile-tab-btn').forEach(b=>b.classList.remove('active'));
   const m=document.getElementById('mod-'+key);
   const t=document.getElementById('tab-'+key);
@@ -1367,6 +1485,12 @@ function show(key){
   if(m)m.classList.add('active');
   if(t)t.classList.add('active');
   if(mt)mt.classList.add('active');
+  // Öppna rätt kategori-dropdown och markera aktiv
+  const cat=getCat(key);
+  if(cat){
+    document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
+    document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
+  }
   window.scrollTo(0,0);
   if(key==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
   if(key==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
@@ -4574,6 +4698,358 @@ function showHandle(id){
   </div>
   <div id="src-empty" style="display:none;padding:40px;text-align:center;color:var(--muted);font-family:var(--fm);font-size:13px">Inga källor.</div>
 </div></section>
+
+
+
+<!-- ═══ MODUL: JURIDISK RAM ═══ -->
+<div id="mod-legal" class="module">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Förstå · Juridisk ram</p>
+    <h1 class="sec-title">Vad är <em>brott</em> —<br>och vad är gråzon?</h1>
+    <p class="sec-intro">Otillåten påverkan rör sig ofta i gränslandet mellan det straffbara och det etiskt oacceptabla. Att förstå var den juridiska gränsen går är förutsättningen för att kunna agera — och för att förstå varför så många fall aldrig når domstol.</p>
+  </div>
+
+  <!-- Brottslig trappa -->
+  <div style="display:grid;gap:3px;margin-bottom:48px;max-width:760px" class="reveal">
+    <div style="padding:20px 24px;background:rgba(184,151,58,.08);border-left:3px solid var(--accent)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Straffbart — tagande av muta (10 kap. 5 a § BrB)</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75">En arbetstagare tar emot, godtar löfte om eller begär en <em>otillbörlig förmån</em> för utövningen av sin anställning. Straffskala böter — 2 år fängelse, grovt brott upp till 6 år. Mutbrottet kräver ett samband mellan förmånen och tjänsteutövningen — och att förmånen är otillbörlig. Lagföringar är sällsynta: NKIG registrerade 99 ärenden nov 2024–nov 2025, varav 19 gick till åtal. Fällandegrad 97% när åtal väcks.</div>
+    </div>
+    <div style="padding:20px 24px;background:rgba(184,151,58,.05);border-left:3px solid rgba(184,151,58,.4)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Straffbart — tjänstefel (20 kap. 1 § BrB)</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75">En myndighetsutövare åsidosätter vad som gäller för uppgiften av oaktsamhet eller uppsåt. Används vid röjande av sekretessbelagd information, felaktiga registerslagningar, otillbörliga kontakter med kriminella. Vanligare i INBLICK-materialet än mutbrott — men svårt att bevisa uppsåt.</div>
+    </div>
+    <div style="padding:20px 24px;background:rgba(184,151,58,.03);border-left:3px solid rgba(184,151,58,.2)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Straffbart — brott mot tystnadsplikt (20 kap. 3 § BrB)</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75">Röjande av uppgift som en befattningshavare är skyldig att hemlighålla. Åklagarkusinen/Ismail Abdo-fallet (c59): dömd till 50 dagsböter. Illustrerar hur gränsen kan vara hårfin — domstolen konstaterade att röjandet skett utan ont syfte men att brott ändå begåtts.</div>
+    </div>
+    <div style="padding:20px 24px;background:rgba(74,90,106,.15);border-left:3px solid rgba(74,90,106,.4)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Gråzon — vänskapskorruption och normglidning</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75">Relationella lojaliteter, jäv som inte anmäls, upphandlingar till bekanta, information som delas i god tro. Inte straffbart men skapar systematiska sårbarheter. Riksrevisionen (RiR 2026:3) fann att 22 av 29 granskade myndigheter hade brister i just dessa gråzoner — utan att något brott begåtts.</div>
+    </div>
+    <div style="padding:20px 24px;background:rgba(74,90,106,.08);border-left:3px solid rgba(74,90,106,.2)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Inte otillåtet — men anmälningsvärt</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75">Kontakter med kriminellt belastade utanför tjänsten, okänd nätverksaktivitet, ovanliga beteendeförändringar. Inget av detta är brott i sig — men utgör de tidiga indikatorer som personalsäkerheten ska fånga upp.</div>
+    </div>
+  </div>
+
+  <!-- Kritiska begrepp -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:48px" class="reveal">
+    <div style="padding:22px 24px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Otillbörlighetsrekvisitet</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.75">Det är inte förmånens storlek som avgör utan om den är ägnad att påverka tjänsteutövningen. Labcenter-härvan: ett tjugotal myndighetsanställda tog emot IT-utrustning vid kurser — av tingsrätten bedömt som mutbrott. Mutor behöver inte vara stora för att vara otillbörliga.</div>
+    </div>
+    <div style="padding:22px 24px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Otillåten påverkan — ej ett brott i sig</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.75">Begreppet otillåten påverkan som används av MSB och SKR är ett analytiskt begrepp, inte en brottsbeteckning. Det täcker allt från mutbrott till trakasserier, hot, manipulation och relationell exploatering. Stor del är ej straffbar men ändå systematiskt skadlig.</div>
+    </div>
+    <div style="padding:22px 24px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Anmälningsskyldighet — 14 kap. 1 § SekrL</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.75">Myndigheter är skyldiga att anmäla misstänkta brott i den egna verksamheten till åtal. I RiR 2026:3 konstateras att anmälningsskyldigheten inte alltid aktiveras vid rätt tidpunkt — SFV-fallet: GD friades delvis för sent agerande, men tingsrätten klargjorde att PAN, inte GD, borde ha gjort anmälan.</div>
+    </div>
+    <div style="padding:22px 24px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Normglidning som systemrisk</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.75">Prof. Olle Lundin (Uppsala) beskriver normglidning som det fenomen där förbudet mot otillbörliga förmåner successivt förskjuts inom en organisation när det sker utan sanktioner. Östersundshem-fallet: konsultarvoden till vd:ns egna bolag godtogs internt i fyra år utan att utlösa reaktion.</div>
+    </div>
+  </div>
+
+  <!-- Varför få fälls -->
+  <div style="padding:32px;background:var(--bg-card);border:1px solid var(--border);max-width:760px;margin-bottom:48px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px">Varför är det så svårt att bli dömd?</div>
+    <div style="display:grid;gap:8px">
+      <div style="display:flex;gap:14px;font-size:12px;color:var(--muted);line-height:1.65">
+        <span style="color:var(--accent);min-width:20px">01</span>
+        <span><strong style="color:var(--text)">Otillbörlighetsrekvisitet</strong> är vagt och kräver att domstolen bedömer om förmånen objektivt sett var ägnad att påverka — inte om den faktiskt påverkade.</span>
+      </div>
+      <div style="display:flex;gap:14px;font-size:12px;color:var(--muted);line-height:1.65">
+        <span style="color:var(--accent);min-width:20px">02</span>
+        <span><strong style="color:var(--text)">Bevis är svåra att säkra</strong> — relationskorruption lämnar sällan spår. Östersundshem: fyra år av konsultarvodering utan intern reaktion.</span>
+      </div>
+      <div style="display:flex;gap:14px;font-size:12px;color:var(--muted);line-height:1.65">
+        <span style="color:var(--accent);min-width:20px">03</span>
+        <span><strong style="color:var(--text)">Tjänstefelsbrottet</strong> kräver myndighetsutövning — vanliga handläggartjänster faller ibland utanför.</span>
+      </div>
+      <div style="display:flex;gap:14px;font-size:12px;color:var(--muted);line-height:1.65">
+        <span style="color:var(--accent);min-width:20px">04</span>
+        <span><strong style="color:var(--text)">Anmälningströskeln</strong> är hög internt — chefer undviker att eskalera för att skydda organisation eller relationer.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Källnot -->
+  <div style="font-size:11px;color:var(--dim);border-top:1px solid var(--border-s);padding-top:16px" class="reveal">
+    Källor: Brottsbalken 10 kap. 5 a §, 20 kap. 1 §, 20 kap. 3 §. Riksrevisionen RiR 2026:3 Infiltration i staten. Verifiera — Korruptionsläget i Sverige (NKIG-rapport 2025). Polismyndigheten NKIG. Östersundshem: Hovrätten för Nedre Norrland 2025-11-07. SFV: Stockholms tingsrätt 2021-02-03.
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ MODUL: INFORMATIONSPÅVERKAN ═══ -->
+<div id="mod-infopav" class="module">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Förstå · Informationspåverkan</p>
+    <h1 class="sec-title">När påverkan riktas mot<br><em>personal och beslutsfattare</em></h1>
+    <p class="sec-intro">Informationspåverkan mot offentlig förvaltning handlar inte bara om desinformation i breda kanaler — det handlar om riktad påverkan mot enskilda tjänstemän för att förändra deras beteende, undergräva deras beslutsförmåga eller isolera dem från kollegor och ledning.</p>
+  </div>
+
+  <!-- Tre vektorer -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:40px" class="reveal">
+    <div style="padding:24px;background:var(--bg-card)">
+      <div style="font-size:28px;font-family:var(--fd);font-weight:300;color:var(--accent);line-height:1;margin-bottom:10px">Riktad</div>
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Mot individen</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Hot, trakasserier och smutskastning mot specifika tjänstemän. Syftar till att tvinga fram tysnad, avgång eller kompromisserat beslutsfattande. Synligt i INBLICK-fallen: rättssekretess (c29), hot mot poliser (c63–c64).</div>
+    </div>
+    <div style="padding:24px;background:var(--bg-card)">
+      <div style="font-size:28px;font-family:var(--fd);font-weight:300;color:var(--accent);line-height:1;margin-bottom:10px">Relationell</div>
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Via tillit</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Systematisk infiltration av sociala nätverk — romantiska relationer, vänskap, släktskap. Kriminalvårdarna som bytt sida visar hur relationsbygge är den primära rekryteringskanalen. Svårt att se utifrån eftersom beteendet är legitimt tills det inte är det.</div>
+    </div>
+    <div style="padding:24px;background:var(--bg-card)">
+      <div style="font-size:28px;font-family:var(--fd);font-weight:300;color:var(--accent);line-height:1;margin-bottom:10px">Systemisk</div>
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Mot institutionen</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Desinformation som syftar till att underminera förtroendet för myndigheten som helhet. Valpåverkan (c76), falska nyheter om myndighetsbeslut. Statliga aktörer (Ryssland, Iran) kombinerar cyberintrång med narrativ påverkan.</div>
+    </div>
+  </div>
+
+  <!-- Kognitiva mekanismer -->
+  <div style="max-width:760px;margin-bottom:40px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px">Kognitiva mekanismer som utnyttjas</div>
+    <div style="display:grid;gap:3px">
+      <div style="display:flex;gap:0;background:var(--bg-card)">
+        <div style="min-width:180px;padding:14px 18px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);border-right:1px solid var(--border-s)">Auktoritetsbias</div>
+        <div style="padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.6">Kriminella som imiterar poliser, myndighetspersoner eller chefer. MCF: förare ska begära tjänstelegitimation innan fordonsdörren öppnas. INBLICK: falsk polis som taktik vid transportstöld.</div>
+      </div>
+      <div style="display:flex;gap:0;background:var(--bg-card)">
+        <div style="min-width:180px;padding:14px 18px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);border-right:1px solid var(--border-s)">Reciprocitetsnorm</div>
+        <div style="padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.6">Förmåner skapar en känsla av skuld och förpliktelse — grunden för hur relationell korruption byggs upp. Labcenter: IT-utrustning vid kurser som inledde ett beroendeförhållande.</div>
+      </div>
+      <div style="display:flex;gap:0;background:var(--bg-card)">
+        <div style="min-width:180px;padding:14px 18px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);border-right:1px solid var(--border-s)">Brusreduktion</div>
+        <div style="padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.6">Individer med hög arbetsbelastning komprimerar identitetskontroller och procedurer. MCF: i pressade arbetsscheman görs tidsbesparingar — identitetskontroll hoppar över.</div>
+      </div>
+      <div style="display:flex;gap:0;background:var(--bg-card)">
+        <div style="min-width:180px;padding:14px 18px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);border-right:1px solid var(--border-s)">Rädsla och isolering</div>
+        <div style="padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.6">Hot skapar tystnad — inte bara hos den hotade utan i hela arbetsgruppen. SKR identifierar tystnadskulturer som det mest bestående resultatet av otillåten påverkan i kommuner.</div>
+      </div>
+      <div style="display:flex;gap:0;background:var(--bg-card)">
+        <div style="min-width:180px;padding:14px 18px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);border-right:1px solid var(--border-s)">Normalisering</div>
+        <div style="padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.6">Gradvis acceptans av undantag från regler — "det är bara den här gången". Östersundshem och SFV-fallet visar hur normglidning sker utan att någon reagerar eftersom förändringen är inkrementell.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statliga aktörers taktik -->
+  <div style="padding:28px 32px;background:rgba(155,79,187,.06);border:1px solid rgba(155,79,187,.2);max-width:760px;margin-bottom:40px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#9B4FBB;margin-bottom:14px">Statliga aktörer — kombinerade operationer</div>
+    <div style="font-size:12px;color:var(--muted);line-height:1.75">Ryssland (GRU), Iran (IRGC) och Kina kombinerar systematiskt cyberintrång med mänsklig källrekrytering och narrativ påverkan. Säkerhetspolisen: Ryssland bedriver cyberspionage, inhämtning via mänskliga källor och annan säkerhetshotande verksamhet som daglig aktivitet mot Sverige. Irm-IRGC har avtal med svenska universitet där forskning tillfaller Iran — ett mönster av institutionell penetrering snarare än enskilda insiderhändelser. SMOB konstaterar att organiserad brottslighet och våldsbejakande extremism har överlappande aktörsmiljöer — en distinktion som inte alltid håller operativt.</div>
+  </div>
+
+  <!-- Skyddsåtgärder -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:32px" class="reveal">
+    <div style="padding:20px 22px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Tidig detektion</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Systematisk rapportering av nya privata kontakter med intensivt intresse för verksamheten · Ovanlig tillgång till information utanför arbetsuppgiften · Beteendeförändringar i samband med ekonomisk press</div>
+    </div>
+    <div style="padding:20px 22px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Motåtgärder</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Need-to-know-principen för känslig information · Rutiner för tyst larm (MCF) · Regelbundna säkerhetssamtal som normaliserar rapportering · Stöd till utsatta medarbetare — inte bara utredning</div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;color:var(--dim);border-top:1px solid var(--border-s);padding-top:16px">
+    Källor: Säkerhetspolisen — Rysslands underrättelseverksamhet i Sverige. SKR — Otillåten påverkan i kommuner och regioner. MSB — Påverkanskampanjer mot Sverige. MCF0079 mars 2026 kap 8.3. SMOB SGL 2026 kap 3.13 (nätverksanalys).
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ MODUL: VERKTYGSLÅDAN ═══ -->
+<div id="mod-tools" class="module">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Agera · Verktygslådan</p>
+    <h1 class="sec-title">Process, metod<br><em>och checklistor</em></h1>
+    <p class="sec-intro">Operativa verktyg för att bygga och underhålla skyddet mot otillåten påverkan. Från befattningsanalys och säkerhetsprövning till bow-tie-analys och skyddsplan.</p>
+  </div>
+
+  <!-- SEKTION 1: Befattningsanalys -->
+  <div style="margin-bottom:48px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--border-s)">01 — Befattningsanalys</div>
+    <p style="font-size:13px;color:var(--text);line-height:1.8;max-width:720px;margin-bottom:20px">Grunden för hela säkerhetsprövningsprocessen. Syftet är att identifiera vilka befattningar som ger tillgång till säkerhetskänslig verksamhet, känsliga register, beslutprocesser eller kritisk infrastruktur — och dimensionera skyddsåtgärderna därefter.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+      <div style="padding:18px 20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Frågor att ställa per befattning</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.75">Vilken information har befattningen tillgång till? · Kan befattningen påverka beslut eller ärendehantering? · Ger befattningen tillgång till skyddade personuppgifter? · Kan befattningen utnyttjas för att hjälpa externa aktörer? · Ingår befattningen i säkerhetsskyddsavtal med annan aktör?</div>
+      </div>
+      <div style="padding:18px 20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">SMOB:s riskyrken (urval)</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.75">Väktare/ordningsvakter 1 882 person-år · Socialsekreterare 397 · Kriminalvårdare 323 · Banktjänstemän 250 · Redovisningsekonomer 409 · Inköpare och upphandlare 401 · Advokater 218 · Handläggare 233. Dessa yrken förekommer i studiepopulationen för organiserad brottslighet och har hög funktionell sårbarhet.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEKTION 2: Säkerhetsprövningsprocessen -->
+  <div style="margin-bottom:48px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--border-s)">02 — Säkerhetsprövningsprocessen (BROP-modellen)</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:16px">
+      <div style="padding:16px 14px;background:var(--bg-card);text-align:center">
+        <div style="font-family:var(--fd);font-size:22px;font-weight:300;color:var(--accent)">B</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px">Befattnings-analys</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:6px;line-height:1.5">Kartlägg tillgångsbehov och sårbarhet</div>
+      </div>
+      <div style="padding:16px 14px;background:var(--bg-card);text-align:center">
+        <div style="font-family:var(--fd);font-size:22px;font-weight:300;color:var(--accent)">R</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px">Register-kontroll</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:6px;line-height:1.5">Brå, belastningsregister, säkerhetsregister</div>
+      </div>
+      <div style="padding:16px 14px;background:var(--bg-card);text-align:center">
+        <div style="font-family:var(--fd);font-size:22px;font-weight:300;color:var(--accent)">O</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px">Omprövning</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:6px;line-height:1.5">Löpande vid förändrad livssituation</div>
+      </div>
+      <div style="padding:16px 14px;background:var(--bg-card);text-align:center">
+        <div style="font-family:var(--fd);font-size:22px;font-weight:300;color:var(--accent)">P</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px">Personlighets-bedömning</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:6px;line-height:1.5">Intervju och referenstagning</div>
+      </div>
+      <div style="padding:16px 14px;background:var(--bg-card);text-align:center">
+        <div style="font-family:var(--fd);font-size:22px;font-weight:300;color:var(--accent)">→</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px">Beslut</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:6px;line-height:1.5">Godkänd / Ej godkänd / Villkorad</div>
+      </div>
+    </div>
+    <div style="padding:16px 20px;background:rgba(184,151,58,.05);border-left:2px solid var(--border);font-size:12px;color:var(--muted);line-height:1.7;max-width:720px">
+      Riksrevisionen (RiR 2026:3) konstaterar att säkerhetsprövning vid FMV, Kammarkollegiet och Kriminalvården inte är tillräckligt effektiv — varken de förebyggande processerna eller förmågan att <em>upptäcka pågående</em> infiltration. 22 av 29 granskade myndigheter hade brister. Det vanligaste problemet: säkerhetsprövningen genomförs vid anställning men följs inte upp vid förändrad livssituation.
+    </div>
+  </div>
+
+  <!-- SEKTION 3: Bow-tie för transportskydd/hot -->
+  <div style="margin-bottom:48px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--border-s)">03 — Bow-tie-analys för otillåten påverkan</div>
+    <p style="font-size:13px;color:var(--text);line-height:1.8;max-width:720px;margin-bottom:20px">MCF rekommenderar bow-tie-analys som primär arbetsmetod för att identifiera orsaker, förebyggande barriärer och begränsande åtgärder. Metoden fungerar lika bra för insiderhot som för transportstöld.</p>
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:center;max-width:800px">
+      <div style="padding:20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Orsaker / Vektorer</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.7">Ekonomisk sårbarhet (skulder, beroenden) · Familje- och nätverkskoppling till kriminella · Bristande bakgrundskontroll vid rekrytering · Alltför vid informationstillgång · Normglidning utan sanktion</div>
+      </div>
+      <div style="padding:24px 16px;background:rgba(184,151,58,.1);text-align:center;min-width:120px">
+        <div style="font-family:var(--fd);font-size:13px;font-weight:400;color:var(--accent);line-height:1.4">Händelse<br><em>Insider agerar</em></div>
+      </div>
+      <div style="padding:20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Konsekvenser</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.7">Röjd sekretessbelagd information · Saboterad förundersökning · Ekonomisk oegentlighet · Skyddsbehövandes adress exponerad · Skada på institutionellt förtroende</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;max-width:800px">
+      <div style="padding:14px 20px;background:rgba(74,123,111,.08);border-top:2px solid var(--green)">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px">Förebyggande barriärer</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.65">Befattningsanalys · Löpande säkerhetsprövning · Regelbundna säkerhetssamtal · Need-to-know · Loggning och åtkomstkontroll</div>
+      </div>
+      <div style="padding:14px 20px;background:rgba(196,92,46,.08);border-top:2px solid var(--orange)">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:6px">Begränsande barriärer</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.65">Snabb detektion via logganalys · Tydlig anmälningsprocess · Stöd till utsatt medarbetare · Kommunikationsplan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEKTION 4: MCF-checklista -->
+  <div style="margin-bottom:40px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--border-s)">04 — Checklista: Känsliga överlämningspunkter</div>
+    <p style="font-size:12px;color:var(--muted);line-height:1.75;max-width:720px;margin-bottom:16px">Baserad på MCF0079 kap 9.4 och 9.10 — anpassad för HR och säkerhetsfunktion i myndigheter och kommuner.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
+      <div style="padding:18px 20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Vid rekrytering</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.75">☐ Befattningsanalys genomförd · ☐ Registerkontroll utförd · ☐ Bakgrundskontroll anpassad till befattningsnivå · ☐ Säkerhetsintervju genomförd · ☐ Dokumentation förvarad minst 5 år</div>
+      </div>
+      <div style="padding:18px 20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Löpande</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.75">☐ Omprövning vid förändrad livssituation · ☐ Regelbundna säkerhetssamtal · ☐ Logganalys av ovanlig åtkomst · ☐ Rutin för anmälan av misstänkta kontakter · ☐ Larmlistor testade</div>
+      </div>
+      <div style="padding:18px 20px;background:var(--bg-card)">
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Vid händelse</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.75">☐ Anmälningsskyldighet aktiverad · ☐ Bevis säkrade · ☐ Personalrättslig process påbörjad · ☐ Stöd till utsatt medarbetare · ☐ Kommunikationsplan aktiverad</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;color:var(--dim);border-top:1px solid var(--border-s);padding-top:16px">
+    Källor: MCF0079 mars 2026 kap 9.4, 9.7, 9.8, 9.10. Riksrevisionen RiR 2026:3. SMOB SGL 2026 Tabell 2. Helena Rozi, Svenska kraftnät — säkerhetsprövningsprocess i praktiken.
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ MODUL: SÄKERHETSKULTUR ═══ -->
+<div id="mod-culture" class="module">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Agera · Säkerhetskultur</p>
+    <h1 class="sec-title">Kultur som<br><em>skyddsbarriär</em></h1>
+    <p class="sec-intro">Säkerhetssystem, processer och lagstiftning är nödvändiga men otillräckliga. En organisation med stark säkerhetskultur är svårare att infiltrera än en med svag — oavsett vilka tekniska system som finns på plats. Riksrevisionen (RiR 2026:3) pekar på ledningens roll som avgörande för hela systemet.</p>
+  </div>
+
+  <!-- Vad är säkerhetskultur -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:40px" class="reveal">
+    <div style="padding:24px;background:rgba(74,123,111,.08);border-left:3px solid var(--green)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Stark säkerhetskultur</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.75">Medarbetare anmäler ovanliga kontakter utan rädsla för att verka paranoid · Chefer tar emot signaler och eskalerar uppåt · Misstänkta förmåner rapporteras direkt · Det är legitimt att ifrågasätta ovanliga förfrågningar · Säkerhet är ett normalt inslag i onboarding och medarbetarsamtal</div>
+    </div>
+    <div style="padding:24px;background:rgba(196,92,46,.08);border-left:3px solid var(--orange)">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:12px">Tystnadskultur — varningssignaler</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.75">Kollegor skyddar varandra från anmälningar · Hot mot den som visselblåser · Chefer undertrycker signaler för att skydda enhetens rykte · "Det är alltid gjorts så här" som svar på regelbrott · Säkerhet ses som HR:s problem — inte mitt</div>
+    </div>
+  </div>
+
+  <!-- Ledarskapsdimensionen -->
+  <div style="max-width:760px;margin-bottom:40px" class="reveal">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px">Ledningens roll — RiR 2026:3</div>
+    <div style="display:grid;gap:3px">
+      <div style="display:flex;gap:0">
+        <div style="min-width:200px;padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--text);border-right:1px solid var(--border-s)">Prioritering</div>
+        <div style="padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--muted);line-height:1.6">Riksrevisionen fann att ledningens styrning och prioritering av säkerhetsarbetet är avgörande. FMV, Kammarkollegiet och Kriminalvården hade alla strukturella brister kopplade till att ledningen inte aktivt drev säkerhetsfrågor.</div>
+      </div>
+      <div style="display:flex;gap:0">
+        <div style="min-width:200px;padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--text);border-right:1px solid var(--border-s)">Modellbeteende</div>
+        <div style="padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--muted);line-height:1.6">Chefer som själva bryter mot säkerhetsrutiner signalerar att de inte är viktiga. SFV-fallet: GD:n visste om brister men agerade inte i tid. Normglidning börjar ofta i ledningsskiktet.</div>
+      </div>
+      <div style="display:flex;gap:0">
+        <div style="min-width:200px;padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--text);border-right:1px solid var(--border-s)">Psykologisk trygghet</div>
+        <div style="padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--muted);line-height:1.6">Medarbetare rapporterar bara om de vet att de inte bestraffas för att anmäla eller ifrågasätta. Catharina Lindstedt (Göteborgs stad): organisationer med tystnadskulturer rekryteras systematiskt av kriminella nätverk eftersom de vet att inget rapporteras.</div>
+      </div>
+      <div style="display:flex;gap:0">
+        <div style="min-width:200px;padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--text);border-right:1px solid var(--border-s)">Uppföljning</div>
+        <div style="padding:14px 18px;background:var(--bg-card);font-size:12px;color:var(--muted);line-height:1.6">Säkerhetskultur kräver kontinuerlig underhållning — inte en-gångs-utbildning. MCF: skyddsplanen ska övas, testas och revideras. Övning ger färdighet men avslöjar också var barriärerna brister.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fyra konkreta åtgärder -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:40px" class="reveal">
+    <div style="padding:22px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Normalisera rapportering</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Säkerhetssamtal ska ingå i det ordinarie medarbetarsamtalet — inte triggas av misstanke. MCF: regelbundna säkerhetssamtal identifierar ekonomisk sårbarhet och förändrade livssituationer innan de utnyttjas. Det gör rapportering till en rutin, inte ett anklagande.</div>
+    </div>
+    <div style="padding:22px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Visselblåsarstruktur</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">Intern kanal för anonym rapportering — Region Västerbottens finansstrateg avslöjades av en visselblåsare. NKIG: "Visselblåsare är avgörande för att avslöja korruption. Att visselblåsningar i vissa kommuner och regioner inte tas på allvar är en oroande utveckling."</div>
+    </div>
+    <div style="padding:22px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Övning och scenarioträning</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">MCF: övning sker med regelbundna intervall och kan hållas oanmält. Scenarier ska testa verkliga svagpunkter: Vad gör personalen om en kollega inte svarar? Hur hanteras en gisslansituation? Finns rutin för tyst larm?</div>
+    </div>
+    <div style="padding:22px;background:var(--bg-card)">
+      <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Stöd till utsatta medarbetare</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7">SKR och Catharina Lindstedt betonar att organisationer måste stötta den som utsatts för otillåten påverkan — inte bara utreda händelsen. Medarbetaren som utsatts för hot eller trakasserier behöver konkret stöd för att inte tystna.</div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;color:var(--dim);border-top:1px solid var(--border-s);padding-top:16px">
+    Källor: Riksrevisionen RiR 2026:3. MCF0079 mars 2026 kap 9.8, 9.13. SKR — Otillåten påverkan i kommuner och regioner. NKIG-rapport 2025 (Verifiera). Catharina Lindstedt — erfarenheter från Göteborgs stad.
+  </div>
+</div>
+</div>
 
 
 <script>
