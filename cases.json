@@ -548,11 +548,6 @@
         "l": "Expressen — Klanadvokaten uteslöts och är nu tillbaka i rätten",
         "t": "media",
         "url": "https://www.expressen.se/nyheter/klanadvokaten-uteslots-nu-ar-han-tillbaka-i-ratten/"
-      },
-      {
-        "l": "Dagens Juridik — Edip Samuelssons chef kritiserar återkomsten",
-        "t": "media",
-        "url": "https://www.dagensjuridik.se/nyheter/edip-samuelssons-chef-till-attack-mot-ra-arendet-avslutas/"
       }
     ]
   },
@@ -1567,11 +1562,6 @@
     "status": "INDICATION",
     "summary": "Polisen inledde förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanke: valsedlar hanterades på otillåtet sätt och valprocessens integritet äventyrades. Fallet nämns i handledningen i kontexten om möjliggörare inom demokratiska processer — att valprocessen kan påverkas inifrån av någon med insiderposition i valarbetet. Utreds som möjliggörande av valfusk snarare än yttre påverkan.",
     "sources": [
-      {
-        "l": "Brå — om valfusk och påverkan på val",
-        "t": "report",
-        "url": "https://bra.se/amnen/politisk-brottslighet/valfusk.html"
-      },
       {
         "l": "Dagens Samhälle — grovt valfusk utreds i Göteborg",
         "t": "news",
