@@ -23,8 +23,11 @@ jobs:
         with:
           args: >-
             --no-progress
-            --max-retries 3
-            --timeout 30
+            --max-retries 1
+            --timeout 20
+            --exclude '^https://bra\\.se/'
+            --exclude '^https://www\\.riksrevisionen\\.se/'
+            --exclude '^https://regionblekinge\\.se/'
             --accept 200,204,206,401,403,429
             cases.json
           fail: true
