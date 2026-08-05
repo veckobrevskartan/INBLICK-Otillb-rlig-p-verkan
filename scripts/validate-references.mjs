@@ -72,6 +72,8 @@ const forbiddenUrls = new Set([
   "https://www.trendmicro.com/en_us/research/17/a/operation-cloud-hopper.html",
   "https://www.trendmicro.com/vinfo/pl/security/news/cyber-attacks/operation-cloud-hopper-what-you-need-to-know",
   "https://www.unitedagainstnucleariran.com/report/irans-irgc-at-swedish-universities",
+  "https://bra.se/amnen/politisk-brottslighet/valfusk.html",
+  "https://www.dagensjuridik.se/nyheter/edip-samuelssons-chef-till-attack-mot-ra-arendet-avslutas/",
 ]);
 
 for (const item of cases) {
