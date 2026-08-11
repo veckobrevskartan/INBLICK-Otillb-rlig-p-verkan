@@ -5542,6 +5542,14 @@ function showHandle(id){
 
 
 <script>
+/* Källförteckningen är gemensam för alla moduler och ska alltid ligga sist i
+   dokumentflödet. Den skapades före fyra senare moduler, vilket gjorde att
+   referenserna visades före innehållet när användaren bytte till dessa flikar. */
+const sharedReferenceFooter=document.getElementById('kallforteckning');
+if(sharedReferenceFooter&&document.currentScript?.parentNode){
+  document.currentScript.parentNode.insertBefore(sharedReferenceFooter,document.currentScript);
+}
+
 function filterSrc(cat){
   document.querySelectorAll('.src-group').forEach(g=>{g.style.display=cat==='all'||g.dataset.cat===cat?'block':'none';});
   document.getElementById('src-empty').style.display=[...document.querySelectorAll('.src-group')].some(g=>g.style.display!=='none')?'none':'block';
