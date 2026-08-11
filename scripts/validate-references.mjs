@@ -150,7 +150,7 @@ if (!questionsMatch) {
 }
 
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
-if (cases.length !== 107) errors.push(`Förväntade 107 fall, hittade ${cases.length}`);
+if (cases.length !== 113) errors.push(`Förväntade 113 fall, hittade ${cases.length}`);
 
 if (errors.length) {
   console.error(errors.map(error => `- ${error}`).join('\n'));
