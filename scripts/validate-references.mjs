@@ -123,6 +123,32 @@ for (const match of index.matchAll(/href="modules\.html#([^"]+)"/g)) {
   if (!moduleIds.includes(match[1])) errors.push(`index.html: modulankare saknas: ${match[1]}`);
 }
 
+for (const [name, expected] of [['ACTORS', 4], ['INDICATORS', 25], ['CHAIN', 7]]) {
+  const match = modules.match(new RegExp(`const ${name}=(\\[[^\\n]*\\]);`));
+  if (!match) {
+    errors.push(`modules.html: ${name} saknas — en eller flera moduler kan inte starta`);
+    continue;
+  }
+  try {
+    const items = JSON.parse(match[1]);
+    if (items.length !== expected) errors.push(`modules.html: förväntade ${expected} poster i ${name}, hittade ${items.length}`);
+  } catch (error) {
+    errors.push(`modules.html: ${name} är inte giltig JSON: ${error.message}`);
+  }
+}
+
+const questionsMatch = modules.match(/const QUESTIONS=(\[[\s\S]*?\]);\s*const DIMS=/);
+if (!questionsMatch) {
+  errors.push('modules.html: QUESTIONS saknas — modulsidans JavaScript kan inte starta');
+} else {
+  try {
+    const questions = JSON.parse(questionsMatch[1]);
+    if (questions.length !== 14) errors.push(`modules.html: förväntade 14 organisationsfrågor, hittade ${questions.length}`);
+  } catch (error) {
+    errors.push(`modules.html: QUESTIONS är inte giltig JSON: ${error.message}`);
+  }
+}
+
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
 if (cases.length !== 107) errors.push(`Förväntade 107 fall, hittade ${cases.length}`);
 
