@@ -1755,6 +1755,9 @@ const ACTOR_LABELS={CRIMINAL_NETWORK:'Kriminellt nätverk',FOREIGN_POWER:'Främm
 const SECTOR_LABELS={AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT'};
 const catLabels={ACCESS:'Åtkomst',BEHAVIOUR:'Beteende',CONTACT:'Kontakt',DIGITAL:'Digital',PROCUREMENT:'Upphandling',SOCIAL:'Socialt'};
 const actorNames={'criminal-network':'Kriminellt nätverk','foreign-power':'Främmande makt','extremist':'Extremism','economic-interest':'Ekonomiskt intresse'};
+const ACTORS=[{"id":"criminal-network","name":"Kriminellt nätverk","sub":"Organiserad brottslighet","color":"#C45C2E","goal":"Tillstånd, register, upphandling, bidrag, registeråtkomst, smuggling","horizon":"Kort–medellång sikt","exposure":"HIGH","desc_long":"Kriminella nätverk är den aktörstyp med flest dokumenterade insiderhot i Sverige. Brå (2024) uppskattade att ca 700 aktiva möjliggörare verkar i legala strukturer på kriminella nätverks uppdrag. Dessa är inte tillfälliga medhjälpare — de är strategiskt rekryterade och placerade i positioner med specifikt användbara befogenheter.\n\nRekryteringslogiken är rationell: ett kriminellt nätverk behöver inte penetrera ett system med kraft om det kan placera eller rekrytera en person inifrån. En enda välplacerad möjliggörare är mer värd än tio externa operatörer — och är svårare att avslöja och mer hållbar över tid.\n\nRekryteringen sker primärt i den egna familje- och bekantskapskretsen. Brå dokumenterar att nätverken systematiskt identifierar familjemedlemmar med anställningar i användbara sektorer: socialtjänst, polis, domstol, Migrationsverket, banker. Kontakten inleds mjukt — ett socialt möte, en tjänst, ett ekonomiskt förslag. Eskalering sker gradvis, ibland så sakta att möjliggöraren knappt märker steget.\n\nDen ekonomiska motorn är tydlig: en möjliggörare inom rättsväsendet som informerar om planerade tillslag kan vara värd mer per insatsvärde för nätverket än tiotal street-level operatörer. Arvodet varierar kraftigt: från engångssummor på tiotusentals kronor (socialsekreterare som läcker ett enskilt ärende) till systematiska månatliga betalningar (kriminalvårdaren som smugglar regelbundet).\n\nTvång är en underraporterad dimension. Flera av de dokumenterade möjliggörarna i svenska fall har agerat under hot snarare än av ekonomiskt motiv. Foxtrot-kriminalvårdaren (Örebro tingsrätt B 832-24) hotades med konsekvenser för sin familj. Försäkringskassan-fallet (2020): slagningar gjordes \"under press och visst hot\". Det kriminella nätverkets möjlighet att utöva påtryckning via familjenätverket är en rekryteringsdimension som sällan syns i domstolsprotokollet men är väl dokumenterad i Brå:s intervjumaterial.","methods":["Relationsbaserad rekrytering via familje- och bekantskapsnätverk","Ekonomiska incitament — engångssummor, löpande betalningar, gåvor","Hot och utpressning mot möjliggöraren eller dennes familj","Stegvis eskaladering — 'en liten tjänst' som successivt ökar i allvar","Placering — rekrytering av individer till specifika tjänster med önskad access","Social engineering — relationsbygge över månader eller år"],"note":"Polismyndighetens nationella lägesbild 2024 identifierade 680 möjliggörare med strategisk eller samhällsviktig position. Brå beskriver hur rekrytering kan ske genom familje- och bekantskapsnätverk och hur hot, lojalitet och ekonomiska incitament kan samverka.","source":"Polismyndigheten 2024 — Lägesbild över aktiva gängkriminella i Sverige; Brå 2024:2 — Möjliggörare för kriminella nätverk","indicators":["Medarbetare med nära familjerelationer till kända nätverksmedlemmar","Plötslig välståndsutveckling utan förklaring — fordon, resor, elektronik","Ovanligt intresse för kollegors schema, tillslag eller ärenden utanför eget uppdrag","Tecken på ekonomisk stress som plötsligt upphör utan känd inkomstkälla","Försämrad psykisk hälsa, social isolation eller tecken på press och rädsla","Ovanlig kontaktfrekvens med specifika externa individer i nära anslutning till tjänsteuppdrag"],"cases":["c01","c02","c04","c07","c08","c09","c11","c15","c22","c26","c27","c29","c32","c33","c34","c40","c41","c45","c51","c52","c57","c58","c59","c60","c61","c62","c63"]},{"id":"foreign-power","name":"Främmande makt","sub":"Statligt eller statsunderstött","color":"#B33A3A","goal":"Strategisk information, teknologitillgång, långsiktigt politiskt inflytande, sabotage","horizon":"Lång sikt (år–decennier)","exposure":"HIGH","desc_long":"Statlig underrättelseverksamhet mot Sverige bedrivs systematiskt av Ryssland, Kina och Iran enligt Säkerhetspolisens konsistenta bedömningar. Operationerna skiljer sig fundamentalt från kriminella nätverkens kortsiktiga vinningsorientering: här handlar det om långsiktiga strategiska mål — kartläggning av försvarskapacitet, inhämtning av teknologisk kunskap, påverkan på politiska processer och, vid behov, sabotage av kritisk infrastruktur.\n\nRyssland: Säkerhetspolisen bekräftar ökad rysk riskbenägenhet sedan 2022. Peyman Kia-fallet är det historiskt allvarligaste: en Must-analytiker med säkerhetsprövning på högsta nivå lämnade systematiskt klassificerad information i sex år. HD:s livstidsdom fastslår att skadorna är \"synnerligen allvarliga\". GRU-fallet (2023): två bröder med rysk koppling kartlade militära anläggningar. Sabotageoperationerna mot järnvägs- och kabelinfrastruktur i Norden är dokumenterade av norsk PST och brittisk NCSC som koordinerade GRU Unit 29155-operationer.\n\nKina: Säkerhetspolisens årsberättelse (2024) anger att kinesisk underrättelseverksamhet är metodisk och långsiktig. Operation Cloud Hopper (APT10) visade hur kinesiska statshackare penetrerade managed service providers för att nå deras kunders system — ett angrepp mot IT-leverantörskedjan snarare än direkt mot slutmålen. UANI-rapporten (2024) identifierade IRGC-kopplad verksamhet vid svenska lärosäten, inkl. Lunds universitet.\n\nIran: Säkerhetspolisen noterar att Iran i ökande utsträckning anlitar kriminella nätverk i Sverige för att genomföra uppdrag mot israeliska och judiska intressen. Det representerar en hybridisering av statlig underrättelseverksamhet och kriminell organisation — en ny kombination som utmanar traditionella kategoriseringsramar.\n\nTransnationell repression: FOI (2023) dokumenterar att Eritrea, Kina, Iran, Ryssland och Syrien systematiskt utövar kontroll och utpressning mot sina diasporor i Sverige. Eritreas tvåprocent-skatt, drivs in via hot mot släktingar i hemlandet.","methods":["Rekrytering av insiders med säkerhetsprövad tillgång till klassificerad information","Cyberintrång via leverantörskedjan (APT10/Cloud Hopper-modellen)","Sabotage mot kritisk infrastruktur (järnväg, sjökablar, energiförsörjning)","Akademiskt och industriellt spionage via universitets- och FoU-samarbeten","Anlitande av kriminella nätverk som proxies för diskret påverkan","Transnationell repression via diasporaorganisationer och ambassader"],"note":"Säkerhetspolisen bekräftar ökad rysk riskbenägenhet och sabotagevilja sedan 2022. Kinesisk underrättelseverksamhet är metodisk och långsiktig — leverantörskedjan är primär intrångsvektor. Iran anlitar kriminella i Sverige som proxies. Transportstyrelsen och Lantmäteriet visar att strukturella systembrister exploateras utan att enskild insider behöver rekryteras.","source":"Säkerhetspolisen årsberättelse 2023–2024; FRA årsrapport 2023; FOI-R--5436--SE (Diaspora 2023)","indicators":["Kontakter med utländska diplomatiska företrädare eller känd underrättelseknuten personal","Resor till länder med aktiv underrättelseaktivitet mot Sverige utan tjänstelogik","Oförklarlig tillgång till information utanför tjänsteuppdraget, särskilt klassificerat material","Ekonomisk välståndsutveckling som inte matchar känd lön och livsstil","Krypterad kommunikation med utländska kontakter utanför ordinarie tjänstemönster"],"cases":["c03","c05","c10","c24","c53","c68","c69","c70","c71","c93","c94","c95","c96","c97"]},{"id":"extremist","name":"Extremistisk miljö","sub":"Ideologiskt motiverad","color":"#7A4A6B","goal":"Ideologisk påverkan, finansiering, rekrytering, legitimitet via offentlig position","horizon":"Medellång–lång sikt","exposure":"MEDEL","desc_long":"Extremistiska miljöer söker inte primärt ekonomisk vinning via insiderpositioner — de söker legitimitet, finansiering och operationell förmåga. En anställd med islamistisk extremistkoppling i en skola, socialtjänst eller bidragsgivande myndighet ger nätverket tillgång till resurser och rekryteringsytor som är svåra att erhålla externt.\n\nActa Publicas granskning (2020) identifierade att bolag kopplade till islamistisk extremism erhöll kontrakt för 931 Mkr med 194 statliga och kommunala aktörer. Kontrakten handlade om utbildning, vård och omsorg — sektorer där extremistiska miljöers tillgång till utsatta individer (barn, flyktingar, socialbidragstagande) är särskilt problematisk.\n\nVaccinregisterfallet (2024): en IT-konsult med dokumenterade extremistkopplingar (Expo/Läkartidningen) hade tillgång till det nationella vaccinationsregistret via ett upphandlat IT-uppdrag. Fallet illustrerar hur extremistiska aktörer kan nå känslig information via det reguljära upphandlingssystemet.\n\nHögerextremism i övervakarsektorn: Acta Publica (2020–2024) dokumenterade i rapporten \"Ur mylla brun\" att individer med kopplingar till högerextrema miljöer innehaft positioner som övervakare av kriminellt dömda — en position med tillgång till personuppgifter om dömda och information om deras sociala situation.\n\nFundamentalt skiljer sig extremisternas inkubationsstrategi från kriminella nätverks: kriminella rekryterar individer med rätt position, extremister säkerställer att rätt ideologiska sympatisörer söker och erhåller rätt positioner. Det innebär att screeningtidpunkten — vid rekrytering — är den kritiska kontrollpunkten, inte vid utförandet.","methods":["Strategisk placering av ideologiska sympatisörer i offentliga nyckelpositioner","Bidragssystem som finansieringskälla för organisationens verksamhet","Rekrytering och radikalisering via offentliga miljöer (skolor, socialtjänst, fritidsgårdar)","Upphandlingskontrakt till extremistkopplade bolag via det offentliga systemet","Informationsinhämtning om motståndare och utsatta grupper via tjänsteposition"],"note":"Statskontoret (2024) och Acta Publica: skadorna träffar individen, anhöriga, verksamheten och tilltron till förvaltningen. Acta Publicas granskning visar att infiltration via till synes legitima bolag och yrkesroller ger extremistiska miljöer finansiering och tillgång till rekryteringsytor.","source":"Acta Publica 2020 (islamistiska extremistbolag); CVE — rapport om RIM 2020; Expo granskning 2024","indicators":["Medarbetare med dokumenterade kopplingar till extremistiska organisationer eller miljöer","Avvikande agerande kring specifika klientgrupper eller beslutskategorier med ideologisk prägel","Arbetsgivare med bidragssökning i kombination med styrelsemedlemmar kopplade till kända extremistorganisationer","IT-konsulter eller underleverantörer med extremistbakgrund i anbud utan bakgrundskontroll","Spridning av extremistiskt material via tjänstemiljöns kanaler eller i tjänstetid"],"cases":["c05","c14","c16","c18","c82","c83","c84","c85","c86"]},{"id":"economic-interest","name":"Ekonomiskt intresse","sub":"Personlig vinning eller extern uppdragsgivare","color":"#B8973A","goal":"Ekonomisk vinning via korruption, bedrägeri eller konkurrenssnedvridning","horizon":"Kort–medellång sikt","exposure":"MEDEL","desc_long":"Ekonomiskt motiverade insiderhot är de vanligaste och på aggregerad nivå kostnadsamt skadligaste. De täcker allt från den enskilde tjänstemannen som tar emot ett enstaka mutor för en gynnsam tilldelning, till systematiska upplägg där en möjliggörare etablerar en flerårig korruptionsrelation med en extern aktör.\n\nBrå:s studie av 684 korruptionsärenden (2013) identifierade att de vanligaste mutmottagarna var individer i ledande befattningar eller med inflytande — specifikt de med tillsyns- och kontrollfunktioner, tillståndshandläggning och upphandling. Nära en tredjedel av mutgivarna kom från bygg- och anläggningssektorn. IMM (2022): mutbrottsdomar i Sverige uppgick till 117 Mkr, en sexfaldig ökning på ett år.\n\nAkademiska sjukhuset-fallet (dom 2024) illustrerar det systematiska upplägget: en verksamhetschef tog emot 4,76 Mkr i mutor från en medicinteknisk leverantör under fem år. Fem år av systematisk korruption möjliggjordes av att den ansvariga individen kontrollerade inköpsprocessen ensam och åtnjöt hög organisatorisk trovärdighet.\n\nPerstorpsfallet (Spotify Dok): en kommunal ekonomichef svindlade sina kommuner på 15 Mkr under en lång period. Befogenheten att attestera utbetalningar, kombinerat med bristande internkontroll, möjliggjorde ett decennium av undandraganden.\n\nVinnova-fallet (Breakit 2024): offentligt anställda konsulter riggade upphandlingsprocesser för att säkerställa kontrakt till närstående bolag, värda hundratals miljoner. Det illustrerar hur gränsen mellan internt ekonomisk brottslighet och extern upphandlingskorruption är flytande.\n\nDet ekonomiska insiderhotet har en psykologisk logik väl beskriven i litteraturen: individen rationaliserar varje steg. \"Det är en liten tjänst.\" \"Alla gör det.\" \"Jag förtjänar mer ändå.\" Gradvis urholkas den etiska tröskeln tills vad som började som en enstaka avvikelse blivit ett strukturellt mönster.","methods":["Mutbrott vid upphandlings- och tilldelningsbeslut","Attestbedrägeri — manipulation av utbetalningsattestationer","Insiderhandel med upphandlingsinformation","Konkurrenssnedvridning via kravspecifikationsmanipulation","Skalbolagskonstruktioner i leverantörsled för personlig vinning"],"note":"Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption uppstår ofta ur långvariga leverantörsrelationer där gränsen successivt förflyttats. Akademiska sjukhuset-domen (2024): 4,76 Mkr togs emot under fem år. Perstorpsfallet: 15 Mkr svindlades under ett decennium av en betrodd ekonomichef.","source":"IMM mutbrottsdomar 2022; Brå 2013:15; Transparency International CPI 2023","indicators":["Leverantörsrelationer som upprätthålls utanför formella möten och loggade kanaler","Inköpsbeslut utan kollegial granskning koncentrerade till enskild person","Välståndsutveckling som inte matchar känd lön — fordon, fastigheter, resor","Konferensresor, gästföreläsningar och gåvor från leverantörer utan transparensredovisning","Kravspecifikationer med ovanligt specifika tekniska krav som gynnar specifik leverantör"],"cases":["c06","c12","c13","c17","c21","c28","c30","c31","c44","c47","c48","c51","c55","c56","c64","c65","c66","c67","c72","c73","c74","c75","c76"]}];
+const INDICATORS=[{"id":"i01","cat":"ACCESS","title":"Slagningar utan koppling till arbetsuppgifter","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete — särskilt återkommande slagningar på specifika person- eller ärendekategorier under en period.","example":"Kriminalvårdens möjliggörare (2022) utförde otillåtna slagningar under mer än ett år utan att intern kontroll fångade avvikelserna. Riksrevisionen: avsaknad av beteendeanalytiska verktyg var avgörande brist.","src":"Riksrevisionen 2023; Brå 2024"},{"id":"i02","cat":"ACCESS","title":"Tillgång som lever kvar efter ändrad roll eller avslut","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Medarbetare, konsulter eller avgångna anställda har fortfarande systemåtkomst, registerbehörigheter eller passertillstånd efter att behovet har upphört.","example":"Riksrevisionen (2025): kvarlevande behörigheter är genomgående brist vid FMV, Kriminalvården och Kammarkollegiet. Transportstyrelsen-fallet: IT-leverantörers breda åtkomst avslutades inte vid projektavslut.","src":"Riksrevisionen 2025–2026; Transportstyrelsen-utredningen 2017"},{"id":"i03","cat":"ACCESS","title":"Konsulter med ostyrkt bred behörighet","sev":"HIGH","actors":["criminal-network","economic-interest","foreign-power"],"desc":"Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov — utan formell behörighetsgranskning, säkerhetsskyddsavtal eller dokumenterad uppföljning.","example":"Transportstyrelses IT-underleverantörer (2017) hade tillgång till sekretessklassad data utan att säkerhetsskyddsavtal upprättats. GD dömdes för vårdslöshet med hemlig uppgift.","src":"Riksrevisionen 2023; Transportstyrelsen-utredningen 2017"},{"id":"i04","cat":"ACCESS","title":"Systembrister som möjliggör oövervakad datainsamling","sev":"HIGH","actors":["foreign-power","criminal-network"],"desc":"Myndighetens IT-system eller arkiv saknar tillräckliga kontrollmekanismer, vilket möjliggör systematisk datainsamling utan att en enskild insider behöver rekryteras.","example":"Lantmäteriet (2024): säkerhetsskyddsklassificerade uppgifter var tillgängliga utan sekretessprövning i år. Ds 2026:2: 'den skadan går inte att reparera' — aktörer har kunnat kartlägga uppgifter systematiskt över tid.","src":"Ds 2026:2; Transportstyrelsenutredningen 2017"},{"id":"i05","cat":"CONTACT","title":"Kontaktförsök via privata kanaler","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"En extern person som normalt kontaktar organisationen via tjänstekanaler börjar använda privat e-post, telefon, SMS eller sociala medier för kommunikation om arbetsrelaterade frågor.","example":"Advokaterna Güngör och Amdouni kommunicerade via krypterade chattar utanför dokumenterade kanaler — mönstret fortsatte oupptäckt tills annan utredning avslöjade det. Brå: privata kanaler är det vanligaste kommunikationsmedlet för möjliggörare.","src":"Brå 2024; SVT-rapportering"},{"id":"i06","cat":"CONTACT","title":"Nya intensiva relationer kring känsliga ärenden","sev":"MEDIUM","actors":["criminal-network","economic-interest"],"desc":"En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett pågående känsligt eller högt profil-ärende.","example":"Advokat Zihaouis byråjurist upprätthöll 232 timmars telefonkontakt med en livstidsdömd klient under en tvåmånadersperiod. Kontakten översteg varje rimlig ärendemässig motivering.","src":"Brå 2024; Advokatsamfundets disciplinnämnd 2023"},{"id":"i07","cat":"CONTACT","title":"Återkommande kontaktförsök efter avvisning","sev":"MEDIUM","actors":["criminal-network","foreign-power","extremist"],"desc":"Externa aktörer som avvisats eller fått avslag vid tjänstekontakt återkommer via sidokanaler, mellanhänder eller med förändrad identitet för att nå samma medarbetare eller information.","example":"Dokumenterat mönster i kontaktförsök mot socialsekreterare med LVU-ärenden kopplade till kriminella nätverk. Brå (2024): nätverken är uthålliga och byter kanal när en avvisas.","src":"Brå 2024; Statskontoret 2024"},{"id":"i08","cat":"CONTACT","title":"Intensifierat umgänge med extern part under känslig period","sev":"HIGH","actors":["criminal-network","economic-interest"],"desc":"Social kontakt med en extern aktör som eskalerar markant just under en period då känsliga beslut fattas, ärenden bereds eller upphandlingar genomförs — utan dokumenterad affärsmässig motivering.","example":"Akademiska sjukhuset-domen (2024): kontakten med Canon Medical och Siemens ökade i intensitet under inköpsprocesser. Mutor överfördes via 'konsultfakturor' under sju år.","src":"Akademiska-domen 2024; Ekobrottsmyndigheten"},{"id":"i09","cat":"BEHAVIOUR","title":"Motstånd mot rotation, ledighet eller granskning","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Medarbetare med känslig tillgång undviker systematiskt semester, rotation eller granskning utan sakliga skäl — kan indikera oro för att avvikelser ska upptäckas i frånvaro.","example":"CIA insider threat indicators dokumenterar ovanligt låg semesteruttag som ett av de starkaste beteendessignalerna i fall av pågående spionage. Kriminalvårdens interna utredningar noterar mönstret.","src":"CIA insider threat indicators; CERT-SE"},{"id":"i10","cat":"BEHAVIOUR","title":"Plötslig ekonomisk förbättring utan förklaring","sev":"HIGH","actors":["criminal-network","foreign-power","economic-interest"],"desc":"Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd inkomst och ekonomisk situation — utan trovärdig förklaring.","example":"Akademiska sjukhuset-domen (2024): verksamhetschefen tog emot 4,76 Mkr i mutor — synligt i livsstilsförändringar innan avslöjandet. Perstorp-fallet: socialsekreteraren tog helikopter till jobbet.","src":"CIA insider threat indicators; Säpo; Akademiska-domen 2024"},{"id":"i11","cat":"BEHAVIOUR","title":"Onormalt intresse för kollegors ärenden eller tillgång","sev":"MEDIUM","actors":["criminal-network","foreign-power"],"desc":"En medarbetare frågar om kollegors specifika ärenden, systemtillgång, behörigheter eller interna rutiner utan tydlig arbetsmässig anledning.","example":"Brå (2024): möjliggörare tillhandahåller inte nödvändigtvis hemlig information — den samlade kunskapen om organisationens struktur, rutiner och frånvaro är det primära värdet.","src":"Brå 2024 – Möjliggörare"},{"id":"i12","cat":"BEHAVIOUR","title":"Försämrad prestation kopplad till externt tryck","sev":"MEDIUM","actors":["criminal-network","extremist"],"desc":"Medarbetare vars prestationer försämras markant utan intern förklaring — kan indikera extern pressning, beroende eller psykologisk belastning till följd av pågående oönskad kontakt.","example":"Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.","src":"Statskontoret 2024; Brå 2024"},{"id":"i13","cat":"BEHAVIOUR","title":"Medarbetare under ovanlig ekonomisk press","sev":"MEDIUM","actors":["criminal-network","foreign-power"],"desc":"Medarbetare med känslig tillgång uppvisar tecken på ovanlig ekonomisk stress — löneutmätning, dokumenterade skulder — utan att organisationens stödstrukturer aktiverats.","example":"Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är etablerad rekryteringsfaktor i samtliga källa.","src":"Riksrevisionen 2025–2026; Brå 2024"},{"id":"i14","cat":"DIGITAL","title":"Uthängning av personuppgifter online","sev":"HIGH","actors":["extremist"],"desc":"Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutning till ett specifikt pågående ärende.","example":"Socialchef utsattes för koordinerad uthängning med privat adress publicerad. Personen lämnade sin tjänst (Statskontoret 2024). Brå: doxxning används systematiskt för att neutralisera beslutsfattare utan att begå formellt brott.","src":"Statskontoret 2024; Brå 2024"},{"id":"i15","cat":"DIGITAL","title":"Samordnade narrativ mot enskild tjänsteperson","sev":"HIGH","actors":["extremist","foreign-power"],"desc":"Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination med syftet att delegitimera personen eller organisationens beslut.","example":"MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.","src":"Statskontoret 2024; MSB FIMI 2024"},{"id":"i16","cat":"DIGITAL","title":"Kombinerat mönster: digital trakassering och fysisk närvaro","sev":"HIGH","actors":["extremist","criminal-network"],"desc":"Kombination av koordinerade digitala trakasserier (doxxning, hotkampanjer) med rapporterad fysisk närvaro nära medarbetarens arbetsplats, hem eller privata sammanhang.","example":"Statskontoret (2024): kombinationen av digitala och fysiska komponenter identifieras som den mest allvarliga formen av otillåten påverkan mot offentliganställda — och den som sannolikt underrapporteras mest.","src":"Statskontoret 2024; Brå 2024"},{"id":"i17","cat":"PROCUREMENT","title":"Leverantörskontakt utanför dokumenterade kanaler","sev":"HIGH","actors":["economic-interest","criminal-network"],"desc":"Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen och utan dokumentation.","example":"Akademiska sjukhuset-härvan (2024): kontakter via privata kanaler och 'konsultfakturor' var den primära metoden för mutöverföringen under sju år. Inget uppmärksammades av intern kontroll.","src":"Ekobrottsmyndigheten; Upphandlingsmyndigheten; Akademiska-domen 2024"},{"id":"i18","cat":"PROCUREMENT","title":"Erbjudanden om framtida anställning till upphandlande personal","sev":"HIGH","actors":["economic-interest"],"desc":"Leverantörer erbjuder framtida anställning, konsultuppdrag eller partnerskap till medarbetare med beslutsmandat i pågående upphandling — skapar intressekonflikt och lojalitetsberoende.","example":"Vinnova-granskningen (2024): konsulten med nära band till GD hade erhållit uppdraget via ett nätverk av bolag som kringgick normal öppen konkurrens. Framtida affärsrelationer nämndes i kommunikation.","src":"Transparency International Sverige; Vinnova-granskning 2024"},{"id":"i19","cat":"PROCUREMENT","title":"Systematisk påverkan på kravspecifikationer","sev":"HIGH","actors":["economic-interest","criminal-network"],"desc":"Kravspecifikationer eller utvärderingskriterier i en upphandling utformas på ett sätt som specifikt gynnar en leverantör — utan transparent och dokumenterad motivering.","example":"Upphandlingskorruptionen i kommunal fastighetsförvaltning (2023): upphandlingschef tog emot förmåner och utformade krav som systematiskt gynnade leverantören. Dom: 18 månader.","src":"Ekobrottsmyndigheten; Upphandlingsmyndigheten"},{"id":"i20","cat":"SOCIAL","title":"Relation som förflyttas till privat sfär","sev":"MEDIUM","actors":["criminal-network","foreign-power","economic-interest"],"desc":"En extern yrkesrelation som gradvis förflyttas till privata sammanhang — middagar, resor, vänskap — utan tydlig och dokumenterad affärsmässig motivering.","example":"Brå (2024): möjliggörare upparbetade under anställning beskriver processen: 'man festar tillsammans, man bekräftar personen, bygger upp den och försöker få relationen att framstå som väldigt nära och genuin.'","src":"Brå 2024"},{"id":"i21","cat":"SOCIAL","title":"Gränslöshet mot klient eller häktad person","sev":"HIGH","actors":["criminal-network"],"desc":"Medarbetare med klientkontakt — socionom, kriminalvårdare, behandlare, advokat — uppvisar gränslöst engagemang som överskrider professionalitetsgränser i form av personlig lojalitet.","example":"Kriminalvårdens interna utredningar: ett återkommande mönster är kvinnliga kriminalvårdare som inleder kärleksrelationer med intagna — löses ofta via 'överenskommelse om anställningens upphörande' utan formell utredning (Publikt 2024).","src":"Publikt 2024; Brå 2024"},{"id":"i22","cat":"SOCIAL","title":"Familje- eller nätverkskoppling till kriminell aktör","sev":"HIGH","actors":["criminal-network"],"desc":"Medarbetare har dokumenterade familjerelationer, vänskaps- eller nätverkskopplingar till individer som är aktiva i kriminella nätverk — utan att detta framkommit vid rekrytering.","example":"Brå (2024): en vanlig rekryteringsväg är att kriminella identifierar familjemedlemmar och bekanta med för dem användbara anställningar. 'Man kanske vidarebefordrar information utan att förstå att den hjälper kriminella nätverk' (Johanna Skinnari, Brå).","src":"Brå 2024 – Möjliggörare"},{"id":"i23","cat":"ACCESS","title":"Otillåten åtkomst till kollegas inloggning eller behörighet","sev":"HIGH","actors":["criminal-network","economic-interest"],"desc":"Medarbetare använder en kollegas inloggningsuppgifter, behörighetskort eller passertillstånd — antingen med eller utan kollegans vetskap — för att utföra åtgärder som inte tillhör den egna rollen.","example":"Skatteverket Växjö (2015): handläggaren använde en kollegas inloggning för att genomföra skattemanipulationer för 4,5 Mkr. Kollegas identitet användes för att dölja spåren. 'En kollega sattes i en fruktansvärd situation' (åklagare Forsberg).","src":"Skatteverket pressmeddelande 2015; Riksrevisionen 2023"},{"id":"i24","cat":"DIGITAL","title":"Avvikande loggningsmönster i känsliga system","sev":"HIGH","actors":["criminal-network","foreign-power"],"desc":"Systemloggar visar slagningar, nedladdningar eller exporter vid ovanliga tidpunkter (utanför arbetstid, helger) eller i ovanliga volymer — utan dokumenterad verksamhetsmässig anledning.","example":"Kriminalvårdens fall (2022): otillåtna slagningar genomfördes under en period av mer än ett år. Riksrevisionen: utan beteendeanalytiska verktyg kan sådana avvikelser inte fångas i tid.","src":"Riksrevisionen 2023 och 2025–2026"},{"id":"i25","cat":"BEHAVIOUR","title":"Tystnad och social isolering kring specifikt ämne","sev":"MEDIUM","actors":["criminal-network","foreign-power","extremist"],"desc":"En medarbetare som normalt är öppen och kommunikativ undviker att diskutera ett specifikt ärende, system eller kontakt — och reagerar med ovanlig defensive eller avledande beteende på frågor.","example":"Normaliseringssteget i påverkanskedjan: medarbetaren har internaliserat att inte rapportera och undviker aktivt kollegor eller chefer som kan ställa frågor om det känsliga området. Brå: 'man har inga ord och inga kanaler'.","src":"Brå 2024; Statskontoret 2024"}];
+const CHAIN=[{"step":"Kartläggning","title":"Det börjar med öppna källor","danger":false,"badge":"b-ind","lead":"Angriparen identifierar vem som har tillgång, inflytande eller sårbarhet — utan att göra intrång. Informationen är offentlig, legitim och spridd över tid. Det är kombinationen av uppgifter som skapar kartläggningsvärdet.","ang":"Söker handläggare, registratorer och upphandlare via organisationsscheman, LinkedIn, nämndhandlingar och diarier. Identifierar formell makt och faktisk påverkan — de sammanfaller sällan. Familjerelationer och konferensprogram kompletterar bilden.","med":"Ingenting känns ovanligt. Den egna informationen finns redan offentligt. Inga direkta kontakter har tagits. Personen är omedveten om att deras roll är av intresse.","org":"Ser ingenting. Ingen incident att rapportera. Den exponering som skapas är ett resultat av legitima informationsskyldigheter och digital närvaro som organisationen självt skapat.","signals":["Rollens namn och kontaktuppgifter exponerade i sökbara nämndhandlingar","LinkedIn-profil avslöjar ärendetyper, beslutsmandat och nätverk","Delegationsordning publicerad i sökbar form med personnamn","Platsannonser röjer detaljer om interna system och behörighetsstrukturer"],"cases":["c10","c24"]},{"step":"Urval","title":"Formell makt ≠ faktisk påverkan","danger":false,"badge":"b-ind","lead":"Angriparen väljer inte nödvändigtvis den som undertecknar beslutet. Handläggaren, registratorn och systemförvaltaren kan ha större faktisk möjlighet att påverka ett utfall än chefen som formellt beslutar.","ang":"Kartlägger beslutskedjan bakom ett specifikt ärende. Identifierar den person vars handling, fördröjning eller tolkningsbeslut har störst konsekvens. Prioriterar roller med tillgång och diskretionsutrymme framför formell titel.","med":"Den utvalda personen uppfattar sig som en anonym tjänsteperson utan särskild exponering. Känner inte till att deras yrkesroll, tillgång och handlingsutrymme kartlagts systematiskt.","org":"Har sällan genomfört en befattningsanalys baserad på faktisk tillgång och påverkan. Konsulter och externa leverantörer ingår sällan i hotbilden.","signals":["Brist på exponeringsanalys för känsliga handläggarroller och systemförvaltare","Bred systembehörighet utan dokumenterad uppföljning","Konsulter med djup systemkunskap och tillgång men begränsad kontroll"],"cases":["c19","c01","c35"]},{"step":"Kontakt","title":"Den första relationen skapas","danger":false,"badge":"b-ind","lead":"Angriparen tar den första kontakten via en kanal som uppfattas som professionell och legitim. Kontakten är hjälpsam och ofarlig i sitt sammanhang — det är det genomtänkta valet av form och timing som är signifikant.","ang":"Väljer kontaktform som minimerar vaksamhet: professionellt nätverk, branschförening, tidigare kollega, gemensam vän. Undviker tjänstekanaler till förmån för kanaler utan dokumentation.","med":"Kontakten uppfattas som ett normalt professionellt utbyte. Personen är kunnig och trevlig. Ingen känsla av att något är fel — tvärtom upplevs kontakten som värdefull.","org":"Om det noteras alls, registreras det som en ospecifierad extern kontakt. Organisationen saknar systematisk loggning av externa relationer kring känsliga befattningar.","signals":["Ny kontakt med oklart syfte kring ett pågående känsligt ärende","Kontaktperson med diffus professionell bakgrund och oprecist uppdrag","Kontakt tagen direkt till handläggare snarare än via officiell kanal"],"cases":["c02","c04"]},{"step":"Relationsbygge","title":"Hjälpsamhet skapar beroende","danger":false,"badge":"b-ind","lead":"Relationen fördjupas genom ömsesidiga tjänster, bekräftelse och gemensamma intressen. Gränsen mellan professionellt och privat börjar gradvis lösas upp. Lojalitet mot relationen börjar konkurrera med lojalitet mot organisationen.","ang":"Investerar i relationen utan omedelbar avkastning. Skapar känsla av förtroende och tacksamhet. Skiftar medvetet kommunikation till privata kanaler.","med":"Relationen känns äkta och ömsesidig. Personen upplever sig uppskattad. Det finns en naturlig lojalitet som inte ifrågasätts. Gränsförflyttningen sker omärkbart.","org":"Ser en medarbetare med ett externt nätverk. Ingenting avviker. Relationen är inte synlig i tjänstekanalerna.","signals":["Intensifierat socialt umgänge med extern part kring känslig period","Medarbetare tar emot tjänster, råd eller gåvor från extern aktör","Relation som gradvis förflyttas från tjänstekanal till privata kanaler"],"cases":["c06","c07","c25"]},{"step":"Gränstest","title":"Den lilla begäran som testar","danger":false,"badge":"b-ind","lead":"Angriparen gör en liten, till synes harmlös begäran. Den tjänar dubbelt syfte: dels att inhämta information, dels att testa om personen är villig att gå utanför ordinarie rutiner — och om det leder till konsekvenser.","ang":"Väljer en begäran som är svår att avvisa socialt men lätt att rationalisera. Avläser reaktionen noga. Eskalerar inte om avvisad — väljer istället ny kanal eller ny timing.","med":"Ser det som en ospecifik hjälpsamhet snarare än en gränstestning. Motiveras av lojalitet mot relationen, inte av tänkt vinning. Inget olagligt verkar ha hänt.","org":"Inga alarm utlöses. Händelsen når aldrig en rapporteringströskel. Ingen av de inblandade uppfattar det som en säkerhetshändelse.","signals":["Begäran om icke-publik information med vänskaplig formulering","Frågor om interna rutiner, behörigheter eller personalstruktur","Förfrågningar som passerar utan dokumentation i tjänstekanalen"],"cases":["c02","c05","c28"]},{"step":"Normalisering","title":"Undantaget blir rutin","danger":false,"badge":"b-ana","lead":"Mönstret upprepas och undantaget normaliseras. Varje ny begäran är marginellt större än den föregående. Kontakten har förflyttats till privata kanaler. Lojaliteten mot relationen konkurrerar med lojaliteten mot organisationen.","ang":"Eskalerar gradvis, aldrig i ett enda stort steg. Personen är nu delvis bunden av de tidigare handlingarna och vet om det.","med":"Uppfattar inte sin situation som komprometterad. Har internaliserat relationen som legitim. Känner eventuellt obehag men har inga ord eller kanaler för att rapportera det.","org":"Har inte fångat mönstret eftersom varje enskild händelse ligger under rapporteringströskel. Frånvaron av registrerad incident tolkas som frånvaro av problem.","signals":["Medarbetare kommunicerar regelbundet med extern aktör via privata kanaler","Avvikelser från rutiner som inte rapporteras uppåt","Kollegor som märker beteendeförändringar men inte vet vart de ska rapportera"],"cases":["c07","c25","c20"]},{"step":"Systemskada","title":"Beslutsförmågan förskjuten","danger":true,"badge":"b-ana","lead":"Påverkan behöver inte ta formen av ett uppenbart felaktigt beslut. Fördröjning, självreglering, tystnad och personalflykt är alla framgångsrika utfall. Organisationen märker av effekterna — men missar orsaken.","ang":"Behöver inte ett specifikt beslut. Det räcker att en kontroll inte genomförs, ett ärende fördröjs, eller att en kompetent medarbetare väljer att sluta.","med":"Kan befinna sig i ett beroende utan att ha definierat det som sådant. Kan ha slutat rapportera avvikelser eller uppleva hög stress utan identifierad orsak.","org":"Märker ökad personalomsättning, försiktigare beslutsfattande, tystare möten. Förklarar det med arbetsbelastning — inte med extern påverkan.","signals":["Ökad personalomsättning i känsliga befattningar utan tydlig intern orsak","Beslut som systematiskt fördröjs utan dokumenterad motivering","Ärenden som hanteras med ovanlig försiktighet eller omdirigeras","Internrevisionen noterar avvikelser som organisationen inte kan förklara"],"cases":["c04","c10","c19","c24"]}];
 
 /* ══ NAV ══ */
 let graphReady=false,mapReady=false;
@@ -1785,24 +1788,28 @@ document.addEventListener('click',function(e){
   }
 });
 function show(key){
+  const requested=document.getElementById('mod-'+key);
+  const safeKey=requested?key:'chain';
   document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
   document.querySelectorAll('.cat-tabs a').forEach(a=>a.classList.remove('active'));
   document.querySelectorAll('.mobile-tab-btn').forEach(b=>b.classList.remove('active'));
-  const m=document.getElementById('mod-'+key);
-  const t=document.getElementById('tab-'+key);
-  const mt=document.getElementById('mtab-'+key);
+  const m=document.getElementById('mod-'+safeKey);
+  const t=document.getElementById('tab-'+safeKey);
+  const mt=document.getElementById('mtab-'+safeKey);
   if(m)m.classList.add('active');
   if(t)t.classList.add('active');
   if(mt)mt.classList.add('active');
+  const nextHash='#mod-'+safeKey;
+  if(window.location.hash!==nextHash)history.replaceState(null,'',nextHash);
   // Öppna rätt kategori-dropdown och markera aktiv
-  const cat=getCat(key);
+  const cat=getCat(safeKey);
   if(cat){
     document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
     document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
   }
   window.scrollTo(0,0);
-  if(key==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
-  if(key==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
+  if(safeKey==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
+  if(safeKey==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
   triggerReveals();
 }
 
@@ -1954,6 +1961,274 @@ function selectSector(id){
 
 /* ══ ASSESS ══ */
 let ans={};
+const QUESTIONS=[
+  {
+    "dim": "Mandat & styrning",
+    "q": "Har er organisation en utsedd person med tydligt mandat och ledningsstöd för insiderriskhantering?",
+    "hint": "Tydligt ägarskap, mandat och ledningsstöd minskar risken att signaler faller mellan organisatoriska stolar. Uppdrag, ansvar och eskaleringsväg bör vara dokumenterade.",
+    "opts": [
+      {
+        "t": "Ja, med tydligt mandat, ledningsstöd och dokumenterat uppdrag",
+        "s": 3
+      },
+      {
+        "t": "Delvis — ansvar är delat eller otydligt formulerat",
+        "s": 1
+      },
+      {
+        "t": "Nej, ingen utsedd ansvarig",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Mandat & styrning",
+    "q": "Finns det dokumenterade processer för att identifiera, utreda och hantera insiderhot — inklusive hot som inte utgör formella brott?",
+    "hint": "Alla tecken på otillbörlig påverkan är inte brott. Organisationen behöver en dokumenterad och rättssäker process för tidig bedömning, samtidigt som arbetsrätt, dataskydd och andra tillämpliga regler följs.",
+    "opts": [
+      {
+        "t": "Ja, täcker hela spektrumet från misstanke till brott, dokumenterat och känt",
+        "s": 3
+      },
+      {
+        "t": "Finns men täcker bara formella brottsmisstankar eller är inte uppdaterade",
+        "s": 1
+      },
+      {
+        "t": "Saknas",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Kontroll av medarbetare",
+    "q": "Genomför organisationen behovs- och rollbaserade kontroller vid rekrytering och förändrade arbetsuppgifter när det finns rättsligt stöd?",
+    "hint": "Placering och upparbetning av möjliggörare förekommer. Kontroller ska utgå från dokumenterad rollrisk, vara relevanta, nödvändiga och proportionerliga. Registerkontroll enligt säkerhetsskyddsreglerna är inte en generell bakgrundskontroll.",
+    "opts": [
+      {
+        "t": "Ja, rollbaserat, proportionerligt och med dokumenterat rättsligt stöd",
+        "s": 3
+      },
+      {
+        "t": "Delvis — kontroll sker men avgränsning eller uppföljning är otydlig",
+        "s": 1
+      },
+      {
+        "t": "Nej, eller genom generella kontroller utan tydlig behovsbedömning",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Riskhantering",
+    "q": "Har er organisation genomfört en rollbaserad riskbedömning som kartlägger faktisk tillgång och påverkan — inte bara formell titel?",
+    "hint": "En rollbaserad bedömning bör kartlägga faktisk åtkomst, möjlighet att påverka och möjliga konsekvenser. Formell titel räcker inte som mått på risk.",
+    "opts": [
+      {
+        "t": "Ja, genomförd och uppdaterad senaste 12 månaderna",
+        "s": 3
+      },
+      {
+        "t": "Delvis — genomförd men inte uppdaterad eller med begränsad täckning",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Riskhantering",
+    "q": "Omfattar riskbedömningen externa konsulter och leverantörer med bred systembehörighet på samma sätt som anställda?",
+    "hint": "Konsulter och leverantörer kan ha samma eller större åtkomst än anställda. Krav, behörigheter, uppföljning och avslut bör därför styras av faktisk rollrisk och tillämpliga regler.",
+    "opts": [
+      {
+        "t": "Ja, samma krav och systematik som för anställda",
+        "s": 3
+      },
+      {
+        "t": "Delvis — lägre krav eller ad hoc-bedömning",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Säkerhetskultur",
+    "q": "Vet medarbetarna vart de rapporterar oro eller misstankar — och upplever de det som tryggt att göra det?",
+    "hint": "Formella kanaler hjälper bara om de är kända, tillgängliga och upplevs som trygga. Ledningen behöver följa upp både kännedom, användning och återkoppling.",
+    "opts": [
+      {
+        "t": "Ja, kanaler är kända och kulturen bedöms av ledningen som trygg",
+        "s": 3
+      },
+      {
+        "t": "Kanaler finns formellt men används sällan",
+        "s": 1
+      },
+      {
+        "t": "Oklart eller nej",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Säkerhetskultur",
+    "q": "Rapporteras och följs informella undantag och regelavvikelser upp konsekvent — eller normaliseras de?",
+    "hint": "Återkommande avsteg kan tillsammans visa normglidning eller bristande kontroll. Bedöm mönster och konsekvenser utan att behandla en enskild avvikelse som bevis för illojalitet.",
+    "opts": [
+      {
+        "t": "Ja, avvikelser rapporteras och hanteras konsekvent",
+        "s": 3
+      },
+      {
+        "t": "Delvis — beroende av chef och sammanhang",
+        "s": 1
+      },
+      {
+        "t": "Undantag normaliseras utan dokumentation eller uppföljning",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Utredningsfunktion",
+    "q": "Kan organisationen bedöma och hantera signaler om otillbörlig påverkan även när de inte når nivån för en brottsmisstanke?",
+    "hint": "Tidiga signaler kan behöva hanteras innan ett brott kan konstateras. Processen måste ha tydligt mandat, rättsligt stöd, dataminimering, dokumenterad källvärdering och proportionerliga åtgärder.",
+    "opts": [
+      {
+        "t": "Ja, med tydligt mandat, adekvat kompetens och dokumenterade processer",
+        "s": 3
+      },
+      {
+        "t": "Begränsad förmåga, hanteras ad hoc",
+        "s": 1
+      },
+      {
+        "t": "Nej, vi hanterar bara formella brottsmisstankar",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Uppföljande personalsäkerhet",
+    "q": "Följs medarbetares behörigheter aktivt upp vid rolländringar, frånvaro och avslutad anställning?",
+    "hint": "Behörigheter bör följas upp mot aktuellt behov och tas bort när behovet upphör. Loggning och återkommande avstämning kan upptäcka otillåten användning tidigare.",
+    "opts": [
+      {
+        "t": "Ja, systematiskt med dokumenterade processer och automatiserad avstämning",
+        "s": 3
+      },
+      {
+        "t": "Manuellt och med ojämn täckning",
+        "s": 1
+      },
+      {
+        "t": "Sällan eller aldrig",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Uppföljande personalsäkerhet",
+    "q": "Hanterar organisationen stöd till medarbetare som utsätts för extern kontakt, press eller trakasserier?",
+    "hint": "Statskontoret (2024): påverkan kan resultera i att kompetenta medarbetare lämnar sin tjänst. Utan stödstruktur riskerar organisationen att tappa personal och samtidigt normalisera de avvikelser som borde rapporterats.",
+    "opts": [
+      {
+        "t": "Ja, det finns rutiner, stöd och uppföljningsprocess",
+        "s": 3
+      },
+      {
+        "t": "Delvis — informellt stöd utan tydliga rutiner",
+        "s": 1
+      },
+      {
+        "t": "Nej eller okänt",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Samordning",
+    "q": "Kan HR, säkerhet, juridik och IT dela en gemensam lägesbild av avvikelser och incidenter — i strukturerade former?",
+    "hint": "Relevanta signaler kan finnas hos flera funktioner. En gemensam lägesbild kräver tydliga roller och lagliga former för informationsdelning, åtkomst, dokumentation och lagring.",
+    "opts": [
+      {
+        "t": "Ja, strukturerade forum och gemensam plattform",
+        "s": 3
+      },
+      {
+        "t": "Informellt och situationsbaserat",
+        "s": 1
+      },
+      {
+        "t": "Nej, funktionerna arbetar i separata silos",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Övervakning & utvärdering",
+    "q": "Har organisationen tekniska verktyg för att identifiera avvikande användarbeteende i system med känslig information?",
+    "hint": "Riskbaserad loggning och uppföljning kan stärka detektionen men ersätter inte analys, rättsligt stöd eller mänsklig bedömning. Övervakning av anställda måste vara nödvändig och proportionerlig.",
+    "opts": [
+      {
+        "t": "Ja, UAM/UBA-system med konfigurerade larmregler och aktiv uppföljning",
+        "s": 3
+      },
+      {
+        "t": "Grundläggande loggning utan beteendeanalys",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Övervakning & utvärdering",
+    "q": "Utvärderar och uppdaterar organisationen sin insiderriskhantering minst en gång per år?",
+    "hint": "Hotbild, verksamhet och behörigheter förändras. En dokumenterad, regelbunden och händelsestyrd uppföljning minskar risken att tidigare analyser blir inaktuella.",
+    "opts": [
+      {
+        "t": "Ja, med dokumenterad uppföljning och uppdaterade processer",
+        "s": 3
+      },
+      {
+        "t": "Sporadiskt och utan systematik",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Övervakning & utvärdering",
+    "q": "Integrerar organisationen extern hotbildsinformation — om vilka aktörer som är aktiva och vilka sektorer som är under tryck?",
+    "hint": "Myndighetsgemensam lägesbild om organiserad brottslighet publiceras årligen. Organisationer som inte aktivt konsumerar omvärldsbevakning saknar grundförutsättningen för adekvat riskbedömning.",
+    "opts": [
+      {
+        "t": "Ja, extern hotbildsinfo integreras aktivt i riskarbetet",
+        "s": 3
+      },
+      {
+        "t": "Delvis — vi läser rapporter men de påverkar sällan riskbedömningen",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  }
+];
 const DIMS=[...new Set(QUESTIONS.map(q=>q.dim))];
 function buildAssess(){
   const nav=document.getElementById('assessNav'),panels=document.getElementById('assessPanels');
@@ -2068,11 +2343,22 @@ function triggerReveals(){
 
 /* ══ HASH ROUTING ══ */
 window.addEventListener('DOMContentLoaded',()=>{
-  buildChain();buildActors();buildAssess();renderInds();renderLegal();renderInfopav();renderTools();renderCulture();
-  const hashMap={'#mod-chain':'chain','#mod-map':'map','#mod-sectors':'sectors','#mod-actors':'actors','#mod-theory':'theory','#mod-inds':'inds','#mod-assess':'assess','#mod-visuals':'visuals','#mod-handle':'handle','#mod-graph':'graph'};
-  const startMod=hashMap[window.location.hash]||'chain';
+  const hashKey=window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
+  const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
   show(startMod);
-  initGlobalSearch();
+  const initializers=[
+    ['Påverkanskedjan',buildChain],['Aktörsmatrisen',buildActors],
+    ['Organisationstestet',buildAssess],['Indikatorer',renderInds],
+    ['Juridisk ram',renderLegal],['Informationspåverkan',renderInfopav],
+    ['Verktygslådan',renderTools],['Säkerhetskultur',renderCulture],
+    ['Sök',initGlobalSearch]
+  ];
+  initializers.forEach(([name,init])=>{
+    try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
+  });
+});
+window.addEventListener('hashchange',()=>{
+  if(window.location.hash.startsWith('#mod-'))show(window.location.hash.slice(5));
 });
 
 /* ══ GRAPH ENGINE ══ */
@@ -3101,7 +3387,7 @@ function showHandle(id){
           </div>
         </div>
         <div style="margin-top:8px;padding:10px 12px;background:var(--bg-card);border:1px solid var(--border-s);font-size:11px;color:var(--muted);line-height:1.6">
-          Brå 2024: 5% är möjliggörare — men de representerar "ett skydd och en konkurrensfördel" för nätverket. Polismyndigheten bedömer ca 700 aktiva möjliggörare i Sverige. En möjliggörare kan betjäna flera nätverk.
+          Brå beskriver möjliggörare som ett skydd och en konkurrensfördel för nätverket. Polismyndighetens nationella lägesbild 2024 identifierade 680 möjliggörare med strategisk eller samhällsviktig position. En möjliggörare kan betjäna flera nätverk.
         </div>
       </div>
     </div>
@@ -4047,7 +4333,7 @@ function showHandle(id){
   </div>
 </div>
 </footer>
-<section id="mod-sources" style="background:var(--bg);padding:80px 0 120px">
+<section id="mod-sources" class="module" style="background:var(--bg);padding:80px 0 120px">
 <div class="container" style="max-width:1100px;margin:0 auto;padding:0 24px">
   <p class="eyebrow">Underlag &amp; referenser</p>
   <h2 style="font-family:var(--fd);font-size:clamp(28px,4vw,48px);font-weight:300;line-height:1.1;margin-bottom:8px">Källförteckning</h2>

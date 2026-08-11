@@ -19,15 +19,4 @@ jobs:
         run: node scripts/validate-references.mjs
 
       - name: Kontrollera HTTP-status för fallkällor
-        uses: lycheeverse/lychee-action@v2
-        with:
-          args: >-
-            --no-progress
-            --max-retries 1
-            --timeout 20
-            --exclude '^https://bra[.]se/'
-            --exclude '^https://www[.]riksrevisionen[.]se/'
-            --exclude '^https://regionblekinge[.]se/'
-            --accept 200,204,206,401,403,429
-            cases.json
-          fail: true
+        run: node scripts/audit-live-links.mjs --fast
