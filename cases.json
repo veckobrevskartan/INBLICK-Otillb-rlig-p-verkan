@@ -2944,5 +2944,168 @@
         "url": "https://www.hd.se/kommunkontor-utsattes-for-hot-vaktare-kallades-in/"
       }
     ]
+  },
+  {
+    "id": "c142",
+    "title": "Stockholms tingsrätt — tidigare Försvarsmaktskonsult dömd för försök till spioneri för Ryssland",
+    "date": "2026-07",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Stockholms tingsrätt dömde i juli 2026 en tidigare konsult vid Försvarsmakten för försök till spioneri och två fall av ofredande. Enligt domstolen försökte personen röja uppgifter som hade förvärvats under den tidigare anställningen till ryska myndigheter och reste till Ryssland för att etablera kontakt med rysk underrättelsetjänst. Påföljden blev rättspsykiatrisk vård med särskild utskrivningsprövning.",
+    "sources": [
+      {
+        "l": "Sveriges Domstolar — Dom i mål om försök till spioneri m.m., B 39-26",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2026/07/dom-i-mal-om-forsok-till-spioneri-m-m/"
+      },
+      {
+        "l": "Säkerhetspolisen — Fällande dom i spionerimål",
+        "t": "authority",
+        "url": "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-07-29-fallande-dom-i-spionerimal.html"
+      }
+    ]
+  },
+  {
+    "id": "c143",
+    "title": "Säkerhetspolisen — SVR-styrd operation mot svenskt beslutsfattande avbruten",
+    "date": "2026-08",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Sverige",
+      "lat": 61.5,
+      "lng": 15.5,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Säkerhetspolisen uppgav i augusti 2026 att myndigheten hade kartlagt och agerat mot en operation som planerats och styrts av Rysslands utrikesunderrättelsetjänst SVR. En agent från en utländsk beskickning i Sverige användes för att inhämta information om svenskt beslutsfattande i syfte att möjliggöra påverkan i polariserande frågor och misskreditera Sverige, EU och Nato.",
+    "sources": [
+      {
+        "l": "Säkerhetspolisen — Rysk underrättelseoperation avbruten",
+        "t": "authority",
+        "url": "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-08-10-rysk-underrattelseoperation-avbruten.html"
+      }
+    ]
+  },
+  {
+    "id": "c144",
+    "title": "Andøya — kinesisk medborgare gripen i utredning om satellitmottagare för främmande stat",
+    "date": "2026-05",
+    "loc": {
+      "m": "Andøya",
+      "r": "Nordland",
+      "lat": 69.32,
+      "lng": 16.12,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Norska säkerhetspolisen PST grep i maj 2026 en kinesisk medborgare misstänkt för medverkan till försök till grov underrättelseverksamhet mot statshemligheter. Enligt PST misstänktes ett norskregistrerat bolag fungera som front för en kinesisk statlig aktör som försökte etablera en mottagare för nedladdning av data från polarbanesatelliter. Utrustningen beslagtogs och den misstänkta har förnekat brott.",
+    "sources": [
+      {
+        "l": "Associated Press — Norwegian police arrest a Chinese citizen on spying allegations",
+        "t": "media",
+        "url": "https://apnews.com/article/bbf103dfa4fd056ef5773bd8a1e2a9ec"
+      },
+      {
+        "l": "High North News — Several Suspected Espionage Cases in Northern Norway",
+        "t": "media",
+        "url": "https://en.highnorthnews.com/politics/several-suspected-espionage-cases-in-northern-norway/1113207"
+      }
+    ]
+  },
+  {
+    "id": "c145",
+    "title": "Nato-högkvarteret i Mons — praktikant gripen misstänkt för spioneri",
+    "date": "2026-07",
+    "loc": {
+      "m": "Mons",
+      "r": "Hainaut",
+      "lat": 50.45,
+      "lng": 3.95,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Belgiska myndigheter grep i juli 2026 en kanadensisk praktikant vid Natos strategiska militärhögkvarter SHAPE i Mons. Enligt Belgiens federala åklagarmyndighet misstänks personen för spioneri för ett tredje land och medlemskap i en kriminell organisation. Häktningen förlängdes i slutet av juli; vilket land som påstås ha varit uppdragsgivare har inte offentliggjorts.",
+    "sources": [
+      {
+        "l": "Reuters — Pretrial custody of alleged NATO spy extended",
+        "t": "media",
+        "url": "https://www.reuters.com/world/arrest-alleged-nato-spy-extended-belgian-prosecutor-says-2026-07-28/"
+      },
+      {
+        "l": "Associated Press — Intern arrested on suspicion of spying at NATO military headquarters",
+        "t": "media",
+        "url": "https://apnews.com/article/be43f7f30c341a22849033e2a0b99f0c"
+      }
+    ]
+  },
+  {
+    "id": "c146",
+    "title": "Italien — tidigare underrättelseanställda gripna misstänkta för att ha sålt skyddade uppgifter till Ryssland",
+    "date": "2026-07",
+    "loc": {
+      "m": "Rom",
+      "r": "Lazio",
+      "lat": 41.9,
+      "lng": 12.5,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Åklagare i Rom uppgav i juli 2026 att två personer hade gripits misstänkta för att ha överfört skyddad information till en rysk agent. Huvudmisstanken gällde en tidigare Carabinieri-officer med bakgrund i den italienska underrättelsemiljön. Utredningen omfattar även obehörig åtkomst till IT- och telekomtjänster samt fem ytterligare personer, däribland fyra aktiva militärer. De misstänkta är inte dömda.",
+    "sources": [
+      {
+        "l": "Reuters — Italy arrests two over alleged spying for Russia",
+        "t": "media",
+        "url": "https://www.reuters.com/world/italy-arrests-two-over-alleged-spying-russia-2026-07-07/"
+      },
+      {
+        "l": "Decode39 — Russia’s alleged spy network in Italy puts counterintelligence back in focus",
+        "t": "media",
+        "url": "https://decode39.com/15543/russias-alleged-spy-network-in-italy-puts-counterintelligence-back-in-focus/"
+      }
+    ]
+  },
+  {
+    "id": "c147",
+    "title": "Lettland — fyra misstänkta samlade militär- och flygplatsinformation åt ryska FSB via mellanhandsorganisation",
+    "date": "2026-06",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Lettland",
+      "lat": 56.88,
+      "lng": 24.6,
+      "p": "approximate"
+    },
+    "sector": "SECURITY",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Lettlands säkerhetstjänst VDD begärde i juni 2026 att fyra personer skulle åtalas för spioneri för Ryssland. Enligt VDD samlade de systematiskt information om Försvarsmaktens närvaro vid gränsen, stödet till Ukraina, kritisk transportinfrastruktur och säkerhetsrutiner vid Rigas flygplats. En av personerna ska ha utnyttjat en anställning som säkerhetsvakt för att samla personuppgifter om Ukrainastödjare. Uppgifterna ska ha förmedlats via organisationen Baltic anti-fascists till FSB och andra ryska organ. Skuldfrågan är inte avgjord.",
+    "sources": [
+      {
+        "l": "Latvian State Security Service — VDD seeks criminal prosecution against four persons for espionage on behalf of Russia",
+        "t": "authority",
+        "url": "https://vdd.gov.lv/en/news/press-releases/vdd-seeks-criminal-prosecution-against-four-persons-for-espionage-on-behalf-of-russia"
+      },
+      {
+        "l": "LSM — Four accused of spying for Russia",
+        "t": "media",
+        "url": "https://eng.lsm.lv/article/society/crime/06.07.2026-four-accused-of-spying-for-russia.a654043/"
+      }
+    ]
   }
 ]
