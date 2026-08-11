@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 const cases = JSON.parse(fs.readFileSync(new URL('../cases.json', import.meta.url), 'utf8'));
 const modules = fs.readFileSync(new URL('../modules.html', import.meta.url), 'utf8');
+const index = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const errors = [];
 const ids = new Set();
 const urls = new Set();
@@ -67,6 +68,7 @@ const forbiddenUrls = new Set([
   "https://www.svt.se/nyheter/lokalt/sodermanland/region-sormland-far-betala-250-000-kr-for-1177-lackan",
   "https://www.svt.se/nyheter/lokalt/vast/anstalld-pa-kriminalvarden-smugglade-meddelanden",
   "https://www.svt.se/nyheter/lokalt/vast/socialsekreterare-fejkade-examensbevis",
+  "https://www.svt.se/nyheter/lokalt/stockholm/allt-fler-3d-vapen-tas-i-besla",
   "https://www.theregister.com/2015/02/18/it_admin_jailed_for_sabotaging_employer_systems/",
   "https://www.theregister.com/2023/05/31/it_analyst_guilty_blackmail/",
   "https://www.trendmicro.com/en_us/research/17/a/operation-cloud-hopper.html",
@@ -96,6 +98,31 @@ for (const item of cases) {
   }
 }
 
+const clickableUrls = new Set();
+for (const [file, html] of [['index.html', index], ['modules.html', modules]]) {
+  for (const match of html.matchAll(/<a\b[^>]*href="(https?:\/\/[^"#]+)"/g)) {
+    const raw = match[1];
+    let parsed;
+    try { parsed = new URL(raw); } catch { errors.push(`${file}: ogiltig extern länk ${raw}`); continue; }
+    if (parsed.protocol !== 'https:') errors.push(`${file}: extern länk använder inte HTTPS: ${raw}`);
+    if ([...parsed.searchParams.keys()].some(key => /^utm_/i.test(key) || ['fbclid', 'gclid'].includes(key.toLowerCase()))) {
+      errors.push(`${file}: spårningsparameter i länk: ${raw}`);
+    }
+    clickableUrls.add(raw);
+  }
+}
+
+for (const staleClaim of ['22 av 29', '22/29', 'Alla 97 fall', 'Svenska kraftnät', 'tio talare']) {
+  if (index.includes(staleClaim) || modules.includes(staleClaim)) errors.push(`Inaktuell eller felaktig formulering finns kvar: ${staleClaim}`);
+}
+
+const moduleIds = [...modules.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]).filter(id => !id.includes('${'));
+const duplicateIds = [...new Set(moduleIds.filter((id, index) => moduleIds.indexOf(id) !== index))];
+for (const id of duplicateIds) errors.push(`modules.html: duplicerat statiskt id: ${id}`);
+for (const match of index.matchAll(/href="modules\.html#([^"]+)"/g)) {
+  if (!moduleIds.includes(match[1])) errors.push(`index.html: modulankare saknas: ${match[1]}`);
+}
+
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
 if (cases.length !== 107) errors.push(`Förväntade 107 fall, hittade ${cases.length}`);
 
@@ -104,4 +131,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`OK: ${cases.length} unika fall och ${urls.size} unika direkta källadresser.`);
+console.log(`OK: ${cases.length} unika fall, ${urls.size} unika fallkällor och ${clickableUrls.size} externa HTTPS-länkar utan spårningsparametrar.`);
