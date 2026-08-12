@@ -2824,7 +2824,7 @@
     "sector": "AUTHORITY",
     "actor": "FOREIGN_POWER",
     "status": "CONFIRMED",
-    "summary": "Solna tingsrätt fann att Migrationsverket hade laga skäl att avskeda en handläggare efter uppgifter om fleråriga kontakter med en iransk underrättelseofficer, en agent kopplad till flyktingspionage samt personer i en mc-miljö. Domstolen bedömde kontakterna som en konkret risk för spridning av känsliga uppgifter och ett allvarligt åsidosättande av lojalitetsplikten.",
+    "summary": "Solna tingsrätt ogillade en tidigare Migrationsverket-anställds talan om att få sitt avsked ogiltigförklarat. Rätten ansåg det styrkt att personen under flera år hade haft kontakter med en iransk underrättelseofficer, en agent och personer i en mc-miljö samt lämnat ut uppgifter. Agerandet bedömdes som ett grovt åsidosättande av lojalitetsplikten och som en konkret risk för enskilda och myndigheten. Det var en arbetstvist, inte en brottmålsdom; klassningen bekräftat avser den dokumenterade domen om avskedandet.",
     "sources": [
       {
         "l": "Arbetsgivarverket — Migrationsverket hade rätt att avskeda (26 juni 2026)",
@@ -2835,6 +2835,11 @@
         "l": "TV4 — Handläggaren spred hemliga uppgifter till iransk agent",
         "t": "media",
         "url": "https://www.tv4.se/artikel/7slOYcKvsYv8tgdWoo1PQt/handlaeggaren-spred-hemliga-uppgifter-till-iransk-agent"
+      },
+      {
+        "l": "Svensk OSINT — Den långsamma värvningen: genomgång av mål T 3226-25",
+        "t": "report",
+        "url": "https://veckobrevskartan.github.io/INBLICK-Migrationsverket/"
       }
     ]
   },
