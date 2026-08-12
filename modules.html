@@ -707,6 +707,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
           <li><a href="#" id="tab-actors" onclick="show('actors');return false">Aktörsmatrisen</a></li>
           <li><a href="#" id="tab-legal" onclick="show('legal');return false">Juridisk ram</a></li>
           <li><a href="#" id="tab-infopav" onclick="show('infopav');return false">Informationspåverkan</a></li>
+          <li><a href="#" id="tab-theory" onclick="show('theory');return false">Teorier och modeller</a></li>
         </ul>
       </div>
       <!-- BEDÖMA -->
@@ -730,7 +731,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
           <li><a href="#" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
           <li><a href="#" id="tab-culture" onclick="show('culture');return false">Säkerhetskultur</a></li>
           <li><a href="#" id="tab-handle" onclick="show('handle');return false">Hantera ärende</a></li>
-          <li><a href="#" id="tab-theory" onclick="show('theory');return false">Modeller</a></li>
           <li><a href="#" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
         </ul>
       </div>
@@ -766,31 +766,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
     <button class="mobile-tab-btn" id="mtab-infopav" onclick="show('infopav');closeMobileDrawer()">
       <span class="mtb-num">05</span>Informationspåverkan
     </button>
+    <button class="mobile-tab-btn" id="mtab-theory" onclick="show('theory');closeMobileDrawer()">
+      <span class="mtb-num">06</span>Teorier och modeller
+    </button>
     <div class="mob-cat-hdr">II — Bedöma</div>
     <button class="mobile-tab-btn" id="mtab-map" onclick="show('map');closeMobileDrawer()">
-      <span class="mtb-num">06</span>Händelsekarta
+      <span class="mtb-num">07</span>Händelsekarta
     </button>
     <button class="mobile-tab-btn" id="mtab-assess" onclick="show('assess');closeMobileDrawer()">
-      <span class="mtb-num">07</span>Organisationstestet
+      <span class="mtb-num">08</span>Organisationstestet
     </button>
     <button class="mobile-tab-btn" id="mtab-inds" onclick="show('inds');closeMobileDrawer()">
-      <span class="mtb-num">08</span>Indikatorer
+      <span class="mtb-num">09</span>Indikatorer
     </button>
     <button class="mobile-tab-btn" id="mtab-graph" onclick="show('graph');closeMobileDrawer()">
-      <span class="mtb-num">09</span>Sambandsgraf
+      <span class="mtb-num">10</span>Sambandsgraf
     </button>
     <div class="mob-cat-hdr">III — Agera</div>
     <button class="mobile-tab-btn" id="mtab-tools" onclick="show('tools');closeMobileDrawer()">
-      <span class="mtb-num">10</span>Verktygslådan
+      <span class="mtb-num">11</span>Verktygslådan
     </button>
     <button class="mobile-tab-btn" id="mtab-culture" onclick="show('culture');closeMobileDrawer()">
-      <span class="mtb-num">11</span>Säkerhetskultur
+      <span class="mtb-num">12</span>Säkerhetskultur
     </button>
     <button class="mobile-tab-btn" id="mtab-handle" onclick="show('handle');closeMobileDrawer()">
-      <span class="mtb-num">12</span>Hantera ärende
-    </button>
-    <button class="mobile-tab-btn" id="mtab-theory" onclick="show('theory');closeMobileDrawer()">
-      <span class="mtb-num">13</span>Modeller
+      <span class="mtb-num">13</span>Hantera ärende
     </button>
     <button class="mobile-tab-btn" id="mtab-visuals" onclick="show('visuals');closeMobileDrawer()">
       <span class="mtb-num">14</span>Visuella modeller
@@ -1925,9 +1925,9 @@ const CHAIN=[{"step":"Kartläggning","title":"Det börjar med öppna källor","d
 let graphReady=false,mapReady=false;
 // Kategori → modular mapping
 const CAT_MAP={
-  forsta:['chain','sectors','actors','legal','infopav'],
+  forsta:['chain','sectors','actors','legal','infopav','theory'],
   bedoma:['map','assess','inds','graph'],
-  agera:['tools','culture','handle','theory','visuals']
+  agera:['tools','culture','handle','visuals']
 };
 function getCat(key){
   for(const[cat,keys]of Object.entries(CAT_MAP)){if(keys.includes(key))return cat;}
