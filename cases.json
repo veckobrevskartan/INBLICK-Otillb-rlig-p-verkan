@@ -1505,7 +1505,7 @@
     "sector": "IT",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "Systemadministratör vid pappersföretaget Georgia-Pacific avskedades på Alla hjärtans dag 2014. Använde därefter fortfarande giltiga inloggningsuppgifter via VPN hemifrån och manipulerade industriella kontrollsystem i fabriken i Port Hudson, Louisiana under två veckor. Installerade egen programvara och orsakade skador för 1,1 miljoner dollar. Dömdes till 34 månader och återbetalning av 1 134 828 dollar. Fallet är referensexempel i handledningen för risken med kvarlevande behörigheter vid avslut.",
+    "summary": "Systemadministratör vid pappersföretaget Georgia-Pacific avskedades på Alla hjärtans dag 2014. Använde därefter fortfarande giltiga inloggningsuppgifter via VPN hemifrån och manipulerade industriella kontrollsystem i fabriken i Port Hudson, Louisiana under två veckor. Installerade egen programvara och orsakade skador för 1,1 miljoner dollar. Dömdes till 34 månader och återbetalning av 1 134 828 dollar. Fallet illustrerar risken med kvarlevande behörigheter vid avslut.",
     "sources": [
       {
         "l": "US Department of Justice — Former systems administrator sentenced for hacking industrial facility",
@@ -1566,7 +1566,7 @@
     "sector": "AUTHORITY",
     "actor": "EXTREMIST",
     "status": "INDICATION",
-    "summary": "Polisen inledde förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanke: valsedlar hanterades på otillåtet sätt och valprocessens integritet äventyrades. Fallet nämns i handledningen i kontexten om möjliggörare inom demokratiska processer — att valprocessen kan påverkas inifrån av någon med insiderposition i valarbetet. Utreds som möjliggörande av valfusk snarare än yttre påverkan.",
+    "summary": "Polisen inledde förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanke: valsedlar hanterades på otillåtet sätt och valprocessens integritet äventyrades. Fallet illustrerar hur valprocessen kan påverkas inifrån av någon med insiderposition i valarbetet. Utreds som möjliggörande av valfusk snarare än yttre påverkan.",
     "sources": [
       {
         "l": "Dagens Samhälle — grovt valfusk utreds i Göteborg",
@@ -1589,7 +1589,7 @@
     "sector": "IT",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "IT-säkerhetsanalytiker vid brittiska Oxford Biomedica deltog i incidenthanteringen när bolaget drabbades av ransomware-attack. Använde sin insiderposition för att parallellt utpressa arbetsgivaren genom att utge sig för att vara angriparna och kräva betalning till sitt eget kryptovalutakonto. Ändrade dessutom ransomware-gängets kontaktadress i kommunikationen. Dömdes till 3 år och 8 månader. Fallet nämns i handledningen som exempel på dubbel insiderrisk vid incidenthantering.",
+    "summary": "IT-säkerhetsanalytiker vid brittiska Oxford Biomedica deltog i incidenthanteringen när bolaget drabbades av ransomware-attack. Använde sin insiderposition för att parallellt utpressa arbetsgivaren genom att utge sig för att vara angriparna och kräva betalning till sitt eget kryptovalutakonto. Ändrade dessutom ransomware-gängets kontaktadress i kommunikationen. Dömdes till 3 år och 8 månader. Fallet illustrerar dubbel insiderrisk vid incidenthantering.",
     "sources": [
       {
         "l": "Tripwire — Rogue IT security worker failed to cover his tracks",
@@ -1917,7 +1917,7 @@
     "sector": "TRANSPORT",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Sky ECC-chattar (krypterad kommunikation) avslöjar hur hamnarbetare koordinerade containeruttag med kriminella utanför hamnen. Insiderpositionen möjliggjorde att hundratals kilo kokain fördes in i Sverige via hamnen. Drugnews: 'hamnarbetare döms till fängelse i kokainmål.' Fallet dokumenterat i handledningen som typfall för hamninfiltration via krypterad kommunikation.",
+    "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Sky ECC-chattar (krypterad kommunikation) avslöjar hur hamnarbetare koordinerade containeruttag med kriminella utanför hamnen. Insiderpositionen möjliggjorde att hundratals kilo kokain fördes in i Sverige via hamnen. Drugnews: 'hamnarbetare döms till fängelse i kokainmål.' Fallet illustrerar hamninfiltration via krypterad kommunikation.",
     "sources": [
       {
         "l": "Transportarbetaren — Hamnarbetare dömd för kokainsmuggling i Helsingborg",
@@ -2911,7 +2911,7 @@
         "url": "https://www.svt.se/nyheter/lokalt/vasterbotten/lansstyrelsen-granskar-kommunalradets-husaffar-i-asele"
       },
       {
-        "l": "SVT — Gunnel Jonsson lämnar alla politiska uppdrag i Åsele",
+        "l": "SVT — G.J. lämnar alla politiska uppdrag i Åsele",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/vasterbotten/efter-kritiken-gunnel-jonsson-lamnar-alla-politiska-uppdrag-i-asele"
       }

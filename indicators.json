@@ -10,7 +10,8 @@
     ],
     "desc": "Registerslagningar eller systemåtkomst i ärenden som inte rör den anställdes löpande arbete — särskilt återkommande slagningar på specifika person- eller ärendekategorier under en period.",
     "example": "Kriminalvårdens möjliggörare (2022) utförde otillåtna slagningar under mer än ett år utan att intern kontroll fångade avvikelserna. Riksrevisionen: avsaknad av beteendeanalytiska verktyg var avgörande brist.",
-    "src": "Riksrevisionen 2023; Brå 2024"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
   {
     "id": "i02",
@@ -23,7 +24,8 @@
     ],
     "desc": "Medarbetare, konsulter eller avgångna anställda har fortfarande systemåtkomst, registerbehörigheter eller passertillstånd efter att behovet har upphört.",
     "example": "Riksrevisionen (2025): kvarlevande behörigheter är genomgående brist vid FMV, Kriminalvården och Kammarkollegiet. Transportstyrelsen-fallet: IT-leverantörers breda åtkomst avslutades inte vid projektavslut.",
-    "src": "Riksrevisionen 2025–2026; Transportstyrelsen-utredningen 2017"
+    "src": "Riksrevisionen 2026 — Infiltration i staten",
+    "sourceUrl": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
   },
   {
     "id": "i03",
@@ -37,7 +39,8 @@
     ],
     "desc": "Externa konsulter har tillgång till system, lokaler eller information som överstiger uppdragets faktiska behov — utan formell behörighetsgranskning, säkerhetsskyddsavtal eller dokumenterad uppföljning.",
     "example": "Transportstyrelses IT-underleverantörer (2017) hade tillgång till sekretessklassad data utan att säkerhetsskyddsavtal upprättats. GD dömdes för vårdslöshet med hemlig uppgift.",
-    "src": "Riksrevisionen 2023; Transportstyrelsen-utredningen 2017"
+    "src": "Riksdagen — granskning av Transportstyrelsens IT-upphandling",
+    "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/ku-anmalan/granskning-av-tidigare-regerings-hantering-av_h4a1dnr2612/"
   },
   {
     "id": "i04",
@@ -50,7 +53,8 @@
     ],
     "desc": "Myndighetens IT-system eller arkiv saknar tillräckliga kontrollmekanismer, vilket möjliggör systematisk datainsamling utan att en enskild insider behöver rekryteras.",
     "example": "Lantmäteriet (2024): säkerhetsskyddsklassificerade uppgifter var tillgängliga utan sekretessprövning i år. Ds 2026:2: 'den skadan går inte att reparera' — aktörer har kunnat kartlägga uppgifter systematiskt över tid.",
-    "src": "Ds 2026:2; Transportstyrelsenutredningen 2017"
+    "src": "Regeringen 2026 — granskning av Lantmäteriets informationssäkerhet",
+    "sourceUrl": "https://www.regeringen.se/pressmeddelanden/2026/02/regeringen-tog-emot-utredning-som-granskat-lantmateriets-arbete-med-informationssakerhet/"
   },
   {
     "id": "i05",
@@ -62,8 +66,9 @@
       "foreign-power"
     ],
     "desc": "En extern person som normalt kontaktar organisationen via tjänstekanaler börjar använda privat e-post, telefon, SMS eller sociala medier för kommunikation om arbetsrelaterade frågor.",
-    "example": "Advokaterna Güngör och Amdouni kommunicerade via krypterade chattar utanför dokumenterade kanaler — mönstret fortsatte oupptäckt tills annan utredning avslöjade det. Brå: privata kanaler är det vanligaste kommunikationsmedlet för möjliggörare.",
-    "src": "Brå 2024; SVT-rapportering"
+    "example": "Advokaterna E.G. och A.A. kommunicerade via krypterade chattar utanför dokumenterade kanaler — mönstret fortsatte oupptäckt tills en annan utredning avslöjade det. Brå beskriver privata kanaler som ett vanligt kommunikationsmedel för möjliggörare.",
+    "src": "SVT — två tidigare toppadvokater döms till fängelse",
+    "sourceUrl": "https://www.svt.se/nyheter/lokalt/stockholm/sa-har-de-tva-topp-advokater-hjalp-kriminella"
   },
   {
     "id": "i06",
@@ -75,8 +80,9 @@
       "economic-interest"
     ],
     "desc": "En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett pågående känsligt eller högt profil-ärende.",
-    "example": "Advokat Zihaouis byråjurist upprätthöll 232 timmars telefonkontakt med en livstidsdömd klient under en tvåmånadersperiod. Kontakten översteg varje rimlig ärendemässig motivering.",
-    "src": "Brå 2024; Advokatsamfundets disciplinnämnd 2023"
+    "example": "Advokaten N.Z:s byråjurist upprätthöll 232 timmars telefonkontakt med en livstidsdömd klient under en tvåmånadersperiod. Kontakten översteg varje rimlig ärendemässig motivering.",
+    "src": "Expressen — N.Z. utesluts ur Advokatsamfundet",
+    "sourceUrl": "https://www.expressen.se/nyheter/sverige/naz-zihaoui-utesluts-ur-advokatsamfundet/"
   },
   {
     "id": "i07",
@@ -90,7 +96,8 @@
     ],
     "desc": "Externa aktörer som avvisats eller fått avslag vid tjänstekontakt återkommer via sidokanaler, mellanhänder eller med förändrad identitet för att nå samma medarbetare eller information.",
     "example": "Dokumenterat mönster i kontaktförsök mot socialsekreterare med LVU-ärenden kopplade till kriminella nätverk. Brå (2024): nätverken är uthålliga och byter kanal när en avvisas.",
-    "src": "Brå 2024; Statskontoret 2024"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
   {
     "id": "i08",
@@ -103,7 +110,8 @@
     ],
     "desc": "Social kontakt med en extern aktör som eskalerar markant just under en period då känsliga beslut fattas, ärenden bereds eller upphandlingar genomförs — utan dokumenterad affärsmässig motivering.",
     "example": "Akademiska sjukhuset-domen (2024): kontakten med Canon Medical och Siemens ökade i intensitet under inköpsprocesser. Mutor överfördes via 'konsultfakturor' under sju år.",
-    "src": "Akademiska-domen 2024; Ekobrottsmyndigheten"
+    "src": "Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset",
+    "sourceUrl": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"
   },
   {
     "id": "i09",
@@ -116,7 +124,8 @@
     ],
     "desc": "Medarbetare med känslig tillgång undviker systematiskt semester, rotation eller granskning utan sakliga skäl — kan indikera oro för att avvikelser ska upptäckas i frånvaro.",
     "example": "CIA insider threat indicators dokumenterar ovanligt låg semesteruttag som ett av de starkaste beteendessignalerna i fall av pågående spionage. Kriminalvårdens interna utredningar noterar mönstret.",
-    "src": "CIA insider threat indicators; CERT-SE"
+    "src": "CISA — Defining insider threats",
+    "sourceUrl": "https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats"
   },
   {
     "id": "i10",
@@ -130,7 +139,8 @@
     ],
     "desc": "Medarbetare uppvisar konsumtionsmönster, resor eller tillgångar som inte är förenliga med känd inkomst och ekonomisk situation — utan trovärdig förklaring.",
     "example": "Akademiska sjukhuset-domen (2024): verksamhetschefen tog emot 4,76 Mkr i mutor — synligt i livsstilsförändringar innan avslöjandet. Perstorp-fallet: socialsekreteraren tog helikopter till jobbet.",
-    "src": "CIA insider threat indicators; Säpo; Akademiska-domen 2024"
+    "src": "Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset",
+    "sourceUrl": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"
   },
   {
     "id": "i11",
@@ -143,7 +153,8 @@
     ],
     "desc": "En medarbetare frågar om kollegors specifika ärenden, systemtillgång, behörigheter eller interna rutiner utan tydlig arbetsmässig anledning.",
     "example": "Brå (2024): möjliggörare tillhandahåller inte nödvändigtvis hemlig information — den samlade kunskapen om organisationens struktur, rutiner och frånvaro är det primära värdet.",
-    "src": "Brå 2024 – Möjliggörare"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
   {
     "id": "i12",
@@ -156,7 +167,8 @@
     ],
     "desc": "Medarbetare vars prestationer försämras markant utan intern förklaring — kan indikera extern pressning, beroende eller psykologisk belastning till följd av pågående oönskad kontakt.",
     "example": "Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.",
-    "src": "Statskontoret 2024; Brå 2024"
+    "src": "Statskontoret 2026 — stöd mot otillåten påverkan",
+    "sourceUrl": "https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"
   },
   {
     "id": "i13",
@@ -168,8 +180,9 @@
       "foreign-power"
     ],
     "desc": "Medarbetare med känslig tillgång uppvisar tecken på ovanlig ekonomisk stress — löneutmätning, dokumenterade skulder — utan att organisationens stödstrukturer aktiverats.",
-    "example": "Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är etablerad rekryteringsfaktor i samtliga källa.",
-    "src": "Riksrevisionen 2025–2026; Brå 2024"
+    "example": "Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är en etablerad rekryteringsfaktor i samtliga källor.",
+    "src": "Riksrevisionen 2026 — Infiltration i staten",
+    "sourceUrl": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
   },
   {
     "id": "i14",
@@ -181,7 +194,8 @@
     ],
     "desc": "Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutning till ett specifikt pågående ärende.",
     "example": "Socialchef utsattes för koordinerad uthängning med privat adress publicerad. Personen lämnade sin tjänst (Statskontoret 2024). Brå: doxxning används systematiskt för att neutralisera beslutsfattare utan att begå formellt brott.",
-    "src": "Statskontoret 2024; Brå 2024"
+    "src": "Statskontoret 2026 — stöd mot otillåten påverkan",
+    "sourceUrl": "https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"
   },
   {
     "id": "i15",
@@ -194,7 +208,8 @@
     ],
     "desc": "Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination med syftet att delegitimera personen eller organisationens beslut.",
     "example": "MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.",
-    "src": "Statskontoret 2024; MSB FIMI 2024"
+    "src": "MPF — Påverkanskampanjer",
+    "sourceUrl": "https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer"
   },
   {
     "id": "i16",
@@ -207,7 +222,8 @@
     ],
     "desc": "Kombination av koordinerade digitala trakasserier (doxxning, hotkampanjer) med rapporterad fysisk närvaro nära medarbetarens arbetsplats, hem eller privata sammanhang.",
     "example": "Statskontoret (2024): kombinationen av digitala och fysiska komponenter identifieras som den mest allvarliga formen av otillåten påverkan mot offentliganställda — och den som sannolikt underrapporteras mest.",
-    "src": "Statskontoret 2024; Brå 2024"
+    "src": "Statskontoret 2026 — stöd mot otillåten påverkan",
+    "sourceUrl": "https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"
   },
   {
     "id": "i17",
@@ -220,7 +236,8 @@
     ],
     "desc": "Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen och utan dokumentation.",
     "example": "Akademiska sjukhuset-härvan (2024): kontakter via privata kanaler och 'konsultfakturor' var den primära metoden för mutöverföringen under sju år. Inget uppmärksammades av intern kontroll.",
-    "src": "Ekobrottsmyndigheten; Upphandlingsmyndigheten; Akademiska-domen 2024"
+    "src": "Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset",
+    "sourceUrl": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"
   },
   {
     "id": "i18",
@@ -232,7 +249,8 @@
     ],
     "desc": "Leverantörer erbjuder framtida anställning, konsultuppdrag eller partnerskap till medarbetare med beslutsmandat i pågående upphandling — skapar intressekonflikt och lojalitetsberoende.",
     "example": "Vinnova-granskningen (2024): konsulten med nära band till GD hade erhållit uppdraget via ett nätverk av bolag som kringgick normal öppen konkurrens. Framtida affärsrelationer nämndes i kommunikation.",
-    "src": "Transparency International Sverige; Vinnova-granskning 2024"
+    "src": "Jens Nylander 2024 — Vinnovas konsultavtal",
+    "sourceUrl": "https://www.jensnylander.com/vinnovakonsult-fick-riggat-guldavtal/"
   },
   {
     "id": "i19",
@@ -245,7 +263,8 @@
     ],
     "desc": "Kravspecifikationer eller utvärderingskriterier i en upphandling utformas på ett sätt som specifikt gynnar en leverantör — utan transparent och dokumenterad motivering.",
     "example": "Upphandlingskorruptionen i kommunal fastighetsförvaltning (2023): upphandlingschef tog emot förmåner och utformade krav som systematiskt gynnade leverantören. Dom: 18 månader.",
-    "src": "Ekobrottsmyndigheten; Upphandlingsmyndigheten"
+    "src": "Ekobrottsmyndigheten — förebygg arbetslivskriminalitet genom upphandling",
+    "sourceUrl": "https://www.ekobrottsmyndigheten.se/forebygg-ekobrott/forebygg-kriminalitet-pa-arbetsmarknaden-genom-upphandling/"
   },
   {
     "id": "i20",
@@ -259,7 +278,8 @@
     ],
     "desc": "En extern yrkesrelation som gradvis förflyttas till privata sammanhang — middagar, resor, vänskap — utan tydlig och dokumenterad affärsmässig motivering.",
     "example": "Brå (2024): möjliggörare upparbetade under anställning beskriver processen: 'man festar tillsammans, man bekräftar personen, bygger upp den och försöker få relationen att framstå som väldigt nära och genuin.'",
-    "src": "Brå 2024"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
   {
     "id": "i21",
@@ -271,7 +291,8 @@
     ],
     "desc": "Medarbetare med klientkontakt — socionom, kriminalvårdare, behandlare, advokat — uppvisar gränslöst engagemang som överskrider professionalitetsgränser i form av personlig lojalitet.",
     "example": "Kriminalvårdens interna utredningar: ett återkommande mönster är kvinnliga kriminalvårdare som inleder kärleksrelationer med intagna — löses ofta via 'överenskommelse om anställningens upphörande' utan formell utredning (Publikt 2024).",
-    "src": "Publikt 2024; Brå 2024"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
   {
     "id": "i22",
@@ -283,7 +304,8 @@
     ],
     "desc": "Medarbetare har dokumenterade familjerelationer, vänskaps- eller nätverkskopplingar till individer som är aktiva i kriminella nätverk — utan att detta framkommit vid rekrytering.",
     "example": "Brå (2024): en vanlig rekryteringsväg är att kriminella identifierar familjemedlemmar och bekanta med för dem användbara anställningar. 'Man kanske vidarebefordrar information utan att förstå att den hjälper kriminella nätverk' (Johanna Skinnari, Brå).",
-    "src": "Brå 2024 – Möjliggörare"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
   {
     "id": "i23",
@@ -296,7 +318,8 @@
     ],
     "desc": "Medarbetare använder en kollegas inloggningsuppgifter, behörighetskort eller passertillstånd — antingen med eller utan kollegans vetskap — för att utföra åtgärder som inte tillhör den egna rollen.",
     "example": "Skatteverket Växjö (2015): handläggaren använde en kollegas inloggning för att genomföra skattemanipulationer för 4,5 Mkr. Kollegas identitet användes för att dölja spåren. 'En kollega sattes i en fruktansvärd situation' (åklagare Forsberg).",
-    "src": "Skatteverket pressmeddelande 2015; Riksrevisionen 2023"
+    "src": "Sveriges Radio — skattehandläggare dömd för miljonbedrägeri",
+    "sourceUrl": "https://www.sverigesradio.se/artikel/6214139"
   },
   {
     "id": "i24",
@@ -309,7 +332,8 @@
     ],
     "desc": "Systemloggar visar slagningar, nedladdningar eller exporter vid ovanliga tidpunkter (utanför arbetstid, helger) eller i ovanliga volymer — utan dokumenterad verksamhetsmässig anledning.",
     "example": "Kriminalvårdens fall (2022): otillåtna slagningar genomfördes under en period av mer än ett år. Riksrevisionen: utan beteendeanalytiska verktyg kan sådana avvikelser inte fångas i tid.",
-    "src": "Riksrevisionen 2023 och 2025–2026"
+    "src": "Riksrevisionen 2026 — Infiltration i staten",
+    "sourceUrl": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
   },
   {
     "id": "i25",
@@ -323,6 +347,7 @@
     ],
     "desc": "En medarbetare som normalt är öppen och kommunikativ undviker att diskutera ett specifikt ärende, system eller kontakt — och reagerar med ovanlig defensive eller avledande beteende på frågor.",
     "example": "Normaliseringssteget i påverkanskedjan: medarbetaren har internaliserat att inte rapportera och undviker aktivt kollegor eller chefer som kan ställa frågor om det känsliga området. Brå: 'man har inga ord och inga kanaler'.",
-    "src": "Brå 2024; Statskontoret 2024"
+    "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   }
 ]

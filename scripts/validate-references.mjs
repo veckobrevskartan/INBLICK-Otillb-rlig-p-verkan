@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 
 const cases = JSON.parse(fs.readFileSync(new URL('../cases.json', import.meta.url), 'utf8'));
+const actors = JSON.parse(fs.readFileSync(new URL('../actors.json', import.meta.url), 'utf8'));
+const indicators = JSON.parse(fs.readFileSync(new URL('../indicators.json', import.meta.url), 'utf8'));
 const modules = fs.readFileSync(new URL('../modules.html', import.meta.url), 'utf8');
 const index = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const errors = [];
@@ -98,6 +100,22 @@ for (const item of cases) {
   }
 }
 
+for (const [dataset, items] of [['actors.json', actors], ['indicators.json', indicators]]) {
+  for (const item of items) {
+    if (!item.sourceUrl) {
+      errors.push(`${dataset}: ${item.id} saknar sourceUrl`);
+      continue;
+    }
+    try {
+      const parsed = new URL(item.sourceUrl);
+      if (parsed.protocol !== 'https:') errors.push(`${dataset}: ${item.id} använder inte HTTPS: ${item.sourceUrl}`);
+      if (parsed.pathname === '/' && !parsed.search) errors.push(`${dataset}: ${item.id} länkar bara till en startsida: ${item.sourceUrl}`);
+    } catch {
+      errors.push(`${dataset}: ${item.id} har ogiltig sourceUrl: ${item.sourceUrl}`);
+    }
+  }
+}
+
 const clickableUrls = new Set();
 for (const [file, html] of [['index.html', index], ['modules.html', modules]]) {
   for (const match of html.matchAll(/<a\b[^>]*href="(https?:\/\/[^"#]+)"/g)) {
@@ -150,7 +168,33 @@ if (!questionsMatch) {
 }
 
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
+if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
+if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
 if (cases.length !== 108) errors.push(`Förväntade 108 fall, hittade ${cases.length}`);
+
+const publicText = [modules, index, JSON.stringify(cases), JSON.stringify(actors), JSON.stringify(indicators)]
+  .join('\n')
+  .replace(/https?:\/\/[^\s"'<>]+/g, '');
+const identifiedPeople = [
+  'Ekrem Güngör', 'Amir Amdouni', 'Naz Zihaoui', 'Gunnel Jonsson', 'Silva Gündüz',
+  'Zaniar Matapour', 'Theodor Engström', 'Rakhmat Akilov', 'Peter Mangs',
+  'Anton Lundin Pettersson', 'John Ausonius', 'Fekri Hamad', 'Mahmoud Ezzat',
+  'Abdesalem Lassoued', 'Fatosh Ibrahim', 'Mirsad Bektašević', 'Anas Khalifa',
+  'Viktor Melin', 'Robert Hanssen', 'Nidal Hasan', 'Lina Ishaq', 'Anna Sundberg',
+  'Ismail Abdo', 'Rawa Majid', 'Maykil Yokhanna', 'Edip Samuelsson',
+  'Abdel Nasser El Nadi', 'Abdirizak Waberi', 'Aldrich-Ames', 'Robert-Hanssen',
+  'Jonathan-Pollard', 'Edward-Snowden', 'Daniel-Ellsberg', 'Mika-Invasor',
+];
+for (const name of identifiedPeople) {
+  if (publicText.includes(name)) errors.push(`Utpekad person visas med fullständigt namn i stället för initialer: ${name}`);
+}
+
+for (const marker of [
+  'Källa: Handledningen', 'Källor: Handledningen', 'Erfarenheter från Göteborgs stad',
+  'MCF0079 mars 2026 kap', 'SMOB SGL 2026 kap', 'original ur handledningen',
+]) {
+  if (modules.includes(marker)) errors.push(`Intern eller olänkad källhänvisning finns kvar: ${marker}`);
+}
 
 if (errors.length) {
   console.error(errors.map(error => `- ${error}`).join('\n'));
