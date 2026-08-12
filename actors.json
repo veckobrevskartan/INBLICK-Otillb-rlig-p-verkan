@@ -30,6 +30,7 @@
       "c01",
       "c02",
       "c04",
+      "c05",
       "c07",
       "c08",
       "c09",
@@ -71,7 +72,6 @@
     ],
     "cases": [
       "c03",
-      "c05",
       "c10",
       "c24"
     ]
@@ -102,7 +102,6 @@
       "Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"
     ],
     "cases": [
-      "c05",
       "c14",
       "c16",
       "c18"
