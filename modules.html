@@ -86,6 +86,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 /* Mobile drawer */
 .mobile-drawer{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:rgba(10,22,40,.98);backdrop-filter:blur(14px);z-index:190;overflow-y:auto;padding:16px 24px}
 .mobile-drawer.open{display:block}
+body.menu-open{overflow:hidden}
 .mobile-tab-btn{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--border-s);cursor:pointer;font-size:14px;color:var(--muted);transition:.15s;background:none;border-left:none;border-right:none;border-top:none;width:100%;text-align:left}
 .mobile-tab-btn.active{color:var(--accent)}
 .mobile-tab-btn .mtb-num{font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--dim);min-width:24px}
@@ -104,6 +105,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .sr-empty{padding:24px 52px;font-size:13px;color:var(--dim);font-style:italic}
 @media(max-width:900px){
   .nav-tabs{display:none}
+  .cat-nav{display:none}
   .nav-hamburger{display:flex}
   .nav-inner{padding:0 16px;gap:12px}
   .nav-back-link{display:none}
@@ -689,6 +691,87 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .cad-case{margin-top:16px;padding:12px 16px;background:var(--bg-card);border-left:2px solid var(--green);font-size:12px;color:var(--muted);line-height:1.65}
 .cad-case b{color:var(--text);font-weight:500}
 
+/* ═══ MOBIL LÄSBARHET OCH ÅTKOMST ═══ */
+@media(max-width:600px){
+  body{font-size:16px;line-height:1.68}
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav-inner{padding:0 12px;gap:8px}
+  .nav-brand{gap:6px}
+  .nav-hamburger{min-width:42px;min-height:42px;align-items:center;justify-content:center}
+  #globalSearchInput{width:132px;min-height:38px;font-size:16px}
+  #globalSearchInput:focus{width:150px}
+  .mobile-drawer{padding:12px 18px 30px}
+  .mobile-tab-btn{min-height:48px;padding:13px 4px;font-size:15px}
+  .mob-cat-hdr{font-size:16px;padding-top:20px}
+  .module{padding-top:58px}
+  .sec-head{padding:34px 0 26px}
+  .sec-title{font-size:clamp(36px,12vw,48px);overflow-wrap:anywhere}
+  .sec-intro{font-size:15px;line-height:1.75}
+  .interaction-guide{flex-direction:column;gap:5px;padding:13px 14px;font-size:14px;line-height:1.6}
+  .interaction-guide-label{white-space:normal;font-size:9px}
+  .filter-bar{gap:8px}
+  .fb{min-height:40px;padding:8px 10px;font-size:9px;white-space:normal}
+  .btn-g{min-height:44px;padding:10px 15px}
+  .chain-layout,.ind-grid{margin-bottom:40px}
+  .chain-panel-col,.actor-detail,.res-wrap,.legal-panel,.ip-vec-panel,.brop-detail,.cult-action-detail{padding:20px 16px}
+  .cni{min-height:58px;padding:13px 12px}
+  .cp-perspectives{margin-top:14px}
+  #map-container,#graphWrap{height:360px}
+  .leaflet-popup-content-wrapper{min-width:0;max-width:260px}
+  .mcp{left:10px!important;right:10px!important;width:auto!important;max-height:80vh;overflow-y:auto}
+  .ad-grid{gap:16px}
+  .aq-opt{min-height:54px;font-size:14px}
+  .aq-btn{min-height:44px}
+  .ind-search{min-width:100%;font-size:16px;min-height:44px}
+  .ind-grid{grid-template-columns:1fr}
+  .sat-figure,.legal-why,.ip-defend{padding:18px 16px}
+  .legal-why,.ip-defend{margin-top:42px}
+  .legal-spectrum{grid-template-columns:1fr}
+  .legal-rung,.ip-vec-tab,.ip-mech,.brop-step,.bowtie-opt,.check-tab,.ca-card{min-height:48px}
+  .ip-vec-tabs{grid-template-columns:1fr}
+  .ipp-case{min-width:0;width:100%}
+  .brop-flow{grid-template-columns:1fr}
+  .bowtie-select{display:grid;grid-template-columns:1fr}
+  .bowtie-opt{min-width:0}
+  .check-tabs{display:grid;grid-template-columns:1fr}
+  .check-tab{text-align:left;padding:13px 15px}
+  .check-item,.bef-opt{padding:14px 12px;min-height:48px}
+  .bef-result{padding:22px 18px}
+  .tool-block,.cult-block{margin-top:42px}
+  .tool-head{align-items:flex-start;gap:12px}
+  .cd-item{padding:16px}
+  .cd-slider-row{align-items:flex-start;flex-direction:column;gap:11px}
+  .cd-slider{width:100%;min-height:24px}
+  .cd-slider-val{min-width:0;text-align:left}
+  .cult-diag-result{padding:22px 18px}
+  .cdr-top{align-items:flex-start;flex-direction:column;gap:8px}
+  .cdr-scale{font-size:7px;letter-spacing:0}
+  .cult-actions{grid-template-columns:1fr}
+  .cc-dim{min-height:52px;padding:15px 16px}
+  #handleSubNav{display:grid!important;grid-template-columns:1fr 1fr}
+  .handle-sub{min-height:50px;padding:10px 8px;font-size:8px;line-height:1.45}
+  #mod-sectors [style*="grid-template-columns:200px"],
+  #mod-handle [style*="grid-template-columns:1fr 1fr"],
+  #mod-handle [style*="grid-template-columns:1fr 1fr 1fr"],
+  #mod-visuals [style*="grid-template-columns:1fr 1fr"],
+  #mod-visuals [style*="grid-template-columns:1fr 1fr 1fr"],
+  #mod-sources [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  #mod-sources{padding:58px 0 80px!important}
+  #mod-sources .container{padding-left:16px!important;padding-right:16px!important}
+  #mod-sources a{max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere;line-height:1.45;min-height:34px;display:inline-flex;align-items:center}
+  img,svg,canvas{max-width:100%;height:auto}
+}
+@media(max-width:390px){
+  .nav-ser{display:none}
+  #globalSearchInput{width:120px}
+  #globalSearchInput:focus{width:132px}
+  #handleSubNav{grid-template-columns:1fr}
+  .theory-grid-4{grid-template-columns:1fr}
+}
+
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+button,[onclick]{touch-action:manipulation}
+
 </style>
 </head>
 <body>
@@ -745,7 +828,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
         <input id="globalSearchInput" placeholder="Sök fall, indikator…" autocomplete="off"/>
         <button class="nav-search-clear" onclick="closeSearch()" title="Rensa">✕</button>
       </div>
-      <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileDrawer()" aria-label="Meny">
+      <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileDrawer()" aria-label="Öppna modulmenyn" aria-expanded="false" aria-controls="mobileDrawer">
         <span></span><span></span><span></span>
       </button>
       <a href="index.html" class="nav-back-link">← Analyssidan</a>
@@ -2851,10 +2934,17 @@ function toggleMobileDrawer(){
   const h=document.getElementById('navHamburger');
   const open=d.classList.toggle('open');
   h.classList.toggle('open',open);
+  h.setAttribute('aria-expanded',String(open));
+  h.setAttribute('aria-label',open?'Stäng modulmenyn':'Öppna modulmenyn');
+  document.body.classList.toggle('menu-open',open);
 }
 function closeMobileDrawer(){
   document.getElementById('mobileDrawer').classList.remove('open');
-  document.getElementById('navHamburger').classList.remove('open');
+  const h=document.getElementById('navHamburger');
+  h.classList.remove('open');
+  h.setAttribute('aria-expanded','false');
+  h.setAttribute('aria-label','Öppna modulmenyn');
+  document.body.classList.remove('menu-open');
 }
 
 
