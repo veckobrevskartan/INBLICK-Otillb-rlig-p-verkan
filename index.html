@@ -35,13 +35,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .nav-brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;flex-shrink:0}
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
 .nav-name{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--text);letter-spacing:.02em}
-.nav-links{display:flex;gap:0;list-style:none;align-items:center}
-.nav-links a{font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 13px;transition:.2s;position:relative}
-.nav-links a:hover{color:var(--accent)}
-.nav-links a .nl-rom{font-family:var(--fd);font-style:italic;font-size:12px;color:var(--accent);opacity:.6;margin-right:5px}
+.nav-links{display:flex;gap:0;list-style:none;align-items:stretch;height:56px}
+.nav-group{position:relative;display:flex;align-items:stretch}
+.nav-category,.nav-source{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 13px;transition:.2s;background:none;border:0;cursor:pointer;white-space:nowrap}
+.nav-category:hover,.nav-category[aria-expanded="true"],.nav-source:hover{color:var(--accent);background:var(--accent-g)}
+.nav-category .nl-rom{font-family:var(--fd);font-style:italic;font-size:12px;color:var(--accent);opacity:.6;margin-right:1px}
+.nav-chevron{font-size:9px;color:var(--accent);opacity:.65;transition:.2s}
+.nav-category[aria-expanded="true"] .nav-chevron{transform:rotate(180deg)}
+.nav-submenu{display:none;position:absolute;top:56px;left:0;min-width:230px;list-style:none;background:rgba(10,22,40,.98);backdrop-filter:blur(16px);border:1px solid var(--border);border-top:2px solid var(--accent);padding:7px 0;box-shadow:0 14px 42px rgba(0,0,0,.5)}
+.nav-submenu.open,.nav-group:hover .nav-submenu,.nav-group:focus-within .nav-submenu{display:block}
+.nav-submenu a{display:block;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:9px 18px;transition:.15s;white-space:nowrap}
+.nav-submenu a:hover,.nav-submenu a:focus{color:var(--accent);background:var(--accent-g);padding-left:22px;outline:none}
+.nav-menu-toggle{display:none;align-items:center;justify-content:center;width:34px;height:34px;background:none;border:1px solid var(--border-s);color:var(--muted);cursor:pointer;font-size:16px}
 .nav-cta{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--accent);text-decoration:none;padding:8px 16px;transition:.2s;flex-shrink:0;margin-left:8px}
 .nav-cta:hover{background:var(--accent-l)}
-@media(max-width:900px){.nav-links{display:none}.nav-i{padding:0 22px}}
+@media(max-width:900px){
+  .nav-i{padding:0 22px}
+  .nav-menu-toggle{display:flex;margin-left:auto}
+  .nav-cta{margin-left:6px;padding:8px 11px}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;height:calc(100vh - 56px);overflow-y:auto;background:rgba(10,22,40,.99);padding:14px 22px 32px;align-items:stretch;flex-direction:column;border-top:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .nav-group{display:block;border-bottom:1px solid var(--border-s);padding-bottom:10px}
+  .nav-category{width:100%;padding:14px 0;color:var(--text);font-size:10px}
+  .nav-chevron{display:none}
+  .nav-submenu,.nav-submenu.open,.nav-group:hover .nav-submenu,.nav-group:focus-within .nav-submenu{display:grid;position:static;grid-template-columns:repeat(2,minmax(0,1fr));min-width:0;background:none;border:0;padding:0 0 8px;box-shadow:none}
+  .nav-submenu a{padding:8px 10px 8px 0;white-space:normal;line-height:1.4}
+  .nav-submenu a:hover,.nav-submenu a:focus{padding-left:4px}
+  .nav-source{padding:16px 0}
+}
+@media(max-width:520px){.nav-submenu,.nav-submenu.open,.nav-group:hover .nav-submenu,.nav-group:focus-within .nav-submenu{grid-template-columns:1fr}.nav-cta{font-size:8px}}
 
 /* ─── HERO ─── */
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:56px;position:relative;overflow:hidden}
@@ -264,12 +286,39 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
       <span class="nav-ser">Svensk OSINT</span>
       <span class="nav-name">INBLICK</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="modules.html#mod-chain"><span class="nl-rom">I</span>Förstå</a></li>
-      <li><a href="modules.html#mod-map"><span class="nl-rom">II</span>Bedöma</a></li>
-      <li><a href="modules.html#mod-tools"><span class="nl-rom">III</span>Agera</a></li>
-      <li><a href="modules.html#mod-sources">Källor</a></li>
+    <ul class="nav-links" id="homeNavLinks">
+      <li class="nav-group">
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-forsta" onclick="toggleHomeNav(this)"><span class="nl-rom">I</span>Förstå <span class="nav-chevron">▾</span></button>
+        <ul class="nav-submenu" id="home-forsta">
+          <li><a href="modules.html#mod-chain">Påverkanskedjan</a></li>
+          <li><a href="modules.html#mod-sectors">Sektormiljöer</a></li>
+          <li><a href="modules.html#mod-actors">Aktörsmatrisen</a></li>
+          <li><a href="modules.html#mod-legal">Juridisk ram</a></li>
+          <li><a href="modules.html#mod-infopav">Informationspåverkan</a></li>
+          <li><a href="modules.html#mod-theory">Teorier och modeller</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-bedoma" onclick="toggleHomeNav(this)"><span class="nl-rom">II</span>Bedöma <span class="nav-chevron">▾</span></button>
+        <ul class="nav-submenu" id="home-bedoma">
+          <li><a href="modules.html#mod-map">Händelsekarta</a></li>
+          <li><a href="modules.html#mod-assess">Organisationstestet</a></li>
+          <li><a href="modules.html#mod-inds">Indikatorer</a></li>
+          <li><a href="modules.html#mod-graph">Sambandsgraf</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-agera" onclick="toggleHomeNav(this)"><span class="nl-rom">III</span>Agera <span class="nav-chevron">▾</span></button>
+        <ul class="nav-submenu" id="home-agera">
+          <li><a href="modules.html#mod-tools">Verktygslådan</a></li>
+          <li><a href="modules.html#mod-culture">Säkerhetskultur</a></li>
+          <li><a href="modules.html#mod-handle">Hantera ärende</a></li>
+          <li><a href="modules.html#mod-visuals">Visuella modeller</a></li>
+        </ul>
+      </li>
+      <li><a href="modules.html#mod-sources" class="nav-source">Källor</a></li>
     </ul>
+    <button class="nav-menu-toggle" id="homeNavToggle" type="button" aria-label="Visa alla moduler" aria-expanded="false" onclick="toggleHomeMenu()">☰</button>
     <a href="modules.html" class="nav-cta">Öppna verket →</a>
   </div>
 </nav>
@@ -891,6 +940,28 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
 </footer>
 
 <script>
+function closeHomeNav(){
+  document.querySelectorAll('.nav-submenu').forEach(menu=>menu.classList.remove('open'));
+  document.querySelectorAll('.nav-category').forEach(button=>button.setAttribute('aria-expanded','false'));
+}
+function toggleHomeNav(button){
+  if(window.matchMedia('(max-width:900px)').matches)return;
+  const menu=document.getElementById(button.getAttribute('aria-controls'));
+  const willOpen=!menu.classList.contains('open');
+  closeHomeNav();
+  if(willOpen){menu.classList.add('open');button.setAttribute('aria-expanded','true');}
+}
+function toggleHomeMenu(){
+  const links=document.getElementById('homeNavLinks');
+  const toggle=document.getElementById('homeNavToggle');
+  const isOpen=links.classList.toggle('open');
+  toggle.setAttribute('aria-expanded',String(isOpen));
+  toggle.textContent=isOpen?'✕':'☰';
+}
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.nav-group'))closeHomeNav();
+  if(!e.target.closest('.nav-i')&&document.getElementById('homeNavLinks').classList.contains('open'))toggleHomeMenu();
+});
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
