@@ -16,7 +16,8 @@
       "Informationsinhämtning"
     ],
     "note": "Brå (2024): Kriminella nätverk har ca 700 möjliggörare aktiva i Sverige. Rekrytering sker ofta i den egna familje- och bekantskapskretsen. En möjliggörare kan betjäna flera nätverk och representerar 'ett skydd och en konkurrensfördel' i den kriminella världen. Polismyndighetens lägesbild: möjliggörarna utgör 5% av 14 000 aktiva i kriminella nätverk men spelar en helt avgörande roll för den operativa förmågan.",
-    "source": "Brå 2024 – Möjliggörare i kriminella nätverk; Polismyndigheten lägesbild 2024",
+    "source": "Brå 2024 — Möjliggörare för kriminella nätverk",
+    "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk",
     "indicators": [
       "Kontaktförsök från okända med koppling till pågående ärenden",
       "Erbjudanden om tjänster, presenter eller intensivt socialt umgänge",
@@ -59,7 +60,8 @@
       "Utnyttjande av systembrister"
     ],
     "note": "Säkerhetspolisen bekräftar ökad rysk riskbenägenhet och sabotagevilja. Transportstyrelse- och Lantmäteriet-skandalerna visar att strukturella systembrister exploateras utan att en enskild insider behöver rekryteras. Säpo (2023): ryska GRU rekryterade insiders inom Försvarsmakten och Säkerhetspolisen — brottsligheten pågick i 6 år utan att avslöjas internt.",
-    "source": "Säpo årsberättelse 2024; Ds 2026:2; MSB FIMI-rapport 2024",
+    "source": "Säkerhetspolisen 2025–2026 — Ryssland, Kina och Iran",
+    "sourceUrl": "https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html",
     "indicators": [
       "Kontaktförsök från utländska organisationer med otydligt och brett formulerat syfte",
       "Oväntat intresse för infrastrukturdetaljer, beslutsprocesser eller personalstruktur",
@@ -90,7 +92,8 @@
       "Finansiering via offentliga bidrag"
     ],
     "note": "Statskontoret (2024): skadorna träffar individen, anhöriga, verksamheten och tilltron till förvaltningen. Acta Publicas granskning visar att infiltration via till synes legitima bolag och yrkesroller är svår att identifiera med standardkontroller. Kriminalvårdens övervakare-fall: extremister med kontrollbehörighet över dömda med koppling till samma miljöer.",
-    "source": "Statskontoret 2024; CVE 2023; Acta Publica 2020",
+    "source": "Acta Publica 2020 — Möjliggörarna",
+    "sourceUrl": "https://actapublica.se/nyheter/rapport-mojliggorarna/",
     "indicators": [
       "Ökning av hotfulla meddelanden kring specifikt ärende eller beslut",
       "Publicering av personuppgifter om medarbetare på externa plattformar",
@@ -121,7 +124,8 @@
       "Förväntansskapande och beroenden"
     ],
     "note": "Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption uppstår ofta ur långvariga leverantörsrelationer. Akademiska sjukhuset-domen (2024): 4,76 Mkr togs emot under sju år via 'konsultfakturor' — relationen hade under lång tid framstått som professionell och legitim.",
-    "source": "Ekobrottsmyndigheten; Transparency International Sverige; Akademiska-domen 2024",
+    "source": "Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset",
+    "sourceUrl": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/",
     "indicators": [
       "Leverantörskontakter utanför dokumenterade upphandlingskanaler",
       "Erbjudanden om framtida anställning till upphandlande personal",
