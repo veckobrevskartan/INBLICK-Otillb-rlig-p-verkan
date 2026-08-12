@@ -13,7 +13,7 @@
     "sector": "CRIMINAL_JUSTICE",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "Anställd vid Kriminalvården dömdes för att under drygt ett år ha utfört otillåtna registerslagningar och röjt resultaten till ett kriminellt nätverk. Tillgången upprätthölls utan att intern kontroll fångade avvikelserna. Riksrevisionen identifierade Kriminalvården som en av myndigheterna med allvarliga strukturella brister mot infiltration. Fallet illustrerar den klassiska 'upparbetade möjliggöraren'.",
+    "summary": "En anställd vid Kriminalvården dömdes efter att under drygt ett år ha gjort otillåtna registerslagningar och lämnat uppgifterna till ett kriminellt nätverk. Den interna kontrollen fångade inte avvikelserna. Fallet är ett tydligt exempel på en person som rekryterats efter att ha fått sin anställning, en så kallad upparbetad möjliggörare.",
     "sources": [
       {
         "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
@@ -117,7 +117,7 @@
     "sector": "SOCIAL",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "Socialsekreterare på nordöstra Göteborgs socialförvaltning utreddes för misstänkt samarbete med känt kriminellt släktnätverk. Larm om barn från nätverket ska ha försvunnit i handläggningskedjan. En annan sekreterare vid samma förvaltning åtalades separat för brott mot tystnadsplikten. Fallet exemplifierar den 'lojalitetsbaserade möjliggöraren'.",
+    "summary": "En socialsekreterare i nordöstra Göteborg utreddes för misstänkt samarbete med ett känt kriminellt släktnätverk. Larm om barn med koppling till nätverket ska ha försvunnit i handläggningen. En annan socialsekreterare vid samma förvaltning åtalades separat för brott mot tystnadsplikten. Uppgifterna visar hur lojalitet till ett nätverk kan påverka myndighetsutövningen.",
     "sources": [
       {
         "l": "Brå 2024 — Möjliggörare för kriminella nätverk (Rapport 2024:2)",
@@ -211,7 +211,7 @@
     "sector": "LEGAL",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "E.G. (6 år, förberedelse till mord) och A.A. (4 år, medhjälp till grovt narkotikabrott och brott mot yppandeförbud) dömdes för att via krypterade chattar läcka information till Värbynätverket. Båda var bland Sveriges mest anlitade försvarsadvokater. Fallet illustrerar hur privilegierad yrkesroll systematiskt utnyttjades.",
+    "summary": "E.G. dömdes till sex års fängelse för förberedelse till mord och A.A. till fyra år för medhjälp till grovt narkotikabrott och brott mot yppandeförbud. Via krypterade chattar lämnade de information till Värbynätverket. Båda hörde till Sveriges mest anlitade försvarsadvokater och använde sin yrkesroll för att hjälpa nätverket.",
     "sources": [
       {
         "l": "SVT — Två före detta toppadvokater döms till fängelse",
@@ -572,7 +572,7 @@
     "sector": "LEGAL",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "Advokat starkt förknippad med Ali Khan-nätverket uteslöts ur Advokatsamfundet för att ha förmedlat information från frihetsberövade klienter. Trots Högsta domstolens dom godkände Göteborgs tingsrätt att han ersatte en offentlig försvarare. Åklagaren: 'HD:s avgörande borde ha väglett beslutet'. Illustrerar strukturellt systemfel bortom den enskilde aktörens handling.",
+    "summary": "En advokat med stark koppling till Ali Khan-nätverket uteslöts ur Advokatsamfundet efter att ha förmedlat information från frihetsberövade klienter. Trots Högsta domstolens avgörande godkände Göteborgs tingsrätt senare att han ersatte en offentlig försvarare. Enligt åklagaren borde HD:s avgörande ha väglett beslutet. Händelsen visar att problemet inte stannade vid advokatens agerande.",
     "sources": [
       {
         "l": "Expressen — Klanadvokaten uteslöts och är nu tillbaka i rätten",
@@ -595,7 +595,7 @@
     "sector": "SOCIAL",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "Socialsekreterare hade tagit beslut om barn och unga trots att examensbeviset var förfalskat. Saknade formella kvalifikationer för sin roll under en period med känsliga beslut. Illustrerar sårbarhet i bakgrundskontroller vid rekrytering till socialtjänsten. SVT Nyheter Väst: fallet avslöjades av en kollega.",
+    "summary": "En socialsekreterare fattade beslut om barn och unga trots att examensbeviset var förfalskat och personen saknade rätt formell utbildning. Fallet, som enligt SVT Nyheter Väst avslöjades av en kollega, visar varför utbildningsbevis behöver kontrolleras vid rekrytering till socialtjänsten.",
     "sources": [
       {
         "l": "SVT Nyheter Väst — Socialsekreterare tog beslut om barn med falskt examensbevis",
@@ -1421,7 +1421,7 @@
     "sector": "CRIMINAL_JUSTICE",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "Kriminella gäng har systematiskt utnyttjat polisanställdas ekonomiska problem, spelberoende eller missbruksproblem för att tvinga dem att läcka information. Mönster: skuldnätverket skapar beroendeförhållande, sedan ges 'hjälp' i utbyte mot informationsleveranser. DN 2024: bland de 30 identifierade polisanställda som säkerhetsrisker ingick individer under ekonomisk press som inte nått åtalsgränsen. Fallet illustrerar hur MICE-modellens 'Coercion' och 'Money' samverkar.",
+    "summary": "Kriminella nätverk har utnyttjat polisanställdas ekonomiska problem, spelberoende eller missbruk för att pressa fram information. Först skapas ett beroende, därefter erbjuds 'hjälp' i utbyte mot uppgifter. DN rapporterade 2024 att ekonomisk utsatthet förekom bland de 30 polisanställda som hade identifierats som säkerhetsrisker, även i fall som inte ledde till åtal. Här samverkar pengar och tvång som drivkrafter.",
     "sources": [
       {
         "l": "SVT Nyheter — Polisanställda läcker till gängen",
@@ -1505,7 +1505,7 @@
     "sector": "IT",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "Systemadministratör vid pappersföretaget Georgia-Pacific avskedades på Alla hjärtans dag 2014. Använde därefter fortfarande giltiga inloggningsuppgifter via VPN hemifrån och manipulerade industriella kontrollsystem i fabriken i Port Hudson, Louisiana under två veckor. Installerade egen programvara och orsakade skador för 1,1 miljoner dollar. Dömdes till 34 månader och återbetalning av 1 134 828 dollar. Fallet illustrerar risken med kvarlevande behörigheter vid avslut.",
+    "summary": "En systemadministratör vid pappersföretaget Georgia-Pacific avskedades i februari 2014. Därefter använde han fortfarande giltiga inloggningsuppgifter och anslöt via VPN hemifrån till fabriken i Port Hudson, Louisiana. Under två veckor manipulerade han industriella styrsystem, installerade egen programvara och orsakade skador för 1,1 miljoner dollar. Han dömdes till 34 månaders fängelse och att betala tillbaka 1 134 828 dollar. Fallet visar varför behörigheter måste stängas när en anställning upphör.",
     "sources": [
       {
         "l": "US Department of Justice — Former systems administrator sentenced for hacking industrial facility",
@@ -1533,7 +1533,7 @@
     "sector": "HEALTH",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "Leverantören Medhelp hade låtit omkring 2,7 miljoner inspelade samtal till 1177 Vårdguiden lagras oskyddade och nåbara via internet. Integritetsskyddsmyndigheten (IMY) beslutade om sanktionsavgifter mot Medhelp, Voice Integrate och berörda regioner. Fallet illustrerar leverantörskedjerisk: offentlig verksamhet kan lägga ut driften men inte ansvaret för säkerhet och personuppgifter.",
+    "summary": "Leverantören Medhelp hade låtit omkring 2,7 miljoner inspelade samtal till 1177 Vårdguiden lagras oskyddade och nåbara via internet. Integritetsskyddsmyndigheten (IMY) beslutade om sanktionsavgifter mot Medhelp, Voice Integrate och berörda regioner. Driften kan läggas ut på en leverantör, men ansvaret för säkerhet och personuppgifter finns kvar.",
     "sources": [
       {
         "l": "IMY — Tillsyn av Medhelp efter 1177-incidenten",
@@ -1566,7 +1566,7 @@
     "sector": "AUTHORITY",
     "actor": "EXTREMIST",
     "status": "INDICATION",
-    "summary": "Polisen inledde förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanke: valsedlar hanterades på otillåtet sätt och valprocessens integritet äventyrades. Fallet illustrerar hur valprocessen kan påverkas inifrån av någon med insiderposition i valarbetet. Utreds som möjliggörande av valfusk snarare än yttre påverkan.",
+    "summary": "Polisen inledde en förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanken gällde att valsedlar hade hanterats på ett otillåtet sätt och att någon med en roll i valarbetet därmed kunde ha påverkat processen inifrån. Ärendet utreddes som möjligt valfusk, inte som yttre påverkan.",
     "sources": [
       {
         "l": "Dagens Samhälle — grovt valfusk utreds i Göteborg",
@@ -1589,7 +1589,7 @@
     "sector": "IT",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "IT-säkerhetsanalytiker vid brittiska Oxford Biomedica deltog i incidenthanteringen när bolaget drabbades av ransomware-attack. Använde sin insiderposition för att parallellt utpressa arbetsgivaren genom att utge sig för att vara angriparna och kräva betalning till sitt eget kryptovalutakonto. Ändrade dessutom ransomware-gängets kontaktadress i kommunikationen. Dömdes till 3 år och 8 månader. Fallet illustrerar dubbel insiderrisk vid incidenthantering.",
+    "summary": "En IT-säkerhetsanalytiker vid brittiska Oxford Biomedica deltog i incidenthanteringen när bolaget utsattes för ett ransomware-angrepp. Samtidigt utgav han sig för att vara angriparna och krävde att arbetsgivaren skulle betala till hans eget kryptovalutakonto. Han ändrade också ransomware-gruppens kontaktadress i kommunikationen. Straffet blev tre år och åtta månaders fängelse. Personen som skulle hantera angreppet använde alltså sin insyn för ett eget utpressningsförsök.",
     "sources": [
       {
         "l": "Tripwire — Rogue IT security worker failed to cover his tracks",
@@ -1917,7 +1917,7 @@
     "sector": "TRANSPORT",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Sky ECC-chattar (krypterad kommunikation) avslöjar hur hamnarbetare koordinerade containeruttag med kriminella utanför hamnen. Insiderpositionen möjliggjorde att hundratals kilo kokain fördes in i Sverige via hamnen. Drugnews: 'hamnarbetare döms till fängelse i kokainmål.' Fallet illustrerar hamninfiltration via krypterad kommunikation.",
+    "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Chattar från den krypterade tjänsten Sky ECC visade hur hamnarbetare samordnade containeruttag med kriminella utanför hamnen. Deras tillgång gjorde det möjligt att föra in hundratals kilo kokain i Sverige. Drugnews rapporterade senare att en hamnarbetare dömdes till fängelse i målet.",
     "sources": [
       {
         "l": "Transportarbetaren — Hamnarbetare dömd för kokainsmuggling i Helsingborg",
@@ -1950,7 +1950,7 @@
     "sector": "AUTHORITY",
     "actor": "ECONOMIC_INTEREST",
     "status": "INDICATION",
-    "summary": "Tjänsteman vid byggnadsnämnden i Göteborg utreds av Riksenheten mot korruption. Misstanke: tog emot pengar i utbyte mot att ge sökanden gräddfil i bygglovsprocessen. Dessutom misstanke om jäv — tjänstemannen handlade ett bygglovsärende där hans familj planerade starta affärsverksamhet. Misstänkt för grovt mutbrott och grovt bedrägeri. Expressen: 'skulle ge gräddfil till bygglov.' Riksenheten mot korruption inledde förundersökning. Fallet illustrerar hur byggnadsnämnder — med diskretionär makt att sätta tidsramar och prioriteringsordning — skapar korruptionsytor.",
+    "summary": "En tjänsteman vid byggnadsnämnden i Göteborg utreds av Riksenheten mot korruption. Misstanken är att han tog emot pengar för att ge en sökande förtur i bygglovsprocessen. Han misstänks också för jäv efter att ha handlagt ett ärende där hans familj planerade att starta verksamhet. Förundersökningen gäller grovt mutbrott och grovt bedrägeri. Bygglovshandläggningens utrymme att styra tidsramar och prioriteringar kan skapa möjligheter för korruption.",
     "sources": [
       {
         "l": "Expressen — Mutor utreds: Tjänsteman skulle ge gräddfil till bygglov",
@@ -2108,7 +2108,7 @@
       "lng": 18.068,
       "p": "approximate"
     },
-    "summary": "En riksdagsledamot kopplades i en hemlig Säpo-rapport till ett kriminellt klannätverk. Aftonbladet avslöjade rapporten. Fallet illustrerar hur politisk representation kan användas för att skydda kriminell infiltration på kommunal nivå.",
+    "summary": "En riksdagsledamot kopplades i en hemlig Säpo-rapport till ett kriminellt klannätverk. Aftonbladet avslöjade rapporten. Uppgifterna väcker frågan om politiska positioner kan användas för att skydda nätverkens intressen på kommunal nivå.",
     "sources": [
       {
         "l": "Aftonbladet — om kommunala bedrägerier",
@@ -2225,7 +2225,7 @@
       "lng": 17.143,
       "p": "confirmed"
     },
-    "summary": "Från 2022–2024 åtalades en expolitiker i Gävle för brott mot rikets säkerhet, en 51-åring för att ha spridit militära uppgifter och en 71-åring dömdes för att ha delat hemliga uppgifter. Fallen illustrerar hur rekryteringsbasen för statsspionage spänner från officerare till civila med marginell militäranknytning.",
+    "summary": "Mellan 2022 och 2024 åtalades en tidigare politiker i Gävle för brott mot Sveriges säkerhet, en 51-åring för att ha spridit militära uppgifter och en 71-åring dömdes för att ha delat hemliga uppgifter. Fallen visar att personer med mycket olika bakgrund kan bli aktuella i utredningar om statsspionage.",
     "sources": [
       {
         "l": "SVT Nyheter — Expolitiker anklagas för brott mot rikets säkerhet",
@@ -2337,7 +2337,7 @@
       "lng": 18.0023,
       "p": "jitter"
     },
-    "summary": "SVT Uppdrag granskning avslöjade att individer med dokumenterad gängkriminalitet och terrorkoppling innehade statliga tillstånd och drev verksamheter som kanaliserade pengar utomlands. Fallet illustrerar gränszonen där organiserad brottslighet och våldsbejakande extremism möts i relation till offentliga tillståndssystem.",
+    "summary": "SVT Uppdrag granskning avslöjade att personer med dokumenterad gängkriminalitet och terrorkoppling hade statliga tillstånd och drev verksamheter som förde pengar utomlands. Här möts organiserad brottslighet och våldsbejakande extremism i verksamheter som är beroende av offentliga tillstånd.",
     "sources": [
       {
         "l": "SVT Uppdrag granskning sept 2025",
@@ -2561,7 +2561,7 @@
     "sector": "CRIMINAL_JUSTICE",
     "actor": "CRIMINAL_NETWORK",
     "status": "INDICATION",
-    "summary": "En f.d. kriminalvårdare som arbetat på högsäkerhetsanstalterna Hall och andra klass 1-anstalter greps efter hemlig avlyssning och spaning i en industrilokal i Nykvarn med ca 230 kg amfetamin. Enligt åklagaren finns kopplingar till Foxtrot-nätverket. Karriärprofilen: utesluten ur Kriminalvården efter kokainbruk under festkväll, därefter anknöt hon via krypterade meddelandetjänster till kriminella nätverk. Illustrerar hur anställda med bred anstaltserfarenhet kan rekryteras post-tjänst.",
+    "summary": "En tidigare kriminalvårdare med erfarenhet från Hall och andra anstalter i säkerhetsklass 1 greps efter hemlig avlyssning och spaning i en industrilokal i Nykvarn, där polisen fann omkring 230 kilo amfetamin. Enligt åklagaren finns kopplingar till Foxtrot-nätverket. Hon hade lämnat Kriminalvården efter kokainbruk och fick därefter kontakt med kriminella nätverk via krypterade meddelandetjänster. Fallet visar att kunskap och kontakter från en tidigare anställning kan vara värdefulla även efter att personen har slutat.",
     "sources": [
       {
         "l": "SVT Nyheter Södertälje — Från kriminalvårdare till misstänkt i stor knarkhärva (2026-04-08)",
@@ -2584,7 +2584,7 @@
     "sector": "CRIMINAL_JUSTICE",
     "actor": "INSIDER",
     "status": "INDICATION",
-    "summary": "Ordningsvakt vid en tingsrätt i södra Sverige tog fram sekretessbelagda uppgifter om en person han hade personlig koppling till — personen hade hemlig adress på grund av hotbild. Personalansvarsnämnden åtalsanmälde ordningsvakten för tjänstefel. Fallet illustrerar hur anställda med systemåtkomst i rättsväsendet kan utnyttja denna för att bistå personer i konflikt med rättssystemet, med livsfarliga konsekvenser för skyddsbehövande.",
+    "summary": "En ordningsvakt vid en tingsrätt i södra Sverige tog fram sekretessbelagda uppgifter om en person som han hade en privat koppling till. Personen hade skyddad adress på grund av en hotbild. Personalansvarsnämnden åtalsanmälde ordningsvakten för tjänstefel. Systemåtkomsten användes alltså i ett privat sammanhang och kunde ha utsatt en skyddsbehövande person för fara.",
     "sources": [
       {
         "l": "Publikt — Ordningsvakt vid tingsrätt åtalsanmäls för tjänstefel",
@@ -2607,7 +2607,7 @@
     "sector": "CRIMINAL_JUSTICE",
     "actor": "CORRUPT_OFFICIAL",
     "status": "CONFIRMED",
-    "summary": "En f.d. anställd vid Åklagarmyndigheten dömdes till att betala 16 000 kr i böter för att ha tagit emot en mobiltelefon från IT-utbildningsföretaget Labcenter i samband med en kurs. Labcenterhärvan rörde ett tjugotal anställda från olika myndigheter. Fallet illustrerar hur privata IT-leverantörer med systematiska muta-upplägg kan skapa beroendeförhållanden med myndighetspersonal som fattar IT-upphandlingsbeslut. Samtliga åtaladesanslutna myndigheter inkluderar rättsväsendet.",
+    "summary": "En tidigare anställd vid Åklagarmyndigheten dömdes till 16 000 kronor i böter efter att ha tagit emot en mobiltelefon från IT-utbildningsföretaget Labcenter i samband med en kurs. Labcenterhärvan berörde ett tjugotal anställda vid flera myndigheter, även inom rättsväsendet. Upplägget visar hur en leverantör kan använda gåvor för att skapa lojalitet hos personal som påverkar inköp av IT-utbildning och tjänster.",
     "sources": [
       {
         "l": "Publikt — Åklagarmyndigheten Labcenter-härvan",
@@ -2658,7 +2658,7 @@
     "sector": "PROCUREMENT",
     "actor": "ORGANIZED_CRIME",
     "status": "INDICATION",
-    "summary": "En 49-årig företagare från Gällivare står i centrum för en av Sveriges pågående största ekobrottsutredningar — tillgångar värda 800 miljoner kronor saknas. Ytterligare en man häktades 2026. Fallet berör gruvnäringen i Norrbotten och kan ha kopplingar till LKAB:s underleverantörsledet. Illustrerar hur ekonomisk brottslighet i resursutnyttjingssektorn kan utnyttja svaga kontrollfunktioner i avancerade upphandlingskedjor i Arktiska Sverige.",
+    "summary": "En 49-årig företagare från Gällivare står i centrum för en av Sveriges största pågående ekobrottsutredningar. Tillgångar värda 800 miljoner kronor saknas och ytterligare en man häktades 2026. Ärendet berör gruvnäringen i Norrbotten och kan ha kopplingar till LKAB:s underleverantörer. Det visar hur svag kontroll i långa upphandlingskedjor kan utnyttjas för ekonomisk brottslighet.",
     "sources": [
       {
         "l": "Realtid — Malmfältenhärvan: 800 miljoner saknas (2025-2026)",

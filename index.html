@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>INBLICK — Den öppna attackytan | Svensk OSINT</title>
-<meta name="description" content="Ett encyklopediskt referensverk om otillbörlig påverkan mot svensk offentlig sektor. 108 dokumenterade fall och 14 analysmoduler. Strukturerat i tre delar: Förstå, Bedöma, Agera. Producerat av Svensk OSINT."/>
+<meta name="description" content="Se hur otillbörlig påverkan får fäste i offentlig sektor och vad organisationer kan göra åt den. 108 dokumenterade fall, 14 analysmoduler och spårbara källor."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -218,24 +218,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .cp-more a:hover{text-decoration:underline}
 @media(max-width:600px){.cp-sector{display:none}}
 
-/* ─── CONFERENCE MAPPING ─── */
-.conf-section{padding:80px 0;background:var(--bg-mid);border-top:1px solid var(--border-s)}
-.conf-table{margin-top:42px;border:1px solid var(--border-s)}
-.conf-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--border-s)}
-.conf-row:last-child{border-bottom:none}
-@media(max-width:680px){.conf-row{grid-template-columns:1fr}}
-.conf-pass{padding:20px 24px;border-right:1px solid var(--border-s)}
-@media(max-width:680px){.conf-pass{border-right:none;border-bottom:1px solid var(--border-s);background:var(--bg-card)}}
-.conf-passlabel{font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.conf-passtitle{font-size:13.5px;color:var(--text);line-height:1.4;font-weight:500}
-.conf-speaker{font-family:var(--fm);font-size:9px;color:var(--dim);margin-top:5px}
-.conf-cover{padding:20px 24px;display:flex;flex-direction:column;justify-content:center;text-decoration:none;transition:.15s}
-.conf-cover:hover{background:var(--bg-card)}
-.conf-coverlabel{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;display:flex;align-items:center;gap:7px}
-.conf-coverlabel .cc-rom{font-family:var(--fd);font-style:italic;font-size:12px}
-.conf-covertext{font-size:13px;color:var(--muted);line-height:1.5}
-.conf-covertext b{color:var(--text);font-weight:500}
-
 /* ─── OSINT BOX ─── */
 .osint-section{padding:80px 0}
 .osint-box{background:var(--bg-mid);border:1px solid var(--border);padding:44px;display:grid;grid-template-columns:1fr auto;gap:44px;align-items:center}
@@ -296,7 +278,7 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
   .hero-meta-val{font-size:30px}
   .chain-vis{margin-top:4px}
   .cs-body{padding:12px 14px}
-  .thesis,.parts-section,.evidence-section,.actors-section,.cases-section,.conf-section,.osint-section{padding:56px 0}
+  .thesis,.parts-section,.evidence-section,.actors-section,.cases-section,.osint-section{padding:56px 0}
   .part-block{margin-top:46px}
   .part-block:first-of-type{margin-top:38px}
   .part-head{align-items:flex-start;gap:13px;padding-bottom:14px}
@@ -310,7 +292,6 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
   .stat-note{font-size:12px}
   .cp-row{padding:16px 14px;gap:11px;align-items:flex-start}
   .cp-year{display:none}
-  .conf-pass,.conf-cover{padding:18px}
   .osint-box{padding:24px 20px;gap:28px}
   .osint-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   .cta-section{padding:66px 0}
@@ -383,8 +364,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <p class="hero-eyebrow">Ett referensverk från Svensk OSINT</p>
         <p class="hero-kicker">Otillbörlig påverkan i offentlig sektor · 2002–2026</p>
         <h1 class="hero-title">Den öppna<br><em>attackytan</em></h1>
-        <p class="hero-sub">När det offentliga Sverige går att påverka inifrån</p>
-        <p class="hero-lead">Ett samlat, källbelagt kunskapsverk om hur kriminella nätverk, främmande makt, extremistiska miljöer och ekonomiska intressen rekryterar, upparbetar och utnyttjar möjliggörare i offentlig sektor. <strong>108 dokumenterade fall och 14 analysmoduler med spårbara referenser</strong> — strukturerat så att den som läser har svaren innan frågan ställs.</p>
+        <p class="hero-sub">När påverkan får fäste i offentlig sektor</p>
+        <p class="hero-lead">Otillbörlig påverkan börjar sällan med ett uppenbart brott. Ofta börjar den med en kontakt, en tjänst eller en liten avvikelse som ingen reagerar på. Här samlas <strong>108 dokumenterade fall och 14 analysmoduler med spårbara källor</strong> som visar hur påverkan växer fram och vad organisationer kan göra innan skadan är ett faktum.</p>
         <div class="hero-actions">
           <a href="modules.html" class="btn-primary">Öppna verket →</a>
           <a href="modules.html#mod-map" class="btn-ghost">Se händelsekartan</a>
@@ -450,7 +431,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
             <div class="cs-body">
               <div class="cs-step-label">Gränstest</div>
               <div class="cs-title">Den lilla begäran som testar</div>
-              <div class="cs-lead">Harmlös på ytan, systemtestande i funktion</div>
+              <div class="cs-lead">Verkar harmlös men prövar var gränsen går</div>
             </div>
           </a>
           <a href="modules.html#mod-chain" class="chain-step">
@@ -458,14 +439,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
             <div class="cs-body">
               <div class="cs-step-label">Normalisering</div>
               <div class="cs-title">Undantaget blir rutin</div>
-              <div class="cs-lead">Varje steg marginellt större — aldrig i ett språng</div>
+              <div class="cs-lead">Varje steg blir lite större, men aldrig på en gång</div>
             </div>
           </a>
           <a href="modules.html#mod-chain" class="chain-step">
             <div class="cs-num">07</div>
             <div class="cs-body">
               <div class="cs-step-label">Systemskada</div>
-              <div class="cs-title">Beslutsförmågan förskjuten</div>
+              <div class="cs-title">Besluten börjar påverkas</div>
               <div class="cs-lead">Fördröjning, tystnad, självreglering, personalflykt</div>
             </div>
           </a>
@@ -479,11 +460,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 <section class="thesis">
   <div class="wrap">
     <div class="thesis-grid reveal">
-      <div class="thesis-lead">Inte en konferens. Ett <em>uppslagsverk</em> du kan läsa, dela och referera till — när du vill, utan kostnad.</div>
+      <div class="thesis-lead">Otillbörlig påverkan syns sällan från början. Men <em>mönstret går att känna igen.</em></div>
       <div class="thesis-body">
-        <p>Otillbörlig påverkan är inte en serie enskilda skandaler. Det är ett <strong>strukturellt mönster</strong> där samma mekanismer återkommer oavsett sektor: en öppen attackyta, en upparbetad relation, en gräns som testas, en norm som glider.</p>
-        <p>INBLICK samlar mönstret på ett ställe. Falldatabasen skiljer bekräftade uppgifter från indikationer och redovisar källorna bakom varje fall. Varje modul kopplar teori till dokumenterad svensk verklighet — från spioneridomar och muthärvor till infiltrerade HVB-hem och insiders i hamnar.</p>
-        <p>Verket är framtaget inom Svensk OSINT med öppna källor, för att visa vad öppen källanalys kan åstadkomma. <strong>Allt är fritt att använda.</strong></p>
+        <p>Bakom till synes skilda händelser återkommer samma förlopp: någon kartläggs, en relation byggs upp, en gräns testas och det som först var ett undantag blir så småningom normalt.</p>
+        <p>INBLICK samlar fallen och visar sambanden. Falldatabasen skiljer bekräftade uppgifter från indikationer och redovisar källorna bakom varje fall. Modulerna kopplar forskning och teori till svensk verklighet, från spioneridomar och muthärvor till insiders i hamnar och välfärdsverksamhet.</p>
+        <p>Materialet är framtaget av Svensk OSINT med öppna källor. <strong>Det är fritt att läsa, använda och dela.</strong></p>
       </div>
     </div>
   </div>
@@ -495,7 +476,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="parts-intro reveal">
       <p class="section-eyebrow">Verkets struktur</p>
       <h2 class="section-title">Tre delar, fjorton moduler,<br><em>en sammanhängande väg</em></h2>
-      <p class="section-intro">Verket följer den logik en organisation behöver: först förstå hotet, sedan bedöma den egna exponeringen, till sist agera. Varje modul är fristående men samspelar med de andra.</p>
+      <p class="section-intro">Börja med att förstå hur påverkan fungerar. Bedöm sedan var den egna verksamheten är sårbar och gå vidare till konkreta åtgärder. Modulerna kan läsas var för sig eller som en sammanhängande väg genom materialet.</p>
     </div>
 
     <!-- DEL I — FÖRSTÅ -->
@@ -507,12 +488,12 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <div class="part-q">Vad är hotet — och hur fungerar det?</div>
         </div>
       </div>
-      <p class="part-desc">Det analytiska underlaget. Mekanismen bakom påverkan, miljöerna där den frodas, aktörerna som driver den, den juridiska ramen och den informationspåverkan som riktas mot enskilda tjänstemän.</p>
+      <p class="part-desc">Här får du grepp om hur påverkan börjar, vilka som ligger bakom den och varför vissa miljöer är mer utsatta än andra. Du får också den juridiska ramen och en förklaring till hur påverkan kan riktas mot enskilda medarbetare.</p>
       <div class="part-cards">
         <a href="modules.html#mod-chain" class="mcard" style="border-top-color:var(--accent)">
           <div class="mc-kicker">Kärnmodell</div>
           <div class="mc-title">Påverkanskedjan</div>
-          <div class="mc-desc">Sju steg från kartläggning till systemskada, med tre parallella perspektiv per steg: angriparens logik, medarbetarens upplevelse, organisationens blinda fläck.</div>
+          <div class="mc-desc">Följ sju steg från den första kartläggningen till att verksamhetens beslut påverkas. Varje steg visas ur angriparens, medarbetarens och organisationens perspektiv.</div>
           <div class="mc-foot" style="color:var(--accent)"><span>7 steg · fallkopplat</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-sectors" class="mcard" style="border-top-color:#9B4FBB">
@@ -524,25 +505,25 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <a href="modules.html#mod-actors" class="mcard" style="border-top-color:var(--orange)">
           <div class="mc-kicker">Aktörsanalys</div>
           <div class="mc-title">Aktörsmatrisen</div>
-          <div class="mc-desc">Fyra aktörsmiljöer med skilda mål, tidshorisonter och metoder. Klickbara kort med analytisk bedömning, observerbara indikatorer och kopplade fall.</div>
+          <div class="mc-desc">Jämför fyra aktörsmiljöer med olika mål och arbetssätt. Varje kort samlar bedömning, varningssignaler och dokumenterade fall.</div>
           <div class="mc-foot" style="color:var(--orange)"><span>4 miljöer · indikatorkopplat</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-legal" class="mcard is-new" style="border-top-color:var(--accent)">
           <div class="mc-kicker">Rättslig ram</div>
           <div class="mc-title">Juridisk ram</div>
-          <div class="mc-desc">Den brottsliga trappan från mutbrott och tjänstefel till gråzon och normglidning. Otillbörlighetsrekvisitet, anmälningsskyldighet och varför så få fälls.</div>
+          <div class="mc-desc">Se var gränsen går mellan brott, olämpligt agerande och sådant som är lagligt men ändå skadligt. Här förklaras också centrala rekvisit och varför så få fall leder till fällande dom.</div>
           <div class="mc-foot" style="color:var(--accent)"><span>BrB 10 & 20 kap · RiR 2026:3</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-infopav" class="mcard is-new" style="border-top-color:#9B4FBB">
           <div class="mc-kicker">Kognitiv påverkan</div>
           <div class="mc-title">Informations&shy;påverkan</div>
-          <div class="mc-desc">När påverkan riktas mot personal: tre vektorer, fem kognitiva mekanismer, statliga aktörers kombinerade operationer mot enskilda beslutsfattare.</div>
+          <div class="mc-desc">Så kan påverkan riktas mot enskilda medarbetare och beslutsfattare. Modulen visar vanliga vägar in, psykologiska mekanismer och hur statliga aktörer kombinerar flera metoder.</div>
           <div class="mc-foot" style="color:#9B4FBB"><span>Säpo · MSB · SKR</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-theory" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Förståelse</div>
           <div class="mc-title">Möjliggörarens psykologi</div>
-          <div class="mc-desc">Hur blir regelbrott ett möjligt val? MICE, Brå:s fyra kategorier, Situational Action Theory, FOI:s tio spiontypologier och DNV-fallets rekryteringskedja.</div>
+          <div class="mc-desc">Varför går en person över gränsen? Flera etablerade modeller förklaras med dokumenterade fall, utan att användas för att profilera människor.</div>
           <div class="mc-foot" style="color:var(--green)"><span>SAT · MICE · FOI 2026 · DNV</span><span class="mc-arrow">→</span></div>
         </a>
       </div>
@@ -557,18 +538,18 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <div class="part-q">Var är min organisation exponerad?</div>
         </div>
       </div>
-      <p class="part-desc">Verktygen för att läsa det egna läget. Den geografiska fallkartan, indikatorbiblioteket, organisationens självskattning och sambandsgrafen som visar strukturen bakom alla fall.</p>
+      <p class="part-desc">Här kan du jämföra fallen med den egna verksamheten. Använd kartan, varningssignalerna, självskattningen och sambandsgrafen för att se var sårbarheterna finns.</p>
       <div class="part-cards">
         <a href="modules.html#mod-map" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Händelsedatabas</div>
           <div class="mc-title">Händelsekartan</div>
-          <div class="mc-desc">108 svenska och strategiskt relevanta internationella fall 2002–2026, plottade geografiskt. Filtrerbar på sektor, aktör och bekräftelsestatus. Varje fall fullständigt källbelagt.</div>
+          <div class="mc-desc">Utforska 108 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör och källäge och öppna källorna direkt från varje fall.</div>
           <div class="mc-foot" style="color:var(--green)"><span>108 fall · 12 sektorer</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-assess" class="mcard" style="border-top-color:var(--purple)">
           <div class="mc-kicker">Självskattning</div>
           <div class="mc-title">Organisations&shy;testet</div>
-          <div class="mc-desc">14 frågor, sju nyckelområden. Ingen data lämnar enheten. Mognadsprofil med rekommendationer kopplade till faktiska brister från Riksrevisionen och Brå.</div>
+          <div class="mc-desc">Besvara 14 frågor inom sju områden och få en enkel bild av organisationens styrkor och brister. Svaren stannar i din webbläsare.</div>
           <div class="mc-foot" style="color:var(--purple)"><span>14 frågor · lokal beräkning</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-inds" class="mcard" style="border-top-color:var(--accent)">
@@ -580,7 +561,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <a href="modules.html#mod-graph" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Nätverksgraf</div>
           <div class="mc-title">Sambandsgrafen</div>
-          <div class="mc-desc">Interaktiv force-directed graf över relationer mellan alla fall, fyra aktörsmiljöer och tolv sektorer. Klicka, dra, filtrera. Visar strukturen bakom fallen.</div>
+          <div class="mc-desc">Se hur fall, aktörer och sektorer hänger ihop i en interaktiv nätverksgraf. Klicka, dra och filtrera för att upptäcka mönster som annars är lätta att missa.</div>
           <div class="mc-foot" style="color:var(--green)"><span>Klickbar · filtrerbar</span><span class="mc-arrow">→</span></div>
         </a>
       </div>
@@ -595,7 +576,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <div class="part-q">Hur bygger jag motståndskraft?</div>
         </div>
       </div>
-      <p class="part-desc">Det operativa lagret. Befattningsanalys och säkerhetsprövning, säkerhetskultur som skyddsbarriär, ärendehantering steg för steg, och modellerna som förklarar.</p>
+      <p class="part-desc">Här går analysen över i praktiskt arbete. Bedöm utsatta roller, stärk säkerhetskulturen och följ ett tydligt arbetssätt när en signal eller misstanke behöver hanteras.</p>
       <div class="part-cards">
         <a href="modules.html#mod-tools" class="mcard is-new" style="border-top-color:var(--accent)">
           <div class="mc-kicker">Operativa verktyg</div>
@@ -612,7 +593,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <a href="modules.html#mod-handle" class="mcard" style="border-top-color:var(--orange)">
           <div class="mc-kicker">Ärendehantering</div>
           <div class="mc-title">Hantera ett ärende</div>
-          <div class="mc-desc">Utredningsprocessen i sex steg, indikatormatriser per nivå, osjälvständiga brottsformer som definierar möjliggörarens rättsliga ansvar, och crime proofing-metoden.</div>
+          <div class="mc-desc">Följ ett ärende i sex steg, från den första signalen till beslut och uppföljning. Här finns också indikatorer på individ-, grupp- och organisationsnivå samt en metod för att förebygga brottsupplägg.</div>
           <div class="mc-foot" style="color:var(--orange)"><span>6 steg · 3 nivåer</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-visuals" class="mcard" style="border-top-color:#9B4FBB">
@@ -660,7 +641,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="reveal">
       <p class="section-eyebrow"><span class="se-rom">§</span>Metod</p>
       <h2 class="section-title">Hur vi <em>klassar källor</em></h2>
-      <p class="section-intro">Falldatabasen använder två kunskapslägen. Kombinationen av klassning, källtyp och formulering avgör hur tungt ett uttalande väger. Av 108 fall är 82 bekräftade genom dom, myndighetsbeslut eller annan tydlig dokumentation; 26 är tydligt märkta som indikationer.</p>
+      <p class="section-intro">Alla uppgifter är inte lika säkra. Därför skiljer databasen mellan bekräftade fall och indikationer. Av 108 fall stöds 82 av dom, myndighetsbeslut eller annan tydlig dokumentation. De övriga 26 är märkta som indikationer.</p>
     </div>
     <div class="evidence-grid reveal">
       <div class="ev-cell">
@@ -672,8 +653,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
       <div class="ev-cell">
         <div class="ev-badge ind"><div class="ev-dot ind"></div>Indikation</div>
         <div class="ev-count">26 <span>av 108 fall</span></div>
-        <div class="ev-title">Stödd av trolighetsbedömning</div>
-        <div class="ev-desc">Tillräckligt empiriskt underlag för analytisk slutsats, men utan formell dom eller myndighetsbestämning. Mönstret är troligt men inte juridiskt fastställt.</div>
+        <div class="ev-title">Tydliga uppgifter, men inte fastställt</div>
+        <div class="ev-desc">Det finns underlag för en försiktig bedömning, men ingen dom eller myndighetsbedömning som fastställer händelsen. Mönstret är möjligt eller troligt, men inte juridiskt prövat.</div>
       </div>
       <div class="ev-cell">
         <div class="ev-badge ana"><div class="ev-dot ana"></div>Analytisk bedömning</div>
@@ -691,7 +672,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="reveal">
       <p class="section-eyebrow"><span class="se-rom">I</span>Förstå · Aktörer</p>
       <h2 class="section-title">Fyra <em>aktörsmiljöer</em></h2>
-      <p class="section-intro">Skilda mål och tidshorisonter, men överlappande metoder. En organisation som bara skyddar sig mot en av de fyra är exponerad mot de övriga tre.</p>
+      <p class="section-intro">Aktörerna vill olika saker och arbetar i olika tidsperspektiv, men använder ofta samma vägar in. Ett skydd som bara utgår från en aktörstyp lämnar därför luckor för de andra.</p>
     </div>
     <div class="actor-grid reveal">
       <a href="modules.html#mod-actors" class="ap-card" style="border-top-color:#C45C2E">
@@ -732,7 +713,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="reveal">
       <p class="section-eyebrow"><span class="se-rom">II</span>Bedöma · Falldatabasen</p>
       <h2 class="section-title">Svenska fall och <em>jämförelsepunkter</em></h2>
-      <p class="section-intro">Ett urval ur de 108 dokumenterade fallen 2002–2026. Öppna händelsekartan för fullständig databas med filtrering, geografisk placering och källhänvisning per fall.</p>
+      <p class="section-intro">Här är ett urval av de 108 fallen från 2002–2026. I händelsekartan kan du filtrera hela databasen och öppna källorna bakom varje fall.</p>
     </div>
     <div class="case-list reveal">
       <a href="modules.html#mod-map" class="cp-row">
@@ -823,125 +804,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   </div>
 </section>
 
-<!-- ═══ KONFERENSMAPPNING ═══ -->
-<section class="conf-section">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="section-eyebrow"><span class="se-rom">↔</span>Täckning</p>
-      <h2 class="section-title">Konferensen den 30 september —<br><em>fråga för fråga</em></h2>
-      <p class="section-intro">Mappningen följer <a href="https://www.abilitypartner.se/konferenser-kurser/otillaten-paverkan-i-offentlig-sektor/" target="_blank" rel="noopener">Ability Partners publicerade program för 2026</a>. Varje programpunkt länkas till den del av verket som ger bakgrund, fall, bedömningsstöd eller praktiska verktyg.</p>
-    </div>
-    <div class="conf-table reveal">
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">09:10 · Lägesbild</div>
-          <div class="conf-passtitle">Aktuell hotbild för otillbörlig påverkan mot offentlig sektor</div>
-          <div class="conf-speaker">Jörgen Holmlund · Försvarshögskolan</div>
-        </div>
-        <a href="modules.html#mod-sectors" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
-          <div class="conf-covertext"><b>Sektormiljöer + Aktörsmatrisen</b> — strukturella sårbarheter, organiserad brottslighet, främmande makt och kombinerade interna och externa angrepp</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">10:00 · Granskning</div>
-          <div class="conf-passtitle">Infiltration i staten — Riksrevisionens granskning (RiR 2026:3)</div>
-          <div class="conf-speaker">Per Dackenberg · Riksrevisionen</div>
-        </div>
-        <a href="modules.html#mod-legal" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
-          <div class="conf-covertext"><b>Juridisk ram + sektormiljön staten</b> — RiR 2026:3 inarbetad för FMV, Kammarkollegiet och Kriminalvården: styrning, riskanalys och uppföljning</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">11:00 · Praktik</div>
-          <div class="conf-passtitle">Säkerhetsprövning i praktiken — befattningsanalys och intervju</div>
-        </div>
-        <a href="modules.html#mod-tools" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">III</span>Agera</div>
-          <div class="conf-covertext"><b>Verktygslådan</b> — rollanalys, BROP-modellen och den rättsliga skillnaden mellan säkerhetsprövning och andra kontroller</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">11:45 · Kommun &amp; region</div>
-          <div class="conf-passtitle">Otillåten påverkan i kommuner och regioner</div>
-          <div class="conf-speaker">Christina Kiernan · SKR</div>
-        </div>
-        <a href="modules.html#mod-assess" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">II</span>Bedöma</div>
-          <div class="conf-covertext"><b>Organisationstestet + sektormiljöer</b> — tidiga signaler, utsatta funktioner, ansvar och samverkan</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">13:15 · Identifiera</div>
-          <div class="conf-passtitle">Identifiera och hantera otillåten påverkan</div>
-          <div class="conf-speaker">Catharina Lindstedt</div>
-        </div>
-        <a href="modules.html#mod-inds" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">II</span>Bedöma</div>
-          <div class="conf-covertext"><b>Indikatorer + Hantera ärende</b> — från subtil kontakt och mänsklig reaktion till triangulerad bedömning och dokumenterad åtgärd</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">13:55 · Juridik</div>
-          <div class="conf-passtitle">Juridiken — gränsen mellan brott och gråzon</div>
-          <div class="conf-speaker">Olle Lundin · Uppsala universitet</div>
-        </div>
-        <a href="modules.html#mod-legal" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
-          <div class="conf-covertext"><b>Juridisk ram</b> — mutbrott, vänskapskorruption, jäv, normglidning samt krav på saklighet, proportionalitet och dokumentation</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">14:55 · Motståndskraft</div>
-          <div class="conf-passtitle">Bygga en säkerhetskultur som håller</div>
-          <div class="conf-speaker">Patric Persson · Stockholms tingsrätt</div>
-        </div>
-        <a href="modules.html#mod-culture" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">III</span>Agera</div>
-          <div class="conf-covertext"><b>Säkerhetskultur</b> — säkerhet och HR tillsammans, rapporteringsklimat, återkommande samtal och organisatorisk motståndskraft</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">15:40 · Rekrytering</div>
-          <div class="conf-passtitle">Bakgrundskontroller och interna sårbarheter</div>
-          <div class="conf-speaker">Fredrik Janse · SRS</div>
-        </div>
-        <a href="modules.html#mod-tools" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">III</span>Agera</div>
-          <div class="conf-covertext"><b>Verktygslådan</b> — risk- och relevansbedömning, proportionerliga kontroller och tydliga begränsningar för personuppgiftsbehandling</div>
-        </a>
-      </div>
-      <div class="conf-row">
-        <div class="conf-pass">
-          <div class="conf-passlabel">16:20 · Informationspåverkan</div>
-          <div class="conf-passtitle">När påverkan riktas mot personal och beslutsfattande</div>
-          <div class="conf-speaker">Mikael Tofvesson · Cparta</div>
-        </div>
-        <a href="modules.html#mod-infopav" class="conf-cover">
-          <div class="conf-coverlabel"><span class="cc-rom">I</span>Förstå</div>
-          <div class="conf-covertext"><b>Informationspåverkan</b> — narrativ, kognitiva mekanismer, främmande makt och motståndskraft i beslutsmiljön</div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ OSINT BOX ═══ -->
 <section class="osint-section">
   <div class="wrap">
     <div class="osint-box reveal">
       <div>
         <div class="osint-label">Om Svensk OSINT</div>
-        <div class="osint-title">Öppen källanalys för svenska säkerhetspraktiker</div>
-        <div class="osint-desc">Svensk OSINT producerar veckovisa underrättelsebrev, djupanalysrapporter och interaktiva publikationer med fokus på säkerhetshot mot Sverige. INBLICK är vår öppna analys för fältet — avsedd att spridas, användas och refereras fritt av svenska organisationer, oberoende av konferenser och betalväggar.</div>
+        <div class="osint-title">Öppen källanalys för dig som arbetar med säkerhet</div>
+        <div class="osint-desc">Svensk OSINT följer säkerhetshot mot Sverige och samlar det viktigaste i veckobrev, analyser och interaktiva publikationer. INBLICK är vårt öppna fördjupningsformat: källbelagt, praktiskt användbart och fritt att dela.</div>
       </div>
       <div class="osint-stats">
         <div class="os-stat">
@@ -965,8 +835,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 <section class="cta-section reveal">
   <div class="wrap">
     <p class="cta-eyebrow">Börja läsa</p>
-    <h2 class="cta-title">Öppna<br><em>attackytan</em></h2>
-    <p class="cta-sub">Alla fjorton moduler är fria att använda, dela och referera till. Källorna är öppna, fallen är dokumenterade, analysen är vår.</p>
+    <h2 class="cta-title">Se mönstret.<br><em>Hitta sårbarheterna.</em></h2>
+    <p class="cta-sub">Välj en modul och börja där frågan är mest angelägen för dig. Allt material är fritt att läsa, använda och dela.</p>
     <div class="cta-actions">
       <a href="modules.html" class="btn-primary">Öppna verket →</a>
       <a href="modules.html#mod-sources" class="btn-ghost">Se källförteckningen</a>

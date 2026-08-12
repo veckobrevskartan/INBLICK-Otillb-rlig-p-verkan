@@ -141,7 +141,7 @@ for (const match of index.matchAll(/href="modules\.html#([^"]+)"/g)) {
   if (!moduleIds.includes(match[1])) errors.push(`index.html: modulankare saknas: ${match[1]}`);
 }
 
-for (const [name, expected] of [['ACTORS', 4], ['INDICATORS', 25], ['CHAIN', 7]]) {
+for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 25], ['CHAIN', 7]]) {
   const match = modules.match(new RegExp(`const ${name}=(\\[[^\\n]*\\]);`));
   if (!match) {
     errors.push(`modules.html: ${name} saknas — en eller flera moduler kan inte starta`);
@@ -192,6 +192,8 @@ for (const name of identifiedPeople) {
 for (const marker of [
   'Källa: Handledningen', 'Källor: Handledningen', 'Erfarenheter från Göteborgs stad',
   'MCF0079 mars 2026 kap', 'SMOB SGL 2026 kap', 'original ur handledningen',
+  'Konferensen den 30 september', 'Konferens 30 sept 2026', 'abilitypartner.se',
+  'recruitmentkanal', 'blind spots', 'operation where', 'anomalier découverts',
 ]) {
   if (modules.includes(marker)) errors.push(`Intern eller olänkad källhänvisning finns kvar: ${marker}`);
 }
