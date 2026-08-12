@@ -79,7 +79,7 @@
       "criminal-network",
       "economic-interest"
     ],
-    "desc": "En medarbetare bildar nya nära relationer — sociala eller professionella — med externa parter i direkt anslutning till ett pågående känsligt eller högt profil-ärende.",
+    "desc": "En medarbetare får en ny nära social eller professionell relation till en extern part samtidigt som ett känsligt eller uppmärksammat ärende pågår.",
     "example": "Advokaten N.Z:s byråjurist upprätthöll 232 timmars telefonkontakt med en livstidsdömd klient under en tvåmånadersperiod. Kontakten översteg varje rimlig ärendemässig motivering.",
     "src": "Expressen — N.Z. utesluts ur Advokatsamfundet",
     "sourceUrl": "https://www.expressen.se/nyheter/sverige/naz-zihaoui-utesluts-ur-advokatsamfundet/"
@@ -123,7 +123,7 @@
       "foreign-power"
     ],
     "desc": "Medarbetare med känslig tillgång undviker systematiskt semester, rotation eller granskning utan sakliga skäl — kan indikera oro för att avvikelser ska upptäckas i frånvaro.",
-    "example": "CIA insider threat indicators dokumenterar ovanligt låg semesteruttag som ett av de starkaste beteendessignalerna i fall av pågående spionage. Kriminalvårdens interna utredningar noterar mönstret.",
+    "example": "CIA:s indikatorer för insiderhot beskriver ovanligt lågt semesteruttag som en återkommande beteendesignal i spionfall. Mönstret förekommer också i Kriminalvårdens interna utredningar.",
     "src": "CISA — Defining insider threats",
     "sourceUrl": "https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats"
   },
@@ -152,7 +152,7 @@
       "foreign-power"
     ],
     "desc": "En medarbetare frågar om kollegors specifika ärenden, systemtillgång, behörigheter eller interna rutiner utan tydlig arbetsmässig anledning.",
-    "example": "Brå (2024): möjliggörare tillhandahåller inte nödvändigtvis hemlig information — den samlade kunskapen om organisationens struktur, rutiner och frånvaro är det primära värdet.",
+    "example": "Brå (2024): en möjliggörare behöver inte lämna ut hemliga uppgifter. Samlad kunskap om organisationens struktur, rutiner och frånvaro kan vara minst lika värdefull.",
     "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
     "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
   },
@@ -165,7 +165,7 @@
       "criminal-network",
       "extremist"
     ],
-    "desc": "Medarbetare vars prestationer försämras markant utan intern förklaring — kan indikera extern pressning, beroende eller psykologisk belastning till följd av pågående oönskad kontakt.",
+    "desc": "En medarbetares prestation försämras tydligt utan någon känd förklaring i arbetet. Det kan vara ett tecken på yttre press, beroende eller psykisk belastning efter en oönskad kontakt.",
     "example": "Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.",
     "src": "Statskontoret 2026 — stöd mot otillåten påverkan",
     "sourceUrl": "https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"
@@ -187,7 +187,7 @@
   {
     "id": "i14",
     "cat": "DIGITAL",
-    "title": "Uthängning av personuppgifter online",
+    "title": "Uthängning av personuppgifter på nätet",
     "sev": "HIGH",
     "actors": [
       "extremist"
@@ -200,7 +200,7 @@
   {
     "id": "i15",
     "cat": "DIGITAL",
-    "title": "Samordnade narrativ mot enskild tjänsteperson",
+    "title": "Samordnade budskap mot enskild tjänsteperson",
     "sev": "HIGH",
     "actors": [
       "extremist",
@@ -235,7 +235,7 @@
       "criminal-network"
     ],
     "desc": "Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen och utan dokumentation.",
-    "example": "Akademiska sjukhuset-härvan (2024): kontakter via privata kanaler och 'konsultfakturor' var den primära metoden för mutöverföringen under sju år. Inget uppmärksammades av intern kontroll.",
+    "example": "I härvan vid Akademiska sjukhuset användes privata kontakter och konsultfakturor för att föra över mutor under sju år. Den interna kontrollen upptäckte inte upplägget.",
     "src": "Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset",
     "sourceUrl": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"
   },
@@ -345,7 +345,7 @@
       "foreign-power",
       "extremist"
     ],
-    "desc": "En medarbetare som normalt är öppen och kommunikativ undviker att diskutera ett specifikt ärende, system eller kontakt — och reagerar med ovanlig defensive eller avledande beteende på frågor.",
+    "desc": "En medarbetare som normalt är öppen undviker plötsligt att tala om ett visst ärende, system eller en viss kontakt och reagerar ovanligt defensivt eller avledande på frågor.",
     "example": "Normaliseringssteget i påverkanskedjan: medarbetaren har internaliserat att inte rapportera och undviker aktivt kollegor eller chefer som kan ställa frågor om det känsliga området. Brå: 'man har inga ord och inga kanaler'.",
     "src": "Brå 2024 — Möjliggörare för kriminella nätverk",
     "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"

@@ -15,7 +15,7 @@
       "Placerad insider",
       "Informationsinhämtning"
     ],
-    "note": "Brå (2024): Kriminella nätverk har ca 700 möjliggörare aktiva i Sverige. Rekrytering sker ofta i den egna familje- och bekantskapskretsen. En möjliggörare kan betjäna flera nätverk och representerar 'ett skydd och en konkurrensfördel' i den kriminella världen. Polismyndighetens lägesbild: möjliggörarna utgör 5% av 14 000 aktiva i kriminella nätverk men spelar en helt avgörande roll för den operativa förmågan.",
+    "note": "Brå uppskattade 2024 att omkring 700 möjliggörare var aktiva i Sverige. Rekryteringen sker ofta bland familj, vänner och bekanta. Samma person kan hjälpa flera nätverk och ge dem tillgång som annars är svår att få. I Polismyndighetens lägesbild motsvarar möjliggörarna omkring fem procent av de aktiva i kriminella nätverk, men de har stor betydelse för vad nätverken kan genomföra.",
     "source": "Brå 2024 — Möjliggörare för kriminella nätverk",
     "sourceUrl": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk",
     "indicators": [
@@ -59,7 +59,7 @@
       "Teknologistöld",
       "Utnyttjande av systembrister"
     ],
-    "note": "Säkerhetspolisen bekräftar ökad rysk riskbenägenhet och sabotagevilja. Transportstyrelse- och Lantmäteriet-skandalerna visar att strukturella systembrister exploateras utan att en enskild insider behöver rekryteras. Säpo (2023): ryska GRU rekryterade insiders inom Försvarsmakten och Säkerhetspolisen — brottsligheten pågick i 6 år utan att avslöjas internt.",
+    "note": "Säkerhetspolisen beskriver en ökad rysk vilja att ta risker och genomföra sabotage. Fallen vid Transportstyrelsen och Lantmäteriet visar samtidigt att en främmande makt kan dra nytta av svaga system utan att först rekrytera en insider. I GRU-fallet kunde information från Försvarsmakten och Säkerhetspolisen lämnas vidare under sex år innan brottsligheten avslöjades.",
     "source": "Säkerhetspolisen 2025–2026 — Ryssland, Kina och Iran",
     "sourceUrl": "https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html",
     "indicators": [
@@ -91,7 +91,7 @@
       "Informationspåverkan mot beslutsprocess",
       "Finansiering via offentliga bidrag"
     ],
-    "note": "Statskontoret (2024): skadorna träffar individen, anhöriga, verksamheten och tilltron till förvaltningen. Acta Publicas granskning visar att infiltration via till synes legitima bolag och yrkesroller är svår att identifiera med standardkontroller. Kriminalvårdens övervakare-fall: extremister med kontrollbehörighet över dömda med koppling till samma miljöer.",
+    "note": "Statskontoret beskriver hur skadorna kan drabba både den utsatta personen, anhöriga, verksamheten och tilliten till förvaltningen. Acta Publicas granskning visar att personer och bolag med extremistkopplingar kan framstå som legitima och därför passera vanliga kontroller. Ett exempel är övervakare inom Kriminalvården som haft ansvar för dömda med koppling till samma miljöer.",
     "source": "Acta Publica 2020 — Möjliggörarna",
     "sourceUrl": "https://actapublica.se/nyheter/rapport-mojliggorarna/",
     "indicators": [
@@ -123,7 +123,7 @@
       "Värvning efter avslutad tjänst",
       "Förväntansskapande och beroenden"
     ],
-    "note": "Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption uppstår ofta ur långvariga leverantörsrelationer. Akademiska sjukhuset-domen (2024): 4,76 Mkr togs emot under sju år via 'konsultfakturor' — relationen hade under lång tid framstått som professionell och legitim.",
+    "note": "Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption växer ofta fram i långvariga leverantörsrelationer. I målet vid Akademiska sjukhuset betalades 4,76 miljoner kronor under sju år genom konsultfakturor, samtidigt som relationen utåt såg professionell och legitim ut.",
     "source": "Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset",
     "sourceUrl": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/",
     "indicators": [
