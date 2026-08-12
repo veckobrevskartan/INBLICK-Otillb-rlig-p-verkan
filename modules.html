@@ -41,9 +41,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 }
 .cat-label:hover{color:var(--accent);background:var(--accent-g)}
 .cat-label.open{color:var(--accent);border-bottom-color:var(--accent);background:var(--accent-g)}
+.cat-label.current{color:var(--text);border-bottom-color:var(--accent)}
 .cat-roman{font-family:var(--fd);font-size:11px;font-style:italic;opacity:.55;margin-right:2px}
 .cat-chevron{font-size:10px;opacity:.4;margin-left:2px;transition:.2s}
-.cat-label.open .cat-chevron{transform:rotate(90deg)}
+.cat-label.open .cat-chevron{transform:rotate(180deg)}
 .cat-tabs{
   display:none;position:absolute;top:52px;left:0;
   background:rgba(10,22,40,.97);backdrop-filter:blur(16px);
@@ -52,6 +53,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
   box-shadow:0 12px 40px rgba(0,0,0,.5)
 }
 .cat-tabs.open{display:block}
+.cat-group:hover .cat-tabs,.cat-group:focus-within .cat-tabs{display:block}
+.cat-group:hover .cat-chevron,.cat-group:focus-within .cat-chevron{transform:rotate(180deg)}
 .cat-tabs li a{
   display:block;padding:8px 18px;
   font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;
@@ -118,6 +121,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .sec-title{font-family:var(--fd);font-size:clamp(32px,4vw,56px);font-weight:300;line-height:1.06}
 .sec-title em{font-style:italic;color:var(--accent)}
 .sec-intro{font-size:14px;color:var(--muted);max-width:600px;line-height:1.75;margin-top:12px}
+.interaction-guide{display:flex;align-items:flex-start;gap:12px;max-width:760px;margin-top:18px;padding:11px 14px;background:var(--accent-g);border:1px solid var(--border);border-left:3px solid var(--accent);font-size:12px;color:var(--muted);line-height:1.55}
+.interaction-guide-label{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);white-space:nowrap;padding-top:2px}
 .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px}
 .bdot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
 .b-conf{background:rgba(74,123,111,.12);color:var(--green);border:1px solid rgba(74,123,111,.3)}.bdot-conf{background:var(--green)}
@@ -220,7 +225,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .ac-goal{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:11px}
 .ac-methods{display:flex;flex-wrap:wrap;gap:4px}
 .ac-method{font-family:var(--fm);font-size:7px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-s);color:var(--dim)}
-.ac-cta{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-top:10px;opacity:0;transition:.15s}
+.ac-cta{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-top:10px;opacity:1;transition:.15s}
 .ac:hover .ac-cta{opacity:1}
 .actor-detail{display:none;background:var(--bg-mid);border-top:2px solid var(--border);padding:28px;margin-bottom:40px}
 .actor-detail.open{display:block}
@@ -698,8 +703,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
     <nav class="cat-nav" id="catNav">
       <!-- FÖRSTÅ -->
       <div class="cat-group">
-        <button class="cat-label" id="cat-forsta" onclick="toggleCat('forsta')">
-          <span class="cat-roman">I</span>Förstå<span class="cat-chevron">›</span>
+        <button class="cat-label" id="cat-forsta" type="button" aria-expanded="false" aria-controls="ctabs-forsta" title="Visa moduler under Förstå" onclick="toggleCat('forsta')">
+          <span class="cat-roman">I</span>Förstå<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-forsta">
           <li><a href="#" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
@@ -712,8 +717,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
       </div>
       <!-- BEDÖMA -->
       <div class="cat-group">
-        <button class="cat-label" id="cat-bedoma" onclick="toggleCat('bedoma')">
-          <span class="cat-roman">II</span>Bedöma<span class="cat-chevron">›</span>
+        <button class="cat-label" id="cat-bedoma" type="button" aria-expanded="false" aria-controls="ctabs-bedoma" title="Visa moduler under Bedöma" onclick="toggleCat('bedoma')">
+          <span class="cat-roman">II</span>Bedöma<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-bedoma">
           <li><a href="#" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
@@ -724,8 +729,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
       </div>
       <!-- AGERA -->
       <div class="cat-group">
-        <button class="cat-label" id="cat-agera" onclick="toggleCat('agera')">
-          <span class="cat-roman">III</span>Agera<span class="cat-chevron">›</span>
+        <button class="cat-label" id="cat-agera" type="button" aria-expanded="false" aria-controls="ctabs-agera" title="Visa moduler under Agera" onclick="toggleCat('agera')">
+          <span class="cat-roman">III</span>Agera<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-agera">
           <li><a href="#" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
@@ -1933,20 +1938,21 @@ function getCat(key){
   for(const[cat,keys]of Object.entries(CAT_MAP)){if(keys.includes(key))return cat;}
   return null;
 }
+function closeCatMenus(){
+  document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
+  document.querySelectorAll('.cat-label').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');});
+}
 function toggleCat(cat){
   const btn=document.getElementById('cat-'+cat);
   const tabs=document.getElementById('ctabs-'+cat);
   const isOpen=tabs.classList.contains('open');
-  // Stäng alla
-  document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
-  document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
-  if(!isOpen){tabs.classList.add('open');btn.classList.add('open');}
+  closeCatMenus();
+  if(!isOpen){tabs.classList.add('open');btn.classList.add('open');btn.setAttribute('aria-expanded','true');}
 }
 // Stäng dropdowns vid klick utanför
 document.addEventListener('click',function(e){
   if(!e.target.closest('.cat-group')){
-    document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
-    document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
+    closeCatMenus();
   }
 });
 function show(key){
@@ -1954,25 +1960,54 @@ function show(key){
   const safeKey=requested?key:'chain';
   document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
   document.querySelectorAll('.cat-tabs a').forEach(a=>a.classList.remove('active'));
+  document.querySelectorAll('.cat-tabs a').forEach(a=>a.removeAttribute('aria-current'));
+  document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('current'));
   document.querySelectorAll('.mobile-tab-btn').forEach(b=>b.classList.remove('active'));
   const m=document.getElementById('mod-'+safeKey);
   const t=document.getElementById('tab-'+safeKey);
   const mt=document.getElementById('mtab-'+safeKey);
   if(m)m.classList.add('active');
-  if(t)t.classList.add('active');
+  if(t){t.classList.add('active');t.setAttribute('aria-current','page');}
   if(mt)mt.classList.add('active');
   const nextHash='#mod-'+safeKey;
   if(window.location.hash!==nextHash)history.replaceState(null,'',nextHash);
   // Öppna rätt kategori-dropdown och markera aktiv
   const cat=getCat(safeKey);
   if(cat){
-    document.querySelectorAll('.cat-tabs').forEach(t=>t.classList.remove('open'));
-    document.querySelectorAll('.cat-label').forEach(b=>b.classList.remove('open'));
+    closeCatMenus();
+    const catButton=document.getElementById('cat-'+cat);
+    if(catButton)catButton.classList.add('current');
   }
   window.scrollTo(0,0);
   if(safeKey==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
   if(safeKey==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
   triggerReveals();
+}
+
+const MODULE_GUIDES={
+  chain:'Välj ett av de sju stegen. Innehållet till höger byts direkt.',
+  map:'Använd filtren och välj sedan en kartmarkör för att öppna fallbeskrivningen.',
+  sectors:'Välj en sektormiljö i listan. Analysen till höger uppdateras direkt.',
+  actors:'Välj ett aktörskort för analytisk bedömning, indikatorer och kopplade fall.',
+  legal:'Välj en nivå i den juridiska trappan för rekvisit, straffskala och fall.',
+  infopav:'Välj först en påverkansvektor eller en kognitiv mekanism för fördjupning.',
+  inds:'Använd filterknapparna för att begränsa indikatorerna. Varje kort visar hela indikatorn och dess källa.',
+  assess:'Besvara en fråga i taget. Resultat och rekommendationer visas när alla svar är valda.',
+  graph:'Välj, dra och zooma i grafen. Klicka på en nod för att visa dess samband.',
+  tools:'Välj delverktyg och sedan ett steg eller scenario för att visa arbetsstödet.',
+  culture:'Välj en dimension eller åtgärd för att jämföra utfall och visa genomförandesteg.',
+  handle:'Välj en av de fyra delarna ovanför innehållet för process, matriser och juridiskt stöd.',
+  sources:'Filtrera källregistret med ämnesknapparna. Varje källhänvisning öppnas i en ny flik.'
+};
+function addInteractionGuides(){
+  Object.entries(MODULE_GUIDES).forEach(([key,text])=>{
+    const head=document.querySelector('#mod-'+key+' .sec-head');
+    if(!head||head.querySelector('.interaction-guide'))return;
+    const guide=document.createElement('div');
+    guide.className='interaction-guide';
+    guide.innerHTML='<span class="interaction-guide-label">Så använder du modulen</span><span>'+text+'</span>';
+    head.appendChild(guide);
+  });
 }
 
 /* ══ CHAIN ══ */
@@ -2507,6 +2542,7 @@ function triggerReveals(){
 window.addEventListener('DOMContentLoaded',()=>{
   const hashKey=window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
   const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
+  addInteractionGuides();
   show(startMod);
   const initializers=[
     ['Påverkanskedjan',buildChain],['Aktörsmatrisen',buildActors],
