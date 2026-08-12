@@ -275,6 +275,57 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
   .chain-step{animation:none;opacity:1}
   *{scroll-behavior:auto!important}
 }
+
+/* ─── MOBILE READABILITY ─── */
+@media(max-width:600px){
+  body{font-size:16px;line-height:1.68}
+  .wrap{padding-left:18px;padding-right:18px}
+  .nav-i{padding:0 16px;gap:8px}
+  .nav-menu-toggle{width:40px;height:40px;flex-shrink:0}
+  .nav-links{padding:14px 18px 32px}
+  .nav-category{min-height:48px}
+  .nav-submenu a{font-size:10px;padding:11px 4px 11px 0;min-height:44px}
+  .hero{min-height:auto;padding-top:56px}
+  .hero-layout{padding:58px 0 48px;gap:38px}
+  .hero-title{font-size:clamp(43px,15vw,62px)}
+  .hero-sub{font-size:21px}
+  .hero-lead,.section-intro,.part-desc,.cta-sub{font-size:15px;line-height:1.75}
+  .hero-actions,.cta-actions{display:grid;grid-template-columns:1fr;width:100%}
+  .btn-primary,.btn-ghost{width:100%;justify-content:center;min-height:48px}
+  .hero-meta{gap:18px}
+  .hero-meta-val{font-size:30px}
+  .chain-vis{margin-top:4px}
+  .cs-body{padding:12px 14px}
+  .thesis,.parts-section,.evidence-section,.actors-section,.cases-section,.conf-section,.osint-section{padding:56px 0}
+  .part-block{margin-top:46px}
+  .part-block:first-of-type{margin-top:38px}
+  .part-head{align-items:flex-start;gap:13px;padding-bottom:14px}
+  .part-roman{font-size:39px}
+  .part-name{font-size:29px}
+  .mcard{padding:22px 20px;min-height:0}
+  .mc-title{font-size:24px}
+  .mc-desc{font-size:14px;line-height:1.65}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-cell{padding:24px 18px}
+  .stat-note{font-size:12px}
+  .cp-row{padding:16px 14px;gap:11px;align-items:flex-start}
+  .cp-year{display:none}
+  .conf-pass,.conf-cover{padding:18px}
+  .osint-box{padding:24px 20px;gap:28px}
+  .osint-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .cta-section{padding:66px 0}
+  .footer-i{align-items:flex-start;flex-direction:column}
+  .footer-links{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .footer-links a{min-height:36px;display:flex;align-items:center}
+}
+@media(max-width:420px){
+  .nav-cta{display:none}
+  .nav-name{font-size:18px}
+  .stats-grid{grid-template-columns:1fr}
+  .osint-stats{grid-template-columns:1fr}
+}
+
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 </style>
 </head>
 <body>
