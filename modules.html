@@ -335,6 +335,17 @@ body.menu-open{overflow:hidden}
 .theory-card-desc{font-size:12px;color:var(--muted);line-height:1.65}
 .theory-num{font-family:var(--fd);font-size:42px;font-weight:300;line-height:1;margin-bottom:8px}
 .theory-note{font-size:13px;color:var(--text);line-height:1.75;padding-left:12px;border-left:2px solid var(--accent);margin-bottom:10px}
+.theory-operational{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin:0 0 18px}
+.theory-operational>div{background:var(--bg-card);padding:20px}
+.theory-op-k{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.theory-op-t{font-family:var(--fd);font-size:19px;font-weight:400;line-height:1.2;margin-bottom:7px}
+.theory-op-p{font-size:12px;color:var(--muted);line-height:1.65}
+.pmt-flow{display:grid;grid-template-columns:1fr 44px 1fr 44px 1fr;gap:8px;align-items:stretch;margin:0 0 18px}
+.pmt-node{background:var(--bg-card);border:1px solid var(--border-s);padding:20px}
+.pmt-arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:24px}
+.theory-caveat{padding:15px 18px;background:rgba(184,151,58,.05);border:1px solid rgba(184,151,58,.2);font-size:12px;color:var(--muted);line-height:1.7;margin:0 0 42px}
+.theory-caveat strong{color:var(--text)}
+@media(max-width:760px){.theory-operational{grid-template-columns:1fr}.pmt-flow{grid-template-columns:1fr}.pmt-arrow{transform:rotate(90deg);min-height:28px}}
 .sat-figure{background:var(--bg-card);border:1px solid var(--border-s);padding:24px;margin:0 0 18px}
 .sat-inputs{display:grid;grid-template-columns:1fr 36px 1fr;gap:10px;align-items:stretch;margin-bottom:18px}
 .sat-node{background:var(--bg-mid);border:1px solid var(--border-s);padding:18px;min-width:0}
@@ -1466,6 +1477,57 @@ button,[onclick]{touch-action:manipulation}
       <div class="theory-card-desc">Forskning om en U-formad relation mellan ålder och subjektivt välbefinnande har ett genomsnittligt minimum runt sena 40-årsåldern. Det visar ett populationsmönster — inte att 47- eller 48-åringar utgör en insiderrisk. Bedöm konkreta förändringar i ekonomi, relationer, arbetsliv, kontakter och tillfälle; använd aldrig ålder som genväg.</div>
     </div>
   </div>
+
+  <div class="reveal">
+    <p class="eyebrow">Rogers · Protection Motivation Theory</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">PMT — från hotbild till <em>skyddshandling</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:720px;line-height:1.75;margin-bottom:22px">Skyddsmotivationsteorin förklarar varför kunskap om ett hot inte automatiskt leder till ett säkrare beteende. Medarbetaren gör dels en hotbedömning, dels en bedömning av om den rekommenderade åtgärden fungerar och är möjlig att genomföra. En stark varning kan därför misslyckas om rapporteringsvägen är oklar, tidskrävande eller upplevs som riskabel.</p>
+  </div>
+  <div class="pmt-flow reveal" role="img" aria-label="Skyddsmotivationsteorin från hotbedömning och hanteringsbedömning till skyddshandling">
+    <div class="pmt-node"><div class="theory-op-k">Hotbedömning</div><div class="theory-op-t">Allvar + egen sårbarhet</div><div class="theory-op-p">Hur allvarlig kan konsekvensen bli, och hur sannolikt uppfattar personen att den kan drabba den egna rollen, kollegorna eller verksamheten?</div></div>
+    <div class="pmt-arrow">→</div>
+    <div class="pmt-node"><div class="theory-op-k">Hanteringsbedömning</div><div class="theory-op-t">Effekt + självförmåga − kostnad</div><div class="theory-op-p">Tror personen att åtgärden hjälper, vet personen hur den ska utföras och är den praktiska eller sociala kostnaden rimlig?</div></div>
+    <div class="pmt-arrow">→</div>
+    <div class="pmt-node"><div class="theory-op-k">Skyddsmotivation</div><div class="theory-op-t">Agera, avstå eller rapportera</div><div class="theory-op-p">När både hotet och handlingsförmågan uppfattas som trovärdiga ökar sannolikheten för att personen följer rutinen eller rapporterar avvikelsen.</div></div>
+  </div>
+  <div class="theory-operational reveal">
+    <div><div class="theory-op-k">Gör hotet konkret</div><div class="theory-op-t">Rollnära scenarier</div><div class="theory-op-p">Beskriv vad som kan hända i den egna processen: röjd adress, manipulerat beslut eller förlorad kontroll över ett konto. Generella skrämselbudskap skapar lätt avstånd.</div></div>
+    <div><div class="theory-op-k">Öka självförmågan</div><div class="theory-op-t">Öva det önskade beteendet</div><div class="theory-op-p">Låt medarbetaren träna på att avbryta ett kontaktförsök, säkra en observation och använda rapporteringskanalen. Kunskap utan genomförandeförmåga räcker inte.</div></div>
+    <div><div class="theory-op-k">Sänk responskostnaden</div><div class="theory-op-t">Gör rätt val enkelt</div><div class="theory-op-p">Korta formulär, känd mottagare, återkoppling och skydd mot repressalier minskar tröskeln. Om rapportering upplevs som farligare än tystnad blir varningen kontraproduktiv.</div></div>
+  </div>
+  <div class="op-source-row reveal"><a href="https://sommestad.com/teodor/papers/Sommestad%2C%20Karlz%C3%A9n%2C%20Hallberg%20-%202015%20-%20A%20Meta-Analysis%20of%20Studies%20on%20Protection%20Motivation%20Theory%20and%20Information%20Security%20Behaviour.pdf" target="_blank" rel="noopener">Sommestad, Karlzén &amp; Hallberg (2015) ↗</a><a href="https://aisel.aisnet.org/jais/vol23/iss1/6/" target="_blank" rel="noopener">JAIS — prövning av PMT i informationssäkerhet ↗</a></div>
+
+  <div class="reveal">
+    <p class="eyebrow">BJ Fogg · Behavior Design</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Fogg — när motivation, förmåga och <em>signal sammanfaller</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:720px;line-height:1.75;margin-bottom:20px">Fogg Behavior Model sammanfattas som B=MAP: ett beteende inträffar när motivation, förmåga och en utlösande signal möts i samma ögonblick. Modellen är utvecklad för beteendedesign, inte särskilt för insiderhot. På sidan används den därför för att analysera hur säkra beteenden kan göras lättare — och hur en antagonist kan försöka göra ett skadligt beteende enklare.</p>
+  </div>
+  <figure class="book-figure reveal">
+    <img src="fogg-beteendemodell-original.png" alt="Tankekarta över Foggs beteendemodell i säkerhetsmedvetenhet" loading="lazy"/>
+    <figcaption>Originalfigur ur det bifogade arbetsmaterialet. Terminologin ”utlösare” har i Foggs senare framställningar ersatts av ”prompt”, alltså en signal som aktiverar beteendet när motivation och förmåga är tillräckliga.</figcaption>
+  </figure>
+  <div class="theory-operational reveal">
+    <div><div class="theory-op-k">Motivation</div><div class="theory-op-t">Varför ska jag agera?</div><div class="theory-op-p">Lojalitet, ansvar, rädsla för skada, social acceptans eller personlig vinning kan dra i olika riktningar. Motivation varierar snabbt och är svår att bära ett helt skydd på.</div></div>
+    <div><div class="theory-op-k">Förmåga</div><div class="theory-op-t">Hur lätt är handlingen?</div><div class="theory-op-p">Tid, behörighet, teknisk komplexitet, social avvikelse och rutin påverkar genomförandet. Minsta behörighet och tvåpersonerskontroll höjer tröskeln för skada.</div></div>
+    <div><div class="theory-op-k">Prompt</div><div class="theory-op-t">Vad utlöser handlingen nu?</div><div class="theory-op-p">En påminnelse kan utlösa rapportering. Ett meddelande från en rekryterare, ett öppet systemfönster eller en akut skuld kan i stället utlösa ett riskbeteende.</div></div>
+  </div>
+  <div class="theory-caveat reveal"><strong>Praktisk slutsats:</strong> börja med att göra det säkra beteendet enklare. En organisation som bara försöker höja motivationen genom fler utbildningar men behåller krångliga rapporteringsvägar, överbreda behörigheter och svag återkoppling arbetar mot sin egen säkerhetskultur.</div>
+  <div class="op-source-row reveal"><a href="https://behaviordesign.stanford.edu/resources/fogg-behavior-model" target="_blank" rel="noopener">Stanford Behavior Design Lab — Fogg Behavior Model ↗</a></div>
+
+  <div class="reveal">
+    <p class="eyebrow">Dimmock, Gerken &amp; Graham · Social påverkan</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Kan misskötsamhet <em>smitta mellan kollegor?</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:720px;line-height:1.75;margin-bottom:20px">En amerikansk studie av finansiella rådgivare utnyttjade sammanslagningar mellan företag för att undersöka vad som hände när nya kollegor fördes samman. Sannolikheten för framtida misskötsamhet ökade för rådgivare som exponerades för nya kollegor med dokumenterad tidigare misskötsamhet. Sambandet var starkare mellan demografiskt liknande kollegor.</p>
+  </div>
+  <div class="theory-grid-2 reveal" style="margin-bottom:18px">
+    <div class="theory-card" style="border-left:3px solid var(--orange)"><div class="theory-cat" style="color:var(--orange)">Analytisk betydelse</div><div class="theory-card-title">Normer kan flytta gränsen</div><div class="theory-card-desc">När kollegor ser att genvägar, privata slagningar eller informella leverantörskontakter accepteras kan beteendet stegvis uppfattas som normalt. Det förenar studiens resultat med SAT:s fokus på moralisk kontext och social kontroll.</div></div>
+    <div class="theory-card" style="border-left:3px solid var(--green)"><div class="theory-cat" style="color:var(--green)">Begränsning</div><div class="theory-card-title">Inte belägg för individuell skuld</div><div class="theory-card-desc">Studien gäller amerikanska finansiella rådgivare och ekonomisk misskötsamhet. Den visar en miljöeffekt på gruppnivå, inte att en viss medarbetare blir illojal genom association. Överföringen till offentlig sektor är en analytisk hypotes.</div></div>
+  </div>
+  <figure class="book-figure reveal">
+    <img src="rapporteringskultur-original.png" alt="Tre steg i en rapporteringskultur: kollektivt ansvar, tillåtande miljö och synligt erkännande" loading="lazy"/>
+    <figcaption>Originalfigur ur det bifogade arbetsmaterialet. En rapporteringskultur behöver både kollektivt ansvar, en trygg kanal och synlig återkoppling till dem som agerar för verksamhetens bästa.</figcaption>
+  </figure>
+  <div class="op-source-row reveal"><a href="https://doi.org/10.1111/jofi.12613" target="_blank" rel="noopener">Dimmock, Gerken &amp; Graham (2018) ↗</a><a href="https://www.sei.cmu.edu/library/the-critical-role-of-positive-incentives-for-reducing-insider-threats/" target="_blank" rel="noopener">CERT/SEI — positiva incitament och insiderhot ↗</a></div>
 
   <div class="reveal">
     <p class="eyebrow">Cialdini · Socialpsykologi</p>
