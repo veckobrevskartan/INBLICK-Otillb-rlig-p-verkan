@@ -301,6 +301,21 @@ body.menu-open{overflow:hidden}
 .ind-example{padding:8px 12px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent-d);font-size:11px;color:var(--muted);font-style:italic;line-height:1.5;margin-top:8px}
 .ind-src{font-family:var(--fm);font-size:8px;color:var(--accent-d);margin-top:7px}
 .ind-empty{padding:48px;text-align:center;font-family:var(--fd);font-size:20px;font-style:italic;color:var(--dim);grid-column:1/-1}
+.ind-method{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin:0 0 24px}
+.ind-method-card{background:var(--bg-card);padding:19px}
+.ind-method-n{font-family:var(--fd);font-size:32px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:8px}
+.ind-method-title{font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.ind-method-copy{font-size:12px;color:var(--muted);line-height:1.65}
+.ind-guardrail{padding:16px 18px;background:var(--bg-card);border:1px solid var(--border-s);border-left:3px solid var(--green);font-size:12px;color:var(--muted);line-height:1.7;margin:0 0 24px}
+.ind-guardrail strong{color:var(--text)}
+.op-source-row{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 28px}
+.op-source-row a{font-family:var(--fm);font-size:8px;letter-spacing:.06em;padding:4px 8px;border:1px solid var(--border-s);color:var(--accent);text-decoration:none}
+.op-source-row a:hover{border-color:var(--accent)}
+.book-figure{margin:22px 0 42px;background:#f4f4f2;border:1px solid var(--border-s);padding:16px}
+.book-figure img{display:block;width:100%;height:auto;max-width:850px;margin:0 auto}
+.book-figure figcaption{font-size:11px;color:#4a4a46;line-height:1.55;max-width:850px;margin:10px auto 0}
+@media(max-width:760px){.ind-method{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.ind-method{grid-template-columns:1fr}.book-figure{padding:8px}}
 
 /* ─── SECTORS ─── */
 .sec-nav-item{padding:13px 15px;border-bottom:1px solid var(--border-s);cursor:pointer;transition:.15s;border-left:3px solid transparent}
@@ -1904,6 +1919,18 @@ button,[onclick]{touch-action:manipulation}
     <h1 class="sec-title">Tidiga<br><em>varningssignaler</em></h1>
     <p class="sec-intro">En signal är inte ett bevis, men flera signaler kan bilda ett mönster. Här finns 25 sökbara varningssignaler med svenska fallexempel och källor. Filtrera på kategori, allvarlighetsgrad eller aktörstyp.</p>
   </div>
+  <div class="ind-method reveal" aria-label="Analysordning för indikatorer">
+    <div class="ind-method-card"><div class="ind-method-n">01</div><div class="ind-method-title">Observera</div><div class="ind-method-copy">Dokumentera ett konkret beteende, en systemhändelse eller en avvikelse. Skilj observationen från antaganden om motiv och personlighet.</div></div>
+    <div class="ind-method-card"><div class="ind-method-n">02</div><div class="ind-method-title">Sätt i kontext</div><div class="ind-method-copy">Jämför med personens roll, normalbild, behörighet och situation. En förändring är ofta mer relevant än ett enskilt statiskt drag.</div></div>
+    <div class="ind-method-card"><div class="ind-method-n">03</div><div class="ind-method-title">Sök mönster</div><div class="ind-method-copy">Pröva om flera oberoende signaler sammanfaller över tid: åtkomst, beteende, externa kontakter och organisatoriska brister.</div></div>
+    <div class="ind-method-card"><div class="ind-method-n">04</div><div class="ind-method-title">Välj åtgärd</div><div class="ind-method-copy">Anpassa åtgärden till konsekvens och säkerhetsbehov: stödjande samtal, åtkomstkontroll, säkring av loggar eller formell utredning.</div></div>
+  </div>
+  <div class="ind-guardrail reveal"><strong>Analytisk skyddsregel:</strong> stress, psykisk ohälsa, ekonomiska problem, politiska uppfattningar eller privata relationer är inte i sig bevis på illojalitet. De får relevans först när de kan kopplas till observerbara handlingar, faktisk tillgång eller en konkret sårbarhet. Indikatorerna ska användas för att ställa bättre frågor, inte för att profilera människor.</div>
+  <div class="op-source-row reveal">
+    <a href="https://doi.org/10.1016/j.ijcip.2018.12.001" target="_blank" rel="noopener">Bell, Rogers &amp; Pearce (2019) ↗</a>
+    <a href="https://www.cisa.gov/topics/physical-security/insider-threat-mitigation" target="_blank" rel="noopener">CISA — Insider Threat Mitigation ↗</a>
+    <a href="https://www.sei.cmu.edu/library/common-sense-guide-to-mitigating-insider-threats-seventh-edition/" target="_blank" rel="noopener">CERT/SEI — Common Sense Guide ↗</a>
+  </div>
   <div class="ind-search-row reveal">
     <input class="ind-search" id="indSrch" placeholder="Sök indikator, nyckelord, fallexempel…" oninput="filterInds()"/>
     <button class="fb active" data-ic="cat" data-iv="ALL" onclick="setIF(this,'cat')">Alla</button>
@@ -1929,6 +1956,7 @@ button,[onclick]{touch-action:manipulation}
     <h1 class="sec-title">Organisations<em>testet</em></h1>
     <p class="sec-intro">Besvara 14 frågor inom sju områden och få en enkel bild av var organisationen står. Rekommendationerna bygger på brister som Riksrevisionen, Brå och Statskontoret har identifierat. Svaren stannar i din webbläsare.</p>
   </div>
+  <div class="ind-guardrail reveal"><strong>Så ska resultatet läsas:</strong> testet är en strukturerad självskattning, inte en revision eller certifiering. Ett svar bör kunna styrkas med dokument, ansvarig funktion och ett aktuellt exempel. Om bevis saknas bör området bedömas som delvis infört. Klart innebär att de tre lägst bedömda områdena har fått en ansvarig, en tidsatt åtgärd och ett uppföljningsdatum.</div>
   <div class="assess-layout reveal" id="assessWrap">
     <div class="assess-nav-col" id="assessNav"></div>
     <div id="assessPanels"></div>
@@ -3108,10 +3136,16 @@ function showHandle(id){
   <!-- SUB: INDIKATORMATRISER -->
   <div id="handle-matrix" class="handle-panel" style="display:none">
     <div class="reveal" style="margin-bottom:24px">
-      <p class="eyebrow">Tre nivåer · Allvarlighetsgraderade</p>
-      <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Indikatorer på <em>tre nivåer</em></h2>
-      <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Indikatorer delas in i mindre allvarliga och allvarliga. Enskilda indikatorer motiverar sällan åtgärd — det är kombinationer och mönster som är analytiskt relevanta. Varje organisation bör värdera viktning för sin kontext.</p>
+      <p class="eyebrow">Fyra nivåer · Allvarlighetsgraderade</p>
+      <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Indikatorer på <em>fyra nivåer</em></h2>
+      <p style="font-size:14px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:12px">Matrisen skiljer mellan individ, grupp, organisation och omständigheter runt personen. Enskilda indikatorer motiverar sällan en ingripande åtgärd. Bedöm förändring över tid, faktisk åtkomst, kombinationer av signaler och möjliga alternativa förklaringar.</p>
+      <div class="op-source-row"><a href="https://doi.org/10.1016/j.ijcip.2018.12.001" target="_blank" rel="noopener">Bell, Rogers &amp; Pearce (2019) ↗</a><a href="https://www.sei.cmu.edu/library/common-sense-guide-to-mitigating-insider-threats-seventh-edition/" target="_blank" rel="noopener">CERT/SEI — indikatorer och hantering ↗</a></div>
     </div>
+
+    <figure class="book-figure reveal">
+      <img src="personliga-professionella-stressorer.png" alt="Tabell som jämför personliga och professionella stressorer" loading="lazy"/>
+      <figcaption>Originalfigur ur det bifogade arbetsmaterialet. Stressorerna är kontextfaktorer och möjliga stödbehov — inte bevis på insideravsikt. I en bedömning ska de kopplas till observerbara förändringar, faktisk handlingsförmåga och konsekvens.</figcaption>
+    </figure>
 
     <div class="reveal" style="margin-bottom:40px">
       <p class="eyebrow" style="margin-bottom:14px">Nivå 1 · Individ — anställd eller konsult</p>
@@ -3331,7 +3365,20 @@ function showHandle(id){
     <div class="reveal" style="margin-bottom:28px">
       <p class="eyebrow">Analysmodell · Förebyggande</p>
       <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Crime <em>proofing</em></h2>
-      <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">En analysmetod för att identifiera och åtgärda svagheter i regelverk och system — innan kriminella aktörer utnyttjar dem. Ursprungligen utvecklad av italienska maffiaforskare för EU-lagstiftning. Används i Sverige av Brå och flera kommuner.</p>
+      <p style="font-size:14px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:12px">En analysmetod för att identifiera och åtgärda svagheter i regelverk och styrsystem innan de utnyttjas. Brås svenska metodstöd kan användas för exempelvis gynnande beslut, tillstånd, avtal och utbetalningar.</p>
+      <div class="op-source-row"><a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener">Brå — metodstöd och analysmall ↗</a><a href="https://bra.se/nyheter/arkiv/2024-08-30-ny-mall-identifierar-fel-och-risker-i-regelverk-inom-valfardssystemet" target="_blank" rel="noopener">Brå — svensk mall och arbetssätt ↗</a></div>
+    </div>
+
+    <div class="ind-guardrail reveal"><strong>Definition av klart:</strong> analysen ska lämna efter sig en spårbar kedja från regel eller processteg till missbruksscenario, möjlig konsekvens, befintlig kontroll, kvarstående risk, beslutad åtgärd, ansvarig och uppföljningsdatum. En allmän rekommendation om ”ökad kontroll” är inte en färdig åtgärd.</div>
+
+    <div class="reveal" style="margin-bottom:40px">
+      <p class="eyebrow" style="margin-bottom:12px">Arbetsblad · Frågor som ska besvaras</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s)">
+        <div style="background:var(--bg-card);padding:20px"><div class="ad-sec-lbl">Missbruksscenario</div><div class="cp-sig">Vilken aktör kan vinna på regeln eller processen?</div><div class="cp-sig">Vilket beslut, undantag eller datafält kan manipuleras?</div><div class="cp-sig">Kan flera små, var för sig tillåtna steg kombineras?</div></div>
+        <div style="background:var(--bg-card);padding:20px"><div class="ad-sec-lbl">Kontroll och upptäckt</div><div class="cp-sig">Vilken kontroll ska förhindra respektive upptäcka missbruket?</div><div class="cp-sig">Kan samma person initiera, besluta och följa upp?</div><div class="cp-sig">Vilken logg, handling eller avvikelse visar att kontrollen fungerar?</div></div>
+        <div style="background:var(--bg-card);padding:20px"><div class="ad-sec-lbl">Konsekvens</div><div class="cp-sig">Vad kan betalas ut, röjas, tilldelas eller undanhållas?</div><div class="cp-sig">Kan skadan upprepas eller skalas upp utan att synas?</div><div class="cp-sig">Vilka följdskador uppstår för tillit, rättssäkerhet och verksamhet?</div></div>
+        <div style="background:var(--bg-card);padding:20px"><div class="ad-sec-lbl">Åtgärd och ägarskap</div><div class="cp-sig">Vilken ändring reducerar just den identifierade risken?</div><div class="cp-sig">Vem äger åtgärden och när ska den vara införd?</div><div class="cp-sig">Hur och när prövas att åtgärden fått avsedd effekt?</div></div>
+      </div>
     </div>
 
     <div class="reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin-bottom:36px">
