@@ -2945,12 +2945,22 @@
     "sector": "AUTHORITY",
     "actor": "CRIMINAL_NETWORK",
     "status": "INDICATION",
-    "summary": "Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.",
+    "summary": "Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. I juli 2026 redovisade Botkyrka kommun dessutom utfallet av ett separat pilotprojekt med bakgrundskontroller: 2 483 kontroller ledde till 178 utredningar och 49 nekade anställningar eller praktikplatser efter individuell prövning; kontrollerna utökades därefter till samtliga förvaltningar. Utfallet visar en dokumenterad förebyggande åtgärd men bevisar inte de misstankar som kommissionen ska granska. Att Botkyrka granskas innebär inte heller att uppgifterna är rättsligt fastställda.",
     "sources": [
       {
-        "l": "Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)",
+        "l": "Regeringen — En infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (25 juni 2026)",
+        "t": "report",
+        "url": "https://www.regeringen.se/rattsliga-dokument/kommittedirektiv/2026/06/dir.-202663"
+      },
+      {
+        "l": "Regeringen — regeringen tillsätter en infiltrationskommission (26 juni 2026)",
         "t": "report",
         "url": "https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"
+      },
+      {
+        "l": "Botkyrka kommun — bakgrundskontroller nekade 49 personer anställning eller praktikplats (23 juli 2026)",
+        "t": "authority",
+        "url": "https://www.botkyrka.se/nyhetsarkiv/nyhetsarkiv/2026-07-23-bakgrundskontroller-i-botkyrka-nekade-49-personer-anstallning-under-pilotprojekt"
       }
     ]
   },
