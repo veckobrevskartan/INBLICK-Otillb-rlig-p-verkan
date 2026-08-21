@@ -140,6 +140,20 @@ for (const id of duplicateIds) errors.push(`modules.html: duplicerat statiskt id
 for (const match of index.matchAll(/href="modules\.html#([^"]+)"/g)) {
   if (!moduleIds.includes(match[1])) errors.push(`index.html: modulankare saknas: ${match[1]}`);
 }
+for (const match of modules.matchAll(/<a\b[^>]*href="#(mod-[^"]+)"/g)) {
+  if (!moduleIds.includes(match[1])) errors.push(`modules.html: internt modulankare saknas: ${match[1]}`);
+}
+if (/<a\b[^>]*href="#mod-[^"]+"[^>]*onclick="[^"]*return false[^"]*"/i.test(modules)) {
+  errors.push('modules.html: en modulankarlänk blockerar webbläsarens reservnavigering med return false');
+}
+const mobileModuleLinks = [...modules.matchAll(/<a href="#mod-([^"]+)" class="mobile-tab-btn" id="mtab-([^"]+)"/g)];
+if (mobileModuleLinks.length !== 15) errors.push(`modules.html: förväntade 15 mobila modulankarlänkar, hittade ${mobileModuleLinks.length}`);
+for (const [, target, tab] of mobileModuleLinks) {
+  if (target !== tab) errors.push(`modules.html: mobilfliken ${tab} pekar på mod-${target}`);
+}
+if (modules.includes('<button class="mobile-tab-btn"')) {
+  errors.push('modules.html: mobila modulval måste vara ankarlänkar för felsäker navigering');
+}
 
 for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 25], ['CHAIN', 7]]) {
   const match = modules.match(new RegExp(`const ${name}=(\\[[^\\n]*\\]);`));

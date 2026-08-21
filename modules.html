@@ -87,7 +87,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .mobile-drawer{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:rgba(10,22,40,.98);backdrop-filter:blur(14px);z-index:190;overflow-y:auto;padding:16px 24px}
 .mobile-drawer.open{display:block}
 body.menu-open{overflow:hidden}
-.mobile-tab-btn{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--border-s);cursor:pointer;font-size:14px;color:var(--muted);transition:.15s;background:none;border-left:none;border-right:none;border-top:none;width:100%;text-align:left}
+.mobile-tab-btn{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--border-s);cursor:pointer;font-size:14px;color:var(--muted);text-decoration:none;transition:.15s;background:none;border-left:none;border-right:none;border-top:none;width:100%;text-align:left}
 .mobile-tab-btn.active{color:var(--accent)}
 .mobile-tab-btn .mtb-num{font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--dim);min-width:24px}
 .mobile-tab-btn.active .mtb-num{color:var(--accent)}
@@ -819,13 +819,13 @@ button,[onclick]{touch-action:manipulation}
           <span class="cat-roman">I</span>Förstå<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-forsta">
-          <li><a href="#mod-chain" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
-          <li><a href="#mod-sectors" id="tab-sectors" onclick="show('sectors');return false">Sektormiljöer</a></li>
-          <li><a href="#mod-actors" id="tab-actors" onclick="show('actors');return false">Aktörsmatrisen</a></li>
-          <li><a href="#mod-legal" id="tab-legal" onclick="show('legal');return false">Juridisk ram</a></li>
-          <li><a href="#mod-infopav" id="tab-infopav" onclick="show('infopav');return false">Informationspåverkan</a></li>
-          <li><a href="#mod-theory" id="tab-theory" onclick="show('theory');return false">Teorier och modeller</a></li>
-          <li><a href="#mod-visuals" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
+          <li><a href="#mod-chain" id="tab-chain">Påverkanskedjan</a></li>
+          <li><a href="#mod-sectors" id="tab-sectors">Sektormiljöer</a></li>
+          <li><a href="#mod-actors" id="tab-actors">Aktörsmatrisen</a></li>
+          <li><a href="#mod-legal" id="tab-legal">Juridisk ram</a></li>
+          <li><a href="#mod-infopav" id="tab-infopav">Informationspåverkan</a></li>
+          <li><a href="#mod-theory" id="tab-theory">Teorier och modeller</a></li>
+          <li><a href="#mod-visuals" id="tab-visuals">Visuella modeller</a></li>
         </ul>
       </div>
       <!-- BEDÖMA -->
@@ -834,10 +834,10 @@ button,[onclick]{touch-action:manipulation}
           <span class="cat-roman">II</span>Bedöma<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-bedoma">
-          <li><a href="#mod-map" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
-          <li><a href="#mod-assess" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
-          <li><a href="#mod-inds" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
-          <li><a href="#mod-graph" id="tab-graph" onclick="show('graph');return false">Sambandsgraf</a></li>
+          <li><a href="#mod-map" id="tab-map">Händelsekarta</a></li>
+          <li><a href="#mod-assess" id="tab-assess">Organisationstestet</a></li>
+          <li><a href="#mod-inds" id="tab-inds">Indikatorer</a></li>
+          <li><a href="#mod-graph" id="tab-graph">Sambandsgraf</a></li>
         </ul>
       </div>
       <!-- AGERA -->
@@ -846,14 +846,14 @@ button,[onclick]{touch-action:manipulation}
           <span class="cat-roman">III</span>Agera<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-agera">
-          <li><a href="#mod-tools" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
-          <li><a href="#mod-culture" id="tab-culture" onclick="show('culture');return false">Säkerhetskultur</a></li>
-          <li><a href="#mod-handle" id="tab-handle" onclick="show('handle');return false">Hantera ärende</a></li>
+          <li><a href="#mod-tools" id="tab-tools">Verktygslådan</a></li>
+          <li><a href="#mod-culture" id="tab-culture">Säkerhetskultur</a></li>
+          <li><a href="#mod-handle" id="tab-handle">Hantera ärende</a></li>
         </ul>
       </div>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <a href="#mod-sources" class="nav-back-link" onclick="show('sources');return false">Källor</a>
+      <a href="#mod-sources" class="nav-back-link">Källor</a>
       <div class="nav-search-wrap">
         <input id="globalSearchInput" placeholder="Sök fall, indikator…" autocomplete="off"/>
         <button class="nav-search-clear" onclick="closeSearch()" title="Rensa">✕</button>
@@ -869,54 +869,54 @@ button,[onclick]{touch-action:manipulation}
 <!-- ═══ MOBILE DRAWER ═══ -->
 <div class="mobile-drawer" id="mobileDrawer">
     <div class="mob-cat-hdr">I — Förstå</div>
-    <button class="mobile-tab-btn" id="mtab-chain" onclick="show('chain');closeMobileDrawer()">
+    <a href="#mod-chain" class="mobile-tab-btn" id="mtab-chain">
       <span class="mtb-num">01</span>Påverkanskedjan
-    </button>
-    <button class="mobile-tab-btn" id="mtab-sectors" onclick="show('sectors');closeMobileDrawer()">
+    </a>
+    <a href="#mod-sectors" class="mobile-tab-btn" id="mtab-sectors">
       <span class="mtb-num">02</span>Sektormiljöer
-    </button>
-    <button class="mobile-tab-btn" id="mtab-actors" onclick="show('actors');closeMobileDrawer()">
+    </a>
+    <a href="#mod-actors" class="mobile-tab-btn" id="mtab-actors">
       <span class="mtb-num">03</span>Aktörsmatrisen
-    </button>
-    <button class="mobile-tab-btn" id="mtab-legal" onclick="show('legal');closeMobileDrawer()">
+    </a>
+    <a href="#mod-legal" class="mobile-tab-btn" id="mtab-legal">
       <span class="mtb-num">04</span>Juridisk ram
-    </button>
-    <button class="mobile-tab-btn" id="mtab-infopav" onclick="show('infopav');closeMobileDrawer()">
+    </a>
+    <a href="#mod-infopav" class="mobile-tab-btn" id="mtab-infopav">
       <span class="mtb-num">05</span>Informationspåverkan
-    </button>
-    <button class="mobile-tab-btn" id="mtab-theory" onclick="show('theory');closeMobileDrawer()">
+    </a>
+    <a href="#mod-theory" class="mobile-tab-btn" id="mtab-theory">
       <span class="mtb-num">06</span>Teorier och modeller
-    </button>
-    <button class="mobile-tab-btn" id="mtab-visuals" onclick="show('visuals');closeMobileDrawer()">
+    </a>
+    <a href="#mod-visuals" class="mobile-tab-btn" id="mtab-visuals">
       <span class="mtb-num">07</span>Visuella modeller
-    </button>
+    </a>
     <div class="mob-cat-hdr">II — Bedöma</div>
-    <button class="mobile-tab-btn" id="mtab-map" onclick="show('map');closeMobileDrawer()">
+    <a href="#mod-map" class="mobile-tab-btn" id="mtab-map">
       <span class="mtb-num">08</span>Händelsekarta
-    </button>
-    <button class="mobile-tab-btn" id="mtab-assess" onclick="show('assess');closeMobileDrawer()">
+    </a>
+    <a href="#mod-assess" class="mobile-tab-btn" id="mtab-assess">
       <span class="mtb-num">09</span>Organisationstestet
-    </button>
-    <button class="mobile-tab-btn" id="mtab-inds" onclick="show('inds');closeMobileDrawer()">
+    </a>
+    <a href="#mod-inds" class="mobile-tab-btn" id="mtab-inds">
       <span class="mtb-num">10</span>Indikatorer
-    </button>
-    <button class="mobile-tab-btn" id="mtab-graph" onclick="show('graph');closeMobileDrawer()">
+    </a>
+    <a href="#mod-graph" class="mobile-tab-btn" id="mtab-graph">
       <span class="mtb-num">11</span>Sambandsgraf
-    </button>
+    </a>
     <div class="mob-cat-hdr">III — Agera</div>
-    <button class="mobile-tab-btn" id="mtab-tools" onclick="show('tools');closeMobileDrawer()">
+    <a href="#mod-tools" class="mobile-tab-btn" id="mtab-tools">
       <span class="mtb-num">12</span>Verktygslådan
-    </button>
-    <button class="mobile-tab-btn" id="mtab-culture" onclick="show('culture');closeMobileDrawer()">
+    </a>
+    <a href="#mod-culture" class="mobile-tab-btn" id="mtab-culture">
       <span class="mtb-num">13</span>Säkerhetskultur
-    </button>
-    <button class="mobile-tab-btn" id="mtab-handle" onclick="show('handle');closeMobileDrawer()">
+    </a>
+    <a href="#mod-handle" class="mobile-tab-btn" id="mtab-handle">
       <span class="mtb-num">14</span>Hantera ärende
-    </button>
+    </a>
     <div class="mob-cat-hdr">Källor</div>
-    <button class="mobile-tab-btn" id="mtab-sources" onclick="show('sources');closeMobileDrawer()">
+    <a href="#mod-sources" class="mobile-tab-btn" id="mtab-sources">
       <span class="mtb-num">§</span>Källförteckning
-    </button>
+    </a>
 </div>
 
 <!-- ═══ SEARCH RESULTS ═══ -->
@@ -2810,6 +2810,10 @@ window.addEventListener('DOMContentLoaded',()=>{
   const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
   // ACTORS deklareras efter sektordatan. Synkronisera därför först när hela skriptet har utvärderats.
   ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});
+  document.querySelectorAll('a[href^="#mod-"]').forEach(link=>link.addEventListener('click',()=>{
+    closeCatMenus();
+    if(link.classList.contains('mobile-tab-btn'))closeMobileDrawer();
+  }));
   addInteractionGuides();
   show(startMod);
   document.documentElement.classList.add('js-ready');
