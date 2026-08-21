@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   inspect:
@@ -33,20 +33,29 @@ jobs:
               'Riksrevisionen',
               'Statskontoret',
           ]
+          out = []
           for path in files:
               text = path.read_text(encoding='utf-8')
-              print(f'\n===== {path} ({len(text)} chars) =====')
+              out.append(f'===== {path} ({len(text)} chars) =====')
               for needle in needles:
-                  print(f'\n--- {needle!r}: {text.count(needle)} match(es) ---')
+                  out.append(f'\n--- {needle!r}: {text.count(needle)} match(es) ---')
                   start = 0
                   shown = 0
-                  while shown < 6:
+                  while shown < 8:
                       pos = text.find(needle, start)
                       if pos < 0:
                           break
-                      a = max(0, pos - 550)
-                      b = min(len(text), pos + len(needle) + 900)
-                      print(text[a:b].replace('\r',''))
-                      print('\n[...context end...]')
+                      a = max(0, pos - 700)
+                      b = min(len(text), pos + len(needle) + 1200)
+                      out.append(text[a:b].replace('\r',''))
+                      out.append('[...context end...]')
                       shown += 1
                       start = pos + len(needle)
+          Path('site-maintenance-diagnostics.txt').write_text('\n'.join(out), encoding='utf-8')
+      - name: Commit diagnostics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site-maintenance-diagnostics.txt
+          git commit -m "chore: capture site maintenance diagnostics" || exit 0
+          git push
