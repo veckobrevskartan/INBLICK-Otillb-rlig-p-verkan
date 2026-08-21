@@ -155,6 +155,7 @@ if (modules.includes('<button class="mobile-tab-btn"')) {
   errors.push('modules.html: mobila modulval måste vara ankarlänkar för felsäker navigering');
 }
 
+let chainItems = [];
 for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 25], ['CHAIN', 7]]) {
   const match = modules.match(new RegExp(`const ${name}=(\\[[^\\n]*\\]);`));
   if (!match) {
@@ -164,9 +165,24 @@ for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 2
   try {
     const items = JSON.parse(match[1]);
     if (items.length !== expected) errors.push(`modules.html: förväntade ${expected} poster i ${name}, hittade ${items.length}`);
+    if (name === 'CHAIN') chainItems = items;
   } catch (error) {
     errors.push(`modules.html: ${name} är inte giltig JSON: ${error.message}`);
   }
+}
+
+const knownCaseIds = new Set(cases.map(item => item.id));
+for (const step of chainItems) {
+  for (const ref of step.cases || []) {
+    const caseId = typeof ref === 'string' ? ref : ref.id;
+    if (!knownCaseIds.has(caseId)) errors.push(`modules.html: påverkanskedjans steg ${step.step} hänvisar till saknat fall ${caseId}`);
+  }
+}
+if (!modules.includes('id="caseList"') || !modules.includes('id="caseSearch"')) {
+  errors.push('modules.html: den sökbara fallförteckningen saknas');
+}
+if (!modules.includes('function initCaseBrowser(){') || !modules.includes('function getFilteredCases(){')) {
+  errors.push('modules.html: fallförteckningens gemensamma filterlogik saknas');
 }
 
 const questionsMatch = modules.match(/const QUESTIONS=(\[[\s\S]*?\]);\s*const DIMS=/);
