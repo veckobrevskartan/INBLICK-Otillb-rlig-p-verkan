@@ -170,7 +170,7 @@ if (!questionsMatch) {
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 122) errors.push(`Förväntade 122 fall, hittade ${cases.length}`);
+if (cases.length !== 125) errors.push(`Förväntade 125 fall, hittade ${cases.length}`);
 
 const publicText = [modules, index, JSON.stringify(cases), JSON.stringify(actors), JSON.stringify(indicators)]
   .join('\n')
