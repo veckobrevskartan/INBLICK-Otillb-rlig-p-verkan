@@ -1,0 +1,849 @@
+===== index.html (56619 chars) =====
+
+--- 'Källförteckning': 0 match(es) ---
+
+--- 'Reviderad augusti 2026': 0 match(es) ---
+
+--- 'MCF0079': 1 match(es) ---
+   <p class="part-desc">Här går analysen över i praktiskt arbete. Bedöm utsatta roller, stärk säkerhetskulturen och följ ett tydligt arbetssätt när en signal eller misstanke behöver hanteras.</p>
+      <div class="part-cards">
+        <a href="modules.html#mod-tools" class="mcard is-new" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Operativa verktyg</div>
+          <div class="mc-title">Verktygslådan</div>
+          <div class="mc-desc">Befattningsanalys med SMOB:s riskyrken, BROP-modellen för säkerhetsprövning, bow-tie-analys för insiderhot och checklistor för rekrytering, drift och händelse.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>MCF0079 · RiR 2026:3</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-culture" class="mcard is-new" style="border-top-color:var(--green)">
+          <div class="mc-kicker">Organisationskultur</div>
+          <div class="mc-title">Säkerhetskultur</div>
+          <div class="mc-desc">Kultur som skyddsbarriär. Stark kultur mot tystnadskultur, ledningens fyra roller, visselblåsarstruktur och övning. Varför kultur slår system.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>RiR 2026:3 · SKR · MCF</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-handle" class="mcard" style="border-top-color:var(--orange)">
+          <div class="mc-kicker">Ärendehantering</div>
+          <div class="mc-title">Hantera ett ärende</div>
+          <div class="mc-desc">Följ ett ärende i sex steg, från den första signalen till beslut och uppföljning. Här finns också indikatorer på individ-, grupp- och organisationsnivå samt en metod för att förebygga brottsupplägg.</div>
+          <div class="mc-foot" style="color:var(--orange)"><span>6 steg · 3 nivåer</span><span class="mc-arrow">→</span></div>
+        </a>
+     
+[...context end...]
+
+--- 'Primärkällor och': 0 match(es) ---
+
+--- 'Visuella modeller': 2 match(es) ---
+ href="modules.html#mod-inds">Indikatorer</a></li>
+          <li><a href="modules.html#mod-graph">Sambandsgraf</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-agera" onclick="toggleHomeNav(this)"><span class="nl-rom">III</span>Agera <span class="nav-chevron">▾</span></button>
+        <ul class="nav-submenu" id="home-agera">
+          <li><a href="modules.html#mod-tools">Verktygslådan</a></li>
+          <li><a href="modules.html#mod-culture">Säkerhetskultur</a></li>
+          <li><a href="modules.html#mod-handle">Hantera ärende</a></li>
+          <li><a href="modules.html#mod-visuals">Visuella modeller</a></li>
+        </ul>
+      </li>
+      <li><a href="modules.html#mod-sources" class="nav-source">Källor</a></li>
+    </ul>
+    <button class="nav-menu-toggle" id="homeNavToggle" type="button" aria-label="Visa alla moduler" aria-expanded="false" onclick="toggleHomeMenu()">☰</button>
+    <a href="modules.html" class="nav-cta">Öppna verket →</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"><div class="hero-bg-grid"></div></div>
+  <div class="wrap" style="width:100%">
+    <div class="hero-layout">
+      <div>
+        <p class="hero-eyebrow">Ett referensverk från Svensk OSINT</p>
+        <p class="hero-kicker">Otillbörlig påverkan i offentlig sektor · 2002–2026</p>
+        <h1 class="hero-title">Otillbörlig påverkan<br><em>i offentlig verksamhet</em></h1>
+        <p class="hero-sub">När påverkan får fäste i offentlig sektor</p>
+        <p class="hero-lead">Otillbörlig påverkan börjar sällan med ett uppenbart brott. Ofta börjar den med en kontakt, en tjänst eller en liten avvikelse som ingen reagerar på. Här samlas <strong>117 dokumenterade fall och 14 analysmoduler med spårbara källor</strong> som visar hur påverkan växer fram och vad organisat
+[...context end...]
+<a href="modules.html#mod-handle" class="mcard" style="border-top-color:var(--orange)">
+          <div class="mc-kicker">Ärendehantering</div>
+          <div class="mc-title">Hantera ett ärende</div>
+          <div class="mc-desc">Följ ett ärende i sex steg, från den första signalen till beslut och uppföljning. Här finns också indikatorer på individ-, grupp- och organisationsnivå samt en metod för att förebygga brottsupplägg.</div>
+          <div class="mc-foot" style="color:var(--orange)"><span>6 steg · 3 nivåer</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-visuals" class="mcard" style="border-top-color:#9B4FBB">
+          <div class="mc-kicker">Visuella modeller</div>
+          <div class="mc-title">Modellerna som förklarar</div>
+          <div class="mc-desc">Påverkanspyramiden, insidertypologin, infiltrationsprocessen, rolltyper i kriminella nätverk, rekryteringstrappan och ERRC-matrisen — interaktiv SVG-grafik.</div>
+          <div class="mc-foot" style="color:#9B4FBB"><span>6 modeller · källbelagda</span><span class="mc-arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═══ -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid reveal">
+      <div class="stat-cell">
+        <div class="stat-val">680</div>
+        <div class="stat-label">Aktiva möjliggörare i Sverige</div>
+        <div class="stat-note"><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener">Polismyndighetens lägesbild 2024</a> — kategoriserade som möjliggörare bland aktiva i kriminella nätverk</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">352 mdkr</div>
+        <div class="stat-label">Kriminell ekonomi per år</div>
+        <div clas
+[...context end...]
+
+--- 'Myndighetsgemensam lägesbild': 0 match(es) ---
+
+--- 'Botkyrka': 1 match(es) ---
+od-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Norviks hamn — 1,3 ton kokain, kriminellt belastade hamnarbetare utan bakgrundskontroll</div>
+          <div class="cp-meta">Nynäshamn · Bekräftat · SVT UG sept 2025 · Dom juli 2025</div>
+        </div>
+        <div class="cp-sector">Transport</div>
+        <div class="cp-year">2025</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Think Pink — Sveriges största miljöbrottmål, kvarts miljard i skadestånd</div>
+          <div class="cp-meta">Botkyrka · Bekräftat · Södertörns tingsrätt juni 2025</div>
+        </div>
+        <div class="cp-sector">Upphandling</div>
+        <div class="cp-year">2025</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Akademiska sjukhuset Uppsala — verksamhetschef dömd för 4,6 Mkr i mutor</div>
+          <div class="cp-meta">Uppsala · Bekräftat · Svea hovrätt mars 2025</div>
+        </div>
+        <div class="cp-sector">Hälsa</div>
+        <div class="cp-year">2025</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Lantmäteriet — säkerhetsklassade kartuppgifter röjda utan sekretessprövning</div>
+          <div class="cp-meta">Gävle · Bekräftat · Ds 2026:2 · Stängning maj 2024</div>
+        </div>
+        <div class="cp-sector">Myndighet</div>
+        <div class="cp-year">2024</div>
+      </a>
+      <a href="modules.html#mod-map" class="cp-row">
+        <div class="cp-status conf"></div>
+        <div class="cp-tcell">
+          <div class="cp-title">Topp
+[...context end...]
+
+--- 'infiltrationskommission': 0 match(es) ---
+
+--- 'Riksrevisionen': 0 match(es) ---
+
+--- 'Statskontoret': 1 match(es) ---
+ <div class="mc-desc">Besvara 14 frågor inom sju områden och få en enkel bild av organisationens styrkor och brister. Svaren stannar i din webbläsare.</div>
+          <div class="mc-foot" style="color:var(--purple)"><span>14 frågor · lokal beräkning</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-inds" class="mcard" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Indikatorbibliotek</div>
+          <div class="mc-title">Tidiga varnings&shy;signaler</div>
+          <div class="mc-desc">25 sökbara indikatorer med konkreta svenska fallexempel. Filtrera på kategori, allvarlighetsgrad eller aktörstyp. Källbelagda med RiR, Brå och Statskontoret.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>25 indikatorer · 6 kategorier</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-graph" class="mcard" style="border-top-color:var(--green)">
+          <div class="mc-kicker">Nätverksgraf</div>
+          <div class="mc-title">Sambandsgrafen</div>
+          <div class="mc-desc">Se hur fall, aktörer och sektorer hänger ihop i en interaktiv nätverksgraf. Klicka, dra och filtrera för att upptäcka mönster som annars är lätta att missa.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>Klickbar · filtrerbar</span><span class="mc-arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- DEL III — AGERA -->
+    <div class="part-block reveal">
+      <div class="part-head">
+        <div class="part-roman">III</div>
+        <div class="part-headtext">
+          <div class="part-name">Agera</div>
+          <div class="part-q">Hur bygger jag motståndskraft?</div>
+        </div>
+      </div>
+      <p class="part-desc">Här går analysen över i praktiskt arbete. Bedöm utsatta roller, stärk säkerhetskulturen och följ ett tydligt arbetssätt när en signal eller
+[...context end...]
+===== modules.html (2989628 chars) =====
+
+--- 'Källförteckning': 3 match(es) ---
+tegy — ERRC Grid ↗</a></span>
+      </div>
+    </div>
+<div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-top:8px">Källa: <a href="https://www.blueoceanstrategy.com/tools/errc-grid/" target="_blank" rel="noopener">Blue Ocean Strategy — ERRC Grid ↗</a>; tillämpad på insiderhothantering</div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SIDFOT — KÄLLFÖRTECKNING
+════════════════════════════════════════════════════════ -->
+<footer id="kallforteckning" style="background:var(--bg-card);border-top:1px solid var(--border);padding:60px 0;margin-top:40px">
+<div class="wrap">
+  <div style="margin-bottom:40px">
+    <p class="eyebrow">Källförteckning · Reviderad augusti 2026</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,40px);font-weight:300;line-height:1.1;margin-bottom:10px">Primärkällor och <em>fallreferenser</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:600px;line-height:1.75">Alla 117 fall har minst en redovisad källreferens. Primärkällor prioriteras: domstolsavgöranden, myndighetspressmeddelanden och Riksrevisionens granskningsrapporter. Sekundärkällor (medierapportering) anges för fall utan offentlig dom. Klicka för att öppna källan i nytt fönster.</p>
+  </div>
+
+  <!-- PRIMÄRKÄLLOR -->
+  <div style="margin-bottom:48px">
+    <p class="eyebrow" style="margin-bottom:14px">Återkommande primärkällor</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px">      <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:9px;padding:10px 13px;background:var(--bg-mid);border:1px solid var(--border-s);text-decoration:none;transition:.15s" onmouseover="this.style.
+[...context end...]
+pen källanalys 2026</div>
+    </div>
+    <div style="font-family:var(--fm);font-size:8px;color:var(--dim);text-align:right;line-height:1.65">
+      Fallreferenser reviderade augusti 2026. Alla externa länkar öppnar i nytt fönster.<br>
+      Felaktig länk eller komplettering? Kontakta redaktionen via LinkedIn: Svensk OSINT.
+    </div>
+  </div>
+</div>
+</footer>
+<section id="mod-sources" class="module" style="background:var(--bg);padding:80px 0 120px">
+<div class="container" style="max-width:1100px;margin:0 auto;padding:0 24px">
+  <p class="eyebrow">Underlag &amp; referenser</p>
+  <h2 style="font-family:var(--fd);font-size:clamp(28px,4vw,48px);font-weight:300;line-height:1.1;margin-bottom:8px">Källförteckning</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:40px;max-width:820px">
+    <div style="padding:16px 20px;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent)">
+      <div style="font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:6px">Analytisk primärkälla</div>
+      <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px"><a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB — Samhällsgemensam lägesbild 2026 ↗</a></div>
+      <div style="font-size:11px;color:var(--muted);line-height:1.6">Sverige mot organiserad brottslighet. Aktörer, relationer och strategiska sårbarheter. Stockholm 2026-04-27. Registerbaserad analys av 50 165 individer, 224 390 i utvidgad kärna, 402 270 bolagskopplingar. Används för strukturell sårbarhetsbedömning och sektorsdata.</div>
+    </div>
+    <div style="padding:16px 20px;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent)">
+      <div style="font-
+[...context end...]
+"noopener">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://skr.se/demokratiutveckling/otillatenpaverkan.9088.html" target="_blank" rel="noopener">SKR — <em>Otillåten påverkan</em> ↗</a>. <a href="https://polisen.se/siteassets/dokument/organiserad_brottslighet/rapport_korruption-i-sverige-2025.pdf/download/?v=4d2a5950d779836a69499efa161273cd" target="_blank" rel="noopener">NKIG/Polismyndigheten — <em>Korruption i Sverige 2025</em> ↗</a>.
+  </div>
+</div>
+</div>
+
+
+
+<script>
+/* Källförteckningen är gemensam för alla moduler och ska alltid ligga sist i
+   dokumentflödet. Den skapades före fyra senare moduler, vilket gjorde att
+   referenserna visades före innehållet när användaren bytte till dessa flikar. */
+const sharedReferenceFooter=document.getElementById('kallforteckning');
+if(sharedReferenceFooter&&document.currentScript?.parentNode){
+  document.currentScript.parentNode.insertBefore(sharedReferenceFooter,document.currentScript);
+}
+
+function filterSrc(cat){
+  document.querySelectorAll('.src-group').forEach(g=>{g.style.display=cat==='all'||g.dataset.cat===cat?'block':'none';});
+  document.getElementById('src-empty').style.display=[...document.querySelectorAll('.src-group')].some(g=>g.style.display!=='none')?'none':'block';
+}
+
+
+/* ═══ JURIDISK RAM — data & rendering ═══ */
+const LEGAL_TIERS=[
+  {
+    id:'muta',c:'#C45C2E',tier:'Straffbart · grovt',name:'Tagande av muta',
+    law:'10 kap. 5 a § & 5 b § brottsbalken',
+    rekvisit:'En arbetstagare eller uppdragstagare tar emot, godtar ett löfte om eller begär en <em>otillbörlig förmån</em> för utövningen av anställningen eller uppdraget. Det krävs ett samband mellan förmånen och tjänsteutövningen — och att förmånen bedö
+[...context end...]
+
+--- 'Reviderad augusti 2026': 1 match(es) ---
+</a></span>
+      </div>
+    </div>
+<div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-top:8px">Källa: <a href="https://www.blueoceanstrategy.com/tools/errc-grid/" target="_blank" rel="noopener">Blue Ocean Strategy — ERRC Grid ↗</a>; tillämpad på insiderhothantering</div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SIDFOT — KÄLLFÖRTECKNING
+════════════════════════════════════════════════════════ -->
+<footer id="kallforteckning" style="background:var(--bg-card);border-top:1px solid var(--border);padding:60px 0;margin-top:40px">
+<div class="wrap">
+  <div style="margin-bottom:40px">
+    <p class="eyebrow">Källförteckning · Reviderad augusti 2026</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,40px);font-weight:300;line-height:1.1;margin-bottom:10px">Primärkällor och <em>fallreferenser</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:600px;line-height:1.75">Alla 117 fall har minst en redovisad källreferens. Primärkällor prioriteras: domstolsavgöranden, myndighetspressmeddelanden och Riksrevisionens granskningsrapporter. Sekundärkällor (medierapportering) anges för fall utan offentlig dom. Klicka för att öppna källan i nytt fönster.</p>
+  </div>
+
+  <!-- PRIMÄRKÄLLOR -->
+  <div style="margin-bottom:48px">
+    <p class="eyebrow" style="margin-bottom:14px">Återkommande primärkällor</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px">      <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:9px;padding:10px 13px;background:var(--bg-mid);border:1px solid var(--border-s);text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--accent
+[...context end...]
+
+--- 'MCF0079': 11 match(es) ---
+a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB:s studiepopulation (2026) ↗</a> för organiserad brottslighet: 564 bolag under SNI 49 (landtransport, 2,51% av studiepopulationens bolagsengagemang) och 375 bolag under SNI 494 (vägtransport och godstrafik, 1,67%). Lager- och terminalpersonal samt lastbilsförare utgör de volymmässigt dominerande yrkesnoderna i SMOB:s nätverksanalys av icke-samhällskänsliga yrken. <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF:s vägledning (MCF0079, mars 2026) ↗</a> konstaterar att 80–90 godsstölder per månad sker i Sverige (brottskod 9804, 2024) — i princip uteslutande nattetid vid rastplatser utan säkerhetsnivå. Stöld av farligt gods med hög riskpotential (klass 1: sprängmedel och ammunition) sker på exakt samma sätt och kopplas direkt till den illegala sprängningsvågen i samhället. MCF konstaterar att insiders i transportkedjan — avlämnare, avsändare, lastare, lossare, transportörer, mottagare — är den svåraste sårbarheten att skydda mot, eftersom de har legitimt tillträde och kan läcka information om ruttider, containernummer och skanningstider utan att utlösa larm.</div>
+      <div style="margin-bottom:28px"><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Hamnar är logistikens knutpunkter och därmed organiserad brottslighets primära infiltrationsmål i Sverige. <a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå (2024) ↗</a> identifierar hamnar som den sektor med flest dokumenterade möjliggörare relativt antalet anställda. Förklaringen är strukturell: all import och export passerar fysiskt genom ett fåtal noder, godset hant
+[...context end...]
+-04-27. Registerbaserad analys av 50 165 individer, 224 390 i utvidgad kärna, 402 270 bolagskopplingar. Används för strukturell sårbarhetsbedömning och sektorsdata.</div>
+    </div>
+    <div style="padding:16px 20px;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent)">
+      <div style="font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:6px">Källa</div>
+      <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px"><a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — Vägledning Transportskydd (MCF0079, mars 2026) ↗</a></div>
+      <div style="font-size:11px;color:var(--muted);line-height:1.6">Myndigheten för civilt försvar. Transport av farligt gods på väg och järnväg. ADR-S/RID-S kapitel 1.10, 8.3, 8.4, 10.5. Hotbild, insiderproblem i transportkedjan, 80–90 stölder/månad (brottskod 9804, 2024). Bow-tie-metod för riskanalys.</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px">
+    <button onclick="filterSrc('all')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--border);background:var(--accent);color:#fff;cursor:pointer">Alla (749)</button>
+    <button onclick="filterSrc('insiderhot---definition-och-typologi')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #4A7B6F40;background:transparent;color:#4A7B6F;cursor:pointer">Insiderhot — definition och typologi (57)</button>
+    <button onclick="filterSrc('kriminella-n-tverk-och-m-jligg-rare')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #C45C2E40;background:
+[...context end...]
+n — Ryssland, Kina och Iran ↗</a>. <a href="https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer" target="_blank" rel="noopener">Myndigheten för psykologiskt försvar — påverkanskampanjer ↗</a>. <a href="https://skr.se/demokratiutveckling/otillatenpaverkan.9088.html" target="_blank" rel="noopener">SKR — <em>Otillåten påverkan</em> ↗</a>. <a href="https://www.iranintl.com/en/202405088817" target="_blank" rel="noopener">Iran International — UANI:s granskning av IRGC och svenska lärosäten (2024) ↗</a>. <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB — <em>Samhällsgemensam lägesbild 2026</em> ↗</a>.
+  </div>
+</div>
+</div>
+
+
+
+<!-- ═══ MODUL: VERKTYGSLÅDAN (interaktiv) ═══ -->
+<div id="mod-tools" class="module">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Agera · Verktygslådan</p>
+    <h1 class="sec-title">Metoder och verktyg för<br><em>förebyggande arbete</em></h1>
+    <p class="sec-intro">Börja med den risk som faktiskt finns i rollen, inte med en färdig kontrollåtgärd. Här kan du bedöma befattningar, planera säkerhetsprövning där säkerhetsskyddslagen gäller och bygga en barriäranalys för ett eget scenario. Åtgärderna ska alltid vara lagliga, nödvändiga och proportionerliga.</p>
+  </div>
+
+  <div class="reveal" style="margin:-10px 0 34px;padding:22px;border:1px solid var(--border-s);background:var(--bg-card)">
+    <p class="eyebrow" style="margin-bottom:8px">Rättslig startpunkt</p>
+    <h2 style="font-family:var(--fd);font-size:25px;font-weight:300;margin:0 0 10px">Samma risk — <em>olika rättsligt stöd</em></h2>
+    
+[...context end...]
+orsaker, förebyggande barriärer, den centrala händelsen, begränsande barriärer och konsekvenser.</div>
+      </div>
+    </div>
+    <div class="bowtie-select" id="bowtieSelect"></div>
+    <div class="bowtie-diagram" id="bowtieDiagram"></div>
+  </div>
+
+  <!-- VERKTYG 4: CHECKLISTOR -->
+  <div class="reveal tool-block">
+    <div class="tool-head">
+      <div class="tool-num">04</div>
+      <div>
+        <div class="tool-title">Checklistor — tre faser</div>
+        <div class="tool-desc">Baserade på checklistorna i <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF:s vägledning <em>Transportskydd</em> (MCF0079) ↗</a>, anpassade för HR och säkerhetsfunktion. Bocka av — status sparas i din webbläsare under sessionen.</div>
+      </div>
+    </div>
+    <div class="check-tabs" id="checkTabs"></div>
+    <div class="check-panel" id="checkPanel"></div>
+  </div>
+
+  <div class="legal-srcnote reveal">
+    Källor: <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://sakerhetspolisen.se/sakerhetsskydd/registerkontroll.html" target="_blank" rel="noopener">Säkerhetspolisen — registerkontroll ↗</a>. IMY: <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/rattslig-grund/" target="_blank" rel="noopener">rättslig grund ↗</a>, <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandl
+[...context end...]
+tool-desc">Baserade på checklistorna i <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF:s vägledning <em>Transportskydd</em> (MCF0079) ↗</a>, anpassade för HR och säkerhetsfunktion. Bocka av — status sparas i din webbläsare under sessionen.</div>
+      </div>
+    </div>
+    <div class="check-tabs" id="checkTabs"></div>
+    <div class="check-panel" id="checkPanel"></div>
+  </div>
+
+  <div class="legal-srcnote reveal">
+    Källor: <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://sakerhetspolisen.se/sakerhetsskydd/registerkontroll.html" target="_blank" rel="noopener">Säkerhetspolisen — registerkontroll ↗</a>. IMY: <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/rattslig-grund/" target="_blank" rel="noopener">rättslig grund ↗</a>, <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/brottsuppgifter/" target="_blank" rel="noopener">brottsuppgifter ↗</a> och <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/kontroll-och-overvakning-av-anstallda/" target="_blank" rel="noopener">kontroll av anställda ↗</a>. <a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB — <em>Samhällsgem
+[...context end...]
+. Klicka för implementeringssteg och koppling till dokumenterade fall.</div>
+    </div>
+    <div class="cult-actions" id="cultActions"></div>
+    <div class="cult-action-detail" id="cultActionDetail"></div>
+  </div>
+
+  <div class="legal-srcnote reveal">
+    Källor: <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://skr.se/demokratiutveckling/otillatenpaverkan.9088.html" target="_blank" rel="noopener">SKR — <em>Otillåten påverkan</em> ↗</a>. <a href="https://polisen.se/siteassets/dokument/organiserad_brottslighet/rapport_korruption-i-sverige-2025.pdf/download/?v=4d2a5950d779836a69499efa161273cd" target="_blank" rel="noopener">NKIG/Polismyndigheten — <em>Korruption i Sverige 2025</em> ↗</a>.
+  </div>
+</div>
+</div>
+
+
+
+<script>
+/* Källförteckningen är gemensam för alla moduler och ska alltid ligga sist i
+   dokumentflödet. Den skapades före fyra senare moduler, vilket gjorde att
+   referenserna visades före innehållet när användaren bytte till dessa flikar. */
+const sharedReferenceFooter=document.getElementById('kallforteckning');
+if(sharedReferenceFooter&&document.currentScript?.parentNode){
+  document.currentScript.parentNode.insertBefore(sharedReferenceFooter,document.currentScript);
+}
+
+function filterSrc(cat){
+  document.querySelectorAll('.src-group').forEach(g=>{g.style.display=cat==='all'||g.dataset.cat===cat?'block':'none';});
+  document.getElementById('src-empty').style.display=[...document.querySelectorAll('.src-group')].some(g=>g.style.display!=='none')?'none':
+[...context end...]
+cyber- och informationsoperationer'],
+    effekt:['Sjunkande institutionellt förtroende','Komprometterad valintegritet','Legitimitetsförlust för förvaltningen','Strategisk påverkan på lång sikt','Resurser till antagonistiska aktörer'],
+    cases:['c16','c76','c116','c96']
+  }
+];
+
+const IP_MECH=[
+  {id:'auktoritet',name:'Auktoritetsbias',tag:'Lydnad',
+   body:'Människor tenderar att efterleva instruktioner från någon som framstår som en auktoritet, utan att verifiera legitimiteten. Angripare imiterar poliser, chefer eller myndighetspersoner.',
+   ex:'<b><a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF0079 ↗</a>:</b> förare instrueras att begära tjänstelegitimation innan fordonsdörren öppnas — eftersom falsk polis är en dokumenterad taktik vid transportstöld. Auktoritetsmarkörer (uniform, legitimation, tonläge) räcker ofta för att kringgå kontroller.'},
+  {id:'reciprocitet',name:'Reciprocitetsnorm',tag:'Skuld',
+   body:'En förmån skapar en känsla av skuld och förpliktelse att återgälda. Detta är den psykologiska grunden för hur relationell korruption byggs upp steg för steg.',
+   ex:'<b>Labcenter-härvan:</b> ett tjugotal myndighetsanställda tog emot IT-utrustning vid kurser. Den initiala förmånen inledde ett beroendeförhållande som senare bedömdes som mutbrott. Små gåvor öppnar för större förpliktelser.'},
+  {id:'brus',name:'Brusreduktion',tag:'Tidspress',
+   body:'Individer med hög arbetsbelastning komprimerar kontroller och procedurer för att spara tid. Angripare utnyttjar systematiskt pressade arbetssituationer.',
+   ex:'<b><a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF0079 ↗</a>:</b> i pressade arbetsscheman görs tidsbesparingar — identitetskontroller hoppas över, rutiner förenklas.
+[...context end...]
+rgälda. Detta är den psykologiska grunden för hur relationell korruption byggs upp steg för steg.',
+   ex:'<b>Labcenter-härvan:</b> ett tjugotal myndighetsanställda tog emot IT-utrustning vid kurser. Den initiala förmånen inledde ett beroendeförhållande som senare bedömdes som mutbrott. Små gåvor öppnar för större förpliktelser.'},
+  {id:'brus',name:'Brusreduktion',tag:'Tidspress',
+   body:'Individer med hög arbetsbelastning komprimerar kontroller och procedurer för att spara tid. Angripare utnyttjar systematiskt pressade arbetssituationer.',
+   ex:'<b><a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF0079 ↗</a>:</b> i pressade arbetsscheman görs tidsbesparingar — identitetskontroller hoppas över, rutiner förenklas. Migrationsverket-fallen (c62, c13): hundratals ärenden godkändes där kontrollsteg systematiskt kringgicks.'},
+  {id:'radsla',name:'Rädsla & isolering',tag:'Tystnad',
+   body:'Hot skapar tystnad — inte bara hos den direkt hotade, utan i hela arbetsgruppen. Isolering från kollegor och ledning förstärker effekten.',
+   ex:'<b>SKR:</b> identifierar tystnadskulturer som det mest bestående resultatet av otillåten påverkan i kommuner. En enskild hothändelse kan tysta en hel enhet, eftersom andra drar lärdomen att rapportering är farligt.'},
+  {id:'normalisering',name:'Normalisering',tag:'Glidning',
+   body:'Gradvis acceptans av undantag från regler — "det är bara den här gången". Eftersom varje steg är marginellt reagerar ingen, och normen förskjuts omärkligt.',
+   ex:'<b>Östersundshem & SFV:</b> visar hur normglidning sker inkrementellt. Konsultarvoden till vd:ns egna bolag godtogs i fyra år. Ingen enskild handling utlöste reaktion eftersom förändringen aldrig kom i ett språng.'}
+];
+
+const IP_ACTORS=[
+  {c:'#C45C2E',name:'Ryssland',org:'GRU · SVR · FSB',
+   mal:'Strategisk und
+[...context end...]
+
+--- 'Primärkällor och': 1 match(es) ---
+ueoceanstrategy.com/tools/errc-grid/" target="_blank" rel="noopener">Blue Ocean Strategy — ERRC Grid ↗</a>; tillämpad på insiderhothantering</div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SIDFOT — KÄLLFÖRTECKNING
+════════════════════════════════════════════════════════ -->
+<footer id="kallforteckning" style="background:var(--bg-card);border-top:1px solid var(--border);padding:60px 0;margin-top:40px">
+<div class="wrap">
+  <div style="margin-bottom:40px">
+    <p class="eyebrow">Källförteckning · Reviderad augusti 2026</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,40px);font-weight:300;line-height:1.1;margin-bottom:10px">Primärkällor och <em>fallreferenser</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:600px;line-height:1.75">Alla 117 fall har minst en redovisad källreferens. Primärkällor prioriteras: domstolsavgöranden, myndighetspressmeddelanden och Riksrevisionens granskningsrapporter. Sekundärkällor (medierapportering) anges för fall utan offentlig dom. Klicka för att öppna källan i nytt fönster.</p>
+  </div>
+
+  <!-- PRIMÄRKÄLLOR -->
+  <div style="margin-bottom:48px">
+    <p class="eyebrow" style="margin-bottom:14px">Återkommande primärkällor</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px">      <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:9px;padding:10px 13px;background:var(--bg-mid);border:1px solid var(--border-s);text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-s)'">
+        <span style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-
+[...context end...]
+
+--- 'Visuella modeller': 3 match(es) ---
+ss="cat-label" id="cat-agera" type="button" aria-expanded="false" aria-controls="ctabs-agera" title="Visa moduler under Agera" onclick="toggleCat('agera')">
+          <span class="cat-roman">III</span>Agera<span class="cat-chevron">▾</span>
+        </button>
+        <ul class="cat-tabs" id="ctabs-agera">
+          <li><a href="#" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
+          <li><a href="#" id="tab-culture" onclick="show('culture');return false">Säkerhetskultur</a></li>
+          <li><a href="#" id="tab-handle" onclick="show('handle');return false">Hantera ärende</a></li>
+          <li><a href="#" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="nav-search-wrap">
+        <input id="globalSearchInput" placeholder="Sök fall, indikator…" autocomplete="off"/>
+        <button class="nav-search-clear" onclick="closeSearch()" title="Rensa">✕</button>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileDrawer()" aria-label="Öppna modulmenyn" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav-back-link">← Analyssidan</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="mobile-drawer" id="mobileDrawer">
+    <div class="mob-cat-hdr">I — Förstå</div>
+    <button class="mobile-tab-btn" id="mtab-chain" onclick="show('chain');closeMobileDrawer()">
+      <span class="mtb-num">01</span>Påverkanskedjan
+    </button>
+    <button class="mobile-tab-btn" id="mtab-sectors" onclick="show('sectors');closeMobileDrawer()">
+      <span class="mtb-num">02</span>Sektormiljöer
+    </button>
+    <button class="mobile-tab-btn" id="mtab-actors" onclick="show('actors');closeMo
+[...context end...]
+bandsgraf
+    </button>
+    <div class="mob-cat-hdr">III — Agera</div>
+    <button class="mobile-tab-btn" id="mtab-tools" onclick="show('tools');closeMobileDrawer()">
+      <span class="mtb-num">11</span>Verktygslådan
+    </button>
+    <button class="mobile-tab-btn" id="mtab-culture" onclick="show('culture');closeMobileDrawer()">
+      <span class="mtb-num">12</span>Säkerhetskultur
+    </button>
+    <button class="mobile-tab-btn" id="mtab-handle" onclick="show('handle');closeMobileDrawer()">
+      <span class="mtb-num">13</span>Hantera ärende
+    </button>
+    <button class="mobile-tab-btn" id="mtab-visuals" onclick="show('visuals');closeMobileDrawer()">
+      <span class="mtb-num">14</span>Visuella modeller
+    </button>
+</div>
+
+<!-- ═══ SEARCH RESULTS ═══ -->
+<div id="searchResults"></div>
+
+<!-- ══════════════════════════════════════════════════════
+     MOD 1: PÅVERKANSKEDJAN
+════════════════════════════════════════════════════════ -->
+<section class="module active" id="mod-chain">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 3 · Interaktiv analys</p>
+    <h1 class="sec-title">Hur påverkan <em>genomförs</em></h1>
+    <p class="sec-intro">Påverkan växer ofta fram stegvis. Följ vägen från den första kartläggningen till att verksamhetens beslut börjar påverkas. Varje steg visas ur angriparens, medarbetarens och organisationens perspektiv, med varningssignaler och kopplade fall.</p>
+  </div>
+  <div class="chain-progress reveal" id="chainProg"></div>
+  <div class="chain-layout reveal">
+    <div class="chain-nav-col" id="chainNav"></div>
+    <div class="chain-panel-col">
+      <div class="cp-step-lbl" id="cp-step-lbl"></div>
+      <div class="cp-title" id="cp-title"></div>
+      <div id="cp-badge" style="margin-bottom:13px"></div>
+      <div class="cp-lead" id="cp-lead"></div>
+      <div class="cp-perspectives" id="cp-persp"></div>
+      <div class="c
+[...context end...]
+:20px">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Brå — kommunsamverkan</div>
+        <div style="font-size:13px;color:var(--text);margin-bottom:6px">Utsatta områden skyddar välfärdsutbetalningar</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.65">Flera svenska kommuner med utsatta områden har implementerat crime proofing för att skydda föreningsstöd och bidrag. Brå stöttar kommunerna med metodstöd.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="module" id="mod-visuals">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Visuella modeller &#183; 7 grafik</p>
+    <h1 class="sec-title">Analysmodeller för<br><em>otillbörlig påverkan</em></h1>
+    <p class="sec-intro">Sju interaktiva modeller gör de viktigaste sambanden lättare att se, från påverkanspyramiden och olika insidertyper till infiltrationsprocessen, roller i kriminella nätverk och rekryteringstrappan.</p>
+  </div>
+
+  <!-- ── 1. PÅVERKANSPYRAMIDEN ── -->
+  <div class="reveal" style="margin-bottom:56px">
+    <p class="eyebrow">Myndighetsgemensam lägesbild 2023 &#183; Organiserad brottslighet</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Påverkans<em>pyramiden</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Tre nivåer av eskalerande påverkan mot offentlig sektor — från öppna hot och utpressning via korruption till infiltration. Metodvalet styrs av vad som fungerar: om hot och utpressning är riskabelt väljer antagonisten korruption; om korruption är svårt väljs infiltration.</p>
+    <div style="display:flex;justify-content:center;margin-bottom:20px">
+      <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" style=
+[...context end...]
+
+--- 'Myndighetsgemensam lägesbild': 6 match(es) ---
+rar organisationen sin insiderriskhantering minst en gång per år?",
+    "hint": "Hotbild, verksamhet och behörigheter förändras. En dokumenterad, regelbunden och händelsestyrd uppföljning minskar risken att tidigare analyser blir inaktuella.",
+    "opts": [
+      {
+        "t": "Ja, med dokumenterad uppföljning och uppdaterade processer",
+        "s": 3
+      },
+      {
+        "t": "Sporadiskt och utan systematik",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  },
+  {
+    "dim": "Övervakning & utvärdering",
+    "q": "Integrerar organisationen extern hotbildsinformation — om vilka aktörer som är aktiva och vilka sektorer som är under tryck?",
+    "hint": "Myndighetsgemensam lägesbild om organiserad brottslighet publiceras årligen. Organisationer som inte aktivt konsumerar omvärldsbevakning saknar grundförutsättningen för adekvat riskbedömning.",
+    "opts": [
+      {
+        "t": "Ja, extern hotbildsinfo integreras aktivt i riskarbetet",
+        "s": 3
+      },
+      {
+        "t": "Delvis — vi läser rapporter men de påverkar sällan riskbedömningen",
+        "s": 1
+      },
+      {
+        "t": "Nej",
+        "s": 0
+      }
+    ]
+  }
+];
+const DIMS=[...new Set(QUESTIONS.map(q=>q.dim))];
+function buildAssess(){
+  const nav=document.getElementById('assessNav'),panels=document.getElementById('assessPanels');
+  nav.innerHTML='';panels.innerHTML='';
+  DIMS.forEach((dim,di)=>{
+    const el=document.createElement('div');el.className='ani'+(di===0?' active':'');el.id='ani'+di;
+    el.innerHTML=`<div class="ani-n">${String(di+1).padStart(2,'0')}</div><div class="ani-t">${dim}</div>`;
+    el.onclick=()=>goQ(QUESTIONS.findIndex(q=>q.dim===dim));nav.appendChild(el);
+  });
+  QUESTIONS.forEach((q,i)=>{
+    const p=document.createElement('div');p.className='assess-panel-col'+(i===0?' show':'');p.id='qp'+i;
+    p.innerHTML=`<div class="aq-prog"><div class="aq-prog-fill" style=
+[...context end...]
+gsstöd och bidrag. Brå stöttar kommunerna med metodstöd.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="module" id="mod-visuals">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Visuella modeller &#183; 7 grafik</p>
+    <h1 class="sec-title">Analysmodeller för<br><em>otillbörlig påverkan</em></h1>
+    <p class="sec-intro">Sju interaktiva modeller gör de viktigaste sambanden lättare att se, från påverkanspyramiden och olika insidertyper till infiltrationsprocessen, roller i kriminella nätverk och rekryteringstrappan.</p>
+  </div>
+
+  <!-- ── 1. PÅVERKANSPYRAMIDEN ── -->
+  <div class="reveal" style="margin-bottom:56px">
+    <p class="eyebrow">Myndighetsgemensam lägesbild 2023 &#183; Organiserad brottslighet</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Påverkans<em>pyramiden</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Tre nivåer av eskalerande påverkan mot offentlig sektor — från öppna hot och utpressning via korruption till infiltration. Metodvalet styrs av vad som fungerar: om hot och utpressning är riskabelt väljer antagonisten korruption; om korruption är svårt väljs infiltration.</p>
+    <div style="display:flex;justify-content:center;margin-bottom:20px">
+      <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" style="max-width:640px;width:100%">
+        <!-- Base: Hot och utpressning -->
+        <polygon points="50,300 550,300 430,200 170,200" fill="#B33A3A" opacity="0.9"/>
+        <text x="300" y="258" text-anchor="middle" font-family="IBM Plex Sans,system-ui" font-size="15" font-weight="600" fill="#F0EDE6">Hot, utpressning m.m.</text>
+        <text x="300" y="276" text-anchor="middle" font-family="IBM Plex Sans,system-ui" font-size="10" fill="rgba(240,237,230,0.75)">Öppna/dolda hot · tr
+[...context end...]
+ont-family="IBM Plex Mono,monospace" font-size="9" fill="#8A9AB0">Kostsam</text>
+        <!-- Lines -->
+        <line x1="430" y1="200" x2="550" y2="200" stroke="rgba(240,237,230,0.15)" stroke-width="0.5"/>
+        <line x1="340" y1="110" x2="550" y2="110" stroke="rgba(240,237,230,0.15)" stroke-width="0.5"/>
+        <line x1="300" y1="30" x2="550" y2="30" stroke="rgba(240,237,230,0.15)" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div style="font-family:var(--fm);font-size:8px;color:var(--dim);text-align:center">Källa: <a href="https://polisen.se/om-polisen/polisens-arbete/organiserad-brottslighet/myndighetsgemensam-satsning-mot-organiserad-brottslighet/" target="_blank" rel="noopener">Myndighetsgemensam lägesbild om organiserad brottslighet 2023 ↗</a></div>
+<div class="reveal" style="margin-bottom:32px">
+      <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAo4AAAE6CAYAAACYvdMeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+lSURBVHhe7J13gNRE28B/ye5e71yBox29dxQFARUEfe0VxYIiikoVFFEsFEFApQsIIoIFBaT33qT33o7rve2V7ZvM90f2KqjoC+rnm5+uXmYmk2lJnjwz8zySEEKgo6Ojo6Ojo6Oj8zvIFQN0dHR0dHR0dHR0roUuOOro6Ojo6Ojo6FwXuuCoo6Ojo6Ojo6NzXeiCo46Ojo6Ojo6OznWhC446Ojo6Ojo6OjrXhS446ujo6Ojo6OjoXBe64Kijo6Ojo6Ojo3Nd6IKjjo6Ojo6Ojo7OdaELjjo6Ojo6Ojo6OteFLjjq6Ojo6Ojo6OhcF7rgqKOjo6Ojo6Ojc13ogqOOjo6Ojo6Ojs51oQuOOjo6Ojo6Ojo614UuOOro6Ojo6Ojo6FwXuuCoo6Ojo6Ojo6NzXeiCo46Ojo6Ojo6OznWhC446Ojo6Ojo6OjrXhS446ujo6Ojo6OjoXBe64Kijo6Ojo6Ojo3Nd6IKjjo6Ojo6Ojo7OdaELjjo6Ojo6Ojo6OteFLjjq6Ojo6Ojo6OhcF7rgqKOjo6Ojo6Ojc13ogqOOjo6Ojo6Ojs51oQuOOjo6Ojo6Ojo614UuOOro6Ojo6Ojo6FwXkhBCVAzU0fnHIQT6QNXR0flfQAKQpIrBOjr/CHTBUef/BYrTjmIpqhiso6Oj869EMpowBQZXDNbR+dvRBUed/xcIIXCZcxCKUjFKR0dH51+JKSgU2curYrCOzt+KvsZR5x+L22pBqCoAkiRh8POvmERHR0fnX4vbUogQ2jNQR+efgi446vwjEYqbgrPHcRcVlITJJi8ko6lcOh0dHZ1/K0JxozqdFYN1dP5WdMFR55+HEDhys3FkpZN/9kSp1lE2IHt
+[...context end...]
+kanspyramiden — bearbetad visualisering" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
+        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Påverkanspyramiden — bearbetad visualisering</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Källa: <a href="https://polisen.se/om-polisen/polisens-arbete/organiserad-brottslighet/myndighetsgemensam-satsning-mot-organiserad-brottslighet/" target="_blank" rel="noopener">Myndighetsgemensam lägesbild 2023 ↗</a></span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin-top:20px">
+      <div style="background:var(--bg-card);padding:16px 18px;border-top:3px solid #B33A3A">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#B33A3A;margin-bottom:7px">Hot, utpressning, trakasserier</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.65">Öppna eller dolda hot mot personer i beslutsfattande ställning, eller mot personer med förmåga att påverka utfallet av ett ärende eller att avslöja oegentligheter och brottslig verksamhet. Statskontoret (2024): 44% av offentliganställda har upplevt påverkansförsök.</div>
+      </div>
+      <div style="background:var(--bg-card);padding:16px 18px;border-top:3px solid #C45C2E">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#C45C2E;margin-bottom:7px">Korruption</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.65">Används när hot och utpressning inte fungerar eller bedöms som riskabelt. Enskilda individers sårbar
+[...context end...]
+:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#6B5EA830';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Ekobrotsmyndigheten Åtal i ärende om utnyttjade identiteter. https://www.ekobrottsmyndigheten.se/atal-i-arende-om-utnyttjade-identiteter/</span></a>
+      <a href="https://polisen.se/siteassets/dokument/organiserad_brottslighet/mgl-2023.pdf" target="_blank" rel="noopener" title="Myndighetsgemensam lägesbild om organiserad brottslighet. https://polisen.se/siteassets/dokument/organiserad_brottslighet/mgl-2023.pdf" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#6B5EA830';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Myndighetsgemensam lägesbild om organiserad brottslighet. https://polisen.se/siteassets/dokument/organiserad_brottslighet/mgl-2023.pdf</span></a>
+    </div>
+  </div>
+  <div class="src-group" data-cat="insiders-i-r-ttsv-sende-och-kriminalv-rd" style="margin-bottom:48px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #7A4A6B40">
+      <div style="width:3px;height:22px;background:#7A4A6B;flex-shrink:0"></div>
+      <h3 style="font-family:var(--fd);font-size:17px;font-weight:400;color:#7A4A6B;margin:0">Insiders i rättsväsende och krimina
+[...context end...]
+okument/organiserad_brottslighet/mgl-2023.pdf" target="_blank" rel="noopener" title="Myndighetsgemensam lägesbild om organiserad brottslighet. https://polisen.se/siteassets/dokument/organiserad_brottslighet/mgl-2023.pdf" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#6B5EA830';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Myndighetsgemensam lägesbild om organiserad brottslighet. https://polisen.se/siteassets/dokument/organiserad_brottslighet/mgl-2023.pdf</span></a>
+    </div>
+  </div>
+  <div class="src-group" data-cat="insiders-i-r-ttsv-sende-och-kriminalv-rd" style="margin-bottom:48px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #7A4A6B40">
+      <div style="width:3px;height:22px;background:#7A4A6B;flex-shrink:0"></div>
+      <h3 style="font-family:var(--fd);font-size:17px;font-weight:400;color:#7A4A6B;margin:0">Insiders i rättsväsende och kriminalvård</h3>
+      <span style="font-family:var(--fm);font-size:10px;color:var(--dim);margin-left:auto">1 källor</span>
+    </div>
+    <div style="display:grid;gap:4px">
+      <a href="https://www.domstol.se/nyheter/2021/12/konsult-doms-for-spioneri-aven-i-hovrattenny-sida/" target="_blank" rel="noopener" title="Hovrätten Västra Sverige Mål B 5632-21. https://www.domstol.se/nyheter/2021/12/konsult-doms-for-spioneri-aven-i-hovrattenny-sida/" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.
+[...context end...]
+
+--- 'Botkyrka': 5 match(es) ---
+ 5586-23","t":"court","url":"https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"},{"l":"Läkartidningen — Tidigare verksamhetschef vid Akademiska döms","t":"media","url":"https://lakartidningen.se/aktuellt/nyheter/2024/03/tidigare-verksamhetschef-vid-akademiska-doms-for-grovt-mutbrott/"},{"l":"SVT — Chef på Akademiska sjukhuset döms för miljonmutor","t":"media","url":"https://www.svt.se/nyheter/lokalt/uppsala/chef-pa-akademiska-sjukhuset-doms-for-miljonmutor"}]},{"id":"c124","title":"Think Pink-härvan — Sveriges största miljöbrottmål, 21 platser, kvarts miljard i skadestånd, 6 år fängelse","date":"2025-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.233,"lng":17.825,"p":"municipality"},"sector":"PROCUREMENT","actor":"ORGANIZED_CRIME","status":"CONFIRMED","summary":"Södertörns tingsrätt dömde 10 av 11 åtalade i det dittills största miljöbrottmålet i Sverige. Återvinningsbolaget NMT Think Pink transporterade farligt avfall med bland annat bly, kvicksilver och arsenik till 21 platser i stället för korrekt behandling. Vd:n F.V., även känd som B.N., dömdes till sex års fängelse, tio års näringsförbud och ytterligare fängelse för ekobrott. Fem huvudtilltalade ska solidariskt betala omkring en kvarts miljard kronor i skadestånd. Hovrätten behandlar överklaganden 2026.","sources":[{"l":"Södertörns tingsrätt — dom Think Pink-målet (2025-06-17)","t":"court","url":"https://www.domstol.se/nyheter/2025/06/fangelsestraff-for-flera-personer-i-det-sa-kallade-think-pink-malet/"},{"l":"Transportarbetaren — Långa fängelsestraff i Think Pink-målet (2025-06-17)","t":"news","url":"https://www.transportarbetaren.se/think-pink-i-fangelse/"}]},{"id":"c125","title":"Nykvarn — f.d. kriminalvårdare från högsäkerhetsanstalt gripen med 230 kg amfetamin, koppling till Foxtrot","date":"2026-04","loc":{"m":"Nykvarn","r":"Södermanlan
+[...context end...]
+ en mututredning. Två begärdes häktade på sannolika skäl misstänkta för grovt givande respektive grovt tagande av muta; den senare var anställd i Region Stockholms trafikförvaltning. Tre andra frigavs men misstankarna kvarstod. Fallet visar varför inköp, leverantörskontakter och beslutsmandat i kollektivtrafiken behöver följas tillsammans. Förundersökningen, AM 88075-25 och mål B 2334-26, var pågående när posten skapades.","sources":[{"l":"Åklagarmyndigheten — två personer begärda häktade för mutbrott i Stockholm (12 feb 2026)","t":"report","url":"https://www.aklagare.se/for-media/pressmeddelanden/2026/februari/tva-personer-begarda-haktade-for-mutbrott-i-stockholm/"}]},{"id":"c133","title":"Botkyrka — misstänkta oegentligheter blir granskningsfall för infiltrationskommission","date":"2026-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.198,"lng":17.833,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,
+[...context end...]
+ta; den senare var anställd i Region Stockholms trafikförvaltning. Tre andra frigavs men misstankarna kvarstod. Fallet visar varför inköp, leverantörskontakter och beslutsmandat i kollektivtrafiken behöver följas tillsammans. Förundersökningen, AM 88075-25 och mål B 2334-26, var pågående när posten skapades.","sources":[{"l":"Åklagarmyndigheten — två personer begärda häktade för mutbrott i Stockholm (12 feb 2026)","t":"report","url":"https://www.aklagare.se/for-media/pressmeddelanden/2026/februari/tva-personer-begarda-haktade-for-mutbrott-i-stockholm/"}]},{"id":"c133","title":"Botkyrka — misstänkta oegentligheter blir granskningsfall för infiltrationskommission","date":"2026-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.198,"lng":17.833,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"En polis 
+[...context end...]
+as tillsammans. Förundersökningen, AM 88075-25 och mål B 2334-26, var pågående när posten skapades.","sources":[{"l":"Åklagarmyndigheten — två personer begärda häktade för mutbrott i Stockholm (12 feb 2026)","t":"report","url":"https://www.aklagare.se/for-media/pressmeddelanden/2026/februari/tva-personer-begarda-haktade-for-mutbrott-i-stockholm/"}]},{"id":"c133","title":"Botkyrka — misstänkta oegentligheter blir granskningsfall för infiltrationskommission","date":"2026-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.198,"lng":17.833,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"En polis i nordvästra Skåne åtalades för bland annat dataintrång och brott mot tystnadsplikt efter misstankar om obehöriga slagningar och att uppgifter lämnats vidare till en brottsmisstänkt person. Fallet är ett aktuel
+[...context end...]
+eddelanden/2026/februari/tva-personer-begarda-haktade-for-mutbrott-i-stockholm/"}]},{"id":"c133","title":"Botkyrka — misstänkta oegentligheter blir granskningsfall för infiltrationskommission","date":"2026-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.198,"lng":17.833,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"En polis i nordvästra Skåne åtalades för bland annat dataintrång och brott mot tystnadsplikt efter misstankar om obehöriga slagningar och att uppgifter lämnats vidare till en brottsmisstänkt person. Fallet är ett aktuellt exempel på hur legitim registeråtkomst kan omvandlas till operativt försprång för en extern aktör. Uppgifterna bygger på åtalet; någon lagakraftvunnen dom fanns inte när posten skapades.","sources":[{"l":"Aftonbladet — polis åtalas efter misstänkt informationsläcka
+[...context end...]
+
+--- 'infiltrationskommission': 3 match(es) ---
+änkta för grovt givande respektive grovt tagande av muta; den senare var anställd i Region Stockholms trafikförvaltning. Tre andra frigavs men misstankarna kvarstod. Fallet visar varför inköp, leverantörskontakter och beslutsmandat i kollektivtrafiken behöver följas tillsammans. Förundersökningen, AM 88075-25 och mål B 2334-26, var pågående när posten skapades.","sources":[{"l":"Åklagarmyndigheten — två personer begärda häktade för mutbrott i Stockholm (12 feb 2026)","t":"report","url":"https://www.aklagare.se/for-media/pressmeddelanden/2026/februari/tva-personer-begarda-haktade-for-mutbrott-i-stockholm/"}]},{"id":"c133","title":"Botkyrka — misstänkta oegentligheter blir granskningsfall för infiltrationskommission","date":"2026-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.198,"lng":17.833,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","st
+[...context end...]
+26-06","loc":{"m":"Botkyrka","r":"Stockholm","lat":59.198,"lng":17.833,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"Efter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"En polis i nordvästra Skåne åtalades för bland annat dataintrång och brott mot tystnadsplikt efter misstankar om obehöriga slagningar och att uppgifter lämnats vidare till en brottsmisstänkt person. Fallet är ett aktuellt exempel på hur legitim registeråtkomst kan omvandlas till operativt försprång för en extern aktör. Uppgifterna bygger på åtalet; någon lagakraftvunnen dom fanns inte när posten skapades.","sources":[{"l":"Aftonbladet — polis åtalas efter misstänkt informationsläcka (5 aug 2026)","t":"media","url":"https://www.aftonbladet.se/nyheter/a/aJ8zXL/polis-atalas-lackte-information-till-misstankt"}]},{"id":"c135","title":"Malmö stad — internutredning om misstänkta mutor och riggade upphan
+[...context end...]
+fter uppgifter om misstänkt infiltration och påverkan i Botkyrkas lokala politiska processer gav regeringen en särskild utredare i uppdrag att granska de misstänkta oegentligheterna i kommunen och liknande fall. Uppdraget omfattar även hur partier och kommuner hanterar misstankar om infiltration bland förtroendevalda. Att Botkyrka granskas innebär inte att uppgifterna är rättsligt fastställda; posten dokumenterar misstanken, den institutionella reaktionen och behovet av spårbar uppföljning.","sources":[{"l":"Regeringen — infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (26 juni 2026)","t":"report","url":"https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-tillsatter-en-infiltrationskommission-mot-otillaten-paverkan/"}]},{"id":"c134","title":"Nordvästra Skåne — polis åtalad för att ha lämnat uppgifter till en misstänkt","date":"2026-08","loc":{"m":"Nordvästra Skåne","r":"Skåne","lat":56.046,"lng":12.695,"p":"approximate"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"INDICATION","summary":"En polis i nordvästra Skåne åtalades för bland annat dataintrång och brott mot tystnadsplikt efter misstankar om obehöriga slagningar och att uppgifter lämnats vidare till en brottsmisstänkt person. Fallet är ett aktuellt exempel på hur legitim registeråtkomst kan omvandlas till operativt försprång för en extern aktör. Uppgifterna bygger på åtalet; någon lagakraftvunnen dom fanns inte när posten skapades.","sources":[{"l":"Aftonbladet — polis åtalas efter misstänkt informationsläcka (5 aug 2026)","t":"media","url":"https://www.aftonbladet.se/nyheter/a/aJ8zXL/polis-atalas-lackte-information-till-misstankt"}]},{"id":"c135","title":"Malmö stad — internutredning om misstänkta mutor och riggade upphandlingar","date":"2025-09","loc":{"m":"Malmö","r":"Skåne","lat":55.605,"lng":13.003,"p":"municipality"},"sector":"PROCUREMENT","actor":"ECONOMIC_INTEREST","status":"INDICATIO
+[...context end...]
+
+--- 'Riksrevisionen': 82 match(es) ---
+ght:1.8;margin:0 0 14px">Statliga myndigheter är intressanta för alla fyra aktörstyper, men av olika skäl. Kriminella nätverk söker tillgång till register och beslutsbefogenheter. Främmande makt vill ha underrättelseinformation och möjlighet att störa samhällsfunktioner. Ekonomiska intressen söker påverkan över upphandlingsbeslut och tillstånd. Extremistiska aktörer söker legitimitet och finansiering via bidragssystem.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen (RiR 2026:3) ↗</a> granskade FMV, Kammarkollegiet och Kriminalvården. Den samlade bedömningen är att myndigheternas arbete mot infiltration som helhet inte är effektivt, men utvecklingsnivån och bristerna varierar. Återkommande förbättringsområden är styrning, riskanalys, uppföljning, säkerhetskultur och skyddet i verksamhet som inte omfattas av säkerhetsskyddslagstiftningen.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Lantmäteriets fall visar att allvarlig skada kan uppstå även utan en utpekad insider. Ingen enskild insider identifierades som huvudgärningsman — i stället utnyttjades ett systemfel som gav obehörig läsåtkomst till fastighetsregistret under flera år. Ds 2026:2 konstaterar att ledningen kände till sårbarheterna men inte vidtog åtgärder. Det är ett exempel på hur passivitet i organisationen kan orsaka stor skada även utan aktiv illojalitet.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Migrationsverket-fallet (2022) visar hur en enskild handläggares beslutsutrymme kan utnyttjas: en handläggare beviljade 66 arbetstillstånd på sin sista arbetsdag, en koncentration av beslut som möjliggjordes av att avgå
+[...context end...]
+/div>
+      <div style="margin-bottom:28px"><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Rättsväsendet och kriminalvården ska skydda samhället mot organiserad brottslighet. Samtidigt är de särskilt attraktiva mål för de nätverk som verksamheterna ska bekämpa. Den dagliga, täta kontakten mellan personal och kriminella individer skapar rekryteringsytor som saknar motstycke i andra sektorer.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen (RiR 2026:3) ↗</a> redovisar att 44% av Kriminalvårdens personalomsättning sker inom tre år — vilket kombinerat med hög arbetsbelastning och löneutmaningar skapar en ström av unga, ekonomiskt pressade medarbetare som exponeras för rekryteringsförsök från de intagna.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Foxtrot-fallen (2024–2025) är de hittills mest dokumenterade exemplen på systematisk kriminalvårdsinfiltration i Sverige. Kriminalvårdare rekryterades med en kombination av ekonomiska incitament och hot. Resultaten: smuggling av narkotika och mobiltelefoner via toalettspolning och liknande metoder, informationsläckage om planerade cellransaker, och i ett fall — köp av en Kalasjnikov i tjänstekläder.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Domstolssektorn exponerades i Attunda tingsrätt-fallet (2018 och 2023): en administrativt anställd varnade ett kriminellt nätverk för planerade tillslag. Turebergsnätverket erhöll därigenom förhandsinformation om polisinsatser, vilket försvårade åtal.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Advokatyrket utgör en separat kategori. 
+[...context end...]
+e-height:1.5">Sverige är ett av de 10 länder som syns mest i globala korruptionshärvor trots h&#246;g ranking p&#229; Transparency Internationals index. K&#228;lla: <a href="https://www.dagensjuridik.se/nyheter/ett-gissel-sverige-topp-tio-bland-globala-korruptionsharvor/" target="_blank" rel="noopener">Dagens Juridik 2024 ↗</a></div>
+      </div>
+    </div>
+    <div style="padding:14px 18px;background:var(--bg-card);border:1px solid var(--border-s);font-size:12px;color:var(--muted);line-height:1.65">
+      <strong style="color:var(--text)">Upphandling som riskzon:</strong> Dagens Samhälle (2024): upphandling pekas konsekvent ut som det st&#246;rsta riskområdet f&#246;r korruption i Sverige. Riksrevisionen: kravspecificeringar och tilldelningsbeslut kan styras av enskilda handl&#228;ggare utan intern granskning. IMM (2024): "Oroande att p&#229;verkansmetoder anv&#228;nds inom offentlig sektor."
+    </div>
+  </div>
+
+  <!-- DEFENSIV VS OFFENSIV RISKHANTERING -->
+  <div class="reveal" style="margin-bottom:56px">
+    <p class="eyebrow">Eric Lang &#183; Insiderhot­forskning</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Förebyggande och reaktiv <em>riskhantering</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">De flesta organisationer bedriver defensiv riskhantering &#8212; de uppfyller regelkrav och klarar tillsynen. Offensiv riskhantering är ett annat paradigm: organisationen söker aktivt risker innan de materialiseras. Skillnaden är avgörande för insiderhot, eftersom de sällan syns i standard­kontroller.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);margin-bottom:24px">
+      <div style="background:var(--bg-card);padding:24px;border-top:3px solid var(--muted)">
+        <div style="font-family:var(
+[...context end...]
+  <a href="https://www.nber.org/papers/w26641" target="_blank" rel="noopener" style="font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted);text-decoration:none">Blanchflower 2020 — ålder och välbefinnande</a>
+      <span style="font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)">Cialdini — Influence (RASCLS)</span>
+      <span style="font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)">CIA/FBI — MICE framework</span>
+      <span style="font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)">Riksrevisionen 2023 och 2025–2026</span>
+      <span style="font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)">Örebro tingsrätt B 832-24</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     MOD 6: INDIKATORER
+════════════════════════════════════════════════════════ -->
+<section class="module" id="mod-inds">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Indikatorsbibliotek · 25 indikatorer</p>
+    <h1 class="sec-title">Indikatorer och<br><em>förändrade beteenden</em></h1>
+    <p class="sec-intro">En signal är inte ett bevis, men flera signaler kan bilda ett mönster. Här finns 25 sökbara varningssignaler med svenska fallexempel och källor. Filtrera på kategori, allvarlighetsgrad eller aktörstyp.</p>
+  </div>
+  <div class="ind-method reveal" aria-label="Analysordning för indikatorer">
+    <div class="ind-method-card"><div class="ind-method-n">01</div><div class="ind-method-title">Observera</div><div class="ind-method-copy">Dokumentera ett konkret beteende, en systemhändelse eller en avvikelse. Skilj observationen från antaganden om motiv och personlighet.</div>
+[...context end...]
+tton>
+    <button class="fb" data-ic="sev" data-iv="HIGH" onclick="setIF(this,'sev')">Hög allvarlighet</button>
+  </div>
+  <div class="ind-grid reveal" id="indGrid"></div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     MOD 7: ORGANISATIONSTESTET
+════════════════════════════════════════════════════════ -->
+<section class="module" id="mod-assess">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 6 · Självskattning</p>
+    <h1 class="sec-title">Organisations<em>testet</em></h1>
+    <p class="sec-intro">Besvara 14 frågor inom sju områden och få en enkel bild av var organisationen står. Rekommendationerna bygger på brister som Riksrevisionen, Brå och Statskontoret har identifierat. Svaren stannar i din webbläsare.</p>
+  </div>
+  <div class="ind-guardrail reveal"><strong>Så ska resultatet läsas:</strong> testet är en strukturerad självskattning, inte en revision eller certifiering. Ett svar bör kunna styrkas med dokument, ansvarig funktion och ett aktuellt exempel. Om bevis saknas bör området bedömas som delvis infört. Klart innebär att de tre lägst bedömda områdena har fått en ansvarig, en tidsatt åtgärd och ett uppföljningsdatum.</div>
+  <div class="assess-layout reveal" id="assessWrap">
+    <div class="assess-nav-col" id="assessNav"></div>
+    <div id="assessPanels"></div>
+  </div>
+  <div class="res-wrap" id="resWrap">
+    <h2 class="res-title">Er mognadsprofil</h2>
+    <p class="res-sub">Beräknad lokalt — inga uppgifter sparas.</p>
+    <div class="res-grid" id="resGrid"></div>
+    <div style="padding-top:18px;border-top:1px solid var(--border-s)">
+      <p class="eyebrow" style="margin-bottom:12px">Prioriterade rekommendationer</p>
+      <div id="recList"></div>
+    </div>
+    <div style="margin-top:22px"><button class="btn-g" onclick="resetAssess()">Starta om</button></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════
+[...context end...]
+script>
+<script>
+/* ══ CORE DATA ══ */
+const CASES=[{"id":"c01","title":"Möjliggörare i Kriminalvården — registerslagningar röjdes till kriminellt nätverk","date":"2022-11","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"En anställd vid Kriminalvården dömdes efter att under drygt ett år ha gjort otillåtna registerslagningar och lämnat uppgifterna till ett kriminellt nätverk. Den interna kontrollen fångade inte avvikelserna. Fallet är ett tydligt exempel på en person som rekryterats efter att ha fått sin anställning, en så kallad upparbetad möjliggörare.","sources":[{"l":"Riksrevisionen — Infiltration i staten (RiR 2026:3)","t":"report","url":"https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"l":"Aktuell Säkerhet — Riksrevisionen: Brister mot infiltration","t":"media","url":"https://www.aktuellsakerhet.se/riksrevisionen-brister-i-arbetet-mot-infiltration-i-statliga-myndigheter/"},{"l":"Publikt — Statens anställda blir verktyg för kriminella","t":"media","url":"https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"},{"l":"Brå 2024 — Möjliggörare för kriminella nätverk","t":"report","url":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"}]},{"id":"c02","title":"Försäkringskassan — anställd utförde slagningar under hot från assistansbolag","date":"2020-03","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.71,"lng":11.97,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"En anställd på Försäkringskassan i Västsverige dömdes den 4 mars 2020 till villkorlig dom och dagsböter för grovt dataintrång. Personen uppgav att slagningarna om assistan
+[...context end...]
+sector":"CRIMINAL_JUSTICE","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"En anställd vid Kriminalvården dömdes efter att under drygt ett år ha gjort otillåtna registerslagningar och lämnat uppgifterna till ett kriminellt nätverk. Den interna kontrollen fångade inte avvikelserna. Fallet är ett tydligt exempel på en person som rekryterats efter att ha fått sin anställning, en så kallad upparbetad möjliggörare.","sources":[{"l":"Riksrevisionen — Infiltration i staten (RiR 2026:3)","t":"report","url":"https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"l":"Aktuell Säkerhet — Riksrevisionen: Brister mot infiltration","t":"media","url":"https://www.aktuellsakerhet.se/riksrevisionen-brister-i-arbetet-mot-infiltration-i-statliga-myndigheter/"},{"l":"Publikt — Statens anställda blir verktyg för kriminella","t":"media","url":"https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"},{"l":"Brå 2024 — Möjliggörare för kriminella nätverk","t":"report","url":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"}]},{"id":"c02","title":"Försäkringskassan — anställd utförde slagningar under hot från assistansbolag","date":"2020-03","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.71,"lng":11.97,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"En anställd på Försäkringskassan i Västsverige dömdes den 4 mars 2020 till villkorlig dom och dagsböter för grovt dataintrång. Personen uppgav att slagningarna om assistansmottagare och assistansbolag hade gjorts under press och visst hot från en person som drev ett assistansbolag.","sources":[{"l":"Riksrevisionen — Infiltration i staten (RiR 2026:3)","t":"report","url":"https://www.riksrevisionen.se/granskningar/gransknings
+[...context end...]
+la nätverk","t":"report","url":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"}]},{"id":"c02","title":"Försäkringskassan — anställd utförde slagningar under hot från assistansbolag","date":"2020-03","loc":{"m":"Göteborg","r":"Västra Götaland","lat":57.71,"lng":11.97,"p":"municipality"},"sector":"AUTHORITY","actor":"CRIMINAL_NETWORK","status":"CONFIRMED","summary":"En anställd på Försäkringskassan i Västsverige dömdes den 4 mars 2020 till villkorlig dom och dagsböter för grovt dataintrång. Personen uppgav att slagningarna om assistansmottagare och assistansbolag hade gjorts under press och visst hot från en person som drev ett assistansbolag.","sources":[{"l":"Riksrevisionen — Infiltration i staten (RiR 2026:3)","t":"report","url":"https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"l":"Brå 2024 — Möjliggörare för kriminella nätverk","t":"report","url":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"},{"l":"Publikt — Statens anställda blir verktyg för kriminella","t":"media","url":"https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"}]},{"id":"c03","title":"Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse","date":"2023-01","loc":{"m":"Stockholm","r":"Stockholm","lat":59.33,"lng":18.07,"p":"municipality"},"sector":"DEFENCE","actor":"FOREIGN_POWER","status":"CONFIRMED","summary":"Stockholms tingsrätt dömde i januari 2023 två personer: livstids fängelse respektive 9 år och 10 månader för grovt spioneri mot ryska GRU. Den ena var anställd vid Försvarsmakten 2011–2014 och Säkerhetspolisen 2014–2015. Brottsligheten pågick 2011–2017 och avslöjades efter intern underrättelseanalys. Svea hovrätt fastställde domen maj 2023.","sources":[{"l":"Säkerhetspolisen — Liv
+[...context end...]
+
+--- 'Statskontoret': 13 match(es) ---
+/nyheter/lokalt/uppsala/varnar-for-valfardsbrott-omsatter-uppemot-75-miljarder-arligen" target="_blank" rel="noopener">SVT 2024 ↗</a></div>
+      </div>
+      <div style="background:var(--bg-card);padding:20px;text-align:center">
+        <div style="font-family:var(--fd);font-size:40px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:6px">44%</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Offentliganst&#228;llda</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.5">uppger att de utsatts f&#246;r p&#229;verkansf&#246;rs&#246;k i sin myndighetsut&#246;vning. Statskontoret 2024: "en oroande andel."</div>
+      </div>
+      <div style="background:var(--bg-card);padding:20px;text-align:center">
+        <div style="font-family:var(--fd);font-size:40px;font-weight:300;color:var(--green);line-height:1;margin-bottom:6px">Topp 10</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Globalt</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.5">Sverige är ett av de 10 länder som syns mest i globala korruptionshärvor trots h&#246;g ranking p&#229; Transparency Internationals index. K&#228;lla: <a href="https://www.dagensjuridik.se/nyheter/ett-gissel-sverige-topp-tio-bland-globala-korruptionsharvor/" target="_blank" rel="noopener">Dagens Juridik 2024 ↗</a></div>
+      </div>
+    </div>
+    <div style="padding:14px 18px;background:var(--bg-card);border:1px solid var(--border-s);font-size:12px;color:var(--muted);line-height:1.65">
+      <strong style="color:var(--text)">Upphandling som riskzon:</strong> Dagens Samhälle (2024): upphandling pekas konsekvent ut som det st&#246;rsta riskområdet f&#246;r korruption i Sverige. Riksrevisionen: kravspecifi
+[...context end...]
+"fb" data-ic="sev" data-iv="HIGH" onclick="setIF(this,'sev')">Hög allvarlighet</button>
+  </div>
+  <div class="ind-grid reveal" id="indGrid"></div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     MOD 7: ORGANISATIONSTESTET
+════════════════════════════════════════════════════════ -->
+<section class="module" id="mod-assess">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Kapitel 6 · Självskattning</p>
+    <h1 class="sec-title">Organisations<em>testet</em></h1>
+    <p class="sec-intro">Besvara 14 frågor inom sju områden och få en enkel bild av var organisationen står. Rekommendationerna bygger på brister som Riksrevisionen, Brå och Statskontoret har identifierat. Svaren stannar i din webbläsare.</p>
+  </div>
+  <div class="ind-guardrail reveal"><strong>Så ska resultatet läsas:</strong> testet är en strukturerad självskattning, inte en revision eller certifiering. Ett svar bör kunna styrkas med dokument, ansvarig funktion och ett aktuellt exempel. Om bevis saknas bör området bedömas som delvis infört. Klart innebär att de tre lägst bedömda områdena har fått en ansvarig, en tidsatt åtgärd och ett uppföljningsdatum.</div>
+  <div class="assess-layout reveal" id="assessWrap">
+    <div class="assess-nav-col" id="assessNav"></div>
+    <div id="assessPanels"></div>
+  </div>
+  <div class="res-wrap" id="resWrap">
+    <h2 class="res-title">Er mognadsprofil</h2>
+    <p class="res-sub">Beräknad lokalt — inga uppgifter sparas.</p>
+    <div class="res-grid" id="resGrid"></div>
+    <div style="padding-top:18px;border-top:1px solid var(--border-s)">
+      <p class="eyebrow" style="margin-bottom:12px">Prioriterade rekommendationer</p>
+      <div id="recList"></div>
+    </div>
+    <div style="margin-top:22px"><button class="btn-g" onclick="resetAssess()">Starta om</button></div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════
+[...context end...]
+ler personalstruktur","Medarbetare med plötsliga ekonomiska förbättringar utan förklaring","Förfrågningar om känslig teknisk information under täckmantel av samarbete","IT-systembrister som möjliggör datainsamling utan enskild möjliggörare"],"cases":["c03","c10","c24"]},{"id":"extremist","name":"Extremistisk miljö","sub":"Ideologiskt driven","color":"#9B4FBB","goal":"Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet, finansiera verksamhet","horizon":"Kort–medellång sikt","exposure":"MEDIUM","methods":["Uthängning och doxxning","Samordnade trakasserier","Infiltration via legitima yrkesroller","Informationspåverkan mot beslutsprocess","Finansiering via offentliga bidrag"],"note":"Statskontoret beskriver hur skadorna kan drabba både den utsatta personen, anhöriga, verksamheten och tilliten till förvaltningen. Acta Publicas granskning visar att personer och bolag med extremistkopplingar kan framstå som legitima och därför passera vanliga kontroller. Ett exempel är övervakare inom Kriminalvården som haft ansvar för dömda med koppling till samma miljöer.","source":"Acta Publica 2020 — Möjliggörarna","sourceUrl":"https://actapublica.se/nyheter/rapport-mojliggorarna/","indicators":["Ökning av hotfulla meddelanden kring specifikt ärende eller beslut","Publicering av personuppgifter om medarbetare på externa plattformar","Samordnade negativa narrativ mot enskild tjänsteperson under kort tid","Kombination av digital trakassering och fysisk närvaro nära arbetsplats","Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"],"cases":["c14","c16","c18"]},{"id":"economic-interest","name":"Ekonomiskt intresse","sub":"Kommersiell aktör","color":"#4A7B6F","goal":"Avtal, tillstånd, fördelaktig behandling i upphandling, tillsyn eller tilldelning","horizon":"Medellång sikt","exposure":"MEDIUM","methods":["Relationsbygge över tid","Informella leverantörskontakter","
+[...context end...]
+ad kunskap om organisationens struktur, rutiner och frånvaro kan vara minst lika värdefull.","src":"Brå 2024 — Möjliggörare för kriminella nätverk","sourceUrl":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"},{"id":"i12","cat":"BEHAVIOUR","title":"Försämrad prestation kopplad till externt tryck","sev":"MEDIUM","actors":["criminal-network","extremist"],"desc":"En medarbetares prestation försämras tydligt utan någon känd förklaring i arbetet. Det kan vara ett tecken på yttre press, beroende eller psykisk belastning efter en oönskad kontakt.","example":"Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.","src":"Statskontoret 2026 — stöd mot otillåten påverkan","sourceUrl":"https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"},{"id":"i13","cat":"BEHAVIOUR","title":"Medarbetare under ovanlig ekonomisk press","sev":"MEDIUM","actors":["criminal-network","foreign-power"],"desc":"Medarbetare med känslig tillgång uppvisar tecken på ovanlig ekonomisk stress — löneutmätning, dokumenterade skulder — utan att organisationens stödstrukturer aktiverats.","example":"Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är en etablerad rekryteringsfaktor i samtliga källor.","src":"Riksrevisionen 2026 — Infiltration i staten","sourceUrl":"https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"id":"i14","cat":"DIGITAL","title":"Uthängning av personuppgifter på nätet","sev":"HIGH","actors":["extremist"],"desc":"Medarbetarens namn, adress, bild, familjeuppgif
+[...context end...]
+ 2024 — Möjliggörare för kriminella nätverk","sourceUrl":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"},{"id":"i12","cat":"BEHAVIOUR","title":"Försämrad prestation kopplad till externt tryck","sev":"MEDIUM","actors":["criminal-network","extremist"],"desc":"En medarbetares prestation försämras tydligt utan någon känd förklaring i arbetet. Det kan vara ett tecken på yttre press, beroende eller psykisk belastning efter en oönskad kontakt.","example":"Försäkringskassan-fallet (2020): den anställde beskrev sina handlingar som gjorda 'under press och visst hot'. Statskontoret: påverkan påverkar beslutsförmågan långt innan formell incident kan rapporteras.","src":"Statskontoret 2026 — stöd mot otillåten påverkan","sourceUrl":"https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"},{"id":"i13","cat":"BEHAVIOUR","title":"Medarbetare under ovanlig ekonomisk press","sev":"MEDIUM","actors":["criminal-network","foreign-power"],"desc":"Medarbetare med känslig tillgång uppvisar tecken på ovanlig ekonomisk stress — löneutmätning, dokumenterade skulder — utan att organisationens stödstrukturer aktiverats.","example":"Riksrevisionen (2025): 2,2% av Kriminalvårdens anställda har haft löneutmätning under granskningsperioden. Ekonomisk sårbarhet är en etablerad rekryteringsfaktor i samtliga källor.","src":"Riksrevisionen 2026 — Infiltration i staten","sourceUrl":"https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"id":"i14","cat":"DIGITAL","title":"Uthängning av personuppgifter på nätet","sev":"HIGH","actors":["extremist"],"desc":"Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutnin
+[...context end...]
+etablerad rekryteringsfaktor i samtliga källor.","src":"Riksrevisionen 2026 — Infiltration i staten","sourceUrl":"https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"id":"i14","cat":"DIGITAL","title":"Uthängning av personuppgifter på nätet","sev":"HIGH","actors":["extremist"],"desc":"Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutning till ett specifikt pågående ärende.","example":"Socialchef utsattes för koordinerad uthängning med privat adress publicerad. Personen lämnade sin tjänst (Statskontoret 2024). Brå: doxxning används systematiskt för att neutralisera beslutsfattare utan att begå formellt brott.","src":"Statskontoret 2026 — stöd mot otillåten påverkan","sourceUrl":"https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"},{"id":"i15","cat":"DIGITAL","title":"Samordnade budskap mot enskild tjänsteperson","sev":"HIGH","actors":["extremist","foreign-power"],"desc":"Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination med syftet att delegitimera personen eller organisationens beslut.","example":"MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.","src":"MPF — Påverkanskampanjer","sourceUrl":"https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer"},{"id":"i16","cat":"DIGITAL","title":"Kombinerat mönster: digital trakassering och fysisk närvaro","sev":"HIGH","actors":["extremist","criminal-network"],"desc":"Kombination av koordinerade digita
+[...context end...]
+revisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"},{"id":"i14","cat":"DIGITAL","title":"Uthängning av personuppgifter på nätet","sev":"HIGH","actors":["extremist"],"desc":"Medarbetarens namn, adress, bild, familjeuppgifter eller privata kontaktuppgifter publiceras på externa plattformar — ofta koordinerat och i anslutning till ett specifikt pågående ärende.","example":"Socialchef utsattes för koordinerad uthängning med privat adress publicerad. Personen lämnade sin tjänst (Statskontoret 2024). Brå: doxxning används systematiskt för att neutralisera beslutsfattare utan att begå formellt brott.","src":"Statskontoret 2026 — stöd mot otillåten påverkan","sourceUrl":"https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"},{"id":"i15","cat":"DIGITAL","title":"Samordnade budskap mot enskild tjänsteperson","sev":"HIGH","actors":["extremist","foreign-power"],"desc":"Flera konton på sociala medier sprider likartade anklagelser mot en specifik medarbetare under kort tid — möjlig koordination med syftet att delegitimera personen eller organisationens beslut.","example":"MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.","src":"MPF — Påverkanskampanjer","sourceUrl":"https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer"},{"id":"i16","cat":"DIGITAL","title":"Kombinerat mönster: digital trakassering och fysisk närvaro","sev":"HIGH","actors":["extremist","criminal-network"],"desc":"Kombination av koordinerade digitala trakasserier (doxxning, hotkampanjer) med rapporterad fysisk närvaro nära medarbetarens arbetsplats, hem eller privata sammanha
+[...context end...]
+s beslut.","example":"MSB FIMI-rapporten (2024) dokumenterar mönster av samordnad informationspåverkan mot tjänstepersoner. NCSC (UK): 90% av koordinerade kampanjer startar inom 48 timmar efter ett kontroversiellt offentligt beslut.","src":"MPF — Påverkanskampanjer","sourceUrl":"https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer"},{"id":"i16","cat":"DIGITAL","title":"Kombinerat mönster: digital trakassering och fysisk närvaro","sev":"HIGH","actors":["extremist","criminal-network"],"desc":"Kombination av koordinerade digitala trakasserier (doxxning, hotkampanjer) med rapporterad fysisk närvaro nära medarbetarens arbetsplats, hem eller privata sammanhang.","example":"Statskontoret (2024): kombinationen av digitala och fysiska komponenter identifieras som den mest allvarliga formen av otillåten påverkan mot offentliganställda — och den som sannolikt underrapporteras mest.","src":"Statskontoret 2026 — stöd mot otillåten påverkan","sourceUrl":"https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2026/stod-for-arbetet-mot-otillaten-paverkan-i-den-offentliga-forvaltningen/"},{"id":"i17","cat":"PROCUREMENT","title":"Leverantörskontakt utanför dokumenterade kanaler","sev":"HIGH","actors":["economic-interest","criminal-network"],"desc":"Upphandlande personal har kontakt med anbudsgivare via informella kanaler — luncher, privata mejl, telefonsamtal — utanför den formella upphandlingsprocessen och utan dokumentation.","example":"I härvan vid Akademiska sjukhuset användes privata kontakter och konsultfakturor för att föra över mutor under sju år. Den interna kontrollen upptäckte inte upplägget.","src":"Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset","sourceUrl":"https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"},{"id":"i18","cat":"PROCUREMENT","title":"Erbjudanden om fram
+[...context end...]
