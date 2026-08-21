@@ -36,8 +36,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
 .nav-name{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--text);letter-spacing:.02em}
 .nav-links{display:flex;gap:0;list-style:none;align-items:stretch;height:56px}
+.nav-links>li{display:flex;align-items:stretch}
 .nav-group{position:relative;display:flex;align-items:stretch}
 .nav-category,.nav-source{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 13px;transition:.2s;background:none;border:0;cursor:pointer;white-space:nowrap}
+.nav-source{height:100%;box-sizing:border-box}
 .nav-category:hover,.nav-category[aria-expanded="true"],.nav-source:hover{color:var(--accent);background:var(--accent-g)}
 .nav-category .nl-rom{font-family:var(--fd);font-style:italic;font-size:12px;color:var(--accent);opacity:.6;margin-right:1px}
 .nav-chevron{font-size:9px;color:var(--accent);opacity:.65;transition:.2s}
@@ -55,6 +57,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
   .nav-cta{margin-left:6px;padding:8px 11px}
   .nav-links{display:none;position:fixed;top:56px;left:0;right:0;height:calc(100vh - 56px);overflow-y:auto;background:rgba(10,22,40,.99);padding:14px 22px 32px;align-items:stretch;flex-direction:column;border-top:1px solid var(--border)}
   .nav-links.open{display:flex}
+  .nav-links>li{display:block}
   .nav-group{display:block;border-bottom:1px solid var(--border-s);padding-bottom:10px}
   .nav-category{width:100%;padding:14px 0;color:var(--text);font-size:10px}
   .nav-chevron{display:none}
@@ -70,8 +73,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(transparent,var(--bg));pointer-events:none;z-index:2}
 .hero-bg{position:absolute;inset:0;opacity:.035;pointer-events:none}
 .hero-bg-grid{width:100%;height:100%;background-image:linear-gradient(rgba(184,151,58,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(184,151,58,.4) 1px,transparent 1px);background-size:72px 72px}
-.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center;position:relative;z-index:1;padding:72px 0}
-@media(max-width:980px){.hero-layout{grid-template-columns:1fr;gap:48px;padding:56px 0}}
+.hero-layout{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;position:relative;z-index:1;padding:72px 0}
+@media(max-width:980px){.hero-layout{padding:56px 0}}
 .hero-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .hero-eyebrow::before{content:"";display:block;width:30px;height:1px;background:var(--accent)}
 .hero-kicker{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
@@ -90,27 +93,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .hero-meta-item{display:flex;flex-direction:column;gap:4px}
 .hero-meta-val{font-family:var(--fd);font-size:34px;font-weight:300;color:var(--accent);line-height:1}
 .hero-meta-lab{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);line-height:1.3}
-
-/* ─── CHAIN VIS (hero höger) ─── */
-.chain-vis{position:relative}
-.chain-vis-label{font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;padding-left:2px;display:flex;align-items:center;justify-content:space-between}
-.chain-vis-label span:last-child{color:var(--dim)}
-.chain-steps{display:flex;flex-direction:column;gap:2px}
-.chain-step{display:flex;align-items:stretch;gap:0;opacity:0;animation:chainIn .5s ease forwards;text-decoration:none}
-.chain-step:nth-child(1){animation-delay:.1s}.chain-step:nth-child(2){animation-delay:.22s}
-.chain-step:nth-child(3){animation-delay:.34s}.chain-step:nth-child(4){animation-delay:.46s}
-.chain-step:nth-child(5){animation-delay:.58s}.chain-step:nth-child(6){animation-delay:.7s}
-.chain-step:nth-child(7){animation-delay:.82s}
-@keyframes chainIn{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
-.cs-num{font-family:var(--fm);font-size:10px;font-weight:500;color:var(--accent);padding:13px 9px;background:var(--bg-card);border-left:2px solid var(--accent);min-width:34px;display:flex;align-items:center;justify-content:center;letter-spacing:.06em;transition:.2s}
-.chain-step:last-child .cs-num{border-left-color:var(--orange);color:var(--orange)}
-.cs-body{flex:1;background:var(--bg-card);padding:13px 18px;border-bottom:1px solid var(--border-s);transition:.2s}
-.chain-step:hover .cs-body{background:var(--bg-mid)}
-.chain-step:hover .cs-num{background:var(--bg-mid)}
-.cs-step-label{font-family:var(--fm);font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.chain-step:last-child .cs-step-label{color:var(--orange)}
-.cs-title{font-size:13px;color:var(--text);font-weight:500;line-height:1.25}
-.cs-lead{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.45}
 
 /* ─── DIVIDER ─── */
 .sdiv{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
@@ -254,7 +236,6 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
-  .chain-step{animation:none;opacity:1}
   *{scroll-behavior:auto!important}
 }
 
@@ -276,8 +257,6 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
   .btn-primary,.btn-ghost{width:100%;justify-content:center;min-height:48px}
   .hero-meta{gap:18px}
   .hero-meta-val{font-size:30px}
-  .chain-vis{margin-top:4px}
-  .cs-body{padding:12px 14px}
   .thesis,.parts-section,.evidence-section,.actors-section,.cases-section,.osint-section{padding:56px 0}
   .part-block{margin-top:46px}
   .part-block:first-of-type{margin-top:38px}
@@ -328,6 +307,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <li><a href="modules.html#mod-legal">Juridisk ram</a></li>
           <li><a href="modules.html#mod-infopav">Informationspåverkan</a></li>
           <li><a href="modules.html#mod-theory">Teorier och modeller</a></li>
+          <li><a href="modules.html#mod-visuals">Visuella modeller</a></li>
         </ul>
       </li>
       <li class="nav-group">
@@ -345,7 +325,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <li><a href="modules.html#mod-tools">Verktygslådan</a></li>
           <li><a href="modules.html#mod-culture">Säkerhetskultur</a></li>
           <li><a href="modules.html#mod-handle">Hantera ärende</a></li>
-          <li><a href="modules.html#mod-visuals">Visuella modeller</a></li>
         </ul>
       </li>
       <li><a href="modules.html#mod-sources" class="nav-source">Källor</a></li>
@@ -368,6 +347,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <p class="hero-lead">Otillbörlig påverkan börjar sällan med ett uppenbart brott. Ofta börjar den med en kontakt, en tjänst eller en liten avvikelse som ingen reagerar på. Här samlas <strong>117 dokumenterade fall och 14 analysmoduler med spårbara källor</strong> som visar hur påverkan växer fram och vad organisationer kan göra innan skadan är ett faktum.</p>
         <div class="hero-actions">
           <a href="modules.html" class="btn-primary">Öppna verket →</a>
+          <a href="modules.html#mod-assess" class="btn-ghost">Organisationstestet</a>
           <a href="modules.html#mod-map" class="btn-ghost">Se händelsekartan</a>
         </div>
         <div class="hero-meta">
@@ -390,68 +370,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         </div>
       </div>
 
-      <!-- PÅVERKANSKEDJAN -->
-      <div class="chain-vis reveal">
-        <p class="chain-vis-label"><span>Påverkanskedjan</span><span>sju steg →</span></p>
-        <div class="chain-steps">
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">01</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Kartläggning</div>
-              <div class="cs-title">Det börjar med öppna källor</div>
-              <div class="cs-lead">Nämndhandlingar, LinkedIn, delegationsordningar, platsannonser</div>
-            </div>
-          </a>
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">02</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Urval</div>
-              <div class="cs-title">Formell makt ≠ faktisk påverkan</div>
-              <div class="cs-lead">Handläggaren, registratorn, systemförvaltaren</div>
-            </div>
-          </a>
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">03</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Kontakt</div>
-              <div class="cs-title">Den första relationen skapas</div>
-              <div class="cs-lead">Professionell kanal, gemensam bekant, nätverksevent</div>
-            </div>
-          </a>
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">04</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Relationsbygge</div>
-              <div class="cs-title">Hjälpsamhet skapar beroende</div>
-              <div class="cs-lead">Bekräftelse, tjänster, privata kanaler</div>
-            </div>
-          </a>
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">05</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Gränstest</div>
-              <div class="cs-title">Den lilla begäran som testar</div>
-              <div class="cs-lead">Verkar harmlös men prövar var gränsen går</div>
-            </div>
-          </a>
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">06</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Normalisering</div>
-              <div class="cs-title">Undantaget blir rutin</div>
-              <div class="cs-lead">Varje steg blir lite större, men aldrig på en gång</div>
-            </div>
-          </a>
-          <a href="modules.html#mod-chain" class="chain-step">
-            <div class="cs-num">07</div>
-            <div class="cs-body">
-              <div class="cs-step-label">Systemskada</div>
-              <div class="cs-title">Besluten börjar påverkas</div>
-              <div class="cs-lead">Fördröjning, tystnad, självreglering, personalflykt</div>
-            </div>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -526,6 +444,12 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <div class="mc-desc">Varför går en person över gränsen? Flera etablerade modeller förklaras med dokumenterade fall, utan att användas för att profilera människor.</div>
           <div class="mc-foot" style="color:var(--green)"><span>SAT · MICE · FOI 2026 · DNV</span><span class="mc-arrow">→</span></div>
         </a>
+        <a href="modules.html#mod-visuals" class="mcard" style="border-top-color:#9B4FBB">
+          <div class="mc-kicker">Visuella modeller</div>
+          <div class="mc-title">Modellerna som förklarar</div>
+          <div class="mc-desc">Påverkanspyramiden, insidertypologin, infiltrationsprocessen, rolltyper i kriminella nätverk, rekryteringstrappan och ERRC-matrisen — samlade som visuellt analysstöd.</div>
+          <div class="mc-foot" style="color:#9B4FBB"><span>7 modeller · källbelagda</span><span class="mc-arrow">→</span></div>
+        </a>
       </div>
     </div>
 
@@ -596,12 +520,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <div class="mc-desc">Följ ett ärende i sex steg, från den första signalen till beslut och uppföljning. Här finns också indikatorer på individ-, grupp- och organisationsnivå samt en metod för att förebygga brottsupplägg.</div>
           <div class="mc-foot" style="color:var(--orange)"><span>6 steg · 3 nivåer</span><span class="mc-arrow">→</span></div>
         </a>
-        <a href="modules.html#mod-visuals" class="mcard" style="border-top-color:#9B4FBB">
-          <div class="mc-kicker">Visuella modeller</div>
-          <div class="mc-title">Modellerna som förklarar</div>
-          <div class="mc-desc">Påverkanspyramiden, insidertypologin, infiltrationsprocessen, rolltyper i kriminella nätverk, rekryteringstrappan och ERRC-matrisen — interaktiv SVG-grafik.</div>
-          <div class="mc-foot" style="color:#9B4FBB"><span>6 modeller · källbelagda</span><span class="mc-arrow">→</span></div>
-        </a>
       </div>
     </div>
   </div>
@@ -612,9 +530,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <div class="wrap">
     <div class="stats-grid reveal">
       <div class="stat-cell">
-        <div class="stat-val">680</div>
-        <div class="stat-label">Aktiva möjliggörare i Sverige</div>
-        <div class="stat-note"><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener">Polismyndighetens lägesbild 2024</a> — kategoriserade som möjliggörare bland aktiva i kriminella nätverk</div>
+        <div class="stat-val">17 500</div>
+        <div class="stat-label">Aktiva gängkriminella i Sverige</div>
+        <div class="stat-note"><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/regeringsuppdrag-2025-lagesbild-over-aktiva-gangkriminella-i-sverige.pdf/download/?v=5eb56aaf640ca9321c639517f753b494" target="_blank" rel="noopener">Polismyndighetens lägesbild 2025</a> — därutöver bedöms cirka 50 000 personer ha koppling till aktiva gängkriminella; metoden skiljer sig från 2024</div>
       </div>
       <div class="stat-cell">
         <div class="stat-val">352 mdkr</div>
@@ -717,13 +635,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     </div>
     <div class="case-list reveal">
       <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
+        <div class="cp-status ind"></div>
         <div class="cp-tcell">
-          <div class="cp-title">Spioneri mot Försvarsmakten och Säkerhetspolisen — livstids fängelse</div>
-          <div class="cp-meta">Stockholm · Bekräftat · GRU · Dom jan 2023</div>
+          <div class="cp-title">Botkyrka — misstänkta oegentligheter granskas av infiltrationskommissionen</div>
+          <div class="cp-meta">Botkyrka · Indikation · Dir. 2026:63 · Kommission tillsatt juni 2026</div>
         </div>
-        <div class="cp-sector">Försvar</div>
-        <div class="cp-year">2023</div>
+        <div class="cp-sector">Myndighet</div>
+        <div class="cp-year">2026</div>
       </a>
       <a href="modules.html#mod-map" class="cp-row">
         <div class="cp-status conf"></div>
@@ -789,13 +707,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <div class="cp-year">2024</div>
       </a>
       <a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status conf"></div>
+        <div class="cp-status ind"></div>
         <div class="cp-tcell">
-          <div class="cp-title">Toppadvokater dömda — hjälpte Värbynätverket via krypterade chattar</div>
-          <div class="cp-meta">Stockholm · Bekräftat · 6 resp. 4 års fängelse</div>
+          <div class="cp-title">Nordvästra Skåne — polis åtalad efter misstänkt informationsläcka</div>
+          <div class="cp-meta">Skåne · Indikation · Dataintrång och brott mot tystnadsplikt · Augusti 2026</div>
         </div>
-        <div class="cp-sector">Juridik</div>
-        <div class="cp-year">2023</div>
+        <div class="cp-sector">Rättsväsende</div>
+        <div class="cp-year">2026</div>
       </a>
     </div>
     <div class="cp-more reveal">
