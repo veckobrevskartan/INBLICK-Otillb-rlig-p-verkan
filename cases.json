@@ -2439,11 +2439,11 @@
   },
   {
     "id": "c111",
-    "title": "HVB-hem kontrollerade av kriminella — gängmedlemmar som personal, rekryterar boende",
+    "title": "Nationellt — kriminella och olämpliga aktörer i LSS, HVB, stödboenden och familjehemsverksamhet",
     "sector": "SOCIAL",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-    "date": "2024-08",
+    "date": "2026-05",
     "loc": {
       "m": "Sverige",
       "r": "Nationellt",
@@ -2451,7 +2451,7 @@
       "lng": 15.52,
       "p": "approximate"
     },
-    "summary": "Polismyndighetens och tillsynsmyndigheternas material visar hur kriminella aktörer kan äga, driva eller arbeta vid HVB-hem och använda verksamheten för ekonomisk brottslighet, narkotikahantering och rekrytering av placerade barn. IVO har förbjudit verksamheter och återkallat tillstånd där personal eller företrädare haft allvarliga brottskopplingar. Fallet visar hur tillstånd och offentlig finansiering kan ge organiserad brottslighet en legitim yta nära särskilt utsatta unga.",
+    "summary": "Polismyndighetens och IVO:s samlade material visar hur kriminella eller på annat sätt olämpliga aktörer kan äga, driva eller arbeta i LSS-verksamhet, HVB, stödboenden och familjehemsverksamheter. IVO uppgav våren 2026 att myndigheten sedan 2024 hade förbjudit eller återkallat tillståndet för 120 verksamheter inom socialtjänst och LSS. Sedan september 2024 hade IVO till och med februari 2026 dessutom förbjudit, tillfälligt förbjudit eller återkallat tillståndet för 39 stödboenden och HVB. Vid en myndighetsgemensam kontroll av omkring tio HVB- och familjehemsföretag våren 2026 uppstod bland annat misstankar om penningtvätt, falska anställningar, folkbokföringsbrott och kopplingar till våldsbejakande extremism. De brottsmisstankarna är inte domar; klassningen bekräftat avser den dokumenterade strukturella risken och IVO:s fattade tillsynsbeslut.",
     "sources": [
       {
         "l": "Polismyndigheten m.fl. — Organiserad brottslighet i välfärden (2026, PDF)",
@@ -2467,6 +2467,21 @@
         "l": "Sveriges Radio — IVO stänger HVB-hem där personal dömts för grova brott",
         "t": "media",
         "url": "https://www.sverigesradio.se/artikel/just-nu-ivo-stanger-annu-ett-hvb-hem-personal-domd-for-grova-brott"
+      },
+      {
+        "l": "IVO — Förstärkt tillsyn av stödboenden och HVB gav 39 förbud eller återkallade tillstånd (2026)",
+        "t": "authority",
+        "url": "https://www.ivo.se/aktuellt/publikationer/rapporter/forstarkt-tillsyn-motverkar-oseriosa-och-kriminella-aktorer-inom-stodboenden-och-hvb/"
+      },
+      {
+        "l": "Polismyndigheten — Insats mot välfärdsföretag gav misstankar om flera grova brott (2026-05-25)",
+        "t": "authority",
+        "url": "https://polisen.se/aktuellt/nyheter/nationell/2026/maj/insats-mot-valfardsforetag-gav-misstankar-om-flera-grova-brott/"
+      },
+      {
+        "l": "IVO — Förhindrar oseriösa och kriminella aktörer inom vård och omsorg (2026)",
+        "t": "authority",
+        "url": "https://www.ivo.se/aktuellt/nyheter/2026/ivo-forhindrar-oseriosa-och-kriminella-aktorer-inom-vard-och-omsorg/"
       }
     ]
   },
@@ -3651,6 +3666,411 @@
         "l": "SVT Nyheter — Bullervallen och de dubbla stolarna (2026-06-12)",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/stockholm/60-sekunder-bullervallen-och-de-dubbla-stolarna"
+      }
+    ]
+  },
+  {
+    "id": "c159",
+    "title": "Söderhamn — familjehemsplacering till en efterlyst gängkriminells bostad stoppades",
+    "date": "2025-05",
+    "loc": {
+      "m": "Söderhamn",
+      "r": "Gävleborg",
+      "lat": 61.3037,
+      "lng": 17.0592,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Söderhamns kommun planerade att flytta tre barn till ett familjehem vars bostad ägdes tillsammans med en man som var dömd för grova brott och internationellt efterlyst. SVT:s granskning visade att socialtjänstens kontroll hade missat kopplingen, trots att kommunen tidigare hade placerat andra barn i hemmet och betalat ersättning till familjehemsföreträdaren. Flytten stoppades i sista stund och kommunen bröt därefter avtalet. Klassningen bekräftat avser de verifierade placeringsbesluten, ägarförhållandet och kommunens avslutade avtal — inte att familjehemsföreträdaren själv dömts för nätverksbrottslighet.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Söderhamnsbarnen skulle flyttas till gängkriminells bostad (2025-05-02)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/granskning/soderhamnsbarnen-skulle-flyttas-till-gangkriminells-bostad"
+      },
+      {
+        "l": "Sveriges Domstolar — Tre omhändertagna syskon får inte omplaceras (2025-01)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2025/01/tre-omhandertagna-syskon-far-inte-omplaceras-till-annat-familjehem/"
+      }
+    ]
+  },
+  {
+    "id": "c160",
+    "title": "Gävle och Jönköping — hemtjänstföretag stoppades efter misstänkt manipulerad redovisning och sekretessbrister",
+    "date": "2026-07",
+    "loc": {
+      "m": "Gävle",
+      "r": "Gävleborg",
+      "lat": 60.6749,
+      "lng": 17.1413,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Gävle kommun sade upp avtalet med Multi Care och polisanmälde misstankar om att utförda hemtjänstinsatser hade redovisats på ett manipulerat sätt. Kommunen pekade också på brister i dokumentation och journalföring; omkring 50 brukare behövde byta utförare. Jönköpings kommun hade året innan avslutat sitt avtal med samma företag efter att anställda delat brukaruppgifter i chattar och brutit mot regler om anhöriganställningar. Ingen dom om bidrags- eller bedrägeribrott har verifierats, därför redovisas händelsen som en indikation.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Polisanmäls i Gävle, samma hemtjänstföretag stoppades i Jönköping (2026-07-30)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/jonkoping/polisanmals-i-gavle-samma-hemtjanstforetag-stoppades-i-jonkoping"
+      }
+    ]
+  },
+  {
+    "id": "c161",
+    "title": "Botkyrka — kommunen tog över ABF:s ungdomsverksamheter efter 24 allvarliga brister",
+    "date": "2022-03",
+    "loc": {
+      "m": "Botkyrka",
+      "r": "Stockholm",
+      "lat": 59.198,
+      "lng": 17.833,
+      "p": "municipality"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "INSIDER",
+    "status": "CONFIRMED",
+    "summary": "En extern granskning beställd av Botkyrka kommun fann 24 allvarliga brister i de kommunalt finansierade fritidsgårdar och ungdomsverksamheter som ABF Botkyrka–Salem drev. Bland annat hade personer med allvarliga domar arbetat med barn, personer med kopplingar till kriminalitet vistats i lokalerna och kommunala bidrag använts felaktigt. Kommunen tog omedelbart över fyra fritidsgårdar och tre mötesplatser. ABF invände mot delar av slutsatserna. Folkbildningsrådets separata granskning av statsbidragsfinansierad folkbildning fann inte motsvarande fel; den omfattade inte den kommunala ungdomsverksamheten. Den lokala avdelningen avvecklades 2025 genom en sammanslagning.",
+    "sources": [
+      {
+        "l": "Botkyrka kommun — Utredningen av ABF visar på allvarliga brister (2022-03-09)",
+        "t": "authority",
+        "url": "https://www.botkyrka.se/nyhetsarkiv/nyhetsarkiv/2022-03-09-utredningen-av-abf-visar-pa-allvarliga-brister"
+      },
+      {
+        "l": "Botkyrka kommun — Förtydligande om Folkbildningsrådets rapport (2023-11-09)",
+        "t": "authority",
+        "url": "https://www.botkyrka.se/nyhetsarkiv/nyhetsarkiv/2023-11-09-fortydligande-om-folkbildningsradets-rapport-om-abf-botkyrka-salem"
+      },
+      {
+        "l": "SVT Nyheter — Efter fritidsgårdsskandalen läggs ABF Botkyrka–Salem ned (2025-05-08)",
+        "t": "media",
+        "url": "https://www.svt.se/kultur/efter-fritidsgardsskandalen-abf-botkyrka-salem-laggs-ned"
+      }
+    ]
+  },
+  {
+    "id": "c162",
+    "title": "Järva — falska studiecirklar och dubbelrapportering gav återkrav på 5,3 miljoner",
+    "date": "2020-11",
+    "loc": {
+      "m": "Järva",
+      "r": "Stockholm",
+      "lat": 59.405,
+      "lng": 17.93,
+      "p": "municipality"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Folkbildningsrådets kontroll av studieförbundens verksamhet i Järva identifierade omkring 2 800 arrangemang som inte uppfyllde statsbidragsvillkoren. Fyra studieförbund fick tillsammans återbetala 5,3 miljoner kronor för bland annat dubbelrapporterade deltagare, falska kostnader och aktiviteter som inte kunde styrkas. Riksrevisionen konstaterade senare att lokala föreningar hade lurat studieförbund genom kostnadsersättningar för verksamhet som inte ägt rum och att kontrollsystemet var otillräckligt. Klassningen bekräftat avser de administrativa kontrollresultaten och återkraven, inte en generell misstanke mot studieförbunden som organisationsform.",
+    "sources": [
+      {
+        "l": "Folkbildningsrådet — Flera studieförbund får betala tillbaka statsbidrag (2020)",
+        "t": "authority",
+        "url": "https://folkbildningsradet.se/aktuellt-och-projekt/nyheter/nyhetsarkiv-2020/flera-studieforbund-far-betala-tillbaka-statsbidrag/"
+      },
+      {
+        "l": "Riksrevisionen — Statsbidraget till studieförbunden: kontroll och uppföljning (RiR 2022:20)",
+        "t": "report",
+        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2022/statsbidraget-till-studieforbunden---kontroll-och-uppfoljning.html"
+      }
+    ]
+  },
+  {
+    "id": "c163",
+    "title": "Malmö — förening med över fem miljoner i stöd polisanmäldes för misstänkt bidragsfusk",
+    "date": "2025-09",
+    "loc": {
+      "m": "Malmö",
+      "r": "Skåne",
+      "lat": 55.605,
+      "lng": 13.003,
+      "p": "municipality"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Föreningen Allas lika värde hade under två och ett halvt år tagit emot fler än 300 praoelever och praktikanter och fått mer än fem miljoner kronor i stöd från flera myndigheter. Malmö stad polisanmälde misstankar om bedrägeri, förskingring och urkundsförfalskning efter uppgifter om bland annat fabricerade lönespecifikationer och dubbla kostnadsanspråk. Kommunen, Arbetsförmedlingen och Allmänna arvsfonden krävde eller pausade sammanlagt miljonbelopp. Föreningen förnekade fel och överklagade återkrav. Någon lagakraftvunnen dom har inte verifierats.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Praoelever och praktikanter placerades hos polisanmäld Malmöförening (2025-09-27)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/praoelever-och-praktikanter-placeras-hos-fuskande-malmoforening"
+      }
+    ]
+  },
+  {
+    "id": "c164",
+    "title": "Göteborg — föreningsföreträdare åtalad efter 2,4 miljoner i offentliga bidrag och oredovisade utgifter",
+    "date": "2023-10",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.7089,
+      "lng": 11.9746,
+      "p": "municipality"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Ekobrottsmyndigheten åtalade en företrädare för en ideell ungdomsförening för grova bokföringsbrott och folkbokföringsbrott. Föreningen hade fått omkring 2,4 miljoner kronor från bland andra Skolverket och Göteborgs Stad under 2020–2022. Enligt åtalet saknades tillräcklig redovisning samtidigt som pengar hade gått till restauranger, telefoner, IT-utrustning och utlandsöverföringar. Åtalet är inte liktydigt med en fällande dom och något slutligt domstolsutfall har inte verifierats i öppna källor.",
+    "sources": [
+      {
+        "l": "Ekobrottsmyndigheten — Åtal för grova ekobrott i ideell förening (2023-10-31)",
+        "t": "authority",
+        "url": "https://www.ekobrottsmyndigheten.se/om-oss/press/aktuellt/nyheter/atal-for-grova-ekobrott-i-ideell-forening/"
+      }
+    ]
+  },
+  {
+    "id": "c165",
+    "title": "Södertälje — föreningsledare med kommunbidrag dömd för att ha hjälpt ett kriminellt nätverk",
+    "date": "2024-03",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.1955,
+      "lng": 17.6253,
+      "p": "municipality"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En föreningsordförande och profilerad våldsförebyggande aktör som hade fått omkring 100 000 kronor i kommunalt föreningsstöd dömdes i hovrätten till två års fängelse för medhjälp till grovt narkotikabrott. Personen hade hyrt en lägenhet som användes för att förvara narkotika åt Ronnafalangen. Södertälje kommun uppgav efter domen att rutinerna för föreningsbidrag skulle skärpas och att omkring 30 bidragsmottagande föreningar hade kontrollerats.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Föreningsprofil dömd, Södertälje ändrar rutiner kring föreningsbidrag (2024-03-05)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/sodertalje/foreningsprofil-domdes-sodertalje-kommun-vill-andra-rutiner-kring-foreningsbidrag"
+      }
+    ]
+  },
+  {
+    "id": "c166",
+    "title": "Skellefteå — förening polisanmäldes efter misstänkt bidragsfusk och rollsammanblandning",
+    "date": "2024-02",
+    "loc": {
+      "m": "Skellefteå",
+      "r": "Västerbotten",
+      "lat": 64.7502,
+      "lng": 20.9509,
+      "p": "municipality"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Skellefteå kommun polisanmälde en förening för misstänkt grovt bedrägeri och urkundsförfalskning i samband med en bidragsansökan på 600 000 kronor. Enligt kommunens uppgifter hade en person roller både i kommunen och föreningen och föreningsmedel hade betalats till personens eget företag. SVT rapporterade att den misstänkta omfattningen kunde vara betydligt större, men någon dom eller slutlig myndighetsbedömning har inte verifierats. Posten redovisas därför som en indikation på rollsammanblandning och möjlig bidragsbrottslighet.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Förening i Skellefteå polisanmäld för misstänkt bidragsfusk (2024-02-23)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vasterbotten/forening-i-skelleftea-polisanmald-av-kommunen-for-bedrageri-misstankt-bidragsfusk"
+      }
+    ]
+  },
+  {
+    "id": "c167",
+    "title": "Malmö — Quality Care förlorade HVB-tillstånd efter ekonomisk misskötsamhet",
+    "date": "2026-01",
+    "loc": {
+      "m": "Malmö",
+      "r": "Skåne",
+      "lat": 55.605,
+      "lng": 13.003,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "IVO återkallade Quality Care Malmö AB:s tillstånd för HVB och stödboende och krävde att verksamheten skulle avvecklas omgående. SVT hade före beslutet rapporterat om långvarig ekonomisk misskötsamhet och att bolags- och föreningsmedel hade använts för privata utgifter och svarta löner. Bolaget hade sålt socialtjänster till flera kommuner för mer än 50 miljoner kronor. Allmänna arvsfonden krävde samtidigt tillbaka två miljoner kronor från en förening som leddes av samma företrädare och Skatteverket riktade skattekrav mot bolaget och personen.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Quality Care stoppas från att driva HVB-hem (2026-01-05)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/efter-svts-granskning-ekonomiskt-fusk-stoppar-hvb-hem"
+      },
+      {
+        "l": "IVO — Förstärkt tillsyn av stödboenden och HVB (2026)",
+        "t": "authority",
+        "url": "https://www.ivo.se/aktuellt/publikationer/rapporter/forstarkt-tillsyn-motverkar-oseriosa-och-kriminella-aktorer-inom-stodboenden-och-hvb/"
+      }
+    ]
+  },
+  {
+    "id": "c168",
+    "title": "Malmö — kommunalt HVB akutstängdes efter återkommande brister i registerkontrollen",
+    "date": "2026-08",
+    "loc": {
+      "m": "Malmö",
+      "r": "Skåne",
+      "lat": 55.605,
+      "lng": 13.003,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "summary": "IVO förbjöd Malmö stad att fortsätta driva HVB Villa Poppel efter återkommande brister i kontrollen av personal mot belastnings- och misstankeregister. De tio placerade barnen flyttades från verksamheten. Kommunen överklagade IVO:s beslut. Det finns inte verifierat stöd för att någon i personalen faktiskt var dömd för brott; händelsen gäller det dokumenterade kontrollmisslyckandet och tillsynsbeslutet, inte ett påstående om kriminell personal.",
+    "sources": [
+      {
+        "l": "Sydsvenskan — HVB-hemmet akutstängs efter allvarliga brister (2026-08)",
+        "t": "media",
+        "url": "https://www.sydsvenskan.se/malmo/hvb-hemmet-akutstangs-efter-allvarliga-brister/"
+      },
+      {
+        "l": "Sydsvenskan — Barnen har flyttats från akutstängt HVB-hem (2026-08)",
+        "t": "media",
+        "url": "https://www.sydsvenskan.se/malmo/barnen-har-flyttats-fran-akutstangt-hvb-hem/"
+      }
+    ]
+  },
+  {
+    "id": "c169",
+    "title": "Hägersten — HVB-hem förlorade tillståndet efter 27 polisbesök och rekrytering till kriminalitet",
+    "date": "2026-07",
+    "loc": {
+      "m": "Hägersten",
+      "r": "Stockholm",
+      "lat": 59.296,
+      "lng": 17.987,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "summary": "IVO återkallade tillståndet för ett HVB-hem i Hägersten efter återkommande allvarliga missförhållanden. Myndigheten hade dokumenterat självskadebeteenden, droger, självmordsförsök och rekrytering till kriminalitet vid hemmet. Polisen hade kallats dit 27 gånger mellan september 2025 och april 2026 och bedömde att personalen inte var rustad att hantera situationerna. Klassningen bekräftat avser IVO:s beslut och de dokumenterade händelserna; öppna källor identifierar inte vem som stod bakom rekryteringen.",
+    "sources": [
+      {
+        "l": "Sveriges Radio — HVB-hem i Stockholm förlorar sitt tillstånd (2026-07-29)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/hvb-hem-i-stockholm-forlorar-sitt-tillstand"
+      },
+      {
+        "l": "Mitt i — HVB-hem stängs efter 27 polisbesök på ett halvår (2026-07-29)",
+        "t": "media",
+        "url": "https://www.mitti.se/nyheter/hvbhem-stangs-efter-27-polisbesok-pa-ett-halvar-6.3.377691.d2659bd474"
+      }
+    ]
+  },
+  {
+    "id": "c170",
+    "title": "Sydvästra Skåne — assistansverksamhet förlorade tillstånd efter grov vapenbrottsdom",
+    "date": "2024-08",
+    "loc": {
+      "m": "Sydvästra Skåne",
+      "r": "Skåne",
+      "lat": 55.58,
+      "lng": 13.0,
+      "p": "approximate"
+    },
+    "sector": "SOCIAL",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "summary": "IVO återkallade med omedelbar verkan tillståndet för ett bolag som bedrev personlig assistans enligt LSS. En styrelseledamot var dömd för grovt vapenbrott och framkallande av fara för annan, bolaget hade enligt IVO samverkat med olämpliga aktörer och skatter och avgifter hade misskötts vid upprepade tillfällen. Klassningen bekräftat avser domen och IVO:s lämplighets- och tillståndsbeslut; öppna källor ger inte underlag för att knyta hela verksamheten till ett specifikt kriminellt nätverk.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — LSS-verksamhet får tillstånd indraget, styrelseledamot dömd för vapenbrott (2024-08-15)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/lss-verksamhet-far-tillstand-indraget-styrelseledamot-domd-for-vapenbrott"
+      }
+    ]
+  },
+  {
+    "id": "c171",
+    "title": "Sundsvall — hemtjänstanställd misstänks för övergrepp mot sju äldre brukare",
+    "date": "2026-08",
+    "loc": {
+      "m": "Sundsvall",
+      "r": "Västernorrland",
+      "lat": 62.3908,
+      "lng": 17.3069,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "INSIDER",
+    "status": "INDICATION",
+    "summary": "En tidigare hemtjänstanställd i Sundsvall häktades misstänkt för sexualbrott mot äldre brukare; i augusti 2026 uppgav SVT att utredningen omfattade sju målsägande. Kommunens utredning beskrev ett gränslöst beteende och att mannen hade besökt en brukare på fritiden. Han hade flera år tidigare fått lämna en tidsbegränsad anställning på ett äldreboende men anställdes senare i hemtjänsten. Kommunen avskedade honom och gjorde polisanmälan. Misstankarna är inte slutligt prövade och händelsen är därför en indikation.",
+    "sources": [
+      {
+        "l": "Sundsvalls kommun — Kommunen bemöter misstänkta övergrepp inom hemtjänsten (2026-08-06)",
+        "t": "authority",
+        "url": "https://sundsvall.se/kommun/nyheter/nyhetsarkiv/2026-08-06-sundsvalls-kommun-bemoter-misstankta-overgrepp-inom-hemtjansten"
+      },
+      {
+        "l": "SVT Nyheter — Misstänkt för våldtäkt i hemtjänsten besökte vårdtagare på fritiden (2026-08-19)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vasternorrland/misstankt-for-valdtakt-i-hemtjansten-i-sundsvall-besokte-vardtagare-pa-fritiden"
+      },
+      {
+        "l": "SVT Nyheter — Misstänkt hade tidigare fått sluta på äldreboende (2026-08)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vasternorrland/misstanks-for-valdtakt-inom-hemtjansten-hade-fatt-sluta-pa-aldreboende"
+      }
+    ]
+  },
+  {
+    "id": "c172",
+    "title": "Västsverige — företrädare för vård- och assistansbolag dömdes för omfattande ekonomisk brottslighet",
+    "date": "2026-07",
+    "loc": {
+      "m": "Västsverige",
+      "r": "Västra Götaland",
+      "lat": 57.7089,
+      "lng": 11.9746,
+      "p": "approximate"
+    },
+    "sector": "HEALTH",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Göteborgs tingsrätt dömde fyra företrädare för en företagsgrupp inom vaccination, vård och personlig assistans till fängelse i mellan nio månader och tre år samt näringsförbud. Domarna gällde bland annat grova bokföringsbrott och ett stort antal skattebrott; i vissa bolag uppgick de oredovisade beloppen till omkring 60 miljoner kronor. Verksamheterna var tillståndspliktiga och offentligt finansierade. De åtalade frikändes från penningtvättsbrotten, vilket därför inte läggs dem till last i denna post.",
+    "sources": [
+      {
+        "l": "Sveriges Domstolar — Företagare som bedrivit vårdverksamhet döms för grova bokförings- och skattebrott (2026-07-10)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2026/07/foretagare-som-bedrivit-vardverksamhet-doms-for-grova-bokforingsbrott-och-ett-stort-antal-skattebrott/"
+      },
+      {
+        "l": "Ekobrottsmyndigheten — Dom i omfattande ekobrottsmål kopplat till vårdbolag (2026-07)",
+        "t": "authority",
+        "url": "https://www.ekobrottsmyndigheten.se/om-oss/press/aktuellt/nyheter/dom-meddelad-i-omfattande-ekobrottsmal-kopplat-till-vardbolag/"
+      }
+    ]
+  },
+  {
+    "id": "c173",
+    "title": "Säter — byggavtal över en halv miljard avslutades efter konstaterat jäv",
+    "date": "2026-03",
+    "loc": {
+      "m": "Säter",
+      "r": "Dalarna",
+      "lat": 60.3478,
+      "lng": 15.7505,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Säters kommun avslutade ett entreprenadavtal med NCC och gjorde en ny upphandling efter att en extern juridisk granskning konstaterat delikatessjäv. En kommunal chef i ledande roll hade deltagit i upphandlingen samtidigt som personen befann sig i en rekryteringsprocess hos leverantören. Granskningen fann inte belägg för att upphandlingsresultatet faktiskt hade påverkats eller att en otillbörlig förmån lämnats. Kommunen polisanmälde senare misstänkt givande och tagande av muta utan att rikta anmälan mot någon särskild part; den delen var inte rättsligt avgjord vid publiceringen.",
+    "sources": [
+      {
+        "l": "Säters kommun — Avtal mellan Säters kommun och NCC sägs upp ömsesidigt (2025-12-22)",
+        "t": "authority",
+        "url": "https://sater.se/nyheter/avtal-mellan-saters-kommun-och-ncc-sags-upp-omsesidigt/"
+      },
+      {
+        "l": "SVT Nyheter — Säters kommun anmäler misstänkt korruption (2026-03-05)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/video/5940048deedc2dd6-saters-kommun-anmaler-misstankt-korruption"
+      },
+      {
+        "l": "Siljan News — Polisanmälan efter jäv, kommunen söker ny aktör (2026-03-09)",
+        "t": "media",
+        "url": "https://www.siljannews.se/sater/polisanmalan-efter-jav-samtidigt-soker-kommunen-ny-aktor/"
       }
     ]
   }
