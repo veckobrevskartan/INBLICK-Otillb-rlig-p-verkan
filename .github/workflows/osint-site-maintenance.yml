@@ -22,16 +22,22 @@ jobs:
 
           files = [Path('index.html'), Path('modules.html')]
           needles = [
-              'Källförteckning',
-              'Reviderad augusti 2026',
-              'MCF0079',
-              'Primärkällor och',
-              'Visuella modeller',
+              'Källförteckning · Reviderad augusti 2026',
+              'Återkommande primärkällor',
+              'Vägledning Transportskydd',
+              'Myndigheter i samverkan mot den organiserade brottsligheten 2024',
+              'Myndigheter i samverkan mot den organiserade brottsligheten 2025',
               'Myndighetsgemensam lägesbild',
+              'Lägesbild över aktiva gängkriminella',
+              'Polismyndighetens lägesbild 2024',
+              'mod-sources',
+              'nav-source',
+              'Teorier och modeller',
+              'Visuella modeller',
               'Botkyrka',
               'infiltrationskommission',
-              'Riksrevisionen',
-              'Statskontoret',
+              'Statskontoret och Brå',
+              'RiR 2026:3',
           ]
           out = []
           for path in files:
@@ -41,12 +47,12 @@ jobs:
                   out.append(f'\n--- {needle!r}: {text.count(needle)} match(es) ---')
                   start = 0
                   shown = 0
-                  while shown < 8:
+                  while shown < 10:
                       pos = text.find(needle, start)
                       if pos < 0:
                           break
-                      a = max(0, pos - 700)
-                      b = min(len(text), pos + len(needle) + 1200)
+                      a = max(0, pos - 500)
+                      b = min(len(text), pos + len(needle) + 850)
                       out.append(text[a:b].replace('\r',''))
                       out.append('[...context end...]')
                       shown += 1
@@ -57,5 +63,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site-maintenance-diagnostics.txt
-          git commit -m "chore: capture site maintenance diagnostics" || exit 0
+          git commit -m "chore: refresh site maintenance diagnostics" || exit 0
           git push
