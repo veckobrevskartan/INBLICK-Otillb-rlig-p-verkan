@@ -170,7 +170,7 @@ if (!questionsMatch) {
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 115) errors.push(`Förväntade 115 fall, hittade ${cases.length}`);
+if (cases.length !== 117) errors.push(`Förväntade 117 fall, hittade ${cases.length}`);
 
 const publicText = [modules, index, JSON.stringify(cases), JSON.stringify(actors), JSON.stringify(indicators)]
   .join('\n')
@@ -190,7 +190,7 @@ for (const name of identifiedPeople) {
 }
 
 for (const marker of [
-  'Källa: Handledningen', 'Källor: Handledningen', 'Erfarenheter från Göteborgs stad',
+  'Källa: Handledningen', 'Källor: Handledningen', 'handledningen', 'Argus', 'Erfarenheter från Göteborgs stad',
   'MCF0079 mars 2026 kap', 'SMOB SGL 2026 kap', 'original ur handledningen',
   'Konferensen den 30 september', 'Konferens 30 sept 2026', 'abilitypartner.se',
   'recruitmentkanal', 'blind spots', 'operation where', 'anomalier découverts',

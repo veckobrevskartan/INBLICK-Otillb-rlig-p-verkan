@@ -165,39 +165,6 @@
     ]
   },
   {
-    "id": "c06",
-    "title": "Akademiska sjukhuset Uppsala — verksamhetschef dömd för 4,76 Mkr i mutor",
-    "date": "2024-03",
-    "loc": {
-      "m": "Uppsala",
-      "r": "Uppsala",
-      "lat": 59.86,
-      "lng": 17.64,
-      "p": "municipality"
-    },
-    "sector": "HEALTH",
-    "actor": "ECONOMIC_INTEREST",
-    "status": "CONFIRMED",
-    "summary": "Verksamhetschef och överläkare dömdes till 4 år för grovt tagande av muta (4,76 Mkr), grov trolöshet och grovt bedrägeri. Mutor togs emot från Canon Medical och Siemens via osanna fakturor 2015–2022. SVT Uppdrag granskning avslöjade härvan 2023. Totalt 7 dömda, 3 bolag fick företagsbot, 4 fick näringsförbud. Åklagaren Riksenheten mot korruption.",
-    "sources": [
-      {
-        "l": "Sveriges Domstolar — Dom grovt tagande av muta, Attunda tingsrätt B 5586-23",
-        "t": "court",
-        "url": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"
-      },
-      {
-        "l": "Läkartidningen — Tidigare verksamhetschef vid Akademiska döms",
-        "t": "media",
-        "url": "https://lakartidningen.se/aktuellt/nyheter/2024/03/tidigare-verksamhetschef-vid-akademiska-doms-for-grovt-mutbrott/"
-      },
-      {
-        "l": "SVT — Chef på Akademiska sjukhuset döms för miljonmutor",
-        "t": "media",
-        "url": "https://www.svt.se/nyheter/lokalt/uppsala/chef-pa-akademiska-sjukhuset-doms-for-miljonmutor"
-      }
-    ]
-  },
-  {
     "id": "c07",
     "title": "Toppadvokater dömda — hjälpte Värbynätverket via krypterade chattar",
     "date": "2023-09",
@@ -337,8 +304,8 @@
     },
     "sector": "AUTHORITY",
     "actor": "ECONOMIC_INTEREST",
-    "status": "CONFIRMED",
-    "summary": "Sida-tjänsteman stationerad vid svensk ambassad i Afrika greps misstänkt för grov trolöshet, grovt tagande av muta och grovt bedrägeri. Mutor under tre år vid hantering av biståndsmedel och projekt. Statsåklagare Thomas Forsberg vid riksenheten mot korruption bekräftade att det rörde sig om 'betydande summor'. Mannen greps vid hemresa till Sverige.",
+    "status": "INDICATION",
+    "summary": "En chef på Sida som hade arbetat vid en svensk ambassad i Afrika greps och häktades i maj 2024, misstänkt för grovt tagande av muta, grovt bedrägeri och grov trolöshet mot huvudman. Misstankarna rörde biståndsmedel och påstådda kickbacks under 2021–2023. Den misstänkte nekade till brott. Något senare åtal eller någon dom har inte kunnat verifieras i öppna källor, varför posten redovisas som en indikation.",
     "sources": [
       {
         "l": "SVT Nyheter — Chef på Sida häktas misstänkt för grovt mutbrott",
@@ -2752,6 +2719,21 @@
         "l": "Svea hovrätt — dom grov mutbrottslighet Akademiska sjukhuset (2025-03-26)",
         "t": "court",
         "url": "https://www.domstol.se/nyheter/2025/03/dom-i-mal-om-grov-mutbrottslighet/"
+      },
+      {
+        "l": "Sveriges Domstolar — Dom grovt tagande av muta, Attunda tingsrätt B 5586-23",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/"
+      },
+      {
+        "l": "Läkartidningen — Tidigare verksamhetschef vid Akademiska döms",
+        "t": "media",
+        "url": "https://lakartidningen.se/aktuellt/nyheter/2024/03/tidigare-verksamhetschef-vid-akademiska-doms-for-grovt-mutbrott/"
+      },
+      {
+        "l": "SVT — Chef på Akademiska sjukhuset döms för miljonmutor",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/uppsala/chef-pa-akademiska-sjukhuset-doms-for-miljonmutor"
       }
     ]
   },
@@ -3341,6 +3323,80 @@
         "l": "LSM — Four accused of spying for Russia",
         "t": "media",
         "url": "https://eng.lsm.lv/article/society/crime/06.07.2026-four-accused-of-spying-for-russia.a654043/"
+      }
+    ]
+  },
+  {
+    "id": "c148",
+    "title": "Region Skåne/VGR — expertgruppsmedlem dömd för grovt mutbrott i Vårdinnovation-upphandlingen",
+    "date": "2023-04",
+    "loc": {
+      "m": "Skåne och Västra Götaland",
+      "r": "Skåne / Västra Götaland",
+      "lat": 56.7,
+      "lng": 13.2,
+      "p": "approximate"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CORRUPT_OFFICIAL",
+    "status": "CONFIRMED",
+    "summary": "Hovrätten dömde en tidigare Region Skåne-anställd för grovt tagande av muta och en läkare, som tidigare var vd för Vårdinnovation, för grovt givande av muta. Målet gällde regionernas upphandling 2018 av ett IT-baserat processtöd för primärvården. En annan tidigare regionanställd frikändes från mutåtalet, och samtliga frikändes från trolöshet mot huvudman eftersom expertgruppsdeltagarna inte ansågs ha den ekonomiska förtroendeställning som brottet kräver.",
+    "sources": [
+      {
+        "l": "Hovrätten över Skåne och Blekinge — två döms för grovt mutbrott, mål B 1675-22 (2023-04-18)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2023/04/hovratten-domer-tva-personer-for-grovt-mutbrott/"
+      },
+      {
+        "l": "Malmö tingsrätt — dom om brott kopplade till offentlig upphandling (2022-04-08)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2022/04/fallande-domar-i-ett-mal-om-brott-kopplade-till-en-offentlig-upphandling/"
+      }
+    ]
+  },
+  {
+    "id": "c149",
+    "title": "Bilbesiktning Uppsala — tekniker dömd för systematiska mutor och falska protokoll",
+    "date": "2025-11",
+    "loc": {
+      "m": "Uppsala",
+      "r": "Uppsala",
+      "lat": 59.858,
+      "lng": 17.638,
+      "p": "municipality"
+    },
+    "sector": "TRANSPORT",
+    "actor": "CORRUPT_OFFICIAL",
+    "status": "CONFIRMED",
+    "summary": "Högsta domstolen dömde en bilbesiktningstekniker för 13 grova fall av tagande av muta. Teknikern hade mot betalning utfärdat protokoll där fordon godkändes eller slapp krav på ombesiktning trots att de inte varit på plats eller inte hade kontrollerats föreskrivet. Han dömdes också för 20 grova osanna intyganden och ett tjänstefel. Straffet blev ett år och fyra månaders fängelse. HD betonade att bilbesiktning är myndighetsutövning och att rollen därför är särskilt ansvarsfull.",
+    "sources": [
+      {
+        "l": "Högsta domstolen — Grovt mutbrott vid bilbesiktning, mål B 8460-24 (2025-11-13)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2025/11/grovt-mutbrott-vid-bilbesiktning/"
+      }
+    ]
+  },
+  {
+    "id": "c150",
+    "title": "Häktet Salberga — kriminalvårdare dömd för att ha röjt uppgifter om intagna",
+    "date": "2025-11",
+    "loc": {
+      "m": "Sala",
+      "r": "Västmanland",
+      "lat": 59.92,
+      "lng": 16.606,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "INSIDER",
+    "status": "CONFIRMED",
+    "summary": "En kriminalvårdare vid häktet Salberga dömdes till 50 dagsböter för brott mot tystnadsplikten. Under våren 2024 röjde hon sekretessbelagda uppgifter om två intagna i samtal med bekanta, bland annat om en person som hon kände sedan tidigare. Hon nekade till brott och uppgav att hon inte hade förstått att uppgiftslämnandet var straffbart.",
+    "sources": [
+      {
+        "l": "Sveriges Radio P4 Västmanland — Kriminalvårdare röjde uppgifter om intagna (2025-11-24)",
+        "t": "court",
+        "url": "https://www.sverigesradio.se/artikel/kriminalvardare-rojde-uppgifter-om-intagna-doms-for-brott"
       }
     ]
   }
