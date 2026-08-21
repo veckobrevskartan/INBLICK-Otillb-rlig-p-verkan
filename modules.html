@@ -118,6 +118,8 @@ body.menu-open{overflow:hidden}
 /* ─── MODULES ─── */
 .module{display:none;min-height:100vh;padding-top:68px}
 .module.active{display:block}
+.module:target{display:block}
+body:has(.module:target) .module.active:not(:target){display:none}
 .sec-head{padding:48px 0 36px}
 .eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .sec-title{font-family:var(--fd);font-size:clamp(32px,4vw,56px);font-weight:300;line-height:1.06}
@@ -130,8 +132,9 @@ body.menu-open{overflow:hidden}
 .b-conf{background:rgba(74,123,111,.12);color:var(--green);border:1px solid rgba(74,123,111,.3)}.bdot-conf{background:var(--green)}
 .b-ind{background:var(--accent-g);color:var(--accent);border:1px solid rgba(184,151,58,.3)}.bdot-ind{background:var(--accent)}
 .b-ana{background:rgba(196,92,46,.1);color:var(--orange);border:1px solid rgba(196,92,46,.25)}.bdot-ana{background:var(--orange)}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
-.reveal.visible{opacity:1;transform:none}
+.reveal{opacity:1;transform:none;transition:opacity .5s,transform .5s}
+html.js-ready .reveal:not(.visible){opacity:0;transform:translateY(16px)}
+html.js-ready .reveal.visible{opacity:1;transform:none}
 
 /* ─── SHARED COMPONENTS ─── */
 .fb{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;background:transparent;color:var(--muted);border:1px solid var(--border-s);cursor:pointer;transition:.15s;white-space:nowrap}
@@ -816,13 +819,13 @@ button,[onclick]{touch-action:manipulation}
           <span class="cat-roman">I</span>Förstå<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-forsta">
-          <li><a href="#" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
-          <li><a href="#" id="tab-sectors" onclick="show('sectors');return false">Sektormiljöer</a></li>
-          <li><a href="#" id="tab-actors" onclick="show('actors');return false">Aktörsmatrisen</a></li>
-          <li><a href="#" id="tab-legal" onclick="show('legal');return false">Juridisk ram</a></li>
-          <li><a href="#" id="tab-infopav" onclick="show('infopav');return false">Informationspåverkan</a></li>
-          <li><a href="#" id="tab-theory" onclick="show('theory');return false">Teorier och modeller</a></li>
-          <li><a href="#" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
+          <li><a href="#mod-chain" id="tab-chain" onclick="show('chain');return false">Påverkanskedjan</a></li>
+          <li><a href="#mod-sectors" id="tab-sectors" onclick="show('sectors');return false">Sektormiljöer</a></li>
+          <li><a href="#mod-actors" id="tab-actors" onclick="show('actors');return false">Aktörsmatrisen</a></li>
+          <li><a href="#mod-legal" id="tab-legal" onclick="show('legal');return false">Juridisk ram</a></li>
+          <li><a href="#mod-infopav" id="tab-infopav" onclick="show('infopav');return false">Informationspåverkan</a></li>
+          <li><a href="#mod-theory" id="tab-theory" onclick="show('theory');return false">Teorier och modeller</a></li>
+          <li><a href="#mod-visuals" id="tab-visuals" onclick="show('visuals');return false">Visuella modeller</a></li>
         </ul>
       </div>
       <!-- BEDÖMA -->
@@ -831,10 +834,10 @@ button,[onclick]{touch-action:manipulation}
           <span class="cat-roman">II</span>Bedöma<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-bedoma">
-          <li><a href="#" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
-          <li><a href="#" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
-          <li><a href="#" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
-          <li><a href="#" id="tab-graph" onclick="show('graph');return false">Sambandsgraf</a></li>
+          <li><a href="#mod-map" id="tab-map" onclick="show('map');return false">Händelsekarta</a></li>
+          <li><a href="#mod-assess" id="tab-assess" onclick="show('assess');return false">Organisationstestet</a></li>
+          <li><a href="#mod-inds" id="tab-inds" onclick="show('inds');return false">Indikatorer</a></li>
+          <li><a href="#mod-graph" id="tab-graph" onclick="show('graph');return false">Sambandsgraf</a></li>
         </ul>
       </div>
       <!-- AGERA -->
@@ -843,9 +846,9 @@ button,[onclick]{touch-action:manipulation}
           <span class="cat-roman">III</span>Agera<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-agera">
-          <li><a href="#" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
-          <li><a href="#" id="tab-culture" onclick="show('culture');return false">Säkerhetskultur</a></li>
-          <li><a href="#" id="tab-handle" onclick="show('handle');return false">Hantera ärende</a></li>
+          <li><a href="#mod-tools" id="tab-tools" onclick="show('tools');return false">Verktygslådan</a></li>
+          <li><a href="#mod-culture" id="tab-culture" onclick="show('culture');return false">Säkerhetskultur</a></li>
+          <li><a href="#mod-handle" id="tab-handle" onclick="show('handle');return false">Hantera ärende</a></li>
         </ul>
       </div>
     </nav>
@@ -2139,7 +2142,6 @@ button,[onclick]{touch-action:manipulation}
 </section>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
 /* ══ CORE DATA ══ */
 const LOCAL_GOV_SECTOR={"id":"LOCAL_GOV","name":"Kommuner och regioner","color":"#B8973A","risk":"HÖG","risk_c":"var(--accent)","heading":"Nära invånaren — många vägar till påverkan","desc_long":"Kommuner och regioner är inte en enskild sektor utan en sammanhållen beslutsmiljö. Samma organisation hanterar socialtjänst, omsorg, skola, tillstånd, upphandling, samhällsbyggnad, bidrag, vård, kollektivtrafik och ibland säkerhetskänslig verksamhet. Det ger många kontaktytor, stora ekonomiska flöden och beslut som får omedelbar betydelse för individer och företag. <a href=\"https://bra.se/rapporter/arkiv/2025-04-01-otillaten-paverkan-fran-kriminella-och-extremistiska-grupperingar\" target=\"_blank\" rel=\"noopener\">Brå (2025) ↗</a> framhåller att kommunanställda och kommunpolitiker är särskilt sårbara eftersom den som försöker påverka ofta finns nära, kontakterna återkommer och stödet på lokal nivå kan vara ojämnt.\n\nPåverkan kan riktas mot ett enskilt beslut men också mot organisationens förmåga att agera. Hässleholm 2026 visar hur ett lokalt LVU-ärende kunde utvecklas till en internationell kampanj med samordnade kontaktförsök och uppgivna hot. Botkyrka visar ett annat spår: misstankar om påverkan i politiska processer ledde till en statlig infiltrationskommission, samtidigt som kommunen redovisade ett separat pilotprojekt med bakgrundskontroller. Göteborgsfallet med en samhällsvägledare och Uddevallas nattpatrull visar hur allvarliga signaler kan behöva hanteras arbetsrättsligt och organisatoriskt även när skuldfrågan inte är fastställd.\n\nSedan den 1 mars 2026 har kommuner genom <a href=\"https://www.regeringen.se/rattsliga-dokument/proposition/2025/11/prop.-20252661\" target=\"_blank\" rel=\"noopener\">prop. 2025/26:61 ↗</a> fått utökade möjligheter till registerkontroll inför vissa anställningar. Kontroller kan omfatta belastnings- och i vissa fall misstankeregister för arbete med äldre, personer med funktionsnedsättning och barn samt belastningsregister för vissa ledande eller verksamhetskritiska befattningar. Det är ett rekryteringsstöd, inte en generell säkerhetsprövning och inte ett besked om framtida lojalitet. Umeå kommuns beslut att införa riskbaserade kontroller från 2026 är ett praktiskt exempel. Kontrollen behöver kombineras med verifierade utbildningar och referenser, jävsdeklarationer, behörighetsstyrning, logguppföljning, leverantörskontroll och fungerande rapporteringsvägar.\n\nRättstillämpningen visar också gränserna. Ystads tingsrätt frikände samtliga i ett omfattande mutmål eftersom förmånerna inte bedömdes som otillbörliga i straffrättslig mening. Kammarrätten i Stockholm slog i mål SM 1-25 fast att en kommunal säkerhetsskyddschef måste ha direkt funktionell tillgång till högsta ledningen, men att högsta chefen inte måste bära det administrativa personalansvaret. Kammarrätten i Göteborg har samtidigt klargjort att enbart misstanke om jäv inte räcker som skäl att avbryta en upphandling. Gemensamt är kravet på dokumenterade, proportionerliga och rättssäkra åtgärder — varken passivitet eller lösa misstankar är en hållbar kontrollmodell.\n\nRegionerna delar den kommunala närheten men har särskilda sårbarheter i vårddata, läkemedel, medicinteknik, fastigheter, bevakning och kollektivtrafik. Region Skånes Avarn-hantering visar hur tidigare arbetsrelationer, undantag och kontroll över en gransknings avgränsning kan påverka förtroendet även utan fastställd brottslighet. Region Västerbottens mutdom och Vårdinnovation-målet visar samtidigt att ekonomiska och upphandlingsrelaterade risker kan realiseras i mycket stora värden.","methods":["Hot, trakasserier och masskontakt för att ändra myndighetsbeslut eller få en handläggare att avstå","Relations- och vänskapsbaserad påverkan på förtroendevalda, chefer och upphandlare","Placering eller gradvis rekrytering av möjliggörare i socialtjänst, omsorg, medborgarservice och tillståndsverksamhet","Mutor, jäv och styrning av krav, undantag, förlängningar eller granskning i upphandlingar","Exploatering av välfärdsersättningar och avtal genom falsk redovisning, bulvaner och manipulerad dokumentation","Informationspåverkan och ryktesspridning som skapar tryck mot socialtjänst, politiker eller kommunens legitimitet"],"vulns":["Många små och stora verksamheter delar arbetsgivare men har olika kontrollmognad och systemstöd","Beslut fattas nära invånare och lokala företag, vilket skapar återkommande personliga kontaktytor","Brist på specialistresurser för säkerhet, HR, internrevision, upphandling och informationssäkerhet i mindre organisationer","Bakgrunds- och registerkontroller täcker bara vissa roller och fångar inte gradvis förändrad lojalitet","Hög personalomsättning, kompetensbrist och beroende av konsulter och privata utförare","Nämndorganisation, kommunala bolag och regionala förvaltningar kan splittra ansvar och ägarskap för signaler"],"inds":["Upprepade undantag från rekryterings-, jävs-, attest- eller upphandlingsrutiner utan dokumenterad motivering","Samma person styr behov, kravställning, tilldelning, avtalsuppföljning eller en efterföljande granskning","Obehöriga slagningar, export av personuppgifter eller informationsdelning i privata chattar","Masskontakt, publicering av personuppgifter eller hot som följs av ändrat beslut, passivitet eller självcensur","Leverantörer eller utförare som motsätter sig insyn, saknar underlag eller redovisar insatser som inte kan verifieras","Visselblåsningar, arbetsmiljösignaler och avvikelser som stannar i en förvaltning och inte når central ledning"],"cases":["c04","c21","c23","c31","c47","c48","c85","c92","c118","c121","c122","c123","c129","c131","c132","c133","c135","c136","c138","c140","c141","c148","c151","c152","c153","c154","c155","c156","c157","c158","c159","c160","c161","c162","c163","c164","c165","c166","c167","c168","c169","c170","c171","c172","c173"]};
@@ -2285,7 +2287,35 @@ function renderChain(i){
 
 /* ══ MAP ══ */
 let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL'};
-function initMap(){
+let leafletLoadPromise=null;
+function loadLeaflet(){
+  if(window.L)return Promise.resolve(window.L);
+  if(leafletLoadPromise)return leafletLoadPromise;
+  leafletLoadPromise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    const timeout=setTimeout(()=>reject(new Error('Leaflet tog för lång tid att ladda')),10000);
+    script.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+    script.async=true;
+    script.onload=()=>{clearTimeout(timeout);window.L?resolve(window.L):reject(new Error('Leaflet saknas efter laddning'));};
+    script.onerror=()=>{clearTimeout(timeout);reject(new Error('Leaflet kunde inte laddas'));};
+    document.head.appendChild(script);
+  });
+  return leafletLoadPromise;
+}
+async function initMap(){
+  const mapContainer=document.getElementById('map-container');
+  if(!mapContainer)return;
+  mapContainer.innerHTML='<div style="display:grid;place-items:center;height:100%;font-family:var(--fm);font-size:10px;letter-spacing:.1em;color:var(--muted)">Laddar kartan…</div>';
+  try{
+    await loadLeaflet();
+  }catch(error){
+    mapReady=false;
+    leafletLoadPromise=null;
+    mapContainer.innerHTML='<div style="display:grid;place-items:center;height:100%;padding:24px;text-align:center;color:var(--muted);line-height:1.7">Kartan kunde inte laddas just nu. Övriga moduler fungerar fortfarande. Gå till en annan modul och öppna kartan igen för ett nytt försök.</div>';
+    console.error('Kunde inte ladda kartbiblioteket:',error);
+    return;
+  }
+  mapContainer.innerHTML='';
   leafMap=L.map('map-container',{center:[63,16],zoom:4,zoomControl:true,attributionControl:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(leafMap);
   renderMarkers();updateMapStats();
@@ -2768,8 +2798,10 @@ function renderInds(){
 /* ══ REVEALS ══ */
 function triggerReveals(){
   setTimeout(()=>{
+    const pending=document.querySelectorAll('.reveal:not(.visible)');
+    if(!('IntersectionObserver' in window)){pending.forEach(el=>el.classList.add('visible'));return;}
     const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}})  ,{threshold:.06,rootMargin:'0px 0px -20px 0px'});
-    document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));
+    pending.forEach(el=>obs.observe(el));
   },80);
 }
 
@@ -2779,6 +2811,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
   addInteractionGuides();
   show(startMod);
+  document.documentElement.classList.add('js-ready');
   const initializers=[
     ['Påverkanskedjan',buildChain],['Aktörsmatrisen',buildActors],
     ['Organisationstestet',buildAssess],['Indikatorer',renderInds],

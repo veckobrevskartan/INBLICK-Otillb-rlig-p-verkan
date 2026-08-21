@@ -179,6 +179,15 @@ for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC
 if (!modules.includes('ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});')) {
   errors.push('modules.html: aktörernas fallistor synkroniseras inte med CASES');
 }
+if (/<script\s+src=["'][^"']*leaflet[^"']*["'][^>]*><\/script>/i.test(modules)) {
+  errors.push('modules.html: Leaflet får inte vara ett parserblockerande skript');
+}
+if (!modules.includes('function loadLeaflet(){') || !modules.includes('script.async=true;')) {
+  errors.push('modules.html: den icke-blockerande Leaflet-laddaren saknas');
+}
+if (!modules.includes('.reveal{opacity:1;transform:none')) {
+  errors.push('modules.html: innehållet saknar felsäker synlighet om JavaScript inte initieras');
+}
 
 const publicText = [modules, index, JSON.stringify(cases), JSON.stringify(actors), JSON.stringify(indicators)]
   .join('\n')
