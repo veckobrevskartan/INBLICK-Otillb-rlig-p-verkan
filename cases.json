@@ -3409,5 +3409,170 @@
         "url": "https://www.sverigesradio.se/artikel/kriminalvardare-rojde-uppgifter-om-intagna-doms-for-brott"
       }
     ]
+  },
+  {
+    "id": "c151",
+    "title": "Hässleholm — internationell påverkanskampanj mot socialtjänsten i LVU-ärende",
+    "date": "2026-08",
+    "loc": {
+      "m": "Hässleholm",
+      "r": "Skåne",
+      "lat": 56.158,
+      "lng": 13.766,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "osint": {
+      "l": "Svensk OSINT — Internationell LVU-kampanj pressar Hässleholms kommun (2026-W33)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493646721529524225"
+    },
+    "summary": "Hässleholms kommun uppgav i augusti 2026 att ett uppmärksammat LVU-ärende hade utlöst en samordnad påverkanskampanj. Kommunen tog emot stora mängder e-post och telefonsamtal från Sverige och andra länder med krav på att ett enskilt myndighetsbeslut skulle ändras. Kontaktuppgifter till tjänstepersoner och förtroendevalda spreds och kommunen uppgav att även hot förekom. Fallet visar hur ett lokalt myndighetsärende kan skalas upp till en internationell informations- och påverkansmiljö. Kommunens beskrivning av en kampanj fastställer inte vem som samordnat den eller att samtliga kontakter varit otillåtna.",
+    "sources": [
+      {
+        "l": "Hässleholms kommun — Påverkanskampanj kring LVU-ärende (2026-08-11)",
+        "t": "authority",
+        "url": "https://www.hassleholm.se/alla-nyheter/nyheter/2026-08-11-paverkanskampanj-kring-lvu-arende"
+      },
+      {
+        "l": "SVT Nyheter — Så blev ett svenskt LVU-fall internationellt sprängstoff (2026-07-10)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/sa-blev-ett-svenskt-lvu-fall-internationellt-sprangstoff"
+      }
+    ]
+  },
+  {
+    "id": "c152",
+    "title": "Uddevalla — nattpatrull polisanmäld efter hot, fotografering och narkotikauppgifter",
+    "date": "2025-09",
+    "loc": {
+      "m": "Uddevalla",
+      "r": "Västra Götaland",
+      "lat": 58.3498,
+      "lng": 11.9356,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "INSIDER",
+    "status": "INDICATION",
+    "summary": "Uddevalla kommun stängde av ett tjugotal medarbetare i hemtjänstens nattpatrull och gjorde i september 2025 en polisanmälan. Uppgifterna gällde bland annat olaga hot, otillåten fotografering och delning av information i en privat chatt samt narkotika i verksamhetens lokaler. Kommunens senare granskning beskrev också långvariga lednings- och uppföljningsbrister. Polisanmälan och arbetsrättsliga åtgärder innebär inte att varje berörd medarbetare har begått brott; fallet redovisas som en indikation på hur gruppkultur, tystnad och svag kontroll kan göra kommunal omsorg sårbar.",
+    "osint": {
+      "l": "Svensk OSINT — Uddevalla kommun polisanmäler nattpatrull (2025-W38)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_uddevalla-kommun-polisanm%C3%A4ler-nattpatrull-activity-7373740846564749313-3etD"
+    },
+    "sources": [
+      {
+        "l": "Uddevalla kommun — Information gällande händelser inom hemtjänsten",
+        "t": "authority",
+        "url": "https://www.uddevalla.se/omsorg-och-hjalp/hjalp-i-hemmet/hemtjanst/information-gallande-handelser-inom-hemtjansten.html"
+      },
+      {
+        "l": "SVT Nyheter — Hemtjänsthärvan: Uddevalla polisanmäler (2025-09-16)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vast/hemtjanstharvan-uddevalla-polisanmaler-misstanke-om-flera-brott"
+      }
+    ]
+  },
+  {
+    "id": "c153",
+    "title": "Göteborg — samhällsvägledare lämnade kommunen efter uppgifter om gängkontakter",
+    "date": "2025-07",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.7089,
+      "lng": 11.9746,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "En samhällsvägledare inom Göteborgs stads förvaltning för demokrati och medborgarservice lämnade sin anställning efter att kommunen utrett uppgifter om ekonomiska transaktioner och kontakter med personer i kriminella nätverk. Kommunens utredning beskrev en möjlig möjliggörarroll, medan den anställde förnekade samröre med kriminella och förklarade överföringarna med valutahandel. Anställningen avslutades genom en förlikning, inte genom en brottmålsdom. Fallet illustrerar både sårbarheten i medborgarnära funktioner och svårigheten att hantera allvarliga misstankar arbetsrättsligt när de inte är rättsligt fastställda.",
+    "osint": {
+      "l": "Svensk OSINT — Demokrativägledare sparkas efter uppgifter om gängkontakter (2025-W31)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_demokrativ%C3%A4gledare-sparkas-f%C3%B6r-g%C3%A4ngkontakter-activity-7356567223777320961-XtGR"
+    },
+    "sources": [
+      {
+        "l": "Expressen — Demokrativägledare sparkas för gängkontakter (2025-07-31)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/demokrativagledare-sparkas-for-gangkontakter/"
+      },
+      {
+        "l": "Omni — Anställd hos Göteborgs kommun tros ha hjälpt gäng (2025-07-31)",
+        "t": "media",
+        "url": "https://omni.se/anstalld-hos-goteborgs-kommun-tros-ha-hjalpt-gang/a/QMVkqV"
+      }
+    ]
+  },
+  {
+    "id": "c154",
+    "title": "Ystad — samtliga frikändes i omfattande kommunalt mutmål",
+    "date": "2025-12",
+    "loc": {
+      "m": "Ystad",
+      "r": "Skåne",
+      "lat": 55.4295,
+      "lng": 13.8206,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CORRUPT_OFFICIAL",
+    "status": "INDICATION",
+    "summary": "Efter en intern kommunal utredning åtalades före detta anställda i Ystads kommun och andra offentliga verksamheter tillsammans med företrädare för ett säkerhetsföretag för mutbrott kopplade till resor och representation. Ystads tingsrätt ogillade i december 2025 åtalet och frikände samtliga. Domstolen bedömde att förmånerna i det aktuella sammanhanget inte utgjorde otillbörliga förmåner i straffrättslig mening. Fallet är därför inte ett fastställt korruptionsfall, men är relevant rättstillämpning: interna etik- och jävsrisker kan motivera granskning och åtgärder utan att bevisningen når gränsen för straffansvar.",
+    "osint": {
+      "l": "Svensk OSINT — Muthärvan i Ystad fördjupas (2025-W22)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_muth%C3%A4rvan-v%C3%A4xer-tv%C3%A5-anm%C3%A4ls-f%C3%B6r-grovt-bedr%C3%A4geri-activity-7334315056622399489-luBq"
+    },
+    "sources": [
+      {
+        "l": "Ystads tingsrätt — Tingsrätten ogillar åtalet i mål om mutbrott (2025-12-22)",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2025/12/tingsratten-ogillar-atalet-i-mal-om-mutbrott/"
+      },
+      {
+        "l": "SVT Nyheter — Samtliga frias efter muthärvan i Ystad (2025-12-22)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/samtliga-frias-efter-mutharvan-i-ystad"
+      }
+    ]
+  },
+  {
+    "id": "c155",
+    "title": "Region Skåne — jävsrisk och avgränsad granskning i Avarn-avtalen",
+    "date": "2026-06",
+    "loc": {
+      "m": "Skåne",
+      "r": "Skåne",
+      "lat": 56.3,
+      "lng": 13.5,
+      "p": "approximate"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "INSIDER",
+    "status": "INDICATION",
+    "summary": "SVT rapporterade 2026 att Region Skånes säkerhetschef deltagit i förhandlingar med sin tidigare arbetsgivare Avarn trots att regionen året innan bedömt att kopplingen kunde skapa misstanke om jäv. En extern juridisk granskning bedömde deltagandet som mindre lämpligt men försvarligt. SVT visade också att regionen hade avgränsat granskningsuppdraget genom att stryka frågor och påverka urvalet av intervjupersoner. Ingen brottslig gärning är fastställd. Fallet visar hur tidigare arbetsrelationer, undantag i beslutsprocessen och kontroll över en gransknings omfattning kan skada tilliten även när rättsligt jäv eller korruption inte har konstaterats.",
+    "osint": {
+      "l": "Svensk OSINT — Säkerhetschef förhandlade med tidigare arbetsgivare om miljonavtal (2026-W26)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474709893204262912"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Ansågs jävig: chef fick ändå förhandla miljonavtal med Avarn (2026-06-22)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/ansags-javig-chef-pa-region-skane-fick-anda-forhandla-miljonavtal-med-avarn"
+      },
+      {
+        "l": "SVT Nyheter — Regionen strök frågor ur den oberoende granskningen (2026-06-23)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/region-skane-bestallde-oberoende-granskning-strok-advokaternas-fragor"
+      },
+      {
+        "l": "SVT Nyheter — Åratal av larm men fem nya avtal med Avarn (2026-06-22)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/trots-ar-av-larm-om-sakerhetsbrister-region-skane-forlangde-avtalet-med-avarn-fem-ganger"
+      }
+    ]
   }
 ]
