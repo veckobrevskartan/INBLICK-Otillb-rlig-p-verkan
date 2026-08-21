@@ -20,16 +20,16 @@
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       },
-    {
-      "l": "Aktuell Säkerhet — Riksrevisionen: Brister mot infiltration",
-      "t": "media",
-      "url": "https://www.aktuellsakerhet.se/riksrevisionen-brister-i-arbetet-mot-infiltration-i-statliga-myndigheter/"
-    },
-    {
-      "l": "Publikt — Statens anställda blir verktyg för kriminella",
-      "t": "media",
-      "url": "https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"
-    },
+      {
+        "l": "Aktuell Säkerhet — Riksrevisionen: Brister mot infiltration",
+        "t": "media",
+        "url": "https://www.aktuellsakerhet.se/riksrevisionen-brister-i-arbetet-mot-infiltration-i-statliga-myndigheter/"
+      },
+      {
+        "l": "Publikt — Statens anställda blir verktyg för kriminella",
+        "t": "media",
+        "url": "https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"
+      },
       {
         "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
         "t": "report",
@@ -51,23 +51,23 @@
     "sector": "AUTHORITY",
     "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-  "summary": "En anställd på Försäkringskassan i Västsverige dömdes den 4 mars 2020 till villkorlig dom och dagsböter för grovt dataintrång. Personen uppgav att slagningarna om assistansmottagare och assistansbolag hade gjorts under press och visst hot från en person som drev ett assistansbolag.",
+    "summary": "En anställd på Försäkringskassan i Västsverige dömdes den 4 mars 2020 till villkorlig dom och dagsböter för grovt dataintrång. Personen uppgav att slagningarna om assistansmottagare och assistansbolag hade gjorts under press och visst hot från en person som drev ett assistansbolag.",
     "sources": [
       {
         "l": "Riksrevisionen — Infiltration i staten (RiR 2026:3)",
         "t": "report",
         "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html"
       },
-    {
-      "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
-      "t": "report",
-      "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
-    },
-    {
-      "l": "Publikt — Statens anställda blir verktyg för kriminella",
-      "t": "media",
-      "url": "https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"
-    }
+      {
+        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
+        "t": "report",
+        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+      },
+      {
+        "l": "Publikt — Statens anställda blir verktyg för kriminella",
+        "t": "media",
+        "url": "https://www.publikt.se/fordjupning/pa-djupet/statens-anstallda-blir-verktyg-kriminella-25257"
+      }
     ]
   },
   {
@@ -125,21 +125,21 @@
         "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
       },
       {
-      "l": "SVT Nyheter — Socialsekreterare utreds för samarbete med släktnätverk",
-      "t": "media",
-      "url": "https://www.svt.se/nyheter/inrikes/uppgifter-socialsekreterare-samarbetare-med-kant-slaktnatverk"
-    },
-    {
-      "l": "Sveriges Radio — Larm försvann, socialsekreterare misstänkt för brott",
-      "t": "media",
-      "url": "https://www.sverigesradio.se/artikel/larm-forsvann-socialsekreterare-misstankt-for-brott"
-    }
+        "l": "SVT Nyheter — Socialsekreterare utreds för samarbete med släktnätverk",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/uppgifter-socialsekreterare-samarbetare-med-kant-slaktnatverk"
+      },
+      {
+        "l": "Sveriges Radio — Larm försvann, socialsekreterare misstänkt för brott",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/larm-forsvann-socialsekreterare-misstankt-for-brott"
+      }
     ]
   },
   {
     "id": "c05",
-  "title": "Skatteverkshandläggare dömd — felaktiga momsutbetalningar på drygt 120 Mkr",
-  "date": "2010-10",
+    "title": "Skatteverkshandläggare dömd — felaktiga momsutbetalningar på drygt 120 Mkr",
+    "date": "2010-10",
     "loc": {
       "m": "Stockholm",
       "r": "Stockholm",
@@ -148,20 +148,20 @@
       "p": "municipality"
     },
     "sector": "AUTHORITY",
-  "actor": "CRIMINAL_NETWORK",
+    "actor": "CRIMINAL_NETWORK",
     "status": "CONFIRMED",
-  "summary": "En tidigare handläggare vid Skatteverket dömdes 2010 till åtta års fängelse för trolöshet mot huvudman och medhjälp till grovt skattebrott. Handläggaren hade gjort felaktiga momsåterbetalningar på drygt 120 miljoner kronor och förpliktades att betala tillbaka beloppet med ränta. Den tidigare textens påstående om terrorfinansiering hörde till en annan momsutredning och har tagits bort.",
-  "sources": [
-    {
-      "l": "Skatteverket — Fängelsestraff för momsbedrägeri",
-      "t": "authority",
-      "url": "https://news.cision.com/se/skatteverket/r/fangelsestraff-for-momsbedrageri%2Cc520444"
-    },
-    {
-      "l": "SVT Nyheter — Fängelse för momsbedrägeri",
-      "t": "media",
-      "url": "https://www.svt.se/nyheter/inrikes/fangelse-for-momsbedrageri"
-    }
+    "summary": "En tidigare handläggare vid Skatteverket dömdes 2010 till åtta års fängelse för trolöshet mot huvudman och medhjälp till grovt skattebrott. Handläggaren hade gjort felaktiga momsåterbetalningar på drygt 120 miljoner kronor och förpliktades att betala tillbaka beloppet med ränta. Den tidigare textens påstående om terrorfinansiering hörde till en annan momsutredning och har tagits bort.",
+    "sources": [
+      {
+        "l": "Skatteverket — Fängelsestraff för momsbedrägeri",
+        "t": "authority",
+        "url": "https://news.cision.com/se/skatteverket/r/fangelsestraff-for-momsbedrageri%2Cc520444"
+      },
+      {
+        "l": "SVT Nyheter — Fängelse för momsbedrägeri",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/fangelse-for-momsbedrageri"
+      }
     ]
   },
   {
@@ -811,8 +811,13 @@
     "sector": "AUTHORITY",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "26-årig handläggare på Skatteverket dömdes till 4,5 år för 11 fall av grovt bedrägeri. Personen manipulerade inkomstuppgifter med en kollegas inloggningsuppgifter, skapade skatteåterbäringar som betalades ut till konton han kontrollerade. Kom undan 4,5 Mkr och avslöjades på övervakningsbild med rånarluva vid bankomat. Åklagare Forsberg: 'otroligt förtroendesvek'.",
+    "summary": "En handläggare vid Skatteverket i Växjö dömdes till fyra år och sex månaders fängelse för elva grova bedrägerier och ett försök till grovt bedrägeri. Under omkring fem år manipulerade han fyra personers inkomstuppgifter och skapade felaktiga skatteåterbäringar på sammanlagt nära 4,5 miljoner kronor. Ändringarna gjordes genom att logga in i en kollegas namn.",
     "sources": [
+      {
+        "l": "SVT Nyheter Småland — Skattehandläggare dömd för bedrägeri",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/smaland/skattehandlaggare-domd-for-bedrageri"
+      },
       {
         "l": "Sveriges Radio — Skattehandläggare dömd för miljonbedrägeri",
         "t": "media",
@@ -850,7 +855,7 @@
   },
   {
     "id": "c31",
-    "title": "Perstorp — socialsekreterare svindlade kommunen på 8+ Mkr under fyra år",
+    "title": "Perstorp — socialsekreterare dömd efter mångmiljonsvindel mot kommunen",
     "date": "2003-01",
     "loc": {
       "m": "Perstorp",
@@ -862,15 +867,20 @@
     "sector": "SOCIAL",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "Socialsekreterare i Perstorp utnyttjade total avsaknad av intern kontroll: handläggarna skötte utbetalningar av socialbidrag utan kontinuerlig revision. Mannen skapade falska bidragstagare och dirigerade 8+ Mkr till egna konton. Levde ett extravagant liv med helikoptertransporter. Bedrägeriet avslöjades 2003 vid kommunal revision. Dom: 6 år för grovt bedrägeri.",
+    "summary": "En tidigare socialsekreterare i Perstorp dömdes i december 2003 till sex års fängelse. Under åren 2000–2003 hade han beordrat felaktiga socialbidragsutbetalningar på 5,2 miljoner kronor och försökt föra över ytterligare 20 miljoner kronor från kommunen. Domstolen ålade honom att betala 8,4 miljoner kronor plus ränta i skadestånd.",
     "sources": [
       {
-        "l": "Brå 2024 — Möjliggörare för kriminella nätverk",
-        "t": "report",
-        "url": "https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk"
+        "l": "Sveriges Radio — Sex års fängelse för svindlare",
+        "t": "court",
+        "url": "https://www.sverigesradio.se/artikel/345429"
       },
       {
-        "l": "Aftonbladet — Socialsekreteraren lurade kommunen på över 8 miljoner",
+        "l": "Svenska Dagbladet — Svindlare fick sex års fängelse",
+        "t": "court",
+        "url": "https://www.svd.se/a/c17b8611-b158-34b3-9f98-1bdf48baebcd/svindlare-fick-sex-ars-fangelse"
+      },
+      {
+        "l": "Aftonbladet — Socialsekreteraren lurade kommunen på över åtta miljoner",
         "t": "media",
         "url": "https://www.aftonbladet.se/nyheter/a/0EQe1o/jag-angrar-mig-inte"
       }
@@ -878,8 +888,8 @@
   },
   {
     "id": "c32",
-    "title": "Trelleborgs hamn — hamnarbetare dirigerade lastbil för att undvika tullskanner",
-    "date": "2023-05",
+    "title": "Trelleborgs hamn — hamnarbetare åtalades efter att ha dirigerat lastbil förbi tullskanner",
+    "date": "2021-10",
     "loc": {
       "m": "Trelleborg",
       "r": "Skåne",
@@ -889,13 +899,46 @@
     },
     "sector": "TRANSPORT",
     "actor": "CRIMINAL_NETWORK",
-    "status": "CONFIRMED",
-    "summary": "308 kg cannabis gömt i golv på lastbil från Litauen. Tullkriminalens spanare övervakade ankomsten. En hamnarbetare dirigerade lastbilen till en plats som undvek tullskannern — lastbilen stod still i två timmar tills skannern lämnade hamnen. Tullverket hade underrättelseinformation i förväg och sparade tillslaget. Bitr. enhetschef: 'Trots insider-allierad kunde vi komma åt dem.'",
+    "status": "INDICATION",
+    "summary": "Tre personer, däribland en hamnarbetare, åtalades efter ett beslag av 308 kilo cannabis i Trelleborgs hamn. Enligt åtalet dirigerade hamnarbetaren lastbilen åt sidan och lät den stå kvar tills Tullverkets mobila skanner hade lämnat hamnen. Tullkriminalen hade spanare på plats och följde lastbilen efter avfärd. De angivna källorna redovisar åtalet, inte en lagakraftvunnen dom.",
     "sources": [
       {
-        "l": "SVT — Rekordbeslag av cannabis i Trelleborg, hamnarbetare åtalas",
+        "l": "SVT Nyheter Skåne — Rekordbeslag av cannabis i Trelleborg, hamnarbetare åtalas",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/skane/308-kilo-cannabis-beslagtaget-i-trelleborgs-hamn"
+      },
+      {
+        "l": "Tullverket — Över 300 kilo cannabis gömt i golvet på lastbil",
+        "t": "report",
+        "url": "https://via.tt.se/pressmeddelande/3309202/over-300-kilo-cannabis-gomt-i-golvet-pa-lastbil?publisherId=3235930"
+      }
+    ]
+  },
+  {
+    "id": "c33",
+    "title": "Helsingborgs hamn — två hamnanställda dömdes till tio år för kokainförsök",
+    "date": "2010-06",
+    "loc": {
+      "m": "Helsingborg",
+      "r": "Skåne",
+      "lat": 56.05,
+      "lng": 12.69,
+      "p": "municipality"
+    },
+    "sector": "TRANSPORT",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Tysk tull hittade 106,5 kilo kokain i en container med fryst broccoli från Ecuador. Kokainet byttes mot strösocker och lasten fick fortsätta till Helsingborg, där två hamnanställda flyttade containern och plastdunkarna. De dömdes båda till tio års fängelse för försök till grovt narkotikabrott.",
+    "sources": [
+      {
+        "l": "Sveriges Radio — Hamnanställda fick tio år för narkotikabrott",
+        "t": "court",
+        "url": "https://www.sverigesradio.se/artikel/3793572"
+      },
+      {
+        "l": "SVT Nyheter — Tio års fängelse för kokainsmuggling",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/inrikes/tio-ars-fangelse-for-kokainsmuggling"
       }
     ]
   },
@@ -1197,6 +1240,39 @@
     ]
   },
   {
+    "id": "c53",
+    "title": "Eritreansk diaspora i Sverige — tvåprocentskatten drivs in med hot och påtryckningar",
+    "date": "2023-09",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 61.5,
+      "lng": 15.5,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Exileritreaner i Sverige har under lång tid vittnat om att Eritreas ambassad och regimanknutna aktörer kräver en skatt på två procent av inkomsten. Den som inte betalar kan nekas konsulära tjänster eller utsättas för påtryckningar genom anhöriga i Eritrea. SVT rapporterade om en polisanmälan redan 2011 och om fortsatt press 2016; 2023 meddelade regeringen och Socialdemokraterna att de ville stoppa indrivningen.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Eritreas skatteindrivning anmäls",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/eritreas-skatteindrivning-anmals"
+      },
+      {
+        "l": "SVT Nyheter — Svensk-eritreaner pressas av regimen",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/svensk-eritreaner-pressas-av-regimen"
+      },
+      {
+        "l": "Sveriges Radio — Regeringen och S vill stoppa Eritreas diasporaskatt",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/regeringen-och-s-vill-stoppa-eritreas-diasporaskatt"
+      }
+    ]
+  },
+  {
     "id": "c55",
     "title": "Kriminalvården Göteborg — kvinna tog häktesjobb för att hjälpa gängledaren S.S.",
     "date": "2023-04",
@@ -1320,7 +1396,7 @@
   },
   {
     "id": "c60",
-    "title": "SEB — anställd misstänktes ha hjälpt till att länsa konton på 52 miljoner kronor",
+    "title": "SEB Karlaplan — bankanställd åtalades efter kontotömningar på 52 miljoner kronor",
     "date": "2010-10",
     "loc": {
       "m": "Stockholm",
@@ -1332,12 +1408,17 @@
     "sector": "FINANCE",
     "actor": "ECONOMIC_INTEREST",
     "status": "INDICATION",
-    "summary": "En 28-årig huvudman misstänktes ha länsat SEB-kunders konton på sammanlagt 52 miljoner kronor. Enligt rapporteringen misstänktes minst en bankanställd ha medverkat genom att förse upplägget med uppgifter och åtkomst. Fallet visar värdet av intern systembehörighet i ett organiserat bedrägeri; eftersom de angivna källorna inte redovisar en slutlig dom om insiderrollen är posten klassad som indikation.",
+    "summary": "Ett tjugotal SEB-kunder fick sammanlagt 52 miljoner kronor överförda från sina konton 2010. En bankanställd åtalades året därpå och påstods ha använt kollegors inloggningsuppgifter för att föra pengarna vidare till bolag och målvakter. Eftersom de angivna källorna inte redovisar den slutliga domen är insiderrollen fortsatt klassad som indikation.",
     "sources": [
       {
-        "l": "Expressen — Så länsade han SEB:s konton på 52 miljoner",
+        "l": "SVT Nyheter Stockholm — Två åtalas för storsvindel mot SEB",
         "t": "media",
-        "url": "https://www.expressen.se/nyheter/sa-lansade-han-sebs-konton-pa-52-miljoner/"
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/tva-atalas-for-storsvindel-mot-seb"
+      },
+      {
+        "l": "Sveriges Radio — SEB-kunder svindlade på miljoner",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/4131618"
       },
       {
         "l": "Aftonbladet — SEB svindlades på 52 miljoner kronor",
@@ -1347,9 +1428,37 @@
     ]
   },
   {
+    "id": "c61",
+    "title": "SEB Göteborg — bankman dömdes till två och ett halvt år för bolånebluff",
+    "date": "2017-01",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.71,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "FINANCE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En banktjänsteman vid ett centralt SEB-kontor i Göteborg dömdes till två år och sex månaders fängelse för grovt bedrägeri med urkundsförfalskning. Genom falska anställningsbevis och inkomstuppgifter fick icke kreditvärdiga bekanta lån och bolånelöften. Banken förlorade 1,5 miljoner kronor och riskerade ytterligare 16,4 miljoner.",
+    "sources": [
+      {
+        "l": "Göteborgs-Posten — Två och ett halvt års fängelse för bankman som lurade SEB",
+        "t": "court",
+        "url": "https://www.gp.se/nyheter/goteborg/tva-och-ett-halvt-ars-fangelse-for-bankman-som-lurade-seb.af880ac6-633f-4356-bc9d-742e1ce14622"
+      },
+      {
+        "l": "Allt om Juridik — Banktjänsteman döms för grova bedrägerier mot SEB",
+        "t": "court",
+        "url": "https://www.alltomjuridik.se/nyheter/banktjansteman-doms-till-fangelse-for-grova-bedragerier-mot-seb/"
+      }
+    ]
+  },
+  {
     "id": "c62",
-    "title": "Migrationsverket — handläggare beviljade 66 arbetstillstånd sista dagen, nu polis i Region Väst",
-    "date": "2021-07",
+    "title": "Migrationsverket — tidigare handläggare dömd för 66 obehöriga beslut och förlorade polisjobbet",
+    "date": "2025-02",
     "loc": {
       "m": "Göteborg",
       "r": "Västra Götaland",
@@ -1359,18 +1468,23 @@
     },
     "sector": "AUTHORITY",
     "actor": "CRIMINAL_NETWORK",
-    "status": "INDICATION",
-    "summary": "En tidigare handläggare på Migrationsverket åtalades för grovt tjänstefel efter att ha beviljat 66 arbetstillstånd under sin sista arbetsdag i juli 2021. Det ovanliga mönstret väckte misstankar, men någon utredning om mutbrott drevs inte vidare. Personen började senare arbeta som polis i Region Väst. Fallet redovisas som indikation eftersom åtalet gällde tjänstefel och skuldfrågan inte är fastställd i de angivna källorna.",
+    "status": "CONFIRMED",
+    "summary": "En tidigare handläggare vid Migrationsverket fattade 66 beslut om arbets- eller uppehållstillstånd under sin sista arbetsdag 2021, trots att han hade fråntagits befogenheten. Han dömdes i februari 2025 för grovt tjänstefel och förlorade den polisanställning i Region Väst som han hade fått efter tiden på Migrationsverket. Något motiv klarlades inte, och misstanken om mutor drevs inte vidare.",
     "sources": [
       {
-        "l": "SVT — Migrationshandläggare beviljade 66 arbetstillstånd på en dag – åtalas",
+        "l": "SVT Nyheter Väst — Handläggare beviljade 66 arbetstillstånd på en dag",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/vast/handlaggare-pa-migrationsverket-beviljade-66-arbetstillstand-pa-en-dag-atalas"
       },
       {
-        "l": "DN — Migrationshandläggare åtalas efter 66 arbetstillstånd på en dag",
-        "t": "media",
-        "url": "https://www.dn.se/sverige/handlaggare-pa-migrationsverket-atalas-beviljade-66-arbetstillstand-pa-en-dag/"
+        "l": "Aftonbladet/TT — Saknade befogenhet, gav 66 tillstånd att stanna",
+        "t": "court",
+        "url": "https://www.aftonbladet.se/nyheter/a/eMvBwK/gav-uppehallstillstand-utan-ratt"
+      },
+      {
+        "l": "Dagens ETC — Gav tillstånd utan befogenhet, sparkas som polis",
+        "t": "court",
+        "url": "https://www.etc.se/inrikes/gav-uppehaallstillstaand-utan-befogenhet-sparkas-som-polis"
       }
     ]
   },
@@ -1492,6 +1606,67 @@
     ]
   },
   {
+    "id": "c67",
+    "title": "Norrtälje serverhall — misstänkt aktivitet vid telekominfrastruktur, utredning lades ned",
+    "date": "2018-12",
+    "loc": {
+      "m": "Norrtälje",
+      "r": "Stockholm",
+      "lat": 59.76,
+      "lng": 18.7,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Polisen larmades efter att vittnen sett tre personer försöka ta sig in i en underjordisk serverhall som användes av Telia, Tele2 och Telenor. Ärendet rubricerades som olovlig underrättelseverksamhet men lades ned när bevisningen inte räckte. Vittnen uppfattade en skåpbil som ryskregistrerad, men polisen kunde inte belägga registreringen eller identifiera personerna.",
+    "sources": [
+      {
+        "l": "Aftonbladet — Larm om mystisk skåpbil vid serverhall",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/a/8wap6x/larm-om-mystisk-skapbil-vid-serverhall--misstankt-spionage"
+      },
+      {
+        "l": "Kungl. Krigsvetenskapsakademien — Rysk underrättelseverksamhet i Sverige",
+        "t": "analysis",
+        "url": "https://kkrva.se/rysk-underrattelseverksamhet-i-sverige/"
+      }
+    ]
+  },
+  {
+    "id": "c71",
+    "title": "Rysk-svensk företagare — domstolen slog fast teknikanskaffning åt Ryssland men friade",
+    "date": "2025-11",
+    "loc": {
+      "m": "Nacka",
+      "r": "Stockholm",
+      "lat": 59.31,
+      "lng": 18.16,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "summary": "Svea hovrätt fastställde den friande domen mot en rysk-svensk företagare som åtalats för grov olovlig underrättelseverksamhet. Hovrätten ansåg det klarlagt att han hade varit rysk mellanhand, genomfört köp och organiserat transporter av teknikprodukter till Ryssland. Han friades eftersom åtalet gällde underrättelseinhämtning och det inte var bevisat att verksamheten syftat till att komma över skyddsvärda uppgifter.",
+    "sources": [
+      {
+        "l": "Svea hovrätt — Dom i mål om brott mot Sveriges säkerhet",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2025/11/dom-i-mal-om-brott-mot-sveriges-sakerhet/"
+      },
+      {
+        "l": "Säkerhetspolisen — Omfattande olovlig teknikanskaffning från främmande makt",
+        "t": "report",
+        "url": "https://www.sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/olovlig-teknikanskaffning.html"
+      },
+      {
+        "l": "SVT Nyheter — Affärsmannen pekades ut som rysk agent, frias i hovrätten",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/affarsmannen-pekades-ut-som-rysk-agent-frias-i-hovratten"
+      }
+    ]
+  },
+  {
     "id": "c74",
     "title": "B.J. (USA) — avskedad systemadministratör saboterade Georgia-Pacific via kvarvarande VPN-åtkomst",
     "date": "2014-02",
@@ -1554,7 +1729,7 @@
   },
   {
     "id": "c76",
-    "title": "Göteborg valfusk 2022 — grovt valfusk utreds, valsedlar manipulerade i kommunalvalet",
+    "title": "Göteborg 2022 — misstänkt hot utanför förtidsröstningslokal utreddes som grovt valfusk",
     "date": "2022-09",
     "loc": {
       "m": "Göteborg",
@@ -1566,12 +1741,22 @@
     "sector": "AUTHORITY",
     "actor": "EXTREMIST",
     "status": "INDICATION",
-    "summary": "Polisen inledde en förundersökning om grovt valfusk i Göteborg inför riksdagsvalet 2022. Misstanken gällde att valsedlar hade hanterats på ett otillåtet sätt och att någon med en roll i valarbetet därmed kunde ha påverkat processen inifrån. Ärendet utreddes som möjligt valfusk, inte som yttre påverkan.",
+    "summary": "En person delgavs misstanke om grovt otillbörligt verkande vid röstning efter en incident mellan två privatpersoner utanför en förtidsröstningslokal i Göteborg. Åklagaren uppgav att det kunde röra sig om ett hot. Den misstänkte nekade och målsäganden ville inte längre medverka. Källorna ger inget stöd för att valsedlar manipulerades eller att någon insider i valorganisationen var inblandad.",
     "sources": [
       {
-        "l": "Dagens Samhälle — grovt valfusk utreds i Göteborg",
-        "t": "news",
-        "url": "https://www.dagenssamhalle.se/styrning-och-beslut/demokrati/grovt-valfusk-utreds-i-goteborg/"
+        "l": "SVT Nyheter Väst — Misstänkt valfusk utreds i Göteborg",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vast/misstankt-valfusk-utreds-i-goteborg-ovanlig-rubricering"
+      },
+      {
+        "l": "Sveriges Radio — Misstankar om valfusk i Göteborg",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/misstankar-om-valfusk-i-goteborg"
+      },
+      {
+        "l": "Göteborgs-Posten — Grovt valfusk utreds i Göteborg",
+        "t": "media",
+        "url": "https://www.gp.se/nyheter/goteborg/grovt-valfusk-utreds-i-goteborg.43fdc956-1e89-4a16-9b77-8848a478f9c3"
       }
     ]
   },
@@ -1604,8 +1789,31 @@
     ]
   },
   {
+    "id": "c78",
+    "title": "Kriminalvårdare gifte sig med Bandidos-man — drogs in i en våldskonflikt",
+    "date": "2024-06",
+    "loc": {
+      "m": "Nationellt",
+      "r": "Nationellt",
+      "lat": 61.5,
+      "lng": 15.5,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Enligt Expressens granskning inledde en kriminalvårdare en relation med en intagen man med Bandidoskoppling och lämnade senare sin anställning. Paret gifte sig, och deras bostad blev därefter föremål för ett planerat attentat i en konflikt med koppling till mc-miljön. Fallet visar hur en otillåten relation i tjänsten kan få följder långt efter att anställningen har upphört.",
+    "sources": [
+      {
+        "l": "Expressen — Kriminalvårdaren gifte sig med Bandidos-man och hamnade i konflikten",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/sverige/kriminalvardaren-gifte-sig-med-bandidos-man-hamnade-i-konflikten/"
+      }
+    ]
+  },
+  {
     "id": "c79",
-    "title": "Migrationsverket Borås 2018 — handläggare beviljade minst 25 otillåtna arbetstillstånd",
+    "title": "Migrationsverket Borås — minst 25 arbetstillstånd granskades som felaktiga",
     "date": "2018-01",
     "loc": {
       "m": "Borås",
@@ -1617,17 +1825,17 @@
     "sector": "AUTHORITY",
     "actor": "CRIMINAL_NETWORK",
     "status": "INDICATION",
-    "summary": "SVT rapporterade att Migrationsverkets interna tillsyn efter ett anonymt tips granskade två handläggare i Borås för minst 25 arbetstillstånd som misstänktes ha beviljats utan stöd i utlänningslagen. En handläggare misstänktes även för dataintrång. Personalansvarsnämnden skulle ta ställning till avsked och åtalsanmälan. Källan redovisar misstankar och arbetsrättslig handläggning, inte en fällande dom.",
+    "summary": "Migrationsverkets tillsynsenhet granskade två handläggare i Borås efter ett anonymt tips. Minst 25 arbetstillstånd bedömdes ha beviljats felaktigt, och en handläggare misstänktes även för dataintrång. Ärendet gick vidare till personalansvarsnämnden för prövning av avsked och åtalsanmälan. Direktkällorna visar inte att tillstånden beviljades mot betalning.",
     "sources": [
       {
-        "l": "SVT — Handläggare på Migrationsverket riskerar åtal",
+        "l": "SVT Nyheter Väst — Handläggare på Migrationsverket riskerar åtal",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/vast/handlaggare-pa-migrationsverket-riskerar-atal"
       },
       {
-        "l": "Riksrevisionen — Skyddet mot oegentligheter inom migrationsverksamheten vid utlandsmyndigheterna (RiR 2018:13)",
-        "t": "report",
-        "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2018/skyddet-mot-oegentligheter-inom-migrationsverksamheten-vid-utlandsmyndigheterna.html"
+        "l": "Borås Tidning — Hotas av åtal för felaktiga arbetstillstånd",
+        "t": "media",
+        "url": "https://www.bt.se/boras/hotas-av-atal-for-felaktiga-arbetstillstand/"
       }
     ]
   },
@@ -1755,7 +1963,7 @@
   },
   {
     "id": "c85",
-    "title": "Kommunal chef dömd — svindlade 5,5 miljoner kronor från fyra skånska kommuner",
+    "title": "Kommunal chef dömd — svindlade 5,5 miljoner kronor från fem skånska kommuner",
     "date": "2025-12",
     "loc": {
       "m": "Perstorp",
@@ -1767,15 +1975,15 @@
     "sector": "AUTHORITY",
     "actor": "ECONOMIC_INTEREST",
     "status": "CONFIRMED",
-    "summary": "En tidigare kommunal chef dömdes till tre år och sex månaders fängelse efter att ha fört över sammanlagt omkring 5,5 miljoner kronor från samarbeten mellan Åstorp, Bjuv, Klippan och Perstorp. Överföringarna doldes genom falska utbetalningsunderlag. Fallet visar hur långvarigt förtroende och otillräcklig kontroll kan ge en ensam befattningshavare stort handlingsutrymme.",
+    "summary": "En tidigare kommunal chef dömdes till tre år och sex månaders fängelse efter att ha fört över sammanlagt 5,5 miljoner kronor från Perstorp, Klippan, Bjuv, Åstorp och Hässleholm. Pengarna betalades ut genom fabricerade beslut och felaktiga utbetalningsunderlag. Oegentligheterna upptäcktes när en HR-anställd reagerade på överföringar till chefens privata konto.",
     "sources": [
       {
-        "l": "SVT — Kommunal chef svindlade miljoner och döms till fängelse",
+        "l": "SVT Nyheter Helsingborg — Kommunal chef svindlade miljoner och döms till fängelse",
         "t": "court",
         "url": "https://www.svt.se/nyheter/lokalt/helsingborg/kommunal-chef-svindlade-miljoner-var-shoppingberoende"
       },
       {
-        "l": "SVT — Kommunal chef erkänner mångmiljonsvindel",
+        "l": "SVT Nyheter Helsingborg — Kommunal chef erkänner mångmiljonsvindel",
         "t": "media",
         "url": "https://www.svt.se/nyheter/lokalt/helsingborg/kommunal-chef-erkanner-mangmiljonsvindel-i-nordvastskane-stalls-infor-ratta"
       }
@@ -1904,39 +2112,6 @@
     ]
   },
   {
-    "id": "c90",
-    "title": "Helsingborgs hamn — hamnarbetare dömd för kokainsmuggling via Sky ECC-koordination",
-    "date": "2024-04",
-    "loc": {
-      "m": "Helsingborg",
-      "r": "Skåne",
-      "lat": 56.04,
-      "lng": 12.69,
-      "p": "municipality"
-    },
-    "sector": "TRANSPORT",
-    "actor": "CRIMINAL_NETWORK",
-    "status": "CONFIRMED",
-    "summary": "Åklagarmyndigheten väckte åtal i ett omfattande narkotikamål i Helsingborg. Chattar från den krypterade tjänsten Sky ECC visade hur hamnarbetare samordnade containeruttag med kriminella utanför hamnen. Deras tillgång gjorde det möjligt att föra in hundratals kilo kokain i Sverige. Drugnews rapporterade senare att en hamnarbetare dömdes till fängelse i målet.",
-    "sources": [
-      {
-        "l": "Transportarbetaren — Hamnarbetare dömd för kokainsmuggling i Helsingborg",
-        "t": "court",
-        "url": "https://www.transportarbetaren.se/hamnarbetare-domd-for-kokainsmuggling/"
-      },
-      {
-        "l": "Drugnews — Hamnarbetare döms till fängelse i kokainmål (Helsingborg)",
-        "t": "media",
-        "url": "https://drugnews.se/2024/04/23/hamnarbetare-doms-till-fangelse-i-kokainmal/"
-      },
-      {
-        "l": "SVT Nyheter Helsingborg — Kokain för miljoner smugglades i containrar, dom",
-        "t": "court",
-        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/kokain-for-miljoner-smugglades-i-containrar-idag-kommer-domen"
-      }
-    ]
-  },
-  {
     "id": "c91",
     "title": "Göteborg bygglovskorruption — tjänsteman erbjöd gräddfil mot betalning, jäv i familjeärende",
     "date": "2024-03",
@@ -2016,6 +2191,34 @@
     ]
   },
   {
+    "id": "c94",
+    "title": "Kaninmannen — film från Liseberg avslöjade assistansbedrägeri",
+    "date": "2010-01",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.7,
+      "lng": 11.97,
+      "p": "municipality"
+    },
+    "sector": "HEALTH",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "En man och hans far dömdes till tre års fängelse vardera efter att under 2005–2009 ha fått omkring fyra miljoner kronor i assistansersättning genom att uppge att sonen var förlamad. I utredningen fanns bland annat en film där sonen dansade med Lisebergskaninen. Fallet kom därför att kallas Kaninmannen eller Kanindansaren.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Härvan av bidragsfusk växer",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/inrikes/harvan-av-bidragsfusk-vaxer"
+      },
+      {
+        "l": "Aftonbladet — Dansade med Lisebergskaninen, fast för bidragsfusk",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/a/jP3b8e/dansade-med-lisebergskaninen--fast-for-bidragsfusk"
+      }
+    ]
+  },
+  {
     "id": "c95",
     "title": "GRU-enhet 29155 — Vrbětice-explosionen i Tjeckien, samma agenter som Salisbury",
     "date": "2014-10",
@@ -2040,6 +2243,39 @@
         "l": "RFE/RL — Czech police conclude GRU carried out Vrbětice blasts",
         "t": "media",
         "url": "https://www.rferl.org/a/czech-police-vrbetice-blasts-russia-gru-ammunition-depots/32925105.html"
+      }
+    ]
+  },
+  {
+    "id": "c96",
+    "title": "Frankrike, OS 2024 — samordnat tågsabotage timmar före invigningen",
+    "date": "2024-07",
+    "loc": {
+      "m": "Paris",
+      "r": "Frankrike",
+      "lat": 48.86,
+      "lng": 2.35,
+      "p": "approximate"
+    },
+    "sector": "TRANSPORT",
+    "actor": "EXTREMIST",
+    "status": "INDICATION",
+    "summary": "Samordnade anlagda bränder skadade tre franska höghastighetslinjer timmar före OS-invigningen och störde resorna för omkring 800 000 personer. Franska myndigheter undersökte en möjlig koppling till ultravänstern, men den aktivist som greps vid en annan järnvägsplats knöts inte till attentaten. Reuters och Le Monde rapporterade i augusti 2024 att gärningspersonerna fortfarande var oidentifierade.",
+    "sources": [
+      {
+        "l": "Reuters — France seeks FBI help in probe of high-speed train sabotage",
+        "t": "media",
+        "url": "https://www.reuters.com/world/europe/france-seeks-fbi-help-probe-high-speed-train-sabotage-hours-before-olympics-2024-08-07/"
+      },
+      {
+        "l": "Le Monde — Perpetrators of French rail sabotage remain unidentified",
+        "t": "media",
+        "url": "https://www.lemonde.fr/en/economy/article/2024/08/10/french-rail-sabotage-perpetrators-of-infrastructure-damage-remain-unidentified_6712298_19.html"
+      },
+      {
+        "l": "Reuters — Far-left activist arrest not officially linked to rail sabotage",
+        "t": "media",
+        "url": "https://www.reuters.com/world/europe/far-left-activist-arrested-regarding-rail-sabotage-minister-2024-07-29/"
       }
     ]
   },
