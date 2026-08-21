@@ -150,6 +150,42 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .btn-g:hover{border-color:var(--accent);color:var(--accent)}
 .section-sep{height:1px;background:var(--border-s);margin:48px 0}
 
+/* ─── PEDAGOGISKA FÖRDJUPNINGAR ─── */
+.edu-stack{display:grid;gap:8px;margin:18px 0 34px}
+.edu-stack-head{margin-bottom:4px}
+.edu-card{background:var(--bg-card);border:1px solid var(--border-s);border-left:3px solid var(--accent)}
+.edu-card[open]{background:var(--bg-mid);border-left-color:var(--green)}
+.edu-card summary{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;min-height:46px;padding:12px 15px;cursor:pointer;list-style:none;color:var(--text)}
+.edu-card summary::-webkit-details-marker{display:none}
+.edu-card summary:hover{background:rgba(184,151,58,.05)}
+.edu-arrow{font-family:var(--fm);font-size:13px;color:var(--accent);transition:transform .16s;line-height:1}
+.edu-card[open] .edu-arrow{transform:rotate(90deg)}
+.edu-summary-title{font-family:var(--fm);font-size:9px;letter-spacing:.07em;text-transform:uppercase;line-height:1.45}
+.edu-summary-meta{font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.edu-body{padding:20px 22px 22px;border-top:1px solid var(--border-s)}
+.edu-kicker{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.edu-title{font-family:var(--fd);font-size:24px;font-weight:400;line-height:1.15;margin-bottom:5px}
+.edu-meta{font-family:var(--fm);font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.edu-badge{display:inline-flex;padding:3px 7px;border:1px solid rgba(74,123,111,.35);background:rgba(74,123,111,.1);font-family:var(--fm);font-size:7.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:13px}
+.edu-body p{font-size:12.5px;color:var(--muted);line-height:1.72;margin:0 0 13px;max-width:820px}
+.edu-why{padding:13px 15px;background:var(--bg-card);border-left:2px solid var(--accent);font-size:12.5px;color:var(--text);line-height:1.7;margin:14px 0}
+.edu-chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:14px 0 16px}
+.edu-chapter{display:flex;justify-content:space-between;gap:10px;padding:7px 9px;background:var(--bg-card);border:1px solid var(--border-s);font-size:11px;color:var(--muted);line-height:1.4}
+.edu-time{font-family:var(--fm);font-size:8px;color:var(--accent);white-space:nowrap;padding-top:2px}
+.edu-module-list{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}
+.edu-module{padding:5px 8px;background:var(--bg-card);border:1px solid var(--border-s);font-family:var(--fm);font-size:8px;letter-spacing:.04em;color:var(--muted)}
+.edu-links{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:16px}
+.edu-link{display:inline-flex;align-items:center;min-height:34px;padding:7px 11px;border:1px solid var(--border-s);font-family:var(--fm);font-size:8px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.edu-link:hover{border-color:var(--accent);color:var(--accent)}
+.edu-link.primary{border-color:rgba(184,151,58,.45);color:var(--accent)}
+.edu-context{padding:14px 17px;background:rgba(184,151,58,.05);border-left:2px solid var(--accent);font-size:12.5px;color:var(--text);line-height:1.72;margin:16px 0}
+.edu-context strong{color:var(--accent);font-weight:500}
+.edu-context a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(184,151,58,.35)}
+@media(max-width:680px){
+  .edu-card summary{grid-template-columns:auto 1fr}.edu-summary-meta{grid-column:2;white-space:normal}
+  .edu-body{padding:17px 15px 19px}.edu-chapters{grid-template-columns:1fr}.edu-links{align-items:stretch;flex-direction:column}.edu-link{width:100%;justify-content:center;text-align:center}
+}
+
 /* ─── CHAIN ─── */
 .chain-layout{display:grid;grid-template-columns:260px 1fr;gap:2px;background:var(--border-s);margin-bottom:60px}
 @media(max-width:760px){.chain-layout{grid-template-columns:1fr}}
@@ -741,6 +777,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .cad-step-n{color:var(--accent);flex-shrink:0;font-family:var(--fm);font-size:10px;padding-top:1px}
 .cad-case{margin-top:16px;padding:12px 16px;background:var(--bg-card);border-left:2px solid var(--green);font-size:12px;color:var(--muted);line-height:1.65}
 .cad-case b{color:var(--text);font-weight:500}
+@media(max-width:950px){#handle-crime [style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:repeat(2,1fr)!important}}
 
 /* ═══ MOBIL LÄSBARHET OCH ÅTKOMST ═══ */
 @media(max-width:600px){
@@ -804,6 +841,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
   #mod-sectors [style*="grid-template-columns:200px"],
   #mod-handle [style*="grid-template-columns:1fr 1fr"],
   #mod-handle [style*="grid-template-columns:1fr 1fr 1fr"],
+  #mod-handle [style*="grid-template-columns:repeat(5,1fr)"],
   #mod-visuals [style*="grid-template-columns:1fr 1fr"],
   #mod-visuals [style*="grid-template-columns:1fr 1fr 1fr"],
   #mod-sources [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
@@ -953,6 +991,19 @@ button,[onclick]{touch-action:manipulation}
     <p class="eyebrow">Kapitel 3 · Interaktiv analys</p>
     <h1 class="sec-title">Hur påverkan <em>genomförs</em></h1>
     <p class="sec-intro">Påverkan växer ofta fram stegvis. Följ vägen från den första kartläggningen till att verksamhetens beslut börjar påverkas. Varje steg visas ur angriparens, medarbetarens och organisationens perspektiv. Fall kopplas bara när öppna källor faktiskt belägger det aktuella momentet; ett exempel innebär inte att hela förloppet är känt.</p>
+  </div>
+  <div class="edu-stack reveal">
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Digital utbildning · Vägen till att bli insider</span><span class="edu-summary-meta">NPSA · 2025</span></summary>
+      <div class="edu-body">
+        <div class="edu-kicker">Internationell metodfördjupning</div>
+        <div class="edu-title">Insider Risk Mitigation Digital Learning</div>
+        <div class="edu-meta">National Protective Security Authority · 2025</div>
+        <p>De utvalda modulerna kompletterar påverkanskedjan med ett brittiskt personalsäkerhetsperspektiv: hur en väg mot insideragerande kan utvecklas och hur digital exponering, kontaktförsök och social manipulering kan påverka personal.</p>
+        <div class="edu-module-list"><span class="edu-module">Pathway to becoming an insider</span><span class="edu-module">Online Personnel Security</span></div>
+        <div class="edu-links"><a class="edu-link primary" href="https://www.npsa.gov.uk/insider-risk-mitigation-digital-learning" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+      </div>
+    </details>
   </div>
   <div class="chain-progress reveal" id="chainProg"></div>
   <div class="chain-layout reveal">
@@ -1162,6 +1213,17 @@ button,[onclick]{touch-action:manipulation}
       <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(184,151,58,.05);border-left:2px solid #B8973A"><a href="https://bra.se/rapporter/arkiv/2025-04-01-otillaten-paverkan-fran-kriminella-och-extremistiska-grupperingar" target="_blank" rel="noopener">Brå (2025) ↗</a> beskriver kommunanställda och kommunpolitiker som särskilt sårbara eftersom den som försöker påverka ofta finns nära och stödet på lokal nivå kan vara ojämnt. <a href="https://bra.se/statistik/statistik-fran-enkatundersokningar/politikernas-trygghetsundersokning" target="_blank" rel="noopener">Politikernas trygghetsundersökning 2025 ↗</a> visar att 25,4 procent av de förtroendevalda uppgav utsatthet under 2024 och att 2,9 procent utsatts för korruptionsförsök.</div>
       <div style="margin-bottom:28px">
         <p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Kommuner och regioner är inte en enskild sektor. Samma organisation kan hantera socialtjänst, omsorg, skola, tillstånd, upphandling, samhällsbyggnad, bidrag, vård, kollektivtrafik och säkerhetskänslig verksamhet. Det skapar många kontaktytor, stora ekonomiska flöden och beslut som får omedelbar betydelse för personer och företag.</p>
+        <div class="edu-context"><strong>Organisatorisk attackyta:</strong> regler för föreningsbidrag, ekonomiskt bistånd, LSS, HVB, upphandling, avtalsuppföljning, tillstånd, ersättningar och behörigheter kan innehålla exploaterbara glapp. <a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Brås Crime proofing-metodstöd ↗</a> hjälper organisationen att identifiera och åtgärda dessa glapp innan de utnyttjas.</div>
+        <details class="edu-card" style="margin:0 0 16px">
+          <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Utbildning och stöd · Kompassen</span><span class="edu-summary-meta">SKR · uppdaterad 2026</span></summary>
+          <div class="edu-body">
+            <div class="edu-kicker">Kommuner och regioner</div>
+            <div class="edu-title">Kompassen – med utbildning och stödmaterial</div>
+            <div class="edu-meta">Sveriges Kommuner och Regioner · uppdaterad 12 januari 2026</div>
+            <p>Kompassen samlar utbildning och stöd för det kommungemensamma arbetet mot välfärdsbrottslighet. Materialet omfattar bland annat välfärdsbrott, otillåten påverkan, medarbetarens ansvar, arbetsgivaransvar och förtroendevalda. På SKR:s sida finns även en inspelad lansering.</p>
+            <div class="edu-links"><a class="edu-link primary" href="https://skr.se/valfardsbrottslighet/kompassenmedutbildningochstodmaterial.9072.html" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+          </div>
+        </details>
         <p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Påverkan kan riktas mot ett enskilt beslut men också mot organisationens handlingsförmåga. <a href="https://saffle.se/arkiv/nyhetsarkiv/2026/2026-05-21-extern-utredning-av-visselblasningar-om-otillaten-paverkan-i-saffle-kommun.html" target="_blank" rel="noopener">Säffles externa utredning 2026 ↗</a> fann direkta och återkommande försök från förtroendevalda att påverka myndighetsutövning inom skola och socialtjänst. <a href="https://www.hassleholm.se/alla-nyheter/nyheter/2026-08-11-paverkanskampanj-kring-lvu-arende" target="_blank" rel="noopener">Hässleholm ↗</a> visar hur ett lokalt LVU-ärende utvecklades till en internationell kampanj med samordnade kontaktförsök och uppgivna hot. <a href="https://www.regeringen.se/rattsliga-dokument/kommittedirektiv/2026/06/dir.-202663" target="_blank" rel="noopener">Botkyrka ↗</a> visar ett tredje spår: misstankar om påverkan i politiska processer ledde till en statlig infiltrationskommission. <a href="https://www.expressen.se/nyheter/demokrativagledare-sparkas-for-gangkontakter/" target="_blank" rel="noopener">Göteborgsfallet med en samhällsvägledare ↗</a> och <a href="https://www.uddevalla.se/omsorg-och-hjalp/hjalp-i-hemmet/hemtjanst/information-gallande-handelser-inom-hemtjansten.html" target="_blank" rel="noopener">Uddevallas nattpatrull ↗</a> visar hur allvarliga signaler kan behöva hanteras arbetsrättsligt och organisatoriskt även när skuldfrågan inte är fastställd.</p>
         <p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.svt.se/nyheter/lokalt/stockholm/upplands-bro-agerar-bank-at-friskolor-kd-politiker-kopplas-till-rantefria-lan" target="_blank" rel="noopener">Upplands-Bro-fallet om räntefria kommunala lån ↗</a> och <a href="https://www.svt.se/nyheter/lokalt/stockholm/politikerns-foretag-byggde-omstridd-bullervall-efter-eget-forslag" target="_blank" rel="noopener">fallet om bullervallen ↗</a> riktar blicken mot intressekonflikter snarare än hot. SVT:s granskningar beskrev dels räntefria kommunala lån till verksamheter med politiska kopplingar, dels ett projekt där en politiker föreslog en bullervall som det egna företaget senare medverkade till att genomföra. Ingen brottslig gärning är fastställd. Fallen visar varför jävsprövning, dokumenterade urval och en tydlig åtskillnad mellan politiska, administrativa och privata roller är centrala kontrollpunkter.</p>
         <p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Sedan den 1 mars 2026 har kommuner genom <a href="https://www.regeringen.se/rattsliga-dokument/proposition/2025/11/prop.-20252661" target="_blank" rel="noopener">prop. 2025/26:61 ↗</a> fått utökade möjligheter till registerkontroll inför vissa anställningar. Kontroller kan omfatta belastnings- och i vissa fall misstankeregister för arbete med äldre, personer med funktionsnedsättning och barn samt belastningsregister för vissa ledande eller verksamhetskritiska befattningar. Från den 15 juli 2026 gäller dessutom <a href="https://www.regeringen.se/rattsliga-dokument/proposition/2026/03/prop.-202526174" target="_blank" rel="noopener">utökade kontroller i skolväsendet ↗</a>.</p>
@@ -1232,6 +1294,16 @@ button,[onclick]{touch-action:manipulation}
       </div>
       <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(184,151,58,.05);border-left:2px solid #9B4FBB"><a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB (2026) ↗</a> dokumenterar att välfärdssektorn är den dominerande yrkesdomänen i studiepopulationen: 22 043 av 34 090 person-år (64,7%) i samhällskänsliga yrken återfinns inom omsorg och omvårdnad. De enskilt vanligaste yrkena är vårdbiträden (5 972, 17,52%), personliga assistenter (5 845, 17,15%) och vårdare/boendestödjare (4 190, 12,29%). Assistansbranschen utmärks av höga bidragsflöden med svag kontroll: studiepopulationens registrerade bidrag och ersättningar uppgår till 26,9 mdkr 2015–2024, varav ekonomiskt bistånd 6,8 mdkr och sjukdom/aktivitetsersättning 3,5 mdkr. 22% av studiepopulationen har haft socialtjänstens placeringsinsatser — ett livsförloppssamband som SMOB betecknar som 'livsförloppsrelaterade sårbarheter' snarare än kausalitet. IVO stängde 18 HVB-hem under 2024 (15 efter septemberuppdraget) och sedan september 2024 har 24 HVB och 5 stödboenden fått förbud eller återkallat tillstånd.</div>
       <div style="margin-bottom:28px"><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Socialtjänsten är unik bland offentliga sektorer: den hanterar de mest utsatta individerna i samhället och har samtidigt ett stort eget handlingsutrymme. En enskild handläggare kan fatta beslut som påverkar individers frihet, barns placering och familjeekonomin — ofta utan omedelbar kollegial insyn.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå (2024) ↗</a> identifierar socialtjänst och omsorg som en av de sektorer med flest dokumenterade möjliggörare i förhållande till sektorstorlek. Förklaringen är dels det ekonomiska incitamentet: välfärdssystemens utbetalningar är stora och kontrollen är eftersatt. Dels är rekryteringsbasen bred — kriminella nätverk med familjemedlemmar i sektorn nyttjar de relationerna systematiskt.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.svt.se/nyheter/lokalt/vast/socialsekreterare-tog-beslut-om-barn-i-goteborg-med-falskt-examensbevis" target="_blank" rel="noopener">Göteborgsfallet (2023) ↗</a> visar varför utbildningshandlingar behöver verifieras: en socialsekreterare fattade beslut om barn trots att personen saknade den examen som hade uppgetts vid anställningen.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.svt.se/nyheter/lokalt/sodertalje/har-ar-harvorna" target="_blank" rel="noopener">Jomehärvan och andra Södertäljefall ↗</a> visar flera skilda sätt att exploatera välfärdssystemet. I Jomefallet dömdes en tidigare Arbetsförmedlingsanställd hemtjänst-vd efter att kommunen lurats på omkring fem miljoner kronor. Fallen ska bedömas var för sig; källorna visar inte att varje del byggde på korrumperade handläggare eller styrda LVU-beslut.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://assistanskoll.se/20150723-Hovretten-skerper-domar-kring-ELMA-Assistans.html" target="_blank" rel="noopener">ELMA Assistans-målet ↗</a> rörde assistansbedrägerier på omkring 31 miljoner kronor, och hovrätten skärpte flera av domarna. Det visar hur stora belopp kan betalas ut när rapporterade assistansinsatser inte verifieras tillräckligt.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.aftonbladet.se/nyheter/a/Ln0P84/riksdagsledamot-kopplas-till-kriminell-klan-i-hemlig-rapport" target="_blank" rel="noopener">Aftonbladets rapportering 2024 ↗</a> återgav uppgifter ur en hemlig rapport om en riksdagsledamots påstådda nätverkskopplingar. Uppgifterna är inte likvärdiga med en offentlig dom eller ett fastställt myndighetsbeslut och redovisas därför som en medieuppgift, inte som bevisad infiltration.</p></div>
+      <details class="edu-card" style="margin:0 0 20px">
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Kunskapsbaserat arbete mot välfärdsbrott</span><span class="edu-summary-meta">Brå · 2024</span></summary>
+        <div class="edu-body">
+          <div class="edu-kicker">Sekundär svensk fördjupning</div>
+          <div class="edu-title">Att arbeta kunskapsbaserat mot välfärdsbrott</div>
+          <div class="edu-meta">Brottsförebyggande rådet · 13 februari 2024</div>
+          <p>Webbinariet visar hur kartläggning, indikatorer och analys kan omvandlas till förebyggande åtgärder. Det innehåller praktiska erfarenheter från Nacka kommuns arbete och en introduktion till Crime proofing som nästa steg efter att en sårbarhet har identifierats.</p>
+          <div class="edu-links"><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2024-02-13-att-arbeta-kunskapsbaserat-mot-valfardsbrott" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+        </div>
+      </details>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px">
         <div><div class="ad-sec-lbl" style="margin-bottom:10px">Vanliga metoder</div><div style="display:flex;flex-direction:column;gap:4px"><div class="ac-method" style="margin:0 4px 4px 0">Falskt examensbevis vid anställning — verifieras inte systematiskt</div><div class="ac-method" style="margin:0 4px 4px 0">Beslutspåverkan via familje- och klanrelationer till klienter i ärendehandläggning</div><div class="ac-method" style="margin:0 4px 4px 0">Informationsläckage om LVU-processer och sociala utredningar till berörda kriminella</div><div class="ac-method" style="margin:0 4px 4px 0">Bidragsexploatering via fiktiva omsorgsbolag och överdrivna eller påhittade timmar</div><div class="ac-method" style="margin:0 4px 4px 0">Rekrytering av familjemedlemmar till nyckelpositioner inom handläggning</div></div></div>
         <div><div class="ad-sec-lbl" style="margin-bottom:10px">Sårbarheter i verksamheten</div><div class="stressor-item">Bred diskretionsbefogenhet hos enskild handläggare med liten kollegial insyn</div><div class="stressor-item">Otillräcklig verifiering av utbildningsintyg och bakgrundskontroll vid rekrytering</div><div class="stressor-item">Välfärdssystemets utformning möjliggör storskaliga bedrägerier utan omedelbar upptäckt</div><div class="stressor-item">Hög andel ensamarbete i hemtjänst och liknande roller, svår att övervaka</div><div class="stressor-item">Svag intern kontroll av handläggares ärendebeslut vid kopplingar till kriminella släktnätverk</div></div>
@@ -1293,6 +1365,7 @@ button,[onclick]{touch-action:manipulation}
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7A2E;margin-top:3px">HÖG RISK</div>
         </div>
       </div>
+      <div class="edu-context"><strong>Crime proofing i praktiken:</strong> analysera hela den regelstyrda kedjan — behov, krav, kvalificering, tilldelning, avtal, ändringar, attest och avtalsuppföljning — och fråga var en oseriös aktör eller intern möjliggörare kan påverka utfallet utan att kontrollsystemet reagerar. Samma metod kan användas för bygglov och annan tillståndsgivning. <a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Öppna Brås originalmetodstöd ↗</a></div>
       <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(184,151,58,.05);border-left:2px solid #6B7A2E"><a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB (2026) ↗</a> identifierar bygg och anläggning (SNI 43: 2 157 bolag, 9,59%) och fastighetsverksamhet (SNI 68: 2 110 bolag, 9,38%) som de två dominerande branscherna i studiepopulationens bolagsengagemang — båda med starka upphandlingsflöden. 12 130 organisationer kopplade till medstyrelseledamöter (de formella bolagskontakterna) har vunnit TED-upphandlingar. SMOB konstaterar att offentliga inköpssystem utgör en strategisk kontaktyta där offentliga medel, bolagsstrukturer, leverantörskedjor, underentreprenörer och institutionell legitimitet möts. Sårbarheten förstärks när kontroll av verkliga huvudmän, underleverantörsled och faktiska verksamhetsförhållanden är fragmenterad. <a href="https://polisen.se/siteassets/dokument/organiserad_brottslighet/rapport_korruption-i-sverige-2025.pdf/download/?v=4d2a5950d779836a69499efa161273cd" target="_blank" rel="noopener">Polisens NKIG-rapport (2025) ↗</a> dokumenterar 99 korruptionsärenden november 2024–november 2025, med 97% fällandegrad och konstaterar att direktupphandlingar är det tydligaste riskområdet. Kryptotransaktioner via neobanker identifieras som växande kanal för att undgå traditionell spårning.</div>
       <div style="margin-bottom:28px"><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Bygg- och upphandlingssektorn återkommer i svenska korruptionsärenden. <a href="https://bra.se/download/18.6b82726313f7b234a5882/1372245735487/2013_15_Den_anm_lda_korruptionen_i_Sverige.pdf" target="_blank" rel="noopener">Brå:s studie av 684 ärenden (2013) ↗</a> visade att nära en tredjedel av mutgivarna var verksamma i bygg- och anläggningssektorn. <a href="https://www.institutetmotmutor.se/wp-content/uploads/2022/02/Mutbrottsdomar-i-Sverige-2021.pdf" target="_blank" rel="noopener">IMM:s sammanställning för 2021 ↗</a> redovisade ett sammanlagt förmånsvärde på omkring 117 miljoner kronor i årets domar.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">En förklaring är att upphandlingar innehåller bedömningar och vägval som inte alltid är enkla att kontrollera i efterhand. Kravspecifikationer kan utformas för att gynna specifika leverantörer. Tilldelningsbeslut involverar subjektiva bedömningar. Kontrollerna är formellt strikta men svåra att tillämpa mot välorganiserade aktörer som har tid och resurser att arbeta inom systemets gränser.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.domstol.se/nyheter/2025/03/dom-i-mal-om-grov-mutbrottslighet/" target="_blank" rel="noopener">Akademiska sjukhuset-målet ↗</a> rörde bland annat cirka 4,6 miljoner kronor i mutor från fem företag under åren 2014–2022. Svea hovrätt skärpte 2025 straffen och dömde för flera grova mut- och trolöshetsbrott.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.fastighetsnytt.se/samhallsbyggnad/lagar-regler/en-domd-i-bygglovsharva/" target="_blank" rel="noopener">Bygglovshärvan i Lysekil ↗</a> gällde förfalskade bygglovshandlingar. En person dömdes medan en annan frikändes, vilket understryker behovet av att skilja på misstanke, åtal och dom även i kontrollarbetet.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.aftonbladet.se/nyheter/a/0EQe1o/jag-angrar-mig-inte" target="_blank" rel="noopener">Perstorpsfallet ↗</a> rörde en socialsekreterare som lurade kommunen på över åtta miljoner kronor. Fallet visar hur stort förtroende och breda befogenheter kan utnyttjas länge när attest- och uppföljningskontroller inte fångar avvikelser.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://fairplaybygg.se/media/zl1hnakx/fair-play-bygg-a-rsrapport-2023-webb-1.pdf" target="_blank" rel="noopener">Fair Play Byggs årsrapport 2023 ↗</a> byggde på 291 tips om misstänkt brottslighet på Stockholms byggarbetsplatser. Rapporten beskriver bland annat problem med felaktiga underentreprenörsled, svartarbete och skatteundandragande som kan snedvrida konkurrensen i offentliga och privata entreprenader.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Bemannings- och rekryteringsföretag är en angränsande leverantörsrisk. I <a href="https://da.se/2024/04/uppgifter-kravdes-pa-pengar-for-att-fa-jobb-pa-scania-polisen-utreder-mutbrott/" target="_blank" rel="noopener">Randstad/Scania-fallet ↗</a> uppgav arbetssökande att rekryterare krävde pengar för jobb, och polisen inledde en mututredning. Randstads interna utredning uppgav att uppgifterna inte kunnat styrkas. Fallet redovisas därför som en misstanke och inte som ett fastställt brott.</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px">
@@ -1398,6 +1471,7 @@ button,[onclick]{touch-action:manipulation}
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B3A5A;margin-top:3px">MEDEL RISK</div>
         </div>
       </div>
+      <div class="edu-context"><strong>Föreningsbidrag som attackyta:</strong> Crime proofing prövar om villkoren är tydliga, om företrädare och faktisk verksamhet kan verifieras, om dubbelfinansiering och vidareförmedling kan upptäckas och om kontrollen sker innan utbetalning eller först i efterhand. <a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Öppna Brås originalmetodstöd ↗</a></div>
       <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(184,151,58,.05);border-left:2px solid #6B3A5A"></div>
       <div style="margin-bottom:28px"><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">I civilsamhället och demokratiska processer kan påverkan rikta sig mot opinion, val, offentliga bidrag eller tilliten till demokratiska institutioner. Exemplen spänner från granskningar och återkrav till polisanmälningar och domar, och rättsläget behöver framgå i varje fall.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://actapublica.se/nyheter/rapport-affarerna-med-islamistiska-extremister/" target="_blank" rel="noopener">Acta Publicas rapport om affärerna med islamistiska extremister ↗</a> kartlade offentliga affärer med bolag vars företrädare enligt rapporten hade kopplingar till islamistiska miljöer.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Rapporten uppgav att de kartlagda bolagen hade affärer med 194 statliga, regionala och kommunala aktörer till ett sammanlagt värde av omkring 931 miljoner kronor. <a href="https://www.svt.se/nyheter/inrikes/radkala-islamister-i-mangmiljonaffarer-med-svenska-kommuner" target="_blank" rel="noopener">SVT:s rapportering om kartläggningen ↗</a> ger en journalistisk genomgång av siffrorna och de berörda verksamheterna.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">I <a href="https://www.svt.se/nyheter/lokalt/vast/misstankt-valfusk-utreds-i-goteborg-ovanlig-rubricering" target="_blank" rel="noopener">Göteborgsärendet om misstänkt grovt valfusk 2022 ↗</a> utreddes uppgifter om hot utanför en förtidsröstningslokal. Det är ett exempel på en brottsmisstanke kring valprocessen, inte ett belägg för att manipulationen fastställdes i dom.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.jensnylander.com/energimyndighetens-grona-laddfiasko/" target="_blank" rel="noopener">Nordron-granskningen ↗</a> beskrev hur 37 miljoner kronor i utbetalt stöd för laddstationer hade placerats på räntekonton medan stationerna ännu inte var byggda. Energimyndigheten inledde en fördjupad revision; granskningen är inte likvärdig med en lagakraftvunnen brottmålsdom.</p><p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px"><a href="https://www.foi.se/nyheter-och-press/nyheter/2023-03-27-sa-vill-auktoritara-stater-paverka-sin-diaspora.html" target="_blank" rel="noopener">FOI:s rapport om diaspora och påverkan från främmande makt ↗</a> analyserar hur Iran, Kina, Eritrea, Syrien och Ryssland kan försöka styra, övervaka eller pressa personer i diasporan. Rapporten är en jämförande översikt och innebär inte att varje diasporaorganisation i Sverige är statligt styrd.</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px">
@@ -1456,6 +1530,19 @@ button,[onclick]{touch-action:manipulation}
     <p class="eyebrow">Förståelse · Teorier och modeller</p>
     <h1 class="sec-title">Drivkrafter och<br><em>sårbarheter</em></h1>
     <p class="sec-intro">Varför går en person över gränsen, och varför sker det just i en viss situation? Här används forskning, etablerade modeller och dokumenterade fall för att förklara förloppet. Modellerna hjälper oss att förstå beteenden, inte att profilera människor.</p>
+  </div>
+
+  <div class="edu-stack reveal">
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Möjliggörare för kriminella nätverk</span><span class="edu-summary-meta">Brå · 2024</span></summary>
+      <div class="edu-body">
+        <div class="edu-kicker">Svensk fördjupning</div>
+        <div class="edu-title">Möjliggörare för kriminella nätverk</div>
+        <div class="edu-meta">Brottsförebyggande rådet · 22 mars 2024</div>
+        <p>Brås utredare presenterar rapportens resultat om vilka möjliggörarna är, vilka arbetsuppgifter de utför och vilken funktion de fyller för kriminella nätverk. Ett efterföljande panelsamtal tar upp vad arbetsgivare i offentlig och privat sektor kan göra för att begränsa och motverka möjliggörare.</p>
+        <div class="edu-links"><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2024-03-22-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+      </div>
+    </details>
   </div>
 
   <div class="reveal">
@@ -1568,9 +1655,25 @@ button,[onclick]{touch-action:manipulation}
     <div class="theory-card" style="border-left:3px solid var(--green)"><div class="theory-cat" style="color:var(--green)">Frontlinjebyråkrati och sociala band</div><div class="theory-card-title">Handlingsutrymme i en lokal relationsmiljö</div><div class="theory-card-desc">Socialsekreterare, inspektörer och handläggare fattar beslut under tidspress och med ofullständig information. Återkommande kontakter kan skapa både tillit och beroenden. Följ personfixering, privata kontaktvägar och beslut som avviker mellan jämförbara ärenden.</div></div>
     <div class="theory-card" style="border-left:3px solid var(--orange)"><div class="theory-cat" style="color:var(--orange)">Organisatorisk tystnad</div><div class="theory-card-title">Kända signaler som inte blir gemensam kunskap</div><div class="theory-card-desc">Rädsla för repressalier, grupplojalitet och utebliven återkoppling kan göra att flera känner till samma problem utan att organisationen agerar. Följ även sena rapporter, återkommande rykten, personalomsättning och avvikelser som stannar i linjen.</div></div>
   </div>
-  <div class="theory-card reveal" style="border-left:3px solid #B33A3A;margin-bottom:18px"><div class="theory-cat" style="color:#B33A3A">Crime proofing och corruption proofing</div><div class="theory-card-title">Pröva processen innan den utnyttjas</div><div class="theory-card-desc">Granska regler, bidrag, upphandlingar och rekryteringar i förväg: vilka incitament skapas, var finns stort handlingsutrymme, vilka kontroller kan kringgås och finns spårbar efterhandskontroll? Metoden flyttar fokus från riskpersoner till möjligheten att gynna närstående, styra krav eller dölja undantag.</div></div>
+  <div class="theory-card reveal" style="border-left:3px solid #B33A3A;margin-bottom:18px"><div class="theory-cat" style="color:#B33A3A">Crime proofing och corruption proofing</div><div class="theory-card-title">Pröva processen innan den utnyttjas</div><div class="theory-card-desc">Granska regler, bidrag, upphandlingar och rekryteringar i förväg: vilka incitament skapas, var finns stort handlingsutrymme, vilka kontroller kan kringgås och finns spårbar efterhandskontroll? Metoden flyttar fokus från riskpersoner till möjligheten att gynna närstående, styra krav eller dölja undantag. Ett regelverk kan skapa en organisatorisk attackyta på samma sätt som ett tekniskt system kan innehålla exploaterbara sårbarheter.</div></div>
+  <div class="edu-stack reveal" id="crime-proofing-theory">
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Så gör du en Crime proofing-analys</span><span class="edu-summary-meta">Brå · 2024</span></summary>
+      <div class="edu-body">
+        <div class="edu-kicker">Förebygg välfärdsbrott med crime proofing</div>
+        <div class="edu-title">Förebygg välfärdsbrott med crime proofing</div>
+        <div class="edu-meta">Brottsförebyggande rådet · 24 september 2024</div>
+        <div class="edu-badge">Svenskt metodstöd</div>
+        <p>Brå går igenom hur ett regelverk eller styrsystem analyseras för att identifiera exploaterbara sårbarheter och formulera förebyggande åtgärder. Webbinariet presenterar analysens fem steg och erfarenheter från offentlig verksamhet. Inspelningen är från 2024 men ingår fortfarande i Brås aktuella metodstöd.</p>
+        <div class="edu-why"><strong>Varför modellen hör hemma i INBLICK:</strong> frågan är inte bara vem som kan påverka organisationen, utan vad i det egna regelverket, beslutssystemet eller kontrollsystemet som gör påverkan, missbruk eller exploatering möjlig. Crime proofing synliggör denna organisatoriska attackyta innan den utnyttjas.</div>
+        <div class="edu-kicker">Kapiteltider</div>
+        <div class="edu-chapters"><div class="edu-chapter"><span>Introduktion</span><span class="edu-time">03:48</span></div><div class="edu-chapter"><span>Steg 1</span><span class="edu-time">19:28</span></div><div class="edu-chapter"><span>Steg 2</span><span class="edu-time">27:59</span></div><div class="edu-chapter"><span>Steg 3</span><span class="edu-time">39:06</span></div><div class="edu-chapter"><span>Steg 4</span><span class="edu-time">49:30</span></div><div class="edu-chapter"><span>Steg 5</span><span class="edu-time">1:00:00</span></div></div>
+        <div class="edu-links"><a class="edu-link" href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Aktuellt metodstöd ↗</a><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2024-09-24-forebygg-valfardsbrott-med-crime-proofing" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+      </div>
+    </details>
+  </div>
   <div class="theory-caveat reveal"><strong>Använd tillsammans:</strong> principal–agent visar var kontrollen brister, frontlinjeperspektivet var trycket uppstår, kollektiv handling och organisatorisk tystnad varför avvikelser består och crime proofing hur processen kan göras mindre sårbar.</div>
-  <div class="op-source-row reveal"><a href="https://www.cambridge.org/core/elements/agency-theory-in-public-administration/A6E43EBD7B0206D41053EB7B14EFF700" target="_blank" rel="noopener">Principal–agent — Cambridge 2026 ↗</a><a href="https://doi.org/10.1111/j.1468-0491.2012.01604.x" target="_blank" rel="noopener">Kollektivt handlingsproblem — Persson, Rothstein &amp; Teorell 2013 ↗</a><a href="https://www.gu.se/forskning/otillaten-paverkan-i-svenska-kommuner-vilken-roll-spelar-sociala-band-roll-for-tjanstepersoners-utsatthet-och-motstandskraft" target="_blank" rel="noopener">Sociala band — Göteborgs universitet ↗</a><a href="https://doi.org/10.5465/amr.2000.3707697" target="_blank" rel="noopener">Organisatorisk tystnad — Morrison &amp; Milliken 2000 ↗</a><a href="https://www.transcrime.it/wp-content/uploads/2013/11/Final_Manual-A_study_on_Crime_Proofing.pdf" target="_blank" rel="noopener">Crime proofing — metodhandbok ↗</a></div>
+  <div class="op-source-row reveal"><a href="https://www.cambridge.org/core/elements/agency-theory-in-public-administration/A6E43EBD7B0206D41053EB7B14EFF700" target="_blank" rel="noopener">Principal–agent — Cambridge 2026 ↗</a><a href="https://doi.org/10.1111/j.1468-0491.2012.01604.x" target="_blank" rel="noopener">Kollektivt handlingsproblem — Persson, Rothstein &amp; Teorell 2013 ↗</a><a href="https://www.gu.se/forskning/otillaten-paverkan-i-svenska-kommuner-vilken-roll-spelar-sociala-band-roll-for-tjanstepersoners-utsatthet-och-motstandskraft" target="_blank" rel="noopener">Sociala band — Göteborgs universitet ↗</a><a href="https://doi.org/10.5465/amr.2000.3707697" target="_blank" rel="noopener">Organisatorisk tystnad — Morrison &amp; Milliken 2000 ↗</a><a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Crime proofing — Brås aktuella metodstöd ↗</a></div>
 
   <div class="reveal">
     <p class="eyebrow">Rogers · Protection Motivation Theory</p>
@@ -3282,6 +3385,21 @@ function showHandle(id){
       <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Processen gäller oavsett om signalen inkommit via rapporteringssystemet, UAM-larm, kollegors iakttagelse eller extern källa. Varje steg är beslutspunkt — inte automatisk eskalering.</p>
     </div>
 
+    <div class="edu-stack reveal">
+      <details class="edu-card">
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Arbete mot otillåten påverkan steg för steg</span><span class="edu-summary-meta">Brå · 2025</span></summary>
+        <div class="edu-body"><div class="edu-kicker">Svensk praktisk fördjupning</div><div class="edu-title">Arbete mot otillåten påverkan – steg för steg</div><div class="edu-meta">Brottsförebyggande rådet · 23 september 2025</div><p>Konkreta verktyg och strategier utifrån Brås handbok, Statskontorets arbete och Landskrona stads praktiska erfarenheter. Materialet passar både förebyggande arbete och hantering av en upptäckt signal.</p><div class="edu-links"><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2025-08-26-arbete-mot-otillaten-paverkan---steg-for-steg" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+      </details>
+      <details class="edu-card">
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbutbildning · Förebygga, identifiera och hantera</span><span class="edu-summary-meta">Statskontoret · 2026</span></summary>
+        <div class="edu-body"><div class="edu-kicker">Grundläggande svensk utbildning</div><div class="edu-title">Utbildning om otillåten påverkan</div><div class="edu-meta">Statskontoret · 25 februari 2026</div><p>Utbildningen är avsedd för anställda i myndigheter, kommuner och regioner och omfattar förebyggande arbete, identifiering av påverkansförsök och praktisk incidenthantering.</p><div class="edu-links"><a class="edu-link primary" href="https://www.statskontoret.se/om-statskontoret/nyheter/2026/statskontoret-lanserar-utbildning-om-otillaten-paverkan/" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+      </details>
+      <details class="edu-card">
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Digital utbildning · Security Investigations</span><span class="edu-summary-meta">NPSA · 2025</span></summary>
+        <div class="edu-body"><div class="edu-kicker">Utvald modul</div><div class="edu-title">Insider Risk Mitigation Digital Learning</div><div class="edu-meta">National Protective Security Authority · 2025</div><p>Modulen Security Investigations används här som internationell fördjupning till utredningsprocessen. Den ersätter inte svensk arbetsrätt, dataskyddslagstiftning, säkerhetsskyddslagstiftning eller brottsutredande myndigheters ansvar.</p><div class="edu-module-list"><span class="edu-module">Security Investigations</span></div><div class="edu-links"><a class="edu-link primary" href="https://www.npsa.gov.uk/insider-risk-mitigation-digital-learning" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+      </details>
+    </div>
+
     <div class="reveal" style="display:flex;flex-direction:column;gap:2px;background:var(--border-s);margin-bottom:48px">
       <div style="background:var(--bg-card);display:grid;grid-template-columns:auto 1fr 1fr;gap:0">
         <div style="padding:18px 20px;background:rgba(184,151,58,.08);display:flex;align-items:center;justify-content:center;min-width:56px">
@@ -3635,8 +3753,24 @@ function showHandle(id){
     <div class="reveal" style="margin-bottom:28px">
       <p class="eyebrow">Analysmodell · Förebyggande</p>
       <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Crime <em>proofing</em></h2>
-      <p style="font-size:14px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:12px">En analysmetod för att identifiera och åtgärda svagheter i regelverk och styrsystem innan de utnyttjas. Brås svenska metodstöd kan användas för exempelvis gynnande beslut, tillstånd, avtal och utbetalningar.</p>
+      <p style="font-size:14px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:12px">En analysmetod för att identifiera och åtgärda svagheter i regelverk och styrsystem innan de utnyttjas. Brås svenska metodstöd kan användas för exempelvis gynnande beslut, föreningsbidrag, tillstånd, avtal, upphandlingar, LSS, HVB, andra sociala stöd och utbetalningar. Modellen behandlar regelverket som en organisatorisk attackyta: vilka egenskaper i vårt eget beslutssystem eller kontrollsystem kan en antagonist eller oseriös aktör exploatera?</p>
       <div class="op-source-row"><a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener">Brå — metodstöd och analysmall ↗</a><a href="https://bra.se/nyheter/arkiv/2024-08-30-ny-mall-identifierar-fel-och-risker-i-regelverk-inom-valfardssystemet" target="_blank" rel="noopener">Brå — svensk mall och arbetssätt ↗</a></div>
+    </div>
+
+    <div class="edu-stack reveal" id="crime-proofing-handle">
+      <details class="edu-card">
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Så gör du en Crime proofing-analys</span><span class="edu-summary-meta">Brå · 2024</span></summary>
+        <div class="edu-body">
+          <div class="edu-kicker">Förebygg välfärdsbrott med crime proofing</div>
+          <div class="edu-title">Förebygg välfärdsbrott med crime proofing</div>
+          <div class="edu-meta">Brottsförebyggande rådet · 24 september 2024</div>
+          <div class="edu-badge">Svenskt metodstöd</div>
+          <p>Brå presenterar analysmodellens fem steg och låter företrädare för offentlig verksamhet beskriva sina erfarenheter. Inspelningen är från september 2024 men ligger fortfarande i Brås aktuella metodstöd.</p>
+          <div class="edu-kicker">Kapiteltider</div>
+          <div class="edu-chapters"><div class="edu-chapter"><span>Introduktion</span><span class="edu-time">03:48</span></div><div class="edu-chapter"><span>Steg 1</span><span class="edu-time">19:28</span></div><div class="edu-chapter"><span>Steg 2</span><span class="edu-time">27:59</span></div><div class="edu-chapter"><span>Steg 3</span><span class="edu-time">39:06</span></div><div class="edu-chapter"><span>Steg 4</span><span class="edu-time">49:30</span></div><div class="edu-chapter"><span>Steg 5</span><span class="edu-time">1:00:00</span></div></div>
+          <div class="edu-links"><a class="edu-link" href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Aktuellt metodstöd ↗</a><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2024-09-24-forebygg-valfardsbrott-med-crime-proofing" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+        </div>
+      </details>
     </div>
 
     <div class="ind-guardrail reveal"><strong>Definition av klart:</strong> analysen ska lämna efter sig en spårbar kedja från regel eller processteg till missbruksscenario, möjlig konsekvens, befintlig kontroll, kvarstående risk, beslutad åtgärd, ansvarig och uppföljningsdatum. En allmän rekommendation om ”ökad kontroll” är inte en färdig åtgärd.</div>
@@ -3651,44 +3785,49 @@ function showHandle(id){
       </div>
     </div>
 
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin-bottom:36px">
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--border-s);margin-bottom:36px">
       <div style="background:var(--bg-card);padding:20px;text-align:center">
         <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:var(--accent);margin-bottom:8px">1</div>
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Riskanalys</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.6">Genomför noggrann riskanalys av aktuella regelverk eller system — identifiera potentiella svagheter som kan utnyttjas för brottsliga ändamål</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Kortfakta</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Avgränsa regelverket och samla styrdokument, förarbeten, interna tolkningar och tidigare granskningar.</div>
       </div>
       <div style="background:var(--bg-card);padding:20px;text-align:center">
         <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:var(--accent);margin-bottom:8px">2</div>
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Identifiera brister</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.6">Specificera sårbarhetspunkterna: oklarheter i lagtexter, bristande kontroller, otillräckliga säkerhetsåtgärder, godtyckliga bedömningsutrymmen</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Språk och relationer</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Pröva tydlighet, definitioner, tolkningsutrymme och glapp eller motstridigheter mellan berörda regelverk.</div>
       </div>
       <div style="background:var(--bg-card);padding:20px;text-align:center">
         <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:var(--accent);margin-bottom:8px">3</div>
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Åtgärdsförslag</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.6">Utveckla konkreta åtgärder: nya kontroller, förbättrade säkerhetsåtgärder, tydligare lagtexter, fyrkantiga regler som minskar handlingsutrymme</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Uppföljning och kontroll</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Bedöm om villkor och lämnade uppgifter kan kontrolleras, av vem, när och med vilka rättsliga och praktiska förutsättningar.</div>
       </div>
       <div style="background:var(--bg-card);padding:20px;text-align:center">
         <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:var(--accent);margin-bottom:8px">4</div>
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Implementering</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.6">Utbildning av personal, uppdatering av system och regelverk, kontinuerlig övervakning och utvärdering av effekten</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Aktörssårbarheter</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Analysera hur privatpersoner, företag eller föreningar kan utnyttjas och vilka risk- och skyddsfaktorer som finns.</div>
+      </div>
+      <div style="background:var(--bg-card);padding:20px;text-align:center">
+        <div style="font-family:var(--fd);font-size:36px;font-weight:300;color:var(--accent);margin-bottom:8px">5</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px">Summera och rekommendera</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Värdera riskerna, välj konkreta regel- eller kontrolländringar och ange ansvar, tidplan och uppföljning.</div>
       </div>
     </div>
 
     <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--border-s);margin-bottom:60px">
       <div style="background:var(--bg-card);padding:20px">
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Linköpings kommun</div>
-        <div style="font-size:13px;color:var(--text);margin-bottom:6px">Föreningsbidrag säkrades mot missbruk</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.65">Analyserade och säkrade regelverket för föreningsbidrag. Förhindrade att bidrag utnyttjades av kriminella genom identifiering av godtyckliga bedömningspunkter och diffusa kriterier.</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Tillämpning</div>
+        <div style="font-size:13px;color:var(--text);margin-bottom:6px">Föreningsbidrag och andra stöd</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.65">Pröva om villkor är mätbara, om företrädare och faktisk verksamhet kan verifieras, om dubbelfinansiering kan upptäckas och om avvikelser leder till stopp, återkrav eller fördjupad kontroll.</div>
       </div>
       <div style="background:var(--bg-card);padding:20px">
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">EU-lagstiftning</div>
-        <div style="font-size:13px;color:var(--text);margin-bottom:6px">Maffiaforskare tätade lagtexter</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.65">Metoden användes ursprungligen för att säkra EU-lagstiftning mot fusk och felaktiga utbetalningar. Identifierade klausuler som gav alltför stort tolkningsutrymme för kriminella exploatörer.</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Tillämpning</div>
+        <div style="font-size:13px;color:var(--text);margin-bottom:6px">LSS, HVB och sociala stöd</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.65">Pröva glappet mellan tillstånd, placering, ersättning och avtalsuppföljning. Kan ägarbyte, underbemanning, närvaro eller rapporterade insatser döljas eller verifieras först långt efter utbetalning?</div>
       </div>
       <div style="background:var(--bg-card);padding:20px">
-        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Brå — kommunsamverkan</div>
-        <div style="font-size:13px;color:var(--text);margin-bottom:6px">Utsatta områden skyddar välfärdsutbetalningar</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.65">Flera svenska kommuner med utsatta områden har implementerat crime proofing för att skydda föreningsstöd och bidrag. Brå stöttar kommunerna med metodstöd.</div>
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Tillämpning</div>
+        <div style="font-size:13px;color:var(--text);margin-bottom:6px">Upphandling, avtal och tillstånd</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.65">Pröva om krav kan skräddarsys, undantag staplas, underleverantörer bytas utan kontroll eller samma person påverka behov, beslut och uppföljning. Åtgärden ska träffa det identifierade missbruksscenariot.</div>
       </div>
     </div>
   </div>
@@ -5218,6 +5357,26 @@ function showHandle(id){
     <p style="font-family:var(--fm);font-size:9px;color:var(--dim);line-height:1.65;margin:14px 0 0">Fördjupning: <a href="https://sakerhetspolisen.se/sakerhetsskydd/registerkontroll.html" target="_blank" rel="noopener">Säkerhetspolisen om registerkontroll</a> · <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/rattslig-grund/" target="_blank" rel="noopener">IMY om rättslig grund i arbetslivet</a> · <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/brottsuppgifter/" target="_blank" rel="noopener">IMY om brottsuppgifter</a> · <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/kontroll-och-overvakning-av-anstallda/" target="_blank" rel="noopener">IMY om kontroll av anställda</a>.</p>
   </div>
 
+  <div class="edu-stack reveal">
+    <div class="edu-stack-head"><p class="eyebrow" style="margin-bottom:5px">Grundläggande utbildning · originalkällor</p><p style="font-size:12.5px;color:var(--muted);line-height:1.7;margin:0">Välj den fördjupning som motsvarar uppgiften. De svenska resurserna ger basen; NPSA-modulerna kompletterar där personalsäkerhet och insiderrisk behöver fördjupas.</p></div>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbutbildning · Otillåten påverkan i offentlig förvaltning</span><span class="edu-summary-meta">Statskontoret · 2026</span></summary>
+      <div class="edu-body"><div class="edu-kicker">Grundläggande svensk utbildning</div><div class="edu-title">Utbildning om otillåten påverkan</div><div class="edu-meta">Statskontoret · 25 februari 2026</div><div class="edu-badge">Svenskt metodstöd</div><p>Webbutbildningen riktar sig till anställda i statliga myndigheter, kommuner och regioner. Den ger praktiskt tillämpbar grundkunskap om hur påverkansförsök kan förebyggas, identifieras och hanteras.</p><div class="edu-links"><a class="edu-link primary" href="https://www.statskontoret.se/om-statskontoret/nyheter/2026/statskontoret-lanserar-utbildning-om-otillaten-paverkan/" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+    </details>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Arbete mot otillåten påverkan steg för steg</span><span class="edu-summary-meta">Brå · 2025</span></summary>
+      <div class="edu-body"><div class="edu-kicker">Svensk praktisk fördjupning</div><div class="edu-title">Arbete mot otillåten påverkan – steg för steg</div><div class="edu-meta">Brottsförebyggande rådet · 23 september 2025</div><p>Brå presenterar verktyg och strategier med stöd i myndighetens handbok. Webbinariet tar också upp Statskontorets perspektiv och Landskrona stads praktiska erfarenheter.</p><div class="edu-links"><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2025-08-26-arbete-mot-otillaten-paverkan---steg-for-steg" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+    </details>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Digital utbildning · Bedömning och personalsäkerhet</span><span class="edu-summary-meta">NPSA · 2025</span></summary>
+      <div class="edu-body"><div class="edu-kicker">Utvalda moduler</div><div class="edu-title">Insider Risk Mitigation Digital Learning</div><div class="edu-meta">National Protective Security Authority · 2025</div><p>Använd de moduler som motsvarar den aktuella uppgiften: bedömning av insiderrisk och kontroller före anställning. Det brittiska materialet är ett komplement; svensk rätt avgör vilka personkontroller som är tillåtna.</p><div class="edu-module-list"><span class="edu-module">Insider Risk Assessment</span><span class="edu-module">Employment Screening</span></div><div class="edu-links"><a class="edu-link primary" href="https://www.npsa.gov.uk/insider-risk-mitigation-digital-learning" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+    </details>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Utbildning och stöd · Kompassen</span><span class="edu-summary-meta">SKR · uppdaterad 2026</span></summary>
+      <div class="edu-body"><div class="edu-kicker">Kommuner och regioner</div><div class="edu-title">Kompassen – med utbildning och stödmaterial</div><div class="edu-meta">Sveriges Kommuner och Regioner · uppdaterad 12 januari 2026</div><p>Utbildning och stöd för det kommungemensamma arbetet mot välfärdsbrottslighet, med material om otillåten påverkan, medarbetare, arbetsgivare och förtroendevalda.</p><div class="edu-links"><a class="edu-link primary" href="https://skr.se/valfardsbrottslighet/kompassenmedutbildningochstodmaterial.9072.html" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
+    </details>
+  </div>
+
   <!-- VERKTYG 1: BEFATTNINGSBEDÖMARE -->
   <div class="reveal tool-block">
     <div class="tool-head">
@@ -5259,10 +5418,35 @@ function showHandle(id){
     <div class="bowtie-diagram" id="bowtieDiagram"></div>
   </div>
 
-  <!-- VERKTYG 4: CHECKLISTOR -->
+  <!-- VERKTYG 4: CRIME PROOFING -->
   <div class="reveal tool-block">
     <div class="tool-head">
       <div class="tool-num">04</div>
+      <div>
+        <div class="tool-title">Crime proofing — organisatorisk attackyta</div>
+        <div class="tool-desc">Välj ett avgränsat regelverk eller styrsystem och pröva hur det kan exploateras. Använd modellen för föreningsbidrag, ekonomiskt bistånd, LSS, HVB, upphandling, avtal, tillstånd, ersättningar, kontrollverksamhet och behörighets- eller beslutsprocesser.</div>
+      </div>
+    </div>
+    <div class="edu-context"><strong>Analysfråga:</strong> vilka egenskaper i vårt eget regelverk, beslutssystem eller kontrollsystem kan en antagonist eller oseriös aktör exploatera? Dokumentera därefter missbruksscenario, konsekvens, befintlig kontroll, kvarstående risk, åtgärd, ansvarig och uppföljning.</div>
+    <details class="edu-card" id="crime-proofing-tools">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Så gör du en Crime proofing-analys</span><span class="edu-summary-meta">Brå · 2024</span></summary>
+      <div class="edu-body">
+        <div class="edu-kicker">Förebygg välfärdsbrott med crime proofing</div>
+        <div class="edu-title">Förebygg välfärdsbrott med crime proofing</div>
+        <div class="edu-meta">Brottsförebyggande rådet · 24 september 2024</div>
+        <div class="edu-badge">Svenskt metodstöd</div>
+        <p>Brå går igenom analysmodellens fem steg och erfarenheter från offentlig verksamhet. Inspelningen från 2024 används fortfarande i myndighetens aktuella metodstöd.</p>
+        <div class="edu-kicker">Kapiteltider</div>
+        <div class="edu-chapters"><div class="edu-chapter"><span>Introduktion</span><span class="edu-time">03:48</span></div><div class="edu-chapter"><span>Steg 1</span><span class="edu-time">19:28</span></div><div class="edu-chapter"><span>Steg 2</span><span class="edu-time">27:59</span></div><div class="edu-chapter"><span>Steg 3</span><span class="edu-time">39:06</span></div><div class="edu-chapter"><span>Steg 4</span><span class="edu-time">49:30</span></div><div class="edu-chapter"><span>Steg 5</span><span class="edu-time">1:00:00</span></div></div>
+        <div class="edu-links"><a class="edu-link" href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Aktuellt metodstöd ↗</a><a class="edu-link primary" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2024-09-24-forebygg-valfardsbrott-med-crime-proofing" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- VERKTYG 5: CHECKLISTOR -->
+  <div class="reveal tool-block">
+    <div class="tool-head">
+      <div class="tool-num">05</div>
       <div>
         <div class="tool-title">Checklistor — tre faser</div>
         <div class="tool-desc">Baserade på checklistorna i <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF:s vägledning <em>Transportskydd</em> (MCF0079) ↗</a>, anpassade för HR och säkerhetsfunktion. Bocka av — status sparas i din webbläsare under sessionen.</div>
@@ -5287,6 +5471,20 @@ function showHandle(id){
     <p class="eyebrow">Agera · Säkerhetskultur</p>
     <h1 class="sec-title">Kultur som<br><em>skyddsbarriär</em></h1>
     <p class="sec-intro">Tekniska skydd och tydliga processer räcker inte om medarbetare tystnar eller avvikelser blir vardag. En stark säkerhetskultur gör det lättare att reagera tidigt och svårare för påverkan att få fäste. <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen (RiR 2026:3) ↗</a> pekar särskilt på ledningens ansvar.</p>
+  </div>
+
+  <div class="edu-stack reveal">
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Digital utbildning · Säkerhetskultur och ledning</span><span class="edu-summary-meta">NPSA · 2025</span></summary>
+      <div class="edu-body">
+        <div class="edu-kicker">Aktuellt digitalt lärande</div>
+        <div class="edu-title">Security Culture och Leadership and Governance</div>
+        <div class="edu-meta">National Protective Security Authority · 2025</div>
+        <p>NPSA:s digitala utbildningsmaterial kompletterar INBLICK:s kulturdiagnos med ledningens ansvar för personalsäkerhet, styrning, rapportering och en kultur där tidiga signaler kan tas om hand.</p>
+        <div class="edu-module-list"><span class="edu-module">Security Culture</span><span class="edu-module">Leadership and Governance</span></div>
+        <div class="edu-links"><a class="edu-link primary" href="https://www.npsa.gov.uk/digital-learning" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
+      </div>
+    </details>
   </div>
 
   <!-- KULTURDIAGNOS -->
