@@ -2148,6 +2148,8 @@ const SECTORS=[{"id":"TRANSPORT","name":"Transport och hamnar","color":"#C45C2E"
 
 // Falldatan är primärkälla för sektorernas fallistor; undviker att nya fall faller bort i sektormodulen.
 SECTORS.forEach(s=>{s.cases=CASES.filter(c=>c.sector===s.id).map(c=>c.id);});
+const ACTOR_CASE_KEYS={"criminal-network":"CRIMINAL_NETWORK","foreign-power":"FOREIGN_POWER","extremist":"EXTREMIST","economic-interest":"ECONOMIC_INTEREST"};
+ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});
 SECTORS.unshift(LOCAL_GOV_SECTOR);
 const ACTOR_LABELS={CRIMINAL_NETWORK:'Kriminellt nätverk',FOREIGN_POWER:'Främmande makt',EXTREMIST:'Extremistisk miljö',ECONOMIC_INTEREST:'Ekonomiskt intresse',CORRUPT_OFFICIAL:'Korrupt befattningshavare',ORGANIZED_CRIME:'Organiserad brottslighet',INSIDER:'Intern aktör',UNKNOWN:'Ej fastställd'};
 const SECTOR_LABELS={AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT'};

@@ -172,6 +172,14 @@ if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('A
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
 if (cases.length !== 140) errors.push(`Förväntade 140 fall, hittade ${cases.length}`);
 
+for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
+  const count = cases.filter(item => item.actor === actor).length;
+  if (!index.includes(`${count} fall i databasen`)) errors.push(`index.html: inaktuell aktörsräknare för ${actor}, förväntade ${count}`);
+}
+if (!modules.includes('ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});')) {
+  errors.push('modules.html: aktörernas fallistor synkroniseras inte med CASES');
+}
+
 const publicText = [modules, index, JSON.stringify(cases), JSON.stringify(actors), JSON.stringify(indicators)]
   .join('\n')
   .replace(/https?:\/\/[^\s"'<>]+/g, '');
