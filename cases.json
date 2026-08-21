@@ -3574,5 +3574,84 @@
         "url": "https://www.svt.se/nyheter/lokalt/helsingborg/trots-ar-av-larm-om-sakerhetsbrister-region-skane-forlangde-avtalet-med-avarn-fem-ganger"
       }
     ]
+  },
+  {
+    "id": "c156",
+    "title": "Säffle — återkommande politiska påtryckningar mot kommunal myndighetsutövning",
+    "date": "2026-05",
+    "loc": {
+      "m": "Säffle",
+      "r": "Värmland",
+      "lat": 59.1323,
+      "lng": 12.9289,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "CORRUPT_OFFICIAL",
+    "status": "CONFIRMED",
+    "summary": "En extern visselblåsarutredning granskade sex händelser inom Säffle kommuns barn- och utbildningsnämnd och socialnämnd. Utredarna bedömde att förtroendevalda direkt och återkommande hade försökt påverka myndighetsutövning, att risker för jäv och otillbörlig påverkan hade förekommit och att problemen var systematiska snarare än isolerade. Tjänstepersoner beskrev press, ifrågasättanden och oro för att namnges i sociala medier. Klassningen bekräftat avser kommunens publicerade redovisning av utredningsresultatet; någon brottmålsdom redovisas inte.",
+    "sources": [
+      {
+        "l": "Säffle kommun — Extern utredning av visselblåsningar om otillåten påverkan (2026-05-21)",
+        "t": "authority",
+        "url": "https://saffle.se/arkiv/nyhetsarkiv/2026/2026-05-21-extern-utredning-av-visselblasningar-om-otillaten-paverkan-i-saffle-kommun.html"
+      },
+      {
+        "l": "SVT Nyheter — Säffle kommun får kritik i utredningar: allvarliga brister (2026-05-22)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/varmland/saffle-kommun-far-kritik-i-utredningar-allvarliga-brister-uppenbarligen-gatt-for-langt"
+      }
+    ]
+  },
+  {
+    "id": "c157",
+    "title": "Upplands-Bro — räntefria kommunala lån till friskolor med politiska kopplingar",
+    "date": "2026-06",
+    "loc": {
+      "m": "Upplands-Bro",
+      "r": "Stockholm",
+      "lat": 59.5167,
+      "lng": 17.6333,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "SVT:s genomgång visade att Upplands-Bro kommun under omkring tio år hade lämnat cirka två miljoner kronor i räntefria lån utan återbetalningsdatum till ett mindre antal friskolor och förskolor. Två mottagande verksamheter hade kopplingar till en ledande kommunpolitiker, och kommunen kunde enligt granskningen inte visa hur låntagarna hade valts ut. Politikern uppgav att han inte såg någon jävsproblematik och kommunen meddelade att den arbetade för att återfå medlen. Ingen brottslig gärning är fastställd; posten dokumenterar en granskad intressekonflikt, bristande spårbarhet och möjlig vänskapskorruption.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Upplands-Bro agerar bank åt friskolor, KD-politiker kopplas till räntefria lån (2026-06-11)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/upplands-bro-agerar-bank-at-friskolor-kd-politiker-kopplas-till-rantefria-lan"
+      }
+    ]
+  },
+  {
+    "id": "c158",
+    "title": "Upplands-Bro — politiker föreslog projekt som det egna företaget senare genomförde",
+    "date": "2026-03",
+    "loc": {
+      "m": "Upplands-Bro",
+      "r": "Stockholm",
+      "lat": 59.5167,
+      "lng": 17.6333,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "SVT granskade ett kommunalt bullervallsprojekt där en lokalpolitiker först hade föreslagit projektet och därefter, genom sitt företag, medverkat i genomförandet. Granskningen beskrev en sammanblandning av rollerna privatperson, politiker och projektchef. Kommunen beslutade efter rapporteringen att genomföra nya miljöprover. Någon dom eller myndighetsbedömning om korruption har inte verifierats; fallet redovisas som en indikation på intressekonflikt, rollsammanblandning och behovet av dokumenterade jävsprövningar.",
+    "sources": [
+      {
+        "l": "SVT Nyheter — Politikerns företag byggde omstridd bullervall efter eget förslag (2026-03-11)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/politikerns-foretag-byggde-omstridd-bullervall-efter-eget-forslag"
+      },
+      {
+        "l": "SVT Nyheter — Bullervallen och de dubbla stolarna (2026-06-12)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/60-sekunder-bullervallen-och-de-dubbla-stolarna"
+      }
+    ]
   }
 ]
