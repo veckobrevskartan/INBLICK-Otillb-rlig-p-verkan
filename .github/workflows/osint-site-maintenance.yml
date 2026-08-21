@@ -1,0 +1,52 @@
+name: OSINT site maintenance
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/osint-site-maintenance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect current site markers
+        shell: python
+        run: |
+          from pathlib import Path
+
+          files = [Path('index.html'), Path('modules.html')]
+          needles = [
+              'Källförteckning',
+              'Reviderad augusti 2026',
+              'MCF0079',
+              'Primärkällor och',
+              'Visuella modeller',
+              'Myndighetsgemensam lägesbild',
+              'Botkyrka',
+              'infiltrationskommission',
+              'Riksrevisionen',
+              'Statskontoret',
+          ]
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              print(f'\n===== {path} ({len(text)} chars) =====')
+              for needle in needles:
+                  print(f'\n--- {needle!r}: {text.count(needle)} match(es) ---')
+                  start = 0
+                  shown = 0
+                  while shown < 6:
+                      pos = text.find(needle, start)
+                      if pos < 0:
+                          break
+                      a = max(0, pos - 550)
+                      b = min(len(text), pos + len(needle) + 900)
+                      print(text[a:b].replace('\r',''))
+                      print('\n[...context end...]')
+                      shown += 1
+                      start = pos + len(needle)
