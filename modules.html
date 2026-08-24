@@ -271,10 +271,17 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .map-stats{display:flex;gap:20px;margin-bottom:12px;flex-wrap:wrap}
 .mstat-val{font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);line-height:1}
 .mstat-lab{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.map-ready-cue{display:flex;align-items:center;gap:11px;margin:10px 0 12px;padding:11px 14px;background:rgba(74,123,111,.08);border:1px solid rgba(74,123,111,.28);font-size:12px;color:var(--text);line-height:1.45}
+.map-ready-cue strong{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--green);line-height:1}
+.map-ready-cue .cue-action{margin-left:auto;font-family:var(--fm);font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.map-ready-cue.pulse{animation:mapCue .8s ease-out}
+@keyframes mapCue{0%{border-color:var(--accent);background:rgba(184,151,58,.16)}100%{border-color:rgba(74,123,111,.28);background:rgba(74,123,111,.08)}}
+.map-workspace{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr);gap:12px;align-items:start;margin-bottom:60px}
+.map-visual{min-width:0}
 .map-legend{display:flex;flex-wrap:wrap;gap:12px;padding:9px 14px;background:var(--bg-card);border:1px solid var(--border-s);margin-top:8px}
 .leg-item{display:flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.09em;color:var(--muted)}
 .leg-dot{width:9px;height:9px;border-radius:50%}
-.map-case-panel{margin-top:2px;background:var(--bg-card);border:1px solid var(--border);padding:22px 26px;display:none;scroll-margin-top:68px;outline:none}
+.map-case-panel{margin:0 0 12px;background:var(--bg-card);border:1px solid var(--border);padding:22px 26px;display:none;scroll-margin-top:68px;outline:none}
 .map-case-panel.open{display:block}
 .map-case-panel.case-target{animation:caseTarget 1s ease-out}
 @keyframes caseTarget{0%{border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,151,58,.28)}100%{border-color:var(--border);box-shadow:none}}
@@ -290,15 +297,17 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .src-link:hover{opacity:.8;text-decoration:underline}
 .src-tag{font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)}
 .src-tag.court{border-color:rgba(74,123,111,.3);color:var(--green)}.src-tag.report{border-color:rgba(184,151,58,.25);color:var(--accent)}
-.case-browser{margin-top:28px;margin-bottom:60px}
+.case-browser{margin:0;min-width:0;background:var(--bg-mid);border:1px solid var(--border-s);padding:16px}
 .case-browser-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:14px;border-bottom:1px solid var(--border-s)}
 .case-browser-title{font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.1}
 .case-browser-count{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:5px}
 .case-search-label{display:flex;flex-direction:column;gap:5px;min-width:min(320px,100%);font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .case-search{width:100%;min-height:40px;padding:8px 11px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:var(--fb);font-size:13px;outline:none}
 .case-search:focus{border-color:var(--accent)}
-.case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--border-s);margin-top:2px}
+.case-list{display:grid;grid-template-columns:1fr;gap:2px;background:var(--border-s);margin-top:2px;max-height:480px;overflow-y:auto;scrollbar-color:var(--border) var(--bg-card);scrollbar-width:thin}
 .case-list-item{display:flex;flex-direction:column;gap:8px;min-height:156px;padding:17px 18px;background:var(--bg-card);border:0;border-left:3px solid transparent;color:inherit;text-align:left;text-decoration:none;cursor:pointer;font:inherit;transition:.14s}
+.map-workspace .case-list-item{min-height:0;padding:13px 14px;gap:6px}
+.map-workspace .case-list-summary{-webkit-line-clamp:2}
 .case-list-item:hover{background:var(--bg-mid);border-left-color:var(--accent)}
 .case-list-item.active{background:var(--bg-mid);border-left-color:var(--green);box-shadow:inset 0 0 0 1px rgba(74,123,111,.28)}
 .case-list-item:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
@@ -309,7 +318,12 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .case-list-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
 .case-list-tag{font-family:var(--fm);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;border:1px solid var(--border-s);color:var(--muted)}
 .case-list-empty{grid-column:1/-1;padding:32px 20px;background:var(--bg-card);text-align:center;color:var(--muted);font-size:13px;line-height:1.7}
-@media(max-width:760px){.case-browser-head{align-items:stretch;flex-direction:column}.case-search-label{min-width:100%}.case-list{grid-template-columns:1fr}}
+@media(max-width:1050px){.map-workspace{grid-template-columns:1fr}.case-browser{order:-1}.case-list{max-height:460px}.case-browser-head{align-items:stretch;flex-direction:column}.case-search-label{min-width:100%}}
+@media(max-width:600px){.map-ready-cue{align-items:flex-start;flex-wrap:wrap}.map-ready-cue .cue-action{width:100%;margin-left:33px}.map-case-panel{padding:18px 16px}.case-browser{padding:12px}}
+[data-case-link]:active{filter:brightness(1.25);transform:translateY(1px)}
+.case-toast{position:fixed;right:20px;bottom:20px;z-index:260;width:min(420px,calc(100vw - 32px));padding:13px 16px;background:var(--bg-surf);border:1px solid var(--green);box-shadow:0 12px 40px rgba(0,0,0,.45);color:var(--text);font-size:12px;line-height:1.45;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .18s,transform .18s}
+.case-toast.show{opacity:1;transform:none}
+.case-toast strong{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:3px}
 .leaflet-container{background:#0A1628!important;font-family:var(--fb)!important}
 .leaflet-popup-content-wrapper{background:var(--bg-surf)!important;border:1px solid var(--border)!important;border-radius:2px!important;box-shadow:0 10px 36px rgba(0,0,0,.6)!important;min-width:230px}
 .leaflet-popup-tip{background:var(--bg-surf)!important}
@@ -1126,13 +1140,7 @@ button,[onclick]{touch-action:manipulation}
     <button class="fb" data-f="status" data-v="CONFIRMED">Bekräftat</button>
     <button class="fb" data-f="status" data-v="INDICATION">Indikation</button>
   </div>
-  <div id="map-container" class="reveal"></div>
-  <div class="map-legend reveal">
-    <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Bekräftat</div>
-    <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div>Indikation</div>
-    <div class="leg-item"><div class="leg-dot" style="background:#6B4FBB"></div>Nationellt/ungefärligt</div>
-    <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Kommunmarkör ≠ exakt plats</div>
-  </div>
+  <div class="map-ready-cue reveal" id="mapReadyCue" aria-live="polite"><strong>140</strong><span>dokumenterade fall är laddade och visas i förteckningen.</span><span class="cue-action">Välj ett fall eller en kartmarkör →</span></div>
   <div class="map-case-panel" id="case-detail" tabindex="-1">
     <div class="mcp-top"><div class="mcp-title" id="mcp-title"></div><button class="mcp-close" onclick="closeCase()">✕</button></div>
     <div class="mcp-badges" id="mcp-badges"></div>
@@ -1140,18 +1148,30 @@ button,[onclick]{touch-action:manipulation}
     <div class="mcp-summary" id="mcp-sum"></div>
     <div class="mcp-sources" id="mcp-srcs"></div>
   </div>
-  <section class="case-browser reveal" aria-labelledby="caseBrowserHeading">
-    <div class="case-browser-head">
-      <div>
-        <h2 class="case-browser-title" id="caseBrowserHeading">Fallförteckning</h2>
-        <div class="case-browser-count" id="caseListCount" aria-live="polite"></div>
+  <div class="map-workspace reveal">
+    <div class="map-visual">
+      <div id="map-container"></div>
+      <div class="map-legend">
+        <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Bekräftat</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div>Indikation</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#6B4FBB"></div>Nationellt/ungefärligt</div>
+        <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Kommunmarkör ≠ exakt plats</div>
       </div>
-      <label class="case-search-label" for="caseSearch">Sök i valda fall
-        <input class="case-search" id="caseSearch" type="search" placeholder="Titel, plats, sektor eller nyckelord…" autocomplete="off">
-      </label>
     </div>
-    <div class="case-list" id="caseList" aria-live="polite"></div>
-  </section>
+    <section class="case-browser" aria-labelledby="caseBrowserHeading">
+      <div class="case-browser-head">
+        <div>
+          <h2 class="case-browser-title" id="caseBrowserHeading">Fallförteckning</h2>
+          <div class="case-browser-count" id="caseListCount" aria-live="polite"></div>
+        </div>
+        <label class="case-search-label" for="caseSearch">Sök i valda fall
+          <input class="case-search" id="caseSearch" type="search" placeholder="Titel, plats, sektor eller nyckelord…" autocomplete="off">
+        </label>
+      </div>
+      <div class="case-list" id="caseList" aria-live="polite"></div>
+    </section>
+  </div>
+  <div class="case-toast" id="caseToast" role="status" aria-live="polite"></div>
 </div>
 </section>
 
@@ -2661,6 +2681,10 @@ function show(key,options={}){
     if(catButton)catButton.classList.add('current');
   }
   if(options.scroll!==false)window.scrollTo(0,0);
+  if(safeKey==='map'){
+    const cue=document.getElementById('mapReadyCue');
+    if(cue){cue.classList.remove('pulse');void cue.offsetWidth;cue.classList.add('pulse');}
+  }
   if(safeKey==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
   if(safeKey==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
   triggerReveals();
@@ -2740,7 +2764,7 @@ function renderChain(i){
 }
 
 /* ══ MAP ══ */
-let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL'},caseSearchQuery='',activeCaseId=null;
+let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL'},caseSearchQuery='',activeCaseId=null,caseToastTimer=null;
 let leafletLoadPromise=null;
 function initCaseBrowser(){
   document.querySelectorAll('#mod-map .fb[data-f]').forEach(btn=>{
@@ -2896,6 +2920,16 @@ function updateMapStats(){
     <div><div class="mstat-val">${conf}</div><div class="mstat-lab">Bekräftade</div></div>
     <div><div class="mstat-val">${tot-conf}</div><div class="mstat-lab">Indikationer</div></div>
     <div><div class="mstat-val">${period}</div><div class="mstat-lab">Tidsperiod</div></div>`;
+  const cue=document.getElementById('mapReadyCue');
+  if(cue)cue.innerHTML=`<strong>${tot}</strong><span>${tot===CASES.length?'dokumenterade fall är laddade och visas i förteckningen.':'fall matchar de aktiva filtren och visas nu.'}</span><span class="cue-action">Välj ett fall eller en kartmarkör →</span>`;
+}
+function showCaseToast(c){
+  const toast=document.getElementById('caseToast');
+  if(!toast)return;
+  toast.innerHTML=`<strong>Fall öppnat</strong>${escHtml(c.title)}`;
+  toast.classList.add('show');
+  clearTimeout(caseToastTimer);
+  caseToastTimer=setTimeout(()=>toast.classList.remove('show'),2200);
 }
 function openCase(id,options={}){
   const c=CASES.find(x=>x.id===id);if(!c)return;
@@ -2917,6 +2951,7 @@ function openCase(id,options={}){
   });
   if(options.updateUrl!==false)setCaseUrl(id);
   p.classList.remove('case-target');void p.offsetWidth;p.classList.add('case-target');
+  showCaseToast(c);
   try{p.focus({preventScroll:true});}catch{p.focus();}
   if(options.scroll!==false)scrollCaseIntoView(id,options.behavior||'auto');
 }
