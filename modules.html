@@ -97,7 +97,7 @@ body.menu-open{overflow:hidden}
 #searchResults{position:fixed;top:52px;right:0;left:0;z-index:180;background:rgba(10,22,40,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s);max-height:60vh;overflow-y:auto;display:none}
 #searchResults.open{display:block}
 .sr-group{padding:12px 52px 4px;font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-s)}
-.sr-item{padding:11px 52px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;align-items:flex-start;gap:14px;transition:.15s}
+.sr-item{padding:11px 52px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;align-items:flex-start;gap:14px;transition:.15s;text-decoration:none}
 .sr-item:hover{background:var(--bg-mid)}
 .sr-item-icon{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);min-width:60px;margin-top:2px}
 .sr-item-title{font-size:13px;color:var(--text);line-height:1.3}
@@ -274,8 +274,10 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .map-legend{display:flex;flex-wrap:wrap;gap:12px;padding:9px 14px;background:var(--bg-card);border:1px solid var(--border-s);margin-top:8px}
 .leg-item{display:flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.09em;color:var(--muted)}
 .leg-dot{width:9px;height:9px;border-radius:50%}
-.map-case-panel{margin-top:2px;background:var(--bg-card);border:1px solid var(--border);padding:22px 26px;display:none}
+.map-case-panel{margin-top:2px;background:var(--bg-card);border:1px solid var(--border);padding:22px 26px;display:none;scroll-margin-top:68px;outline:none}
 .map-case-panel.open{display:block}
+.map-case-panel.case-target{animation:caseTarget 1s ease-out}
+@keyframes caseTarget{0%{border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,151,58,.28)}100%{border-color:var(--border);box-shadow:none}}
 .mcp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:9px}
 .mcp-title{font-family:var(--fd);font-size:20px;font-weight:400;line-height:1.2}
 .mcp-close{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:0 4px;line-height:1;flex-shrink:0}
@@ -315,7 +317,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .pop-title{font-family:var(--fd);font-size:14px;font-weight:400;color:var(--text);margin-bottom:4px;line-height:1.3}
 .pop-meta{font-family:var(--fm);font-size:8px;color:var(--muted);margin-bottom:7px}
 .pop-sum{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:8px}
-.pop-btn{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid rgba(184,151,58,.4);padding:4px 9px;cursor:pointer;width:100%;transition:.13s}
+.pop-btn{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;text-align:center;text-decoration:none;color:var(--accent);background:none;border:1px solid rgba(184,151,58,.4);padding:4px 9px;cursor:pointer;width:100%;transition:.13s}
 .pop-btn:hover{background:var(--accent-g)}
 
 /* ─── ACTORS ─── */
@@ -1131,7 +1133,7 @@ button,[onclick]{touch-action:manipulation}
     <div class="leg-item"><div class="leg-dot" style="background:#6B4FBB"></div>Nationellt/ungefärligt</div>
     <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Kommunmarkör ≠ exakt plats</div>
   </div>
-  <div class="map-case-panel" id="mcpPanel">
+  <div class="map-case-panel" id="case-detail" tabindex="-1">
     <div class="mcp-top"><div class="mcp-title" id="mcp-title"></div><button class="mcp-close" onclick="closeCase()">✕</button></div>
     <div class="mcp-badges" id="mcp-badges"></div>
     <div class="mcp-meta" id="mcp-meta"></div>
@@ -2632,7 +2634,7 @@ document.addEventListener('click',function(e){
     closeCatMenus();
   }
 });
-function show(key){
+function show(key,options={}){
   const requested=document.getElementById('mod-'+key);
   const safeKey=requested?key:'chain';
   document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
@@ -2658,7 +2660,7 @@ function show(key){
     const catButton=document.getElementById('cat-'+cat);
     if(catButton)catButton.classList.add('current');
   }
-  window.scrollTo(0,0);
+  if(options.scroll!==false)window.scrollTo(0,0);
   if(safeKey==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
   if(safeKey==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
   triggerReveals();
@@ -2730,7 +2732,7 @@ function renderChain(i){
   const cc=document.getElementById('cp-cases');
   const list=document.getElementById('cp-cases-list');
   if(linked.length){
-    list.innerHTML=linked.map(({item:x,why})=>`<a class="cp-case-ref" href="?case=${x.id}#mod-map" onclick="return openLinkedCase('${x.id}',event)"><div class="cp-case-ref-t">${x.title}</div><div class="cp-case-ref-m">${x.loc?.m||''} · ${x.date} · ${x.status==='CONFIRMED'?'Bekräftat':'Indikation'}</div>${why?`<div class="cp-case-ref-w">${why}</div>`:''}</a>`).join('');
+    list.innerHTML=linked.map(({item:x,why})=>`<a class="cp-case-ref" href="?case=${x.id}#case-detail" data-case-link="${x.id}"><div class="cp-case-ref-t">${x.title}</div><div class="cp-case-ref-m">${x.loc?.m||''} · ${x.date} · ${x.status==='CONFIRMED'?'Bekräftat':'Indikation'}</div>${why?`<div class="cp-case-ref-w">${why}</div>`:''}</a>`).join('');
   }else{
     list.innerHTML=`<div class="cp-case-empty">${c.caseNote||'Inget fall i databasen belägger detta moment tillräckligt tydligt.'}</div>`;
   }
@@ -2788,16 +2790,38 @@ function resetCaseBrowserFilters(){
 function setCaseUrl(id){
   const url=new URL(window.location.href);
   if(id)url.searchParams.set('case',id);else url.searchParams.delete('case');
-  url.hash='#mod-map';
+  url.hash=id?'#case-detail':'#mod-map';
   if(window.location.href!==url.href)history.replaceState(null,'',url);
 }
-function openLinkedCase(id,event,options={}){
-  if(event&&typeof event.preventDefault==='function')event.preventDefault();
+function scrollCaseIntoView(id,behavior='auto'){
+  const scroll=()=>{
+    if(activeCaseId!==id)return;
+    const target=document.getElementById('case-detail');
+    if(!target||!target.classList.contains('open'))return;
+    target.scrollIntoView({behavior,block:'start'});
+  };
+  scroll();
+  requestAnimationFrame(scroll);
+  setTimeout(scroll,180);
+  setTimeout(scroll,600);
+}
+function openLinkedCase(id,options={}){
   if(!CASES.some(c=>c.id===id))return false;
   resetCaseBrowserFilters();
-  show('map');
-  setTimeout(()=>openCase(id,options),80);
+  show('map',{scroll:false});
+  openCase(id,{...options,scroll:false});
+  scrollCaseIntoView(id,options.behavior||'auto');
   return false;
+}
+function initCaseNavigation(){
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('[data-case-link]');
+    if(!link||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    const id=link.dataset.caseLink;
+    if(!CASES.some(c=>c.id===id))return;
+    event.preventDefault();
+    openLinkedCase(id);
+  });
 }
 function loadLeaflet(){
   if(window.L)return Promise.resolve(window.L);
@@ -2840,7 +2864,7 @@ function renderMarkers(){
     const sz=c.loc.p==='approximate'?9:12;
     const icon=L.divIcon({className:'',html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;background:${col};border:2px solid rgba(255,255,255,.2);box-shadow:0 0 8px ${col}44"></div>`,iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
     const m=L.marker([c.loc.lat,c.loc.lng],{icon}).addTo(leafMap);
-    m.bindPopup(`<div class="pop-title">${c.title}</div><div class="pop-meta">${c.loc.m}${c.loc.r&&c.loc.r!==c.loc.m?', '+c.loc.r:''} · ${c.date}</div><div class="pop-sum">${c.summary.substring(0,140)}…</div><button class="pop-btn" onclick="openCase('${c.id}')">Öppna fallbeskrivning</button>`);
+    m.bindPopup(`<div class="pop-title">${c.title}</div><div class="pop-meta">${c.loc.m}${c.loc.r&&c.loc.r!==c.loc.m?', '+c.loc.r:''} · ${c.date}</div><div class="pop-sum">${c.summary.substring(0,140)}…</div><a class="pop-btn" href="?case=${c.id}#case-detail" data-case-link="${c.id}">Öppna fallbeskrivning</a>`);
     mapMarkers.push(m);
   });
 }
@@ -2854,7 +2878,7 @@ function renderCaseList(){
     list.innerHTML='<div class="case-list-empty">Inga fall matchar de valda filtren och sökningen. Ändra ett filter eller rensa sökfältet.</div>';
     return;
   }
-  list.innerHTML=filtered.map(c=>`<a id="case-list-${c.id}" class="case-list-item${c.id===activeCaseId?' active':''}" href="?case=${c.id}#mod-map" data-case-id="${c.id}"${c.id===activeCaseId?' aria-current="true"':''} onclick="event.preventDefault();openCase('${c.id}')">
+  list.innerHTML=filtered.map(c=>`<a id="case-list-${c.id}" class="case-list-item${c.id===activeCaseId?' active':''}" href="?case=${c.id}#case-detail" data-case-id="${c.id}" data-case-link="${c.id}"${c.id===activeCaseId?' aria-current="true"':''}>
     <div class="case-list-top"><span class="case-list-meta">${escHtml(c.date)} · ${escHtml(c.loc?.m||'')}</span><span class="badge b-${c.status==='CONFIRMED'?'conf':'ind'}">${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span></div>
     <div class="case-list-title">${escHtml(c.title)}</div>
     <div class="case-list-summary">${escHtml(c.summary)}</div>
@@ -2875,7 +2899,7 @@ function updateMapStats(){
 }
 function openCase(id,options={}){
   const c=CASES.find(x=>x.id===id);if(!c)return;
-  const p=document.getElementById('mcpPanel');
+  const p=document.getElementById('case-detail');
   activeCaseId=id;
   p.dataset.caseId=id;
   document.getElementById('mcp-title').textContent=c.title;
@@ -2892,10 +2916,12 @@ function openCase(id,options={}){
     if(selected)item.setAttribute('aria-current','true');else item.removeAttribute('aria-current');
   });
   if(options.updateUrl!==false)setCaseUrl(id);
-  if(options.scroll!==false)p.scrollIntoView({behavior:options.behavior||'smooth',block:'start'});
+  p.classList.remove('case-target');void p.offsetWidth;p.classList.add('case-target');
+  try{p.focus({preventScroll:true});}catch{p.focus();}
+  if(options.scroll!==false)scrollCaseIntoView(id,options.behavior||'auto');
 }
 function closeCase(){
-  const p=document.getElementById('mcpPanel');
+  const p=document.getElementById('case-detail');
   p.classList.remove('open');delete p.dataset.caseId;activeCaseId=null;
   document.querySelectorAll('.case-list-item.active').forEach(item=>{item.classList.remove('active');item.removeAttribute('aria-current');});
   setCaseUrl(null);
@@ -2941,7 +2967,7 @@ function selectActor(id,el){
     </div>
     <div>
       <div class="ad-sec-lbl">Kopplade fall (${cs.length})</div>
-      ${cs.map(c=>`<a class="ad-case" href="?case=${c.id}#mod-map" onclick="return openLinkedCase('${c.id}',event)"><div class="adc-t">${c.title}</div><div class="adc-m">${c.loc?.m} · ${c.date}</div></a>`).join('')}
+      ${cs.map(c=>`<a class="ad-case" href="?case=${c.id}#case-detail" data-case-link="${c.id}"><div class="adc-t">${c.title}</div><div class="adc-m">${c.loc?.m} · ${c.date}</div></a>`).join('')}
     </div>
   </div>`;
   det.classList.add('open');det.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -3352,6 +3378,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     closeCatMenus();
     if(link.classList.contains('mobile-tab-btn'))closeMobileDrawer();
   }));
+  initCaseNavigation();
   addInteractionGuides();
   show(startMod);
   document.documentElement.classList.add('js-ready');
@@ -3365,7 +3392,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   initializers.forEach(([name,init])=>{
     try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
   });
-  if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,null,{updateUrl:false,behavior:'auto'}),100);
+  if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
 });
 window.addEventListener('hashchange',()=>{
   if(window.location.hash.startsWith('#mod-'))show(window.location.hash.slice(5));
@@ -3630,7 +3657,7 @@ function initGlobalSearch(){
     let html='';
     if(hits.cases.length){
       html+=`<div class="sr-group">Fall (${hits.cases.length})</div>`;
-      hits.cases.slice(0,6).forEach(c=>{html+=`<div class="sr-item" onclick="srGoCase('${c.id}')"><span class="sr-item-icon">${c.sector}</span><div><div class="sr-item-title">${escHtml(c.title)}</div><div class="sr-item-sub">${escHtml(c.loc&&c.loc.m?c.loc.m+' · ':'')}${c.date}</div></div></div>`;});
+      hits.cases.slice(0,6).forEach(c=>{html+=`<a class="sr-item" href="?case=${c.id}#case-detail" data-case-link="${c.id}"><span class="sr-item-icon">${c.sector}</span><div><div class="sr-item-title">${escHtml(c.title)}</div><div class="sr-item-sub">${escHtml(c.loc&&c.loc.m?c.loc.m+' · ':'')}${c.date}</div></div></a>`;});
     }
     if(hits.inds.length){
       html+=`<div class="sr-group">Indikatorer (${hits.inds.length})</div>`;
@@ -3650,7 +3677,6 @@ function closeSearch(){
   document.getElementById('globalSearchInput').value='';
   const clr=document.querySelector('.nav-search-clear');if(clr)clr.style.display='none';
 }
-function srGoCase(id){closeSearch();openLinkedCase(id);}
 function srGoInd(id){closeSearch();show('inds');setTimeout(()=>{const el=document.querySelector('[data-ind-id="'+id+'"]');if(el){el.scrollIntoView({behavior:'smooth',block:'nearest'});el.style.outline='2px solid var(--accent)';setTimeout(()=>el.style.outline='',1500);}},200);}
 function srGoSector(id){closeSearch();show('sectors');setTimeout(()=>selectSector(id),100);}
 function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -6097,7 +6123,7 @@ function selectLegal(id){
     const ci=legalCaseTitle(cid);
     if(!ci)return '';
     const sc=ci.status==='CONFIRMED'?'conf':'ind';
-    return `<a class="lp-case" href="?case=${cid}#mod-map" onclick="return openLinkedCase('${cid}',event)">
+    return `<a class="lp-case" href="?case=${cid}#case-detail" data-case-link="${cid}">
       <span class="lp-case-dot ${sc}"></span>
       <span class="lp-case-title">${ci.title}</span>
       <span class="lp-case-year">${ci.year}</span></a>`;
@@ -6237,7 +6263,7 @@ function selectIPVec(id){
     const ci=ipCaseTitle(cid);
     if(!ci)return '';
     const sc=ci.status==='CONFIRMED'?'conf':'ind';
-    return `<a class="ipp-case" href="?case=${cid}#mod-map" onclick="return openLinkedCase('${cid}',event)">
+    return `<a class="ipp-case" href="?case=${cid}#case-detail" data-case-link="${cid}">
       <span class="ipp-case-dot ${sc}"></span>
       <span class="ipp-case-t">${ci.title}</span>
       <span class="ipp-case-y">${ci.year}</span></a>`;
