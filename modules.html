@@ -257,7 +257,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .cp-sig{display:flex;gap:8px;align-items:baseline;font-size:12px;color:var(--text);margin-bottom:7px;line-height:1.5}
 .cp-sig::before{content:"◈";color:var(--accent);font-size:8px;flex-shrink:0}
 .cp-linked-cases{margin-top:14px;padding-top:12px;border-top:1px solid var(--border-s);display:none}
-.cp-case-ref{display:block;width:100%;padding:9px 12px;background:var(--bg-card);border:1px solid var(--border-s);margin-bottom:5px;cursor:pointer;transition:.13s;text-align:left;font:inherit;color:inherit}
+.cp-case-ref{display:block;width:100%;padding:9px 12px;background:var(--bg-card);border:1px solid var(--border-s);margin-bottom:5px;cursor:pointer;transition:.13s;text-align:left;text-decoration:none;font:inherit;color:inherit}
 .cp-case-ref:hover{border-color:var(--accent)}
 .cp-case-ref:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .cp-case-ref-t{font-size:12px;color:var(--text);margin-bottom:2px;line-height:1.3}
@@ -296,8 +296,9 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .case-search{width:100%;min-height:40px;padding:8px 11px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:var(--fb);font-size:13px;outline:none}
 .case-search:focus{border-color:var(--accent)}
 .case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--border-s);margin-top:2px}
-.case-list-item{display:flex;flex-direction:column;gap:8px;min-height:156px;padding:17px 18px;background:var(--bg-card);border:0;border-left:3px solid transparent;color:inherit;text-align:left;cursor:pointer;font:inherit;transition:.14s}
+.case-list-item{display:flex;flex-direction:column;gap:8px;min-height:156px;padding:17px 18px;background:var(--bg-card);border:0;border-left:3px solid transparent;color:inherit;text-align:left;text-decoration:none;cursor:pointer;font:inherit;transition:.14s}
 .case-list-item:hover{background:var(--bg-mid);border-left-color:var(--accent)}
+.case-list-item.active{background:var(--bg-mid);border-left-color:var(--green);box-shadow:inset 0 0 0 1px rgba(74,123,111,.28)}
 .case-list-item:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .case-list-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .case-list-meta{font-family:var(--fm);font-size:8px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
@@ -341,7 +342,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .ad-src{font-family:var(--fm);font-size:8px;color:var(--accent-d);letter-spacing:.09em;margin-top:7px}
 .ad-ind{display:flex;gap:8px;align-items:baseline;font-size:12px;color:var(--muted);margin-bottom:7px;line-height:1.55}
 .ad-ind::before{content:"◈";color:var(--accent);font-size:8px;flex-shrink:0}
-.ad-case{padding:9px 12px;background:var(--bg-card);border:1px solid var(--border-s);margin-bottom:5px;cursor:pointer;transition:.13s}
+.ad-case{display:block;padding:9px 12px;background:var(--bg-card);border:1px solid var(--border-s);margin-bottom:5px;cursor:pointer;transition:.13s;text-decoration:none}
 .ad-case:hover{border-color:var(--accent)}
 .adc-t{font-size:12px;color:var(--text);margin-bottom:2px;line-height:1.3}
 .adc-m{font-family:var(--fm);font-size:8px;color:var(--muted)}
@@ -1322,16 +1323,6 @@ button,[onclick]{touch-action:manipulation}
             <div class="edu-meta">Sveriges Kommuner och Regioner · uppdaterad 12 januari 2026</div>
             <p>Kompassen samlar utbildning och stöd för det kommungemensamma arbetet mot välfärdsbrottslighet. Materialet omfattar bland annat välfärdsbrott, otillåten påverkan, medarbetarens ansvar, arbetsgivaransvar och förtroendevalda. På SKR:s sida finns även en inspelad lansering.</p>
             <div class="edu-links"><a class="edu-link primary" href="https://skr.se/valfardsbrottslighet/kompassenmedutbildningochstodmaterial.9072.html" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div>
-          </div>
-        </details>
-        <details class="edu-card" style="margin:0 0 16px">
-          <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Metod · Kartlägg verksamhetens exponering</span><span class="edu-summary-meta">Lantero · 2025</span></summary>
-          <div class="edu-body">
-            <div class="edu-kicker">Kommuner, regioner och välfärd</div>
-            <div class="edu-title">Från processkarta till prioriterad kontroll</div>
-            <p>Använd materialet för att kartlägga flöden, attraktiva funktioner, beslutspunkter och beroenden. Koppla varje identifierad sårbarhet till en ägare, en befintlig kontroll, en verifieringskälla och ett beslut om hur återstående risk ska hanteras.</p>
-            <div class="edu-why"><strong>Arbetsfrågor:</strong> Var uppstår ekonomiskt värde eller känslig information? Vem kan ensam ändra utfallet? Vilken extern part får legitim åtkomst? Vilka loggar och efterkontroller visar om regeln kringgås?</div>
-            <div class="source-line"><span class="source-kind">Kommersiellt metodmaterial</span><a class="source-url" href="https://www.lantero.se/blog/kartlaeggning-som-verktyg-foer-att-foersta-vaelfaerdsbrottslighet-och-otillaten-paverkan" target="_blank" rel="noopener noreferrer">https://www.lantero.se/blog/kartlaeggning-som-verktyg-foer-att-foersta-vaelfaerdsbrottslighet-och-otillaten-paverkan</a></div>
           </div>
         </details>
         <p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">Påverkan kan riktas mot ett enskilt beslut men också mot organisationens handlingsförmåga. <a href="https://saffle.se/arkiv/nyhetsarkiv/2026/2026-05-21-extern-utredning-av-visselblasningar-om-otillaten-paverkan-i-saffle-kommun.html" target="_blank" rel="noopener">Säffles externa utredning 2026 ↗</a> fann direkta och återkommande försök från förtroendevalda att påverka myndighetsutövning inom skola och socialtjänst. <a href="https://www.hassleholm.se/alla-nyheter/nyheter/2026-08-11-paverkanskampanj-kring-lvu-arende" target="_blank" rel="noopener">Hässleholm ↗</a> visar hur ett lokalt LVU-ärende utvecklades till en internationell kampanj med samordnade kontaktförsök och uppgivna hot. <a href="https://www.regeringen.se/rattsliga-dokument/kommittedirektiv/2026/06/dir.-202663" target="_blank" rel="noopener">Botkyrka ↗</a> visar ett tredje spår: misstankar om påverkan i politiska processer ledde till en statlig infiltrationskommission. <a href="https://www.expressen.se/nyheter/demokrativagledare-sparkas-for-gangkontakter/" target="_blank" rel="noopener">Göteborgsfallet med en samhällsvägledare ↗</a> och <a href="https://www.uddevalla.se/omsorg-och-hjalp/hjalp-i-hemmet/hemtjanst/information-gallande-handelser-inom-hemtjansten.html" target="_blank" rel="noopener">Uddevallas nattpatrull ↗</a> visar hur allvarliga signaler kan behöva hanteras arbetsrättsligt och organisatoriskt även när skuldfrågan inte är fastställd.</p>
@@ -2656,7 +2647,10 @@ function show(key){
   if(t){t.classList.add('active');t.setAttribute('aria-current','page');}
   if(mt)mt.classList.add('active');
   const nextHash='#mod-'+safeKey;
-  if(window.location.hash!==nextHash)history.replaceState(null,'',nextHash);
+  const nextUrl=new URL(window.location.href);
+  nextUrl.hash=nextHash;
+  if(safeKey!=='map')nextUrl.searchParams.delete('case');
+  if(window.location.href!==nextUrl.href)history.replaceState(null,'',nextUrl);
   // Öppna rätt kategori-dropdown och markera aktiv
   const cat=getCat(safeKey);
   if(cat){
@@ -2736,7 +2730,7 @@ function renderChain(i){
   const cc=document.getElementById('cp-cases');
   const list=document.getElementById('cp-cases-list');
   if(linked.length){
-    list.innerHTML=linked.map(({item:x,why})=>`<button type="button" class="cp-case-ref" onclick="show('map');setTimeout(()=>openCase('${x.id}'),250)"><div class="cp-case-ref-t">${x.title}</div><div class="cp-case-ref-m">${x.loc?.m||''} · ${x.date} · ${x.status==='CONFIRMED'?'Bekräftat':'Indikation'}</div>${why?`<div class="cp-case-ref-w">${why}</div>`:''}</button>`).join('');
+    list.innerHTML=linked.map(({item:x,why})=>`<a class="cp-case-ref" href="?case=${x.id}#mod-map" onclick="return openLinkedCase('${x.id}',event)"><div class="cp-case-ref-t">${x.title}</div><div class="cp-case-ref-m">${x.loc?.m||''} · ${x.date} · ${x.status==='CONFIRMED'?'Bekräftat':'Indikation'}</div>${why?`<div class="cp-case-ref-w">${why}</div>`:''}</a>`).join('');
   }else{
     list.innerHTML=`<div class="cp-case-empty">${c.caseNote||'Inget fall i databasen belägger detta moment tillräckligt tydligt.'}</div>`;
   }
@@ -2744,7 +2738,7 @@ function renderChain(i){
 }
 
 /* ══ MAP ══ */
-let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL'},caseSearchQuery='';
+let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL'},caseSearchQuery='',activeCaseId=null;
 let leafletLoadPromise=null;
 function initCaseBrowser(){
   document.querySelectorAll('#mod-map .fb[data-f]').forEach(btn=>{
@@ -2782,6 +2776,28 @@ function renderCaseViews(){
   renderMarkers();
   renderCaseList();
   updateMapStats();
+}
+function resetCaseBrowserFilters(){
+  mapFilters={sector:'ALL',actor:'ALL',status:'ALL'};
+  caseSearchQuery='';
+  const search=document.getElementById('caseSearch');
+  if(search)search.value='';
+  document.querySelectorAll('#mod-map .fb[data-f]').forEach(btn=>btn.classList.toggle('active',btn.dataset.v==='ALL'));
+  renderCaseViews();
+}
+function setCaseUrl(id){
+  const url=new URL(window.location.href);
+  if(id)url.searchParams.set('case',id);else url.searchParams.delete('case');
+  url.hash='#mod-map';
+  if(window.location.href!==url.href)history.replaceState(null,'',url);
+}
+function openLinkedCase(id,event,options={}){
+  if(event&&typeof event.preventDefault==='function')event.preventDefault();
+  if(!CASES.some(c=>c.id===id))return false;
+  resetCaseBrowserFilters();
+  show('map');
+  setTimeout(()=>openCase(id,options),80);
+  return false;
 }
 function loadLeaflet(){
   if(window.L)return Promise.resolve(window.L);
@@ -2838,12 +2854,12 @@ function renderCaseList(){
     list.innerHTML='<div class="case-list-empty">Inga fall matchar de valda filtren och sökningen. Ändra ett filter eller rensa sökfältet.</div>';
     return;
   }
-  list.innerHTML=filtered.map(c=>`<button type="button" class="case-list-item" onclick="openCase('${c.id}')">
+  list.innerHTML=filtered.map(c=>`<a id="case-list-${c.id}" class="case-list-item${c.id===activeCaseId?' active':''}" href="?case=${c.id}#mod-map" data-case-id="${c.id}"${c.id===activeCaseId?' aria-current="true"':''} onclick="event.preventDefault();openCase('${c.id}')">
     <div class="case-list-top"><span class="case-list-meta">${escHtml(c.date)} · ${escHtml(c.loc?.m||'')}</span><span class="badge b-${c.status==='CONFIRMED'?'conf':'ind'}">${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span></div>
     <div class="case-list-title">${escHtml(c.title)}</div>
     <div class="case-list-summary">${escHtml(c.summary)}</div>
     <div class="case-list-tags"><span class="case-list-tag">${escHtml(SECTOR_LABELS[c.sector]||c.sector)}</span><span class="case-list-tag">${escHtml(ACTOR_LABELS[c.actor]||c.actor)}</span></div>
-  </button>`).join('');
+  </a>`).join('');
 }
 function updateMapStats(){
   const filtered=getFilteredCases(),tot=filtered.length,conf=filtered.filter(c=>c.status==='CONFIRMED').length;
@@ -2857,9 +2873,11 @@ function updateMapStats(){
     <div><div class="mstat-val">${tot-conf}</div><div class="mstat-lab">Indikationer</div></div>
     <div><div class="mstat-val">${period}</div><div class="mstat-lab">Tidsperiod</div></div>`;
 }
-function openCase(id){
+function openCase(id,options={}){
   const c=CASES.find(x=>x.id===id);if(!c)return;
   const p=document.getElementById('mcpPanel');
+  activeCaseId=id;
+  p.dataset.caseId=id;
   document.getElementById('mcp-title').textContent=c.title;
   document.getElementById('mcp-badges').innerHTML=`<span class="badge b-${c.status==='CONFIRMED'?'conf':'ind'}"><span class="bdot bdot-${c.status==='CONFIRMED'?'conf':'ind'}"></span>${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span>`;
   document.getElementById('mcp-meta').innerHTML=`<span class="mcp-mi">Plats: <span>${c.loc.m}, ${c.loc.r}</span></span><span class="mcp-mi">Datum: <span>${c.date}</span></span><span class="mcp-mi">Sektor: <span>${SECTOR_LABELS[c.sector]||c.sector}</span></span><span class="mcp-mi">Aktör: <span>${ACTOR_LABELS[c.actor]||c.actor}</span></span>`;
@@ -2867,9 +2885,21 @@ function openCase(id){
   const canonicalSources=(c.sources||[]).map(s=>(s.url||s.u)?`<a href="${s.url||s.u}" target="_blank" rel="noopener" class="src-tag src-link ${s.t==='court'?'court':s.t==='report'?'report':''}">${s.l} ↗</a>`:`<span class="src-tag ${s.t==='court'?'court':s.t==='report'?'report':''}">${s.l}</span>`).join('');
   const osintReading=c.osint?.url?`<a href="${c.osint.url}" target="_blank" rel="noopener" class="src-tag src-link" style="border-color:var(--accent);color:var(--accent)">${c.osint.l} ↗</a>`:'';
   document.getElementById('mcp-srcs').innerHTML=canonicalSources+osintReading;
-  p.classList.add('open');p.scrollIntoView({behavior:'smooth',block:'nearest'});
+  p.classList.add('open');
+  document.querySelectorAll('.case-list-item').forEach(item=>{
+    const selected=item.dataset.caseId===id;
+    item.classList.toggle('active',selected);
+    if(selected)item.setAttribute('aria-current','true');else item.removeAttribute('aria-current');
+  });
+  if(options.updateUrl!==false)setCaseUrl(id);
+  if(options.scroll!==false)p.scrollIntoView({behavior:options.behavior||'smooth',block:'start'});
 }
-function closeCase(){document.getElementById('mcpPanel').classList.remove('open');}
+function closeCase(){
+  const p=document.getElementById('mcpPanel');
+  p.classList.remove('open');delete p.dataset.caseId;activeCaseId=null;
+  document.querySelectorAll('.case-list-item.active').forEach(item=>{item.classList.remove('active');item.removeAttribute('aria-current');});
+  setCaseUrl(null);
+}
 
 /* ══ ACTORS ══ */
 let selActor=null;
@@ -2911,7 +2941,7 @@ function selectActor(id,el){
     </div>
     <div>
       <div class="ad-sec-lbl">Kopplade fall (${cs.length})</div>
-      ${cs.map(c=>`<div class="ad-case" onclick="show('map');setTimeout(()=>openCase('${c.id}'),250)"><div class="adc-t">${c.title}</div><div class="adc-m">${c.loc?.m} · ${c.date}</div></div>`).join('')}
+      ${cs.map(c=>`<a class="ad-case" href="?case=${c.id}#mod-map" onclick="return openLinkedCase('${c.id}',event)"><div class="adc-t">${c.title}</div><div class="adc-m">${c.loc?.m} · ${c.date}</div></a>`).join('')}
     </div>
   </div>`;
   det.classList.add('open');det.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -3312,7 +3342,9 @@ function triggerReveals(){
 
 /* ══ HASH ROUTING ══ */
 window.addEventListener('DOMContentLoaded',()=>{
-  const hashKey=window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
+  const requestedCaseId=new URLSearchParams(window.location.search).get('case');
+  const validRequestedCase=CASES.some(c=>c.id===requestedCaseId);
+  const hashKey=validRequestedCase?'map':window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
   const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
   // ACTORS deklareras efter sektordatan. Synkronisera därför först när hela skriptet har utvärderats.
   ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});
@@ -3333,6 +3365,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   initializers.forEach(([name,init])=>{
     try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
   });
+  if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,null,{updateUrl:false,behavior:'auto'}),100);
 });
 window.addEventListener('hashchange',()=>{
   if(window.location.hash.startsWith('#mod-'))show(window.location.hash.slice(5));
@@ -3617,7 +3650,7 @@ function closeSearch(){
   document.getElementById('globalSearchInput').value='';
   const clr=document.querySelector('.nav-search-clear');if(clr)clr.style.display='none';
 }
-function srGoCase(id){closeSearch();show('map');setTimeout(()=>openCase(id),200);}
+function srGoCase(id){closeSearch();openLinkedCase(id);}
 function srGoInd(id){closeSearch();show('inds');setTimeout(()=>{const el=document.querySelector('[data-ind-id="'+id+'"]');if(el){el.scrollIntoView({behavior:'smooth',block:'nearest'});el.style.outline='2px solid var(--accent)';setTimeout(()=>el.style.outline='',1500);}},200);}
 function srGoSector(id){closeSearch();show('sectors');setTimeout(()=>selectSector(id),100);}
 function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -5747,7 +5780,7 @@ function showHandle(id){
     </details>
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Metod · Kartlägg processer och attraktiva funktioner</span><span class="edu-summary-meta">Lantero · 2025</span></summary>
-      <div class="edu-body"><div class="edu-kicker">Processkartläggning och crime proofing</div><div class="edu-title">Gör exponeringen synlig innan kontrollen väljs</div><p>Kartlägg först värde, data, beslut, externa beroenden och ensambefogenheter. Markera sedan var en manipulerad, upparbetad, affärsmässig eller placerad möjliggörare skulle behöva befinna sig och pröva hur kontrollen kan kringgås.</p><div class="source-line"><span class="source-kind">Kommersiellt metodmaterial</span><a class="source-url" href="https://www.lantero.se/blog/kartlaeggning-som-verktyg-foer-att-foersta-vaelfaerdsbrottslighet-och-otillaten-paverkan" target="_blank" rel="noopener noreferrer">https://www.lantero.se/blog/kartlaeggning-som-verktyg-foer-att-foersta-vaelfaerdsbrottslighet-och-otillaten-paverkan</a></div><div class="source-line"><span class="source-kind">Möjliggörare · metodmaterial</span><a class="source-url" href="https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella" target="_blank" rel="noopener noreferrer">https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella</a></div></div>
+      <div class="edu-body"><div class="edu-kicker">Processkartläggning och crime proofing</div><div class="edu-title">Gör exponeringen synlig innan kontrollen väljs</div><p>Kartlägg först värde, data, beslut, externa beroenden och ensambefogenheter. Markera sedan var en manipulerad, upparbetad, affärsmässig eller placerad möjliggörare skulle behöva befinna sig och pröva hur kontrollen kan kringgås.</p><div class="source-line"><span class="source-kind">Möjliggörare · metodmaterial</span><a class="source-url" href="https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella" target="_blank" rel="noopener noreferrer">https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella</a></div></div>
     </details>
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Datastandard · IIDES för insiderincidenter</span><span class="edu-summary-meta">Carnegie Mellon SEI</span></summary>
@@ -5930,7 +5963,7 @@ const LEGAL_TIERS=[
     rekvisit:'En arbetstagare eller uppdragstagare tar emot, godtar ett löfte om eller begär en <em>otillbörlig förmån</em> för utövningen av anställningen eller uppdraget. Det krävs ett samband mellan förmånen och tjänsteutövningen — och att förmånen bedöms som otillbörlig.',
     straff:'Fängelse i högst två år. Grovt brott: fängelse lägst ett år och sex månader, högst sex år.',
     nyckel:'Det är inte förmånens storlek som avgör, utan om den är ägnad att påverka tjänsteutövningen. NKIG registrerade 99 korruptionsärenden nov 2024–nov 2025; 19 gick till åtal, med 97 % fällandegrad när åtal väcktes.',
-    cases:['c06','c123','c47','c48','c62','c91','c120','c121','c122','c124','c129']
+    cases:['c123','c47','c48','c62','c91','c120','c121','c122','c124','c129']
   },
   {
     id:'spioneri',c:'#B8973A',tier:'Straffbart · grovt',name:'Spioneri & olovlig underrättelse',
@@ -5938,7 +5971,7 @@ const LEGAL_TIERS=[
     rekvisit:'Att för främmande makt obehörigen anskaffa, befordra eller röja uppgift vars uppenbarande kan skada Sveriges säkerhet. Omfattar även olovlig underrättelseverksamhet och, sedan 2023, utlandsspioneri mot internationellt samarbete.',
     straff:'Spioneri: fängelse i högst sex år. Grovt spioneri: fängelse lägst fyra, högst arton år eller på livstid.',
     nyckel:'Den allvarligaste formen av insiderhot. Ofta resultatet av långsiktig statlig rekrytering — GRU-fallet pågick i sex år innan det upptäcktes internt. Träffar både klassisk underrättelse och teknologiöverföring via forskning och näringsliv.',
-    cases:['c03','c65','c66','c86','c97','c104','c109','c24','c10']
+    cases:['c03','c65','c66','c86','c97','c104','c24','c10']
   },
   {
     id:'tystnad',c:'#9B4FBB',tier:'Straffbart',name:'Brott mot tystnadsplikt',
@@ -6064,7 +6097,7 @@ function selectLegal(id){
     const ci=legalCaseTitle(cid);
     if(!ci)return '';
     const sc=ci.status==='CONFIRMED'?'conf':'ind';
-    return `<a class="lp-case" href="#" onclick="show('map');return false">
+    return `<a class="lp-case" href="?case=${cid}#mod-map" onclick="return openLinkedCase('${cid}',event)">
       <span class="lp-case-dot ${sc}"></span>
       <span class="lp-case-title">${ci.title}</span>
       <span class="lp-case-year">${ci.year}</span></a>`;
@@ -6108,7 +6141,7 @@ const IP_VECTORS=[
     lead:'Påverkan som riktas mot institutionen som helhet — genom ideologisk infiltration, valpåverkan eller samordnat sabotage. Syftar till att underminera förtroende, legitimitet eller funktion. Ofta statsunderstödd eller ideologiskt driven.',
     metoder:['Ideologisk infiltration via legitima yrkesroller','Påverkan på och manipulation av valprocessen','Samordnat sabotage mot infrastruktur och institutioner','Bolagsstrukturer som slussar offentliga medel','Kombinerade cyber- och informationsoperationer'],
     effekt:['Sjunkande institutionellt förtroende','Komprometterad valintegritet','Legitimitetsförlust för förvaltningen','Strategisk påverkan på lång sikt','Resurser till antagonistiska aktörer'],
-    cases:['c16','c76','c116','c96']
+    cases:['c16','c76','c96']
   }
 ];
 
@@ -6204,7 +6237,7 @@ function selectIPVec(id){
     const ci=ipCaseTitle(cid);
     if(!ci)return '';
     const sc=ci.status==='CONFIRMED'?'conf':'ind';
-    return `<a class="ipp-case" href="#" onclick="show('map');return false">
+    return `<a class="ipp-case" href="?case=${cid}#mod-map" onclick="return openLinkedCase('${cid}',event)">
       <span class="ipp-case-dot ${sc}"></span>
       <span class="ipp-case-t">${ci.title}</span>
       <span class="ipp-case-y">${ci.year}</span></a>`;
