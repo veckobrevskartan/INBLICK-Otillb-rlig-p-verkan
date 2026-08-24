@@ -118,8 +118,8 @@ body.menu-open{overflow:hidden}
 /* ─── MODULES ─── */
 .module{display:none;min-height:100vh;padding-top:68px}
 .module.active{display:block}
-.module:target{display:block}
-body:has(.module:target) .module.active:not(:target){display:none}
+html:not(.js-ready) .module:target{display:block}
+html:not(.js-ready) body:has(.module:target) .module.active:not(:target){display:none}
 .sec-head{padding:48px 0 36px}
 .eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .sec-title{font-family:var(--fd);font-size:clamp(32px,4vw,56px);font-weight:300;line-height:1.06}
