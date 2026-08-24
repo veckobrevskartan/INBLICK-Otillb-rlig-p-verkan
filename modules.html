@@ -482,7 +482,13 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .theory-caveat{padding:15px 18px;background:rgba(184,151,58,.05);border:1px solid rgba(184,151,58,.2);font-size:12px;color:var(--muted);line-height:1.7;margin:0 0 42px}
 .theory-caveat strong{color:var(--text)}
 @media(max-width:760px){.theory-operational{grid-template-columns:1fr}.pmt-flow{grid-template-columns:1fr}.pmt-arrow{transform:rotate(90deg);min-height:28px}}
-.conflict-section{border-top:1px solid var(--border-s);padding-top:44px;margin-top:8px}
+.conflict-section{border-top:1px solid var(--border-s);padding-top:44px;margin-top:8px;scroll-margin-top:92px}
+.theory-featured-jump{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;margin:0 0 30px;padding:20px 22px;background:linear-gradient(110deg,rgba(184,151,58,.12),rgba(16,34,63,.78));border:1px solid rgba(184,151,58,.32);border-left:3px solid var(--accent)}
+.theory-featured-jump-k{font-family:var(--fm);font-size:8px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.theory-featured-jump-t{font-family:var(--fd);font-size:clamp(20px,2.2vw,28px);font-weight:300;line-height:1.12;color:var(--text);margin-bottom:6px}
+.theory-featured-jump-p{font-size:12px;line-height:1.65;color:var(--muted);max-width:690px}
+.theory-featured-jump a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border:1px solid rgba(184,151,58,.55);font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);white-space:nowrap;transition:background .18s,color .18s}
+.theory-featured-jump a:hover{background:var(--accent);color:var(--bg)}
 .conflict-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--border-s);margin:0 0 20px}
 .conflict-type{background:var(--bg-card);min-width:0}
 .conflict-type summary{display:flex;flex-direction:column;min-height:156px;padding:19px;cursor:pointer;list-style:none;transition:.15s;border-top:3px solid transparent}
@@ -528,7 +534,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .conflict-check{position:relative;background:var(--bg-mid);padding:15px 16px 15px 45px;font-size:12px;line-height:1.6;color:var(--text);counter-increment:conflict-check}
 .conflict-check::before{content:counter(conflict-check,decimal-leading-zero);position:absolute;left:16px;top:16px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--accent)}
 @media(max-width:980px){.conflict-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.org-risk-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks{grid-template-columns:1fr}}
+@media(max-width:700px){.theory-featured-jump{grid-template-columns:1fr;padding:18px}.theory-featured-jump a{width:100%}.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks{grid-template-columns:1fr}}
 @media(max-width:430px){.conflict-grid{grid-template-columns:1fr}.conflict-type summary{min-height:0}.theory-fold summary{display:block}.theory-fold summary::after{display:block;margin-top:10px}}
 .sat-figure{background:var(--bg-card);border:1px solid var(--border-s);padding:24px;margin:0 0 18px}
 .sat-inputs{display:grid;grid-template-columns:1fr 36px 1fr;gap:10px;align-items:stretch;margin-bottom:18px}
@@ -1782,6 +1788,15 @@ button,[onclick]{touch-action:manipulation}
     <p class="sec-intro">Varför går en person över gränsen, och varför sker det just i en viss situation? Här används forskning, etablerade modeller och dokumenterade fall för att förklara förloppet. Modellerna hjälper oss att förstå beteenden, inte att profilera människor.</p>
   </div>
 
+  <div class="theory-featured-jump reveal">
+    <div>
+      <div class="theory-featured-jump-k">Ny fördjupning · Konfliktdiagnos</div>
+      <div class="theory-featured-jump-t">Konflikt, grundbehov och organisatorisk sårbarhet</div>
+      <div class="theory-featured-jump-p">Fem konfliktkategorier, behov och preferenser, kulturell kontext, värdekvadraten samt organisatoriska riskförstärkare. Längre resonemang och bokbilder öppnas vid behov.</div>
+    </div>
+    <a href="#konfliktanalys">Öppna fördjupningen →</a>
+  </div>
+
   <div class="edu-stack reveal">
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Möjliggörare för kriminella nätverk</span><span class="edu-summary-meta">Brå · 2024</span></summary>
@@ -2849,7 +2864,7 @@ function show(key,options={}){
   if(m)m.classList.add('active');
   if(t){t.classList.add('active');t.setAttribute('aria-current','page');}
   if(mt)mt.classList.add('active');
-  const nextHash='#mod-'+safeKey;
+  const nextHash=options.anchor?'#'+options.anchor:'#mod-'+safeKey;
   const nextUrl=new URL(window.location.href);
   nextUrl.hash=nextHash;
   if(safeKey!=='map')nextUrl.searchParams.delete('case');
@@ -3583,10 +3598,25 @@ function triggerReveals(){
 }
 
 /* ══ HASH ROUTING ══ */
+function getDeepAnchor(hash=window.location.hash){
+  if(!hash||hash.startsWith('#mod-'))return null;
+  let id='';
+  try{id=decodeURIComponent(hash.slice(1));}catch(_){return null;}
+  const target=document.getElementById(id);
+  const module=target?target.closest('.module'):null;
+  if(!target||!module||!module.id.startsWith('mod-'))return null;
+  return{id,target,key:module.id.slice(4)};
+}
+function scrollToDeepAnchor(deep){
+  if(!deep||!deep.target)return;
+  deep.target.classList.add('visible');
+  setTimeout(()=>deep.target.scrollIntoView({behavior:'auto',block:'start'}),120);
+}
 window.addEventListener('DOMContentLoaded',()=>{
   const requestedCaseId=new URLSearchParams(window.location.search).get('case');
   const validRequestedCase=CASES.some(c=>c.id===requestedCaseId);
-  const hashKey=validRequestedCase?'map':window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
+  const deepAnchor=validRequestedCase?null:getDeepAnchor();
+  const hashKey=validRequestedCase?'map':deepAnchor?deepAnchor.key:window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
   const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
   // ACTORS deklareras efter sektordatan. Synkronisera därför först när hela skriptet har utvärderats.
   ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});
@@ -3596,7 +3626,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   }));
   initCaseNavigation();
   addInteractionGuides();
-  show(startMod);
+  show(startMod,{scroll:!deepAnchor,anchor:deepAnchor?deepAnchor.id:null});
   document.documentElement.classList.add('js-ready');
   const initializers=[
     ['Påverkanskedjan',buildChain],['Aktörsmatrisen',buildActors],
@@ -3608,10 +3638,13 @@ window.addEventListener('DOMContentLoaded',()=>{
   initializers.forEach(([name,init])=>{
     try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
   });
+  if(deepAnchor)scrollToDeepAnchor(deepAnchor);
   if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
 });
 window.addEventListener('hashchange',()=>{
-  if(window.location.hash.startsWith('#mod-'))show(window.location.hash.slice(5));
+  if(window.location.hash.startsWith('#mod-')){show(window.location.hash.slice(5));return;}
+  const deepAnchor=getDeepAnchor();
+  if(deepAnchor){show(deepAnchor.key,{scroll:false,anchor:deepAnchor.id});scrollToDeepAnchor(deepAnchor);}
 });
 
 /* ══ GRAPH ENGINE ══ */
