@@ -482,6 +482,54 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .theory-caveat{padding:15px 18px;background:rgba(184,151,58,.05);border:1px solid rgba(184,151,58,.2);font-size:12px;color:var(--muted);line-height:1.7;margin:0 0 42px}
 .theory-caveat strong{color:var(--text)}
 @media(max-width:760px){.theory-operational{grid-template-columns:1fr}.pmt-flow{grid-template-columns:1fr}.pmt-arrow{transform:rotate(90deg);min-height:28px}}
+.conflict-section{border-top:1px solid var(--border-s);padding-top:44px;margin-top:8px}
+.conflict-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--border-s);margin:0 0 20px}
+.conflict-type{background:var(--bg-card);min-width:0}
+.conflict-type summary{display:flex;flex-direction:column;min-height:156px;padding:19px;cursor:pointer;list-style:none;transition:.15s;border-top:3px solid transparent}
+.conflict-type summary::-webkit-details-marker,.theory-fold summary::-webkit-details-marker{display:none}
+.conflict-type summary:hover,.conflict-type[open] summary{background:var(--bg-mid);border-top-color:var(--accent)}
+.conflict-type summary:focus-visible,.theory-fold summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.conflict-n{font-family:var(--fm);font-size:8px;letter-spacing:.14em;color:var(--accent);margin-bottom:9px}
+.conflict-t{font-family:var(--fd);font-size:19px;line-height:1.12;margin-bottom:8px}
+.conflict-p{font-size:11px;line-height:1.55;color:var(--muted)}
+.conflict-more{font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:auto;padding-top:12px}
+.conflict-more::after{content:' +'}
+.conflict-type[open] .conflict-more::after{content:' −'}
+.conflict-body{padding:18px 19px 20px;border-top:1px solid var(--border-s);font-size:12px;line-height:1.7;color:var(--muted)}
+.conflict-body p{margin:0 0 13px}
+.conflict-field{padding:10px 0;border-top:1px solid var(--border-s)}
+.conflict-field:last-child{padding-bottom:0}
+.conflict-field strong{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:4px}
+.needs-flow{display:grid;grid-template-columns:1fr 38px 1fr 38px 1fr;gap:8px;align-items:stretch;margin:0 0 18px}
+.need-node{background:var(--bg-card);border:1px solid var(--border-s);padding:19px}
+.need-k{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.need-t{font-family:var(--fd);font-size:19px;line-height:1.15;margin-bottom:7px}
+.need-p{font-size:12px;line-height:1.65;color:var(--muted)}
+.need-arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px}
+.fold-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
+.theory-fold{border:1px solid var(--border-s);background:var(--bg-card);margin:0 0 10px}
+.theory-fold summary{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:17px 19px;cursor:pointer;list-style:none}
+.theory-fold summary::after{content:'Fördjupa +';white-space:nowrap;font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.theory-fold[open] summary{border-bottom:1px solid var(--border-s);background:var(--bg-mid)}
+.theory-fold[open] summary::after{content:'Stäng −'}
+.fold-summary-k{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.fold-summary-t{font-family:var(--fd);font-size:20px;line-height:1.15}
+.theory-fold-body{padding:19px;font-size:12px;line-height:1.75;color:var(--muted)}
+.theory-fold-body p{margin:0 0 13px}
+.theory-fold-body ul{margin:0 0 14px;padding-left:18px}
+.theory-fold-body li{margin-bottom:7px}
+.theory-fold-body .book-figure{margin:18px 0 4px}
+.org-risk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin:0 0 18px}
+.org-risk{background:var(--bg-card);padding:20px;border-bottom:3px solid rgba(184,151,58,.34)}
+.org-risk-k{font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.org-risk-t{font-family:var(--fd);font-size:19px;line-height:1.15;margin-bottom:7px}
+.org-risk-p{font-size:12px;line-height:1.65;color:var(--muted)}
+.conflict-checks{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);margin:14px 0 4px;counter-reset:conflict-check}
+.conflict-check{position:relative;background:var(--bg-mid);padding:15px 16px 15px 45px;font-size:12px;line-height:1.6;color:var(--text);counter-increment:conflict-check}
+.conflict-check::before{content:counter(conflict-check,decimal-leading-zero);position:absolute;left:16px;top:16px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--accent)}
+@media(max-width:980px){.conflict-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.org-risk-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks{grid-template-columns:1fr}}
+@media(max-width:430px){.conflict-grid{grid-template-columns:1fr}.conflict-type summary{min-height:0}.theory-fold summary{display:block}.theory-fold summary::after{display:block;margin-top:10px}}
 .sat-figure{background:var(--bg-card);border:1px solid var(--border-s);padding:24px;margin:0 0 18px}
 .sat-inputs{display:grid;grid-template-columns:1fr 36px 1fr;gap:10px;align-items:stretch;margin-bottom:18px}
 .sat-node{background:var(--bg-mid);border:1px solid var(--border-s);padding:18px;min-width:0}
@@ -2066,6 +2114,105 @@ button,[onclick]{touch-action:manipulation}
     <div style="background:var(--bg-card);padding:20px"><div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:7px">U — Gemenskap</div><div style="font-family:var(--fd);font-size:18px;font-weight:400;margin-bottom:7px">Unity</div><div style="font-size:12px;color:var(--muted);line-height:1.65">En gemensam identitet — ”en av oss” — kan göra en begäran svårare att avvisa och förstärka lojalitet till gruppen framför organisationen.</div></div>
   </div>
   <div class="op-source-row reveal"><a href="https://www.influenceatwork.com/7-principles-of-persuasion/" target="_blank" rel="noopener">Cialdini — sju principer för påverkan ↗</a><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 — relationsbyggande vid rekrytering ↗</a></div>
+
+  <div class="reveal conflict-section" id="konfliktanalys">
+    <p class="eyebrow">Organisationspsykologi · Konfliktdiagnos</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Konflikt, grundbehov och <em>organisatorisk sårbarhet</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:760px;line-height:1.75;margin-bottom:20px">Konflikter kan skapa stress, upplevd orättvisa, tystnad och otydliga beslutsvägar. De är därför relevanta i det förebyggande säkerhetsarbetet, men en konflikt är inte i sig en indikator på insideragerande. Börja med att fastställa vad konflikten gäller, på vilken nivå den finns och vad organisationen kan rätta till.</p>
+  </div>
+  <div class="theory-caveat reveal"><strong>Rättssäker avgränsning:</strong> skilj mellan en legitim arbetsplatskonflikt, en organisatorisk brist och ett observerbart säkerhetsrelevant beteende. Personliga kriser, starka åsikter eller kulturella skillnader får inte användas som genväg till misstanke. En fördjupad säkerhetsbedömning kräver sakliga omständigheter, relevant åtkomst, förändring över tid och proportionerlig hantering.</div>
+
+  <div class="reveal">
+    <p class="eyebrow">Fem huvudkategorier</p>
+    <h3 style="font-family:var(--fd);font-size:clamp(22px,2.6vw,32px);font-weight:300;line-height:1.1;margin-bottom:9px">Fastställ först <em>vad konflikten handlar om</em></h3>
+    <p style="font-size:13px;color:var(--muted);max-width:720px;line-height:1.7;margin-bottom:18px">Kategorierna är diagnosstöd, inte etiketter på personer. Flera typer kan finnas samtidigt. Öppna ett kort för fördjupning, analysfråga och första hanteringsriktning.</p>
+  </div>
+  <div class="conflict-grid reveal">
+    <details class="conflict-type">
+      <summary><span class="conflict-n">01</span><span class="conflict-t">Fördelningskonflikt</span><span class="conflict-p">Pengar, tid, arbetsbörda eller andra begränsade resurser.</span><span class="conflict-more">Visa analys</span></summary>
+      <div class="conflict-body"><p>Parterna är oense om hur lön, budget, bemanning, ärenden, tid eller kostnader ska fördelas. Konflikten kan också handla om vem som ska bära ett tungt eller oönskat ansvar.</p><div class="conflict-field"><strong>Analysfråga</strong>Vilken resurs är knapp, och vilka öppna kriterier används för fördelningen?</div><div class="conflict-field"><strong>Första hantering</strong>Synliggör kriterier, mandat och konsekvenser. Pröva om fördelningen är saklig, spårbar och möjlig att omförhandla.</div></div>
+    </details>
+    <details class="conflict-type">
+      <summary><span class="conflict-n">02</span><span class="conflict-t">Positionskonflikt</span><span class="conflict-p">Roll, status, inflytande eller rätten att ha sista ordet.</span><span class="conflict-more">Visa analys</span></summary>
+      <div class="conflict-body"><p>Två eller flera parter konkurrerar om en position som inte kan delas: en chefsroll, ett expertmandat, attraktiva uppgifter eller informell status. Även roller som ingen vill ta kan skapa samma låsning.</p><div class="conflict-field"><strong>Analysfråga</strong>Är det sakfrågan som är olöst, eller konkurrensen om vem som får avgöra den?</div><div class="conflict-field"><strong>Första hantering</strong>Separera roll från person och klargör hur kompetens, ansvar och beslutanderätt ska vägas.</div></div>
+    </details>
+    <details class="conflict-type">
+      <summary><span class="conflict-n">03</span><span class="conflict-t">Strukturkonflikt</span><span class="conflict-p">Delegation, befogenheter, rutiner, prioriteringar och arbetsordning.</span><span class="conflict-more">Visa analys</span></summary>
+      <div class="conflict-body"><p>Oenigheten gäller hur organisationen ska fungera: vem som beslutar, hur ärenden ska beredas, vilka rutiner som gäller eller hur informellt framvuxet ansvar förhåller sig till formella beslut. Sådana konflikter blir särskilt tydliga vid omorganisation.</p><div class="conflict-field"><strong>Analysfråga</strong>Är mandatet faktiskt beslutat, dokumenterat och känt av de berörda?</div><div class="conflict-field"><strong>Första hantering</strong>Rätta arbetsordning, delegationsbeslut, gränssnitt och eskaleringsvägar innan problemet förklaras som personligt.</div></div>
+    </details>
+    <details class="conflict-type">
+      <summary><span class="conflict-n">04</span><span class="conflict-t">Beteendenormkonflikt</span><span class="conflict-p">Hur man kommunicerar, samarbetar, följer rutiner och tar ansvar.</span><span class="conflict-more">Visa analys</span></summary>
+      <div class="conflict-body"><p>Parterna har olika uppfattning om vilka beteenden som är acceptabla: tonläge, arbetstakt, raster, bemötande, kvalitet, säkerhet eller ansvarstagande. Kritik mot ett beteende kan lätt uppfattas som kritik mot hela personen.</p><div class="conflict-field"><strong>Analysfråga</strong>Vilken uttrycklig norm, rutin eller kvalitetsnivå bedöms — och finns samma krav för alla?</div><div class="conflict-field"><strong>Första hantering</strong>Beskriv observerbara handlingar och konsekvenser. Undvik personlighetsetiketter och gör förväntat beteende konkret.</div></div>
+    </details>
+    <details class="conflict-type">
+      <summary><span class="conflict-n">05</span><span class="conflict-t">Övertygelsekonflikt</span><span class="conflict-p">Värden, mål, moral, ideologi eller valet av arbetsmetod.</span><span class="conflict-more">Visa analys</span></summary>
+      <div class="conflict-body"><p>Oenigheten rör vilket synsätt som ska vara vägledande eller vilken metod som bäst når verksamhetens mål. Konflikten blir ofta svår när båda sidor ser den egna ståndpunkten som moraliskt nödvändig.</p><div class="conflict-field"><strong>Analysfråga</strong>Vilka legitima värden försöker respektive part skydda, och var finns den rättsliga eller professionella gränsen?</div><div class="conflict-field"><strong>Första hantering</strong>Skilj icke förhandlingsbara krav från värden som kan balanseras genom flera möjliga arbetssätt.</div></div>
+    </details>
+  </div>
+  <div class="op-source-row reveal"><a href="https://www.perspectus.se/tj/" target="_blank" rel="noopener">Thomas Jordan — konflikthantering i arbetslivet och handboken från 2014 ↗</a></div>
+
+  <div class="reveal">
+    <p class="eyebrow">Grundbehov · Från ståndpunkt till lösning</p>
+    <h3 style="font-family:var(--fd);font-size:clamp(22px,2.6vw,32px);font-weight:300;line-height:1.1;margin-bottom:9px">Fråga vad parten försöker <em>skydda</em></h3>
+    <p style="font-size:13px;color:var(--muted);max-width:720px;line-height:1.7;margin-bottom:18px">Ett krav är en föreslagen lösning. Bakom kravet kan det finnas behov av rättvisa, erkännande, tillhörighet, autonomi, trygghet, förutsägbarhet, kompetens, inflytande eller mening. När behovet blir synligt ökar antalet möjliga lösningar.</p>
+  </div>
+  <div class="needs-flow reveal" role="img" aria-label="Analys från uttalad ståndpunkt via underliggande behov till flera möjliga lösningar">
+    <div class="need-node"><div class="need-k">01 · Ståndpunkt</div><div class="need-t">Vad begär personen?</div><div class="need-p">Dokumentera det konkreta kravet utan att värdera motiv: en roll, en resurs, ett undantag eller ett ändrat beslut.</div></div>
+    <div class="need-arrow">→</div>
+    <div class="need-node"><div class="need-k">02 · Grundbehov</div><div class="need-t">Vad behöver skyddas?</div><div class="need-p">Pröva flera hypoteser och låt parten själv bekräfta: rättvisa, kontroll, respekt, säkerhet, tillhörighet eller utveckling.</div></div>
+    <div class="need-arrow">→</div>
+    <div class="need-node"><div class="need-k">03 · Handlingsalternativ</div><div class="need-t">Hur kan behovet mötas?</div><div class="need-p">Sök flera lagliga och praktiska lösningar. Behoven kan erkännas även när det ursprungliga kravet inte kan tillgodoses.</div></div>
+  </div>
+  <details class="theory-fold reveal">
+    <summary><span><span class="fold-summary-k">Fördjupning</span><span class="fold-summary-t">Frågor som gör behovet synligt</span></span></summary>
+    <div class="theory-fold-body"><ul><li>Vad skulle bli bättre för dig om ditt krav tillgodosågs?</li><li>Vad är du mest rädd att förlora om inget förändras?</li><li>Vilken del handlar om sak, relation respektive organisationens struktur?</li><li>Vilka andra lösningar skulle ge tillräcklig rättvisa, trygghet eller handlingsfrihet?</li><li>Finns en maktasymmetri eller risk för repressalier som måste hanteras innan ett gemensamt samtal?</li></ul><p>Frågorna är till för konfliktdiagnos och stöd. De ersätter inte arbetsrättslig utredning, säkerhetsskyddsbedömning eller en prövning av konkreta avvikelser.</p></div>
+  </details>
+
+  <div class="fold-grid reveal">
+    <details class="theory-fold">
+      <summary><span><span class="fold-summary-k">Personlighet och preferenser</span><span class="fold-summary-t">Motpoler kan skapa friktion</span></span></summary>
+      <div class="theory-fold-body"><p>Behov av närhet kan möta behov av distans. En person vill arbeta tillsammans, en annan ostört på egen hand. Någon värderar harmoni, en annan vill pröva idéer genom tydlig konkurrens. Sådana skillnader kan förklara återkommande irritation utan att någon av parterna behöver ha fel.</p><p>Använd polariteterna för att formulera frågor, inte för att typbestämma människor. Försök inte ställa diagnoser eller dra säkerhetsslutsatser från en personlighetstyp.</p><figure class="book-figure"><img src="behov-preferenser-polariteter.png" alt="Tabell med sju exempel på motstående behov och preferenser, bland annat närhet och distans, omväxling och stabilitet samt öppet och dämpat känslouttryck" loading="lazy"><figcaption>Exempel på behovs- och preferenspoler som kan skapa friktion. Polerna beskriver möjliga spänningsfält, inte fasta personlighetstyper.</figcaption></figure></div>
+    </details>
+    <details class="theory-fold">
+      <summary><span><span class="fold-summary-k">Kulturell kontext</span><span class="fold-summary-t">Samma beteende kan tolkas olika</span></span></summary>
+      <div class="theory-fold-body"><p>Kulturell erfarenhet kan påverka synen på maktdistans, direkt eller indirekt kommunikation, individuellt och kollektivt ansvar, könsroller och hur starka känslouttryck förstås. En chef som förväntar sig invändningar kan möta en medarbetare som uppfattar lydnad som respekt. Ett direkt budskap kan av en part uppfattas som tydligt och av en annan som ansiktshotande.</p><ul><li><strong>Maktdistans:</strong> vem förväntas fatta beslut och vem får invända?</li><li><strong>Direkthet:</strong> sägs budskapet uttryckligen eller förväntas mottagaren läsa sammanhanget?</li><li><strong>Individ och kollektiv:</strong> ses konflikten som parternas egen eller som en fråga för gruppen?</li><li><strong>Känslouttryck:</strong> tolkas höjd röst som normal intensitet eller som ett allvarligt hot?</li></ul><p>Hofstedes dimensioner gäller jämförelser på grupp- och samhällsnivå. De ska inte användas för att förutsäga en enskild persons värderingar eller beteende. Fråga hellre än anta.</p></div>
+    </details>
+  </div>
+  <div class="op-source-row reveal"><a href="https://doi.org/10.9707/2307-0919.1014" target="_blank" rel="noopener">Hofstede (2011) — kulturdimensioner och nivåbegränsning ↗</a></div>
+
+  <details class="theory-fold reveal">
+    <summary><span><span class="fold-summary-k">Värdekvadrat · Modellbild</span><span class="fold-summary-t">Styrbarhet och flexibilitet behöver balanseras</span></span></summary>
+    <div class="theory-fold-body"><p>Värdekvadraten visar två legitima värden som behöver varandra. Styrbarhet utan flexibilitet kan övergå i överbyråkratisering. Flexibilitet utan styrbarhet kan övergå i anarki. I en polariserad konflikt beskriver parterna gärna den egna sidan med ett positivt värde och motpartens sida som dess negativa överdrift.</p><p>Praktiskt används modellen genom att först formulera båda sidors positiva värde, därefter den risk som följer av ensidighet och slutligen vilken konkret balans som behövs i beslut, mandat och arbetssätt.</p><figure class="book-figure"><img src="varde-kvadrat-styrbarhet-flexibilitet.png" alt="Värdekvadrat där styrbarhet balanseras mot flexibilitet och där överdrifterna anges som överbyråkratisering respektive anarki" loading="lazy"><figcaption>Värdekvadrat tillämpad på styrbarhet och flexibilitet. De korsande pilarna visar hur parterna kan anklaga varandra för den negativa överdriften i motpartens position.</figcaption></figure></div>
+  </details>
+  <div class="op-source-row reveal"><a href="https://www.schulz-von-thun.de/die-modelle/das-werte-und-entwicklungsquadrat" target="_blank" rel="noopener">Schulz von Thun-institutet — värde- och utvecklingskvadraten ↗</a></div>
+
+  <div class="reveal">
+    <p class="eyebrow">Organisatorisk osäkerhet · Fyra riskförstärkare</p>
+    <h3 style="font-family:var(--fd);font-size:clamp(22px,2.6vw,32px);font-weight:300;line-height:1.1;margin-bottom:9px">När organisationen gör problemet <em>svårare att upptäcka</em></h3>
+    <p style="font-size:13px;color:var(--muted);max-width:760px;line-height:1.7;margin-bottom:18px">Osäkerhet och ångest i organisationer är inte samma sak som psykisk ohälsa hos en individ. Här avses den oro som kan skapas av oklara roller, motstridiga krav, maktasymmetrier och brist på beslut. Den kan bidra till tystnad, ansvarsglapp och långsam hantering.</p>
+  </div>
+  <div class="org-risk-grid reveal">
+    <div class="org-risk"><div class="org-risk-k">Gränser</div><div class="org-risk-t">”Vi” och ”de andra”</div><div class="org-risk-p">Enheter pratar om varandra i stället för med varandra. Delar av en avvikelse stannar i HR, säkerhet, IT eller linjen och ingen ser helheten.</div></div>
+    <div class="org-risk"><div class="org-risk-k">Mytbildning</div><div class="org-risk-t">Den officiella bilden styr</div><div class="org-risk-p">Påståenden som ”här är alla öppna” kan göra motbevis obekväma. Problem tonas ned för att skydda självbild, relationer eller anseende.</div></div>
+    <div class="org-risk"><div class="org-risk-k">Fjärmat ansvar</div><div class="org-risk-t">Ingen äger helheten</div><div class="org-risk-p">Ansvar skjuts uppåt, nedåt eller mellan funktioner. Oklara mandat skyddar organisationen från konflikt men lämnar risken utan tydlig ägare.</div></div>
+    <div class="org-risk"><div class="org-risk-k">Fjärmat beslut</div><div class="org-risk-t">Aktivitet ersätter avgörande</div><div class="org-risk-p">Fler underlag, möten och kommittéer skapar rörelse utan beslut. Kända brister ligger kvar medan alla väntar på nästa steg.</div></div>
+  </div>
+  <div class="fold-grid reveal">
+    <details class="theory-fold">
+      <summary><span><span class="fold-summary-k">Moxnes · Fördjupning</span><span class="fold-summary-t">Driftsångest och systemångest</span></span></summary>
+      <div class="theory-fold-body"><p><strong>Driftsångest</strong> används här för oro som kan växa när struktur, roller och gränser är för svaga. Medarbetare vet inte vad som förväntas, vem som tar beslut eller vilka impulser och konflikter gruppen kan hantera.</p><p><strong>Systemångest</strong> beskriver i stället oro och frustration när regleringen blir så rigid att autonomi, initiativ och utveckling upplevs som blockerade. Samma struktur som ger en person trygghet kan därför skapa instängdhet hos en annan.</p><p>Den praktiska uppgiften är att skapa tillräcklig tydlighet för ansvar och säkerhet, men tillräcklig flexibilitet för professionellt omdöme. Begreppen beskriver organisatoriska spänningar och ska inte användas som kliniska diagnoser.</p></div>
+    </details>
+    <details class="theory-fold">
+      <summary><span><span class="fold-summary-k">Ledarskap · Fördjupning</span><span class="fold-summary-t">Tydlighet utan fasad</span></span></summary>
+      <div class="theory-fold-body"><p>Ledarskap kan både förstärka och minska organisatorisk oro. Orealistisk kontroll, ständig bedömning eller aggressiv konfrontation kan göra medarbetare försiktiga och tysta. Detsamma gäller när ledningen signalerar oro men samtidigt förnekar att problem finns.</p><p>Ett mer robust ledarskap kombinerar tydliga förväntningar och gränser med öppenhet om osäkerhet. Det gör det möjligt att rapportera misstag, risker och förändrade livsförhållanden tidigt utan att varje uppgift omedelbart behandlas som illojalitet.</p></div>
+    </details>
+  </div>
+  <details class="theory-fold reveal">
+    <summary><span><span class="fold-summary-k">Operativ fördjupning</span><span class="fold-summary-t">Sex frågor innan ett personalärende blir ett säkerhetsärende</span></span></summary>
+    <div class="theory-fold-body"><p>Frågorna hjälper chefer, HR, säkerhetsfunktion och juridik att hålla isär stöd, konflikthantering och säkerhetsutredning.</p><div class="conflict-checks"><div class="conflict-check">Vilken konfliktkategori eller kombination av kategorier beskriver sakfrågan bäst?</div><div class="conflict-check">Vilka behov och legitima värden försöker parterna skydda?</div><div class="conflict-check">Är grundproblemet främst på individ-, relations- eller systemnivå?</div><div class="conflict-check">Vilket mandat, beslut, ansvar eller arbetsflöde är oklart eller odokumenterat?</div><div class="conflict-check">Finns observerbara beteenden, relevant åtkomst och förändring över tid — eller bara en konflikt?</div><div class="conflict-check">Vilken åtgärd ger stöd och kontroll med minsta nödvändiga intrång, och vem följer upp?</div></div></div>
+  </details>
+  <div class="theory-caveat reveal"><strong>Säkerhetskopplingen uppstår först i kombination:</strong> en olöst konflikt eller organisatorisk ångest kan öka sårbarhet eller sänka rapporteringsviljan. Den får analytisk tyngd när den sammanfaller med exempelvis gränsförskjutning, dold kontakt, kontrollundvikande, åtkomst utan arbetsbehov eller försök att dölja spår. Analysen ska då omfatta både individens handlande och organisationens bidragande brister.</div>
+  <div class="op-source-row reveal"><a href="https://www.nok.se/titlar/akademisk-psykologi/positiv-angest/" target="_blank" rel="noopener">Moxnes — Positiv ångest i individ, grupp och organisation ↗</a><a href="https://doi.org/10.1016/j.riob.2009.07.002" target="_blank" rel="noopener">Kish-Gephart et al. (2009) — rädsla och tystnad i arbetslivet ↗</a></div>
 
   <div class="reveal">
     <p class="eyebrow">Insiderforskning · Stressorer och riskvägar</p>
