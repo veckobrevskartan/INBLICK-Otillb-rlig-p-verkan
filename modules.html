@@ -483,6 +483,12 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .theory-caveat strong{color:var(--text)}
 @media(max-width:760px){.theory-operational{grid-template-columns:1fr}.pmt-flow{grid-template-columns:1fr}.pmt-arrow{transform:rotate(90deg);min-height:28px}}
 .conflict-section{border-top:1px solid var(--border-s);padding-top:44px;margin-top:8px;scroll-margin-top:92px}
+#mod-theory>.wrap{display:flex;flex-direction:column}
+#mod-theory>.wrap>*{order:3}
+#mod-theory>.wrap>.sec-head{order:0}
+#mod-theory>.wrap>.theory-featured-jump{order:1}
+#mod-theory>.wrap>.conflict-deep-dive{order:2}
+.conflict-deep-dive{scroll-margin-top:92px}
 .theory-featured-jump{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;margin:0 0 30px;padding:20px 22px;background:linear-gradient(110deg,rgba(184,151,58,.12),rgba(16,34,63,.78));border:1px solid rgba(184,151,58,.32);border-left:3px solid var(--accent)}
 .theory-featured-jump-k{font-family:var(--fm);font-size:8px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .theory-featured-jump-t{font-family:var(--fd);font-size:clamp(20px,2.2vw,28px);font-weight:300;line-height:1.12;color:var(--text);margin-bottom:6px}
@@ -2130,6 +2136,7 @@ button,[onclick]{touch-action:manipulation}
   </div>
   <div class="op-source-row reveal"><a href="https://www.influenceatwork.com/7-principles-of-persuasion/" target="_blank" rel="noopener">Cialdini — sju principer för påverkan ↗</a><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 — relationsbyggande vid rekrytering ↗</a></div>
 
+  <div class="conflict-deep-dive">
   <div class="reveal conflict-section" id="konfliktanalys">
     <p class="eyebrow">Organisationspsykologi · Konfliktdiagnos</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Konflikt, grundbehov och <em>organisatorisk sårbarhet</em></h2>
@@ -2228,6 +2235,7 @@ button,[onclick]{touch-action:manipulation}
   </details>
   <div class="theory-caveat reveal"><strong>Säkerhetskopplingen uppstår först i kombination:</strong> en olöst konflikt eller organisatorisk ångest kan öka sårbarhet eller sänka rapporteringsviljan. Den får analytisk tyngd när den sammanfaller med exempelvis gränsförskjutning, dold kontakt, kontrollundvikande, åtkomst utan arbetsbehov eller försök att dölja spår. Analysen ska då omfatta både individens handlande och organisationens bidragande brister.</div>
   <div class="op-source-row reveal"><a href="https://www.nok.se/titlar/akademisk-psykologi/positiv-angest/" target="_blank" rel="noopener">Moxnes — Positiv ångest i individ, grupp och organisation ↗</a><a href="https://doi.org/10.1016/j.riob.2009.07.002" target="_blank" rel="noopener">Kish-Gephart et al. (2009) — rädsla och tystnad i arbetslivet ↗</a></div>
+  </div>
 
   <div class="reveal">
     <p class="eyebrow">Insiderforskning · Stressorer och riskvägar</p>
