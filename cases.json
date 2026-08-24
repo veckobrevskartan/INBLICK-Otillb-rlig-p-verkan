@@ -4073,5 +4073,102 @@
         "url": "https://www.siljannews.se/sater/polisanmalan-efter-jav-samtidigt-soker-kommunen-ny-aktor/"
       }
     ]
+  },
+  {
+    "id": "c174",
+    "title": "Nordvästra Skåne — polis åtalad efter misstänkt informationsläcka",
+    "date": "2026-08",
+    "loc": {
+      "m": "Nordvästra Skåne",
+      "r": "Skåne",
+      "lat": 56.1,
+      "lng": 13.0,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "INSIDER",
+    "status": "INDICATION",
+    "summary": "En polis i nordvästra Skåne åtalades för hemfridsbrott, dataintrång och brott mot tystnadsplikt. Enligt åtalet gjorde polisen obehöriga slagningar och lämnade sekretessbelagda uppgifter till en brottsmisstänkt person. Polisen förnekar brott. Eftersom uppgifterna bygger på ett åtal och skuldfrågan inte är slutligt prövad klassas fallet som en indikation.",
+    "sources": [
+      {
+        "l": "Sveriges Radio — Polis åtalas, ska ha läckt hemliga uppgifter till misstänkt (2026-08)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/polis-atalas-ska-ha-lackt-hemliga-uppgifter-till-misstankt"
+      }
+    ]
+  },
+  {
+    "id": "c175",
+    "title": "Australien — kvinna åtalad för försök till utländsk inblandning",
+    "date": "2026-08",
+    "loc": {
+      "m": "Brisbane",
+      "r": "Queensland",
+      "lat": -27.4698,
+      "lng": 153.0251,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Australiens federala polis åtalade en 27-årig rysk-australisk medborgare för försök till avsiktlig utländsk inblandning. Enligt utredningen reste hon till Ukraina, anslöt sig till landets försvarsmakt för att få tillgång till militär information och försökte sedan lämna uppgifter till personer hon trodde företrädde rysk underrättelsetjänst. Åtalet gäller försök till utländsk inblandning, inte spioneri, och är inte slutligt prövat.",
+    "sources": [
+      {
+        "l": "Australian Federal Police — Dual Russian-Australian citizen charged by Counter Foreign Interference Taskforce (2026-08-21)",
+        "t": "authority",
+        "url": "https://www.afp.gov.au/news-centre/media-release/dual-russian-australian-citizen-charged-counter-foreign-interference-task"
+      }
+    ]
+  },
+  {
+    "id": "c176",
+    "title": "Polen — misstänkt ryskstyrt mordförsök mot ukrainsk försvarssektor",
+    "date": "2026-08",
+    "loc": {
+      "m": "Warszawa",
+      "r": "Mazowieckie",
+      "lat": 52.2297,
+      "lng": 21.0122,
+      "p": "municipality"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Polens säkerhetstjänst ABW grep en ukrainsk medborgare misstänkt för att på uppdrag av rysk underrättelsetjänst ha förberett ett attentat mot en person med koppling till Ukrainas försvarsindustri. Enligt ABW skulle en sprängladdning placeras under offrets bil i Irpin. Mannen häktades efter att ha delgivits misstanke; uppgifterna är inte slutligt prövade och klassas därför som en indikation.",
+    "sources": [
+      {
+        "l": "Polens säkerhetstjänst ABW — gripande efter misstänkt attentatsförsök på uppdrag av ryska tjänster (2026-08-20)",
+        "t": "authority",
+        "url": "https://www.abw.gov.pl/pl/aktualnosci/2838%2CABW-zatrzymala-podejrzanego-o-probe-zamachu-na-zlecenie-rosyjskich-sluzb.html"
+      },
+      {
+        "l": "Reuters — Poland arrests man over alleged plot against Ukrainian arms industry figure (2026-08-20)",
+        "t": "media",
+        "url": "https://www.reuters.com/world/poland-arrests-man-over-alleged-plot-assassinate-ukrainian-arms-industry-2026-08-20/"
+      }
+    ]
+  },
+  {
+    "id": "c177",
+    "title": "Rotterdam — två tjänstemän avskedade efter misstänkt korruption i byggavtal",
+    "date": "2026-08",
+    "loc": {
+      "m": "Rotterdam",
+      "r": "Zuid-Holland",
+      "lat": 51.9244,
+      "lng": 4.4777,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Rotterdams kommun avskedade två tjänstemän efter misstankar om att de tagit emot mutor och gynnat vissa företag i kommunala bygguppdrag. Enligt den offentliga rapporteringen omfattade den brottsutredning som pågick elva personer och sex bolag. Avskedandena och utredningen är dokumenterade, men misstankarna om brott var inte slutligt prövade vid publiceringen.",
+    "sources": [
+      {
+        "l": "NL Times — Rotterdam fires two civil servants over alleged corruption in construction contracts (2026-08-23)",
+        "t": "media",
+        "url": "https://nltimes.nl/2026/08/23/rotterdam-fires-two-civil-servants-alleged-corruption-construction-contracts"
+      }
+    ]
   }
 ]
