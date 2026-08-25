@@ -3144,6 +3144,16 @@ function initTheoryTabs(){
     link.href='#theory-submenu';
     link.setAttribute('aria-label','Tillbaka till undermenyn för Teorier och modeller');
     link.innerHTML='<span class="theory-return-arrow" aria-hidden="true">↑</span><span>Tillbaka till undermenyn</span>';
+    link.addEventListener('click',event=>{
+      event.preventDefault();
+      const submenu=document.getElementById('theory-submenu');
+      if(!submenu)return;
+      const url=new URL(window.location.href);
+      url.hash='#theory-submenu';
+      history.replaceState(null,'',url);
+      const top=submenu.getBoundingClientRect().top+window.scrollY-60;
+      window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+    });
     wrap.appendChild(link);
     panel.appendChild(wrap);
   });
