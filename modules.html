@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <style>
-:root{--bg:#0A1628;--bg-mid:#112040;--bg-surf:#162B52;--bg-card:#0E1E38;--text:#F0EDE6;--muted:#8A9AB0;--dim:#4A5A6A;--accent:#B8973A;--accent-d:#7A6325;--accent-g:rgba(184,151,58,.12);--link:#E5C85D;--link-hover:#FFF0A6;--green:#4A7B6F;--orange:#C45C2E;--purple:#9B4FBB;--border:rgba(184,151,58,.18);--border-s:rgba(240,237,230,.07);--fd:"Cormorant Garamond",Georgia,serif;--fb:"IBM Plex Sans",system-ui,sans-serif;--fm:"IBM Plex Mono",monospace}
+:root{--bg:#0A1628;--bg-mid:#112040;--bg-surf:#162B52;--bg-card:#0E1E38;--text:#F0EDE6;--muted:#D8DEE8;--dim:#B8C3D1;--accent:#B8973A;--accent-d:#7A6325;--accent-g:rgba(184,151,58,.12);--link:#E5C85D;--link-hover:#FFF0A6;--green:#4A7B6F;--orange:#C45C2E;--purple:#9B4FBB;--border:rgba(184,151,58,.18);--border-s:rgba(240,237,230,.07);--fd:"Cormorant Garamond",Georgia,serif;--fb:"IBM Plex Sans",system-ui,sans-serif;--fm:"IBM Plex Mono",monospace}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:15px;line-height:1.6;overflow-x:hidden}
@@ -47,8 +47,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97
 .cat-label:hover{color:var(--accent);background:var(--accent-g)}
 .cat-label.open{color:var(--accent);border-bottom-color:var(--accent);background:var(--accent-g)}
 .cat-label.current{color:var(--text);border-bottom-color:var(--accent)}
-.cat-roman{font-family:var(--fd);font-size:11px;font-style:italic;opacity:.55;margin-right:2px}
-.cat-chevron{font-size:10px;opacity:.4;margin-left:2px;transition:.2s}
+.cat-roman{font-family:var(--fd);font-size:11px;font-style:italic;opacity:.82;margin-right:2px}
+.cat-chevron{font-size:10px;opacity:.72;margin-left:2px;transition:.2s}
 .cat-label.open .cat-chevron{transform:rotate(180deg)}
 .cat-tabs{
   display:none;position:absolute;top:52px;left:0;
@@ -490,12 +490,9 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 @media(max-width:760px){.theory-operational{grid-template-columns:1fr}.pmt-flow{grid-template-columns:1fr}.pmt-arrow{transform:rotate(90deg);min-height:28px}}
 .conflict-section{border-top:1px solid var(--border-s);padding-top:44px;margin-top:8px;scroll-margin-top:128px}
 .conflict-deep-dive{scroll-margin-top:92px}
-.theory-featured-jump{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;margin:0 0 30px;padding:20px 22px;background:linear-gradient(110deg,rgba(184,151,58,.12),rgba(16,34,63,.78));border:1px solid rgba(184,151,58,.32);border-left:3px solid var(--accent)}
-.theory-featured-jump-k{font-family:var(--fm);font-size:8px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.theory-featured-jump-t{font-family:var(--fd);font-size:clamp(20px,2.2vw,28px);font-weight:300;line-height:1.12;color:var(--text);margin-bottom:6px}
-.theory-featured-jump-p{font-size:12px;line-height:1.65;color:var(--muted);max-width:690px}
-.theory-featured-jump a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border:1px solid rgba(184,151,58,.55);font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);white-space:nowrap;transition:background .18s,color .18s}
-.theory-featured-jump a:hover{background:var(--accent);color:var(--bg)}
+.theory-index-label{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:0 0 10px;padding:0 2px}
+.theory-index-label strong{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--text)}
+.theory-index-label span{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .theory-subnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin:0 0 34px;padding:2px;background:var(--border-s);border:1px solid var(--border-s);position:sticky;top:60px;z-index:70}
 .theory-subtab{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 13px;background:var(--bg-card);border:0;border-top:2px solid transparent;color:var(--muted);cursor:pointer;text-align:left;transition:.16s}
 .theory-subtab:hover{background:var(--bg-mid);color:var(--text)}
@@ -510,7 +507,7 @@ html:not(.js-ready) .theory-subnav{display:none}
 .theory-panel-intro{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:0 0 28px;padding:0 0 16px;border-bottom:1px solid var(--border-s)}
 .theory-panel-intro strong{font-family:var(--fd);font-size:24px;font-weight:300;color:var(--text)}
 .theory-panel-intro span{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
-@media(max-width:760px){.theory-subnav{grid-template-columns:1fr 1fr;position:static}.theory-subtab{min-height:56px}.theory-panel-intro{display:block}.theory-panel-intro span{display:block;text-align:left;margin-top:6px}}
+@media(max-width:760px){.theory-index-label{display:block}.theory-index-label span{display:block;margin-bottom:4px}.theory-subnav{grid-template-columns:1fr 1fr;position:static}.theory-subtab{min-height:56px}.theory-panel-intro{display:block}.theory-panel-intro span{display:block;text-align:left;margin-top:6px}}
 @media(max-width:440px){.theory-subnav{grid-template-columns:1fr}.theory-subtab{min-height:48px}}
 .conflict-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--border-s);margin:0 0 20px}
 .conflict-type{background:var(--bg-card);min-width:0}
@@ -557,7 +554,7 @@ html:not(.js-ready) .theory-subnav{display:none}
 .conflict-check{position:relative;background:var(--bg-mid);padding:15px 16px 15px 45px;font-size:12px;line-height:1.6;color:var(--text);counter-increment:conflict-check}
 .conflict-check::before{content:counter(conflict-check,decimal-leading-zero);position:absolute;left:16px;top:16px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--accent)}
 @media(max-width:980px){.conflict-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.org-risk-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.theory-featured-jump{grid-template-columns:1fr;padding:18px}.theory-featured-jump a{width:100%}.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks{grid-template-columns:1fr}}
+@media(max-width:700px){.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks{grid-template-columns:1fr}}
 @media(max-width:430px){.conflict-grid{grid-template-columns:1fr}.conflict-type summary{min-height:0}.theory-fold summary{display:block}.theory-fold summary::after{display:block;margin-top:10px}}
 .sat-figure{background:var(--bg-card);border:1px solid var(--border-s);padding:24px;margin:0 0 18px}
 .sat-inputs{display:grid;grid-template-columns:1fr 36px 1fr;gap:10px;align-items:stretch;margin-bottom:18px}
@@ -1811,15 +1808,18 @@ button,[onclick]{touch-action:manipulation}
     <p class="sec-intro">Varför går en person över gränsen, och varför sker det just i en viss situation? Här används forskning, etablerade modeller och dokumenterade fall för att förklara förloppet. Modellerna hjälper oss att förstå beteenden, inte att profilera människor.</p>
   </div>
 
-  <div class="theory-featured-jump reveal">
-    <div>
-      <div class="theory-featured-jump-k">Ny fördjupning · Konfliktdiagnos</div>
-      <div class="theory-featured-jump-t">Konflikt, grundbehov och organisatorisk sårbarhet</div>
-      <div class="theory-featured-jump-p">Fem konfliktkategorier, behov och preferenser, kulturell kontext, värdekvadraten samt organisatoriska riskförstärkare. Längre resonemang och bokbilder öppnas vid behov.</div>
-    </div>
-    <a href="#konfliktanalys" data-theory-open="conflict">Öppna fördjupningen →</a>
+  <div class="theory-index-label reveal"><span>Valindex · Teorier och modeller</span><strong>Välj område för att visa innehållet</strong></div>
+  <div class="theory-subnav reveal" role="tablist" aria-label="Underkategorier i Teorier och modeller">
+    <button class="theory-subtab" id="theory-tab-core" type="button" role="tab" aria-selected="true" aria-controls="theory-panel-core" data-theory-tab="core"><span class="theory-subtab-n">01</span><span class="theory-subtab-t">Kärnmodeller</span></button>
+    <button class="theory-subtab" id="theory-tab-organisation" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-organisation" data-theory-tab="organisation" tabindex="-1"><span class="theory-subtab-n">02</span><span class="theory-subtab-t">Organisation &amp; fall</span></button>
+    <button class="theory-subtab" id="theory-tab-behaviour" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-behaviour" data-theory-tab="behaviour" tabindex="-1"><span class="theory-subtab-n">03</span><span class="theory-subtab-t">Beteende &amp; påverkan</span></button>
+    <button class="theory-subtab" id="theory-tab-conflict" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-conflict" data-theory-tab="conflict" tabindex="-1"><span class="theory-subtab-n">04</span><span class="theory-subtab-t">Konflikt &amp; arbetsmiljö</span></button>
+    <button class="theory-subtab" id="theory-tab-insider" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-insider" data-theory-tab="insider" tabindex="-1"><span class="theory-subtab-n">05</span><span class="theory-subtab-t">Insider &amp; prövning</span></button>
+    <button class="theory-subtab" id="theory-tab-protection" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-protection" data-theory-tab="protection" tabindex="-1"><span class="theory-subtab-n">06</span><span class="theory-subtab-t">Relationer &amp; skydd</span></button>
   </div>
 
+  <div class="theory-panel is-active" id="theory-panel-core" role="tabpanel" aria-labelledby="theory-tab-core" data-theory-panel="core">
+  <div class="theory-panel-intro"><strong>Kärnmodeller</strong><span>mål · möjliggörare · insider · motiv · situation · utvecklingsväg</span></div>
   <div class="edu-stack reveal">
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Webbinarium · Möjliggörare för kriminella nätverk</span><span class="edu-summary-meta">Brå · 2024</span></summary>
@@ -1843,18 +1843,6 @@ button,[onclick]{touch-action:manipulation}
       </div>
     </details>
   </div>
-
-  <div class="theory-subnav reveal" role="tablist" aria-label="Underkategorier i Teorier och modeller">
-    <button class="theory-subtab" id="theory-tab-core" type="button" role="tab" aria-selected="true" aria-controls="theory-panel-core" data-theory-tab="core"><span class="theory-subtab-n">01</span><span class="theory-subtab-t">Kärnmodeller</span></button>
-    <button class="theory-subtab" id="theory-tab-organisation" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-organisation" data-theory-tab="organisation" tabindex="-1"><span class="theory-subtab-n">02</span><span class="theory-subtab-t">Organisation &amp; fall</span></button>
-    <button class="theory-subtab" id="theory-tab-behaviour" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-behaviour" data-theory-tab="behaviour" tabindex="-1"><span class="theory-subtab-n">03</span><span class="theory-subtab-t">Beteende &amp; påverkan</span></button>
-    <button class="theory-subtab" id="theory-tab-conflict" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-conflict" data-theory-tab="conflict" tabindex="-1"><span class="theory-subtab-n">04</span><span class="theory-subtab-t">Konflikt &amp; arbetsmiljö</span></button>
-    <button class="theory-subtab" id="theory-tab-insider" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-insider" data-theory-tab="insider" tabindex="-1"><span class="theory-subtab-n">05</span><span class="theory-subtab-t">Insider &amp; prövning</span></button>
-    <button class="theory-subtab" id="theory-tab-protection" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-protection" data-theory-tab="protection" tabindex="-1"><span class="theory-subtab-n">06</span><span class="theory-subtab-t">Relationer &amp; skydd</span></button>
-  </div>
-
-  <div class="theory-panel is-active" id="theory-panel-core" role="tabpanel" aria-labelledby="theory-tab-core" data-theory-panel="core">
-  <div class="theory-panel-intro"><strong>Kärnmodeller</strong><span>mål · möjliggörare · insider · motiv · situation · utvecklingsväg</span></div>
   <div class="reveal">
     <p class="eyebrow">Modell C · Brå 2025</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Vad påverkan försöker <em>åstadkomma</em></h2>
@@ -2987,11 +2975,6 @@ function initTheoryTabs(){
       selectTheoryTab(tabs[next].dataset.theoryTab,{focus:true,scroll:true});
     });
   });
-  document.querySelectorAll('[data-theory-open]').forEach(link=>link.addEventListener('click',event=>{
-    event.preventDefault();
-    const anchor=link.getAttribute('href').replace(/^#/,'');
-    selectTheoryTab(link.dataset.theoryOpen,{anchor,scroll:true});
-  }));
   const deep=getDeepAnchor();
   if(deep&&deep.key==='theory')ensureTheoryPanelForTarget(deep.target);
 }
@@ -5089,7 +5072,7 @@ function showHandle(id){
     <button onclick="filterSrc('organisationskultur-och-s-kerhetskultur')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #2E5A6B40;background:transparent;color:#2E5A6B;cursor:pointer">Organisationskultur och säkerhetskultur (7)</button>
     <button onclick="filterSrc('beteende--psykologi-och-riskhantering')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #6B2E5A40;background:transparent;color:#6B2E5A;cursor:pointer">Beteende, psykologi och riskhantering (75)</button>
     <button onclick="filterSrc('myndighetsrapporter-och-lagstiftning')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #3A5A3A40;background:transparent;color:#3A5A3A;cursor:pointer">Myndighetsrapporter och lagstiftning (13)</button>
-    <button onclick="filterSrc('internationella-j-mf-relsefall')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #5A5A5A40;background:transparent;color:#5A5A5A;cursor:pointer">Internationella jämförelsefall (1)</button>
+    <button onclick="filterSrc('internationella-j-mf-relsefall')" style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid #C7D0DC40;background:transparent;color:#C7D0DC;cursor:pointer">Internationella jämförelsefall (1)</button>
   </div>
   <div class="src-group" data-cat="insiderhot---definition-och-typologi" style="margin-bottom:48px">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #4A7B6F40">
@@ -5998,9 +5981,9 @@ function showHandle(id){
     </div>
   </div>
   <div class="src-group" data-cat="internationella-j-mf-relsefall" style="margin-bottom:48px">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #5A5A5A40">
-      <div style="width:3px;height:22px;background:#5A5A5A;flex-shrink:0"></div>
-      <h3 style="font-family:var(--fd);font-size:17px;font-weight:400;color:#5A5A5A;margin:0">Internationella jämförelsefall</h3>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #C7D0DC40">
+      <div style="width:3px;height:22px;background:#C7D0DC;flex-shrink:0"></div>
+      <h3 style="font-family:var(--fd);font-size:17px;font-weight:400;color:#C7D0DC;margin:0">Internationella jämförelsefall</h3>
       <span style="font-family:var(--fm);font-size:10px;color:var(--dim);margin-left:auto">1 källor</span>
     </div>
     <div style="display:grid;gap:4px">
