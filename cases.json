@@ -4170,5 +4170,234 @@
         "url": "https://nltimes.nl/2026/08/23/rotterdam-fires-two-civil-servants-alleged-corruption-construction-contracts"
       }
     ]
+  },
+  {
+    "id": "c178",
+    "title": "Mölndal — kommunpolitiker med bakgrund i Hells Angels-lojal klubb lämnade sina uppdrag",
+    "date": "2025-05",
+    "loc": {
+      "m": "Mölndal",
+      "r": "Västra Götaland",
+      "lat": 57.6554,
+      "lng": 12.0138,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En kommunpolitiker för Sverigedemokraterna hade enligt Expressens granskning varit mångårig medlem och vice president i Beer Brothers MC, en klubb som polisen beskrivit som lojal med Hells Angels. På ett gruppfoto bar personen märket ”Support 81”. Efter publiceringen lämnade personen samtliga kommunala uppdrag. Personen förnekade stöd till Hells Angels. Klassningen bekräftat avser det dokumenterade medlemskapet, bilden och avgången; den innebär inte att personen dömts för brott eller att något kommunalt beslut visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "Expressen — Kommunpolitikern lämnar efter Hells Angels-bilden (2025-05-28)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/sverige/berry-hasselqvist-lamnar-sd-efter-hells-angels-bilden/"
+      },
+      {
+        "l": "Omni — Kommunpolitiker bar Hells Angels-symbol och avgår (2025-05-28)",
+        "t": "media",
+        "url": "https://omni.se/sd-politiker-bar-hells-angels-symbol-lamnar-partiet/a/o32dvB"
+      }
+    ]
+  },
+  {
+    "id": "c179",
+    "title": "Svenljunga — ledamot lämnade efter stöduttalanden om Hells Angels-supportklubb",
+    "date": "2025-06",
+    "loc": {
+      "m": "Svenljunga",
+      "r": "Västra Götaland",
+      "lat": 57.495,
+      "lng": 13.1102,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En SD-ledamot i barn- och utbildningsnämnden uppgav sig ha vänner i Red Devils och beskrev klubben positivt. Polisen klassar Red Devils som ett nätverk inom grov organiserad brottslighet och som en officiell supporterklubb till Hells Angels. Efter granskningen lämnade ledamoten samtliga politiska uppdrag i Svenljunga. Klassningen bekräftat avser de offentliga uttalandena, uppdraget och avgången; den innebär inte att personen dömts för brott eller att nämndens arbete visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "Sveriges Radio — SD-politiker lämnar efter avslöjande om mc-kopplingar (2025-06-03)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/sd-politiker-i-svenljunga-lamnar-uppdrag-efter-avslojande"
+      },
+      {
+        "l": "Borås Tidning — Lokal SD-politiker hyllar mc-gäng och avgår (2025-06-03)",
+        "t": "media",
+        "url": "https://www.bt.se/svenljunga/lokal-sd-politiker-hyllar-mc-gang-avgar-direkt/"
+      }
+    ]
+  },
+  {
+    "id": "c180",
+    "title": "Åhus — vice ordförande i kommunalt hamnbolag lämnade efter uppgifter om Bandidos-fest",
+    "date": "2025-06",
+    "loc": {
+      "m": "Åhus",
+      "r": "Skåne",
+      "lat": 55.9244,
+      "lng": 14.296,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Vice ordföranden i det kommunala bolaget Åhus Hamn & Stuveri AB, som företrädde Sverigedemokraterna, uppgav att han 2016 deltagit i en fest där medlemmar från Cobra MC och Bandidos MC fanns. Efter granskningen lämnade han posten i hamnbolaget i juni 2025. Klassningen bekräftat avser det dokumenterade deltagandet, det kommunala uppdraget och avgången; den innebär inte att personen dömts för brott eller att hamnverksamheten visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "Kristianstadsbladet — SD-politiker var på Bandidos-fest (2025-06-02)",
+        "t": "media",
+        "url": "https://www.kristianstadsbladet.se/kristianstad/sd-politiker-var-pa-bandidos-fest-blev-inbjudna-av-nagon/"
+      },
+      {
+        "l": "Kristianstadsbladet — Vice ordföranden lämnar Åhus hamn efter avslöjandet (2025-06-19)",
+        "t": "media",
+        "url": "https://www.kristianstadsbladet.se/kristianstad/dan-bjork-sd-lamnar-ahus-hamn-efter-avslojandet/"
+      }
+    ]
+  },
+  {
+    "id": "c181",
+    "title": "Bollnäs — socialnämndsledamot med tidigare medlemskap i Hells Angels-stödgrupp avgick",
+    "date": "2025-06",
+    "loc": {
+      "m": "Bollnäs",
+      "r": "Gävleborg",
+      "lat": 61.3484,
+      "lng": 16.3943,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En SD-ledamot i Bollnäs socialnämnd hade i ett polisförhör 2020 uppgett att han under fem år varit medlem i Red & White Crew, en supportergrupp till Hells Angels. Personen var inte misstänkt i den vapenbrottsutredning där förhöret hölls. Efter den publicerade granskningen lämnade ledamoten sina politiska uppdrag. Klassningen bekräftat avser den egna uppgiften om tidigare medlemskap, uppdraget och avgången; den innebär inte att personen dömts för brott eller att socialnämndens arbete visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "Expressen — Socialnämndsledamot uppgav medlemskap i mc-stödgrupp (2025-06-02)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/sverige/jimmy-forsell-sd-jobbar-med-barn-var-medlem-i-mc-gang/"
+      },
+      {
+        "l": "Omni — SD-politiker i Bollnäs var med i Hells Angels stödgäng (2025-06-02)",
+        "t": "media",
+        "url": "https://omni.se/sd-politiker-i-bollnas-var-med-i-hells-angels-stodgang/a/o3Ov30"
+      },
+      {
+        "l": "Ljusnan — Lämnar politiken efter mc-avslöjandet (2025-06-11)",
+        "t": "media",
+        "url": "https://www.ljusnan.se/bollnas/hoppar-av-politiken-efter-mc-avslojande/"
+      }
+    ]
+  },
+  {
+    "id": "c182",
+    "title": "Vänersborg — kommunpolitiker sökte hjälp hos Hells Angels i skuldtvist",
+    "date": "2025-05",
+    "loc": {
+      "m": "Vänersborg",
+      "r": "Västra Götaland",
+      "lat": 58.3807,
+      "lng": 12.3234,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En kommunpolitiker för Sverigedemokraterna besökte enligt SVT, Sveriges Radio och Expressen Hells Angels gård utanför Göteborg för att få hjälp i en tvist om en påstådd företagsskuld. Personen hade bland annat uppdrag i barn- och ungdomsnämnden och byggnadsnämnden och lämnade samtliga politiska uppdrag efter publiceringen. Uppgifterna visar ett dokumenterat försök att använda en kriminell nätverkskontakt i ett privat skuldärende. Klassningen innebär inte att personen dömts för brott eller att något kommunalt beslut visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Kommunpolitiker avgår efter avslöjande om gängkoppling (2025-05-26)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vast/kommunpolitiker-i-vanersborg-avgar-efter-avslojande-om-gangkoppling"
+      },
+      {
+        "l": "Sveriges Radio — SD-politiker anlitade Hells Angels och lämnar uppdragen (2025-05-26)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/sd-politiker-anlitade-hells-angels-lamnar-sina-politiska-uppdrag"
+      },
+      {
+        "l": "Expressen — Kommunpolitiker tog hjälp av Hells Angels (2025-05-26)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/sverige/erik-vessby-sd-tog-hjalp-av-hells-angels-slutade-i-mord/"
+      }
+    ]
+  },
+  {
+    "id": "c183",
+    "title": "Uppsala — regionpolitiker med medlemskap i Hells Angels-stödklubb lämnade uppdrag",
+    "date": "2025-06",
+    "loc": {
+      "m": "Uppsala",
+      "r": "Uppsala",
+      "lat": 59.8586,
+      "lng": 17.6389,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En ersättare för Sverigedemokraterna i Region Uppsalas fullmäktige uppgav enligt Expressen medlemskap i White Knights, en klubb som beskrivits som stödklubb till Hells Angels, och hade deltagit vid en Hells Angels-fest. Efter granskningen lämnade personen sitt politiska uppdrag. Klassningen bekräftat avser de dokumenterade uppgifterna om medlemskap, deltagande och avgång; den innebär inte att personen dömts för brott eller att regionens beslut visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "Expressen — Regionpolitiker var på Hells Angels-fest (2025-06-03)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/sverige/jim-andersson-sd-var-pa-hells-angels-fest/"
+      }
+    ]
+  },
+  {
+    "id": "c184",
+    "title": "Sigtuna — lokal partiledning deltog återkommande i Hells Angels-miljö",
+    "date": "2022-10",
+    "loc": {
+      "m": "Sigtuna",
+      "r": "Stockholm",
+      "lat": 59.6173,
+      "lng": 17.7236,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Expo och UNT dokumenterade 2022 att företrädare i Sverigedemokraternas lokala ledning hade deltagit vid flera sammankomster hos Hells Angels under en följd av år. En av företrädarna var även regionpolitiker. De berörda beskrev kontakterna som sociala och tog avstånd från brottslighet. Klassningen bekräftat avser de dokumenterade besöken och de offentliga uppdragen; den innebär inte att personerna dömts för brott eller att något offentligt beslut visats ha påverkats.",
+    "osint": {
+      "l": "Svensk OSINT — Sverigedemokraterna och 1%-miljön (2025-06-10)",
+      "url": "https://www.linkedin.com/pulse/sverigedemokraterna-och-1-milj%C3%B6n-svensk-osint-efqxe"
+    },
+    "sources": [
+      {
+        "l": "Expo — Ledningen för SD i Sigtuna festade hos Hells Angels (2022)",
+        "t": "media",
+        "url": "https://expo.se/nyhet/ledningen-for-sd-i-sigtuna-festade-hos-hells-angels/"
+      },
+      {
+        "l": "UNT — SD:s toppnamn i Sigtuna festade med Hells Angels (2022-10-03)",
+        "t": "media",
+        "url": "https://www.unt.se/nyheter/sigtuna/artikel/sd-toppnamn-festade-med-hells-angels-vi-akte-dit-och-kakade-hamburgare/r34gw6el"
+      }
+    ]
   }
 ]
