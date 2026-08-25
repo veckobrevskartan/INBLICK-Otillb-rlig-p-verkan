@@ -439,8 +439,34 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .book-figure{margin:22px 0 42px;background:#f4f4f2;border:1px solid var(--border-s);padding:16px}
 .book-figure img{display:block;width:100%;height:auto;max-width:850px;margin:0 auto}
 .book-figure figcaption{font-size:11px;color:#4a4a46;line-height:1.55;max-width:850px;margin:10px auto 0}
+.book-source-figure{margin:22px 0 30px;border:1px solid var(--border);background:var(--bg-card)}
+.book-source-frame{padding:18px;background:#fff}
+.book-source-frame img{display:block;width:100%;height:auto;max-width:980px;max-height:720px;object-fit:contain;margin:0 auto}
+.book-source-figure figcaption{padding:12px 15px 14px;font-size:11px;color:var(--muted);line-height:1.65}
+.book-source-figure figcaption strong{color:var(--text);font-weight:500}
+.evidence-compare{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);margin:18px 0 22px}
+.evidence-year{background:var(--bg-card);padding:20px;border-top:3px solid var(--accent)}
+.evidence-year.current{border-top-color:var(--green)}
+.evidence-year-k{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.evidence-year.current .evidence-year-k{color:var(--green)}
+.evidence-year-v{font-family:var(--fd);font-size:28px;font-weight:300;color:var(--text);line-height:1.08;margin-bottom:8px}
+.evidence-year-p{font-size:11.5px;color:var(--muted);line-height:1.65}
+.model-role-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);margin:18px 0 24px}
+.model-role{background:var(--bg-card);padding:17px 15px;border-top:3px solid var(--accent)}
+.model-role>strong{display:block;font-family:var(--fd);font-size:20px;font-weight:400;line-height:1.15;color:var(--text);margin-bottom:6px}
+.model-role>span{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--accent);line-height:1.5;margin-bottom:7px}
+.model-role>p{font-size:11px;color:var(--muted);line-height:1.62}
+.model-role-k{font-family:var(--fm);font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.model-role-t{font-family:var(--fd);font-size:20px;line-height:1.15;color:var(--text);margin-bottom:7px}
+.model-role-p{font-size:11px;color:var(--muted);line-height:1.62}
+.source-status{display:inline-flex;align-items:center;padding:3px 7px;margin:0 5px 5px 0;border:1px solid rgba(74,123,111,.4);background:rgba(74,123,111,.1);font-family:var(--fm);font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;color:#8FC4B7}
+.source-status.reported{border-color:rgba(184,151,58,.4);background:var(--accent-g);color:var(--accent)}
+.model-warning{padding:14px 16px;margin:16px 0 26px;background:rgba(196,92,46,.08);border:1px solid rgba(196,92,46,.22);border-left:3px solid var(--orange);font-size:12px;color:var(--muted);line-height:1.7}
+.model-warning strong{color:var(--text);font-weight:500}
 @media(max-width:760px){.ind-method{grid-template-columns:1fr 1fr}}
 @media(max-width:460px){.ind-method{grid-template-columns:1fr}.book-figure{padding:8px}}
+@media(max-width:820px){.model-role-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.evidence-compare,.model-role-grid{grid-template-columns:1fr}.book-source-frame{padding:8px}}
 
 /* ─── SECTORS ─── */
 .sec-nav-item{padding:13px 15px;border-bottom:1px solid var(--border-s);cursor:pointer;transition:.15s;border-left:3px solid transparent}
@@ -1832,16 +1858,6 @@ button,[onclick]{touch-action:manipulation}
         <div class="source-line"><span class="source-kind">Myndighetswebbinarium</span><a class="source-url" href="https://bra.se/kunskapsstod/webbinarier/arkiv/2024-03-22-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener noreferrer">https://bra.se/kunskapsstod/webbinarier/arkiv/2024-03-22-mojliggorare-for-kriminella-natverk</a></div>
       </div>
     </details>
-    <details class="edu-card">
-      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Metodgenomgång · Möjliggörare för kriminella</span><span class="edu-summary-meta">Lantero · 2025</span></summary>
-      <div class="edu-body">
-        <div class="edu-kicker">Kompletterande metodmaterial</div>
-        <div class="edu-title">Roller, åtkomst och attraktiva funktioner</div>
-        <div class="edu-meta">Lantero · webbinarium och sammanfattning</div>
-        <p>Materialet använder Brås typologi för att diskutera hur organisationer kan identifiera attraktiva funktioner, minska beroenden och bygga kontroller kring legitim åtkomst. Det är ett kommersiellt metodmaterial och ska läsas tillsammans med Brås originalrapport.</p>
-        <div class="source-line"><span class="source-kind">Metodmaterial</span><a class="source-url" href="https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella" target="_blank" rel="noopener noreferrer">https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella</a></div>
-      </div>
-    </details>
   </div>
   <div class="reveal">
     <p class="eyebrow">Modell C · Brå 2025</p>
@@ -2041,11 +2057,105 @@ button,[onclick]{touch-action:manipulation}
   <div class="theory-caveat reveal"><strong>Använd tillsammans:</strong> principal–agent visar var kontrollen brister, frontlinjeperspektivet var trycket uppstår, kollektiv handling och organisatorisk tystnad varför avvikelser består och crime proofing hur processen kan göras mindre sårbar.</div>
   <div class="op-source-row reveal"><a href="https://www.cambridge.org/core/elements/agency-theory-in-public-administration/A6E43EBD7B0206D41053EB7B14EFF700" target="_blank" rel="noopener">Principal–agent — Cambridge 2026 ↗</a><a href="https://doi.org/10.1111/j.1468-0491.2012.01604.x" target="_blank" rel="noopener">Kollektivt handlingsproblem — Persson, Rothstein &amp; Teorell 2013 ↗</a><a href="https://www.gu.se/forskning/otillaten-paverkan-i-svenska-kommuner-vilken-roll-spelar-sociala-band-roll-for-tjanstepersoners-utsatthet-och-motstandskraft" target="_blank" rel="noopener">Sociala band — Göteborgs universitet ↗</a><a href="https://doi.org/10.5465/amr.2000.3707697" target="_blank" rel="noopener">Organisatorisk tystnad — Morrison &amp; Milliken 2000 ↗</a><a href="https://bra.se/kunskapsstod/metodstod-och-verktyg/crime-proofing" target="_blank" rel="noopener noreferrer">Crime proofing — Brås aktuella metodstöd ↗</a></div>
 
+  <div class="section-sep"></div>
+  <div class="reveal" id="criminal-network-structure">
+    <p class="eyebrow">Bokens kapitel om organiserad brottslighet · Polismyndigheten 2024–2025</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Nätverkens roller och <em>personlänkar</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:18px">Rollerna beskriver funktion i den kriminella verksamheten, inte fasta personlighetstyper. Samma person kan byta roll när nätverket, brottsmarknaden eller den egna åtkomsten förändras. Figurerna nedan är hämtade ur den bifogade boken och återger Polismyndighetens lägesbild från februari 2024.</p>
+  </div>
+  <div class="evidence-compare reveal">
+    <article class="evidence-year">
+      <div class="evidence-year-k">Lägesbild 2024 · äldre mätning</div>
+      <div class="evidence-year-v">14&nbsp;000 aktiva + 48&nbsp;000 kopplade</div>
+      <div class="evidence-year-p">95 procent av de aktiva var män, medelåldern var 28 år och 13 procent var under 18 år. Rollfördelningen och personlänkarna på den här sidan kommer från denna kartläggning.</div>
+    </article>
+    <article class="evidence-year current">
+      <div class="evidence-year-k">Lägesbild 2025 · aktuell uppdatering</div>
+      <div class="evidence-year-v">17&nbsp;500 aktiva + 50&nbsp;000 kopplade</div>
+      <div class="evidence-year-p">Cirka 5 procent av de aktiva var under 18 år. Polisen betonar att metoden utvecklats och att resultaten inte är direkt jämförbara med 2024; skillnaden ska därför inte läsas som en uppmätt ökning.</div>
+    </article>
+  </div>
+  <figure class="book-source-figure reveal">
+    <div class="book-source-frame"><img src="polisen-rollfordelning-kriminella-natverk-2024.png" alt="Cirkeldiagram från Polismyndigheten som visar 14 procent strategisk roll, 38 procent utförande roll i högre skikt, 40 procent utförande roll i lägre skikt, 5 procent möjliggörare och 3 procent utan rollbeskrivning" loading="lazy"></div>
+    <figcaption><strong>Originalfigur ur boken:</strong> fördelning av rolltyper bland personer som bedömdes vara aktiva i kriminella nätverk. Källa: <a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener">Polismyndigheten, <em>Lägesbild över aktiva gängkriminella i Sverige</em>, februari 2024 ↗</a>. Figuren ska inte märkas som Brå-material.</figcaption>
+  </figure>
+  <div class="model-role-grid reveal">
+    <article class="model-role"><div class="model-role-k">14 % · omkring 2 000</div><div class="model-role-t">Strategiska aktörer</div><div class="model-role-p">Styr och leder verksamheten, samordnar större upplägg och har i 2024 års kartläggning flest registrerade personlänkar.</div></article>
+    <article class="model-role"><div class="model-role-k">38 % · omkring 5 300</div><div class="model-role-t">Utförare, högre skikt</div><div class="model-role-p">Kan liknas vid platschefer: de utför delar av brottsligheten och ser samtidigt till att andra uppgifter blir utförda.</div></article>
+    <article class="model-role"><div class="model-role-k">40 % · omkring 5 600</div><div class="model-role-t">Utförare, lägre skikt</div><div class="model-role-p">Genomför brott på uppdrag av eller med stöd från aktörer högre upp. Gruppen bar en stor del av den direkta risken.</div></article>
+    <article class="model-role"><div class="model-role-k">5 % · omkring 700</div><div class="model-role-t">Möjliggörare och specialister</div><div class="model-role-p">Tillför åtkomst eller specialistkunskap, exempelvis penningtvätt, juridik, redovisning, myndighetsinformation eller andra legala resurser.</div></article>
+  </div>
+  <figure class="book-source-figure reveal">
+    <div class="book-source-frame"><img src="polisen-personlankar-kriminella-natverk-2024.png" alt="Tabell från Polismyndigheten över genomsnittligt antal underrättelselänkar per rolltyp: strategiska aktörer 69, utförare i högre skikt 39, utförare i lägre skikt 20 samt möjliggörare och specialister 12" loading="lazy"></div>
+    <figcaption><strong>Originaltabell ur boken:</strong> genomsnittligt antal underrättelselänkar 2024. Strategiska aktörer hade i medeltal 69 registrerade länkar, varav 43 till andra aktiva i nätverk och 26 utanför. För möjliggörare och specialister var motsvarande värden 12, 6 och 6. Siffrorna är avrundade.</figcaption>
+  </figure>
+  <div class="model-warning reveal"><strong>Så ska personlänkar tolkas:</strong> de beskriver registrerade sociala eller organisatoriska relationer i underrättelseunderlaget. En länk är inte i sig bevis för gemensamt brott, ledarskap eller skuld. Kartläggningen visade samtidigt att omkring 90 procent av de aktiva var direkt eller indirekt länkade till varandra, vilket gör nätverksanalys relevant på aggregerad nivå.</div>
+  <div class="op-source-row reveal"><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener">Polisen — lägesbild 2024 ↗</a><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/regeringsuppdrag-2025-lagesbild-over-aktiva-gangkriminella-i-sverige.pdf/download/?v=5eb56aaf640ca9321c639517f753b494" target="_blank" rel="noopener">Polisen — lägesbild 2025 ↗</a><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 — möjliggörare ↗</a></div>
+
+  <div class="section-sep"></div>
+  <div class="reveal" id="cylinder-model-theory">
+    <p class="eyebrow">Polismyndigheten · lokal kriminell påverkan · metod uppdaterad 2025</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Cylindermodellen: aktörer, plats och <em>lokal påverkan</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:18px">Cylindermodellen är en av fem komponenter som Polisen använder när lokala lägesbilder tas fram. Lokalpolisområdet identifierar underrättelsemisstänkta aktörer som påverkar ett avgränsat område och placerar dem i fyra idealtypiska kategorier. Kategorierna kan överlappa och gränserna är flytande i verkligheten.</p>
+  </div>
+  <figure class="book-source-figure reveal">
+    <div class="book-source-frame"><img src="polisen-cylindermodellen-2023.jpg" alt="Polisens cylindermodell med nivåerna A strategiska aktörer, B ledande och tongivande utförare, C utförare av uppdrag och D riskgrupp för ihållande kriminalitet" loading="lazy"></div>
+    <figcaption><strong>Originalfigur ur boken:</strong> bilden återger Polisens öppna PM om cylindermodellen, diarienummer A106.068/2023. Texten på sidan har uppdaterats mot <a href="https://polisen.se/7e9df1be15500e06001fc26250d946eb/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/cylindermodell---oppen-19-25.pdf" target="_blank" rel="noopener">Polismyndighetens metodbeskrivning den 1 december 2025 ↗</a>.</figcaption>
+  </figure>
+  <div class="model-role-grid reveal">
+    <article class="model-role"><div class="model-role-k">A · strategisk nivå</div><div class="model-role-t">Tillgång till området</div><div class="model-role-p">Organiserar verksamhet, växlar mellan legal och prokriminell miljö och söker stor ekonomisk vinning med lägre egen exponering.</div></article>
+    <article class="model-role"><div class="model-role-k">B · ledande utförare</div><div class="model-role-t">Styr på plats</div><div class="model-role-p">Leder och kontrollerar kriminell verksamhet i området, upprätthåller normsystem och kan själv utföra grova brott.</div></article>
+    <article class="model-role"><div class="model-role-k">C · utförare</div><div class="model-role-t">Uppdrag och rekrytering</div><div class="model-role-p">Utför uppgifter från äldre aktörer, syns ofta i området och kan rekrytera eller använda personer ur D-kategorin.</div></article>
+    <article class="model-role"><div class="model-role-k">D · riskgrupp</div><div class="model-role-t">Mottaglig för rekrytering</div><div class="model-role-p">Yngre aktörer nära miljön som kan utföra mindre uppdrag eller vara på väg att dras in. De utgör rekryteringsbasen, inte en automatisk prognos om framtida brott.</div></article>
+  </div>
+  <div class="evidence-grid reveal">
+    <div class="evidence-stat"><div class="evidence-stat-v">≈9&nbsp;600</div><div class="evidence-stat-l">rapporterade cylinderaktörer 2025</div></div>
+    <div class="evidence-stat"><div class="evidence-stat-v">72/98</div><div class="evidence-stat-l">lokalpolisområden rapporterade cylindrar</div></div>
+    <div class="evidence-stat"><div class="evidence-stat-v">17,6 %</div><div class="evidence-stat-l">av de rapporterade var under 18 år</div></div>
+    <div class="evidence-stat"><div class="evidence-stat-v">≈21&nbsp;000</div><div class="evidence-stat-l">unika individer registrerade 2019–2025</div></div>
+  </div>
+  <div class="model-warning reveal"><strong>Avgränsning:</strong> en cylinder är inte detsamma som ett gäng och antalet cylinderaktörer ska inte jämställas med Polisens nationella antal aktiva gängkriminella. Modellen används först när ett område nått en viss nivå av lokal kriminell påverkan. Ålder, bostadsort eller social utsatthet räcker inte för registrering. Cylinderplatser är de platser där aktörerna vistas och syns; de kan påverka trygghet och normer och fungera som mötes- eller rekryteringsmiljöer.</div>
+  <div class="op-source-row reveal"><a href="https://polisen.se/7e9df1be15500e06001fc26250d946eb/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/cylindermodell---oppen-19-25.pdf" target="_blank" rel="noopener">Polisen — cylindermodellen 2025 ↗</a><a href="https://polisen.se/2ebd7ab9edf7de495cef5601f8ecbc58/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/cylinderaktorer-2019--2025-offentlig.pdf" target="_blank" rel="noopener">Polisen — cylinderaktörer 2019–2025 ↗</a><a href="https://umu.diva-portal.org/smash/get/diva2:1735332/FULLTEXT01.pdf" target="_blank" rel="noopener">Umeå universitet — studie av cylindermodellen ↗</a></div>
+
+  <div class="reveal" id="vulnerable-areas-update">
+    <p class="eyebrow">Utsatta områden · viktig uppdatering efter bokens 2023-underlag</p>
+    <h3 style="font-family:var(--fd);font-size:clamp(22px,2.6vw,32px);font-weight:300;line-height:1.1;margin-bottom:9px">Antalet ökade tekniskt — inte genom sex nya <em>problemområden</em></h3>
+    <p style="font-size:13px;color:var(--muted);max-width:780px;line-height:1.72;margin-bottom:15px">År 2023 redovisades 59 områden. År 2025 redovisas 65, varav 19 särskilt utsatta. Ökningen beror på att sju tidigare områden delats upp för högre geografisk precision. Ett område tillkom och ett togs bort. Kategorin riskområde har samtidigt tagits bort ur den nationella bedömningen.</p>
+  </div>
+  <div class="evidence-compare reveal">
+    <article class="evidence-year"><div class="evidence-year-k">2023</div><div class="evidence-year-v">59 områden · tre kategorier</div><div class="evidence-year-p">Utsatt område, riskområde och särskilt utsatt område.</div></article>
+    <article class="evidence-year current"><div class="evidence-year-k">2025</div><div class="evidence-year-v">65 områden · två kategorier</div><div class="evidence-year-p">Utsatt område och särskilt utsatt område. Polisens samlade bedömning är en svagt positiv utveckling, men med fortsatt hög stabilitet i problembilden.</div></article>
+  </div>
+  <div class="op-source-row reveal"><a href="https://polisen.se/ce52d3d6cb949b9725f5fbe25439d450/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/lagesbild-over-utsatta-omraden-2025.pdf" target="_blank" rel="noopener">Polisen — Lägesbild över utsatta områden 2025 ↗</a><a href="https://polisen.se/om-polisen/polisens-arbete/utsatta-omraden/" target="_blank" rel="noopener">Polisen — aktuell samlingssida och områdesgränser ↗</a></div>
+
   <div class="reveal" id="criminal-economy">
     <p class="eyebrow">Organiserad brottslighet · Kriminell ekonomi</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Legitima strukturer som <em>brottsverktyg</em></h2>
     <p style="font-size:14px;color:var(--muted);max-width:760px;line-height:1.75;margin-bottom:24px">Bolag, yrkeskompetens och offentliga processer kan ge tillgång, trovärdighet och möjlighet att flytta pengar. Materialet nedan används för att fråga vilka delar av den legitima infrastrukturen som en aktör behöver – och hur kontrollen kan anpassas när motståndaren ändrar metod.</p>
   </div>
+  <div class="evidence-compare reveal">
+    <article class="evidence-year"><div class="evidence-year-k">Företagskopplingar · studie publicerad 2024</div><div class="evidence-year-v">34 % av 12&nbsp;768 personer</div><div class="evidence-year-p">Rostami och Mondani fann att drygt var tredje person i studiens polisiära underlag om organiserad brottslighet hade haft ett företagsengagemang. Det är ett historiskt studieunderlag, inte en aktuell andel av alla gängkriminella 2026.</div></article>
+    <article class="evidence-year current"><div class="evidence-year-k">Kriminell ekonomi · ESO-beräkning 2026</div><div class="evidence-year-v">minst 352 mdkr i omsättning</div><div class="evidence-year-p">Brottsvinsterna beräknades till cirka 185 miljarder kronor. Omsättning och vinst är olika mått och får inte läggas ihop eller beskrivas som samma sak.</div></article>
+  </div>
+  <div class="edu-stack reveal">
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Studie · Kriminella entreprenörer</span><span class="edu-summary-meta">Rostami &amp; Mondani · 2024</span></summary>
+      <div class="edu-body"><div class="edu-kicker">Organiserad brottslighet och näringslivet</div><div class="edu-title">Företag ger fasad, kontroll och infrastruktur</div><p>Studien visar att organiserad brottslighet inte står utanför näringslivet. Företagsengagemang kan ge bankkonton, fakturering, anställningar, tillgång till upphandlingar och en legitim förklaring till pengar och tillgångar. Enskilda firmor, aktiebolag och föreningar kan användas på olika sätt beroende på behovet av flexibilitet, kontroll eller trovärdighet.</p><p>Resultatet 34 procent gäller de 12&nbsp;768 personer som ingick i studiens polisiära underlag. Det ska inte generaliseras till hela befolkningen, till alla företagare eller till Polisens senare lägesbilder utan en ny mätning.</p><div class="source-line"><span class="source-kind">Forskningsrapport</span><a class="source-url" href="https://stockholmshandelskammare.se/rapporter/rapport-kriminella-entreprenorer-en-studie-av-den-organiserade-brottslighetens-kopplingar-till-naringslivet/" target="_blank" rel="noopener noreferrer">Kriminella entreprenörer – en studie av den organiserade brottslighetens kopplingar till näringslivet</a></div></div>
+    </details>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Professionella möjliggörare och brottstjänster</span><span class="edu-summary-meta">EBM · Brå · 2024–2026</span></summary>
+      <div class="edu-body"><div class="edu-kicker">Crime as a service</div><div class="edu-title">Kompetens kan köpas, lånas eller utnyttjas</div><p>Ekobrottsmyndigheten skiljer mellan personer som genom sin yrkesroll säljer information eller tjänster, personer som aktivt bidrar till upplägget och personer som omedvetet delar kunskap som gör brottet möjligt. Brås möjliggörartypologi kompletterar detta med vägen in: personen kan vara manipulerad, upparbetad, affärsmässig eller placerad från början.</p><p>Det operativa analysobjektet är därför funktionen: vilken kunskap, behörighet, signatur, legitimitet eller kontakt behöver brottsupplägget? Yrkesgrupp eller privat stress är aldrig i sig bevis för en möjliggörarroll.</p><div class="source-line"><span class="source-kind">Myndighetsstöd</span><a class="source-url" href="https://www.ekobrottsmyndigheten.se/om-ekobrott/foretag-som-brottsverktyg/mojliggorare/" target="_blank" rel="noopener noreferrer">Ekobrottsmyndigheten — Möjliggörare</a></div><div class="source-line"><span class="source-kind">Myndighetsrapport</span><a class="source-url" href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener noreferrer">Brå 2024:2 — Möjliggörare för kriminella nätverk</a></div></div>
+    </details>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">HVB · skilj öppna belägg från underrättelseuppgifter</span><span class="edu-summary-meta">SOU 2025:84 · rapportering 2024</span></summary>
+      <div class="edu-body"><div><span class="source-status">Bekräftat i öppet offentligt underlag</span><span class="source-status reported">Journalistiskt rapporterat</span></div><div class="edu-title">Vårdplats, rekryteringsmiljö och leverantörsrisk</div><p>SOU 2025:84 och regeringens uppdragsbeskrivning bekräftar problembilden att vapen och droger förekommer vid HVB och att placerade barn och unga kan utnyttjas eller rekryteras av kriminella nätverk. Utredningen föreslog bland annat mer differentierad vård och särskilda befogenheter för att skapa en tryggare miljö.</p><p>Bokens uppgift om 18 bolag på 28 platser kommer från mediers återgivning av ett då sekretessbelagt polisiärt underrättelseunderlag. Eftersom det bakomliggande materialet inte är öppet redovisas siffran som journalistiskt rapporterad, inte som en verifierad och aktuell nationell statistikpost. Samma försiktighet gäller uppgifter om specifika klubbkopplingar bland personal.</p><div class="source-line"><span class="source-kind">Statlig utredning</span><a class="source-url" href="https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2025/06/sou-202584/" target="_blank" rel="noopener noreferrer">SOU 2025:84 — Hem för barn och unga</a></div><div class="source-line"><span class="source-kind">Medierapportering</span><a class="source-url" href="https://www.dn.se/sverige/polisen-larmar-kriminella-driver-hvb-hem/" target="_blank" rel="noopener noreferrer">Dagens Nyheter — Polisen larmar: Kriminella driver HVB-hem</a></div></div>
+    </details>
+    <details class="edu-card">
+      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">MC-miljön · hierarki, stödgrupper och nätverksallianser</span><span class="edu-summary-meta">Europol · Acta Publica 2023–2024</span></summary>
+      <div class="edu-body"><div><span class="source-status">Myndighetsanalys på EU-nivå</span><span class="source-status reported">Sekundär svensk kartläggning</span></div><div class="edu-title">Formell organisation kan samverka med lösa nätverk</div><p>Europols kartläggning av de mest hotfulla kriminella nätverken i EU visar att mer än hälften har en hierarkisk struktur med maktnivåer, arbetsdelning och intern kontroll. Outlaw motorcycle gangs nämns bland de miljöer där sådana strukturer förekommer, medan andra nätverk är mer lösa och decentraliserade. I praktiken kan formerna kopplas ihop genom supportergrupper, lokala allianser och gemensamma marknader.</p><p>Acta Publicas svenska rapporter beskriver Bandidos, Hells Angels, supporterklubbar och relationer till lokala nätverk. Uppgiften om omkring 640 sammanlagda medlemmar avser rapportens läge andra kvartalet 2024 och är en sekundär uppskattning, inte ett aktuellt officiellt medlemsregister. Medlemskap eller närvaro i en klubbmiljö bevisar inte ett specifikt brott; analysen måste knytas till dokumenterade handlingar och rättsligt läge.</p><div class="source-line"><span class="source-kind">EU-myndighet</span><a class="source-url" href="https://www.europol.europa.eu/cms/sites/default/files/documents/Europol%20report%20on%20Decoding%20the%20EU-s%20most%20threatening%20criminal%20networks.pdf" target="_blank" rel="noopener noreferrer">Europol 2024 — Decoding the EU's most threatening criminal networks</a></div><div class="source-line"><span class="source-kind">Sekundär rapport</span><a class="source-url" href="https://actapublica.se/nyheter/rapport-under-radarn/" target="_blank" rel="noopener noreferrer">Acta Publica 2023 — Under radarn</a></div><div class="source-line"><span class="source-kind">Sekundär rapport</span><a class="source-url" href="https://actapublica.se/nyheter/nulagesrapport-enprocentsmiljon-2024-kvartal-2/" target="_blank" rel="noopener noreferrer">Acta Publica 2024 — Enprocentsmiljön, kvartal 2</a></div></div>
+    </details>
+  </div>
+  <div class="op-source-row reveal"><a href="https://www.ekobrottsmyndigheten.se/om-oss/press/aktuellt/nyheter/ebms-rikard-jermsten-i-nytt-samhallsrad/" target="_blank" rel="noopener">EBM — kriminell ekonomi 2026 ↗</a><a href="https://stockholmshandelskammare.se/rapporter/rapport-kriminella-entreprenorer-en-studie-av-den-organiserade-brottslighetens-kopplingar-till-naringslivet/" target="_blank" rel="noopener">Rostami &amp; Mondani — Kriminella entreprenörer ↗</a><a href="https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2025/06/sou-202584/" target="_blank" rel="noopener">SOU 2025:84 — HVB ↗</a></div>
   <div class="edu-stack reveal">
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Video · Företag och bolag som brottsverktyg</span><span class="edu-summary-meta">Polisen/SNS · 2024–2026</span></summary>
@@ -4534,9 +4644,9 @@ function showHandle(id){
 <section class="module" id="mod-visuals">
 <div class="wrap">
   <div class="sec-head reveal">
-    <p class="eyebrow">Visuella modeller &#183; 7 grafik</p>
+    <p class="eyebrow">Visuella modeller &#183; originalfigurer och analysgrafik</p>
     <h1 class="sec-title">Analysmodeller för<br><em>otillbörlig påverkan</em></h1>
-    <p class="sec-intro">Sju interaktiva modeller gör de viktigaste sambanden lättare att se, från påverkanspyramiden och olika insidertyper till infiltrationsprocessen, roller i kriminella nätverk och rekryteringstrappan.</p>
+    <p class="sec-intro">Modellerna gör centrala samband lättare att se. Där boken innehåller en relevant originalfigur används den i första hand och skiljs tydligt från webbplatsens bearbetade analysgrafik.</p>
   </div>
 
   <!-- ── 1. PÅVERKANSPYRAMIDEN ── -->
@@ -4572,11 +4682,11 @@ function showHandle(id){
     <div style="font-family:var(--fm);font-size:8px;color:var(--dim);text-align:center">Aktualiserad mot <a href="https://polisen.se/481be867c6e3ed5c58fd8b73f3dd0c75/siteassets/dokument/organiserad_brottslighet/myndighetsgemensam-lagesbild---organiserad-brottslighet-2025.pdf" target="_blank" rel="noopener">Myndighetsgemensam lägesbild om organiserad brottslighet 2025 ↗</a></div>
 <div class="reveal" style="margin-bottom:32px">
       <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="paverkanspyramid.png" alt="Påverkanspyramiden — bearbetad visualisering" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
+        <img src="bok-paverkanspyramiden.png" alt="Påverkanspyramiden ur boken med hot och utpressning, korruption samt infiltrering" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff" loading="lazy"/>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Påverkanspyramiden — bearbetad visualisering</span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Analysmodell, aktualiserad mot <a href="https://polisen.se/481be867c6e3ed5c58fd8b73f3dd0c75/siteassets/dokument/organiserad_brottslighet/myndighetsgemensam-lagesbild---organiserad-brottslighet-2025.pdf" target="_blank" rel="noopener">MGL 2025 ↗</a></span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Originalfigur ur den bifogade boken</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Texten är aktualiserad mot <a href="https://polisen.se/481be867c6e3ed5c58fd8b73f3dd0c75/siteassets/dokument/organiserad_brottslighet/myndighetsgemensam-lagesbild---organiserad-brottslighet-2025.pdf" target="_blank" rel="noopener">MGL 2025 ↗</a></span>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin-top:20px">
@@ -4635,24 +4745,24 @@ function showHandle(id){
     </div>
     <div class="reveal" style="margin-bottom:32px">
       <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="insidertyp-matris.png" alt="Avsiktliga vs oavsiktliga insiders — bearbetad visualisering" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
+        <img src="bok-insidertyper.png" alt="Originalfigur ur boken som skiljer avsiktliga insiders från vårdslöshet, misstag och personer som lurats" style="width:100%;display:block;max-height:540px;object-fit:contain;background:#fff" loading="lazy"/>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Avsiktliga vs oavsiktliga insiders — bearbetad visualisering</span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Källa: <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener">CPNI:s insiderstudie ↗</a>, adapterad</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Originalfigur ur den bifogade boken</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Typologin jämförs med <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener">CPNI:s insiderstudie ↗</a></span>
       </div>
     </div>
 <div class="reveal" style="margin-bottom:32px">
       <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="avsiktliga-insiders-diagram.png" alt="Avsiktliga insiders — sex underkategorier" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
+        <img src="bok-avsiktliga-insiders.png" alt="Originalfigur ur boken över sex former av avsiktliga insiderhot" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff" loading="lazy"/>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Avsiktliga insiders — sex underkategorier</span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Bearbetad visualisering</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Avsiktliga insiders — originalfigur ur boken</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Spioneri · IT-hot · informationsläckage · sabotage · bedrägeri · våld</span>
       </div>
     </div>
 <div style="padding:10px 16px;background:var(--bg-card);border:1px solid var(--border-s);font-family:var(--fm);font-size:8px;color:var(--dim)">
-      Källor: <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener">CPNI:s insiderstudie ↗</a> och <a href="https://ponemonsullivanreport.com/2023/10/cost-of-insider-risks-global-report-2023/" target="_blank" rel="noopener">Ponemon Institute 2023 ↗</a>. Bearbetad visualisering.
+      Figurer: den bifogade boken. Jämförande källor: <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener">CPNI:s insiderstudie ↗</a> och <a href="https://ponemonsullivanreport.com/2023/10/cost-of-insider-risks-global-report-2023/" target="_blank" rel="noopener">Ponemon Institute 2023 ↗</a>.
     </div>
   </div>
 
@@ -4745,11 +4855,11 @@ function showHandle(id){
     <div style="font-family:var(--fm);font-size:8px;color:var(--dim);text-align:center;margin-bottom:16px">Bearbetad processvisualisering — infiltrationsprocessen ur antagonistens perspektiv</div>
 <div class="reveal" style="margin-bottom:32px">
       <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="infiltrationsprocessen.png" alt="Infiltrationsprocessen — bearbetad visualisering" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
+        <img src="bok-infiltrationsprocessen.png" alt="Originalfigur ur boken över infiltrationsprocessen ur antagonistens och den infiltrerade verksamhetens perspektiv" style="width:100%;display:block;max-height:620px;object-fit:contain;background:#fff" loading="lazy"/>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Infiltrationsprocessen — bearbetad visualisering</span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Bearbetad visualisering</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Infiltrationsprocessen — originalfigur ur boken</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Antagonist · bakgrundskontroll · åtkomst · kontrollfunktion</span>
       </div>
     </div>
     <div style="padding:14px 18px;background:var(--bg-card);border:1px solid var(--border-s);border-left:2px solid var(--orange);font-size:12px;color:var(--muted);line-height:1.65">
@@ -4759,142 +4869,48 @@ function showHandle(id){
 
   <!-- ── 4. ROLLTYPER I KRIMINELLA NÄTVERK ── -->
   <div class="reveal" style="margin-bottom:56px">
-    <p class="eyebrow"><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 ↗</a> &#183; Rollfördelning i kriminella nätverk</p>
-    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Möjliggöraren: <em>5% av nätverket</em></h2>
-    <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Polismyndighetens kartläggning av personer som bedöms vara aktiva i kriminella nätverk visar att möjliggörare utgör bara 5% av det totala antalet. Men de spelar en helt avgörande roll för nätverkets operativa förmåga — de ger tillgång som inte kan köpas eller tvångas fram på annat sätt.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center">
-      <!-- Pie chart SVG -->
-      <div style="display:flex;justify-content:center">
-      <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;width:100%">
-        <!-- Pie segments - approximated by angles -->
-        <!-- Strategisk roll 14% = 50.4deg -->
-        <!-- Utförande högre 38% = 136.8deg -->
-        <!-- Utförande lägre 40% = 144deg -->
-        <!-- Möjliggörare 5% = 18deg -->
-        <!-- Saknas 3% = 10.8deg -->
-
-        <!-- Center -->
-        <!-- Strategisk 14%: 0 to 50.4 deg -->
-        <path d="M140,140 L140,40 A100,100 0 0,1 189,55 Z" fill="#4472C4"/>
-        <!-- Utförande högre 38%: 50.4 to 187.2 -->
-        <path d="M140,140 L189,55 A100,100 0 0,1 77,234 Z" fill="#9DC3E6"/>
-        <!-- Utförande lägre 40%: 187.2 to 331.2 -->
-        <path d="M140,140 L77,234 A100,100 0 0,1 236,99 Z" fill="#F4B942"/>
-        <!-- Möjliggörare 5%: 331.2 to 349.2 -->
-        <path d="M140,140 L236,99 A100,100 0 0,1 232,82 Z" fill="#767171"/>
-        <!-- Saknas 3%: 349.2 to 360 -->
-        <path d="M140,140 L232,82 A100,100 0 0,1 140,40 Z" fill="#FFC000"/>
-
-        <!-- White center circle -->
-        <circle cx="140" cy="140" r="50" fill="#0E1E38"/>
-        <text x="140" y="133" text-anchor="middle" font-family="IBM Plex Sans,system-ui" font-size="13" font-weight="600" fill="#B8973A">5%</text>
-        <text x="140" y="150" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8" fill="#8A9AB0">Möjliggörare</text>
-      </svg>
-      </div>
-      <!-- Legend -->
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="width:14px;height:14px;border-radius:2px;background:#4472C4;flex-shrink:0"></div>
-          <div>
-            <div style="font-size:13px;color:var(--text);font-weight:500">14% — Strategisk roll</div>
-            <div style="font-family:var(--fm);font-size:9px;color:var(--muted)">Ledare, organisatörer, beslutsfattare</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="width:14px;height:14px;border-radius:2px;background:#9DC3E6;flex-shrink:0"></div>
-          <div>
-            <div style="font-size:13px;color:var(--text);font-weight:500">38% — Utförande roll, högre skikt</div>
-            <div style="font-family:var(--fm);font-size:9px;color:var(--muted)">Mellanchefer, betrodda utförare</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="width:14px;height:14px;border-radius:2px;background:#F4B942;flex-shrink:0"></div>
-          <div>
-            <div style="font-size:13px;color:var(--text);font-weight:500">40% — Utförande roll, lägre skikt</div>
-            <div style="font-family:var(--fm);font-size:9px;color:var(--muted)">Kurirer, "doers", riskbärare</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="width:14px;height:14px;border-radius:2px;background:#767171;flex-shrink:0"></div>
-          <div>
-            <div style="font-size:13px;color:var(--text);font-weight:500">5% — Möjliggörare</div>
-            <div style="font-family:var(--fm);font-size:9px;color:var(--muted)">Insiders i offentlig eller privat sektor</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="width:14px;height:14px;border-radius:2px;background:#FFC000;flex-shrink:0"></div>
-          <div>
-            <div style="font-size:13px;color:var(--text);font-weight:500">3% — Rollbeskrivning saknas</div>
-            <div style="font-family:var(--fm);font-size:9px;color:var(--muted)">Oklassificerade i kartläggningen</div>
-          </div>
-        </div>
-        <div style="margin-top:8px;padding:10px 12px;background:var(--bg-card);border:1px solid var(--border-s);font-size:11px;color:var(--muted);line-height:1.6">
-          Brå beskriver möjliggörare som ett skydd och en konkurrensfördel för nätverket. Polismyndighetens nationella lägesbild 2024 identifierade 680 möjliggörare med strategisk eller samhällsviktig position. En möjliggörare kan betjäna flera nätverk.
-        </div>
-      </div>
+    <p class="eyebrow">Polismyndigheten 2024 &#183; originalfigurer ur boken</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Rolltyper och <em>personlänkar</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:760px;line-height:1.75;margin-bottom:24px">Kartläggningen från 2024 delade in de personer som då bedömdes vara aktiva i kriminella nätverk efter funktion. Figurerna visar en aggregerad lägesbild, inte fasta personlighetstyper eller en modell som kan användas för att profilera enskilda.</p>
+    <figure class="book-source-figure">
+      <div class="book-source-frame"><img src="polisen-rollfordelning-kriminella-natverk-2024.png" alt="Polismyndighetens cirkeldiagram över rollfördelningen bland aktiva i kriminella nätverk 2024" loading="lazy"></div>
+      <figcaption><strong>Originalfigur ur boken:</strong> 14 procent strategisk roll, 38 procent utförande roll i högre skikt, 40 procent utförande roll i lägre skikt, 5 procent möjliggörare och specialister samt 3 procent utan rollbeskrivning. Källa: <a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener noreferrer">Polismyndigheten 2024 ↗</a>.</figcaption>
+    </figure>
+    <div class="model-role-grid">
+      <article class="model-role"><strong>Strategiska aktörer</strong><span>14 procent · omkring 2&nbsp;000 personer</span><p>Styrning, kontakter och strategiska beslut. Hade flest registrerade personlänkar i underlaget.</p></article>
+      <article class="model-role"><strong>Utförare, högre skikt</strong><span>38 procent · omkring 5&nbsp;300</span><p>Omsätter strategiska beslut i operativ verksamhet och kan samordna andra utförare.</p></article>
+      <article class="model-role"><strong>Utförare, lägre skikt</strong><span>40 procent · omkring 5&nbsp;600</span><p>Genomför brottsliga uppdrag och var i genomsnitt yngre än övriga roller.</p></article>
+      <article class="model-role"><strong>Möjliggörare och specialister</strong><span>5 procent · omkring 700</span><p>Tillför exempelvis ekonomi, juridik, företag, information, åtkomst eller annan specialistkompetens.</p></article>
     </div>
-    <div class="reveal" style="margin-bottom:32px">
-      <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="rolltyper-kriminella-natverk.png" alt="Rolltyper i kriminella nätverk — Brå 2024" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Rolltyper i kriminella nätverk — <a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 ↗</a></span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Källa: <a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 ↗</a></span>
-      </div>
-    </div>
-<div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-top:12px">Källa: <a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 — Möjliggörare för kriminella nätverk ↗</a></div>
+    <figure class="book-source-figure">
+      <div class="book-source-frame"><img src="polisen-personlankar-kriminella-natverk-2024.png" alt="Polismyndighetens tabell över genomsnittligt antal personlänkar för fyra rolltyper i kriminella nätverk 2024" loading="lazy"></div>
+      <figcaption><strong>Originalfigur ur boken:</strong> strategiska aktörer hade i genomsnitt 69 registrerade länkar, utförare i högre skikt 39, utförare i lägre skikt 20 och möjliggörare eller specialister 12. Källa: <a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener noreferrer">Polismyndigheten 2024 ↗</a>.</figcaption>
+    </figure>
+    <div class="model-warning"><strong>Tolka länkar försiktigt:</strong> en registrerad personlänk beskriver en relation i underrättelseunderlaget. Den bevisar inte i sig gemensamt brott, ledarskap eller skuld. Polisen ändrade dessutom metoden till 2025 års lägesbild, vilket gör nivåerna 2024 och 2025 olämpliga för en enkel trendjämförelse.</div>
+    <div class="op-source-row"><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/lagesbild-over-aktiva-gangkriminella-i-sverige-.pdf/download/?v=f8edd8d100b188a6937b44efc91a30ea" target="_blank" rel="noopener noreferrer">Polismyndigheten — lägesbild 2024 ↗</a><a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/regeringsuppdrag-2025-lagesbild-over-aktiva-gangkriminella-i-sverige.pdf/download/?v=5eb56aaf640ca9321c639517f753b494" target="_blank" rel="noopener noreferrer">Polismyndigheten — lägesbild 2025 ↗</a><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener noreferrer">Brå — möjliggörare 2024 ↗</a></div>
   </div>
 
-  <!-- ── 5. REKRYTERINGSTRAPPAN ── -->
+  <!-- ── 5. CYLINDERMODELLEN ── -->
   <div class="reveal" style="margin-bottom:56px">
-    <p class="eyebrow">Polismyndigheten &#183; Rekryteringsmodell</p>
-    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Rekrytering till <em>kriminella nätverk</em></h2>
-    <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Kriminella nätverk rekryterar möjliggörare ur en befintlig social miljö. Trappan visar hur individer rör sig från riskgrupp till strategisk förmåga — och att möjliggörare kan rekryteras på vilken nivå som helst, inklusive bland dem som aldrig synts i brottsregistret.</p>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--border-s);margin-bottom:16px">
-      <div style="background:var(--bg-card);padding:16px 12px;text-align:center;border-bottom:3px solid #4A7B6F">
-        <div style="font-family:var(--fd);font-size:28px;font-weight:300;color:#4A7B6F;line-height:1">30+</div>
-        <div style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:#4A7B6F;margin:4px 0">Äldre</div>
-        <div style="font-size:10px;color:var(--muted);line-height:1.5">Strategisk förmåga. Möjliggörare med djupa kontakter. Lång exponering borta från miljön.</div>
-      </div>
-      <div style="background:var(--bg-card);padding:16px 12px;text-align:center;border-bottom:3px solid var(--accent)">
-        <div style="font-family:var(--fd);font-size:28px;font-weight:300;color:var(--accent);line-height:1">26–30</div>
-        <div style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:4px 0">Tongivande</div>
-        <div style="font-size:10px;color:var(--muted);line-height:1.5">Möjliga avhoppare. Påverkar yngre rekryter och normbildar i nätverket.</div>
-      </div>
-      <div style="background:var(--bg-card);padding:16px 12px;text-align:center;border-bottom:3px solid #C45C2E">
-        <div style="font-family:var(--fd);font-size:28px;font-weight:300;color:#C45C2E;line-height:1">18–25</div>
-        <div style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:#C45C2E;margin:4px 0">Kriminellt beteende</div>
-        <div style="font-size:10px;color:var(--muted);line-height:1.5">"Doers" med högt risktagande. Bevakar och hanterar kriminella intressen. Livstids­fängelse möjligt.</div>
-      </div>
-      <div style="background:var(--bg-card);padding:16px 12px;text-align:center;border-bottom:3px solid var(--orange)">
-        <div style="font-family:var(--fd);font-size:28px;font-weight:300;color:var(--orange);line-height:1">15–17</div>
-        <div style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:4px 0">Problembeteende</div>
-        <div style="font-size:10px;color:var(--muted);line-height:1.5">Straffmyndiga. Ungdomsvård. Tilltagande integration i nätverket och dess normer.</div>
-      </div>
-      <div style="background:var(--bg-card);padding:16px 12px;text-align:center;border-bottom:3px solid #9B4FBB">
-        <div style="font-family:var(--fd);font-size:28px;font-weight:300;color:#9B4FBB;line-height:1">12–14</div>
-        <div style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:#9B4FBB;margin:4px 0">Normbrytande</div>
-        <div style="font-size:10px;color:var(--muted);line-height:1.5">Stenkastning, fritagning, missbruk. Ägarmentalitet i boendemiljön.</div>
-      </div>
-      <div style="background:var(--bg-card);padding:16px 12px;text-align:center;border-bottom:3px solid var(--muted)">
-        <div style="font-family:var(--fd);font-size:28px;font-weight:300;color:var(--muted);line-height:1">7–12</div>
-        <div style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:4px 0">Riskgrupp</div>
-        <div style="font-size:10px;color:var(--muted);line-height:1.5">Hög exponering i boendemiljön. Normbrytande beteenden. Skadegörelse.</div>
-      </div>
+    <p class="eyebrow">Polismyndigheten &#183; lokal lägesbild och områdespåverkan</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Cylinder<em>modellen</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:760px;line-height:1.75;margin-bottom:24px">Cylindermodellen används av lokalpolisområden för att kartlägga aktörer som genom koppling till organiserad brottslighet påverkar ett avgränsat område. A–D är idealtypiska kategorier och kan överlappa. Modellen omfattar även cylinderplatser: platser där aktörerna vistas, syns och kan påverka trygghet, normer eller rekryteringsmiljö.</p>
+    <figure class="book-source-figure">
+      <div class="book-source-frame"><img src="polisen-cylindermodellen-2023.jpg" alt="Polismyndighetens cylindermodell med kategorierna A till D, beteendenivåer och åldersintervall" loading="lazy"></div>
+      <figcaption><strong>Originalfigur ur boken:</strong> modellen återges från Polisens PM om Cylindermodellen, diarienummer A106.068/2023. Den aktuella öppna metodinformationen är uppdaterad 2025 och länkas nedan.</figcaption>
+    </figure>
+    <div class="model-role-grid">
+      <article class="model-role"><strong>A · äldre kriminella</strong><span>Strategisk förmåga och stark lokal förankring</span><p>Kan styra, möjliggöra eller påverka den kriminella marknaden och andra aktörer i området.</p></article>
+      <article class="model-role"><strong>B · kriminella aktörer</strong><span>Bevakar och hanterar kriminella intressen</span><p>Kan kopplas till exempelvis narkotikaförsäljning, våld, hot, utpressning eller annan organiserad brottslighet.</p></article>
+      <article class="model-role"><strong>C · utåtagerande</strong><span>Efterliknar den kriminella miljöns normer</span><p>Visar problembeteenden och kan utföra uppgifter åt mer etablerade aktörer.</p></article>
+      <article class="model-role"><strong>D · riskgrupp</strong><span>Hög exponering i boendemiljön</span><p>Har normbrytande beteenden och befinner sig nära den etablerade kriminella miljön.</p></article>
     </div>
-    <div style="padding:14px 18px;background:var(--bg-card);border:1px solid var(--border-s);border-left:2px solid var(--accent-d);font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:8px">
-      <strong style="color:var(--text)">Viktigt för offentlig sektor:</strong> Möjliggörare rekryteras ur alla nivåer i trappan — inklusive ur individer som aldrig synts i brottsstatistiken (riskgruppen och normbrytande). De befintliga familjekopplingarna till nätverket är rekryteringsvägen, inte den egna kriminella belastningen. <a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå (2024) ↗</a>: "Man identifierar familjemedlemmar och bekanta med för dem användbara anställningar."
+    <div class="model-warning"><strong>Inte en rekryteringstrappa eller prognos:</strong> figuren ska inte läsas som att alla rör sig stegvis uppåt eller att ålder och social utsatthet förutsäger kriminalitet. Cylinderaktörer registreras utifrån underrättelseuppgifter och kvalificerande brottsmisstanke. Antalet ska inte jämställas med Polisens nationella antal aktiva gängkriminella.</div>
+    <div class="evidence-compare">
+      <article class="evidence-year"><div class="evidence-year-k">Aktuell omfattning 2025</div><div class="evidence-year-v">cirka 9&nbsp;600 cylinderaktörer</div><div class="evidence-year-p">72 av 98 lokalpolisområden hade cylindrar. Omkring 17,6 procent av registreringarna gällde personer under 18 år och 2,3 procent personer under 15 år.</div></article>
+      <article class="evidence-year current"><div class="evidence-year-k">Analysfråga</div><div class="evidence-year-v">aktör + plats + lokal påverkan</div><div class="evidence-year-p">Använd modellen för att förstå synlighet, relationer och territoriell påverkan. Komplettera alltid med skydds- och riskfaktorer på individ-, familje-, skol- och områdesnivå.</div></article>
     </div>
-    <div class="reveal" style="margin-bottom:32px">
-      <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="rekryteringstrappan.png" alt="Rekryteringstrappan — kriminella nätverk" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">Rekryteringstrappan — kriminella nätverk</span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Källa: <a href="https://polisen.se/om-polisen/polisens-arbete/organiserad-brottslighet/myndighetsgemensam-satsning-mot-organiserad-brottslighet/" target="_blank" rel="noopener">Polismyndighetens lägesbild ↗</a>, adapterad</span>
-      </div>
-    </div>
-<div style="font-family:var(--fm);font-size:8px;color:var(--dim)">Källa: <a href="https://polisen.se/om-polisen/polisens-arbete/organiserad-brottslighet/myndighetsgemensam-satsning-mot-organiserad-brottslighet/" target="_blank" rel="noopener">Polismyndighetens lägesbild ↗</a>; adapterad visualisering</div>
+    <div class="op-source-row"><a href="https://polisen.se/7e9df1be15500e06001fc26250d946eb/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/cylindermodell---oppen-19-25.pdf" target="_blank" rel="noopener noreferrer">Polisen — Cylindermodellen 2025 ↗</a><a href="https://polisen.se/2ebd7ab9edf7de495cef5601f8ecbc58/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/cylinderaktorer-2019--2025-offentlig.pdf" target="_blank" rel="noopener noreferrer">Polisen — Cylinderaktörer 2019–2025 ↗</a><a href="https://umu.diva-portal.org/smash/get/diva2:1735332/FULLTEXT01.pdf" target="_blank" rel="noopener noreferrer">Umeå universitet — studie av modellen ↗</a></div>
   </div>
 
   <!-- ── 6. ERRC-MATRISEN ── -->
@@ -4926,11 +4942,11 @@ function showHandle(id){
     </div>
     <div class="reveal" style="margin-bottom:32px">
       <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:4px">
-        <img src="errc-matris.png" alt="ERRC-matris — bearbetad visualisering" style="width:100%;display:block;max-height:480px;object-fit:contain;background:#fff"/>
+        <img src="bok-errc-insiderhot.png" alt="Originalfigur ur boken med ERRC-matrisens ta bort, minska, öka och skapa för insiderhothantering" style="width:100%;display:block;max-height:680px;object-fit:contain;background:#fff" loading="lazy"/>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 10px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none">
-        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">ERRC-matris — bearbetad visualisering</span>
-        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Källa: <a href="https://www.blueoceanstrategy.com/tools/errc-grid/" target="_blank" rel="noopener">Blue Ocean Strategy — ERRC Grid ↗</a></span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--muted)">ERRC-matris för insiderhot — originalfigur ur boken</span>
+        <span style="font-family:var(--fm);font-size:8px;color:var(--dim)">Metodgrund: <a href="https://www.blueoceanstrategy.com/tools/errc-grid/" target="_blank" rel="noopener">Blue Ocean Strategy — ERRC Grid ↗</a></span>
       </div>
     </div>
 <div style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-top:8px">Källa: <a href="https://www.blueoceanstrategy.com/tools/errc-grid/" target="_blank" rel="noopener">Blue Ocean Strategy — ERRC Grid ↗</a>; tillämpad på insiderhothantering</div>
@@ -5644,7 +5660,7 @@ function showHandle(id){
       <a href="https://svenska.yle.fi/a/7-10042777" target="_blank" rel="noopener" title="Yle Utrikes Svenska gäng infiltrerar hälsovården och företag- liknas vid italienska maffian. https://svenska.yle.fi/a/7-10042777" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">📰</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Yle Utrikes Svenska gäng infiltrerar hälsovården och företag- liknas vid italienska maffian. https://svenska.yle.fi/a/7-10042777</span></a>
       <a href="https://polisen.se/siteassets/dokument/regeringsuppdrag/regeringsuppdrag-2025-lagesbild-over-aktiva-gangkriminella-i-sverige.pdf/download/?v=5eb56aaf640ca9321c639517f753b494" target="_blank" rel="noopener" title="Polismyndigheten — Lägesbild över aktiva gängkriminella i Sverige 2025" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Polismyndigheten — Lägesbild över aktiva gängkriminella i Sverige 2025.</span></a>
       <a href="https://polisen.se/siteassets/dokument/ovriga_rapporter/utsatta-omraden/lagesbild-over-utsatta-omraden-2023.pdf/download/" target="_blank" rel="noopener" title="Polisen Lägesbild över utsatta områden 2023. https://polisen.se/siteassets/dokument/ovriga_rapporter/utsatta-omraden/lagesbild-over-utsatta-omraden-2023.pdf/download/" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">📋</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Polisen Lägesbild över utsatta områden 2023. https://polisen.se/siteassets/dokument/ovriga_rapporter/utsatta-omraden/lagesbild-over-utsatta-omraden-20…</span></a>
-      <a href="https://polisen.se/siteassets/dokument/informationsmaterial/cylindermodell---oppen-19-23.pdf" target="_blank" rel="noopener" title="Polisen Cylindermodellen- Information. https://polisen.se/siteassets/dokument/informationsmaterial/cylindermodell---oppen-19-23.pdf" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Polisen Cylindermodellen- Information. https://polisen.se/siteassets/dokument/informationsmaterial/cylindermodell---oppen-19-23.pdf</span></a>
+      <a href="https://polisen.se/7e9df1be15500e06001fc26250d946eb/siteassets/dokument/organiserad_brottslighet/utsatta-omraden/cylindermodell---oppen-19-25.pdf" target="_blank" rel="noopener" title="Polismyndigheten. Cylindermodellen – öppen information 2025." style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Polismyndigheten (2025). Cylindermodellen – öppen information.</span></a>
       <a href="https://umu.diva-portal.org/smash/get/diva2:1735332/FULLTEXT01.pdf" target="_blank" rel="noopener" title="Kandidatuppsats om cylindermodellen, Vilka orsakar problemen Umeå Universitet. https://umu.diva-portal.org/smash/get/diva2:1735332/FULLTEXT01.pdf" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">📚</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Kandidatuppsats om cylindermodellen, Vilka orsakar problemen Umeå Universitet. https://umu.diva-portal.org/smash/get/diva2:1735332/FULLTEXT01.pdf</span></a>
       <a href="https://polisen.se/aktuellt/nyheter/stockholm/2023/november/kartlaggning-av-oppna-drogscener-2023/" target="_blank" rel="noopener" title="Kartläggning av öppna drogscener i Stockholms län 2023. https://polisen.se/aktuellt/nyheter/stockholm/2023/november/kartlaggning-av-oppna-drogscener-2023/" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">🏛</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Kartläggning av öppna drogscener i Stockholms län 2023. https://polisen.se/aktuellt/nyheter/stockholm/2023/november/kartlaggning-av-oppna-drogscener-2…</span></a>
       <a href="https://actapublica.se/nyheter/arsrapport-2023-natverkskriminaliteten-i-sverige/" target="_blank" rel="noopener" title="Acta Publica. (2023). Årsrapport 2023: Nätverkskriminaliteten i Sverige. Stockholm: Acta Publica. 21. https://actapublica.se/nyheter/arsrapport-2023-natverkskriminaliteten-i-sverige/" style="display:flex;align-items:flex-start;gap:10px;padding:7px 10px;text-decoration:none;border:1px solid transparent;border-radius:2px;transition:.15s" onmouseover="this.style.borderColor='#7A2E2E30';this.style.background='var(--bg-card)'" onmouseout="this.style.borderColor='transparent';this.style.background='transparent'"><span style="font-size:11px;margin-top:1px;flex-shrink:0">📋</span><span style="font-family:var(--fm);font-size:12px;color:var(--text);line-height:1.5">Acta Publica. (2023). Årsrapport 2023: Nätverkskriminaliteten i Sverige. Stockholm: Acta Publica. 21. https://actapublica.se/nyheter/arsrapport-2023-n…</span></a>
@@ -6147,10 +6163,6 @@ function showHandle(id){
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Utbildning och stöd · Kompassen</span><span class="edu-summary-meta">SKR · uppdaterad 2026</span></summary>
       <div class="edu-body"><div class="edu-kicker">Kommuner och regioner</div><div class="edu-title">Kompassen – med utbildning och stödmaterial</div><div class="edu-meta">Sveriges Kommuner och Regioner · uppdaterad 12 januari 2026</div><p>Utbildning och stöd för det kommungemensamma arbetet mot välfärdsbrottslighet, med material om otillåten påverkan, medarbetare, arbetsgivare och förtroendevalda.</p><div class="edu-links"><a class="edu-link primary" href="https://skr.se/valfardsbrottslighet/kompassenmedutbildningochstodmaterial.9072.html" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
-    </details>
-    <details class="edu-card">
-      <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Metod · Kartlägg processer och attraktiva funktioner</span><span class="edu-summary-meta">Lantero · 2025</span></summary>
-      <div class="edu-body"><div class="edu-kicker">Processkartläggning och crime proofing</div><div class="edu-title">Gör exponeringen synlig innan kontrollen väljs</div><p>Kartlägg först värde, data, beslut, externa beroenden och ensambefogenheter. Markera sedan var en manipulerad, upparbetad, affärsmässig eller placerad möjliggörare skulle behöva befinna sig och pröva hur kontrollen kan kringgås.</p><div class="source-line"><span class="source-kind">Möjliggörare · metodmaterial</span><a class="source-url" href="https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella" target="_blank" rel="noopener noreferrer">https://www.lantero.se/blog/webinarium-om-moejliggoerare-foer-kriminella</a></div></div>
     </details>
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Datastandard · IIDES för insiderincidenter</span><span class="edu-summary-meta">Carnegie Mellon SEI</span></summary>
