@@ -1034,23 +1034,43 @@ html:not(.js-ready) .theory-subnav{display:none}
 /* Mobil: valkort fungerar som dragspel och visar svaret direkt under valt kort. */
 @media(max-width:820px){
   #mod-sectors [style*="grid-template-columns:200px"]{grid-template-columns:1fr!important}
-  #mod-sectors .sec-nav-item,#actorGrid .ac,.legal-rung{position:relative;padding-right:46px}
-  #mod-sectors .sec-nav-item::after,#actorGrid .ac::after,.legal-rung::after{
+  #mod-sectors .sec-nav-item,#actorGrid .ac,.legal-rung,.cni,.ani,.theory-subtab,.handle-sub,
+  .ip-vec-tab,.ip-mech,.brop-step,.check-tab,.ca-card{position:relative;padding-right:46px}
+  #mod-sectors .sec-nav-item::after,#actorGrid .ac::after,.legal-rung::after,.cni::after,.ani::after,
+  .theory-subtab::after,.handle-sub::after,.ip-vec-tab::after,.ip-mech::after,.brop-step::after,
+  .check-tab::after,.ca-card::after{
     content:'+';position:absolute;right:17px;top:50%;transform:translateY(-50%);
     font-family:var(--fm);font-size:18px;font-weight:300;color:var(--accent);line-height:1
   }
-  #mod-sectors .sec-nav-item.active::after,#actorGrid .ac.sel::after,.legal-rung.active::after{content:'−'}
+  #mod-sectors .sec-nav-item.active::after,#actorGrid .ac.sel::after,.legal-rung.active::after,
+  .cni.active::after,.ani.active::after,.theory-subtab[aria-selected="true"]::after,.handle-sub.active::after,
+  .ip-vec-tab.active::after,.ip-mech.active::after,.brop-step.active::after,.check-tab.active::after,.ca-card.active::after{content:'−'}
   #sectorPanelWrap{display:none!important}
+  .mobile-collapsed{display:none!important}
   #mod-sectors .sector-panel.mobile-inline-detail,
   #actorGrid .actor-detail.mobile-inline-detail,
-  .legal-ladder .legal-panel.mobile-inline-detail{
+  .legal-ladder .legal-panel.mobile-inline-detail,
+  #chainNav .chain-panel-col.mobile-inline-detail,
+  #assessNav .assess-panel-col.mobile-inline-detail,
+  #theory-submenu .theory-panel.mobile-inline-detail,
+  #handleSubNav .handle-panel.mobile-inline-detail,
+  #ipVecTabs .ip-vec-panel.mobile-inline-detail,
+  #ipMechGrid .ip-mech-detail.mobile-inline-detail,
+  #bropFlow .brop-detail.mobile-inline-detail,
+  #checkTabs .check-panel.mobile-inline-detail,
+  #cultActions .cult-action-detail.mobile-inline-detail{
     width:100%;box-sizing:border-box;background:var(--bg-mid);border:0;border-left:3px solid var(--accent);
     border-bottom:1px solid var(--border);padding:20px 16px;margin:0;animation:mobileDetailIn .18s ease-out
   }
-  #actorGrid .actor-detail.mobile-inline-detail{grid-column:1/-1}
+  #actorGrid .actor-detail.mobile-inline-detail,#theory-submenu .theory-panel.mobile-inline-detail,
+  #handleSubNav .handle-panel.mobile-inline-detail,#ipVecTabs .ip-vec-panel.mobile-inline-detail,
+  #ipMechGrid .ip-mech-detail.mobile-inline-detail,#bropFlow .brop-detail.mobile-inline-detail,
+  #checkTabs .check-panel.mobile-inline-detail,#cultActions .cult-action-detail.mobile-inline-detail{grid-column:1/-1}
   .legal-panel.mobile-collapsed{display:none}
   .legal-ladder .legal-panel.mobile-inline-detail.open{display:block;min-height:0}
-  #mod-sectors .sec-nav-item:focus-visible,#actorGrid .ac:focus-visible,.legal-rung:focus-visible{
+  #mod-sectors .sec-nav-item:focus-visible,#actorGrid .ac:focus-visible,.legal-rung:focus-visible,
+  .cni:focus-visible,.ani:focus-visible,.theory-subtab:focus-visible,.handle-sub:focus-visible,
+  .ip-vec-tab:focus-visible,.ip-mech:focus-visible,.brop-step:focus-visible,.check-tab:focus-visible,.ca-card:focus-visible{
     outline:2px solid var(--accent);outline-offset:-2px
   }
 }
@@ -1061,6 +1081,53 @@ html:not(.js-ready) .theory-subnav{display:none}
   #globalSearchInput:focus{width:132px}
   #handleSubNav{grid-template-columns:1fr}
   .theory-grid-4{grid-template-columns:1fr}
+}
+
+/* Mobil yta: större läsbarhet, säkra radbrytningar och mer app-liknande kort. */
+@media(max-width:600px){
+  body{font-size:16px;line-height:1.7}
+  .module,.wrap,.sec-head,.edu-body,.mobile-inline-detail{min-width:0;max-width:100%}
+  a,p,li,.sec-title,.sec-intro,.edu-summary-title,.source-url{overflow-wrap:anywhere;word-break:normal}
+  .nav-inner{padding:0 10px;gap:7px}
+  .nav-brand{gap:6px;min-width:0}
+  .nav-name{font-size:17px}
+  .nav-ser{font-size:8px;letter-spacing:.13em}
+  #globalSearchInput,#globalSearchInput:focus{width:min(28vw,118px);font-size:16px;padding-left:11px}
+  .sec-title{font-size:clamp(34px,10.5vw,44px);line-height:1.02;hyphens:auto}
+  .sec-intro{font-size:16px;line-height:1.72}
+  .edu-summary-title{font-size:12px;line-height:1.55;letter-spacing:.04em}
+  .edu-summary-meta{font-size:10px}
+  .eyebrow,.interaction-guide-label,.edu-kicker,.edu-meta,.source-kind,.ad-sec-lbl,.cpp-lbl,
+  .cp-step-lbl,.lp-key,.lp-cases-label,.ip-subhead,.ipp-col-label,.ipp-cases-label,.ip-mech-tag,
+  .brop-step-name,.bd-key,.bt-side-label,.bt-center-label,.bt-barr-label,.check-tab-prog,.ca-tag,
+  .cad-steps-label,.cult-eyebrow,.cr-num,.aq-sec,.aq-ct,.handle-sub{font-size:10px;letter-spacing:.08em}
+  .cni-title,.ani-t,.cpp-txt,.lp-val,.ipp-list-item,.ipmd-body,.ipmd-ex,.bd-val,.bt-item,
+  .bt-barr-text,.check-item-text,.cr-text,.cad-body,.cad-step,.cc-side-text{font-size:14px;line-height:1.65}
+  .cni-lbl,.legal-rung-tier,.legal-rung-law,.ip-vec-target{font-size:9px}
+  .theory-subnav,#handleSubNav,.ip-vec-tabs,.ip-mech-grid,.brop-flow,.check-tabs,.cult-actions{grid-template-columns:1fr!important}
+  .theory-return{display:none}
+  #handle-process [style*="grid-template-columns:auto 1fr 1fr"]{grid-template-columns:52px minmax(0,1fr)!important}
+  #handle-process [style*="grid-template-columns:auto 1fr 1fr"]>div:nth-child(1){grid-row:1/span 2;padding:14px 8px!important;min-width:0!important}
+  #handle-process [style*="grid-template-columns:auto 1fr 1fr"]>div:nth-child(2){grid-column:2;padding:16px!important}
+  #handle-process [style*="grid-template-columns:auto 1fr 1fr"]>div:nth-child(3){grid-column:2;padding:14px 16px!important;border-left:0!important;border-top:1px solid var(--border-s)}
+  .mobile-process-step{cursor:pointer}
+  .mobile-process-step .mobile-process-main{position:relative;padding-right:42px!important}
+  .mobile-process-step .mobile-process-main::after,.cr-card::after{content:'+';position:absolute;right:16px;top:18px;font-family:var(--fm);font-size:18px;color:var(--accent)}
+  .mobile-process-step.mobile-card-open .mobile-process-main::after,.cr-card.mobile-card-open::after{content:'−'}
+  .mobile-process-step:not(.mobile-card-open) .mobile-process-body,
+  .mobile-process-step:not(.mobile-card-open) .mobile-process-decision{display:none!important}
+  .cr-card{position:relative;cursor:pointer;padding-right:48px}
+  .cr-card:not(.mobile-card-open) .cr-text{display:none}
+  .cr-card.mobile-card-open .cr-text{display:block;margin-top:12px}
+  #handle-process [style*="font-size:8px"],#handle-process [style*="font-size:11px"]{font-size:10px!important;line-height:1.55!important}
+  #handle-process [style*="font-size:12px"]{font-size:14px!important;line-height:1.65!important}
+  #handle-process [style*="font-size:14px"]{font-size:15px!important;line-height:1.5!important}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .book-figure,.sat-figure,.source-line,.edu-card,.cr-card,.ipa-card{max-width:100%;overflow:hidden}
+}
+@media(max-width:460px){
+  .nav-ser{display:none}
+  #globalSearchInput,#globalSearchInput:focus{width:112px}
 }
 
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -1120,7 +1187,7 @@ button,[onclick]{touch-action:manipulation}
     <div style="display:flex;align-items:center;gap:10px">
       <a href="#mod-sources" class="nav-back-link">Källor</a>
       <div class="nav-search-wrap">
-        <input id="globalSearchInput" placeholder="Sök fall, indikator…" autocomplete="off"/>
+        <input id="globalSearchInput" placeholder="Sök…" autocomplete="off" aria-label="Sök fall, indikatorer och källor"/>
         <button class="nav-search-clear" onclick="closeSearch()" title="Rensa">✕</button>
       </div>
       <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileDrawer()" aria-label="Öppna modulmenyn" aria-expanded="false" aria-controls="mobileDrawer">
@@ -1232,7 +1299,7 @@ button,[onclick]{touch-action:manipulation}
   <div class="chain-progress reveal" id="chainProg"></div>
   <div class="chain-layout reveal">
     <div class="chain-nav-col" id="chainNav"></div>
-    <div class="chain-panel-col">
+    <div class="chain-panel-col" id="chainPanel">
       <div class="cp-step-lbl" id="cp-step-lbl"></div>
       <div class="cp-title" id="cp-title"></div>
       <div id="cp-badge" style="margin-bottom:13px"></div>
@@ -3116,6 +3183,11 @@ function selectTheoryTab(key,options={}){
   const panel=document.querySelector(`[data-theory-panel="${key}"]`);
   const tab=document.querySelector(`[data-theory-tab="${key}"]`);
   if(!panel||!tab)return false;
+  const home=document.querySelector('#mod-theory>.wrap'),nav=document.getElementById('theory-submenu');
+  if(isMobileDetail()&&!options.forceOpen&&tab.getAttribute('aria-selected')==='true'&&panel.classList.contains('mobile-inline-detail')){
+    tab.setAttribute('aria-selected','false');tab.tabIndex=0;setExpanded(tab,false);panel.hidden=true;panel.classList.remove('is-active','mobile-inline-detail');home?.appendChild(panel);return true;
+  }
+  if(isMobileDetail())restoreOrderedPanels('[data-theory-panel]',home);
   document.querySelectorAll('[data-theory-panel]').forEach(item=>{
     const active=item===panel;
     item.classList.toggle('is-active',active);
@@ -3124,8 +3196,10 @@ function selectTheoryTab(key,options={}){
   document.querySelectorAll('[data-theory-tab]').forEach(item=>{
     const active=item===tab;
     item.setAttribute('aria-selected',active?'true':'false');
-    item.tabIndex=active?0:-1;
+    item.tabIndex=isMobileDetail()?0:active?0:-1;setExpanded(item,active);
   });
+  if(isMobileDetail()){tab.after(panel);panel.classList.add('mobile-inline-detail');panel.hidden=false;}
+  else if(home){restoreOrderedPanels('[data-theory-panel]',home);}
   if(options.updateHash!==false){
     const url=new URL(window.location.href);
     url.hash=options.anchor?'#'+options.anchor:'#'+panel.id;
@@ -3133,7 +3207,7 @@ function selectTheoryTab(key,options={}){
   }
   if(options.focus)tab.focus();
   triggerReveals();
-  if(options.scroll){
+  if(options.scroll&&!isMobileDetail()){
     const target=options.anchor?document.getElementById(options.anchor):panel;
     if(target)setTimeout(()=>target.scrollIntoView({behavior:options.behavior||'smooth',block:'start'}),30);
   }
@@ -3186,11 +3260,11 @@ function initTheoryTabs(){
 }
 
 const MODULE_GUIDES={
-  chain:'Välj ett av de sju stegen. Innehållet till höger byts direkt.',
+  chain:'Välj ett av de sju stegen för att öppna fördjupningen.',
   map:'Använd samma filter för kartan och fallförteckningen. Sökfältet begränsar båda vyerna, och varje fall öppnar källorna och den fullständiga beskrivningen.',
-  sectors:'Välj en sektormiljö i listan. Analysen till höger uppdateras direkt.',
+  sectors:'Välj en sektormiljö i listan för att öppna analysen.',
   actors:'Välj ett aktörskort för analytisk bedömning, indikatorer och kopplade fall.',
-  legal:'Välj en nivå i den juridiska trappan för rekvisit, straffskala och fall.',
+  legal:'Välj en nivå för att öppna rekvisit, straffskala och fall.',
   infopav:'Välj först en påverkansvektor eller en kognitiv mekanism för fördjupning.',
   theory:'Välj en underflik för att begränsa innehållet. Varje underflik samlar närliggande modeller och fördjupningar.',
   inds:'Använd filterknapparna för att begränsa indikatorerna. Varje kort visar hela indikatorn och dess källa.',
@@ -3226,12 +3300,18 @@ function buildChain(){
   });
   renderChain(0);
 }
-function selectChain(i){
-  document.querySelectorAll('.cni').forEach((el,j)=>el.classList.toggle('active',j===i));
+function selectChain(i,options={}){
+  const items=[...document.querySelectorAll('.cni')],trigger=items[i],panel=document.getElementById('chainPanel'),nav=document.getElementById('chainNav');
+  if(isMobileDetail()&&!options.forceOpen&&trigger?.classList.contains('active')&&panel?.classList.contains('mobile-inline-detail')){
+    trigger.classList.remove('active');setExpanded(trigger,false);panel.classList.remove('mobile-inline-detail');panel.classList.add('mobile-collapsed');nav?.after(panel);return;
+  }
+  items.forEach((el,j)=>{el.classList.toggle('active',j===i);setExpanded(el,j===i);});
   document.querySelectorAll('.cp-dot').forEach((el,j)=>{
     el.className='cp-dot'+(j<=i?(CHAIN[j].danger?' danger-done':' done'):'');
   });
   renderChain(i);
+  if(isMobileDetail()&&trigger&&panel){trigger.after(panel);panel.classList.remove('mobile-collapsed');panel.classList.add('mobile-inline-detail');}
+  else if(nav&&panel){nav.after(panel);panel.classList.remove('mobile-inline-detail','mobile-collapsed');}
 }
 function renderChain(i){
   const c=CHAIN[i],col=c.danger?'var(--orange)':'var(--accent)';
@@ -3463,18 +3543,69 @@ let selActor=null;
 const mobileDetailMQ=window.matchMedia('(max-width:820px)');
 function isMobileDetail(){return mobileDetailMQ.matches;}
 function setExpanded(el,expanded){if(el)el.setAttribute('aria-expanded',expanded?'true':'false');}
+function rememberMobileOrder(elements){[...elements].forEach((el,i)=>{if(el.dataset.mobileOrder===undefined)el.dataset.mobileOrder=String(i);});}
+function initCompactMobileCards(){
+  document.querySelectorAll('#handle-process [style*="grid-template-columns:auto 1fr 1fr"]').forEach(row=>{
+    row.classList.add('mobile-process-step');
+    const main=row.children[1],decision=row.children[2];
+    if(main){main.classList.add('mobile-process-main');if(main.children[2])main.children[2].classList.add('mobile-process-body');}
+    if(decision)decision.classList.add('mobile-process-decision');
+    if(!row.dataset.mobileCompactReady){row.dataset.mobileCompactReady='true';row.setAttribute('role','button');row.setAttribute('tabindex','0');row.setAttribute('aria-expanded','false');
+      const toggle=()=>{if(!isMobileDetail())return;const open=row.classList.toggle('mobile-card-open');row.setAttribute('aria-expanded',open?'true':'false');};
+      row.addEventListener('click',toggle);row.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggle();}});
+    }
+  });
+  document.querySelectorAll('.cr-card').forEach(card=>{
+    if(card.dataset.mobileCompactReady)return;
+    card.dataset.mobileCompactReady='true';card.setAttribute('role','button');card.setAttribute('tabindex','0');card.setAttribute('aria-expanded','false');
+    const toggle=()=>{if(!isMobileDetail())return;const open=card.classList.toggle('mobile-card-open');card.setAttribute('aria-expanded',open?'true':'false');};
+    card.addEventListener('click',toggle);card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggle();}});
+  });
+}
+function restoreOrderedPanels(selector,home){
+  if(!home)return;
+  [...document.querySelectorAll(selector)].sort((a,b)=>(+a.dataset.mobileOrder||0)-(+b.dataset.mobileOrder||0)).forEach(panel=>{
+    home.appendChild(panel);panel.classList.remove('mobile-inline-detail','mobile-collapsed');
+  });
+}
 function restoreResponsiveDetailLayout(){
   const sectorWrap=document.getElementById('sectorPanelWrap');
   const actorGrid=document.getElementById('actorGrid');
   const actorDetail=document.getElementById('actorDetail');
   const legalLadder=document.getElementById('legalLadder');
   const legalPanel=document.getElementById('legalPanel');
+  const chainNav=document.getElementById('chainNav'),chainPanel=document.getElementById('chainPanel');
+  const assessNav=document.getElementById('assessNav'),assessPanels=document.getElementById('assessPanels');
+  const theoryHome=document.querySelector('#mod-theory>.wrap'),theoryNav=document.getElementById('theory-submenu');
+  const handleHome=document.querySelector('#mod-handle>.wrap'),handleNav=document.getElementById('handleSubNav');
+  const ipVecTabs=document.getElementById('ipVecTabs'),ipVecPanel=document.getElementById('ipVecPanel');
+  const ipMechGrid=document.getElementById('ipMechGrid'),ipMechDetail=document.getElementById('ipMechDetail');
+  const bropFlow=document.getElementById('bropFlow'),bropDetail=document.getElementById('bropDetail');
+  const checkTabs=document.getElementById('checkTabs'),checkPanel=document.getElementById('checkPanel');
+  const cultActions=document.getElementById('cultActions'),cultDetail=document.getElementById('cultActionDetail');
   if(!isMobileDetail()){
     if(sectorWrap)document.querySelectorAll('#mod-sectors .sector-panel').forEach(p=>{sectorWrap.appendChild(p);p.classList.remove('mobile-inline-detail');});
     if(actorGrid&&actorDetail){actorGrid.after(actorDetail);actorDetail.classList.remove('mobile-inline-detail');}
     if(legalLadder&&legalPanel){legalLadder.after(legalPanel);legalPanel.classList.remove('mobile-inline-detail','mobile-collapsed','open');}
+    if(chainNav&&chainPanel){chainNav.after(chainPanel);chainPanel.classList.remove('mobile-inline-detail','mobile-collapsed');}
+    if(assessPanels)restoreOrderedPanels('.assess-panel-col',assessPanels);
+    if(theoryHome)restoreOrderedPanels('[data-theory-panel]',theoryHome);
+    if(handleHome)restoreOrderedPanels('.handle-panel',handleHome);
+    if(ipVecTabs&&ipVecPanel){ipVecTabs.after(ipVecPanel);ipVecPanel.classList.remove('mobile-inline-detail','mobile-collapsed');}
+    if(ipMechGrid&&ipMechDetail){ipMechGrid.after(ipMechDetail);ipMechDetail.classList.remove('mobile-inline-detail','mobile-collapsed');}
+    if(bropFlow&&bropDetail){bropFlow.after(bropDetail);bropDetail.classList.remove('mobile-inline-detail','mobile-collapsed');}
+    if(checkTabs&&checkPanel){checkTabs.after(checkPanel);checkPanel.classList.remove('mobile-inline-detail','mobile-collapsed');}
+    if(cultActions&&cultDetail){cultActions.after(cultDetail);cultDetail.classList.remove('mobile-inline-detail','mobile-collapsed');}
     if(sectorWrap&&!document.querySelector('.sec-nav-item.active'))selectSector('LOCAL_GOV');
     if(legalLadder&&!document.querySelector('.legal-rung.active'))selectLegal('muta');
+    if(chainNav&&!document.querySelector('.cni.active'))selectChain(0,{forceOpen:true});
+    if(assessNav&&!document.querySelector('.ani.active'))goQ(0,{forceOpen:true});
+    if(theoryNav&&!document.querySelector('[data-theory-tab][aria-selected="true"]'))selectTheoryTab('core',{updateHash:false,forceOpen:true});
+    if(handleNav&&!document.querySelector('.handle-sub.active'))showHandle('process',{forceOpen:true});
+    if(ipVecTabs&&!document.querySelector('.ip-vec-tab.active'))selectIPVec('riktad',{forceOpen:true});
+    if(bropFlow&&!document.querySelector('.brop-step.active'))selectBrop(0,{forceOpen:true});
+    if(checkTabs&&!document.querySelector('.check-tab.active'))selectCheck('rekrytering',{forceOpen:true});
+    if(cultActions&&!document.querySelector('.ca-card.active'))selectCultAction('rapport',{forceOpen:true});
     return;
   }
   const activeSector=document.querySelector('.sec-nav-item.active');
@@ -3484,11 +3615,41 @@ function restoreResponsiveDetailLayout(){
   if(activeActor&&actorDetail?.classList.contains('open')){activeActor.after(actorDetail);actorDetail.classList.add('mobile-inline-detail');setExpanded(activeActor,true);}
   const activeLegal=document.querySelector('.legal-rung.active');
   if(activeLegal&&legalPanel&&!legalPanel.classList.contains('mobile-collapsed')){activeLegal.after(legalPanel);legalPanel.classList.add('mobile-inline-detail','open');setExpanded(activeLegal,true);}
+  const activeChain=document.querySelector('.cni.active');
+  if(activeChain&&chainPanel&&!chainPanel.classList.contains('mobile-collapsed')){activeChain.after(chainPanel);chainPanel.classList.add('mobile-inline-detail');}
+  const activeAssess=document.querySelector('.ani.active');
+  const shownAssess=document.querySelector('.assess-panel-col.show');
+  if(activeAssess&&shownAssess){activeAssess.after(shownAssess);shownAssess.classList.add('mobile-inline-detail');}
+  const activeTheory=document.querySelector('[data-theory-tab][aria-selected="true"]');
+  const shownTheory=document.querySelector('[data-theory-panel].is-active:not([hidden])');
+  if(activeTheory&&shownTheory){activeTheory.after(shownTheory);shownTheory.classList.add('mobile-inline-detail');}
+  const activeHandle=document.querySelector('.handle-sub.active');
+  const shownHandle=[...document.querySelectorAll('.handle-panel')].find(p=>p.style.display!=='none'&&getComputedStyle(p).display!=='none');
+  if(activeHandle&&shownHandle){activeHandle.after(shownHandle);shownHandle.classList.add('mobile-inline-detail');}
+  const activeVec=document.querySelector('.ip-vec-tab.active');
+  if(activeVec&&ipVecPanel&&!ipVecPanel.classList.contains('mobile-collapsed')){activeVec.after(ipVecPanel);ipVecPanel.classList.add('mobile-inline-detail');}
+  const activeMech=document.querySelector('.ip-mech.active');
+  if(activeMech&&ipMechDetail?.classList.contains('show')){activeMech.after(ipMechDetail);ipMechDetail.classList.add('mobile-inline-detail');}
+  const activeBrop=document.querySelector('.brop-step.active');
+  if(activeBrop&&bropDetail&&!bropDetail.classList.contains('mobile-collapsed')){activeBrop.after(bropDetail);bropDetail.classList.add('mobile-inline-detail');}
+  const activeCheck=document.querySelector('.check-tab.active');
+  if(activeCheck&&checkPanel&&!checkPanel.classList.contains('mobile-collapsed')){activeCheck.after(checkPanel);checkPanel.classList.add('mobile-inline-detail');}
+  const activeCulture=document.querySelector('.ca-card.active');
+  if(activeCulture&&cultDetail&&!cultDetail.classList.contains('mobile-collapsed')){activeCulture.after(cultDetail);cultDetail.classList.add('mobile-inline-detail');}
 }
 function initMobileDetailAccordions(){
-  document.querySelectorAll('.sec-nav-item,#actorGrid .ac,.legal-rung').forEach(el=>{
+  const theoryHome=document.querySelector('#mod-theory>.wrap'),handleHome=document.querySelector('#mod-handle>.wrap');
+  const assessPanels=document.getElementById('assessPanels'),chainNav=document.getElementById('chainNav'),chainPanel=document.getElementById('chainPanel');
+  const ipVecTabs=document.getElementById('ipVecTabs'),ipVecPanel=document.getElementById('ipVecPanel');
+  const ipMechGrid=document.getElementById('ipMechGrid'),ipMechDetail=document.getElementById('ipMechDetail');
+  const bropFlow=document.getElementById('bropFlow'),bropDetail=document.getElementById('bropDetail');
+  const checkTabs=document.getElementById('checkTabs'),checkPanel=document.getElementById('checkPanel');
+  const cultActions=document.getElementById('cultActions'),cultDetail=document.getElementById('cultActionDetail');
+  initCompactMobileCards();
+  const triggers=document.querySelectorAll('.sec-nav-item,#actorGrid .ac,.legal-rung,.cni,.ani,[data-theory-tab],.handle-sub,.ip-vec-tab,.ip-mech,.brop-step,.check-tab,.ca-card');
+  triggers.forEach(el=>{
     el.setAttribute('role','button');el.setAttribute('tabindex','0');setExpanded(el,el.classList.contains('active')||el.classList.contains('sel'));
-    if(!el.dataset.keyboardReady){el.dataset.keyboardReady='true';el.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();el.click();}});}
+    if(el.tagName!=='BUTTON'&&!el.dataset.keyboardReady){el.dataset.keyboardReady='true';el.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();el.click();}});}
   });
   if(isMobileDetail()&&!document.documentElement.dataset.mobileDetailsReady){
     document.documentElement.dataset.mobileDetailsReady='true';
@@ -3497,6 +3658,25 @@ function initMobileDetailAccordions(){
     document.querySelectorAll('.legal-rung').forEach(el=>{el.classList.remove('active');setExpanded(el,false);});
     const legalPanel=document.getElementById('legalPanel');
     if(legalPanel){legalPanel.classList.add('mobile-collapsed');document.getElementById('legalLadder')?.after(legalPanel);}
+  }
+  if(isMobileDetail()&&!document.documentElement.dataset.mobileAllDetailsReady){
+    document.documentElement.dataset.mobileAllDetailsReady='true';
+    rememberMobileOrder(document.querySelectorAll('.assess-panel-col'));
+    rememberMobileOrder(document.querySelectorAll('[data-theory-panel]'));
+    rememberMobileOrder(document.querySelectorAll('.handle-panel'));
+    document.querySelectorAll('.cni,.ani,.ip-vec-tab,.ip-mech,.brop-step,.check-tab,.ca-card').forEach(el=>{el.classList.remove('active');setExpanded(el,false);});
+    document.querySelectorAll('[data-theory-tab]').forEach(el=>{el.setAttribute('aria-selected','false');el.tabIndex=0;setExpanded(el,false);});
+    document.querySelectorAll('[data-theory-panel]').forEach(el=>{el.classList.remove('is-active','mobile-inline-detail');el.hidden=true;theoryHome?.appendChild(el);});
+    document.querySelectorAll('.handle-sub').forEach(el=>{el.classList.remove('active');setExpanded(el,false);});
+    document.querySelectorAll('.handle-panel').forEach(el=>{el.style.display='none';el.classList.remove('mobile-inline-detail');handleHome?.appendChild(el);});
+    document.querySelectorAll('.assess-panel-col').forEach(el=>{el.classList.remove('show','mobile-inline-detail');assessPanels?.appendChild(el);});
+    [chainPanel,ipVecPanel,ipMechDetail,bropDetail,checkPanel,cultDetail].forEach(el=>{if(el){el.classList.remove('mobile-inline-detail','show');el.classList.add('mobile-collapsed');}});
+    if(chainNav&&chainPanel)chainNav.after(chainPanel);
+    if(ipVecTabs&&ipVecPanel)ipVecTabs.after(ipVecPanel);
+    if(ipMechGrid&&ipMechDetail)ipMechGrid.after(ipMechDetail);
+    if(bropFlow&&bropDetail)bropFlow.after(bropDetail);
+    if(checkTabs&&checkPanel)checkTabs.after(checkPanel);
+    if(cultActions&&cultDetail)cultActions.after(cultDetail);
   }
   restoreResponsiveDetailLayout();
 }
@@ -3845,7 +4025,7 @@ function buildAssess(){
   DIMS.forEach((dim,di)=>{
     const el=document.createElement('div');el.className='ani'+(di===0?' active':'');el.id='ani'+di;
     el.innerHTML=`<div class="ani-n">${String(di+1).padStart(2,'0')}</div><div class="ani-t">${dim}</div>`;
-    el.onclick=()=>goQ(QUESTIONS.findIndex(q=>q.dim===dim));nav.appendChild(el);
+    el.onclick=()=>goQ(QUESTIONS.findIndex(q=>q.dim===dim),{toggle:true});nav.appendChild(el);
   });
   QUESTIONS.forEach((q,i)=>{
     const p=document.createElement('div');p.className='assess-panel-col'+(i===0?' show':'');p.id='qp'+i;
@@ -3861,13 +4041,18 @@ function buildAssess(){
     panels.appendChild(p);
   });
 }
-function goQ(i){
-  document.querySelectorAll('.assess-panel-col').forEach(p=>p.classList.remove('show'));
-  const p=document.getElementById('qp'+i);if(p){p.classList.add('show');p.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function goQ(i,options={}){
+  const panelsHome=document.getElementById('assessPanels');
+  const dimIndex=DIMS.indexOf(QUESTIONS[i]?.dim),trigger=document.getElementById('ani'+dimIndex),p=document.getElementById('qp'+i);
+  if(isMobileDetail()&&options.toggle&&trigger?.classList.contains('active')&&p?.classList.contains('mobile-inline-detail')){
+    trigger.classList.remove('active');setExpanded(trigger,false);p.classList.remove('show','mobile-inline-detail');panelsHome?.appendChild(p);return;
+  }
+  document.querySelectorAll('.assess-panel-col').forEach(panel=>{panel.classList.remove('show','mobile-inline-detail');panelsHome?.appendChild(panel);});
+  if(p){p.classList.add('show');if(isMobileDetail()&&trigger){trigger.after(p);p.classList.add('mobile-inline-detail');}else if(!options.forceOpen)p.scrollIntoView({behavior:'smooth',block:'nearest'});}
   DIMS.forEach((dim,di)=>{
     const el=document.getElementById('ani'+di);if(!el)return;
     const idxs=QUESTIONS.map((q,j)=>q.dim===dim?j:-1).filter(j=>j>=0);
-    el.className='ani'+(idxs.includes(i)?' active':'')+(idxs.every(j=>ans[j]!==undefined)&&!idxs.includes(i)?' done':'');
+    el.className='ani'+(idxs.includes(i)?' active':'')+(idxs.every(j=>ans[j]!==undefined)&&!idxs.includes(i)?' done':'');setExpanded(el,idxs.includes(i));
   });
   if(ans[i]!==undefined){
     document.querySelectorAll(`#ao${i} .aq-opt`).forEach((o,j)=>o.classList.toggle('sel',j===ans[i].oi));
@@ -4311,13 +4496,17 @@ function closeMobileDrawer(){
 
 
 
-function showHandle(id){
-  document.querySelectorAll('.handle-panel').forEach(p=>p.style.display='none');
-  document.querySelectorAll('.handle-sub').forEach(b=>b.classList.remove('active'));
+function showHandle(id,options={}){
   const p=document.getElementById('handle-'+id);
-  if(p)p.style.display='block';
   const b=document.getElementById('hsub-'+id);
-  if(b)b.classList.add('active');
+  const home=document.querySelector('#mod-handle>.wrap');
+  if(isMobileDetail()&&!options.forceOpen&&b?.classList.contains('active')&&p?.classList.contains('mobile-inline-detail')){
+    b.classList.remove('active');setExpanded(b,false);p.style.display='none';p.classList.remove('mobile-inline-detail');home?.appendChild(p);return;
+  }
+  document.querySelectorAll('.handle-panel').forEach(panel=>{panel.style.display='none';panel.classList.remove('mobile-inline-detail');home?.appendChild(panel);});
+  document.querySelectorAll('.handle-sub').forEach(button=>{button.classList.remove('active');setExpanded(button,false);});
+  if(p){p.style.display='block';if(isMobileDetail()&&b){b.after(p);p.classList.add('mobile-inline-detail');}}
+  if(b){b.classList.add('active');setExpanded(b,true);}
 }
 
 </script>
@@ -6709,12 +6898,16 @@ function renderInfopav(){
     <div class="ipd-cell"><div class="ipd-label">${d.label}</div><div class="ipd-text">${d.text}</div></div>`).join('');
 }
 
-function selectIPVec(id){
+function selectIPVec(id,options={}){
   const v=IP_VECTORS.find(x=>x.id===id);
   if(!v)return;
-  document.querySelectorAll('.ip-vec-tab').forEach(t=>t.classList.remove('active'));
   const tab=document.getElementById('ipvec-'+id);
-  if(tab)tab.classList.add('active');
+  const panel=document.getElementById('ipVecPanel'),tabs=document.getElementById('ipVecTabs');
+  if(isMobileDetail()&&!options.forceOpen&&tab?.classList.contains('active')&&panel?.classList.contains('mobile-inline-detail')){
+    tab.classList.remove('active');setExpanded(tab,false);panel.classList.remove('mobile-inline-detail');panel.classList.add('mobile-collapsed');tabs?.after(panel);return;
+  }
+  document.querySelectorAll('.ip-vec-tab').forEach(t=>{t.classList.remove('active');setExpanded(t,false);});
+  if(tab){tab.classList.add('active');setExpanded(tab,true);}
 
   const caseRows=v.cases.map(cid=>{
     const ci=ipCaseTitle(cid);
@@ -6726,7 +6919,6 @@ function selectIPVec(id){
       <span class="ipp-case-y">${ci.year}</span></a>`;
   }).join('');
 
-  const panel=document.getElementById('ipVecPanel');
   panel.style.setProperty('--ipp-c',v.c);
   panel.innerHTML=`
     <div class="ipp-lead">${v.lead}</div>
@@ -6738,20 +6930,30 @@ function selectIPVec(id){
       <div class="ipp-cases-label">Dokumenterade fall — klicka för fallbeskrivningen</div>
       <div class="ipp-case-row">${caseRows}</div>
     </div>`;
+  panel.classList.remove('mobile-collapsed');
+  if(isMobileDetail()&&tab){tab.after(panel);panel.classList.add('mobile-inline-detail');}
+  else if(tabs){tabs.after(panel);panel.classList.remove('mobile-inline-detail');}
 }
 
-function selectIPMech(id){
+function selectIPMech(id,options={}){
   const m=IP_MECH.find(x=>x.id===id);
   if(!m)return;
-  document.querySelectorAll('.ip-mech').forEach(x=>x.classList.remove('active'));
   const cell=document.getElementById('ipmech-'+id);
-  if(cell)cell.classList.add('active');
   const d=document.getElementById('ipMechDetail');
+  const grid=document.getElementById('ipMechGrid');
+  if(isMobileDetail()&&!options.forceOpen&&cell?.classList.contains('active')&&d?.classList.contains('mobile-inline-detail')){
+    cell.classList.remove('active');setExpanded(cell,false);d.classList.remove('show','mobile-inline-detail');d.classList.add('mobile-collapsed');grid?.after(d);return;
+  }
+  document.querySelectorAll('.ip-mech').forEach(x=>{x.classList.remove('active');setExpanded(x,false);});
+  if(cell){cell.classList.add('active');setExpanded(cell,true);}
   d.classList.add('show');
   d.innerHTML=`
     <div class="ipmd-name">${m.name}</div>
     <div class="ipmd-body">${m.body}</div>
     <div class="ipmd-ex">${m.ex}</div>`;
+  d.classList.remove('mobile-collapsed');
+  if(isMobileDetail()&&cell){cell.after(d);d.classList.add('mobile-inline-detail');}
+  else if(grid){grid.after(d);d.classList.remove('mobile-inline-detail');}
 }
 
 
@@ -6917,15 +7119,22 @@ function updateBef(){
     <div class="bef-rec"><div class="bef-rec-title">Vägledning</div>${rec}</div>`;
 }
 
-function selectBrop(i){
+function selectBrop(i,options={}){
   const s=BROP_STEPS[i];
-  document.querySelectorAll('.brop-step').forEach(x=>x.classList.remove('active'));
-  document.getElementById('brop-'+i).classList.add('active');
-  document.getElementById('bropDetail').innerHTML=`
+  const trigger=document.getElementById('brop-'+i),detail=document.getElementById('bropDetail'),flow=document.getElementById('bropFlow');
+  if(isMobileDetail()&&!options.forceOpen&&trigger?.classList.contains('active')&&detail?.classList.contains('mobile-inline-detail')){
+    trigger.classList.remove('active');setExpanded(trigger,false);detail.classList.remove('mobile-inline-detail');detail.classList.add('mobile-collapsed');flow?.after(detail);return;
+  }
+  document.querySelectorAll('.brop-step').forEach(x=>{x.classList.remove('active');setExpanded(x,false);});
+  trigger.classList.add('active');setExpanded(trigger,true);
+  detail.innerHTML=`
     <div class="bd-name">${s.name}</div>
     <div class="bd-row"><div class="bd-key">Innehåll</div><div class="bd-val">${s.innehall}</div></div>
     <div class="bd-row"><div class="bd-key">Syfte</div><div class="bd-val">${s.syfte}</div></div>
     <div class="bd-row"><div class="bd-key">Vanlig brist</div><div class="bd-val warn">${s.brist}</div></div>`;
+  detail.classList.remove('mobile-collapsed');
+  if(isMobileDetail()){trigger.after(detail);detail.classList.add('mobile-inline-detail');}
+  else{flow?.after(detail);detail.classList.remove('mobile-inline-detail');}
 }
 
 function selectBowtie(id){
@@ -6956,9 +7165,13 @@ function selectBowtie(id){
   dia.insertAdjacentElement('afterend',barr);
 }
 
-function selectCheck(id){
-  document.querySelectorAll('.check-tab').forEach(x=>x.classList.remove('active'));
-  document.getElementById('ctab-'+id).classList.add('active');
+function selectCheck(id,options={}){
+  const trigger=document.getElementById('ctab-'+id),panel=document.getElementById('checkPanel'),tabs=document.getElementById('checkTabs');
+  if(isMobileDetail()&&!options.forceOpen&&!options.keepOpen&&trigger?.classList.contains('active')&&panel?.classList.contains('mobile-inline-detail')){
+    trigger.classList.remove('active');setExpanded(trigger,false);panel.classList.remove('mobile-inline-detail');panel.classList.add('mobile-collapsed');tabs?.after(panel);return;
+  }
+  document.querySelectorAll('.check-tab').forEach(x=>{x.classList.remove('active');setExpanded(x,false);});
+  trigger.classList.add('active');setExpanded(trigger,true);
   const cl=CHECKLISTS.find(x=>x.id===id);
   const st=checkState[id]||{};
   document.getElementById('checkPanel').innerHTML=cl.items.map((it,i)=>`
@@ -6967,11 +7180,14 @@ function selectCheck(id){
       <div class="check-item-text">${it}</div>
     </div>`).join('');
   updateCheckProg(id);
+  panel.classList.remove('mobile-collapsed');
+  if(isMobileDetail()){trigger.after(panel);panel.classList.add('mobile-inline-detail');}
+  else{tabs?.after(panel);panel.classList.remove('mobile-inline-detail');}
 }
 function toggleCheck(id,i){
   checkState[id]=checkState[id]||{};
   checkState[id][i]=!checkState[id][i];
-  selectCheck(id);
+  selectCheck(id,{keepOpen:true,forceOpen:true});
 }
 function updateCheckProg(id){
   const cl=CHECKLISTS.find(x=>x.id===id);
@@ -7014,7 +7230,7 @@ const CULT_COMPARE=[
 const CULT_ROLES=[
   {n:'Roll ett',name:'Prioritering',text:'Ledningens styrning och prioritering av säkerhetsarbetet är avgörande. <b>RiR 2026:3:</b> FMV, Kammarkollegiet och Kriminalvården hade alla strukturella brister kopplade till att ledningen inte aktivt drev säkerhetsfrågor. Säkerhet som inte prioriteras uppifrån prioriteras ingenstans.'},
   {n:'Roll två',name:'Modellbeteende',text:'Chefer som själva frångår säkerhetsrutiner signalerar att de är oviktiga. <b>SFV-fallet:</b> generaldirektören kände till brister men agerade inte i tid. Normglidning börjar ofta i ledningsskiktet och sprider sig nedåt.'},
-  {n:'Roll tre',name:'Psykologisk trygghet',text:'Medarbetare rapporterar bara om de vet att de inte bestraffas. <b>Göteborgs stad:</b> organisationer med tystnadskulturer rekryteras systematiskt av kriminella nätverk — eftersom de vet att inget rapporteras. Trygghet är en säkerhetsfunktion.'},
+  {n:'Roll tre',name:'Psykologisk trygghet',text:'Medarbetare rapporterar bara om de vet att de inte bestraffas. I en tystnadskultur kan avvikande beteenden och påverkansförsök passera utan att någon för informationen vidare. Trygghet att rapportera är därför en säkerhetsfunktion.'},
   {n:'Roll fyra',name:'Uthållighet',text:'Säkerhetskultur kräver kontinuerligt underhåll, inte en engångsinsats. <b><a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF0079 ↗</a>:</b> skyddsplanen ska övas, testas och revideras. Övning ger färdighet men avslöjar också var barriärerna brister — innan en verklig händelse gör det.'}
 ];
 
@@ -7034,7 +7250,7 @@ const CULT_ACTIONS=[
   {id:'stod',name:'Stöd till utsatta',tag:'Omsorg',
    body:'Den som utsatts för hot eller påverkan behöver konkret stöd — inte bara att händelsen utreds. Utan stöd tystnar den utsatte, och tystnaden sprider sig i arbetsgruppen.',
    steps:['Ha en tydlig stödprocess klar innan en händelse inträffar','Erbjud praktiskt, juridiskt och psykologiskt stöd','Separera stödet från utredningen av händelsen','Visa hela arbetsgruppen att utsatta tas om hand'],
-   case:'<b>SKR och Göteborgs stad:</b> stöd till den utsatte är avgörande för att hen inte ska tystna — och för att förhindra att tystnaden sprids till hela arbetsgruppen.'}
+   case:'<b>Princip:</b> stöd till den utsatte minskar risken att personen tystnar och att osäkerhet eller passivitet sprids i arbetsgruppen.'}
 ];
 
 function renderCulture(){
@@ -7110,16 +7326,23 @@ function toggleCC(i){
   document.getElementById('cc-'+i).classList.toggle('open');
 }
 
-function selectCultAction(id){
+function selectCultAction(id,options={}){
   const a=CULT_ACTIONS.find(x=>x.id===id);
-  document.querySelectorAll('.ca-card').forEach(x=>x.classList.remove('active'));
-  document.getElementById('ca-'+id).classList.add('active');
-  document.getElementById('cultActionDetail').innerHTML=`
+  const trigger=document.getElementById('ca-'+id),detail=document.getElementById('cultActionDetail'),grid=document.getElementById('cultActions');
+  if(isMobileDetail()&&!options.forceOpen&&trigger?.classList.contains('active')&&detail?.classList.contains('mobile-inline-detail')){
+    trigger.classList.remove('active');setExpanded(trigger,false);detail.classList.remove('mobile-inline-detail');detail.classList.add('mobile-collapsed');grid?.after(detail);return;
+  }
+  document.querySelectorAll('.ca-card').forEach(x=>{x.classList.remove('active');setExpanded(x,false);});
+  trigger.classList.add('active');setExpanded(trigger,true);
+  detail.innerHTML=`
     <div class="cad-name">${a.name}</div>
     <div class="cad-body">${a.body}</div>
     <div class="cad-steps-label">Implementering</div>
     ${a.steps.map((s,i)=>`<div class="cad-step"><span class="cad-step-n">0${i+1}</span><span>${s}</span></div>`).join('')}
     <div class="cad-case">${a.case}</div>`;
+  detail.classList.remove('mobile-collapsed');
+  if(isMobileDetail()){trigger.after(detail);detail.classList.add('mobile-inline-detail');}
+  else{grid?.after(detail);detail.classList.remove('mobile-inline-detail');}
 }
 
 </script>
