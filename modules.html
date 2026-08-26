@@ -1031,6 +1031,30 @@ html:not(.js-ready) .theory-subnav{display:none}
   #mod-sources a{max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere;line-height:1.45;min-height:34px;display:inline-flex;align-items:center}
   img,svg,canvas{max-width:100%;height:auto}
 }
+/* Mobil: valkort fungerar som dragspel och visar svaret direkt under valt kort. */
+@media(max-width:820px){
+  #mod-sectors [style*="grid-template-columns:200px"]{grid-template-columns:1fr!important}
+  #mod-sectors .sec-nav-item,#actorGrid .ac,.legal-rung{position:relative;padding-right:46px}
+  #mod-sectors .sec-nav-item::after,#actorGrid .ac::after,.legal-rung::after{
+    content:'+';position:absolute;right:17px;top:50%;transform:translateY(-50%);
+    font-family:var(--fm);font-size:18px;font-weight:300;color:var(--accent);line-height:1
+  }
+  #mod-sectors .sec-nav-item.active::after,#actorGrid .ac.sel::after,.legal-rung.active::after{content:'−'}
+  #sectorPanelWrap{display:none!important}
+  #mod-sectors .sector-panel.mobile-inline-detail,
+  #actorGrid .actor-detail.mobile-inline-detail,
+  .legal-ladder .legal-panel.mobile-inline-detail{
+    width:100%;box-sizing:border-box;background:var(--bg-mid);border:0;border-left:3px solid var(--accent);
+    border-bottom:1px solid var(--border);padding:20px 16px;margin:0;animation:mobileDetailIn .18s ease-out
+  }
+  #actorGrid .actor-detail.mobile-inline-detail{grid-column:1/-1}
+  .legal-panel.mobile-collapsed{display:none}
+  .legal-ladder .legal-panel.mobile-inline-detail.open{display:block;min-height:0}
+  #mod-sectors .sec-nav-item:focus-visible,#actorGrid .ac:focus-visible,.legal-rung:focus-visible{
+    outline:2px solid var(--accent);outline-offset:-2px
+  }
+}
+@keyframes mobileDetailIn{from{opacity:.35;transform:translateY(-5px)}to{opacity:1;transform:none}}
 @media(max-width:390px){
   .nav-ser{display:none}
   #globalSearchInput{width:120px}
@@ -3436,10 +3460,52 @@ function closeCase(){
 
 /* ══ ACTORS ══ */
 let selActor=null;
+const mobileDetailMQ=window.matchMedia('(max-width:820px)');
+function isMobileDetail(){return mobileDetailMQ.matches;}
+function setExpanded(el,expanded){if(el)el.setAttribute('aria-expanded',expanded?'true':'false');}
+function restoreResponsiveDetailLayout(){
+  const sectorWrap=document.getElementById('sectorPanelWrap');
+  const actorGrid=document.getElementById('actorGrid');
+  const actorDetail=document.getElementById('actorDetail');
+  const legalLadder=document.getElementById('legalLadder');
+  const legalPanel=document.getElementById('legalPanel');
+  if(!isMobileDetail()){
+    if(sectorWrap)document.querySelectorAll('#mod-sectors .sector-panel').forEach(p=>{sectorWrap.appendChild(p);p.classList.remove('mobile-inline-detail');});
+    if(actorGrid&&actorDetail){actorGrid.after(actorDetail);actorDetail.classList.remove('mobile-inline-detail');}
+    if(legalLadder&&legalPanel){legalLadder.after(legalPanel);legalPanel.classList.remove('mobile-inline-detail','mobile-collapsed','open');}
+    if(sectorWrap&&!document.querySelector('.sec-nav-item.active'))selectSector('LOCAL_GOV');
+    if(legalLadder&&!document.querySelector('.legal-rung.active'))selectLegal('muta');
+    return;
+  }
+  const activeSector=document.querySelector('.sec-nav-item.active');
+  const shownSector=document.querySelector('.sector-panel.show');
+  if(activeSector&&shownSector){activeSector.after(shownSector);shownSector.classList.add('mobile-inline-detail');setExpanded(activeSector,true);}
+  const activeActor=document.querySelector('#actorGrid .ac.sel');
+  if(activeActor&&actorDetail?.classList.contains('open')){activeActor.after(actorDetail);actorDetail.classList.add('mobile-inline-detail');setExpanded(activeActor,true);}
+  const activeLegal=document.querySelector('.legal-rung.active');
+  if(activeLegal&&legalPanel&&!legalPanel.classList.contains('mobile-collapsed')){activeLegal.after(legalPanel);legalPanel.classList.add('mobile-inline-detail','open');setExpanded(activeLegal,true);}
+}
+function initMobileDetailAccordions(){
+  document.querySelectorAll('.sec-nav-item,#actorGrid .ac,.legal-rung').forEach(el=>{
+    el.setAttribute('role','button');el.setAttribute('tabindex','0');setExpanded(el,el.classList.contains('active')||el.classList.contains('sel'));
+    if(!el.dataset.keyboardReady){el.dataset.keyboardReady='true';el.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();el.click();}});}
+  });
+  if(isMobileDetail()&&!document.documentElement.dataset.mobileDetailsReady){
+    document.documentElement.dataset.mobileDetailsReady='true';
+    document.querySelectorAll('.sec-nav-item').forEach(el=>{el.classList.remove('active');el.style.borderLeftColor='transparent';setExpanded(el,false);});
+    document.querySelectorAll('.sector-panel').forEach(el=>{el.classList.remove('show','mobile-inline-detail');document.getElementById('sectorPanelWrap')?.appendChild(el);});
+    document.querySelectorAll('.legal-rung').forEach(el=>{el.classList.remove('active');setExpanded(el,false);});
+    const legalPanel=document.getElementById('legalPanel');
+    if(legalPanel){legalPanel.classList.add('mobile-collapsed');document.getElementById('legalLadder')?.after(legalPanel);}
+  }
+  restoreResponsiveDetailLayout();
+}
 function buildActors(){
   const g=document.getElementById('actorGrid');g.innerHTML='';
   ACTORS.forEach(a=>{
     const el=document.createElement('div');el.className='ac';
+    el.dataset.keyboardReady='true';
+    el.setAttribute('role','button');el.setAttribute('tabindex','0');el.setAttribute('aria-expanded','false');el.setAttribute('aria-controls','actorDetail');
     el.innerHTML=`<span class="ac-exp ${a.exposure==='HIGH'?'exp-high':'exp-med'}">${a.exposure==='HIGH'?'Hög':'Medel'}</span>
       <div class="ac-name" style="color:${a.color}">${a.name}</div>
       <div class="ac-sub">${a.sub}</div>
@@ -3449,14 +3515,20 @@ function buildActors(){
       <div class="ac-cta">Klicka för detaljer →</div>`;
     el.addEventListener('mouseenter',()=>{if(selActor!==a.id)el.style.borderTopColor=a.color;});
     el.addEventListener('mouseleave',()=>{if(selActor!==a.id)el.style.borderTopColor='transparent';});
-    el.onclick=()=>selectActor(a.id,el);g.appendChild(el);
+    el.onclick=()=>selectActor(a.id,el);
+    el.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectActor(a.id,el);}});
+    g.appendChild(el);
   });
 }
 function selectActor(id,el){
-  document.querySelectorAll('.ac').forEach(c=>{c.classList.remove('sel');c.style.borderTopColor='transparent';});
+  const det=document.getElementById('actorDetail');
+  if(isMobileDetail()&&selActor===id&&det.classList.contains('open')){
+    el.classList.remove('sel');el.style.borderTopColor='transparent';setExpanded(el,false);selActor=null;
+    det.classList.remove('open','mobile-inline-detail');document.getElementById('actorGrid')?.after(det);return;
+  }
+  document.querySelectorAll('.ac').forEach(c=>{c.classList.remove('sel');c.style.borderTopColor='transparent';setExpanded(c,false);});
   const a=ACTORS.find(x=>x.id===id);el.classList.add('sel');el.style.borderTopColor=a.color;selActor=id;
   const cs=CASES.filter(c=>a.cases&&a.cases.includes(c.id));
-  const det=document.getElementById('actorDetail');
   det.innerHTML=`<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-s)">
     <div style="font-family:var(--fd);font-size:30px;font-weight:300;color:${a.color}">${a.name}</div>
     <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">${a.sub} · ${a.horizon}</div>
@@ -3477,16 +3549,23 @@ function selectActor(id,el){
       ${cs.map(c=>`<a class="ad-case" href="?case=${c.id}#case-detail" data-case-link="${c.id}"><div class="adc-t">${c.title}</div><div class="adc-m">${c.loc?.m} · ${c.date}</div></a>`).join('')}
     </div>
   </div>`;
-  det.classList.add('open');det.scrollIntoView({behavior:'smooth',block:'nearest'});
+  det.classList.add('open');setExpanded(el,true);
+  if(isMobileDetail()){el.after(det);det.classList.add('mobile-inline-detail');}
+  else{document.getElementById('actorGrid')?.after(det);det.classList.remove('mobile-inline-detail');det.scrollIntoView({behavior:'smooth',block:'nearest'});}
 }
 
 /* ══ SECTORS ══ */
 function selectSector(id){
-  document.querySelectorAll('.sec-nav-item').forEach(el=>{el.classList.remove('active');el.style.borderLeftColor='transparent';});
-  document.querySelectorAll('.sector-panel').forEach(el=>el.classList.remove('show'));
   const n=document.getElementById('sni-'+id),p=document.getElementById('sp-'+id);
+  const wrap=document.getElementById('sectorPanelWrap');
+  if(isMobileDetail()&&n?.classList.contains('active')&&p?.classList.contains('show')){
+    n.classList.remove('active');n.style.borderLeftColor='transparent';setExpanded(n,false);
+    p.classList.remove('show','mobile-inline-detail');wrap?.appendChild(p);return;
+  }
+  document.querySelectorAll('.sec-nav-item').forEach(el=>{el.classList.remove('active');el.style.borderLeftColor='transparent';setExpanded(el,false);});
+  document.querySelectorAll('.sector-panel').forEach(el=>{el.classList.remove('show','mobile-inline-detail');wrap?.appendChild(el);});
   if(n){n.classList.add('active');n.style.borderLeftColor='var(--accent)';}
-  if(p)p.classList.add('show');
+  if(p){p.classList.add('show');setExpanded(n,true);if(isMobileDetail()){n.after(p);p.classList.add('mobile-inline-detail');}}
 }
 
 /* ══ ASSESS ══ */
@@ -3915,9 +3994,11 @@ window.addEventListener('DOMContentLoaded',()=>{
   initializers.forEach(([name,init])=>{
     try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
   });
+  initMobileDetailAccordions();
   if(deepAnchor)scrollToDeepAnchor(deepAnchor);
   if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
 });
+mobileDetailMQ.addEventListener('change',()=>{initMobileDetailAccordions();});
 window.addEventListener('hashchange',()=>{
   if(window.location.hash.startsWith('#mod-')){show(window.location.hash.slice(5));return;}
   const deepAnchor=getDeepAnchor();
@@ -6442,13 +6523,17 @@ function renderLegal(){
   const ladder=document.getElementById('legalLadder');
   if(!ladder)return;
   ladder.innerHTML=LEGAL_TIERS.map((t,i)=>`
-    <div class="legal-rung${i===0?' active':''}" style="--rung-c:${t.c}" onclick="selectLegal('${t.id}')" id="rung-${t.id}">
+    <div class="legal-rung${i===0&&!isMobileDetail()?' active':''}" style="--rung-c:${t.c}" onclick="selectLegal('${t.id}')" id="rung-${t.id}" role="button" tabindex="0" aria-expanded="false" aria-controls="legalPanel" data-keyboard-ready="true" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectLegal('${t.id}')}">
       <div class="legal-rung-tier">${t.tier}</div>
       <div class="legal-rung-name">${t.name}</div>
       <div class="legal-rung-law">${t.law}</div>
       <div class="legal-rung-count">${t.cases.length?t.cases.length+' fall':'—'}</div>
     </div>`).join('');
-  selectLegal('muta');
+  if(isMobileDetail()){
+    const panel=document.getElementById('legalPanel');
+    panel.classList.add('mobile-collapsed');
+    ladder.after(panel);
+  }else selectLegal('muta');
 
   // Spektrum
   const spec=document.getElementById('legalSpectrum');
@@ -6476,9 +6561,15 @@ function renderLegal(){
 function selectLegal(id){
   const t=LEGAL_TIERS.find(x=>x.id===id);
   if(!t)return;
-  document.querySelectorAll('.legal-rung').forEach(r=>r.classList.remove('active'));
   const rung=document.getElementById('rung-'+id);
-  if(rung)rung.classList.add('active');
+  const panel=document.getElementById('legalPanel');
+  if(isMobileDetail()&&rung?.classList.contains('active')&&panel.classList.contains('open')){
+    rung.classList.remove('active');setExpanded(rung,false);
+    panel.classList.remove('open','mobile-inline-detail');panel.classList.add('mobile-collapsed');
+    document.getElementById('legalLadder')?.after(panel);return;
+  }
+  document.querySelectorAll('.legal-rung').forEach(r=>{r.classList.remove('active');setExpanded(r,false);});
+  if(rung){rung.classList.add('active');setExpanded(rung,true);}
 
   const caseRows=t.cases.map(cid=>{
     const ci=legalCaseTitle(cid);
@@ -6490,7 +6581,6 @@ function selectLegal(id){
       <span class="lp-case-year">${ci.year}</span></a>`;
   }).join('');
 
-  const panel=document.getElementById('legalPanel');
   panel.style.setProperty('--lp-c',t.c);
   panel.innerHTML=`
     <div class="lp-tier"><span class="lp-badge">${t.tier}</span></div>
@@ -6503,6 +6593,12 @@ function selectLegal(id){
       <div class="lp-cases-label">${t.cases.length?'Dokumenterade fall i denna kategori — klicka för fallbeskrivningen':'Förebyggande nivå — inga straffrättsliga fall'}</div>
       ${t.cases.length?`<div class="lp-case-list">${caseRows}</div>`:'<div class="lp-none">Den här nivån hanteras innan ett brott begåtts. Se modulerna Verktygslådan och Säkerhetskultur för det förebyggande arbetet.</div>'}
     </div>`;
+  panel.classList.remove('mobile-collapsed');
+  if(isMobileDetail()){
+    rung.after(panel);panel.classList.add('mobile-inline-detail','open');
+  }else{
+    document.getElementById('legalLadder')?.after(panel);panel.classList.remove('mobile-inline-detail','open');
+  }
 }
 
 
