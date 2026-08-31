@@ -928,16 +928,78 @@ html:not(.js-ready) .theory-subnav{display:none}
 .role-risk-field strong{display:block;font-size:12px;font-weight:500;color:var(--text);margin-bottom:5px}
 .role-risk-field span{font-size:10.8px;line-height:1.55;color:var(--muted)}
 .alarp-wrap{display:grid;grid-template-columns:minmax(250px,.9fr) 1.25fr;gap:22px;align-items:stretch;margin-top:24px}
-.alarp-bands{display:flex;flex-direction:column;gap:2px;min-height:315px;clip-path:polygon(50% 0,100% 100%,0 100%)}
-.alarp-band{display:flex;align-items:center;justify-content:center;text-align:center;padding:18px 21%;font-size:11px;line-height:1.45;color:#f5f5f5}
-.alarp-band strong{display:block;font-size:12px;margin-bottom:3px}
-.alarp-band.stop{flex:.78;background:#8F3D2A;padding-top:40px}
-.alarp-band.tolerable{flex:1.35;background:#9A7A2B}
-.alarp-band.monitor{flex:.95;background:#3F7668}
+.alarp-bands{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:315px;padding:10px 0}
+.alarp-band{display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:17px 22px;font-size:11px;line-height:1.45;color:#f5f5f5;clip-path:polygon(7% 0,93% 0,100% 100%,0 100%)}
+.alarp-band strong{display:block;font-size:12px;margin-bottom:4px}
+.alarp-band.stop{width:54%;min-height:86px;background:#8F3D2A}
+.alarp-band.tolerable{width:78%;min-height:108px;background:#9A7A2B}
+.alarp-band.monitor{width:100%;min-height:96px;background:#3F7668}
 .alarp-copy{background:var(--bg-card);border:1px solid var(--border-s);padding:22px}
 .alarp-copy h3{font-family:var(--fd);font-size:21px;font-weight:400;margin:0 0 10px}
 .alarp-copy p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 12px}
 .alarp-rule{padding:13px 15px;background:var(--bg-mid);border-left:2px solid var(--accent);font-size:11.5px;line-height:1.6;color:var(--muted);margin-top:14px}
+
+/* Fördjupning: MICE, Critical Pathway och röda flaggor */
+.case-fold-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:18px 0 28px}
+.case-fold{background:var(--bg-card)}
+.case-fold summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:17px 18px;list-style:none;min-height:58px}
+.case-fold summary::-webkit-details-marker{display:none}
+.case-fold[open] summary{border-bottom:1px solid var(--border-s);background:var(--bg-mid)}
+.case-fold-letter{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid var(--accent);color:var(--accent);font-family:var(--fd);font-size:18px;flex:0 0 auto}
+.case-fold-title{display:block;font-size:12.5px;font-weight:500;color:var(--text);line-height:1.35}
+.case-fold-meta{display:block;font-family:var(--fm);font-size:7.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+.case-fold-body{padding:18px}
+.case-fold-body p{font-size:11.8px;line-height:1.7;color:var(--muted);margin:0 0 10px}
+.case-fold-key{padding:11px 13px;background:var(--bg-mid);border-left:2px solid var(--accent);font-size:11.3px;line-height:1.62;color:var(--muted);margin:12px 0}
+.case-fold-key strong{color:var(--text);font-weight:500}
+.case-fold-source{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.case-fold-source a{font-family:var(--fm);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:7px 9px}
+.case-fold-source a:hover{text-decoration:underline}
+.model-source-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.source-figure{margin:0;background:#fff;border:1px solid var(--border-s);padding:12px}
+.source-figure img{display:block;width:100%;height:auto;background:#fff}
+.source-figure figcaption{font-size:10.8px;line-height:1.58;color:#4f5663;padding:11px 4px 2px}
+.source-figure-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.source-figure-actions a{font-family:var(--fm);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:#233f61;text-decoration:none;border:1px solid #cfd6df;padding:7px 9px;background:#f7f9fb}
+.source-figure-actions a:hover{text-decoration:underline}
+.critical-six{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:18px 0}
+.critical-six article{background:var(--bg-card);padding:17px 16px;border-top:2px solid var(--stage-c,var(--accent))}
+.critical-six span{font-family:var(--fm);font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--stage-c,var(--accent))}
+.critical-six h3{font-family:var(--fd);font-size:18px;font-weight:400;margin:7px 0 5px;color:var(--text)}
+.critical-six p{font-size:10.8px;line-height:1.55;color:var(--muted);margin:0}
+.stage-folds{display:flex;flex-direction:column;gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:0 0 28px}
+.stage-fold{background:var(--bg-card)}
+.stage-fold summary{cursor:pointer;padding:15px 18px;list-style:none;display:grid;grid-template-columns:34px minmax(150px,.7fr) 1.3fr;gap:12px;align-items:center}
+.stage-fold summary::-webkit-details-marker{display:none}
+.stage-fold[open] summary{background:var(--bg-mid);border-bottom:1px solid var(--border-s)}
+.stage-fold-n{font-family:var(--fd);font-size:20px;color:var(--accent)}
+.stage-fold-t{font-size:12.5px;font-weight:500;color:var(--text)}
+.stage-fold-s{font-size:10.8px;line-height:1.5;color:var(--muted)}
+.stage-fold-body{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;padding:18px}
+.stage-fold-body p{font-size:11.8px;line-height:1.7;color:var(--muted);margin:0 0 10px}
+.stage-fold-body h4{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.stage-fold-body ul{margin:0;padding-left:17px}
+.stage-fold-body li{font-size:11.3px;line-height:1.6;color:var(--muted);margin-bottom:5px}
+.red-flag-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:20px 0 28px}
+.red-flag-card{background:var(--bg-card)}
+.red-flag-card summary{cursor:pointer;padding:17px 18px;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.red-flag-card summary::-webkit-details-marker{display:none}
+.red-flag-card[open] summary{background:var(--bg-mid);border-bottom:1px solid var(--border-s)}
+.red-flag-card summary strong{font-size:12.5px;font-weight:500;color:var(--text)}
+.red-flag-card summary span{font-family:var(--fm);font-size:7.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.red-flag-body{padding:18px}
+.red-flag-body p{font-size:11.8px;line-height:1.68;color:var(--muted);margin:0 0 10px}
+.red-flag-body dl{margin:13px 0 0}
+.red-flag-body dt{font-family:var(--fm);font-size:7.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-top:11px}
+.red-flag-body dd{font-size:11.3px;line-height:1.62;color:var(--muted);margin:4px 0 0}
+.red-flag-body .source-figure{margin-top:15px}
+.model-reading-note{padding:14px 16px;background:rgba(74,123,111,.07);border-left:2px solid var(--green);font-size:11.8px;line-height:1.68;color:var(--muted);margin:16px 0}
+.model-reading-note strong{color:var(--text);font-weight:500}
+.article-takeaways{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin-top:14px}
+.article-takeaways>div{background:var(--bg-card);padding:18px}
+.article-takeaways h4{font-size:12.5px;font-weight:500;color:var(--text);margin:0 0 8px}
+.article-takeaways p,.article-takeaways li{font-size:11.5px;line-height:1.65;color:var(--muted)}
+.article-takeaways ul{margin:0;padding-left:17px}
 
 
 /* ═══ SÄKERHETSKULTUR — interaktiv ═══ */
@@ -1045,9 +1107,16 @@ html:not(.js-ready) .theory-subnav{display:none}
   .role-risk-fields{grid-template-columns:1fr 1fr}
 }
 @media(max-width:650px){
-  .policy-scope,.policy-components,.decision-gates,.role-risk-flow,.role-risk-fields,.culture-maturity,.culture-evidence,.reporting-loop,.personality-grid,.alarp-wrap{grid-template-columns:1fr}
+  .policy-scope,.policy-components,.decision-gates,.role-risk-flow,.role-risk-fields,.culture-maturity,.culture-evidence,.reporting-loop,.personality-grid,.alarp-wrap,.case-fold-grid,.model-source-grid,.critical-six,.red-flag-grid,.article-takeaways{grid-template-columns:1fr}
   .policy-core{grid-template-columns:1fr;gap:5px}
-  .alarp-bands{min-height:280px}
+  .alarp-bands{min-height:0;padding:4px 0}
+  .alarp-band{padding:15px 18px;clip-path:polygon(4% 0,96% 0,100% 100%,0 100%)}
+  .alarp-band.stop{width:78%;min-height:84px}
+  .alarp-band.tolerable{width:90%;min-height:106px}
+  .alarp-band.monitor{min-height:92px}
+  .stage-fold summary{grid-template-columns:30px 1fr}
+  .stage-fold-s{grid-column:1/-1;padding-left:42px}
+  .stage-fold-body{grid-template-columns:1fr}
 }
 
 /* ═══ MOBIL LÄSBARHET OCH ÅTKOMST ═══ */
@@ -2135,6 +2204,45 @@ button,[onclick]{touch-action:manipulation}
       <div class="theory-card-desc">Behov av erkännande, status, spänning eller revansch efter upplevd orättvisa. Kategorin kan överlappa med de tre andra drivkrafterna.</div>
     </div>
   </div>
+  <div class="model-reading-note reveal"><strong>Läs MICE som en intervjustruktur, inte ett test.</strong> Motivet fastställs först genom verifierade handlingar, kommunikation, betalningar, kontakter och andra omständigheter. Samma fall kan röra flera bokstäver och drivkraften kan förändras: en frivillig första tjänst kan exempelvis följas av betalning eller utpressning. Fallen nedan är därför analytiska exempel, inte facit om en persons inre.</div>
+  <div class="case-fold-grid reveal" aria-label="Fyra fördjupande fall kopplade till MICE-modellen">
+    <details class="case-fold">
+      <summary><span class="case-fold-letter">M</span><span><span class="case-fold-title">A.A. – pengar, åtkomst och synlig livsstilsförändring</span><span class="case-fold-meta">Money · verifierad dom · motivbilden är en analys</span></span></summary>
+      <div class="case-fold-body">
+        <p>Ames arbetade inom CIA och erbjöd 1985 Sovjetunionen information. Under ungefär nio år utnyttjade han legitim åtkomst till mycket känsliga uppgifter. CIA beskriver hur en extravagant livsstil bidrog till misstankarna och hur den efterföljande utredningen ledde till gripandet 1994.</p>
+        <p>Fallet illustrerar varför ”ekonomiskt motiv” inte bör reduceras till att leta efter skulder. Det centrala är den verifierbara kombinationen av oförklarlig ekonomi, åtkomst, möjlighet, kontakter och konkreta informationsrörelser.</p>
+        <div class="case-fold-key"><strong>Analysnyckel:</strong> skilj ekonomisk stress från oförklarlig ekonomisk förändring. Varken skuld eller konsumtion bevisar illojalitet; det är samstämmiga omständigheter och handlingar som bär bedömningen.</div>
+        <div class="case-fold-source"><a href="https://www.cia.gov/legacy/museum/artifact/office-computer-used-by-aldrich-ames/" target="_blank" rel="noopener noreferrer">CIA – öppna originalkällan ↗</a><a href="https://www.fbi.gov/investigate/counterintelligence/major-cases" target="_blank" rel="noopener noreferrer">FBI – ärendeöversikt ↗</a></div>
+      </div>
+    </details>
+    <details class="case-fold">
+      <summary><span class="case-fold-letter">I</span><span><span class="case-fold-title">A.M. – övertygelse, expertroll och långvarigt missbruk</span><span class="case-fold-meta">Ideology · verifierad dom · flera mekanismer möjliga</span></span></summary>
+      <div class="case-fold-body">
+        <p>Montes var senior Kuba-analytiker vid DIA och erkände spioneri för Kuba. FBI beskriver att hennes expertposition gav omfattande åtkomst och att hon både lämnade uppgifter och påverkade hur den amerikanska staten bedömde Kuba.</p>
+        <p>Fallet används ofta som ett ideologiskt exempel. För en organisation är den säkrare slutsatsen inte att kartlägga åsikter, utan att kontrollera om expertmakt, källval, åtkomst och avvikande informationshantering kan granskas oberoende.</p>
+        <div class="case-fold-key"><strong>Analysnyckel:</strong> politiska och religiösa uppfattningar är inte i sig riskindikatorer. Undersök dokumenterade lojalitetskonflikter först när de får en konkret koppling till uppdrag, dold extern styrning eller missbrukad åtkomst.</div>
+        <div class="case-fold-source"><a href="https://www.fbi.gov/history/cases-and-criminals/ana-montes" target="_blank" rel="noopener noreferrer">FBI – öppna originalkällan ↗</a></div>
+      </div>
+    </details>
+    <details class="case-fold">
+      <summary><span class="case-fold-letter">C</span><span><span class="case-fold-title">C.L. – relation, kompromettering och minskat handlingsutrymme</span><span class="case-fold-meta">Coercion / compromise · historiskt rättsfall</span></span></summary>
+      <div class="case-fold-body">
+        <p>Lonetree var marinkårsvakt vid USA:s ambassad i Moskva och dömdes för spioneri. Fallet har blivit ett klassiskt exempel på hur en personlig relation kan användas för närmande och hur en redan genomförd gränsöverträdelse kan skapa beroende, skam eller rädsla för avslöjande.</p>
+        <p>Den praktiska lärdomen är att erbjuda en tidig väg ut. Den som har brutit mot en kontakt- eller rapporteringsregel kan annars tro att fortsatt samarbete med en antagonist är det enda alternativet.</p>
+        <div class="case-fold-key"><strong>Analysnyckel:</strong> en utlandsrelation är inte en avvikelse. Relevant blir dold styrning, otillbörliga förfrågningar, överföring av information eller hot – bedömda med kulturkompetens och rättssäkra processer.</div>
+        <div class="case-fold-source"><a href="https://www.quantico.marines.mil/News/Article/658139/ncis-celebrates-50-years/" target="_blank" rel="noopener noreferrer">US Marine Corps – ärendehänvisning ↗</a><a href="https://oig.justice.gov/sites/default/files/legacy/special/9704.htm" target="_blank" rel="noopener noreferrer">DOJ OIG – öppna originalkällan ↗</a></div>
+      </div>
+    </details>
+    <details class="case-fold">
+      <summary><span class="case-fold-letter">E</span><span><span class="case-fold-title">R.H. – status, kontroll och ekonomisk ersättning</span><span class="case-fold-meta">Ego + Money · överlappande motiv</span></span></summary>
+      <div class="case-fold-body">
+        <p>Hanssen var FBI-agent och lämnade under lång tid mycket känsliga uppgifter till Sovjetunionen och Ryssland. FBI uppger att han fick mer än 1,4 miljoner dollar i kontanter och diamanter. Samtidigt har fallet analyserats i termer av erkännande, överlägsenhet och kontroll – vilket visar hur dåligt en enda MICE-bokstav kan fånga ett långt förlopp.</p>
+        <p>Det observerbara låg i åtkomsten, informationsöverföringen, kommunikationsmönstret och de hemliga överlämningsplatserna. Efterhandsförklaringar om ego får inte ersätta den beviskedjan.</p>
+        <div class="case-fold-key"><strong>Analysnyckel:</strong> använd ego som en fråga om möjlig rationalisering eller belöning, inte som en personlighetsetikett. Pröva alltid konkurrerande motiv och vad som faktiskt ändrades över tid.</div>
+        <div class="case-fold-source"><a href="https://www.fbi.gov/history/cases-and-criminals/robert-hanssen" target="_blank" rel="noopener noreferrer">FBI – öppna originalkällan ↗</a><a href="https://www.fbi.gov/history/artifacts/robert-hanssen-business-cards-chalk-and-thumbtacks" target="_blank" rel="noopener noreferrer">FBI – ersättning och tillvägagångssätt ↗</a></div>
+      </div>
+    </details>
+  </div>
   <div class="op-source-row reveal"><a href="https://www.foi.se/rest-api/report/FOI-R--5866--SE" target="_blank" rel="noopener">FOI-R--5866--SE — MICE, överlappande motiv och modellens begränsningar ↗</a></div>
   <details class="beskt-details reveal" style="margin:16px 0 32px">
     <summary>Presentationsbild · MICE och kända insiderfall</summary>
@@ -2208,6 +2316,19 @@ button,[onclick]{touch-action:manipulation}
       <div class="model-step"><div class="model-step-k">04 · Respons</div><div class="model-step-t">Agera eller missa</div><div class="model-step-p">Kollegor och funktioner kan erbjuda stöd, kontrollera, rapportera – eller låta signalerna stanna.</div></div>
       <div class="model-step"><div class="model-step-k">05 · Utfall</div><div class="model-step-t">Avbruten eller fullföljd väg</div><div class="model-step-p">Tidig respons kan minska skada; utebliven respons kan bidra till fortsatt eller eskalerat beteende.</div></div>
     </div>
+    <div class="model-source-grid">
+      <figure class="source-figure">
+        <img src="stressorer-till-insiderhot.png" alt="Historisk modell där personlig grundsårbarhet, privata och arbetsrelaterade stressorer samt mindre och allvarligare överträdelser kan föregå ett insiderhot" loading="lazy">
+        <figcaption>INSA:s pathway-modell från 2017 visar en möjlig eskalation under ökande stress. Bilden beskriver ett efterhandsmönster – inte att stress eller sårbarhet förutsäger en skadlig handling.</figcaption>
+        <div class="source-figure-actions"><a href="stressorer-till-insiderhot.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a><a href="https://www.insaonline.org/detail-pages/news/2017/04/10/assessing-the-mind-of-the-malicious-insider-989" target="_blank" rel="noopener noreferrer">INSA – originalkällan ↗</a></div>
+      </figure>
+      <figure class="source-figure">
+        <img src="kritisk-vag-insiderhot.png" alt="Femdelad modell med personliga förutsättningar, stressorer, uppmärksammade beteenden, organisationens reaktioner och möjlig hotaktion" loading="lazy">
+        <figcaption>En utvecklad arbetsbild från boken. Den viktigaste delen är den grå länken: verksamhetens respons kan dämpa, missa eller i värsta fall eskalera situationen.</figcaption>
+        <div class="source-figure-actions"><a href="kritisk-vag-insiderhot.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/setting-foundations-five-principles-shared-approach-insider-risk" target="_blank" rel="noopener noreferrer">NPSA 2026 – Critical Pathway ↗</a></div>
+      </figure>
+    </div>
+    <div class="model-reading-note"><strong>Två saker måste hållas isär:</strong> en stressor eller ett personlighetsdrag är en möjlig bakgrundsfaktor; en konkret överträdelse, otillåten åtkomst eller hotfull planering är ett observerbart beteende. Åtgärden ska styras av beteendets allvar, åtkomsten, konsekvensen och alternativa förklaringar – inte av en psykologisk etikett.</div>
   </div>
   <div class="edu-stack reveal">
     <details class="edu-card">
@@ -2226,6 +2347,81 @@ button,[onclick]{touch-action:manipulation}
       <div class="edu-body"><div class="edu-title">James Shappell om multidisciplinärt arbete</div><p>Använd som diskussionsunderlag om hur beteendeindikatorer, stressorer, dataanalys, organisatoriskt klimat och flera kompetenser kan kombineras utan att en enskild datapunkt blir ett automatiskt beslut.</p><div class="source-line"><span class="source-kind">Video</span><a class="source-url" href="https://www.youtube.com/watch?v=FzqR4E56e4g" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=FzqR4E56e4g</a></div><div class="source-line"><span class="source-kind">Evenemangssida</span><a class="source-url" href="https://www.insaonline.org/detail-pages/event/2025/08/26/default-calendar/coffee—conversation-with-james-shappell" target="_blank" rel="noopener noreferrer">https://www.insaonline.org/detail-pages/event/2025/08/26/default-calendar/coffee—conversation-with-james-shappell</a></div></div>
     </details>
   </div>
+
+  <div class="reveal" style="margin-top:48px" id="development-curve">
+    <p class="eyebrow">Bokens utvecklingskurva · sex möjliga skeden</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Från missnöje till skadlig handling – <em>med brytpunkter hela vägen</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:18px">Kurvan hjälper läsaren att ordna observationer i tid. Den är inte en naturregel: personer kan stanna, backa, hoppa över steg eller aldrig lämna ett legitimt missnöje. Bedömningen ska därför utgå från vad som faktiskt har sagts eller gjorts, inte från antagandet att nästa steg kommer.</p>
+    <figure class="source-figure" style="margin-bottom:18px">
+      <img src="utvecklingskurva-skadlig-handling.png" alt="Vågformad utvecklingskurva med sex steg: missnöje och idéformning, förberedelse, utforskning, experimentering, handling och flyktplan" loading="lazy">
+      <figcaption>Utvecklingskurvan från boken. Den vågformade linjen betonar att förloppet inte är jämnt och att intervention kan ske vid flera brytpunkter.</figcaption>
+      <div class="source-figure-actions"><a href="utvecklingskurva-skadlig-handling.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div>
+    </figure>
+    <div class="critical-six" role="list" aria-label="Sex steg i utvecklingskurvan">
+      <article role="listitem" style="--stage-c:#7A9A48"><span>01 · Tanke</span><h3>Missnöje och idéformning</h3><p>En upplevd oförrätt eller stress får en konkret måltavla och börjar omsättas i en idé.</p></article>
+      <article role="listitem" style="--stage-c:#6E8E43"><span>02 · Plan</span><h3>Förberedelse</h3><p>Informationsinhämtning, material, verktyg eller utökad åtkomst kopplas till ett möjligt tillvägagångssätt.</p></article>
+      <article role="listitem" style="--stage-c:#617F3E"><span>03 · Val</span><h3>Utforskning</h3><p>Personen söker sårbarheter, möjliga mål eller medhjälpare och närmar sig en brytpunkt.</p></article>
+      <article role="listitem" style="--stage-c:#B8973A"><span>04 · Test</span><h3>Experimentering</h3><p>Planen prövas genom spaning, test, repetition eller försök att kringgå en barriär.</p></article>
+      <article role="listitem" style="--stage-c:#C45C2E"><span>05 · Skada</span><h3>Utförande</h3><p>Betrodd tillgång och verksamhetskunskap används för att genomföra handlingen.</p></article>
+      <article role="listitem" style="--stage-c:#A94932"><span>06 · Efterspel</span><h3>Flykt och döljande</h3><p>Spår kan undanröjas, information föras bort eller en fysisk och digital reträtt förberedas.</p></article>
+    </div>
+  </div>
+  <div class="stage-folds reveal">
+    <details class="stage-fold">
+      <summary><span class="stage-fold-n">01</span><span class="stage-fold-t">Missnöje och idéformning</span><span class="stage-fold-s">Skilj legitim kritik från hot, fixering och konkreta avsikter.</span></summary>
+      <div class="stage-fold-body"><div><h4>Fördjupning</h4><p>Missnöje kan vara berättigat och är i sig varken illojalt eller farligt. Relevansen ökar först när personen går från en känsla till konkreta föreställningar om hämnd, en utpekad måltavla, återkommande hot eller en plan som påverkar människor, beslut, information eller drift.</p><p>Följ upp aktivt och respektfullt. En rättvis arbetsprocess, möjlighet att bli hörd och synliga alternativ kan bryta ett förlopp. Samtidigt måste konkreta hot dokumenteras och triageras.</p></div><div><h4>Frågor att pröva</h4><ul><li>Vad är ordagrant sagt eller gjort – och i vilket sammanhang?</li><li>Finns mål, tid, medel eller återkommande fixering?</li><li>Vilken arbetsmiljö- eller konfliktfråga behöver hanteras parallellt?</li></ul></div></div>
+    </details>
+    <details class="stage-fold">
+      <summary><span class="stage-fold-n">02</span><span class="stage-fold-t">Förberedelse</span><span class="stage-fold-s">Planen får resurser: kartläggning, verktyg, material eller behörighet.</span></summary>
+      <div class="stage-fold-body"><div><h4>Fördjupning</h4><p>Förberedelser kan bestå av informationsinsamling om larm, passersystem, IT-miljöer eller organisationens upptäcktsförmåga. Det kan också handla om att skaffa utrustning, stjäla inloggningsuppgifter eller försöka höja egna privilegier.</p><p>Samma aktivitet kan vara legitim i en teknisk eller säkerhetsrelaterad roll. Arbetsbehov, uppdrag, godkännande och spårbarhet måste därför kontrolleras innan slutsatser dras.</p></div><div><h4>Brytpunkt</h4><ul><li>Verifiera arbetsbehov och tillstånd.</li><li>Säkra relevanta loggar utan att sprida misstanken.</li><li>Pröva stöd, begränsad åtkomst och oberoende granskning proportionerligt.</li></ul></div></div>
+    </details>
+    <details class="stage-fold">
+      <summary><span class="stage-fold-n">03</span><span class="stage-fold-t">Utforskning</span><span class="stage-fold-s">Mål, sårbarheter, alternativa vägar och möjliga medhjälpare undersöks.</span></summary>
+      <div class="stage-fold-body"><div><h4>Fördjupning</h4><p>I detta skede kan informationssökningen bli mer målmedveten: vilka data ska föras ut, vilken process ska påverkas, vilken person eller tillgång är målet och var finns den svagaste kontrollen? Även försök att rekrytera andra kan förekomma.</p><p>Begreppet brytpunkt får inte användas för att påstå att ett beslut är psykologiskt fastställt. Organisationen behöver i stället jämföra observerade handlingar med roll, behörighet, tidigare mönster och alternativa förklaringar.</p></div><div><h4>Brytpunkt</h4><ul><li>Koppla samman HR-, säkerhets- och IT-observationer med tydligt mandat.</li><li>Kontrollera om flera små avvikelser avser samma mål.</li><li>Skydda berörda personer och tillgångar om risken är konkret.</li></ul></div></div>
+    </details>
+    <details class="stage-fold">
+      <summary><span class="stage-fold-n">04</span><span class="stage-fold-t">Experimentering</span><span class="stage-fold-s">Planens duglighet prövas genom test, repetition eller gränsöverskridande försök.</span></summary>
+      <div class="stage-fold-body"><div><h4>Fördjupning</h4><p>Testning kan synas som obehöriga inloggningsförsök, återkommande passageförsök, prov av larm, ovanliga utskrifter eller försök att dölja aktivitet. En upptäckt överträdelse som lämnas helt utan respons kan normalisera nästa försök.</p><p>Responsen måste vara konsekvent men inte mekaniskt bestraffande. Ett legitimt testuppdrag, felkonfiguration eller utbildningsbrist kan se likadant ut i en logg.</p></div><div><h4>Brytpunkt</h4><ul><li>Bekräfta auktorisation och bevara teknisk bevisning.</li><li>Stoppa riskfylld aktivitet och använd fyrögonprincip.</li><li>Dokumentera varför kontroll-, stöd- eller disciplinåtgärd valdes.</li></ul></div></div>
+    </details>
+    <details class="stage-fold">
+      <summary><span class="stage-fold-n">05</span><span class="stage-fold-t">Utförande</span><span class="stage-fold-s">Den skadliga handlingen pågår eller har precis genomförts.</span></summary>
+      <div class="stage-fold-body"><div><h4>Fördjupning</h4><p>Prioriteten flyttas till liv och hälsa, skadebegränsning, kontinuitet och bevisbevarande. Intern utredning får inte störa en polisiär förundersökning eller utsätta rapportörer och andra berörda för ytterligare risk.</p></div><div><h4>Omedelbart</h4><ul><li>Aktivera incident- och krisledning enligt fastställd plan.</li><li>Kontakta 112 vid akut fara och berörd myndighet när skyldighet eller behov finns.</li><li>Avgränsa åtkomst, säkra loggar och dokumentera besluten.</li></ul></div></div>
+    </details>
+    <details class="stage-fold">
+      <summary><span class="stage-fold-n">06</span><span class="stage-fold-t">Flykt, döljande och återhämtning</span><span class="stage-fold-s">Spår, åtkomst, data och verksamhetens återställningsförmåga står i centrum.</span></summary>
+      <div class="stage-fold-body"><div><h4>Fördjupning</h4><p>Efter en handling kan personen försöka radera loggar, föra bort material, skapa en falsk förklaring eller lämna arbetsplatsen. Organisationen behöver samtidigt återställa funktion, skydda drabbade och kontrollera om samma sårbarhet finns kvar.</p></div><div><h4>Efterspel</h4><ul><li>Spärra fysisk och digital åtkomst samordnat.</li><li>Bevara bevis, versionshistorik och beslutslogg.</li><li>Genomför en oberoende efteranalys och återför lärande utan att röja skyddade uppgifter.</li></ul></div></div>
+    </details>
+  </div>
+
+  <div class="reveal" id="five-red-flags" style="margin-top:46px">
+    <p class="eyebrow">Boken · fem illustrerade exempel</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Röda flaggor – <em>från karaktärstyp till observerbart mönster</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:16px">Bokens fem bilder är bevarade som fördjupande originalillustrationer. Webbtexten omformulerar dem eftersom etiketter som ”bedragaren” eller ”sabotören” lätt får en organisation att leta efter en personlighet i stället för att bedöma bevis, åtkomst och beteendeförändring.</p>
+    <div class="model-reading-note"><strong>Röd flagg betyder kontrollfråga – inte skuld.</strong> Dokumentera observation, källa, tid, arbetsbehov och möjlig konsekvens. Pröva alternativa förklaringar och låt alltid en proportionerlig, rättssäker process avgöra nästa steg.</div>
+  </div>
+  <div class="red-flag-grid reveal">
+    <details class="red-flag-card">
+      <summary><strong>1. Återkommande slarv och kringgående</strong><span>Öppna fördjupning</span></summary>
+      <div class="red-flag-body"><p>Fokusera på upprepade, dokumenterade avsteg: obevakad utrustning, osäker informationsdelning, privata verktyg utan godkännande, utebliven rapportering eller samma fel trots tydlig återkoppling.</p><dl><dt>Alternativa förklaringar</dt><dd>Orimlig arbetsbelastning, otydlig process, otillgängliga verktyg, kompetensbrist eller ett legitimt akutläge.</dd><dt>Proportionerlig respons</dt><dd>Gör säkert arbetssätt möjligt, följ upp samma krav för alla och skala upp först när mönstret, konsekvensen eller avsikten motiverar det.</dd></dl><figure class="source-figure"><img src="rod-flagg-slarv.png" alt="Bokens originalillustration Den vårdslöse med exempel på slarv, regelbrott och osäker informationshantering" loading="lazy"><figcaption>Originalillustration från boken. Bildens personlighetsspråk ska läsas kritiskt; den observerbara webbtexten ovan är styrande.</figcaption><div class="source-figure-actions"><a href="rod-flagg-slarv.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+    </details>
+    <details class="red-flag-card">
+      <summary><strong>2. Otillåten åtkomst eller informationsutförsel</strong><span>Öppna fördjupning</span></summary>
+      <div class="red-flag-body"><p>Exempel är åtkomst utan arbetsbehov, privilegiehöjning, ovanliga mängder utskrifter eller nedladdningar, förbjuden inspelningsutrustning och försök att dölja eller radera spår.</p><dl><dt>Alternativa förklaringar</dt><dd>Nytt uppdrag, trasig behörighetsmodell, felaktigt larm, systemmigration eller godkänd felsökning.</dd><dt>Proportionerlig respons</dt><dd>Verifiera uppdrag och behov, säkra loggar, begränsa åtkomst vid konkret risk och låt oberoende funktion pröva slutsatsen.</dd></dl><figure class="source-figure"><img src="rod-flagg-information.png" alt="Bokens originalillustration Informationstjuven med exempel på otillåten åtkomst, kopiering och överföring" loading="lazy"><figcaption>Originalillustration från boken. Ett tekniskt mönster måste alltid sättas i relation till roll, tillstånd och arbetsbehov.</figcaption><div class="source-figure-actions"><a href="rod-flagg-information.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+    </details>
+    <details class="red-flag-card">
+      <summary><strong>3. Testning, sabotage eller kontrollpåverkan</strong><span>Öppna fördjupning</span></summary>
+      <div class="red-flag-body"><p>Relevanta observationer kan vara obehöriga tester av larm och passage, manipulerade inställningar, avstängd loggning, oförklarliga fel eller upprepade försök att nå tekniska och fysiska sårbarheter.</p><dl><dt>Alternativa förklaringar</dt><dd>Auktoriserat penetrationstest, akut driftåtgärd, mänskligt fel eller bristfällig förändringshantering.</dd><dt>Proportionerlig respons</dt><dd>Stoppa pågående risk, bevara teknisk bevisning och kontrollera auktorisation innan avsikt tillskrivs.</dd></dl><figure class="source-figure"><img src="rod-flagg-sabotage.png" alt="Bokens originalillustration Sabotören med exempel på testning av sårbarheter och skadlig påverkan på system och egendom" loading="lazy"><figcaption>Originalillustration från boken. Bedöm handlingens spår och konsekvens – inte om en person liknar en illustrerad typ.</figcaption><div class="source-figure-actions"><a href="rod-flagg-sabotage.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+    </details>
+    <details class="red-flag-card">
+      <summary><strong>4. Bedrägeri, jäv eller dold intressekonflikt</strong><span>Öppna fördjupning</span></summary>
+      <div class="red-flag-body"><p>Följ sakliga avvikelser som falska uppgifter, styrning av leverantör för egen vinning, ovanligt kontrollövertag, återkommande undantag, odokumenterade relationer eller transaktioner utan rimligt verksamhetsskäl.</p><dl><dt>Alternativa förklaringar</dt><dd>Administrativa fel, otydliga jävsregler, bristande kompetens eller en relation som redan är korrekt deklarerad.</dd><dt>Proportionerlig respons</dt><dd>Separera mandat, genomför oberoende kontroll och dokumentera både omständigheter som talar för och emot misstanken.</dd></dl><figure class="source-figure"><img src="rod-flagg-bedrageri.png" alt="Bokens originalillustration Bedragaren med exempel på falska uppgifter, intressekonflikt och ekonomiska oegentligheter" loading="lazy"><figcaption>Originalillustration från boken. Privata ekonomiska uppgifter får bara behandlas med rättsligt stöd och tydligt ändamål.</figcaption><div class="source-figure-actions"><a href="rod-flagg-bedrageri.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+    </details>
+    <details class="red-flag-card" style="grid-column:1/-1">
+      <summary><strong>5. Uttalade hot, våldsplanering eller akut självskaderisk</strong><span>Öppna fördjupning</span></summary>
+      <div class="red-flag-body"><p>Konkreta hot, målfixering, planering, införskaffade medel, provhandlingar eller uttalanden om omedelbar självskada kräver snabb triage. Psykisk ohälsa eller en diagnos är däremot inte i sig en indikator på våld eller illojalitet.</p><dl><dt>Alternativa förklaringar</dt><dd>Ord kan vara citerade fel, ironiska eller ryckta ur sitt sammanhang – men ett konkret och möjligt hot ska ändå aldrig lämnas utan bedömning.</dd><dt>Proportionerlig respons</dt><dd>Vid omedelbar fara: skydda berörda och ring 112. I andra fall används organisationens hot- och incidentprocess med kompetens från säkerhet, HR, arbetsmiljö, juridik och vid behov vård eller polis.</dd></dl><figure class="source-figure"><img src="rod-flagg-vald.png" alt="Bokens originalillustration om våld eller självskada med exempel på hotfulla och gränsöverskridande beteenden" loading="lazy"><figcaption>Originalillustration från boken. Den kliniska bedömningen hör till vården; arbetsplatsen bedömer konkreta uttalanden, handlingar, medel och skyddsbehov.</figcaption><div class="source-figure-actions"><a href="rod-flagg-vald.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+    </details>
+  </div>
+  <div class="op-source-row reveal"><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/setting-foundations-five-principles-shared-approach-insider-risk" target="_blank" rel="noopener noreferrer">NPSA 2026 – Critical Pathway to Insider Risk ↗</a><a href="https://www.cdse.edu/Training/Job-Aids/Insider-Threat-Job-Aids/" target="_blank" rel="noopener noreferrer">CDSE 2024 – Critical Pathway och rapportering ↗</a><a href="https://www.cisa.gov/topics/physical-security/insider-threat-mitigation" target="_blank" rel="noopener noreferrer">CISA – Insider Threat Mitigation ↗</a></div>
 
   </div>
 
@@ -4762,6 +4958,21 @@ function showHandle(id,options={}){
       </div>
     </div>
 
+    <div class="edu-stack reveal" style="margin:0 0 42px">
+      <details class="edu-card">
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Fördjupning · Källvärdering och konfidens i en intern utredning</span><span class="edu-summary-meta">Bearbetat från bokens metodavsnitt</span></summary>
+        <div class="edu-body">
+          <div class="edu-title">Tre skilda frågor före slutsatsen</div>
+          <p><strong>1. Källans tillförlitlighet:</strong> hur nära händelsen befann sig källan, vilken kompetens hade den, finns möjlig partiskhet och hur har tidigare uppgifter fallit ut? <strong>2. Uppgiftens sakriktighet:</strong> stöds innehållet av logg, dokument, tidslinje eller en oberoende källa, och har det återberättats i flera led? <strong>3. Analysens konfidens:</strong> hur starkt är det samlade underlaget och vilka avgörande antaganden återstår?</p>
+          <div class="article-takeaways">
+            <div><h4>Hög konfidens</h4><p>Flera oberoende och tillförlitliga källor stödjer samma centrala omständigheter. Avgörande antaganden är få och motbevis har prövats.</p><h4 style="margin-top:13px">Medel konfidens</h4><p>Slutsatsen är trovärdig men underlaget är ofullständigt, kan tolkas på flera sätt eller saknar oberoende stöd i någon viktig del.</p></div>
+            <div><h4>Låg konfidens</h4><p>Få eller svaga källor, motsägelser eller betydande antaganden gör att slutsatsen lätt kan förändras när ny information tillkommer.</p><h4 style="margin-top:13px">Skriv ut osäkerheten</h4><p>Ange vad som skulle kunna höja eller sänka konfidensen. ”Går inte att bedöma” är bättre än skenbar precision.</p></div>
+          </div>
+          <div class="model-reading-note"><strong>Använd inte som personpoäng:</strong> koder eller konfidensgrader beskriver underlagets kvalitet – inte hur ”farlig” en person är. En konkret akut risk kan kräva skyddsåtgärd även när motivet är osäkert; en stark källa gör samtidigt inte en obevisad tolkning till fakta.</div>
+        </div>
+      </details>
+    </div>
+
     <!-- UTREDNINGSFRÅGOR -->
     <div class="reveal">
       <p class="eyebrow">Utredningsfrågor · Checklista</p>
@@ -6835,7 +7046,26 @@ function showHandle(id,options={}){
           <ul><li>Dokumentera handling, tid, källa och konsekvens — inte en etikett.</li><li>Koppla till faktisk åtkomst, handlingsförmåga och berört skyddsvärde.</li><li>Pröva alternativa förklaringar och välj arbetsmiljö-, stöd- eller säkerhetsåtgärd efter behov.</li></ul>
         </div>
       </div>
+      <div style="padding:18px;background:var(--bg-card)">
+        <figure class="source-figure">
+          <img src="personlighet-sarbarhet-exploatering.png" alt="Venn-diagram från boken med tre överlappande områden: personlighet, sårbarheter och risk för exploatering, omgivna av exempel på möjliga observationer" loading="lazy">
+          <figcaption><strong>Kritisk läsning av bokens bild:</strong> diagrammet kan användas för att fråga hur egenskaper, livssituation och extern påverkan samspelar. Det får inte användas som poänglista eller profil. Flera formuleringar i bilden är värderande; i praktisk bedömning ska de översättas till verifierbara handlingar, förändringar och relationer.</figcaption>
+          <div class="source-figure-actions"><a href="personlighet-sarbarhet-exploatering.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div>
+        </figure>
+      </div>
       <div style="padding:15px 20px;font-size:11.5px;color:var(--muted);line-height:1.65"><strong style="color:var(--text);font-weight:500">Mandatgräns:</strong> chefer, säkerhetsfunktioner och kollegor ska inte ställa psykiatriska diagnoser. Om ett konkret beteende skapar omedelbar risk hanteras beteendet och skyddsbehovet direkt; kliniska bedömningar lämnas till behörig vårdprofession. Integritetskänslig övervakning kräver juridisk och dataskyddsmässig prövning.</div>
+    </details>
+    <details class="personality-guardrail" style="margin-top:2px">
+      <summary>Fördjupning · Vad INSA-artikeln från 2017 tillför – och vad som inte bör importeras rakt av</summary>
+      <div style="padding:20px">
+        <p style="font-size:12px;line-height:1.72;color:var(--muted);margin:0">INSA:s <em>Assessing the Mind of the Malicious Insider</em> sammanför forskning om kritiska utvecklingsvägar, kontraproduktiva arbetsbeteenden, stressorer och organisationens respons. Rapportens starkaste bidrag är tidsdimensionen: en allvarlig handling kan i efterhand föregås av flera mindre, sinsemellan relaterade beteenden som olika delar av organisationen har sett men inte satt samman.</p>
+        <div class="article-takeaways">
+          <div><h4>Det som är användbart</h4><ul><li>Sök mönster och förändring över tid, inte en ensam datapunkt.</li><li>Skilj beteenden riktade mot organisationen från beteenden riktade mot människor – och bedöm allvar och konsekvens.</li><li>Samla HR, säkerhet, IT, juridik och arbetsmiljö under tydligt mandat.</li><li>Gör stöd och tidig intervention till en faktisk motåtgärd.</li><li>Behandla verksamhetens passivitet eller orättvisa respons som en möjlig riskförstärkare.</li></ul></div>
+          <div><h4>Det som kräver tydlig begränsning</h4><ul><li>Personlighetspoäng och diagnoskategorier har inte tillräcklig precision för individuella säkerhetsbeslut.</li><li>Automatiserad känslo- eller språkprofilering kan ge felpositiva resultat och diskriminerande effekter.</li><li>Öppen information och sociala medier är inte fritt fram att kartlägga; rättslig grund, ändamål och uppgiftsminimering krävs.</li><li>En ”baseline” ska i första hand beskriva rollens och processens normala behov – inte permanent psykologisk övervakning av en person.</li><li>Maskinella larm får aldrig bli automatisk skuld eller sanktion.</li></ul></div>
+        </div>
+        <div class="model-reading-note"><strong>Praktisk översättning:</strong> använd rapportens kedja <em>stressor → observerbar förändring → organisatorisk respons → utfall</em>, men låt varje konkret åtgärd vila på lagligt insamlad information, mänsklig prövning, dokumenterade alternativa förklaringar och en möjlighet att rätta fel.</div>
+        <div class="case-fold-source"><a href="https://www.insaonline.org/detail-pages/news/2017/04/10/assessing-the-mind-of-the-malicious-insider-989" target="_blank" rel="noopener noreferrer">INSA – öppna originalkällan ↗</a><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/setting-foundations-five-principles-shared-approach-insider-risk" target="_blank" rel="noopener noreferrer">NPSA 2026 – nyare ramverk ↗</a><a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/kontroll-och-overvakning-av-anstallda/" target="_blank" rel="noopener noreferrer">IMY – kontroll av anställda ↗</a></div>
+      </div>
     </details>
     <div class="op-source-row"><a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener noreferrer">NPSA — Insider Data Collection Study ↗</a><a href="https://www.nationalinsiderthreatsig.org/itrmresources/Assessing%20the%20Mind%20Of%20The%20Malicious%20Insider.pdf" target="_blank" rel="noopener noreferrer">INSA 2017 — historisk översikt, läs kritiskt ↗</a><a href="https://www.sei.cmu.edu/blog/technical-detection-of-intended-violence-workplace-violence-as-an-insider-threat/" target="_blank" rel="noopener noreferrer">SEI — beteende, rättigheter och metodbegränsning ↗</a><a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/kontroll-och-overvakning-av-anstallda/" target="_blank" rel="noopener noreferrer">IMY — kontroll och övervakning av anställda ↗</a></div>
   </div>
