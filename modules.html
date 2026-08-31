@@ -99,15 +99,24 @@ body.menu-open{overflow:hidden}
 .nav-back-link{font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--muted);text-decoration:none;padding:6px 10px;border:1px solid var(--border-s);transition:.15s;flex-shrink:0}
 .nav-back-link:hover{color:var(--accent);border-color:var(--accent)}
 /* Search results dropdown */
-#searchResults{position:fixed;top:52px;right:0;left:0;z-index:180;background:rgba(10,22,40,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s);max-height:60vh;overflow-y:auto;display:none}
+#searchResults{position:fixed;top:52px;right:0;left:0;z-index:210;background:rgba(10,22,40,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s);max-height:min(72vh,720px);overflow-y:auto;display:none;box-shadow:0 18px 42px rgba(0,0,0,.4)}
 #searchResults.open{display:block}
-.sr-group{padding:12px 52px 4px;font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-s)}
-.sr-item{padding:11px 52px;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;align-items:flex-start;gap:14px;transition:.15s;text-decoration:none}
-.sr-item:hover{background:var(--bg-mid)}
-.sr-item-icon{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);min-width:60px;margin-top:2px}
-.sr-item-title{font-size:13px;color:var(--text);line-height:1.3}
-.sr-item-sub{font-family:var(--fm);font-size:8px;color:var(--muted);margin-top:2px;letter-spacing:.08em}
+.sr-status{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 52px;border-bottom:1px solid var(--border);background:rgba(184,151,58,.06)}
+.sr-status-main{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text)}
+.sr-status-hint{font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--dim)}
+.sr-group{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 52px 5px;font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-s)}
+.sr-group-count{color:var(--dim);letter-spacing:.08em}
+.sr-item{width:100%;padding:11px 52px;border:0;border-bottom:1px solid var(--border-s);cursor:pointer;display:flex;align-items:flex-start;gap:14px;transition:.15s;text-decoration:none;background:transparent;text-align:left;color:inherit;font-family:inherit}
+.sr-item:hover,.sr-item.active{background:var(--bg-mid)}
+.sr-item:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.sr-item-icon{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);min-width:72px;margin-top:2px}
+.sr-item-copy{min-width:0;max-width:980px}
+.sr-item-title{display:block;font-size:13px;color:var(--text);line-height:1.3}
+.sr-item-sub{display:block;font-family:var(--fm);font-size:8px;color:var(--muted);margin-top:2px;letter-spacing:.08em}
+.sr-item-snippet{display:block;font-size:11px;color:var(--dim);line-height:1.45;margin-top:4px;white-space:normal}
 .sr-empty{padding:24px 52px;font-size:13px;color:var(--dim);font-style:italic}
+.search-target-hit{outline:2px solid var(--accent)!important;outline-offset:5px;animation:searchTargetPulse 1.5s ease-out}
+@keyframes searchTargetPulse{0%{box-shadow:0 0 0 0 rgba(184,151,58,.55)}100%{box-shadow:0 0 0 16px rgba(184,151,58,0)}}
 @media(max-width:900px){
   .nav-tabs{display:none}
   .cat-nav{display:none}
@@ -116,7 +125,11 @@ body.menu-open{overflow:hidden}
   .nav-back-link{display:none}
   #globalSearchInput{width:140px}
   #globalSearchInput:focus{width:160px}
-  .sr-group,.sr-item,.sr-empty{padding-left:20px;padding-right:20px}
+  #searchResults{max-height:calc(100vh - 52px)}
+  .sr-status,.sr-group,.sr-item,.sr-empty{padding-left:20px;padding-right:20px}
+  .sr-status-hint{display:none}
+  .sr-item-icon{min-width:58px}
+  .sr-item-snippet{font-size:11px}
   .wrap{padding:0 16px}
 }
 
@@ -1346,8 +1359,8 @@ button,[onclick]{touch-action:manipulation}
     <div style="display:flex;align-items:center;gap:10px">
       <a href="#mod-sources" class="nav-back-link">Källor</a>
       <div class="nav-search-wrap">
-        <input id="globalSearchInput" placeholder="Sök…" autocomplete="off" aria-label="Sök fall, indikatorer och källor"/>
-        <button class="nav-search-clear" onclick="closeSearch()" title="Rensa">✕</button>
+        <input id="globalSearchInput" type="search" placeholder="Sök hela sidan…" autocomplete="off" aria-label="Sök i fall, teorier, metoder, verktyg och källor" aria-controls="searchResults" aria-expanded="false"/>
+        <button class="nav-search-clear" onclick="closeSearch()" title="Rensa sökningen" aria-label="Rensa sökningen">✕</button>
       </div>
       <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileDrawer()" aria-label="Öppna modulmenyn" aria-expanded="false" aria-controls="mobileDrawer">
         <span></span><span></span><span></span>
@@ -1411,7 +1424,7 @@ button,[onclick]{touch-action:manipulation}
 </div>
 
 <!-- ═══ SEARCH RESULTS ═══ -->
-<div id="searchResults"></div>
+<div id="searchResults" role="region" aria-label="Sökresultat" aria-live="polite"></div>
 
 <!-- ══════════════════════════════════════════════════════
      MOD 1: PÅVERKANSKEDJAN
@@ -2324,7 +2337,7 @@ button,[onclick]{touch-action:manipulation}
       </figure>
       <figure class="source-figure">
         <img src="kritisk-vag-insiderhot.png" alt="Femdelad modell med personliga förutsättningar, stressorer, uppmärksammade beteenden, organisationens reaktioner och möjlig hotaktion" loading="lazy">
-        <figcaption>En utvecklad arbetsbild från boken. Den viktigaste delen är den grå länken: verksamhetens respons kan dämpa, missa eller i värsta fall eskalera situationen.</figcaption>
+        <figcaption>En utvecklad arbetsillustration. Den viktigaste delen är den grå länken: verksamhetens respons kan dämpa, missa eller i värsta fall eskalera situationen.</figcaption>
         <div class="source-figure-actions"><a href="kritisk-vag-insiderhot.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/setting-foundations-five-principles-shared-approach-insider-risk" target="_blank" rel="noopener noreferrer">NPSA 2026 – Critical Pathway ↗</a></div>
       </figure>
     </div>
@@ -2349,12 +2362,12 @@ button,[onclick]{touch-action:manipulation}
   </div>
 
   <div class="reveal" style="margin-top:48px" id="development-curve">
-    <p class="eyebrow">Bokens utvecklingskurva · sex möjliga skeden</p>
+    <p class="eyebrow">Utvecklingskurva · sex möjliga skeden</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Från missnöje till skadlig handling – <em>med brytpunkter hela vägen</em></h2>
     <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:18px">Kurvan hjälper läsaren att ordna observationer i tid. Den är inte en naturregel: personer kan stanna, backa, hoppa över steg eller aldrig lämna ett legitimt missnöje. Bedömningen ska därför utgå från vad som faktiskt har sagts eller gjorts, inte från antagandet att nästa steg kommer.</p>
     <figure class="source-figure" style="margin-bottom:18px">
       <img src="utvecklingskurva-skadlig-handling.png" alt="Vågformad utvecklingskurva med sex steg: missnöje och idéformning, förberedelse, utforskning, experimentering, handling och flyktplan" loading="lazy">
-      <figcaption>Utvecklingskurvan från boken. Den vågformade linjen betonar att förloppet inte är jämnt och att intervention kan ske vid flera brytpunkter.</figcaption>
+      <figcaption>Egen arbetsillustration av utvecklingskurvan. Den vågformade linjen betonar att förloppet inte är jämnt och att intervention kan ske vid flera brytpunkter.</figcaption>
       <div class="source-figure-actions"><a href="utvecklingskurva-skadlig-handling.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div>
     </figure>
     <div class="critical-six" role="list" aria-label="Sex steg i utvecklingskurvan">
@@ -2394,31 +2407,31 @@ button,[onclick]{touch-action:manipulation}
   </div>
 
   <div class="reveal" id="five-red-flags" style="margin-top:46px">
-    <p class="eyebrow">Boken · fem illustrerade exempel</p>
+    <p class="eyebrow">Arbetsmaterial · fem illustrerade exempel</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Röda flaggor – <em>från karaktärstyp till observerbart mönster</em></h2>
-    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:16px">Bokens fem bilder är bevarade som fördjupande originalillustrationer. Webbtexten omformulerar dem eftersom etiketter som ”bedragaren” eller ”sabotören” lätt får en organisation att leta efter en personlighet i stället för att bedöma bevis, åtkomst och beteendeförändring.</p>
+    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:16px">Fem illustrationer från arbetsmaterialet är bevarade som fördjupning. Webbtexten omformulerar dem eftersom etiketter som ”bedragaren” eller ”sabotören” lätt får en organisation att leta efter en personlighet i stället för att bedöma bevis, åtkomst och beteendeförändring.</p>
     <div class="model-reading-note"><strong>Röd flagg betyder kontrollfråga – inte skuld.</strong> Dokumentera observation, källa, tid, arbetsbehov och möjlig konsekvens. Pröva alternativa förklaringar och låt alltid en proportionerlig, rättssäker process avgöra nästa steg.</div>
   </div>
   <div class="red-flag-grid reveal">
     <details class="red-flag-card">
       <summary><strong>1. Återkommande slarv och kringgående</strong><span>Öppna fördjupning</span></summary>
-      <div class="red-flag-body"><p>Fokusera på upprepade, dokumenterade avsteg: obevakad utrustning, osäker informationsdelning, privata verktyg utan godkännande, utebliven rapportering eller samma fel trots tydlig återkoppling.</p><dl><dt>Alternativa förklaringar</dt><dd>Orimlig arbetsbelastning, otydlig process, otillgängliga verktyg, kompetensbrist eller ett legitimt akutläge.</dd><dt>Proportionerlig respons</dt><dd>Gör säkert arbetssätt möjligt, följ upp samma krav för alla och skala upp först när mönstret, konsekvensen eller avsikten motiverar det.</dd></dl><figure class="source-figure"><img src="rod-flagg-slarv.png" alt="Bokens originalillustration Den vårdslöse med exempel på slarv, regelbrott och osäker informationshantering" loading="lazy"><figcaption>Originalillustration från boken. Bildens personlighetsspråk ska läsas kritiskt; den observerbara webbtexten ovan är styrande.</figcaption><div class="source-figure-actions"><a href="rod-flagg-slarv.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+      <div class="red-flag-body"><p>Fokusera på upprepade, dokumenterade avsteg: obevakad utrustning, osäker informationsdelning, privata verktyg utan godkännande, utebliven rapportering eller samma fel trots tydlig återkoppling.</p><dl><dt>Alternativa förklaringar</dt><dd>Orimlig arbetsbelastning, otydlig process, otillgängliga verktyg, kompetensbrist eller ett legitimt akutläge.</dd><dt>Proportionerlig respons</dt><dd>Gör säkert arbetssätt möjligt, följ upp samma krav för alla och skala upp först när mönstret, konsekvensen eller avsikten motiverar det.</dd></dl><figure class="source-figure"><img src="rod-flagg-slarv.png" alt="Originalillustration Den vårdslöse med exempel på slarv, regelbrott och osäker informationshantering" loading="lazy"><figcaption>Originalillustration från arbetsmaterialet. Bildens personlighetsspråk ska läsas kritiskt; den observerbara webbtexten ovan är styrande.</figcaption><div class="source-figure-actions"><a href="rod-flagg-slarv.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
     </details>
     <details class="red-flag-card">
       <summary><strong>2. Otillåten åtkomst eller informationsutförsel</strong><span>Öppna fördjupning</span></summary>
-      <div class="red-flag-body"><p>Exempel är åtkomst utan arbetsbehov, privilegiehöjning, ovanliga mängder utskrifter eller nedladdningar, förbjuden inspelningsutrustning och försök att dölja eller radera spår.</p><dl><dt>Alternativa förklaringar</dt><dd>Nytt uppdrag, trasig behörighetsmodell, felaktigt larm, systemmigration eller godkänd felsökning.</dd><dt>Proportionerlig respons</dt><dd>Verifiera uppdrag och behov, säkra loggar, begränsa åtkomst vid konkret risk och låt oberoende funktion pröva slutsatsen.</dd></dl><figure class="source-figure"><img src="rod-flagg-information.png" alt="Bokens originalillustration Informationstjuven med exempel på otillåten åtkomst, kopiering och överföring" loading="lazy"><figcaption>Originalillustration från boken. Ett tekniskt mönster måste alltid sättas i relation till roll, tillstånd och arbetsbehov.</figcaption><div class="source-figure-actions"><a href="rod-flagg-information.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+      <div class="red-flag-body"><p>Exempel är åtkomst utan arbetsbehov, privilegiehöjning, ovanliga mängder utskrifter eller nedladdningar, förbjuden inspelningsutrustning och försök att dölja eller radera spår.</p><dl><dt>Alternativa förklaringar</dt><dd>Nytt uppdrag, trasig behörighetsmodell, felaktigt larm, systemmigration eller godkänd felsökning.</dd><dt>Proportionerlig respons</dt><dd>Verifiera uppdrag och behov, säkra loggar, begränsa åtkomst vid konkret risk och låt oberoende funktion pröva slutsatsen.</dd></dl><figure class="source-figure"><img src="rod-flagg-information.png" alt="Originalillustration Informationstjuven med exempel på otillåten åtkomst, kopiering och överföring" loading="lazy"><figcaption>Originalillustration från arbetsmaterialet. Ett tekniskt mönster måste alltid sättas i relation till roll, tillstånd och arbetsbehov.</figcaption><div class="source-figure-actions"><a href="rod-flagg-information.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
     </details>
     <details class="red-flag-card">
       <summary><strong>3. Testning, sabotage eller kontrollpåverkan</strong><span>Öppna fördjupning</span></summary>
-      <div class="red-flag-body"><p>Relevanta observationer kan vara obehöriga tester av larm och passage, manipulerade inställningar, avstängd loggning, oförklarliga fel eller upprepade försök att nå tekniska och fysiska sårbarheter.</p><dl><dt>Alternativa förklaringar</dt><dd>Auktoriserat penetrationstest, akut driftåtgärd, mänskligt fel eller bristfällig förändringshantering.</dd><dt>Proportionerlig respons</dt><dd>Stoppa pågående risk, bevara teknisk bevisning och kontrollera auktorisation innan avsikt tillskrivs.</dd></dl><figure class="source-figure"><img src="rod-flagg-sabotage.png" alt="Bokens originalillustration Sabotören med exempel på testning av sårbarheter och skadlig påverkan på system och egendom" loading="lazy"><figcaption>Originalillustration från boken. Bedöm handlingens spår och konsekvens – inte om en person liknar en illustrerad typ.</figcaption><div class="source-figure-actions"><a href="rod-flagg-sabotage.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+      <div class="red-flag-body"><p>Relevanta observationer kan vara obehöriga tester av larm och passage, manipulerade inställningar, avstängd loggning, oförklarliga fel eller upprepade försök att nå tekniska och fysiska sårbarheter.</p><dl><dt>Alternativa förklaringar</dt><dd>Auktoriserat penetrationstest, akut driftåtgärd, mänskligt fel eller bristfällig förändringshantering.</dd><dt>Proportionerlig respons</dt><dd>Stoppa pågående risk, bevara teknisk bevisning och kontrollera auktorisation innan avsikt tillskrivs.</dd></dl><figure class="source-figure"><img src="rod-flagg-sabotage.png" alt="Originalillustration Sabotören med exempel på testning av sårbarheter och skadlig påverkan på system och egendom" loading="lazy"><figcaption>Originalillustration från arbetsmaterialet. Bedöm handlingens spår och konsekvens – inte om en person liknar en illustrerad typ.</figcaption><div class="source-figure-actions"><a href="rod-flagg-sabotage.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
     </details>
     <details class="red-flag-card">
       <summary><strong>4. Bedrägeri, jäv eller dold intressekonflikt</strong><span>Öppna fördjupning</span></summary>
-      <div class="red-flag-body"><p>Följ sakliga avvikelser som falska uppgifter, styrning av leverantör för egen vinning, ovanligt kontrollövertag, återkommande undantag, odokumenterade relationer eller transaktioner utan rimligt verksamhetsskäl.</p><dl><dt>Alternativa förklaringar</dt><dd>Administrativa fel, otydliga jävsregler, bristande kompetens eller en relation som redan är korrekt deklarerad.</dd><dt>Proportionerlig respons</dt><dd>Separera mandat, genomför oberoende kontroll och dokumentera både omständigheter som talar för och emot misstanken.</dd></dl><figure class="source-figure"><img src="rod-flagg-bedrageri.png" alt="Bokens originalillustration Bedragaren med exempel på falska uppgifter, intressekonflikt och ekonomiska oegentligheter" loading="lazy"><figcaption>Originalillustration från boken. Privata ekonomiska uppgifter får bara behandlas med rättsligt stöd och tydligt ändamål.</figcaption><div class="source-figure-actions"><a href="rod-flagg-bedrageri.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+      <div class="red-flag-body"><p>Följ sakliga avvikelser som falska uppgifter, styrning av leverantör för egen vinning, ovanligt kontrollövertag, återkommande undantag, odokumenterade relationer eller transaktioner utan rimligt verksamhetsskäl.</p><dl><dt>Alternativa förklaringar</dt><dd>Administrativa fel, otydliga jävsregler, bristande kompetens eller en relation som redan är korrekt deklarerad.</dd><dt>Proportionerlig respons</dt><dd>Separera mandat, genomför oberoende kontroll och dokumentera både omständigheter som talar för och emot misstanken.</dd></dl><figure class="source-figure"><img src="rod-flagg-bedrageri.png" alt="Originalillustration Bedragaren med exempel på falska uppgifter, intressekonflikt och ekonomiska oegentligheter" loading="lazy"><figcaption>Originalillustration från arbetsmaterialet. Privata ekonomiska uppgifter får bara behandlas med rättsligt stöd och tydligt ändamål.</figcaption><div class="source-figure-actions"><a href="rod-flagg-bedrageri.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
     </details>
     <details class="red-flag-card" style="grid-column:1/-1">
       <summary><strong>5. Uttalade hot, våldsplanering eller akut självskaderisk</strong><span>Öppna fördjupning</span></summary>
-      <div class="red-flag-body"><p>Konkreta hot, målfixering, planering, införskaffade medel, provhandlingar eller uttalanden om omedelbar självskada kräver snabb triage. Psykisk ohälsa eller en diagnos är däremot inte i sig en indikator på våld eller illojalitet.</p><dl><dt>Alternativa förklaringar</dt><dd>Ord kan vara citerade fel, ironiska eller ryckta ur sitt sammanhang – men ett konkret och möjligt hot ska ändå aldrig lämnas utan bedömning.</dd><dt>Proportionerlig respons</dt><dd>Vid omedelbar fara: skydda berörda och ring 112. I andra fall används organisationens hot- och incidentprocess med kompetens från säkerhet, HR, arbetsmiljö, juridik och vid behov vård eller polis.</dd></dl><figure class="source-figure"><img src="rod-flagg-vald.png" alt="Bokens originalillustration om våld eller självskada med exempel på hotfulla och gränsöverskridande beteenden" loading="lazy"><figcaption>Originalillustration från boken. Den kliniska bedömningen hör till vården; arbetsplatsen bedömer konkreta uttalanden, handlingar, medel och skyddsbehov.</figcaption><div class="source-figure-actions"><a href="rod-flagg-vald.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
+      <div class="red-flag-body"><p>Konkreta hot, målfixering, planering, införskaffade medel, provhandlingar eller uttalanden om omedelbar självskada kräver snabb triage. Psykisk ohälsa eller en diagnos är däremot inte i sig en indikator på våld eller illojalitet.</p><dl><dt>Alternativa förklaringar</dt><dd>Ord kan vara citerade fel, ironiska eller ryckta ur sitt sammanhang – men ett konkret och möjligt hot ska ändå aldrig lämnas utan bedömning.</dd><dt>Proportionerlig respons</dt><dd>Vid omedelbar fara: skydda berörda och ring 112. I andra fall används organisationens hot- och incidentprocess med kompetens från säkerhet, HR, arbetsmiljö, juridik och vid behov vård eller polis.</dd></dl><figure class="source-figure"><img src="rod-flagg-vald.png" alt="Originalillustration om våld eller självskada med exempel på hotfulla och gränsöverskridande beteenden" loading="lazy"><figcaption>Originalillustration från arbetsmaterialet. Den kliniska bedömningen hör till vården; arbetsplatsen bedömer konkreta uttalanden, handlingar, medel och skyddsbehov.</figcaption><div class="source-figure-actions"><a href="rod-flagg-vald.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div></figure></div>
     </details>
   </div>
   <div class="op-source-row reveal"><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/setting-foundations-five-principles-shared-approach-insider-risk" target="_blank" rel="noopener noreferrer">NPSA 2026 – Critical Pathway to Insider Risk ↗</a><a href="https://www.cdse.edu/Training/Job-Aids/Insider-Threat-Job-Aids/" target="_blank" rel="noopener noreferrer">CDSE 2024 – Critical Pathway och rapportering ↗</a><a href="https://www.cisa.gov/topics/physical-security/insider-threat-mitigation" target="_blank" rel="noopener noreferrer">CISA – Insider Threat Mitigation ↗</a></div>
@@ -4455,6 +4468,15 @@ function scrollToDeepAnchor(deep){
   deep.target.classList.add('visible');
   setTimeout(()=>deep.target.scrollIntoView({behavior:'auto',block:'start'}),120);
 }
+function openDeepAnchor(deep){
+  if(!deep)return;
+  show(deep.key,{scroll:false,anchor:deep.id});
+  ensureTheoryPanelForTarget(deep.target);
+  const details=[];let item=deep.target.closest('details');
+  while(item){details.unshift(item);item=item.parentElement?.closest('details');}
+  details.forEach(node=>{node.open=true;});
+  scrollToDeepAnchor(deep);
+}
 window.addEventListener('DOMContentLoaded',()=>{
   const requestedCaseId=new URLSearchParams(window.location.search).get('case');
   const validRequestedCase=CASES.some(c=>c.id===requestedCaseId);
@@ -4483,14 +4505,15 @@ window.addEventListener('DOMContentLoaded',()=>{
     try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
   });
   initMobileDetailAccordions();
-  if(deepAnchor)scrollToDeepAnchor(deepAnchor);
+  const resolvedDeepAnchor=validRequestedCase?null:(deepAnchor||getDeepAnchor());
+  if(resolvedDeepAnchor)openDeepAnchor(resolvedDeepAnchor);
   if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
 });
 mobileDetailMQ.addEventListener('change',()=>{initMobileDetailAccordions();});
 window.addEventListener('hashchange',()=>{
   if(window.location.hash.startsWith('#mod-')){show(window.location.hash.slice(5));return;}
   const deepAnchor=getDeepAnchor();
-  if(deepAnchor){show(deepAnchor.key,{scroll:false,anchor:deepAnchor.id});scrollToDeepAnchor(deepAnchor);}
+  if(deepAnchor)openDeepAnchor(deepAnchor);
 });
 
 /* ══ GRAPH ENGINE ══ */
@@ -4727,54 +4750,306 @@ function gToggleLabels(){
 
 /* ══ GLOBAL SEARCH ══ */
 
+let GLOBAL_SEARCH_INDEX=[];
+let searchActiveIndex=-1;
+
+const SEARCH_GROUPS=[
+  {kind:'page',label:'Sidinnehåll',limit:10},
+  {kind:'case',label:'Fall',limit:7},
+  {kind:'indicator',label:'Indikatorer',limit:5},
+  {kind:'sector',label:'Sektormiljöer',limit:4},
+  {kind:'source',label:'Källor',limit:6}
+];
+
+function searchCompact(value){return String(value||'').replace(/\s+/g,' ').trim();}
+function searchNormalise(value){
+  return searchCompact(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('sv-SE');
+}
+function searchStripHtml(value){
+  const box=document.createElement('div');box.innerHTML=String(value||'');
+  return searchCompact(box.textContent||'');
+}
+function searchObjectText(value,seen=new WeakSet()){
+  if(value===null||value===undefined)return '';
+  if(typeof value==='string'||typeof value==='number'||typeof value==='boolean')return searchStripHtml(value);
+  if(typeof value!=='object')return '';
+  if(seen.has(value))return '';
+  seen.add(value);
+  if(Array.isArray(value))return value.map(item=>searchObjectText(item,seen)).join(' ');
+  return Object.entries(value).filter(([key])=>!['lat','lng','c','color'].includes(key)).map(([,item])=>searchObjectText(item,seen)).join(' ');
+}
+function searchModuleLabel(module){
+  if(!module)return 'Sidinnehåll';
+  const key=module.id.slice(4);
+  const nav=document.getElementById('tab-'+key)||document.getElementById('mtab-'+key);
+  const heading=module.querySelector('.sec-title,h1');
+  return searchCompact(nav?.textContent||heading?.textContent||key);
+}
+function searchTypeLabel(moduleKey){
+  return({chain:'MODELL',sectors:'SEKTOR',actors:'AKTÖR',legal:'JURIDIK',infopav:'PÅVERKAN',theory:'TEORI',visuals:'MODELL',map:'INNEHÅLL',assess:'TEST',inds:'INDIKATOR',graph:'GRAF',tools:'VERKTYG',culture:'KULTUR',handle:'PROCESS',sources:'KÄLLA'})[moduleKey]||'INNEHÅLL';
+}
+function searchPreferredBlock(element,module){
+  if(element.tagName==='SUMMARY')return element.parentElement;
+  const preferred=element.closest('details,article,.red-flag-card,.case-fold,.model-step,.theory-card,.watch-item,.conflict-card,.conflict-item,.culture-stage,.edu-card,.tool-block,.role-card,.source-card,.ipd-cell,.ipa-card,.bowtie-opt,.check-item,.ca-card,.legal-rung,.sec-head,.reveal');
+  if(preferred&&preferred!==module)return preferred;
+  let node=element.parentElement;
+  while(node&&node!==module){
+    const length=searchCompact(node.textContent).length;
+    if(length>=searchCompact(element.textContent).length&&length<=7000)return node;
+    node=node.parentElement;
+  }
+  return element;
+}
+function ensureSearchTargetId(element,moduleKey,index){
+  if(element.id)return element.id;
+  let id=`search-${moduleKey}-${index}`;
+  let suffix=2;
+  while(document.getElementById(id)){id=`search-${moduleKey}-${index}-${suffix++}`;}
+  element.id=id;
+  return id;
+}
+function buildGlobalSearchIndex(){
+  const entries=[];
+  const duplicateMap=new Map();
+  const add=entry=>{
+    const fullTitle=searchCompact(entry.title);
+    entry.title=fullTitle.length>220?fullTitle.slice(0,217)+'…':fullTitle;
+    entry.text=searchCompact(`${fullTitle} ${entry.text||''}`);
+    if(!entry.title||entry.title.length<2)return;
+    const duplicateKey=`${entry.kind}:${entry.moduleKey||''}:${searchNormalise(entry.title)}`;
+    const existing=duplicateMap.get(duplicateKey);
+    if(existing){
+      if(!searchNormalise(existing.text).includes(searchNormalise(entry.text)))existing.text+=' '+entry.text;
+      if(entry.action&&!existing.action)existing.action=entry.action;
+      if(entry.targetId&&!existing.targetId)existing.targetId=entry.targetId;
+      return existing;
+    }
+    entry.searchId='search-entry-'+entries.length;
+    entries.push(entry);duplicateMap.set(duplicateKey,entry);return entry;
+  };
+  const structured=(items,config)=>{
+    if(!Array.isArray(items))return;
+    items.forEach((item,index)=>add({
+      kind:'page',moduleKey:config.moduleKey,moduleLabel:config.moduleLabel||searchModuleLabel(document.getElementById('mod-'+config.moduleKey)),
+      typeLabel:config.typeLabel||searchTypeLabel(config.moduleKey),title:config.title(item,index),text:searchObjectText(item),
+      targetId:config.targetId,action:{type:config.action,value:config.value?config.value(item,index):index}
+    }));
+  };
+
+  structured(typeof CHAIN!=='undefined'?CHAIN:[],{moduleKey:'chain',typeLabel:'STEG',title:item=>`${item.step} — ${item.title}`,targetId:'chainPanel',action:'chain'});
+  structured(typeof ACTORS!=='undefined'?ACTORS:[],{moduleKey:'actors',typeLabel:'AKTÖR',title:item=>item.name,targetId:'actorDetail',action:'actor',value:item=>item.id});
+  structured(typeof QUESTIONS!=='undefined'?QUESTIONS:[],{moduleKey:'assess',typeLabel:'TESTFRÅGA',title:(item,index)=>`${index+1}. ${item.q}`,targetId:'assessPanels',action:'question'});
+  structured(typeof LEGAL_TIERS!=='undefined'?LEGAL_TIERS:[],{moduleKey:'legal',typeLabel:'JURIDIK',title:item=>item.name,targetId:'legalPanel',action:'legal',value:item=>item.id});
+  structured(typeof IP_VECTORS!=='undefined'?IP_VECTORS:[],{moduleKey:'infopav',typeLabel:'VEKTOR',title:item=>item.name||item.label||item.id,targetId:'ipVecPanel',action:'ip-vector',value:item=>item.id});
+  structured(typeof IP_MECH!=='undefined'?IP_MECH:[],{moduleKey:'infopav',typeLabel:'MEKANISM',title:item=>item.name,targetId:'ipMechDetail',action:'ip-mechanism',value:item=>item.id});
+  structured(typeof BROP_STEPS!=='undefined'?BROP_STEPS:[],{moduleKey:'tools',typeLabel:'BROP',title:item=>item.name,targetId:'bropDetail',action:'brop'});
+  structured(typeof BOWTIE!=='undefined'?BOWTIE:[],{moduleKey:'tools',typeLabel:'BOWTIE',title:item=>item.name||item.event,targetId:'bowtieDiagram',action:'bowtie',value:item=>item.id});
+  structured(typeof CHECKLISTS!=='undefined'?CHECKLISTS:[],{moduleKey:'tools',typeLabel:'CHECKLISTA',title:item=>item.name||item.title||item.id,targetId:'checkPanel',action:'checklist',value:item=>item.id});
+  structured(typeof CULT_ACTIONS!=='undefined'?CULT_ACTIONS:[],{moduleKey:'culture',typeLabel:'ÅTGÄRD',title:item=>item.name,targetId:'cultActionDetail',action:'culture-action',value:item=>item.id});
+
+  const titleSelector='h1,h2,h3,h4,details > summary,.theory-card-title,.model-step-t,.red-flag-title,.case-fold-title,.edu-title,.ind-title,.ac-name,.cp-sig,.stressor-item,.ipa-name,.ipd-label,.bt-center-event,.cad-name,.legal-rung-tier';
+  document.querySelectorAll('.module').forEach(module=>{
+    const moduleKey=module.id.slice(4),moduleLabel=searchModuleLabel(module);
+    let targetIndex=0;
+    const moduleHeading=module.querySelector('.sec-title,h1')||module;
+    if(!['map','sources'].includes(moduleKey))add({kind:'page',moduleKey,moduleLabel,typeLabel:'MODUL',title:moduleLabel,text:searchCompact(module.textContent),targetId:ensureSearchTargetId(moduleHeading,moduleKey,targetIndex++)});
+    module.querySelectorAll(titleSelector).forEach(element=>{
+      if(element.closest('#caseList,#case-detail,#searchResults'))return;
+      const title=searchCompact(element.textContent);
+      if(!title||title.length<2)return;
+      const target=element.tagName==='SUMMARY'?element.parentElement:element;
+      const block=searchPreferredBlock(element,module);
+      add({kind:'page',moduleKey,moduleLabel,typeLabel:searchTypeLabel(moduleKey),title,text:searchCompact(block.textContent),targetId:ensureSearchTargetId(target,moduleKey,targetIndex++)});
+    });
+  });
+
+  if(typeof CASES!=='undefined')CASES.forEach(item=>add({
+    kind:'case',typeLabel:'FALL',title:item.title,text:searchObjectText(item),caseId:item.id,
+    moduleKey:'map',moduleLabel:'Händelser & fall',meta:`${item.loc?.m||'Plats ej angiven'} · ${item.date||''}`
+  }));
+  if(typeof INDICATORS!=='undefined')INDICATORS.forEach(item=>add({
+    kind:'indicator',typeLabel:'INDIKATOR',title:item.title,text:searchObjectText(item),indicatorId:item.id,
+    moduleKey:'inds',moduleLabel:'Indikatorer',meta:item.sev==='HIGH'?'Hög allvarlighet':'Medel'
+  }));
+  if(typeof SECTORS!=='undefined')SECTORS.forEach(item=>add({
+    kind:'sector',typeLabel:'SEKTOR',title:item.name,text:searchObjectText(item),sectorId:item.id,
+    moduleKey:'sectors',moduleLabel:'Sektormiljöer',meta:`${item.risk||''} risk`
+  }));
+  const localSector=typeof LOCAL_GOV_SECTOR!=='undefined'?LOCAL_GOV_SECTOR:null;
+  if(localSector&&!entries.some(entry=>entry.kind==='sector'&&entry.sectorId===localSector.id))add({
+    kind:'sector',typeLabel:'SEKTOR',title:localSector.name,text:searchObjectText(localSector),sectorId:localSector.id,
+    moduleKey:'sectors',moduleLabel:'Sektormiljöer',meta:`${localSector.risk||''} risk`
+  });
+
+  const sourceModule=document.getElementById('mod-sources');
+  if(sourceModule){
+    let sourceIndex=0;
+    sourceModule.querySelectorAll('a[href]').forEach(link=>{
+      const title=searchCompact(link.textContent||link.title);
+      if(!title||title.length<4)return;
+      add({kind:'source',typeLabel:'KÄLLA',title,text:`${link.title||''} ${link.href}`,moduleKey:'sources',moduleLabel:'Källförteckning',targetId:ensureSearchTargetId(link,'sources',sourceIndex++)});
+    });
+  }
+  GLOBAL_SEARCH_INDEX=entries;
+}
+
+function scoreSearchEntry(entry,query){
+  const normalQuery=searchNormalise(query),terms=normalQuery.split(' ').filter(Boolean);
+  const title=searchNormalise(entry.title),body=searchNormalise(entry.text);
+  if(!terms.every(term=>title.includes(term)||body.includes(term)))return -1;
+  let score=0;
+  if(title===normalQuery)score+=160;
+  else if(title.startsWith(normalQuery))score+=110;
+  else if(title.includes(normalQuery))score+=85;
+  if(body.includes(normalQuery))score+=25;
+  terms.forEach(term=>{if(title.startsWith(term))score+=24;else if(title.includes(term))score+=16;if(body.includes(term))score+=3;});
+  if(entry.kind==='page')score+=8;
+  return score;
+}
+function searchExcerpt(text,query,maxLength=190){
+  const clean=searchCompact(searchStripHtml(text));
+  if(clean.length<=maxLength)return clean;
+  const lower=clean.toLocaleLowerCase('sv-SE'),needle=searchCompact(query).toLocaleLowerCase('sv-SE');
+  let index=lower.indexOf(needle);
+  if(index<0)index=0;
+  const start=Math.max(0,index-Math.floor(maxLength*.32));
+  const end=Math.min(clean.length,start+maxLength);
+  return `${start?'…':''}${clean.slice(start,end).trim()}${end<clean.length?'…':''}`;
+}
+function renderGlobalSearch(query){
+  const input=document.getElementById('globalSearchInput'),results=document.getElementById('searchResults');
+  const matches=GLOBAL_SEARCH_INDEX.map(entry=>({entry,score:scoreSearchEntry(entry,query)})).filter(hit=>hit.score>=0).sort((a,b)=>b.score-a.score||a.entry.title.localeCompare(b.entry.title,'sv'));
+  searchActiveIndex=-1;
+  input.removeAttribute('aria-activedescendant');
+  if(!matches.length){
+    results.innerHTML=`<div class="sr-empty">Inga träffar för ”${escHtml(query)}”. Prova ett bredare begrepp eller en annan stavning.</div>`;
+    results.classList.add('open');input.setAttribute('aria-expanded','true');return;
+  }
+  let shown=0;
+  let html=`<div class="sr-status"><span class="sr-status-main">${matches.length} träffar på hela sidan</span><span class="sr-status-hint">↑↓ navigera · Enter öppna · Esc stäng</span></div><div role="listbox" aria-label="Träffar för ${escHtml(query)}">`;
+  SEARCH_GROUPS.forEach(group=>{
+    const all=matches.filter(hit=>hit.entry.kind===group.kind);
+    if(!all.length)return;
+    const visible=all.slice(0,group.limit);shown+=visible.length;
+    html+=`<div class="sr-group"><span>${group.label}</span><span class="sr-group-count">visar ${visible.length} av ${all.length}</span></div>`;
+    visible.forEach(({entry})=>{
+      const sub=entry.meta||entry.moduleLabel||'';
+      html+=`<button type="button" class="sr-item" id="sr-option-${entry.searchId}" role="option" aria-selected="false" data-search-id="${entry.searchId}"><span class="sr-item-icon">${escHtml(entry.typeLabel||group.label)}</span><span class="sr-item-copy"><span class="sr-item-title">${escHtml(entry.title)}</span><span class="sr-item-sub">${escHtml(sub)}</span><span class="sr-item-snippet">${escHtml(searchExcerpt(entry.text,query))}</span></span></button>`;
+    });
+  });
+  html+='</div>';
+  results.innerHTML=html;results.classList.add('open');input.setAttribute('aria-expanded','true');
+}
+function moveSearchSelection(delta){
+  const input=document.getElementById('globalSearchInput');
+  const items=[...document.querySelectorAll('#searchResults .sr-item')];
+  if(!items.length)return;
+  searchActiveIndex=(searchActiveIndex+delta+items.length)%items.length;
+  items.forEach((item,index)=>{const active=index===searchActiveIndex;item.classList.toggle('active',active);item.setAttribute('aria-selected',active?'true':'false');});
+  const active=items[searchActiveIndex];input.setAttribute('aria-activedescendant',active.id);active.scrollIntoView({block:'nearest'});
+}
+function highlightSearchTarget(target){
+  if(!target)return;
+  target.closest('.reveal')?.classList.add('visible');
+  target.classList.add('search-target-hit');
+  const previous=target.getAttribute('tabindex');
+  if(!target.matches('a,button,input,summary,[tabindex]'))target.setAttribute('tabindex','-1');
+  target.scrollIntoView({behavior:'smooth',block:'center'});
+  try{target.focus({preventScroll:true});}catch(_){/* Fokus är en förbättring, inte ett krav. */}
+  setTimeout(()=>{target.classList.remove('search-target-hit');if(previous===null)target.removeAttribute('tabindex');else target.setAttribute('tabindex',previous);},2600);
+}
+function runStructuredSearchAction(entry){
+  const action=entry.action;
+  if(!action)return document.getElementById(entry.targetId);
+  if(action.type==='chain'){selectChain(action.value,{forceOpen:true});return document.getElementById('chainPanel');}
+  if(action.type==='actor'){
+    const actorIndex=ACTORS.findIndex(item=>item.id===action.value),card=[...document.querySelectorAll('#actorGrid .ac')][actorIndex];
+    if(card&&!(isMobileDetail()&&selActor===action.value&&document.getElementById('actorDetail')?.classList.contains('open')))selectActor(action.value,card);return document.getElementById('actorDetail');
+  }
+  if(action.type==='question'){goQ(action.value,{forceOpen:true});return document.querySelector('.assess-panel-col.show')||document.getElementById('assessPanels');}
+  if(action.type==='legal'){
+    const rung=document.getElementById('rung-'+action.value),panel=document.getElementById('legalPanel');
+    if(!(isMobileDetail()&&rung?.classList.contains('active')&&panel?.classList.contains('open')))selectLegal(action.value);
+    return panel;
+  }
+  if(action.type==='ip-vector'){selectIPVec(action.value,{forceOpen:true});return document.getElementById('ipVecPanel');}
+  if(action.type==='ip-mechanism'){selectIPMech(action.value,{forceOpen:true});return document.getElementById('ipMechDetail');}
+  if(action.type==='brop'){selectBrop(action.value,{forceOpen:true});return document.getElementById('bropDetail');}
+  if(action.type==='bowtie'){selectBowtie(action.value);return document.getElementById('bowtieDiagram');}
+  if(action.type==='checklist'){selectCheck(action.value,{forceOpen:true,keepOpen:true});return document.getElementById('checkPanel');}
+  if(action.type==='culture-action'){selectCultAction(action.value,{forceOpen:true});return document.getElementById('cultActionDetail');}
+  return document.getElementById(entry.targetId);
+}
+function openPageSearchEntry(entry){
+  show(entry.moduleKey,{scroll:false,anchor:entry.targetId});
+  let target=document.getElementById(entry.targetId);
+  const theoryPanel=target?.closest('[data-theory-panel]');
+  if(theoryPanel)selectTheoryTab(theoryPanel.dataset.theoryPanel,{updateHash:false,forceOpen:true});
+  const sectorPanel=target?.closest('.sector-panel');
+  if(sectorPanel&&!sectorPanel.classList.contains('show'))selectSector(sectorPanel.id.replace(/^sp-/,''));
+  const handlePanel=target?.closest('.handle-panel');
+  if(handlePanel?.id)showHandle(handlePanel.id.replace(/^handle-/,''),{forceOpen:true});
+  if(entry.moduleKey==='sources'&&typeof filterSrc==='function')filterSrc('all');
+  target=runStructuredSearchAction(entry)||target;
+  if(target){
+    const ancestors=[];let detail=target.closest('details');
+    while(detail){ancestors.unshift(detail);detail=detail.parentElement?.closest('details');}
+    ancestors.forEach(item=>{item.open=true;});
+    const url=new URL(window.location.href);url.hash='#'+target.id;history.replaceState(null,'',url);
+    setTimeout(()=>highlightSearchTarget(target),100);
+  }
+}
+function activateSearchEntry(searchId){
+  const entry=GLOBAL_SEARCH_INDEX.find(item=>item.searchId===searchId);
+  if(!entry)return;
+  closeSearch();
+  if(entry.kind==='case'){srGoCase(entry.caseId);return;}
+  if(entry.kind==='indicator'){srGoInd(entry.indicatorId);return;}
+  if(entry.kind==='sector'){srGoSector(entry.sectorId);return;}
+  openPageSearchEntry(entry);
+}
 function initGlobalSearch(){
   const inp=document.getElementById('globalSearchInput');
   const res=document.getElementById('searchResults');
   const clr=document.querySelector('.nav-search-clear');
   if(!inp)return;
+  buildGlobalSearchIndex();
+  inp.addEventListener('focus',()=>{closeCatMenus();if(document.getElementById('mobileDrawer')?.classList.contains('open'))closeMobileDrawer();if(inp.value.trim().length>=2)renderGlobalSearch(inp.value.trim());});
   inp.addEventListener('input',function(){
-    const q=this.value.trim().toLowerCase();
-    if(q.length<2){res.classList.remove('open');clr.style.display='none';return;}
+    const q=this.value.trim();
+    if(q.length<2){res.classList.remove('open');this.setAttribute('aria-expanded','false');this.removeAttribute('aria-activedescendant');clr.style.display='none';searchActiveIndex=-1;return;}
     clr.style.display='block';
-    const hits={cases:[],inds:[],sectors:[]};
-    CASES.forEach(c=>{
-      if(c.title.toLowerCase().includes(q)||c.summary.toLowerCase().includes(q)||(c.loc&&c.loc.m&&c.loc.m.toLowerCase().includes(q)))
-        hits.cases.push(c);
-    });
-    INDICATORS.forEach(i=>{
-      if(i.title.toLowerCase().includes(q)||i.desc.toLowerCase().includes(q))hits.inds.push(i);
-    });
-    SECTORS.forEach(s=>{
-      if(s.name.toLowerCase().includes(q)||(s.desc_long||'').toLowerCase().includes(q))hits.sectors.push(s);
-    });
-    const total=hits.cases.length+hits.inds.length+hits.sectors.length;
-    if(total===0){res.innerHTML='<div class="sr-empty">Inga träffar för "'+escHtml(q)+'"</div>';res.classList.add('open');return;}
-    let html='';
-    if(hits.cases.length){
-      html+=`<div class="sr-group">Fall (${hits.cases.length})</div>`;
-      hits.cases.slice(0,6).forEach(c=>{html+=`<a class="sr-item" href="?case=${c.id}#case-detail" data-case-link="${c.id}"><span class="sr-item-icon">${c.sector}</span><div><div class="sr-item-title">${escHtml(c.title)}</div><div class="sr-item-sub">${escHtml(c.loc&&c.loc.m?c.loc.m+' · ':'')}${c.date}</div></div></a>`;});
-    }
-    if(hits.inds.length){
-      html+=`<div class="sr-group">Indikatorer (${hits.inds.length})</div>`;
-      hits.inds.slice(0,4).forEach(i=>{html+=`<div class="sr-item" onclick="srGoInd('${i.id}')"><span class="sr-item-icon">${i.cat}</span><div><div class="sr-item-title">${escHtml(i.title)}</div><div class="sr-item-sub">${i.sev==='HIGH'?'Hög allvarlighet':'Medel'}</div></div></div>`;});
-    }
-    if(hits.sectors.length){
-      html+=`<div class="sr-group">Sektormiljöer (${hits.sectors.length})</div>`;
-      hits.sectors.forEach(s=>{html+=`<div class="sr-item" onclick="srGoSector('${s.id}')"><span class="sr-item-icon">SEKTOR</span><div><div class="sr-item-title">${escHtml(s.name)}</div><div class="sr-item-sub">${s.risk} risk</div></div></div>`;});
-    }
-    res.innerHTML=html;res.classList.add('open');
+    renderGlobalSearch(q);
+  });
+  res.addEventListener('click',event=>{const item=event.target.closest('[data-search-id]');if(item)activateSearchEntry(item.dataset.searchId);});
+  res.addEventListener('mousemove',event=>{
+    const item=event.target.closest('.sr-item');if(!item)return;
+    const items=[...res.querySelectorAll('.sr-item')],index=items.indexOf(item);if(index<0)return;
+    searchActiveIndex=index;items.forEach((node,i)=>{const active=i===index;node.classList.toggle('active',active);node.setAttribute('aria-selected',active?'true':'false');});inp.setAttribute('aria-activedescendant',item.id);
   });
   document.addEventListener('click',function(e){if(!res.contains(e.target)&&e.target!==inp)closeSearch();});
-  inp.addEventListener('keydown',function(e){if(e.key==='Escape')closeSearch();});
+  inp.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeSearch();return;}
+    if(!res.classList.contains('open'))return;
+    if(e.key==='ArrowDown'){e.preventDefault();moveSearchSelection(1);}
+    else if(e.key==='ArrowUp'){e.preventDefault();moveSearchSelection(-1);}
+    else if(e.key==='Enter'){
+      const items=[...res.querySelectorAll('.sr-item')];if(!items.length)return;
+      e.preventDefault();const item=items[searchActiveIndex>=0?searchActiveIndex:0];activateSearchEntry(item.dataset.searchId);
+    }
+  });
 }
-function closeSearch(){
-  document.getElementById('searchResults').classList.remove('open');
-  document.getElementById('globalSearchInput').value='';
+function closeSearch(options={}){
+  const results=document.getElementById('searchResults'),input=document.getElementById('globalSearchInput');
+  results.classList.remove('open');input.setAttribute('aria-expanded','false');input.removeAttribute('aria-activedescendant');
+  if(options.clear!==false)input.value='';
+  searchActiveIndex=-1;
   const clr=document.querySelector('.nav-search-clear');if(clr)clr.style.display='none';
 }
-function srGoInd(id){closeSearch();show('inds');setTimeout(()=>{const el=document.querySelector('[data-ind-id="'+id+'"]');if(el){el.scrollIntoView({behavior:'smooth',block:'nearest'});el.style.outline='2px solid var(--accent)';setTimeout(()=>el.style.outline='',1500);}},200);}
-function srGoSector(id){closeSearch();show('sectors');setTimeout(()=>selectSector(id),100);}
-function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function srGoCase(id){closeSearch();show('map',{scroll:false});setTimeout(()=>openLinkedCase(id,{behavior:'smooth'}),100);}
+function srGoInd(id){closeSearch();show('inds',{scroll:false});setTimeout(()=>{const el=document.querySelector('[data-ind-id="'+id+'"]');if(el)highlightSearchTarget(el);},100);}
+function srGoSector(id){closeSearch();show('sectors',{scroll:false});setTimeout(()=>{const panel=document.getElementById('sp-'+id);if(!panel?.classList.contains('show'))selectSector(id);const target=panel||document.getElementById('sni-'+id);if(target)highlightSearchTarget(target);},100);}
+function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');}
 
 
 /* ══ MOBILE NAV ══ */
@@ -4960,7 +5235,7 @@ function showHandle(id,options={}){
 
     <div class="edu-stack reveal" style="margin:0 0 42px">
       <details class="edu-card">
-        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Fördjupning · Källvärdering och konfidens i en intern utredning</span><span class="edu-summary-meta">Bearbetat från bokens metodavsnitt</span></summary>
+        <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Fördjupning · Källvärdering och konfidens i en intern utredning</span><span class="edu-summary-meta">Bearbetat från metodavsnitt i arbetsmaterialet</span></summary>
         <div class="edu-body">
           <div class="edu-title">Tre skilda frågor före slutsatsen</div>
           <p><strong>1. Källans tillförlitlighet:</strong> hur nära händelsen befann sig källan, vilken kompetens hade den, finns möjlig partiskhet och hur har tidigare uppgifter fallit ut? <strong>2. Uppgiftens sakriktighet:</strong> stöds innehållet av logg, dokument, tidslinje eller en oberoende källa, och har det återberättats i flera led? <strong>3. Analysens konfidens:</strong> hur starkt är det samlade underlaget och vilka avgörande antaganden återstår?</p>
@@ -7048,8 +7323,8 @@ function showHandle(id,options={}){
       </div>
       <div style="padding:18px;background:var(--bg-card)">
         <figure class="source-figure">
-          <img src="personlighet-sarbarhet-exploatering.png" alt="Venn-diagram från boken med tre överlappande områden: personlighet, sårbarheter och risk för exploatering, omgivna av exempel på möjliga observationer" loading="lazy">
-          <figcaption><strong>Kritisk läsning av bokens bild:</strong> diagrammet kan användas för att fråga hur egenskaper, livssituation och extern påverkan samspelar. Det får inte användas som poänglista eller profil. Flera formuleringar i bilden är värderande; i praktisk bedömning ska de översättas till verifierbara handlingar, förändringar och relationer.</figcaption>
+          <img src="personlighet-sarbarhet-exploatering.png" alt="Venn-diagram med tre överlappande områden: personlighet, sårbarheter och risk för exploatering, omgivna av exempel på möjliga observationer" loading="lazy">
+          <figcaption><strong>Kritisk läsning av arbetsillustrationen:</strong> diagrammet kan användas för att fråga hur egenskaper, livssituation och extern påverkan samspelar. Det får inte användas som poänglista eller profil. Flera formuleringar i bilden är värderande; i praktisk bedömning ska de översättas till verifierbara handlingar, förändringar och relationer.</figcaption>
           <div class="source-figure-actions"><a href="personlighet-sarbarhet-exploatering.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div>
         </figure>
       </div>
