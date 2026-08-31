@@ -885,6 +885,60 @@ html:not(.js-ready) .theory-subnav{display:none}
 .check-item.done .check-box svg{opacity:1}
 .check-item-text{font-size:12.5px;color:var(--text);line-height:1.5}
 
+/* Policy, utredningsmandat och rollbaserat riskregister */
+.integrity-policy{margin-bottom:56px}
+.policy-scope{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin-bottom:20px}
+.policy-scope-card{background:var(--bg-card);padding:20px 18px;border-top:2px solid var(--accent-d)}
+.policy-scope-card span{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.12em;color:var(--accent);margin-bottom:8px}
+.policy-scope-card strong{display:block;font-family:var(--fd);font-size:18px;font-weight:400;margin-bottom:8px}
+.policy-scope-card p{font-size:11.5px;line-height:1.65;color:var(--muted);margin:0}
+.policy-core{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:16px 18px;background:rgba(184,151,58,.08);border-left:2px solid var(--accent);font-size:12.5px;line-height:1.65;color:var(--muted);margin-bottom:20px}
+.policy-core-label{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.policy-core strong{color:var(--text);font-weight:500}
+.policy-components{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin-bottom:18px}
+.policy-components article{display:flex;gap:15px;background:var(--bg-card);padding:17px 19px}
+.policy-components article>span{font-family:var(--fd);font-size:25px;font-weight:300;color:var(--accent);line-height:1;flex:0 0 30px}
+.policy-components h3{font-size:13px;font-weight:500;margin:0 0 5px;color:var(--text)}
+.policy-components p{font-size:11.5px;line-height:1.62;color:var(--muted);margin:0}
+.policy-test{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:15px 17px;background:var(--bg-card);border:1px solid var(--border-s);font-size:11.5px;line-height:1.55;color:var(--muted)}
+.policy-test strong{width:100%;color:var(--text);font-weight:500;margin-bottom:2px}
+.policy-test span{padding:6px 9px;background:var(--bg-mid);border:1px solid var(--border-s)}
+
+.decision-gates{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:0 0 32px}
+.decision-gate{background:var(--bg-card);padding:20px 18px;border-top:2px solid var(--accent-d)}
+.decision-gate span{font-family:var(--fd);font-size:28px;font-weight:300;color:var(--accent);line-height:1}
+.decision-gate h3{font-size:13px;font-weight:500;margin:10px 0 7px;color:var(--text);line-height:1.35}
+.decision-gate p{font-size:11.5px;line-height:1.65;color:var(--muted);margin:0}
+.decision-gate-note{padding:14px 17px;background:rgba(74,123,111,.07);border-left:2px solid var(--green);font-size:12px;color:var(--muted);line-height:1.65;margin:-18px 0 36px}
+
+.role-risk-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin-bottom:18px}
+.role-risk-step{background:var(--bg-card);padding:17px 15px;position:relative}
+.role-risk-step span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;color:var(--accent)}
+.role-risk-step strong{display:block;font-size:12.5px;font-weight:500;margin:7px 0 5px;color:var(--text)}
+.role-risk-step p{font-size:10.8px;line-height:1.55;color:var(--muted);margin:0}
+.role-risk-table-wrap{max-width:100%;overflow-x:auto;border:1px solid var(--border-s);margin:18px 0}
+.role-risk-table{border-collapse:collapse;width:100%;min-width:920px;background:var(--bg-card)}
+.role-risk-table th{font-family:var(--fm);font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-align:left;padding:11px 13px;border-bottom:1px solid var(--border);background:var(--bg-mid)}
+.role-risk-table td{font-size:11px;line-height:1.55;color:var(--muted);vertical-align:top;padding:13px;border-bottom:1px solid var(--border-s)}
+.role-risk-table tr:last-child td{border-bottom:none}
+.role-risk-table strong{color:var(--text);font-weight:500}
+.risk-priority{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;border-radius:50%;font-family:var(--fm);font-size:9px;background:rgba(196,92,46,.12);color:var(--orange)}
+.role-risk-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:18px 0 28px}
+.role-risk-field{background:var(--bg-card);padding:15px}
+.role-risk-field strong{display:block;font-size:12px;font-weight:500;color:var(--text);margin-bottom:5px}
+.role-risk-field span{font-size:10.8px;line-height:1.55;color:var(--muted)}
+.alarp-wrap{display:grid;grid-template-columns:minmax(250px,.9fr) 1.25fr;gap:22px;align-items:stretch;margin-top:24px}
+.alarp-bands{display:flex;flex-direction:column;gap:2px;min-height:315px;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.alarp-band{display:flex;align-items:center;justify-content:center;text-align:center;padding:18px 21%;font-size:11px;line-height:1.45;color:#f5f5f5}
+.alarp-band strong{display:block;font-size:12px;margin-bottom:3px}
+.alarp-band.stop{flex:.78;background:#8F3D2A;padding-top:40px}
+.alarp-band.tolerable{flex:1.35;background:#9A7A2B}
+.alarp-band.monitor{flex:.95;background:#3F7668}
+.alarp-copy{background:var(--bg-card);border:1px solid var(--border-s);padding:22px}
+.alarp-copy h3{font-family:var(--fd);font-size:21px;font-weight:400;margin:0 0 10px}
+.alarp-copy p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 12px}
+.alarp-rule{padding:13px 15px;background:var(--bg-mid);border-left:2px solid var(--accent);font-size:11.5px;line-height:1.6;color:var(--muted);margin-top:14px}
+
 
 /* ═══ SÄKERHETSKULTUR — interaktiv ═══ */
 .cult-block{margin-top:56px}
@@ -958,7 +1012,43 @@ html:not(.js-ready) .theory-subnav{display:none}
 .cad-step-n{color:var(--accent);flex-shrink:0;font-family:var(--fm);font-size:10px;padding-top:1px}
 .cad-case{margin-top:16px;padding:12px 16px;background:var(--bg-card);border-left:2px solid var(--green);font-size:12px;color:var(--muted);line-height:1.65}
 .cad-case b{color:var(--text);font-weight:500}
+.culture-maturity{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s)}
+.culture-stage{background:var(--bg-card);padding:20px 18px;border-top:3px solid var(--stage-c,var(--accent))}
+.culture-stage span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--stage-c,var(--accent))}
+.culture-stage h3{font-family:var(--fd);font-size:20px;font-weight:400;margin:8px 0}
+.culture-stage p{font-size:11.5px;line-height:1.65;color:var(--muted);margin:0}
+.culture-caveat{font-size:11.5px;line-height:1.65;color:var(--muted);padding:13px 16px;background:var(--bg-card);border:1px solid var(--border-s);border-top:none}
+.culture-evidence{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);border:1px solid var(--border-s)}
+.culture-evidence>div{background:var(--bg-card);padding:22px}
+.culture-evidence h3{font-family:var(--fd);font-size:20px;font-weight:400;margin:0 0 9px}
+.culture-evidence p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.culture-evidence ul{padding:0;margin:12px 0 0;list-style:none}
+.culture-evidence li{font-size:11.5px;line-height:1.6;color:var(--muted);padding:7px 0 7px 13px;border-top:1px solid var(--border-s);position:relative}
+.culture-evidence li::before{content:"";position:absolute;left:0;top:15px;width:5px;height:1px;background:var(--accent)}
+.reporting-loop{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s)}
+.reporting-loop article{background:var(--bg-card);padding:18px 16px}
+.reporting-loop span{font-family:var(--fd);font-size:25px;font-weight:300;color:var(--green)}
+.reporting-loop strong{display:block;font-size:12.5px;font-weight:500;margin:8px 0 5px}
+.reporting-loop p{font-size:11px;line-height:1.6;color:var(--muted);margin:0}
+.personality-guardrail{border:1px solid var(--border-s);background:var(--bg-card)}
+.personality-guardrail summary{cursor:pointer;padding:19px 21px;font-family:var(--fd);font-size:20px;color:var(--text)}
+.personality-guardrail[open] summary{border-bottom:1px solid var(--border-s)}
+.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s)}
+.personality-grid>div{background:var(--bg-card);padding:21px}
+.personality-grid h3{font-size:13px;font-weight:500;margin:0 0 9px;color:var(--text)}
+.personality-grid p{font-size:11.8px;line-height:1.68;color:var(--muted);margin:0 0 10px}
+.personality-grid li{font-size:11.5px;line-height:1.6;color:var(--muted);margin-bottom:6px}
 @media(max-width:950px){#handle-crime [style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:860px){
+  .policy-scope,.decision-gates,.culture-maturity,.reporting-loop{grid-template-columns:1fr 1fr}
+  .role-risk-flow{grid-template-columns:1fr 1fr}
+  .role-risk-fields{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  .policy-scope,.policy-components,.decision-gates,.role-risk-flow,.role-risk-fields,.culture-maturity,.culture-evidence,.reporting-loop,.personality-grid,.alarp-wrap{grid-template-columns:1fr}
+  .policy-core{grid-template-columns:1fr;gap:5px}
+  .alarp-bands{min-height:280px}
+}
 
 /* ═══ MOBIL LÄSBARHET OCH ÅTKOMST ═══ */
 @media(max-width:600px){
@@ -2860,45 +2950,47 @@ button,[onclick]{touch-action:manipulation}
     <div class="op-source-row reveal"><a href="https://citrap.scholasticahq.com/article/37318-the-security-net-safety-net-and-stakeholder-net-for-countering-insider-threat" target="_blank" rel="noopener">Lang 2022 — Security, Safety &amp; Stakeholder Net ↗</a><a href="https://www.nist.gov/document/2023-02-26-perserec508redactedpdf" target="_blank" rel="noopener">Lang 2022 — Seven Science-Based Commandments ↗</a></div>
   </div>
 
-  <!-- ANTIKORRUPTIONSPOLICY -->
-  <div class="reveal" style="margin-bottom:56px">
-    <p class="eyebrow">IMM &#183; Compliance</p>
-    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Innehåll i en <em>antikorruptionspolicy</em></h2>
-    <p style="font-size:14px;color:var(--muted);max-width:700px;line-height:1.75;margin-bottom:28px">En antikorruptionspolicy behöver vara operativ: den fastställer vad som avses med korruption, vem som ansvarar, hur risker analyseras, hur överträdelser hanteras och hur arbetet följs upp. Statskontoret betonar att ledning, organisering, kunskap, riskanalys och åtgärder måste bilda ett fortlöpande och strukturerat arbete.</p>
-    <div style="display:flex;flex-direction:column;gap:2px;background:var(--border-s);margin-bottom:20px">
-      <div style="background:var(--bg-card);padding:14px 20px;display:flex;gap:16px;align-items:flex-start">
-        <div style="font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);min-width:32px;line-height:1">01</div>
-        <div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px">Definition av korruption</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Tydligt uttalande om hur korruption definieras &#8212; inklusive indirekta former: g&#229;vor, resor, underhållning, v&#228;nskapsband.</div></div>
-      </div>
-      <div style="background:var(--bg-card);padding:14px 20px;display:flex;gap:16px;align-items:flex-start">
-        <div style="font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);min-width:32px;line-height:1">02</div>
-        <div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px">Ledningens st&#228;llningstagande</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Klart uttalande fr&#229;n ledningen. Anst&#228;llda ser igenom n&#228;r organisationer s&#228;ger en sak och g&#246;r en annan &#8212; ledningen m&#229;ste f&#246;reg&#229; med gott exempel.</div></div>
-      </div>
-      <div style="background:var(--bg-card);padding:14px 20px;display:flex;gap:16px;align-items:flex-start">
-        <div style="font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);min-width:32px;line-height:1">03</div>
-        <div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px">Roller och ansvar</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Vem ansvarar f&#246;r riskbed&#246;mning, åtg&#228;rdsplanering, implementering och uppf&#246;ljning? Odefinierade roller skapar luckor som ingen &#228;ger.</div></div>
-      </div>
-      <div style="background:var(--bg-card);padding:14px 20px;display:flex;gap:16px;align-items:flex-start">
-        <div style="font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);min-width:32px;line-height:1">04</div>
-        <div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px">Rapporterings­process</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Vad ska rapporteras, till vem och hur? Kända kanaler, konfidentialitet, skydd mot repressalier och tydlig återkoppling sänker tröskeln för att slå larm.</div></div>
-      </div>
-      <div style="background:var(--bg-card);padding:14px 20px;display:flex;gap:16px;align-items:flex-start">
-        <div style="font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);min-width:32px;line-height:1">05</div>
-        <div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px">Hantering av &#246;vertr&#228;delser</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Strategi f&#246;r utredningar och konsekvenser. Organisationen m&#229;ste kunna visa att den systematiskt utreder &#8212; inte bara reagerar p&#229; medialt uppmärksammade fall.</div></div>
-      </div>
-      <div style="background:var(--bg-card);padding:14px 20px;display:flex;gap:16px;align-items:flex-start">
-        <div style="font-family:var(--fd);font-size:26px;font-weight:300;color:var(--accent);min-width:32px;line-height:1">06</div>
-        <div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px">Rapportering och &#229;terf&#246;ring</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Rapportering till ledning och styrelse om programmets status, upptäckta risker och genomförda åtgärder. Arbetet behöver uppdateras när riskbild och verksamhet förändras.</div></div>
-      </div>
+  <!-- POLICY MOT OTILLBÖRLIG PÅVERKAN OCH KORRUPTION -->
+  <div class="reveal integrity-policy" id="integrity-policy">
+    <p class="eyebrow">Styrning · Compliance · Beslutsintegritet</p>
+    <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Policy mot <em>otillbörlig påverkan och korruption</em></h2>
+    <p style="font-size:14px;color:var(--muted);max-width:780px;line-height:1.75;margin-bottom:22px">Policyn ska skydda organisationens beslutsintegritet: att beslut, prioriteringar och kontrollåtgärder grundas på sakliga och dokumenterade skäl — inte på hot, trakasserier, otillbörliga förmåner, beroenden, jäv, vänskapsband eller dold lojalitet. Den behöver därför omfatta både brott, gråzoner och försök som ännu inte har påverkat ett beslut.</p>
+
+    <div class="policy-scope" aria-label="Policyns fyra tillämpningsområden">
+      <div class="policy-scope-card"><span>01</span><strong>Påverkan</strong><p>Hot, trakasserier, social press, masskontakt eller andra försök att ändra, fördröja eller stoppa ett beslut.</p></div>
+      <div class="policy-scope-card"><span>02</span><strong>Korruption</strong><p>Mutor, otillbörliga förmåner, handel med inflytande och andra sätt att missbruka en anförtrodd ställning.</p></div>
+      <div class="policy-scope-card"><span>03</span><strong>Jäv och intressekonflikt</strong><p>Privata, ekonomiska eller relationella intressen som kan rubba — eller uppfattas rubba — saklighet och opartiskhet.</p></div>
+      <div class="policy-scope-card"><span>04</span><strong>Insider och infiltration</strong><p>Missbruk av legitim åtkomst, etablering i en roll eller påverkan av någon som redan har tillgång eller beslutsmakt.</p></div>
     </div>
-    <div class="op-source-row reveal"><a href="https://www.institutetmotmutor.se/wp-content/uploads/2015/11/20150113-IMM_Rapport.pdf" target="_blank" rel="noopener">IMM — underlag för antikorruptionspolicy (2015) ↗</a><a href="https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2023/steg-for-steg--myndigheternas-arbete-mot-korruption-ar-under-utveckling-slutrapport/" target="_blank" rel="noopener">Statskontoret 2023 — strukturerat arbete mot korruption ↗</a><a href="https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2025/en-stabilare-grund-for-arbetet-mot-korruption/lasrapporten" target="_blank" rel="noopener">Statskontoret 2025 — aktuell utvecklingsinriktning ↗</a></div>
+
+    <div class="policy-core" role="note">
+      <div class="policy-core-label">Styrande princip</div>
+      <div><strong>Rapportera försöket och pröva effekten separat.</strong> Policyn ska fånga både kontaktförsöket och om det faktiskt ledde till ändrat beslut, självcensur, avsteg, undantag eller normaliserad anpassning.</div>
+    </div>
+
+    <div class="policy-components">
+      <article><span>01</span><div><h3>Definition och omfattning</h3><p>Definiera förbjudna, rapporteringspliktiga och olämpliga beteenden. Ange att även försök, indirekta förmåner, närstående, mellanhänder, repressalier och intressekonflikter omfattas.</p></div></article>
+      <article><span>02</span><div><h3>Ledningens ställningstagande</h3><p>Styrelse eller högsta ledning fastställer nolltolerans mot otillbörliga medel och repressalier — men inte nolltolerans mot att tidiga och osäkra signaler rapporteras i god tro.</p></div></article>
+      <article><span>03</span><div><h3>Roller, oberoende och jäv</h3><p>Utse policyägare, kontrollägare och beslutsfattare. Reglera vem som tar över när chef, utredare, upphandling, HR eller ledning berörs av uppgifterna.</p></div></article>
+      <article><span>04</span><div><h3>Riskbedömning och kontroller</h3><p>Knyt risker till beslut, processer, leverantörer och roller. Välj proportionerliga barriärer: arbetsdelning, rotation, attest, jävsdeklaration, behörighetsstyrning, loggning och leverantörskontroll.</p></div></article>
+      <article><span>05</span><div><h3>Gåvor, resor och relationer</h3><p>Ange beloppsoberoende beslutsfrågor, förhandsgodkännande, registrering och förbudszoner. En förmån kan vara olämplig eller otillbörlig även om den inte leder till åtal.</p></div></article>
+      <article><span>06</span><div><h3>Rapportering och skydd</h3><p>Beskriv ordinarie rapporteringsväg, akutväg och visselblåsarkanal, konfidentialitet, skydd mot repressalier, mottagningsbekräftelse, återkoppling och alternativ när linjechefen berörs.</p></div></article>
+      <article><span>07</span><div><h3>Utredning och konsekvenser</h3><p>Fastställ mandat, rättslig grund, bevisbevarande, hörande, dokumentation och beslutsordning. Skilj tillfälliga skyddsåtgärder från disciplinär bedömning och eventuell brottsanmälan.</p></div></article>
+      <article><span>08</span><div><h3>Utbildning, uppföljning och förbättring</h3><p>Utbilda efter riskroll, följ både rapporter och kontrollernas effekt, redovisa till ledning och styrelse och revidera efter incidenter, förändrad hotbild eller nya verksamhetsprocesser.</p></div></article>
+    </div>
+
+    <div class="policy-test">
+      <strong>Policyn är operativ först när en medarbetare kan svara på fem frågor:</strong>
+      <span>Vad ska jag reagera på?</span><span>Vart rapporterar jag?</span><span>Vad händer därefter?</span><span>Hur skyddas jag?</span><span>Vem kontrollerar att ledningen följer samma regler?</span>
+    </div>
+    <div class="op-source-row reveal"><a href="https://www.institutetmotmutor.se/skrifter/naringslivskoden/" target="_blank" rel="noopener noreferrer">IMM — Näringslivskoden ↗</a><a href="https://www.statskontoret.se/uppdrag-och-rapporter/rapporter/2020/myndigheternas-korruptionsrisker/lasrapporten" target="_blank" rel="noopener noreferrer">Statskontoret — Myndigheternas korruptionsrisker ↗</a><a href="https://www.regeringen.se/pressmeddelanden/2024/07/ny-handlingsplan-mot-korruption-och-otillaten-paverkan/" target="_blank" rel="noopener noreferrer">Regeringen — handlingsplan mot korruption och otillåten påverkan ↗</a><a href="https://www.oecd.org/en/publications/oecd-public-integrity-handbook_ac8ed8e8-en/full-report/risk-management_bcd348bd.html" target="_blank" rel="noopener noreferrer">OECD — risk management for public integrity ↗</a></div>
   </div>
 
   <!-- SAMVERKANDE ORGANISATION -->
   <div class="reveal" style="margin-bottom:56px">
     <p class="eyebrow">Organisationsmodell &#183; Internt samarbete</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Ansvar och samverkan <em>i organisationen</em></h2>
-    <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Insiderhot hanteras inte av säkerhetsfunktionen ensam. Effektiv hantering kr&#228;ver att flera delar av organisationen samverkar kring en gemensam l&#228;gesbild &#8212; och att ingen viktig indikator faller mellan stolarna.</p>
+    <p style="font-size:14px;color:var(--muted);max-width:720px;line-height:1.75;margin-bottom:28px">Otillbörlig påverkan, korruption och insiderrisk hanteras inte av säkerhetsfunktionen ensam. Effektiv hantering kräver att flera delar av organisationen samverkar kring samma skyddsvärden och beslut — utan att skapa en obegränsad persondatabas eller låta en berörd chef styra utredningen.</p>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin-bottom:16px">
       <div style="background:var(--bg-card);padding:18px">
         <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Personals&#228;kerhet</div>
@@ -2923,6 +3015,18 @@ button,[onclick]{touch-action:manipulation}
       <div style="background:var(--bg-card);padding:18px">
         <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Visselblåsarfunktion</div>
         <div style="font-size:12px;color:var(--muted);line-height:1.6">Oberoende mottagning, konfidentialitet, skydd för rapportören, överblick över inkommande larm och koppling till behörig utredningsfunktion.</div>
+      </div>
+      <div style="background:var(--bg-card);padding:18px">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Compliance och intern styrning</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Policyägarskap, intressekonflikter, rådgivning, utbildning, kontrollplan och samlad rapportering till ledning och styrelse.</div>
+      </div>
+      <div style="background:var(--bg-card);padding:18px">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Upphandling och ekonomi</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Leverantörskontroll, jäv, förmåner, attest, betalningsmönster, avtalsuppföljning och spårbarhet från behov till utbetalning.</div>
+      </div>
+      <div style="background:var(--bg-card);padding:18px">
+        <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Internrevision och oberoende granskning</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">Prövar styrningens och kontrollernas utformning och effekt, granskar rotorsaker och eskalerar oberoende när linje eller ledning berörs.</div>
       </div>
     </div>
     <div style="padding:12px 16px;background:var(--bg-card);border:1px solid var(--border-s);border-left:2px solid var(--accent-d);font-size:12px;color:var(--muted);line-height:1.65">
@@ -4517,9 +4621,9 @@ function showHandle(id,options={}){
 <section class="module" id="mod-handle">
 <div class="wrap">
   <div class="sec-head reveal">
-    <p class="eyebrow">Kapitel 7 · Ärendehantering</p>
-    <h1 class="sec-title">Hantera ett<br><em>insiderärende</em></h1>
-    <p class="sec-intro">Vad gör man när en signal kommer in? Här följer du ärendet i sex steg, från den första bedömningen till beslut och uppföljning. Du får också stöd för att skilja signaler på individ-, grupp- och organisationsnivå och för att bedöma när rättsligt ansvar kan bli aktuellt.</p>
+    <p class="eyebrow">Agera · Intern utredning och ärendehantering</p>
+    <h1 class="sec-title">Hantera misstänkt<br><em>påverkan, korruption och insideragerande</em></h1>
+    <p class="sec-intro">Vad gör organisationen när en signal kommer in — och vem får fatta besluten? Modulen ger en förutbestämd beslutsordning och en sexstegsprocess från första bedömning till åtgärd, återkoppling och organisatoriskt lärande. Den gäller både påverkansförsök, korruptionsmisstankar, intressekonflikter och missbruk av intern åtkomst.</p>
   </div>
 
   <!-- SUB-NAVIGATION -->
@@ -4533,9 +4637,9 @@ function showHandle(id,options={}){
   <!-- SUB: UTREDNINGSPROCESSEN -->
   <div id="handle-process" class="handle-panel">
     <div class="reveal" style="margin-bottom:32px">
-      <p class="eyebrow">Hanteringsordning · 6 steg</p>
-      <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Från signal till <em>rapport</em></h2>
-      <p style="font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:28px">Processen gäller oavsett om signalen inkommit via rapporteringssystemet, UAM-larm, kollegors iakttagelse eller extern källa. Varje steg är beslutspunkt — inte automatisk eskalering.</p>
+      <p class="eyebrow">Hanteringsordning · Mandat + 6 steg</p>
+      <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Från signal till <em>beslut och lärande</em></h2>
+      <p style="font-size:14px;color:var(--muted);max-width:720px;line-height:1.75;margin-bottom:28px">Processen gäller oavsett om signalen gäller ett påverkansförsök, en möjlig förmån, jäv, avvikande systemanvändning eller en extern uppgift. Varje steg är en beslutspunkt — inte automatisk eskalering och inte en förhandsbedömning av skuld.</p>
     </div>
 
     <div class="edu-stack reveal">
@@ -4552,6 +4656,19 @@ function showHandle(id,options={}){
         <div class="edu-body"><div class="edu-kicker">Utvald modul</div><div class="edu-title">Insider Risk Mitigation Digital Learning</div><div class="edu-meta">National Protective Security Authority · 2025</div><p>Modulen Security Investigations används här som internationell fördjupning till utredningsprocessen. Den ersätter inte svensk arbetsrätt, dataskyddslagstiftning, säkerhetsskyddslagstiftning eller brottsutredande myndigheters ansvar.</p><div class="edu-module-list"><span class="edu-module">Security Investigations</span></div><div class="edu-links"><a class="edu-link primary" href="https://www.npsa.gov.uk/insider-risk-mitigation-digital-learning" target="_blank" rel="noopener noreferrer">Öppna originalkällan ↗</a></div></div>
       </details>
     </div>
+
+    <div class="reveal" style="margin:34px 0 18px">
+      <p class="eyebrow">Fyra mandatfrågor före incidenten</p>
+      <h2 style="font-family:var(--fd);font-size:clamp(22px,2.8vw,32px);font-weight:300;line-height:1.1;margin-bottom:10px">Bestäm <em>vem som beslutar</em> innan ärendet är känsligt</h2>
+      <p style="font-size:13px;color:var(--muted);max-width:730px;line-height:1.72;margin-bottom:20px">En utredning blir sårbar när samma person beställer, avgränsar, bedömer kvaliteten och beslutar om konsekvenser. Policyn bör därför ange ordinarie beslutsväg, ersättare vid jäv och när extern eller särskilt oberoende granskning ska användas.</p>
+    </div>
+    <div class="decision-gates reveal">
+      <article class="decision-gate"><span>01</span><h3>Vem beslutar att starta?</h3><p>En utsedd funktion eller kommitté prövar tröskel, skyddsbehov, jäv, ändamål och rättsligt stöd. Akuta skyddsåtgärder ska kunna fattas separat.</p></article>
+      <article class="decision-gate"><span>02</span><h3>Vem leder — med vilka resurser?</h3><p>Utredningsledaren får skriftligt mandat, avgränsning och tillgång till juridik, HR, IT-forensik och relevant verksamhetskunskap. Berörda chefer styr inte bevisurvalet.</p></article>
+      <article class="decision-gate"><span>03</span><h3>Vem beslutar att avsluta?</h3><p>En beställare eller kvalitetssäkrare som inte själv är utredare prövar om frågorna är besvarade, motbevis har hanterats och osäkerheter redovisats.</p></article>
+      <article class="decision-gate"><span>04</span><h3>Vem beslutar om följder?</h3><p>Behörigt organ beslutar arbetsrättslig åtgärd, processförändring, återkrav eller anmälan. Åtgärder mot person och åtgärder mot kontrollbrister bedöms var för sig.</p></article>
+    </div>
+    <div class="decision-gate-note reveal"><strong style="color:var(--text);font-weight:500">Två parallella spår:</strong> skydda verksamheten och säkra relevant material utan att föregripa skuldfrågan; behandla samtidigt den berörda personen korrekt, informera när reglerna medger det och ge möjlighet att bemöta relevanta uppgifter. Kontroll av anställda kräver ett tydligt ändamål, rättslig grund, nödvändighet och proportionalitet.</div>
 
     <div class="reveal" style="display:flex;flex-direction:column;gap:2px;background:var(--border-s);margin-bottom:48px">
       <div style="background:var(--bg-card);display:grid;grid-template-columns:auto 1fr 1fr;gap:0">
@@ -4668,8 +4785,8 @@ function showHandle(id,options={}){
         <div class="ad-ind">Upplever personen sig orättvist behandlad eller förbisedd?</div>
         <div class="ad-ind">Finns dokumenterade sårbarheter eller påtryckningar som är relevanta för risken och möjliga stödåtgärder?</div>
         <div class="ad-ind">Har personen talat om att skada sig själv eller andra?</div>
-        <div class="ad-ind">Hur interagerar personen med kollegor — starkt isolerad?</div>
-        <div class="ad-ind">Lägger personen skulden på andra för sina misslyckanden?</div>
+        <div class="ad-ind">Har samarbete eller kommunikation förändrats på ett sätt som konkret påverkar arbetsuppgiften eller säkerheten?</div>
+        <div class="ad-ind">Finns återkommande konflikter, hot, regelbrott eller ansvarsförskjutning som kan beläggas med händelser?</div>
       </div>
     </div>
   </div>
@@ -4692,14 +4809,14 @@ function showHandle(id,options={}){
       <p class="eyebrow" style="margin-bottom:14px">Nivå 1 · Individ — anställd eller konsult</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s)">
         <div style="background:var(--bg-card);padding:20px">
-          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border-s)">Mindre allvarliga signaler</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border-s)">Förhållanden att förstå i sitt sammanhang</div>
           <div class="cp-sig">Dålig prestationsbedömning</div>
           <div class="cp-sig">Dålig kvalitet på arbetet, kommer sent</div>
           <div class="cp-sig">Tar inte till sig feedback</div>
-          <div class="cp-sig">Orapporterade förändringar i privatliv</div>
+          <div class="cp-sig">Återkommande behov att kringgå en rutin för att klara arbetsuppgiften</div>
           <div class="cp-sig">Osäkert beteende och risktagande</div>
-          <div class="cp-sig">Droganvändning eller riskbruk av alkohol</div>
-          <div class="cp-sig">Öppet ogillar någon på arbetsplatsen</div>
+          <div class="cp-sig">Påverkan i tjänsten eller annat konkret arbetsmiljö- eller säkerhetsproblem</div>
+          <div class="cp-sig">En personkonflikt påverkar arbetsuppgifter eller informationsdelning</div>
           <div class="cp-sig">Mobbar kollegor</div>
         </div>
         <div style="background:var(--bg-card);padding:20px">
@@ -4709,10 +4826,10 @@ function showHandle(id,options={}){
           <div class="cp-sig">Mycket oförklarad frånvaro</div>
           <div class="cp-sig">Stjäl information av olika slag</div>
           <div class="cp-sig">Förfalskar anställningsintyg eller betyg</div>
-          <div class="cp-sig">Visar förakt för auktoritet, litar inte på andra</div>
+          <div class="cp-sig">Vägrar återkommande kritiska kontroller utan saklig grund</div>
           <div class="cp-sig">Öppet aggressiv, attackerar någon fysiskt</div>
-          <div class="cp-sig">Blir föremål för brottsutredning</div>
-          <div class="cp-sig">Är delaktig i rättslig tvist om pengar</div>
+          <div class="cp-sig">Konkreta uppgifter om brott i tjänsten kräver rättssäker bedömning</div>
+          <div class="cp-sig">Försöker dölja, påverka eller förstöra relevant underlag</div>
         </div>
       </div>
     </div>
@@ -4983,6 +5100,9 @@ function showHandle(id,options={}){
         <div style="font-size:12px;color:var(--muted);line-height:1.65">Pröva om krav kan skräddarsys, undantag staplas, underleverantörer bytas utan kontroll eller samma person påverka behov, beslut och uppföljning. Åtgärden ska träffa det identifierade missbruksscenariot.</div>
       </div>
     </div>
+  </div>
+  <div class="legal-srcnote reveal">
+    Utredning och disciplin: <a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/investigation-disciplinary" target="_blank" rel="noopener noreferrer">NPSA — Investigation &amp; Disciplinary ↗</a>. Dataskydd i arbetslivet: <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/kontroll-och-overvakning-av-anstallda/" target="_blank" rel="noopener noreferrer">IMY — kontroll och övervakning av anställda ↗</a>, <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/rattslig-grund/" target="_blank" rel="noopener noreferrer">rättslig grund ↗</a> och <a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/konsekvensbedomning/" target="_blank" rel="noopener noreferrer">konsekvensbedömning ↗</a>. Rapporteringsskydd: <a href="https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/visselblasarlagen/" target="_blank" rel="noopener noreferrer">Arbetsmiljöverket — visselblåsarlagen ↗</a>. De internationella källorna är metodstöd; svensk arbetsrätt, dataskyddslagstiftning, visselblåsarlagstiftning, kollektivavtal och behöriga organs mandat styr den konkreta hanteringen.
   </div>
 </div>
 </section>
@@ -6463,10 +6583,72 @@ function showHandle(id,options={}){
     </div>
   </div>
 
-  <!-- VERKTYG 2: BROP -->
-  <div class="reveal tool-block">
+  <!-- VERKTYG 2: ROLLBASERAT RISKREGISTER -->
+  <div class="reveal tool-block" id="role-risk-register">
     <div class="tool-head">
       <div class="tool-num">02</div>
+      <div>
+        <div class="tool-title">Rollbaserat riskregister och riskacceptans</div>
+        <div class="tool-desc">Koppla prioriterade hotscenarier till rollens faktiska åtkomst, mandat och handlingsförmåga. Bedöm rollen — inte personen. Registret kompletterar en säkerhetsskyddsanalys men ersätter den inte.</div>
+      </div>
+    </div>
+
+    <div class="role-risk-flow" aria-label="Fem steg för rollbaserad riskbedömning">
+      <article class="role-risk-step"><span>01</span><strong>Skyddsvärde</strong><p>Identifiera kritiska beslut, information, system, byggnader, material och människor.</p></article>
+      <article class="role-risk-step"><span>02</span><strong>Scenario</strong><p>Beskriv hur påverkan, korruption, sabotage eller missbruk faktiskt skulle kunna gå till.</p></article>
+      <article class="role-risk-step"><span>03</span><strong>Rollförmåga</strong><p>Kartlägg åtkomst, mandat, frekvens, självständighet och möjlighet att kringgå eller ge andra behörighet.</p></article>
+      <article class="role-risk-step"><span>04</span><strong>Barriärer</strong><p>Pröva arbetsdelning, attest, övervakning, rotation, stöd och återställningsförmåga.</p></article>
+      <article class="role-risk-step"><span>05</span><strong>Beslut</strong><p>Dokumentera kvarstående risk, ägare, åtgärd, accepterande beslutsnivå och datum för ny prövning.</p></article>
+    </div>
+
+    <div class="ind-guardrail"><strong>Viktig avgränsning:</strong> många personer i en roll kan öka exponeringsytan, men gör inte en viss medarbetare mer misstänkt. Individnivå används först när faktisk behörighet eller arbetsfördelning avviker inom rollen — och endast för att förstå åtkomst och välja lagliga, proportionerliga kontroller.</div>
+
+    <p class="eyebrow" style="margin:24px 0 10px">Exempel · Sabotage i skyddat serverutrymme</p>
+    <div class="role-risk-table-wrap">
+      <table class="role-risk-table">
+        <caption style="text-align:left;padding:11px 13px;background:var(--bg-card);font-size:11px;color:var(--muted);line-height:1.55">Samma hotscenario kan ge olika riskbidrag beroende på rollens verkliga åtkomst, självständighet och barriärer. Uppgifterna är ett pedagogiskt exempel och ska ersättas med verksamhetens verifierade förhållanden.</caption>
+        <thead><tr><th>Hotscenario</th><th>Prioritet</th><th>Roll (antal)</th><th>Åtkomst och handlingsförmåga</th><th>Befintlig barriär</th><th>Kvarstående fråga</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="3"><strong>Brandlarm sätts ur funktion och brand anläggs för att slå ut nätverk.</strong><br>Scenariot beskriver möjlighet och konsekvens — inte sannolikheten att någon i rollen vill agera.</td><td rowspan="3"><span class="risk-priority">3</span></td><td><strong>Säkerhetschef</strong><br>1 person</td><td>Fysisk åtkomst, kunskap om larm och passage samt mandat att ändra säkerhetskonfiguration.</td><td>Ändringslogg och separat attest för permanent konfigurationsändring.</td><td>Kan ett akut undantag genomföras utan att en andra funktion informeras?</td></tr>
+          <tr><td><strong>Gruppchef</strong><br>4 personer</td><td>Begränsad larmbehörighet för återställning efter falsklarm; normalt ingen systemadministration.</td><td>Åtgärder loggas och följs upp av annan roll.</td><td>Är jour- och reservrutinerna lika kontrollerade som dagdriften?</td></tr>
+          <tr><td><strong>IT-tekniker</strong><br>8 personer</td><td>Dygnet-runt-tillträde, teknisk kunskap och möjlighet att påverka servermiljö och kylning.</td><td>Passageloggar, larm och återställningsbar backup på separat plats.</td><td>Kan samma person påverka både drift, larm och bevisloggar utan samtidighetskontroll?</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="role-risk-fields" aria-label="Fält i ett rollbaserat riskregister">
+      <div class="role-risk-field"><strong>Risk och skyddsvärde</strong><span>Scenario, berörd tillgång eller beslut, möjlig konsekvens och prioritet.</span></div>
+      <div class="role-risk-field"><strong>Roll och population</strong><span>Funktion, anställningsform, ungefärligt antal och relevanta variationer i arbetsfördelning.</span></div>
+      <div class="role-risk-field"><strong>Faktisk åtkomst</strong><span>Fysisk, digital, informativ och relationell åtkomst; frekvens, omfattning och möjlighet att delegera.</span></div>
+      <div class="role-risk-field"><strong>Kontroller och evidens</strong><span>Förebyggande, upptäckande och återställande barriärer samt hur deras effekt kan verifieras.</span></div>
+      <div class="role-risk-field"><strong>Kvarstående risk</strong><span>Ny sannolikhets- och konsekvensbedömning efter befintliga och beslutade åtgärder.</span></div>
+      <div class="role-risk-field"><strong>Ägarskap och översyn</strong><span>Riskägare, accepterande beslutsnivå, motiv, åtgärdsfrist och nästa granskningsdatum.</span></div>
+    </div>
+
+    <div class="policy-core" style="margin-bottom:0"><div class="policy-core-label">Riskaptit</div><div><strong>Formulera gränser per skyddsvärde och konsekvens — inte en allmän vilja att ”ta risk”.</strong> Ange vilka utfall som aldrig får accepteras, vilken beslutsnivå som får acceptera kvarstående risk och hur länge beslutet gäller. Ett avstående från åtgärd är ett aktivt, spårbart beslut med ägare och omprövningsdatum.</div></div>
+
+    <div class="alarp-wrap">
+      <div class="alarp-bands" role="img" aria-label="Tre riskzoner: oacceptabel, tolerabel endast med dokumenterad reduktion och låg men fortsatt övervakad risk">
+        <div class="alarp-band stop"><div><strong>Oacceptabel</strong>Stoppa eller reducera innan exponeringen fortsätter</div></div>
+        <div class="alarp-band tolerable"><div><strong>Tolerabel endast med prövning</strong>Genomför alla rimligt praktiska riskreduktioner och dokumentera beslutet</div></div>
+        <div class="alarp-band monitor"><div><strong>Låg — inte noll</strong>Behåll barriärer, följ indikatorer och ompröva vid förändring</div></div>
+      </div>
+      <div class="alarp-copy">
+        <p class="eyebrow" style="margin-bottom:8px">ALARP · Anpassat beslutsstöd</p>
+        <h3>Så lågt som rimligen är praktiskt genomförbart</h3>
+        <p>ALARP kommer från brittisk arbetsmiljö- och säkerhetsreglering. Som allmän riskhanteringsprincip kan den användas för att synliggöra varför ytterligare åtgärder genomförs eller avstås: riskreduktionen vägs mot tid, kostnad och praktisk insats.</p>
+        <p><strong style="color:var(--text);font-weight:500">Bevisbördan ligger på beslutet att avstå.</strong> Ju större möjlig skada, desto starkare underlag krävs för att hävda att ytterligare riskreduktion är orimligt betungande.</p>
+        <div class="alarp-rule"><strong style="color:var(--text);font-weight:500">Svensk avgränsning:</strong> ALARP är här ett dokumentations- och prioriteringsstöd — inte en svensk rättslig frizon. Tvingande krav i exempelvis säkerhetsskydd, arbetsmiljö, dataskydd, upphandling eller offentlig förvaltning får inte förhandlas bort med en kostnads–nyttoanalys.</div>
+      </div>
+    </div>
+    <div class="policy-test" style="margin-top:18px"><strong>Översyn minst årligen — och alltid vid:</strong><span>förändrad hotbild</span><span>incident eller nära-händelse</span><span>nytt system eller skyddsvärde</span><span>omorganisation eller outsourcing</span><span>ändrad kontroll eller behörighet</span></div>
+    <div class="op-source-row"><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/role-based-security-risk-assessment" target="_blank" rel="noopener noreferrer">NPSA — Role-Based Security Risk Assessment ↗</a><a href="https://www.npsa.gov.uk/specialised-guidance/insider-risk-guidance/10-steps-effective-insider-risk-assessment" target="_blank" rel="noopener noreferrer">NPSA — 10 Steps to Effective Insider Risk Assessment ↗</a><a href="https://www.hse.gov.uk/skin/professional/legal.htm" target="_blank" rel="noopener noreferrer">UK HSE — reasonably practicable ↗</a></div>
+  </div>
+
+  <!-- VERKTYG 3: BROP -->
+  <div class="reveal tool-block">
+    <div class="tool-head">
+      <div class="tool-num">03</div>
       <div>
         <div class="tool-title">Säkerhetsprövning — BROP-modellen</div>
         <div class="tool-desc">Fyra steg från befattningsanalys till beslut för roller där säkerhetsskyddslagen är tillämplig. Klicka för innehåll, syfte och återkommande brister som Riksrevisionen beskriver.</div>
@@ -6476,10 +6658,10 @@ function showHandle(id,options={}){
     <div class="brop-detail" id="bropDetail"></div>
   </div>
 
-  <!-- VERKTYG 3: BOW-TIE -->
+  <!-- VERKTYG 4: BOW-TIE -->
   <div class="reveal tool-block">
     <div class="tool-head">
-      <div class="tool-num">03</div>
+      <div class="tool-num">04</div>
       <div>
         <div class="tool-title">Bow-tie — barriäranalys</div>
         <div class="tool-desc">MCF:s rekommenderade metod. Välj ett hotscenario för att se orsaker, förebyggande barriärer, den centrala händelsen, begränsande barriärer och konsekvenser.</div>
@@ -6489,10 +6671,10 @@ function showHandle(id,options={}){
     <div class="bowtie-diagram" id="bowtieDiagram"></div>
   </div>
 
-  <!-- VERKTYG 4: CRIME PROOFING -->
+  <!-- VERKTYG 5: CRIME PROOFING -->
   <div class="reveal tool-block">
     <div class="tool-head">
-      <div class="tool-num">04</div>
+      <div class="tool-num">05</div>
       <div>
         <div class="tool-title">Crime proofing — organisatorisk attackyta</div>
         <div class="tool-desc">Välj ett avgränsat regelverk eller styrsystem och pröva hur det kan exploateras. Använd modellen för föreningsbidrag, ekonomiskt bistånd, LSS, HVB, upphandling, avtal, tillstånd, ersättningar, kontrollverksamhet och behörighets- eller beslutsprocesser.</div>
@@ -6514,10 +6696,10 @@ function showHandle(id,options={}){
     </details>
   </div>
 
-  <!-- VERKTYG 5: CHECKLISTOR -->
+  <!-- VERKTYG 6: CHECKLISTOR -->
   <div class="reveal tool-block">
     <div class="tool-head">
-      <div class="tool-num">05</div>
+      <div class="tool-num">06</div>
       <div>
         <div class="tool-title">Checklistor — tre faser</div>
         <div class="tool-desc">Baserade på checklistorna i <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF:s vägledning <em>Transportskydd</em> (MCF0079) ↗</a>, anpassade för HR och säkerhetsfunktion. Bocka av — status sparas i din webbläsare under sessionen.</div>
@@ -6541,8 +6723,10 @@ function showHandle(id,options={}){
   <div class="sec-head reveal">
     <p class="eyebrow">Agera · Säkerhetskultur</p>
     <h1 class="sec-title">Kultur som<br><em>skyddsbarriär</em></h1>
-    <p class="sec-intro">Tekniska skydd och tydliga processer räcker inte om medarbetare tystnar eller avvikelser blir vardag. En stark säkerhetskultur gör det lättare att reagera tidigt och svårare för påverkan att få fäste. <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen (RiR 2026:3) ↗</a> pekar särskilt på ledningens ansvar.</p>
+    <p class="sec-intro">Tekniska skydd och tydliga processer räcker inte om medarbetare tystnar eller avvikelser blir vardag. En stark säkerhetskultur gör det lättare att reagera tidigt och svårare för påverkan att få fäste. <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener noreferrer">Riksrevisionen (RiR 2026:3) ↗</a> pekar särskilt på ledningens ansvar.</p>
   </div>
+
+  <div class="policy-core reveal"><div class="policy-core-label">Kultur och strategi</div><div>Det ofta återgivna uttrycket <strong>”culture eats strategy for breakfast”</strong> fångar en praktisk poäng, oavsett den osäkra tillskrivningen: strategin anger vad organisationen vill, men vardagskulturen avgör vad människor faktiskt gör när regler, tidspress, lojaliteter och resultatkrav kolliderar.</div></div>
 
   <div class="edu-stack reveal">
     <details class="edu-card">
@@ -6558,12 +6742,51 @@ function showHandle(id,options={}){
     </details>
   </div>
 
+  <!-- KULTURMOGNAD -->
+  <div class="reveal cult-block">
+    <div class="cult-head">
+      <div class="cult-eyebrow">Mognad · Bradley-kurvan som reflektionsmodell</div>
+      <div class="cult-title">Från reaktion till gemensamt ansvar</div>
+      <div class="cult-lead">DuPont Bradley-modellen utvecklades för arbetsmiljösäkerhet. Här används dess fyra steg som ett samtalsstöd för säkerhets- och integritetskultur — inte som ett validerat mått på insider- eller korruptionsrisk.</div>
+    </div>
+    <div class="culture-maturity">
+      <article class="culture-stage" style="--stage-c:#A94932"><span>01 · Reaktiv</span><h3>Vi agerar efter skadan</h3><p>Incidenter ses som enskilda överraskningar. Rapportering beror på personligt mod och lärandet stannar ofta vid skuldfrågan.</p></article>
+      <article class="culture-stage" style="--stage-c:#B8973A"><span>02 · Beroende</span><h3>Chefen håller ordning</h3><p>Regler, kontroller och sanktioner finns, men följs främst när ledningen övervakar. Säkerhet blir en särskild funktions uppgift.</p></article>
+      <article class="culture-stage" style="--stage-c:#648A80"><span>03 · Oberoende</span><h3>Jag tar ansvar</h3><p>Medarbetare förstår syftet, verifierar ovanliga förfrågningar och rapporterar egna misstag eller påverkansförsök tidigt.</p></article>
+      <article class="culture-stage" style="--stage-c:#3F7668"><span>04 · Ömsesidigt beroende</span><h3>Vi skyddar besluten tillsammans</h3><p>Kollegor hjälper varandra att stanna upp, ledningen välkomnar motfrågor och organisationen lär av svaga signaler utan att profilera personer.</p></article>
+    </div>
+    <div class="culture-caveat"><strong style="color:var(--text);font-weight:500">Använd så här:</strong> be olika funktioner beskriva vilket steg som bäst motsvarar ett konkret beteende — exempelvis rapportering, jävsdeklaration eller behörighetsavvikelse. Skillnaderna mellan svaren är mer lärorika än en sammanräknad ”mognadspoäng”.</div>
+    <div class="op-source-row"><a href="https://www.consultdss.com/content-hub/four-steps-resilient-sustainable-safety-culture/" target="_blank" rel="noopener noreferrer">dss+ — Bradley Curve, fyra steg ↗</a><a href="https://www.npsa.gov.uk/security-best-practices/security-culture/introduction-security-culture" target="_blank" rel="noopener noreferrer">NPSA — Introduction to Security Culture ↗</a></div>
+  </div>
+
+  <!-- COMPLY OR DIE -->
+  <div class="reveal cult-block">
+    <div class="cult-head">
+      <div class="cult-eyebrow">Forskning · Kirlappos, Beautement &amp; Sasse 2013</div>
+      <div class="cult-title">När säkerhet konkurrerar med arbetet</div>
+      <div class="cult-lead">”Comply or Die Is Dead” byggde på 126 intervjuer och en enkät med 1&nbsp;256 deltagare. Huvudpoängen är inte att regler saknar betydelse, utan att friktion mellan säkerhetskrav och produktivt arbete gör genvägar förutsägbara.</div>
+    </div>
+    <div class="culture-evidence">
+      <div>
+        <h3>Command-and-control som enda svar</h3>
+        <p>Mer policy, fler varningar och hårdare efterlevnad kan missa varför människor kringgår kontrollen. Om rätt behörighet, säker filöverföring eller rådgivning tar för lång tid skapas en lokal ”lösning” som medarbetaren uppfattar som nödvändig för att klara uppgiften.</p>
+        <ul><li>Mäter om regeln bröts — inte vilket arbetsproblem som drev beteendet.</li><li>Gör rapportering av egna misstag riskfylld.</li><li>Lämnar farlig friktion kvar i processen.</li></ul>
+      </div>
+      <div>
+        <h3>Säkerhetsmedvetna huvudaktörer</h3>
+        <p>Utforma säkra arbetssätt som går att använda under verklig tidspress. Ge tydliga beslutsramar, snabb hjälp och en eskaleringsväg för situationer som policyn inte förutsett — och följ upp återkommande genvägar som processdata.</p>
+        <ul><li>Gör det säkra alternativet tillgängligt och begripligt.</li><li>Belöna tidig rapportering och egenkorrigering.</li><li>Ändra kontrollen när samma konflikt återkommer.</li></ul>
+      </div>
+    </div>
+    <div class="op-source-row"><a href="https://discovery.ucl.ac.uk/1419506/" target="_blank" rel="noopener noreferrer">UCL Discovery — öppet forskningsunderlag ↗</a><a href="https://link.springer.com/chapter/10.1007/978-3-642-41320-9_5" target="_blank" rel="noopener noreferrer">Springer — originalpublikation ↗</a><a href="https://www.npsa.gov.uk/resources/embedding-security-behaviours-using-5es" target="_blank" rel="noopener noreferrer">NPSA — 5Es för säkerhetsbeteenden ↗</a></div>
+  </div>
+
   <!-- KULTURDIAGNOS -->
   <div class="reveal cult-block">
     <div class="cult-head">
-      <div class="cult-eyebrow">Diagnos</div>
+      <div class="cult-eyebrow">Reflektionsskattning</div>
       <div class="cult-title">Var står er kultur?</div>
-      <div class="cult-lead">Sex påståenden. Dra reglaget efter hur väl varje påstående stämmer. Resultatet placerar er på skalan mellan tystnadskultur och stark säkerhetskultur. Ingen data sparas.</div>
+      <div class="cult-lead">Åtta påståenden. Dra reglaget efter hur väl varje påstående stämmer. Resultatet är ett reflektionsunderlag mellan tystnadskultur och stark säkerhetskultur — inte ett certifieringsmått. Ingen data sparas.</div>
     </div>
     <div class="cult-diag" id="cultDiag"></div>
     <div class="cult-diag-result" id="cultDiagResult"></div>
@@ -6577,6 +6800,44 @@ function showHandle(id,options={}){
       <div class="cult-lead">Samma situation, två utfall. Klicka på en dimension för att se hur den tar sig uttryck i en stark respektive svag säkerhetskultur.</div>
     </div>
     <div class="cult-compare" id="cultCompare"></div>
+  </div>
+
+  <!-- RAPPORTERINGSKULTUR -->
+  <div class="reveal cult-block">
+    <div class="cult-head">
+      <div class="cult-eyebrow">Rapporteringskultur · Från signal till förbättring</div>
+      <div class="cult-title">Gör rapportering lätt — och värd risken</div>
+      <div class="cult-lead">En rapportör ska inte behöva avgöra om ett brott är begånget. Kanalen ska ta emot observationer, egna misstag, påverkansförsök och kontrollbrister, triagera dem rättssäkert och återföra lärande utan att röja skyddade uppgifter.</div>
+    </div>
+    <div class="reporting-loop">
+      <article><span>01</span><strong>Låg tröskel</strong><p>En känd kanal, akutväg och alternativ utanför linjen. Beskriv vad som hände — inte vilken diagnos eller avsikt någon antas ha.</p></article>
+      <article><span>02</span><strong>Skyddad triage</strong><p>Bekräfta mottagandet, kontrollera jäv, skilj stödbehov från utredningsbehov och begränsa åtkomsten till uppgifterna.</p></article>
+      <article><span>03</span><strong>Rätt återkoppling</strong><p>Berätta att frågan hanteras och när nästa besked kan ges. Sekretess kan begränsa innehållet men behöver inte innebära total tystnad.</p></article>
+      <article><span>04</span><strong>Synligt lärande</strong><p>Redovisa avidentifierade mönster, ändrade kontroller och resultat till ledning och arbetsgrupper. Det visar att rapportering har effekt.</p></article>
+    </div>
+    <div class="policy-core" style="margin-top:14px;margin-bottom:0"><div class="policy-core-label">Nolltolerans — rätt riktad</div><div><strong>Nolltolerans mot mutor, hot, repressalier och avsiktligt missbruk.</strong> Inte mot den som i god tro rapporterar en ofullständig signal, ber om hjälp eller berättar om ett eget misstag. Automatisk bestraffning av alla avvikelser skapar tystnad och döljer det underlag organisationen behöver.</div></div>
+    <div class="op-source-row"><a href="https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/visselblasarlagen/" target="_blank" rel="noopener noreferrer">Arbetsmiljöverket — visselblåsarlagen ↗</a><a href="https://www.npsa.gov.uk/security-best-practices/security-culture/security-culture-tool" target="_blank" rel="noopener noreferrer">NPSA — Security Culture Tool ↗</a></div>
+  </div>
+
+  <!-- PERSONLIGHET OCH BETEENDE -->
+  <div class="reveal cult-block">
+    <details class="personality-guardrail">
+      <summary>Personlighetsdrag och diagnoser — vad är relevant i en riskbedömning?</summary>
+      <div class="personality-grid">
+        <div>
+          <h3>Forskning kan beskriva samband — inte identifiera en insider</h3>
+          <p>Studier kan undersöka hur personlighetsdrag, stressorer, konflikter och organisationsmiljö samspelar i redan kända fall. Sådana gruppmönster har låg precision när de vänds till prognoser om en enskild person.</p>
+          <ul><li>Det finns ingen enhetlig insiderprofil.</li><li>En diagnos, neuropsykiatrisk funktionsnedsättning eller psykisk ohälsa är inte en indikator på illojalitet.</li><li>Enstaka beteenden ska inte bedömas isolerat.</li></ul>
+        </div>
+        <div>
+          <h3>Bedöm funktion och observerbart beteende</h3>
+          <p>När samarbete eller dialog inte fungerar: beskriv konkret vad som inträffar, vilken arbetsuppgift eller säkerhetsregel som påverkas, hur mönstret förändrats och vilket stöd eller ledarskap som prövats.</p>
+          <ul><li>Dokumentera handling, tid, källa och konsekvens — inte en etikett.</li><li>Koppla till faktisk åtkomst, handlingsförmåga och berört skyddsvärde.</li><li>Pröva alternativa förklaringar och välj arbetsmiljö-, stöd- eller säkerhetsåtgärd efter behov.</li></ul>
+        </div>
+      </div>
+      <div style="padding:15px 20px;font-size:11.5px;color:var(--muted);line-height:1.65"><strong style="color:var(--text);font-weight:500">Mandatgräns:</strong> chefer, säkerhetsfunktioner och kollegor ska inte ställa psykiatriska diagnoser. Om ett konkret beteende skapar omedelbar risk hanteras beteendet och skyddsbehovet direkt; kliniska bedömningar lämnas till behörig vårdprofession. Integritetskänslig övervakning kräver juridisk och dataskyddsmässig prövning.</div>
+    </details>
+    <div class="op-source-row"><a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener noreferrer">NPSA — Insider Data Collection Study ↗</a><a href="https://www.nationalinsiderthreatsig.org/itrmresources/Assessing%20the%20Mind%20Of%20The%20Malicious%20Insider.pdf" target="_blank" rel="noopener noreferrer">INSA 2017 — historisk översikt, läs kritiskt ↗</a><a href="https://www.sei.cmu.edu/blog/technical-detection-of-intended-violence-workplace-violence-as-an-insider-threat/" target="_blank" rel="noopener noreferrer">SEI — beteende, rättigheter och metodbegränsning ↗</a><a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/kontroll-och-overvakning-av-anstallda/" target="_blank" rel="noopener noreferrer">IMY — kontroll och övervakning av anställda ↗</a></div>
   </div>
 
   <!-- LEDNINGENS ROLL -->
@@ -6601,7 +6862,7 @@ function showHandle(id,options={}){
   </div>
 
   <div class="legal-srcnote reveal">
-    Källor: <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://skr.se/demokratiutveckling/otillatenpaverkan.9088.html" target="_blank" rel="noopener">SKR — <em>Otillåten påverkan</em> ↗</a>. <a href="https://polisen.se/siteassets/dokument/organiserad_brottslighet/rapport_korruption-i-sverige-2025.pdf/download/?v=4d2a5950d779836a69499efa161273cd" target="_blank" rel="noopener">NKIG/Polismyndigheten — <em>Korruption i Sverige 2025</em> ↗</a>.
+    Källor: <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener noreferrer">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://www.npsa.gov.uk/security-best-practices/security-culture/introduction-security-culture" target="_blank" rel="noopener noreferrer">NPSA — Security Culture ↗</a> och <a href="https://www.npsa.gov.uk/resources/embedding-security-behaviours-using-5es" target="_blank" rel="noopener noreferrer">5Es ↗</a>. <a href="https://discovery.ucl.ac.uk/1419506/" target="_blank" rel="noopener noreferrer">Kirlappos, Beautement &amp; Sasse (2013) — <em>Comply or Die Is Dead</em> ↗</a>. <a href="https://www.consultdss.com/content-hub/four-steps-resilient-sustainable-safety-culture/" target="_blank" rel="noopener noreferrer">dss+ — Bradley Curve ↗</a>. <a href="https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/visselblasarlagen/" target="_blank" rel="noopener noreferrer">Arbetsmiljöverket — visselblåsarlagen ↗</a>. <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener noreferrer">NPSA — Insider Data Collection Study ↗</a>. Bradley-stegen är en anpassad reflektionsmodell från arbetsmiljösäkerhet, inte en validerad skala för insider- eller korruptionsrisk.
   </div>
 </div>
 </div>
@@ -6674,11 +6935,11 @@ const LEGAL_TIERS=[
     cases:['c122','c92']
   },
   {
-    id:'olamplig',c:'#4A5A6A',tier:'Lagligt men olämpligt',name:'Olämpligt — men anmälningsvärt',
-    law:'Ingen lagregel · säkerhetsskydd & personalsäkerhet',
-    rekvisit:'Kontakter med kriminellt belastade utanför tjänsten, okänd nätverksaktivitet, ovanliga beteendeförändringar, ekonomisk sårbarhet. Inget av detta är brott — men utgör de tidiga indikatorer personalsäkerheten ska fånga upp.',
-    straff:'Ingen påföljd. Hanteras genom säkerhetssamtal, omprövad säkerhetsprövning och stöd.',
-    nyckel:'Den viktigaste nivån för förebyggande arbete. När en händelse väl är straffbar har skadan redan skett. Detektion på den här nivån — innan ett brott begåtts — är hela poängen med säkerhetsprövning och en stark rapporteringskultur.',
+    id:'olamplig',c:'#4A5A6A',tier:'Förebyggande · kontext krävs',name:'Observation — inte rättslig slutsats',
+    law:'Ingen brottsrubricering · intern risk- och stödhantering',
+    rekvisit:'Konkreta avvikelser i åtkomst, beslut, rapportering eller säkerhetsbeteende kan behöva förstås innan skada uppstår. Privata relationer, ekonomi, åsikter, diagnoser eller allmän "avvikelse" är däremot inte självständiga bevis eller automatiska rapporteringsgrunder.',
+    straff:'Ingen påföljd följer av en signal. Första åtgärden kan vara sakfråga, stöd, behörighetskontroll eller dokumenterad bedömning beroende på faktisk risk och rättsligt stöd.',
+    nyckel:'Dokumentera vad som hände, när, i vilken funktion och med vilken möjlig konsekvens. Skilj observation från tolkning, pröva alternativa förklaringar och eskalera proportionerligt. Tidig rapportering ska inte likställas med en anklagelse.',
     cases:[]
   }
 ];
@@ -6688,7 +6949,7 @@ const LEGAL_SPECTRUM=[
   {c:'#9B4FBB',pos:'Straffbart',name:'Brott',desc:'Muta, tystnadsplikt, tjänstefel, missbruk av offentlig ställning'},
   {c:'#B8973A',pos:'Gränsland',name:'Otillbörlighet',desc:'Bedöms i domstol från fall till fall'},
   {c:'#8A9AB0',pos:'Gråzon',name:'Olämpligt',desc:'Jäv, vänskapskorruption, normglidning'},
-  {c:'#4A5A6A',pos:'Lagligt',name:'Anmälningsvärt',desc:'Indikatorer utan brott — förebyggandets nivå'}
+  {c:'#4A5A6A',pos:'Kontext',name:'Observation',desc:'Konkreta avvikelser att förstå — inte personprofilering'}
 ];
 
 const LEGAL_CONCEPTS=[
@@ -6990,7 +7251,7 @@ const BEF_OPTS=[
 const BROP_STEPS=[
   {l:'B',name:'Befattningsanalys',innehall:'Kartlägg vilken information, vilka beslut och vilket tillträde befattningen ger. Avgör om befattningen ska placeras i säkerhetsklass och dimensionera prövningens omfattning.',syfte:'Att rikta resurserna mot rätt roller. Utan korrekt befattningsanalys prövas fel personer på fel nivå.',brist:'RiR 2026:3: flera myndigheter saknar uppdaterad befattningsanalys, vilket gör att säkerhetskänsliga roller inte identifieras.'},
   {l:'R',name:'Registerkontroll',innehall:'När befattningen är placerad i säkerhetsklass ansöker verksamhetsutövaren om registerkontroll via Säkerhetspolisen efter godkänd grundutredning. För andra roller får register- och kredituppgifter inte hämtas rutinmässigt utan separat, dokumenterat rättsligt stöd.',syfte:'Att komplettera grundutredningen med de registeruppgifter som lagstiftningen medger för den aktuella rollen.',brist:'Registerkontroll är en del av prövningen, inte ett facit. Den fångar bara registrerade uppgifter och får inte pågå för roller som saknar rätt förutsättning.'},
-  {l:'O',name:'Omprövning',innehall:'Säkerhetsprövningen är inte en engångshändelse. Den ska omprövas löpande och särskilt vid förändrad livssituation: ekonomisk press, nya relationer, missbruk eller annan förändrad sårbarhet.',syfte:'Att fånga förändringar över tid. De flesta insiderfall utvecklas efter anställningen, inte före.',brist:'RiR 2026:3 — det vanligaste problemet: prövning sker vid anställning men följs aldrig upp. Statiska prövningar missar dynamiska hot.'},
+  {l:'O',name:'Omprövning',innehall:'Säkerhetsprövningen är inte en engångshändelse. Den ska följas upp löpande och när roll, åtkomst eller relevanta omständigheter förändras. Samtal ska vara sakliga, rollanknutna och inriktade på stöd och säkerhet — inte på spekulation om privatliv.',syfte:'Att pröva om den samlade bedömningen fortfarande håller när funktion, behörighet eller dokumenterade omständigheter förändras.',brist:'RiR 2026:3 — ett återkommande problem är att prövning sker vid anställning men inte följs upp. Statiska prövningar missar förändrad åtkomst och förändrade förutsättningar.'},
   {l:'P',name:'Personbedömning',innehall:'Säkerhetsprövningsintervju och referenstagning. Strukturerad bedömning av lojalitet, pålitlighet och sårbarhet. Säkerhetssamtal som återkommande inslag, inte bara vid nyanställning.',syfte:'Att fånga det registren inte ser: omdöme, sårbarhet, beroenden och relevanta observerbara förhållanden.',brist:'Intervjuer genomförs ojämnt och ibland av personer utan utbildning i säkerhetsprövning. Kvaliteten varierar kraftigt.'},
   {l:'→',name:'Beslut',innehall:'Sammanvägd bedömning: godkänd, ej godkänd eller godkänd med villkor. Dokumenteras och förvaras. Ligger till grund för placering och eventuella begränsningar i tillgång.',syfte:'Att omsätta prövningen i ett spårbart, motiverat beslut som kan följas upp.',brist:'Beslut dokumenteras bristfälligt, vilket försvårar senare omprövning och uppföljning av villkor.'}
 ];
@@ -7106,13 +7367,13 @@ function updateBef(){
   const pct=Math.round((score/max)*100);
   let level,color,rec;
   if(score===0){level='Ingen markering';color='var(--dim)';rec='Markera de egenskaper som gäller för befattningen för att se en uppskattad riskprofil.';}
-  else if(pct<25){level='Låg sårbarhet';color='var(--green)';rec='<b>Grundläggande säkerhetsmedvetenhet räcker normalt.</b> Standardrutiner för introduktion och informationshantering. Ingen formell säkerhetsprövning indikerad enbart utifrån dessa faktorer.';}
-  else if(pct<50){level='Förhöjd sårbarhet';color='var(--accent)';rec='<b>Strukturerad bakgrundskontroll rekommenderas.</b> Tydlig need-to-know, dokumenterad introduktion i säkerhetsfrågor och återkommande säkerhetssamtal. Överväg placering i säkerhetsklass 3.';}
-  else if(pct<75){level='Hög sårbarhet';color='var(--orange)';rec='<b>Säkerhetsprövning med intervju indikerad.</b> Registerkontroll, strukturerad säkerhetsprövningsintervju och löpande omprövning. Sannolikt placering i säkerhetsklass 2–3. Logga och granska systemåtkomst.';}
-  else{level='Mycket hög sårbarhet';color='#C45C2E';rec='<b>Fullständig säkerhetsprövning krävs sannolikt.</b> Registerkontroll via Säkerhetspolisen, fördjupad intervju, kontinuerlig omprövning och striktaste åtkomstkontroll. Placering i säkerhetsklass 1–2. Befattningen är ett primärt mål för otillåten påverkan.';}
+  else if(pct<25){level='Låg funktionell exponering';color='var(--green)';rec='<b>Behåll grundkontrollerna.</b> Tydlig introduktion, minsta behörighet, ansvarig chef och ordinarie uppföljning. Poängen säger inget om en individ och avgör inte vilka personkontroller som är tillåtna.';}
+  else if(pct<50){level='Förhöjd funktionell exponering';color='var(--accent)';rec='<b>Dokumentera rollrisken.</b> Se över need-to-know, attest, arbetsdelning, loggning och återkommande behörighetsgranskning. Välj personkontroll först efter separat prövning av rättsligt stöd och relevans.';}
+  else if(pct<75){level='Hög funktionell exponering';color='var(--orange)';rec='<b>Förstärk barriärerna kring rollen.</b> Pröva tvåpersonerskontroll, separerade mandat, larm på kritiska åtgärder, oberoende logggranskning och återställningsförmåga. Om rollen deltar i säkerhetskänslig verksamhet ska organisationen göra den lagstadgade säkerhetsskydds- och befattningsanalysen.';}
+  else{level='Mycket hög funktionell exponering';color='#C45C2E';rec='<b>Överväg att konstruera om rollen.</b> Dela upp befogenheter, minska stående behörigheter, inför samtidighetskontroll och säkerställ oberoende detektion och återställning. Verktyget kan inte fastställa säkerhetsklass, registerkontroll eller annan personuppgiftsbehandling.';}
 
   document.getElementById('befResult').innerHTML=`
-    <div class="bef-res-label">Uppskattad riskprofil</div>
+    <div class="bef-res-label">Uppskattad funktionell exponering</div>
     <div class="bef-score" style="color:${color}">${pct}<span style="font-size:20px;color:var(--muted)">%</span></div>
     <div class="bef-level" style="color:${color}">${level}</div>
     <div class="bef-gauge">
@@ -7204,18 +7465,20 @@ function updateCheckProg(id){
 
 /* ═══ SÄKERHETSKULTUR — data & rendering ═══ */
 const CULT_DIAG=[
-  'Medarbetare anmäler ovanliga kontakter utan rädsla för att verka paranoida.',
+  'Medarbetare anmäler ovanliga kontakter utan rädsla för att framstå som besvärliga.',
   'Det är legitimt att ifrågasätta en ovanlig förfrågan, även från en chef.',
   'Säkerhet är ett naturligt inslag i introduktion och medarbetarsamtal.',
-  'Visselblåsning tas på allvar och leder till faktisk handling.',
+  'Rapportörer får mottagningsbekräftelse och begriplig återkoppling.',
   'Chefer eskalerar misstänkta signaler i stället för att tysta dem.',
-  'Den som utsatts för påverkan får stöd — inte misstänkliggörande.'
+  'Den som utsatts för påverkan får stöd — inte misstänkliggörande.',
+  'Det säkra arbetssättet fungerar även under tidspress och hög belastning.',
+  'Återkommande genvägar leder till förbättrad process, inte bara fler tillsägelser.'
 ];
 
 const CULT_COMPARE=[
-  {dim:'En kollega beter sig avvikande',
-   strong:'Någon noterar det, frågar omtänksamt och vid behov rapporterar via etablerad kanal. Beteendet följs upp utan att hänga ut någon.',
-   weak:'Alla ser det men ingen säger något. "Det är inte min sak." Signalen fångas aldrig upp förrän skadan redan skett.'},
+  {dim:'Ett konkret beteende avviker från tidigare arbetssätt',
+   strong:'Någon dokumenterar vad som faktiskt hänt, frågar omtänksamt och rapporterar vid behov. Åtkomst, konsekvens och alternativa förklaringar prövas utan personlighetsetiketter.',
+   weak:'Kollegor delar tolkningar om personen men ingen säkrar tid, händelse eller systemdata. Rykten växer samtidigt som den verkliga kontrollbristen förblir oklar.'},
   {dim:'En ovanlig förfrågan kommer in',
    strong:'Medarbetaren stannar upp, verifierar och vågar säga nej eller fråga vidare — även om förfrågan kommer uppifrån.',
    weak:'Förfrågan efterlevs för att undvika konflikt eller verka samarbetsvillig. Auktoritet trumfar omdöme.'},
@@ -7239,11 +7502,11 @@ const CULT_ROLES=[
 
 const CULT_ACTIONS=[
   {id:'rapport',name:'Normalisera rapportering',tag:'Rutin',
-   body:'Säkerhetssamtal ska ingå i det ordinarie medarbetarsamtalet — inte triggas av misstanke. Det gör rapportering till en rutin i stället för en anklagelse, och fångar ekonomisk sårbarhet eller förändrade livssituationer innan de utnyttjas.',
+   body:'Säkerhetsfrågor ska ingå i ordinarie dialog och inte bara triggas av misstanke. Det gör rapportering till en rutin i stället för en anklagelse och fångar arbetsfriktion, ovanliga kontakter, utsatthet och kontrollbrister tidigare.',
    steps:['Lägg in säkerhetssamtal som fast punkt i medarbetarsamtalet','Utbilda chefer i att föra samtalet utan att misstänkliggöra','Gör det tydligt vad som ska rapporteras och till vem','Återkoppla så att medarbetare ser att rapportering leder någonstans'],
-   case:'<b><a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF0079 ↗</a>:</b> regelbundna säkerhetssamtal identifierar ekonomisk sårbarhet och förändrade livssituationer innan de hinner utnyttjas av en extern aktör.'},
+   case:'<b><a href="https://www.npsa.gov.uk/security-best-practices/security-culture/introduction-security-culture" target="_blank" rel="noopener noreferrer">NPSA ↗</a>:</b> en effektiv säkerhetskultur gör säkerhet till en gemensam norm, där människor förstår sitt ansvar och känner att de kan agera.'},
   {id:'vissel',name:'Visselblåsarstruktur',tag:'Kanal',
-   body:'En intern kanal för anonym rapportering är ofta den enda vägen att avslöja korruption som annars döljs av tystnad och lojaliteter. Kanalen måste vara känd, trygg och leda till faktisk handling.',
+   body:'En skyddad intern rapporteringskanal kan avslöja korruption som annars döljs av tystnad och lojaliteter. Kanalen måste vara känd, oberoende och leda till faktisk handling. Anonymitet kan erbjudas, men är inte samma sak som den konfidentialitet och det skydd mot repressalier som visselblåsarlagen reglerar.',
    steps:['Inrätta en kanal som uppfyller visselblåsarlagen','Säkerställ oberoende mottagning och hantering','Skydda rapportörens identitet i praktiken, inte bara på papper','Följ upp och kommunicera att anmälningar tas på allvar'],
    case:'<b>Region Västerbotten:</b> finansstrategens 9,5-miljonershärva avslöjades av en visselblåsare. NKIG: att visselblåsningar i vissa kommuner inte tas på allvar är en oroande utveckling.'},
   {id:'ovning',name:'Övning och scenarioträning',tag:'Test',
