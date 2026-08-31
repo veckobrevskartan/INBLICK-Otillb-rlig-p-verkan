@@ -4790,7 +4790,7 @@ function searchTypeLabel(moduleKey){
 }
 function searchPreferredBlock(element,module){
   if(element.tagName==='SUMMARY')return element.parentElement;
-  const preferred=element.closest('details,article,.red-flag-card,.case-fold,.model-step,.theory-card,.watch-item,.conflict-card,.conflict-item,.culture-stage,.edu-card,.tool-block,.role-card,.source-card,.ipd-cell,.ipa-card,.bowtie-opt,.check-item,.ca-card,.legal-rung,.sec-head,.reveal');
+  const preferred=element.closest('details,article,.red-flag-card,.case-fold,.model-step,.theory-card,.watch-item,.conflict-card,.conflict-item,.culture-stage,.edu-card,.tool-block,.role-card,.source-card,.ind-card,.ind-method-card,.stressor-item,.cp-sig,.ipd-cell,.ipa-card,.bowtie-opt,.check-item,.ca-card,.legal-rung,.sec-head,.reveal');
   if(preferred&&preferred!==module)return preferred;
   let node=element.parentElement;
   while(node&&node!==module){
@@ -4799,6 +4799,12 @@ function searchPreferredBlock(element,module){
     node=node.parentElement;
   }
   return element;
+}
+function searchCandidateTitle(element){
+  if(element.tagName!=='SUMMARY')return searchCompact(element.textContent);
+  const copy=element.cloneNode(true);
+  copy.querySelectorAll('[aria-hidden="true"],[class*="meta"],.case-fold-letter').forEach(node=>node.remove());
+  return searchCompact(copy.textContent);
 }
 function ensureSearchTargetId(element,moduleKey,index){
   if(element.id)return element.id;
@@ -4855,7 +4861,7 @@ function buildGlobalSearchIndex(){
     if(!['map','sources'].includes(moduleKey))add({kind:'page',moduleKey,moduleLabel,typeLabel:'MODUL',title:moduleLabel,text:searchCompact(module.textContent),targetId:ensureSearchTargetId(moduleHeading,moduleKey,targetIndex++)});
     module.querySelectorAll(titleSelector).forEach(element=>{
       if(element.closest('#caseList,#case-detail,#searchResults'))return;
-      const title=searchCompact(element.textContent);
+      const title=searchCandidateTitle(element);
       if(!title||title.length<2)return;
       const target=element.tagName==='SUMMARY'?element.parentElement:element;
       const block=searchPreferredBlock(element,module);
@@ -4927,9 +4933,10 @@ function renderGlobalSearch(query){
   }
   let shown=0;
   let html=`<div class="sr-status"><span class="sr-status-main">${matches.length} träffar på hela sidan</span><span class="sr-status-hint">↑↓ navigera · Enter öppna · Esc stäng</span></div><div role="listbox" aria-label="Träffar för ${escHtml(query)}">`;
-  SEARCH_GROUPS.forEach(group=>{
-    const all=matches.filter(hit=>hit.entry.kind===group.kind);
-    if(!all.length)return;
+  const rankedGroups=SEARCH_GROUPS.map((group,order)=>({group,order,all:matches.filter(hit=>hit.entry.kind===group.kind)}))
+    .filter(item=>item.all.length)
+    .sort((a,b)=>b.all[0].score-a.all[0].score||a.order-b.order);
+  rankedGroups.forEach(({group,all})=>{
     const visible=all.slice(0,group.limit);shown+=visible.length;
     html+=`<div class="sr-group"><span>${group.label}</span><span class="sr-group-count">visar ${visible.length} av ${all.length}</span></div>`;
     visible.forEach(({entry})=>{
