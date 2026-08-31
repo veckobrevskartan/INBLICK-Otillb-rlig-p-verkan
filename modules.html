@@ -599,7 +599,7 @@ html:not(.js-ready) .theory-subnav{display:none}
 .conflict-check{position:relative;background:var(--bg-mid);padding:15px 16px 15px 45px;font-size:12px;line-height:1.6;color:var(--text);counter-increment:conflict-check}
 .conflict-check::before{content:counter(conflict-check,decimal-leading-zero);position:absolute;left:16px;top:16px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:var(--accent)}
 @media(max-width:980px){.conflict-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.org-risk-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks{grid-template-columns:1fr}}
+@media(max-width:700px){.conflict-grid{grid-template-columns:1fr 1fr}.needs-flow{grid-template-columns:1fr}.need-arrow{transform:rotate(90deg);min-height:22px}.fold-grid{grid-template-columns:1fr}.theory-fold summary{gap:10px}.org-risk-grid,.conflict-checks,.culture-map-axes{grid-template-columns:1fr}}
 @media(max-width:430px){.conflict-grid{grid-template-columns:1fr}.conflict-type summary{min-height:0}.theory-fold summary{display:block}.theory-fold summary::after{display:block;margin-top:10px}}
 .sat-figure{background:var(--bg-card);border:1px solid var(--border-s);padding:24px;margin:0 0 18px}
 .sat-inputs{display:grid;grid-template-columns:1fr 36px 1fr;gap:10px;align-items:stretch;margin-bottom:18px}
@@ -975,6 +975,16 @@ html:not(.js-ready) .theory-subnav{display:none}
 .source-figure-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
 .source-figure-actions a{font-family:var(--fm);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:#233f61;text-decoration:none;border:1px solid #cfd6df;padding:7px 9px;background:#f7f9fb}
 .source-figure-actions a:hover{text-decoration:underline}
+.culture-map-figure{margin:18px 0 12px;background:#fff;border:1px solid var(--border-s);padding:12px}
+.culture-map-scroll{overflow-x:auto;overscroll-behavior-inline:contain;padding-bottom:4px}
+.culture-map-scroll img{display:block;width:100%;min-width:760px;height:auto;background:#fff}
+.culture-map-figure figcaption{font-size:10.8px;line-height:1.62;color:#4f5663;padding:11px 4px 2px}
+.culture-map-axes{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:14px 0}
+.culture-map-axis{background:var(--bg-card);padding:16px}
+.culture-map-axis strong{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.culture-map-axis span{display:block;font-size:11.5px;line-height:1.65;color:var(--muted)}
+.culture-map-guardrail{padding:13px 15px;background:var(--bg-mid);border-left:3px solid var(--green);font-size:11.5px;line-height:1.7;color:var(--muted);margin-top:14px}
+.culture-map-guardrail strong{color:var(--text);font-weight:500}
 .critical-six{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:18px 0}
 .critical-six article{background:var(--bg-card);padding:17px 16px;border-top:2px solid var(--stage-c,var(--accent))}
 .critical-six span{font-family:var(--fm);font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--stage-c,var(--accent))}
@@ -2748,10 +2758,28 @@ button,[onclick]{touch-action:manipulation}
     </details>
     <details class="theory-fold">
       <summary><span><span class="fold-summary-k">Kulturell kontext</span><span class="fold-summary-t">Samma beteende kan tolkas olika</span></span></summary>
-      <div class="theory-fold-body"><p>Kulturell erfarenhet kan påverka synen på maktdistans, direkt eller indirekt kommunikation, individuellt och kollektivt ansvar, könsroller och hur starka känslouttryck förstås. En chef som förväntar sig invändningar kan möta en medarbetare som uppfattar lydnad som respekt. Ett direkt budskap kan av en part uppfattas som tydligt och av en annan som ansiktshotande.</p><ul><li><strong>Maktdistans:</strong> vem förväntas fatta beslut och vem får invända?</li><li><strong>Direkthet:</strong> sägs budskapet uttryckligen eller förväntas mottagaren läsa sammanhanget?</li><li><strong>Individ och kollektiv:</strong> ses konflikten som parternas egen eller som en fråga för gruppen?</li><li><strong>Känslouttryck:</strong> tolkas höjd röst som normal intensitet eller som ett allvarligt hot?</li></ul><p>Hofstedes dimensioner gäller jämförelser på grupp- och samhällsnivå. De ska inte användas för att förutsäga en enskild persons värderingar eller beteende. Fråga hellre än anta.</p></div>
+      <div class="theory-fold-body"><p>Kulturell erfarenhet kan påverka synen på maktdistans, direkt eller indirekt kommunikation, individuellt och kollektivt ansvar, könsroller och hur starka känslouttryck förstås. En chef som förväntar sig invändningar kan möta en medarbetare som uppfattar lydnad som respekt. Ett direkt budskap kan av en part uppfattas som tydligt och av en annan som ansiktshotande.</p><ul><li><strong>Maktdistans:</strong> vem förväntas fatta beslut och vem får invända?</li><li><strong>Direkthet:</strong> sägs budskapet uttryckligen eller förväntas mottagaren läsa sammanhanget?</li><li><strong>Individ och kollektiv:</strong> ses konflikten som parternas egen eller som en fråga för gruppen?</li><li><strong>Känslouttryck:</strong> tolkas höjd röst som normal intensitet eller som ett allvarligt hot?</li></ul><p>Modeller över kulturella dimensioner gäller jämförelser på grupp- och samhällsnivå. De ska inte användas för att förutsäga en enskild persons värderingar eller beteende. Fråga hellre än anta.</p></div>
     </details>
   </div>
-  <div class="op-source-row reveal"><a href="https://doi.org/10.9707/2307-0919.1014" target="_blank" rel="noopener">Hofstede (2011) — kulturdimensioner och nivåbegränsning ↗</a></div>
+
+  <details class="theory-fold reveal" id="kulturkartan-2023">
+    <summary><span><span class="fold-summary-k">Kulturkartan 2023 · World Values Survey</span><span class="fold-summary-t">Två värderingsaxlar – inte en individprofil</span></span></summary>
+    <div class="theory-fold-body">
+      <p>World Values Surveys kulturkarta jämför länder och samhällen genom nationellt sammanvägda enkätresultat. Kartan visar relativa värderingsmönster längs två axlar. Den beskriver inte fasta kulturer och säger inte vad en viss person tycker eller hur personen kommer att agera.</p>
+      <figure class="culture-map-figure">
+        <div class="culture-map-scroll"><img src="kulturkartan-wvs-2023.png" alt="World Values Survey kulturkarta 2023 med länder placerade längs axlarna traditionella till sekulära värderingar och överlevnad till frihetliga värderingar" loading="lazy"/></div>
+        <figcaption><strong>World Values Survey – Kulturkarta 2023.</strong> Kartan bygger på World Values Survey och European Values Study. Placeringarna och kulturområdena är jämförande och ska läsas som ungefärliga. På en mindre skärm kan bilden dras i sidled eller öppnas i full storlek.</figcaption>
+        <div class="source-figure-actions"><a href="kulturkartan-wvs-2023.png" target="_blank" rel="noopener noreferrer">Öppna bilden i full storlek ↗</a></div>
+      </figure>
+      <div class="culture-map-axes">
+        <div class="culture-map-axis"><strong>Vertikal axel</strong><span>Från traditionella värderingar längst ned till sekulära och rationella värderingar högre upp. Axeln speglar bland annat religionens, familjebandens och auktoritetens relativa betydelse på samhällsnivå.</span></div>
+        <div class="culture-map-axis"><strong>Horisontell axel</strong><span>Från överlevnadsvärderingar till frihetliga värderingar. Förflyttning åt höger förknippas i modellen med större betoning på tillit, delaktighet, autonomi och självförverkligande.</span></div>
+        <div class="culture-map-axis"><strong>Sveriges placering</strong><span>Sverige ligger långt upp till höger i gruppen protestantiska Europa. Det är ett relativt landresultat – inte ett påstående om att befolkningen är homogen eller att varje individ delar samma värderingar.</span></div>
+      </div>
+      <div class="culture-map-guardrail"><strong>Användning i säkerhetsarbetet:</strong> kartan kan påminna om att förväntningar på auktoritet, invändningar, rapportering och individuell handlingsfrihet kan skilja sig. Använd den för att formulera öppna frågor och kontrollera egna antaganden. En persons ursprungsland eller en grupps placering på kartan är aldrig i sig en riskindikator. Säkerhetsbedömningar ska bygga på observerbara handlingar, relevant åtkomst, förändring över tid och verifierbara omständigheter.</div>
+    </div>
+  </details>
+  <div class="op-source-row reveal"><a href="https://www.iffs.se/media/24186/kulturkartan_2023_sv.pdf" target="_blank" rel="noopener">Institutet för framtidsstudier – Kulturkartan 2023 (PDF) ↗</a><a href="https://www.iffs.se/world-values-survey/" target="_blank" rel="noopener">Institutet för framtidsstudier – World Values Survey ↗</a><a href="https://www.worldvaluessurvey.org/WVSContents.jsp?CMSID=Findings" target="_blank" rel="noopener">World Values Survey – Findings &amp; Insights ↗</a><a href="https://doi.org/10.9707/2307-0919.1014" target="_blank" rel="noopener">Hofstede (2011) – kulturdimensioner och nivåbegränsning ↗</a></div>
 
   <details class="theory-fold reveal">
     <summary><span><span class="fold-summary-k">Värdekvadrat · Modellbild</span><span class="fold-summary-t">Styrbarhet och flexibilitet behöver balanseras</span></span></summary>
@@ -7338,7 +7366,7 @@ function showHandle(id,options={}){
       <div style="padding:15px 20px;font-size:11.5px;color:var(--muted);line-height:1.65"><strong style="color:var(--text);font-weight:500">Mandatgräns:</strong> chefer, säkerhetsfunktioner och kollegor ska inte ställa psykiatriska diagnoser. Om ett konkret beteende skapar omedelbar risk hanteras beteendet och skyddsbehovet direkt; kliniska bedömningar lämnas till behörig vårdprofession. Integritetskänslig övervakning kräver juridisk och dataskyddsmässig prövning.</div>
     </details>
     <details class="personality-guardrail" style="margin-top:2px">
-      <summary>Fördjupning · Vad INSA-artikeln från 2017 tillför – och vad som inte bör importeras rakt av</summary>
+      <summary>INSA 2017 · Kritiska utvecklingsvägar och metodgränser</summary>
       <div style="padding:20px">
         <p style="font-size:12px;line-height:1.72;color:var(--muted);margin:0">INSA:s <em>Assessing the Mind of the Malicious Insider</em> sammanför forskning om kritiska utvecklingsvägar, kontraproduktiva arbetsbeteenden, stressorer och organisationens respons. Rapportens starkaste bidrag är tidsdimensionen: en allvarlig handling kan i efterhand föregås av flera mindre, sinsemellan relaterade beteenden som olika delar av organisationen har sett men inte satt samman.</p>
         <div class="article-takeaways">
