@@ -1,1 +1,0 @@
-OK: 152 unika fall, 300 unika fallkällor och 965 externa HTTPS-länkar utan spårningsparametrar.

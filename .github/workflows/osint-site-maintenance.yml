@@ -1,10 +1,6 @@
 name: OSINT site maintenance
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/osint-site-maintenance.yml'
   workflow_dispatch:
 
 permissions:
