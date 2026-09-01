@@ -836,6 +836,29 @@ html:not(.js-ready) .theory-subnav{display:none}
 /* ═══ VERKTYGSLÅDAN — interaktiv ═══ */
 .tool-block{margin-top:56px}
 .tool-block:first-of-type{margin-top:44px}
+.tool-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--border-s)}
+.tool-card{background:var(--bg-card);padding:20px;min-width:0}
+.tool-card h3{font-family:var(--fd);font-size:19px;font-weight:400;margin:0 0 8px;color:var(--text)}
+.tool-card p,.tool-card li{font-size:12px;line-height:1.65;color:var(--muted)}
+.tool-card ul{margin:10px 0 0;padding-left:18px}
+.lifecycle-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--border-s)}
+.lifecycle-step{background:var(--bg-card);padding:17px;min-width:0}
+.lifecycle-step span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lifecycle-step h3{font-family:var(--fd);font-size:17px;font-weight:400;margin:7px 0}
+.lifecycle-step p{font-size:11px;color:var(--muted);line-height:1.6;margin:0}
+.scenario-card,.escalation-card{border:1px solid var(--border-s);background:var(--bg-card);margin-bottom:8px}
+.scenario-card>summary,.escalation-card>summary{padding:16px 18px;cursor:pointer;display:flex;gap:10px;align-items:center;font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);list-style:none}
+.scenario-card>summary::-webkit-details-marker,.escalation-card>summary::-webkit-details-marker{display:none}
+.scenario-card>summary::before,.escalation-card>summary::before{content:'+';width:24px;height:24px;border:1px solid rgba(184,151,58,.55);border-radius:50%;display:grid;place-items:center;color:var(--accent);flex:0 0 auto}
+.scenario-card[open]>summary::before,.escalation-card[open]>summary::before{content:'−'}
+.scenario-body,.escalation-body{padding:0 18px 18px 52px;font-size:12px;color:var(--muted);line-height:1.7}
+.scenario-inject{margin:10px 0;padding:11px 13px;border-left:2px solid var(--accent);background:var(--bg);color:var(--text)}
+.decision-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--border-s);margin-bottom:12px}
+.decision-node{background:var(--bg-card);padding:17px;font-size:12px;line-height:1.6;color:var(--muted)}
+.decision-node strong{display:block;color:var(--text);font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.codebook-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.codebook-tag{font-family:var(--fm);font-size:8px;letter-spacing:.06em;padding:5px 7px;border:1px solid var(--border-s);color:var(--muted)}
+.sector-two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}
 .tool-head{display:flex;gap:18px;align-items:baseline;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border-s)}
 .tool-num{font-family:var(--fd);font-size:32px;font-weight:300;color:var(--accent);line-height:1;flex-shrink:0}
 .tool-title{font-family:var(--fd);font-size:25px;font-weight:400;line-height:1.1;margin-bottom:6px}
@@ -1219,6 +1242,9 @@ html:not(.js-ready) .theory-subnav{display:none}
   .check-item,.bef-opt{padding:14px 12px;min-height:48px}
   .bef-result{padding:22px 18px}
   .tool-block,.cult-block{margin-top:42px}
+  .lifecycle-grid{grid-template-columns:1fr}
+  .tool-card-grid,.decision-path{grid-template-columns:1fr}
+  .sector-two-col{grid-template-columns:1fr}
   .tool-head{align-items:flex-start;gap:12px}
   .cd-item{padding:16px}
   .cd-slider-row{align-items:flex-start;flex-direction:column;gap:11px}
@@ -1668,7 +1694,7 @@ button,[onclick]{touch-action:manipulation}
   <div class="sec-head reveal">
     <p class="eyebrow">02 · Förstå · Sektormiljöer</p>
     <h1 class="sec-title">Berörda <em>sektorer</em></h1>
-    <p class="sec-intro">Riskerna ser olika ut i olika verksamheter. Välj en av tretton verksamhetsmiljöer för att se vanliga angreppssätt, sårbarheter, varningssignaler och dokumenterade fall. Kommuner och regioner har ett eget tvärsektoriellt spår eftersom samma organisation ofta rymmer socialtjänst, upphandling, tillstånd, vård, trafik och säkerhetskänslig verksamhet.</p>
+    <p class="sec-intro">Riskerna ser olika ut i olika verksamheter. Välj en av femton verksamhetsmiljöer för att se vanliga angreppssätt, sårbarheter, varningssignaler och dokumenterade fall. Kommuner och regioner, energi och vatten samt universitet och forskning behandlas som tvärsektoriella miljöer: samma fall kan därför vara relevant i mer än en miljö utan att dubbelräknas i händelsedatabasen.</p>
   </div>
   <details class="edu-card reveal" style="margin:-24px 0 28px">
     <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Rapporter och utredningar · Nationell ram för sektorerna</span><span class="edu-summary-meta">ESO 2023 · Regeringskansliet 2026</span></summary>
@@ -1777,6 +1803,20 @@ button,[onclick]{touch-action:manipulation}
         <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">3</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#3A6B5A">HÖG</span>
+    </div>
+    <div class="sec-nav-item" id="sni-ENERGY_WATER" onclick="selectSector('ENERGY_WATER')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:12px;color:var(--text)">Energi och vatten</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">1</span>
+      </div>
+      <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#4E8290">HÖG</span>
+    </div>
+    <div class="sec-nav-item" id="sni-RESEARCH" onclick="selectSector('RESEARCH')" style="border-left-color:transparent">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:12px;color:var(--text)">Universitet och forskning</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">2</span>
+      </div>
+      <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#7C668F">HÖG</span>
     </div>
     <div class="sec-nav-item" id="sni-CIVIL_SOCIETY" onclick="selectSector('CIVIL_SOCIETY')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
@@ -2192,6 +2232,27 @@ button,[onclick]{touch-action:manipulation}
       </div>
       <div><div class="ad-sec-lbl" style="margin-bottom:10px">Varningssignaler att följa</div><div style="padding:7px 10px;margin-bottom:4px;background:var(--bg);border-left:2px solid #5A3A3A40;font-size:12px;color:var(--muted);line-height:1.55">Väktare som undviker rotation till olika uppdragsplatser, föredrar specifika objekt</div><div style="padding:7px 10px;margin-bottom:4px;background:var(--bg);border-left:2px solid #5A3A3A40;font-size:12px;color:var(--muted);line-height:1.55">Kontakter med individer med känd kriminell bakgrund utanför arbetet</div><div style="padding:7px 10px;margin-bottom:4px;background:var(--bg);border-left:2px solid #5A3A3A40;font-size:12px;color:var(--muted);line-height:1.55">Ovanligt intresse för säkerhetssystemens uppbyggnad och testprocedurer vid specifika objekt</div><div style="padding:7px 10px;margin-bottom:4px;background:var(--bg);border-left:2px solid #5A3A3A40;font-size:12px;color:var(--muted);line-height:1.55">Ekonomisk välståndsutveckling som inte matchar känd lön</div></div>
     </div>
+<div class="sector-panel" id="sp-ENERGY_WATER">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
+    <div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#4E8290;margin-bottom:5px">Tvärsektoriell miljö</div><div style="font-family:var(--fd);font-size:28px;font-weight:300">Energi och vatten</div><div style="font-family:var(--fd);font-size:13px;color:var(--muted);margin-top:5px;font-style:italic">Samhällskritisk drift där fysisk och digital åtkomst möts</div></div>
+    <div style="text-align:right"><div style="font-family:var(--fd);font-size:34px;color:#4E8290;line-height:1">1</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:var(--muted)">direkt kopplat fall</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:#4E8290;margin-top:3px">HÖG RISK</div></div>
+  </div>
+  <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(78,130,144,.08);border-left:2px solid #4E8290"><strong>Analytisk miljö, inte ny fallkategori.</strong> Händelsedatabasens primära sektorkod ligger kvar. Här samlas sektorspecifika kontrollfrågor och fall som också har betydelse för energi- eller vattenmiljön.</div>
+  <p style="font-size:13px;line-height:1.8;color:var(--text)"><a href="https://www.energimyndigheten.se/energiberedskap/sakerhetsskydd/" target="_blank" rel="noopener">Energimyndigheten ↗</a> beskriver säkerhetsskyddet inom bland annat fjärrvärme, gas och drivmedelsförsörjning. Myndighetens stöd om <a href="https://www.energimyndigheten.se/energiberedskap/informations--och-cybersakerhet/cybersakerhet-inom-energisektorn/" target="_blank" rel="noopener">cybersäkerhet i energisektorn ↗</a> betonar kopplingen mellan IT- och driftteknik. För dricksvatten lyfter <a href="https://kontrollwiki.livsmedelsverket.se/artikel/361/atgarder-mot-sabotage-och-annan-skadegorelse" target="_blank" rel="noopener">Livsmedelsverket ↗</a> skydd mot obehörigt tillträde till vattenverk, reservoarer, distributionsanläggningar och driftssystem.</p>
+  <div class="sector-two-col"><div><div class="ad-sec-lbl">Exponerade gränssnitt</div><div class="stressor-item">Fjärråtkomst och leverantörsservice i OT- och styrsystem</div><div class="stressor-item">Nycklar, passerkort och ensamarbete vid obemannade anläggningar</div><div class="stressor-item">Underleverantörer i flera led med fysisk och digital åtkomst</div></div><div><div class="ad-sec-lbl">Kontrollfrågor</div><div class="stressor-item">Kan samma person ändra drift, larm och loggar utan samtidighetskontroll?</div><div class="stressor-item">Återkallas åtkomst omedelbart vid avslut eller leverantörsbyte?</div><div class="stressor-item">Testas reservrutiner och manuell drift utan ordinarie system?</div></div></div>
+  <a class="ad-case" href="?case=c93#case-detail" data-case-link="c93"><div class="adc-t">Energimyndigheten — Nordron AB</div><div class="adc-m">Bidrags- och uppföljningsrisk · se källäge i fallkortet</div></a>
+</div>
+<div class="sector-panel" id="sp-RESEARCH">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
+    <div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#7C668F;margin-bottom:5px">Tvärsektoriell miljö</div><div style="font-family:var(--fd);font-size:28px;font-weight:300">Universitet och forskning</div><div style="font-family:var(--fd);font-size:13px;color:var(--muted);margin-top:5px;font-style:italic">Öppenhet, internationalisering och skyddsvärd kunskap</div></div>
+    <div style="text-align:right"><div style="font-family:var(--fd);font-size:34px;color:#7C668F;line-height:1">2</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:var(--muted)">kopplade fall</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:#7C668F;margin-top:3px">HÖG RISK</div></div>
+  </div>
+  <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(124,102,143,.08);border-left:2px solid #7C668F"><strong>Analytisk miljö, inte misstankekategori.</strong> Internationella samarbeten är en grundförutsättning för forskning. Riskbedömningen ska knytas till projekt, teknik, finansiering, åtkomst och konkreta motparter — inte nationalitet.</div>
+  <p style="font-size:13px;line-height:1.8;color:var(--text)"><a href="https://www.vr.se/aktuellt/generaldirektoren-kommenterar/gd-kommenterar/2026-03-18-nationella-vagledande-riktlinjer-for-ansvarsfull-internationalisering.html" target="_blank" rel="noopener">Vetenskapsrådets nationella riktlinjer ↗</a> omfattar forskningssamarbeten, mobilitet, finansiering, kunskapsöverföring, rekrytering, investeringar, upphandling och tillgång till forskningsinfrastruktur. Regeringen beslutade 2026 om en <a href="https://www.regeringen.se/pressmeddelanden/2026/05/ny-nationell-stodfunktion-ska-starka-ansvarsfull-internationalisering/" target="_blank" rel="noopener">nationell stödfunktion ↗</a> med principen så öppet som möjligt och så säkert som nödvändigt.</p>
+  <div class="sector-two-col"><div><div class="ad-sec-lbl">Exponerade gränssnitt</div><div class="stressor-item">Dubbla användningsområden, tekniköverföring och exportkontroll</div><div class="stressor-item">Gästforskare, gemensamma laboratorier och fjärråtkomst</div><div class="stressor-item">Extern finansiering, sidouppdrag och immateriella rättigheter</div></div><div><div class="ad-sec-lbl">Kontrollfrågor</div><div class="stressor-item">Är projektets skyddsvärden och tillåtna delning dokumenterade?</div><div class="stressor-item">Görs motpartsbedömning på organisations- och projektnivå?</div><div class="stressor-item">Kan avtal, åtkomst och data avvecklas när samarbetet ändras?</div></div></div>
+  <a class="ad-case" href="?case=c86#case-detail" data-case-link="c86"><div class="adc-t">Lunds universitet — missilforskning och kinesisk militärledning</div><div class="adc-m">Se fallkortets källor och rättsliga läge</div></a>
+  <a class="ad-case" href="?case=c87#case-detail" data-case-link="c87"><div class="adc-t">Svenska universitet och uppgifter om IRGC-kopplad teknikanskaffning</div><div class="adc-m">Indikation · uppgifterna kräver fortsatt källvärdering</div></a>
+</div>
     </div>
   </div>
 </div>
@@ -3575,10 +3636,16 @@ button,[onclick]{touch-action:manipulation}
       <article class="pattern-card"><span class="pattern-kicker">Sektor × status</span><h3>Bekräftat och indikation</h3><div id="patternSectorStatus"></div></article>
       <article class="pattern-card"><span class="pattern-kicker">Utveckling över tid</span><h3>Fall per period</h3><div id="patternTime"></div></article>
       <article class="pattern-card"><span class="pattern-kicker">Aktörstyper</span><h3>Fördelning i materialet</h3><div id="patternActors"></div></article>
+      <article class="pattern-card"><span class="pattern-kicker">Aktör × metod</span><h3>Vanligaste kodade kombinationerna</h3><div id="patternActorMethod"></div></article>
+      <article class="pattern-card"><span class="pattern-kicker">Sektor × metod</span><h3>Metoder i verksamhetsmiljöer</h3><div id="patternSectorMethod"></div></article>
+      <article class="pattern-card"><span class="pattern-kicker">Metod × upptäcktsväg</span><h3>Hur fallen blev synliga</h3><div id="patternMethodDiscovery"></div></article>
+      <article class="pattern-card"><span class="pattern-kicker">Kontrollbrist × sektor</span><h3>Återkommande barriärluckor</h3><div id="patternGapSector"></div></article>
+      <article class="pattern-card"><span class="pattern-kicker">Utfall</span><h3>Genomförd, avbruten eller oklar handling</h3><div id="patternOutcome"></div></article>
+      <article class="pattern-card"><span class="pattern-kicker">Metod över tid</span><h3>Vanligaste metod per period</h3><div id="patternMethodTime"></div></article>
     </div>
     <details class="pattern-method personality-guardrail">
-      <summary>Metodgräns · vad som ännu inte kan analyseras</summary>
-      <div class="pattern-method-body"><p>Materialet saknar ännu enhetlig kodning av <strong>metod, upptäcktsväg, kontrollbrist och utfall</strong>. Därför visas inte metod × upptäcktsväg eller lyckade respektive stoppade försök. Sådana jämförelser kräver en kodbok och manuell kvalitetsgranskning av varje fall; de bör inte skapas genom automatisk tolkning av korta sammanfattningar.</p><p>Antalen påverkas också av vilka fall som har blivit offentliga, möjliga att belägga och relevanta för urvalet. Diagrammen beskriver därför INBLICK:s material — inte den okända faktiska förekomsten.</p></div>
+      <summary>Metod och kodbok · så ska resultaten läsas</summary>
+      <div class="pattern-method-body"><p>Samtliga 159 fall får en kod för <strong>metod, upptäcktsväg, kontrollbrist och utfall</strong>. Kodningen är konservativ och reproducerbar: bara uttryckliga ord och sakförhållanden i titel och sammanfattning används. När underlaget inte räcker visas <strong>Okänt/ej belagt</strong> i stället för ett antagande. Flera metoder och kontrollbrister kan förekomma i samma fall.</p><p><strong>Utfall</strong> beskriver om den relevanta handlingen enligt källmaterialet genomfördes, avbröts eller bara delvis genomfördes. Det är inte en bedömning av skuld, effekt eller rättsligt ansvar. <strong>Upptäcktsväg</strong> kodas bara när sammanfattningen faktiskt anger hur uppgiften blev känd.</p><p id="patternCoverage"></p><div class="codebook-tags" id="patternCodebook"></div><p>Antalen påverkas av urval, offentlighet, källornas detaljnivå och hur sammanfattningarna är skrivna. Matrisen beskriver därför INBLICK:s material och är en första transparent kodningsversion, inte faktisk prevalens i Sverige. Okända värden ingår i täckningsmåtten och utfallsdiagrammet men döljs i kombinationslistorna så att de inte tränger undan belagda mönster.</p></div>
     </details>
   </div>
 </div>
@@ -3601,7 +3668,7 @@ SECTORS.forEach(s=>{
   if(description)s.desc_long=[...description.querySelectorAll(':scope > p')].map(p=>p.innerHTML).join('\n\n');
 });
 const ACTOR_LABELS={CRIMINAL_NETWORK:'Kriminellt nätverk',FOREIGN_POWER:'Främmande makt',EXTREMIST:'Extremistisk miljö',ECONOMIC_INTEREST:'Ekonomiskt intresse',CORRUPT_OFFICIAL:'Korrupt befattningshavare',ORGANIZED_CRIME:'Organiserad brottslighet',INSIDER:'Intern aktör',UNKNOWN:'Ej fastställd'};
-const SECTOR_LABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT'};
+const SECTOR_LABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT',ENERGY_WATER:'Energi och vatten',RESEARCH:'Universitet och forskning'};
 const catLabels={ACCESS:'Åtkomst',BEHAVIOUR:'Beteende',CONTACT:'Kontakt',DIGITAL:'Digital',PROCUREMENT:'Upphandling',SOCIAL:'Socialt'};
 const actorNames={'criminal-network':'Kriminellt nätverk','foreign-power':'Främmande makt','extremist':'Extremism','economic-interest':'Ekonomiskt intresse'};
 const ACTORS=[{"id":"criminal-network","name":"Kriminellt nätverk","sub":"Organiserad brottslighet","color":"#C45C2E","goal":"Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagföring","horizon":"Kort–medellång sikt","exposure":"HIGH","methods":["Relationsbygge","Möjliggörare (upparbetad)","Hot och skrämseltaktik","Vänskapskorruption","Placerad insider","Informationsinhämtning"],"note":"Brå uppskattade 2024 att omkring 700 möjliggörare var aktiva i Sverige. Rekryteringen sker ofta bland familj, vänner och bekanta. Samma person kan hjälpa flera nätverk och ge dem tillgång som annars är svår att få. I Polismyndighetens lägesbild motsvarar möjliggörarna omkring fem procent av de aktiva i kriminella nätverk, men de har stor betydelse för vad nätverken kan genomföra.","source":"Brå 2024 — Möjliggörare för kriminella nätverk","sourceUrl":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk","indicators":["Kontaktförsök från okända med koppling till pågående ärenden","Erbjudanden om tjänster, presenter eller intensivt socialt umgänge","Otillbörligt intresse för vem som hanterar specifika ärenden eller tillstånd","Frågor om interna rutiner, behörigheter, frånvaro eller driftstörningar","Oförklarlig ekonomisk förbättring hos medarbetare med känslig tillgång","Krypterad kommunikation med externa kontakter om interna frågor"],"cases":["c01","c02","c04","c05","c07","c08","c09","c11","c15","c22","c26","c27","c29","c32","c33","c34"]},{"id":"foreign-power","name":"Främmande makt","sub":"Statligt eller statsunderstött","color":"#B8973A","goal":"Strategisk information, teknologitillgång, underrättelsedata, långsiktigt politiskt inflytande","horizon":"Lång sikt (år–decennier)","exposure":"HIGH","methods":["Systematisk OSINT-kartläggning","Rekrytering av insiders","Informationspåverkan och FIMI","Teknologistöld","Utnyttjande av systembrister"],"note":"Säkerhetspolisen beskriver en ökad rysk vilja att ta risker och genomföra sabotage. Fallen vid Transportstyrelsen och Lantmäteriet visar samtidigt att en främmande makt kan dra nytta av svaga system utan att först rekrytera en insider. I GRU-fallet kunde information från Försvarsmakten och Säkerhetspolisen lämnas vidare under sex år innan brottsligheten avslöjades.","source":"Säkerhetspolisen 2025–2026 — Ryssland, Kina och Iran","sourceUrl":"https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html","indicators":["Kontaktförsök från utländska organisationer med otydligt och brett formulerat syfte","Oväntat intresse för infrastrukturdetaljer, beslutsprocesser eller personalstruktur","Medarbetare med plötsliga ekonomiska förbättringar utan förklaring","Förfrågningar om känslig teknisk information under täckmantel av samarbete","IT-systembrister som möjliggör datainsamling utan enskild möjliggörare"],"cases":["c03","c10","c24"]},{"id":"extremist","name":"Extremistisk miljö","sub":"Ideologiskt driven","color":"#9B4FBB","goal":"Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet, finansiera verksamhet","horizon":"Kort–medellång sikt","exposure":"MEDIUM","methods":["Uthängning och doxxning","Samordnade trakasserier","Infiltration via legitima yrkesroller","Informationspåverkan mot beslutsprocess","Finansiering via offentliga bidrag"],"note":"Statskontoret beskriver hur skadorna kan drabba både den utsatta personen, anhöriga, verksamheten och tilliten till förvaltningen. Acta Publicas granskning visar att personer och bolag med extremistkopplingar kan framstå som legitima och därför passera vanliga kontroller. Ett exempel är övervakare inom Kriminalvården som haft ansvar för dömda med koppling till samma miljöer.","source":"Acta Publica 2020 — Möjliggörarna","sourceUrl":"https://actapublica.se/nyheter/rapport-mojliggorarna/","indicators":["Ökning av hotfulla meddelanden kring specifikt ärende eller beslut","Publicering av personuppgifter om medarbetare på externa plattformar","Samordnade negativa narrativ mot enskild tjänsteperson under kort tid","Kombination av digital trakassering och fysisk närvaro nära arbetsplats","Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"],"cases":["c14","c16","c18"]},{"id":"economic-interest","name":"Ekonomiskt intresse","sub":"Kommersiell aktör","color":"#4A7B6F","goal":"Avtal, tillstånd, fördelaktig behandling i upphandling, tillsyn eller tilldelning","horizon":"Medellång sikt","exposure":"MEDIUM","methods":["Relationsbygge över tid","Informella leverantörskontakter","Gåvor och representation","Värvning efter avslutad tjänst","Förväntansskapande och beroenden"],"note":"Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption växer ofta fram i långvariga leverantörsrelationer. I målet vid Akademiska sjukhuset betalades 4,76 miljoner kronor under sju år genom konsultfakturor, samtidigt som relationen utåt såg professionell och legitim ut.","source":"Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset","sourceUrl":"https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/","indicators":["Leverantörskontakter utanför dokumenterade upphandlingskanaler","Erbjudanden om framtida anställning till upphandlande personal","Onormalt intensivt socialt umgänge under känslig upphandlingsperiod","Informell marknadsdialog som påverkar kravspecifikationer","Inbjudningar till resor eller evenemang utan tydlig affärsmässig motivering"],"cases":["c06","c12","c13","c17","c21","c28","c30","c31"]}];
@@ -4012,7 +4079,15 @@ function openCase(id,options={}){
   document.getElementById('mcp-title').textContent=c.title;
   document.getElementById('mcp-badges').innerHTML=`<span class="badge b-${c.status==='CONFIRMED'?'conf':'ind'}"><span class="bdot bdot-${c.status==='CONFIRMED'?'conf':'ind'}"></span>${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span>`;
   document.getElementById('mcp-meta').innerHTML=`<span class="mcp-mi">Plats: <span>${c.loc.m}, ${c.loc.r}</span></span><span class="mcp-mi">Datum: <span>${c.date}</span></span><span class="mcp-mi">Sektor: <span>${SECTOR_LABELS[c.sector]||c.sector}</span></span><span class="mcp-mi">Aktör: <span>${ACTOR_LABELS[c.actor]||c.actor}</span></span>`;
-  document.getElementById('mcp-sum').textContent=c.summary;
+  const caseSummary=document.getElementById('mcp-sum');
+  caseSummary.textContent=c.summary;
+  if(typeof getCaseCoding==='function'){
+    const coding=getCaseCoding(c),codingDetail=document.createElement('details');
+    codingDetail.className='pattern-method';codingDetail.style.marginTop='14px';
+    const labels=(values,group)=>values.map(value=>PATTERN_CODEBOOK[group][value]||value).join(' · ');
+    codingDetail.innerHTML=`<summary>Tvärfallskodning · visa analysfält</summary><div class="pattern-method-body"><p><strong>Metod:</strong> ${escHtml(labels(coding.methods,'method'))}</p><p><strong>Upptäcktsväg:</strong> ${escHtml(labels(coding.discovery,'discovery'))}</p><p><strong>Kontrollbrist:</strong> ${escHtml(labels(coding.gaps,'gap'))}</p><p><strong>Utfall:</strong> ${escHtml(PATTERN_CODEBOOK.outcome[coding.outcome])}</p><p>Koderna bygger endast på ordalydelsen i denna korta sammanfattning. ”Okänt” betyder att uppgiften inte är belagd här, inte att den saknas i det underliggande ärendet.</p></div>`;
+    caseSummary.appendChild(codingDetail);
+  }
   const canonicalSources=(c.sources||[]).map(s=>(s.url||s.u)?`<a href="${s.url||s.u}" target="_blank" rel="noopener" class="src-tag src-link ${s.t==='court'?'court':s.t==='report'?'report':''}">${s.l} ↗</a>`:`<span class="src-tag ${s.t==='court'?'court':s.t==='report'?'report':''}">${s.l}</span>`).join('');
   const osintReading=c.osint?.url?`<a href="${c.osint.url}" target="_blank" rel="noopener" class="src-tag src-link" style="border-color:var(--accent);color:var(--link)">${c.osint.l} ↗</a>`:'';
   document.getElementById('mcp-srcs').innerHTML=canonicalSources+osintReading;
@@ -4776,7 +4851,7 @@ let gActorF='all',gShowSectors=true,gShowLabels=false;
 let gDragging=null,gPanStart=null,gTx={x:0,y:0,s:1},gTick=0,gRaf=null;
 const ACOLORS={CRIMINAL_NETWORK:'#C45C2E',FOREIGN_POWER:'#B8973A',EXTREMIST:'#9B4FBB',ECONOMIC_INTEREST:'#4A7B6F',CORRUPT_OFFICIAL:'#2E7A6B',ORGANIZED_CRIME:'#B94A48',INSIDER:'#6B7A8F',UNKNOWN:'#7B8794'};
 const ALABELS={CRIMINAL_NETWORK:'Kriminellt nätverk',FOREIGN_POWER:'Främmande makt',EXTREMIST:'Extremistisk miljö',ECONOMIC_INTEREST:'Ekonomiskt intresse',CORRUPT_OFFICIAL:'Korrupt befattningshavare',ORGANIZED_CRIME:'Organiserad brottslighet',INSIDER:'Intern aktör',UNKNOWN:'Ej fastställd'};
-const SLABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT'};
+const SLABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT',ENERGY_WATER:'Energi och vatten',RESEARCH:'Universitet och forskning'};
 
 function renderPatternRows(targetId,items,options={}){
   const target=document.getElementById(targetId);
@@ -4788,6 +4863,73 @@ function renderPatternRows(targetId,items,options={}){
       <div class="pattern-bar" aria-hidden="true"><span style="width:${Math.max(3,Math.round(item.value/max*100))}%"></span></div>
       <div class="pattern-value">${item.value}</div>
     </div>${item.note?`<div class="pattern-status">${escHtml(item.note)}</div>`:''}`).join('');
+}
+
+const PATTERN_CODEBOOK={
+  method:{
+    RELATION:'Relations- eller nätverksbaserad påverkan',THREAT:'Hot, press eller tvång',BRIBERY:'Muta, förmån eller korruption',
+    ACCESS:'Otillåten åtkomst eller informationsröjande',PROCUREMENT:'Upphandlings- eller avtalsmanipulation',PLACEMENT:'Placering eller rekrytering till roll',
+    SOCIAL_ENGINEERING:'Vilseledning eller falsk identitet',SABOTAGE:'Sabotage eller fysisk skada',BENEFIT_FRAUD:'Bidrags- eller ersättningsmissbruk',
+    FOREIGN_TECH:'Spioneri, teknik- eller kunskapsöverföring',UNKNOWN:'Okänt/ej belagt'
+  },
+  discovery:{INTERNAL_LOG:'Intern kontroll eller logg',WHISTLEBLOWER:'Rapportör eller kollega',JOURNALISM:'Journalistik eller OSINT',POLICE:'Polis eller förundersökning',SECURITY:'Säkerhets-/underrättelsearbete',AUDIT:'Revision eller tillsyn',COURT:'Domstolsprocess',UNKNOWN:'Okänt/ej belagt'},
+  gap:{ACCESS:'Behörighetsstyrning',DUTIES:'Arbetsdelning och attest',SCREENING:'Rekryteringskontroll',VETTING:'Löpande uppföljning',CONFLICT:'Jäv och intressekonflikt',SUPPLIER:'Leverantörskontroll',REPORTING:'Rapporteringskultur',LOGGING:'Loggning och anomalidetektion',CONTRACT:'Avtalsuppföljning',PHYSICAL:'Fysiskt skydd',GOVERNANCE:'Ledning och styrning',UNKNOWN:'Okänt/ej belagt'},
+  outcome:{COMPLETED:'Handling genomförd',INTERRUPTED:'Försök avbrutet eller stoppat',PARTIAL:'Delvis genomfört',UNCLEAR:'Okänt/ej belagt'}
+};
+
+function patternText(c){return `${c.title||''} ${c.summary||''}`.toLocaleLowerCase('sv');}
+function matchedCodes(text,rules){const found=rules.filter(rule=>rule.re.test(text)).map(rule=>rule.code);return [...new Set(found)];}
+function getCaseCoding(c){
+  const t=patternText(c);
+  const methods=matchedCodes(t,[
+    {code:'RELATION',re:/relation|sambo|närstående|familj|släkt|vänskap|vänskaps|romantisk|sexuell relation|bekantskap/},
+    {code:'THREAT',re:/\bhot|hotad|hotade|under press|utpress|tvång|skräm/},
+    {code:'BRIBERY',re:/\bmuta|mutor|mutbrott|bestick|otillbörlig förmån|gåva|korrupt/},
+    {code:'ACCESS',re:/registerslag|slagningar|obehörig åtkomst|dataintrång|lämnat ut|lämnade ut|röjt|läckt|sekretessbelagd|informationsläck/},
+    {code:'PROCUREMENT',re:/riggad upphandling|otillbörlig tilldelning|styrt anbud|manipulerad upphandling|upphandlingskorruption|avtalsmanipulation|falska faktur|överfaktur/},
+    {code:'PLACEMENT',re:/placerad möjliggörare|placerades i|rekryterats efter|sökte anställning|falsk examen|falskt examens|anställdes trots/},
+    {code:'SOCIAL_ENGINEERING',re:/falsk identitet|utgav sig|vilseled|falska handling|förfalsk/},
+    {code:'SABOTAGE',re:/sabotage|anlade brand|skadegörelse|förstörde|förstöra|sätta.*ur funktion/},
+    {code:'BENEFIT_FRAUD',re:/bidragsbedrä|felaktiga utbetal|falska utbetal|ersättningsbedrä|assistansbedrä|välfärdsbedrä|bidrag.*aldrig genomför/},
+    {code:'FOREIGN_TECH',re:/spioneri|främmande makt|gru|underrättelsetjänst|teknikanskaff|tekniköverför|missil|militärledning|industrispion/}
+  ]);
+  const discovery=matchedCodes(t,[
+    {code:'INTERNAL_LOG',re:/intern kontroll.*(?:upptäck|fånga)|upptäcktes.*(?:logg|intern)|logganalys|intern underrättelseanalys|internrevision.*upptäck|intern (?:kommunal )?utredning/},
+    {code:'WHISTLEBLOWER',re:/visselblås|rapport från kollega|kollega.*rapporter|intern rapportör|avslöjades av en kollega|anonymt tips/},
+    {code:'JOURNALISM',re:/journalistisk granskning|mediegranskning|(?:svt|ekot|dn|tv4|expressen|aftonbladet|reuters|dagens arbete|jens nylander|sjukhusläkaren|sydsvenskan|acta publica)(?:[^.]{0,80})(?:gransk|avslöj|genomgång)|granskning (?:av|från) (?:svt|ekot|dn|tv4)|avslöjades av (?:svt|ekot|dn|tv4|expressen|aftonbladet)/},
+    {code:'POLICE',re:/polisens utredning.*(?:visade|avslöjade)|förundersökning.*(?:visade|avslöjade)|upptäcktes av polisen/},
+    {code:'SECURITY',re:/kontraspionage|underrättelseanalys|säkerhetspolisen.*(?:upptäck|utred)/},
+    {code:'AUDIT',re:/tillsyn.*(?:upptäck|visade|gransk)|revision.*(?:upptäck|visade)|riksrevisionens granskning|granskning av riksrevisionen|tillsynsenhet.*gransk|ivo (?:förbjöd|beslutade|uppgav)|folkbildningsrådets kontroll|extern (?:juridisk )?granskning|kommunens utredning/},
+    {code:'COURT',re:/framkom under rättegång|domstolsprocessen visade/}
+  ]);
+  const gaps=matchedCodes(t,[
+    {code:'ACCESS',re:/behörighet|obehörig åtkomst|dataintrång|registerslag|slagningar|bred åtkomst|systemåtkomst/},
+    {code:'DUTIES',re:/attest|fyrögon|arbetsdelning|samma person.*(?:beslut|godkän)|ensam.*(?:beslut|kontroll)/},
+    {code:'SCREENING',re:/bakgrundskontroll|falsk examen|falskt examens|referenstag|rekryteringskontroll/},
+    {code:'VETTING',re:/säkerhetsprövning|löpande uppföljning|omprövning|förändrad lojalitet/},
+    {code:'CONFLICT',re:/\bjäv|intressekonflikt|närstående|eget bolag|privat relation/},
+    {code:'SUPPLIER',re:/underleverantör|leverantörspersonal|konsult.*åtkomst|driftleverantör|säkerhetsföretag/},
+    {code:'REPORTING',re:/visselblås|tystnadskultur|rapporteringsväg|repressali/},
+    {code:'LOGGING',re:/logg|slagningar|anomalidetektion|intern kontroll.*inte fånga/},
+    {code:'CONTRACT',re:/avtalsuppföljning|leverantörskontroll|upphandling|tilldelning|faktur/},
+    {code:'PHYSICAL',re:/passerkort|skyddsobjekt|fysisk åtkomst|vattenverk|serverhall|hamn|anläggning/},
+    {code:'GOVERNANCE',re:/ledningen kände|bristande styrning|mandat|ansvar föll|organisatorisk passivitet/}
+  ]);
+  let outcome='UNCLEAR';
+  if(/stoppades|förhindrades|avbröts innan|försökte.*men|nekades innan|greps innan/.test(t))outcome='INTERRUPTED';
+  else if(/delvis genomför|både genomförda och stoppade|delar av .* genomför/.test(t))outcome='PARTIAL';
+  else if(c.status==='CONFIRMED'&&/dömdes|har dömts|lämnade ut|röjde|läckte|tog emot|beviljade|genomförde|smugglade|smugglat|förskingrade|betalade ut|gjorde.*slagning|gjort.*slagning|gjorde intrång|använde passerkort|manipulerade|förde över|överlämnade|stal|stulit|sålde/.test(t))outcome='COMPLETED';
+  return{methods:methods.length?methods:['UNKNOWN'],discovery:discovery.length?discovery:['UNKNOWN'],gaps:gaps.length?gaps:['UNKNOWN'],outcome,basis:(methods.length||discovery.length||gaps.length||outcome!=='UNCLEAR')?'TEXT_MATCH':'UNKNOWN'};
+}
+
+function patternPairs(leftAccessor,rightAccessor,leftLabels,rightLabels){
+  const counts=new Map();
+  CASES.forEach(c=>{
+    const coding=getCaseCoding(c),left=[].concat(leftAccessor(c,coding)),right=[].concat(rightAccessor(c,coding));
+    left.forEach(a=>right.forEach(b=>{const key=`${a}|${b}`;counts.set(key,(counts.get(key)||0)+1);}));
+  });
+  return [...counts.entries()].map(([key,value])=>{const [a,b]=key.split('|');return{label:`${leftLabels[a]||a} × ${rightLabels[b]||b}`,value};})
+    .sort((a,b)=>b.value-a.value||a.label.localeCompare(b.label,'sv'));
 }
 
 function renderPatterns(){
@@ -4835,6 +4977,28 @@ function renderPatterns(){
   const actors=[...actorCounts.entries()].map(([actor,value])=>({label:ACTOR_LABELS[actor]||actor,value}))
     .sort((a,b)=>b.value-a.value||a.label.localeCompare(b.label,'sv'));
   renderPatternRows('patternActors',actors);
+
+  const knownRows=rows=>rows.filter(row=>!row.label.includes('Okänt/ej belagt')).slice(0,8);
+  renderPatternRows('patternActorMethod',knownRows(patternPairs((c)=>c.actor,(c,k)=>k.methods,ACTOR_LABELS,PATTERN_CODEBOOK.method)));
+  renderPatternRows('patternSectorMethod',knownRows(patternPairs((c)=>c.sector,(c,k)=>k.methods,SECTOR_LABELS,PATTERN_CODEBOOK.method)));
+  renderPatternRows('patternMethodDiscovery',knownRows(patternPairs((c,k)=>k.methods,(c,k)=>k.discovery,PATTERN_CODEBOOK.method,PATTERN_CODEBOOK.discovery)));
+  renderPatternRows('patternGapSector',knownRows(patternPairs((c,k)=>k.gaps,(c)=>c.sector,PATTERN_CODEBOOK.gap,SECTOR_LABELS)));
+
+  const outcomeCounts=new Map();
+  CASES.forEach(c=>{const key=getCaseCoding(c).outcome;outcomeCounts.set(key,(outcomeCounts.get(key)||0)+1);});
+  renderPatternRows('patternOutcome',[...outcomeCounts.entries()].map(([key,value])=>({label:PATTERN_CODEBOOK.outcome[key],value})).sort((a,b)=>b.value-a.value));
+
+  const periodMethods=[['2002–2015',2002,2015],['2016–2020',2016,2020],['2021–2023',2021,2023],['2024–2026',2024,2026]].map(([label,from,to])=>{
+    const counts=new Map();CASES.filter(c=>{const y=parseInt(c.date,10);return y>=from&&y<=to;}).forEach(c=>getCaseCoding(c).methods.filter(m=>m!=='UNKNOWN').forEach(m=>counts.set(m,(counts.get(m)||0)+1)));
+    const top=[...counts.entries()].sort((a,b)=>b[1]-a[1])[0]||['UNKNOWN',0];return{label,value:top[1],note:PATTERN_CODEBOOK.method[top[0]]};
+  });
+  renderPatternRows('patternMethodTime',periodMethods);
+
+  const codebook=document.getElementById('patternCodebook');
+  if(codebook)codebook.innerHTML=[...Object.values(PATTERN_CODEBOOK.method),...Object.values(PATTERN_CODEBOOK.discovery),...Object.values(PATTERN_CODEBOOK.gap)].filter((v,i,a)=>a.indexOf(v)===i).map(v=>`<span class="codebook-tag">${escHtml(v)}</span>`).join('');
+  const coded=CASES.map(getCaseCoding),pct=n=>Math.round(n/CASES.length*100);
+  const coverage=document.getElementById('patternCoverage');
+  if(coverage){const m=coded.filter(x=>!x.methods.includes('UNKNOWN')).length,d=coded.filter(x=>!x.discovery.includes('UNKNOWN')).length,g=coded.filter(x=>!x.gaps.includes('UNKNOWN')).length,o=coded.filter(x=>x.outcome!=='UNCLEAR').length;coverage.innerHTML=`<strong>Kodningstäckning:</strong> metod ${m}/${CASES.length} (${pct(m)} %) · upptäcktsväg ${d}/${CASES.length} (${pct(d)} %) · kontrollbrist ${g}/${CASES.length} (${pct(g)} %) · utfall ${o}/${CASES.length} (${pct(o)} %).`;}
 }
 
 function gStart(){
@@ -7514,6 +7678,42 @@ function showHandle(id,options={}){
     </div>
     <div class="check-tabs" id="checkTabs"></div>
     <div class="check-panel" id="checkPanel"></div>
+  </div>
+
+  <!-- VERKTYG 7: LEVERANTÖRSLIVSCYKEL -->
+  <div class="reveal tool-block" id="supplier-lifecycle">
+    <div class="tool-head"><div class="tool-num">07</div><div><div class="tool-title">Leverantörs- och tredjepartsrisk genom hela avtalet</div><div class="tool-desc">En funktionell insider kan vara konsult, väktare, drifttekniker eller underleverantör. Följ åtkomst, ägare och kontrollbevis från behov till avslutad åtkomst — inte bara fram till tilldelningsbeslutet.</div></div></div>
+    <div class="lifecycle-grid">
+      <article class="lifecycle-step"><span>01 · Ägare</span><h3>Vem kontrollerar bolaget?</h3><p>Verifiera verklig huvudman, företrädare, ekonomi, relevanta intressekonflikter och förändringar.</p></article>
+      <article class="lifecycle-step"><span>02 · Upphandling</span><h3>Är kraven verifierbara?</h3><p>Dokumentera riskkrav, jäv, säkerhetskrav, revisionsrätt, sanktioner och rätt att häva.</p></article>
+      <article class="lifecycle-step"><span>03 · Underleverantörer</span><h3>Hur många led finns?</h3><p>Kräv förhandsgodkännande eller insyn där samhällskritisk drift, data eller skyddsobjekt berörs.</p></article>
+      <article class="lifecycle-step"><span>04 · Personal</span><h3>Vilka personer utför arbetet?</h3><p>Kontrollera identitet, kompetens, introduktion och tillåtna personkontroller utifrån roll och rättsligt stöd.</p></article>
+      <article class="lifecycle-step"><span>05 · Åtkomst</span><h3>Vad kan varje roll nå?</h3><p>Minsta behörighet, tidsbegränsning, separata konton, passage, loggning och tvåpersonerskontroll vid kritiska moment.</p></article>
+      <article class="lifecycle-step"><span>06 · Förändring</span><h3>Vad ändras under avtalet?</h3><p>Följ ägar-, styrelse-, personal-, underleverantörs-, ekonomi- och åtkomstförändringar; ompröva risk.</p></article>
+      <article class="lifecycle-step"><span>07 · Incident</span><h3>Kan båda parter agera?</h3><p>Bestäm rapporttid, kontaktväg, bevarade loggar, bevisåtkomst, kontinuitet och rätt att begränsa åtkomst.</p></article>
+      <article class="lifecycle-step"><span>08 · Avslut</span><h3>Är åtkomsten verkligen borta?</h3><p>Stäng konton och passerkort, återlämna utrustning, radera eller återlämna data och verifiera i efterhand.</p></article>
+    </div>
+    <div class="op-source-row"><a href="https://www.upphandlingsmyndigheten.se/beredskapsaspekter-i-offentliga-kontrakt/underleverantorer-och-beredskapsaspekter/" target="_blank" rel="noopener">Upphandlingsmyndigheten — underleverantörer ↗</a><a href="https://www.upphandlingsmyndigheten.se/identifiera-hantera-risker/hantera/forebygg-korruption/nar-avtalet-realiseras/" target="_blank" rel="noopener">Korruptionsrisk under avtalstiden ↗</a></div>
+  </div>
+
+  <!-- VERKTYG 8: ÖVNINGAR -->
+  <div class="reveal tool-block" id="exercise-module">
+    <div class="tool-head"><div class="tool-num">08</div><div><div class="tool-title">Övningsmodul — tre korta scenarier</div><div class="tool-desc">Öppna ett scenario, läs en inject i taget och låt deltagarna fatta beslut innan resonemanget visas. Facit är ett diskussionsstöd och måste anpassas till mandat, kollektivavtal, rättsligt stöd och lokala rutiner.</div></div></div>
+    <details class="scenario-card"><summary>Scenario 1 · Handläggaren och det vänskapliga erbjudandet</summary><div class="scenario-body"><p><strong>Startläge:</strong> En handläggare med beslutanderätt får efter ett möte ett privat meddelande från en extern part: ”Du verkar förstå vår situation. Ska vi ta en kaffe utan alla andra?”</p><div class="scenario-inject"><strong>Inject 1:</strong> Personen erbjuder två biljetter som ”tack för ett bra bemötande”.</div><p><strong>Frågor:</strong> Vad gör handläggaren nu? Vem informeras? Hur dokumenteras kontaktförsöket utan att överdriva vad som är känt?</p><div class="scenario-inject"><strong>Inject 2:</strong> Det visar sig att samma part har kontaktat en kollega med ett annat erbjudande.</div><p><strong>Resonemang:</strong> Avböj, spara den ursprungliga kommunikationen, rapportera enligt gåvo-/påverkansrutinen och pröva jäv, ärendeöverlämning och samlad lägesbild. Två kontakter gör inte brott fastställt, men motiverar samordnad bedömning. <strong>Kontrollbrister att testa:</strong> känd rapporteringsväg, jävsstöd, gemensam incidentbild och chefens första respons.</p></div></details>
+    <details class="scenario-card"><summary>Scenario 2 · Ovanliga slagningar upptäcks</summary><div class="scenario-body"><p><strong>Startläge:</strong> En loggrapport visar återkommande slagningar i ärenden utanför en medarbetares arbetsområde.</p><div class="scenario-inject"><strong>Inject 1:</strong> Slagningarna sker kvällstid men från en behörig arbetsenhet. Det finns ännu ingen uppgift om att information har lämnats vidare.</div><p><strong>Frågor:</strong> Vem får se loggarna? Hur säkras data? När begränsas åtkomst? Hur undviker ni att en teknisk avvikelse blir en offentlig skuldanklagelse?</p><div class="scenario-inject"><strong>Inject 2:</strong> En pågående polisutredning berör en person som förekommer i flera av slagningarna.</div><p><strong>Resonemang:</strong> Bevara loggar och åtkomsthistorik, begränsa endast så mycket som riskbilden kräver, separera personal- och brottsspår, dokumentera beslut och samordna behörig juridik, säkerhet, HR och vid behov polis. <strong>Kontrollbrister:</strong> ändamålsstyrd loggning, larmtrösklar, oberoende granskning och beslutad beviskedja.</p></div></details>
+    <details class="scenario-card"><summary>Scenario 3 · Anonym visselblåsning mot en chef</summary><div class="scenario-body"><p><strong>Startläge:</strong> En anonym rapport påstår att en chef gynnar en leverantör och har privata kontakter med bolagets företrädare.</p><div class="scenario-inject"><strong>Inject 1:</strong> Chefen äger processens ordinarie utredningsresurs och vill själv avgränsa granskningen.</div><p><strong>Frågor:</strong> Vem tar emot ärendet? Hur hanteras jäv? Vilka uppgifter får verifieras innan den berörda underrättas?</p><div class="scenario-inject"><strong>Inject 2:</strong> Avtalet ska förlängas inom fem arbetsdagar. Uppgifterna är ännu inte styrkta.</div><p><strong>Resonemang:</strong> Utse oberoende mandat, skydda rapportörens identitet, säkra avtals-, jävs-, kontakt- och beslutsdata och överväg ett proportionerligt pausbeslut utan att presentera anklagelsen som fakta. <strong>Kontrollbrister:</strong> alternativ eskaleringsväg över chef, oberoende utredningsägare, spårbar avtalsändring och skydd mot repressalie.</p></div></details>
+  </div>
+
+  <!-- VERKTYG 9: EXTERN ESKALERING -->
+  <div class="reveal tool-block" id="external-escalation">
+    <div class="tool-head"><div class="tool-num">09</div><div><div class="tool-title">Extern eskalering — när intern hantering inte räcker</div><div class="tool-desc">Använd som orientering, inte juridiskt facit. Akut skydd, bevisbevarande, intern incidentledning och extern kontakt kan behöva ske parallellt.</div></div></div>
+    <div class="decision-path"><div class="decision-node"><strong>1 · Skydda</strong>Pågående brott, omedelbar fara eller akut hot: ring 112. Begränsa skada och säkra människor först.</div><div class="decision-node"><strong>2 · Bevara och bedöm</strong>Dokumentera vad som är känt, säkra original och loggar, hantera jäv och avgör vilka lagstadgade frister som löper.</div><div class="decision-node"><strong>3 · Kontakta rätt funktion</strong>Välj extern mottagare efter händelsetyp. En kontakt ersätter inte andra skyldigheter eller den interna kontrollen.</div></div>
+    <details class="escalation-card"><summary>Misstänkt brott eller icke akut tips · Polisen</summary><div class="escalation-body">Använd polisens e-tjänster eller 114 14 när det inte är akut. Vid pågående brott eller fara gäller 112. <a href="https://polisen.se/utsatt-for-brott/polisanmalan/" target="_blank" rel="noopener">Polisanmälan ↗</a> · <a href="https://polisen.se/om-polisen/kontakt/tipsa-polisen/" target="_blank" rel="noopener">Tipsa Polisen ↗</a></div></details>
+    <details class="escalation-card"><summary>Säkerhetshotande händelse eller aktivitet · Säkerhetspolisen</summary><div class="escalation-body">Verksamhetsutövare i säkerhetskänslig verksamhet ska skyndsamt bedöma anmälningsskyldigheten. Tips om hot mot Sveriges säkerhet kan lämnas separat; 112 gäller vid omedelbart hot. <a href="https://www.sakerhetspolisen.se/sakerhetsskydd/anmalan-vid-sakerhetshotande-handelser.html" target="_blank" rel="noopener">Anmälan vid säkerhetshotande händelser ↗</a> · <a href="https://www.sakerhetspolisen.se/ovriga-sidor/tipsa-sakerhetspolisen.html" target="_blank" rel="noopener">Tipsa Säkerhetspolisen ↗</a></div></details>
+    <details class="escalation-card"><summary>Personuppgiftsincident · IMY</summary><div class="escalation-body">Den personuppgiftsansvariga bedömer risk och dokumenterar incidenten. Anmälan ska normalt göras inom 72 timmar från kännedom när incidenten är anmälningspliktig; vid hög risk kan berörda också behöva informeras utan onödigt dröjsmål. <a href="https://www.imy.se/verksamhet/dataskydd/det-har-galler-enligt-gdpr/personuppgiftsincidenter/" target="_blank" rel="noopener">IMY:s vägledning ↗</a></div></details>
+    <details class="escalation-card"><summary>Ekobrott, korruption eller brott i leverantörsled · EBM och upphandling</summary><div class="escalation-body">Misstänkta ekobrott kan anmälas eller tipsas till Ekobrottsmyndigheten/Polisen. Parallellt behöver upphandlings-, avtals-, jävs- och betalningsspår säkras. <a href="https://www.ekobrottsmyndigheten.se/om-ekobrott/tipsa-om-ekobrott/anmal-ekobrott/" target="_blank" rel="noopener">Anmäl ekobrott ↗</a> · <a href="https://www.upphandlingsmyndigheten.se/identifiera-hantera-risker/hantera/forebygg-korruption/nar-avtalet-realiseras/" target="_blank" rel="noopener">Uppföljning under avtal ↗</a></div></details>
+    <details class="escalation-card"><summary>Allvarliga missförhållanden i vård och omsorg · IVO</summary><div class="escalation-body">Pröva tillämpliga lex Sarah- eller lex Maria-processer och vem som är anmälningsansvarig. En enskild arbetstagares rapport internt är inte alltid samma sak som verksamhetens anmälan till IVO. <a href="https://www.ivo.se/vard-omsorgsgivare/anmal-lex-maria-lex-sarah/" target="_blank" rel="noopener">IVO:s anmälningsvägar ↗</a></div></details>
+    <details class="escalation-card"><summary>Tillsyn, revision och annan sektorsfunktion</summary><div class="escalation-body">Överväg ansvarig tillsynsmyndighet, intern eller extern revisor, dataskyddsombud, säkerhetsskyddschef och upphandlingsfunktion utifrån händelsen. Dokumentera varför en extern väg valdes eller inte valdes och sätt tid för ny bedömning.</div></details>
   </div>
 
   <div class="legal-srcnote reveal">
