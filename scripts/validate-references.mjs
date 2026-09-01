@@ -200,7 +200,7 @@ if (!questionsMatch) {
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 151) errors.push(`Förväntade 151 fall, hittade ${cases.length}`);
+if (cases.length !== 152) errors.push(`Förväntade 152 fall, hittade ${cases.length}`);
 
 for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
   const count = cases.filter(item => item.actor === actor).length;
@@ -209,8 +209,15 @@ for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC
 if (!modules.includes('ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});')) {
   errors.push('modules.html: aktörernas fallistor synkroniseras inte med CASES');
 }
+if (!modules.includes('const ACTOR_CASE_KEYS=')) {
+  errors.push('modules.html: ACTOR_CASE_KEYS saknas — aktörsmodulen kan inte starta');
+}
 const actorsDeclarationIndex = modules.indexOf('const ACTORS=');
+const actorKeysDeclarationIndex = modules.indexOf('const ACTOR_CASE_KEYS=');
 const actorsSyncIndex = modules.indexOf('ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];');
+if (actorKeysDeclarationIndex !== -1 && actorsDeclarationIndex !== -1 && actorKeysDeclarationIndex > actorsDeclarationIndex) {
+  errors.push('modules.html: ACTOR_CASE_KEYS deklareras efter ACTORS');
+}
 if (actorsSyncIndex !== -1 && actorsSyncIndex < actorsDeclarationIndex) {
   errors.push('modules.html: ACTORS används före deklarationen — huvudskriptet avbryts i webbläsaren');
 }

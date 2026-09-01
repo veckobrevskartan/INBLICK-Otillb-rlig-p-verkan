@@ -194,7 +194,7 @@
   },
   {
     "id": "c08",
-    "title": "Göteborgs hamn — rederianstsällda smugglade 52 kg narkotika förbi tullen",
+    "title": "Göteborgs hamn — rederianställda smugglade 52 kg narkotika förbi tullen",
     "date": "2022-10",
     "loc": {
       "m": "Göteborg",
@@ -2451,7 +2451,11 @@
       "lng": 15.52,
       "p": "approximate"
     },
-    "summary": "Polismyndighetens och IVO:s samlade material visar hur kriminella eller på annat sätt olämpliga aktörer kan äga, driva eller arbeta i LSS-verksamhet, HVB, stödboenden och familjehemsverksamheter. IVO uppgav våren 2026 att myndigheten sedan 2024 hade förbjudit eller återkallat tillståndet för 120 verksamheter inom socialtjänst och LSS. Sedan september 2024 hade IVO till och med februari 2026 dessutom förbjudit, tillfälligt förbjudit eller återkallat tillståndet för 39 stödboenden och HVB. Vid en myndighetsgemensam kontroll av omkring tio HVB- och familjehemsföretag våren 2026 uppstod bland annat misstankar om penningtvätt, falska anställningar, folkbokföringsbrott och kopplingar till våldsbejakande extremism. De brottsmisstankarna är inte domar; klassningen bekräftat avser den dokumenterade strukturella risken och IVO:s fattade tillsynsbeslut.",
+    "summary": "Polismyndighetens och IVO:s samlade material visar hur kriminella eller på annat sätt olämpliga aktörer kan äga, driva eller arbeta i LSS-verksamhet, HVB, stödboenden och familjehemsverksamheter. IVO uppgav våren 2026 att myndigheten sedan 2024 hade förbjudit eller återkallat tillståndet för 120 verksamheter inom socialtjänst och LSS. Sedan september 2024 hade IVO till och med februari 2026 dessutom förbjudit, tillfälligt förbjudit eller återkallat tillståndet för 39 stödboenden och HVB. Vid en myndighetsgemensam kontroll av omkring tio HVB- och familjehemsföretag våren 2026 uppstod bland annat misstankar om penningtvätt, falska anställningar, folkbokföringsbrott och kopplingar till våldsbejakande extremism. Acta Publicas separata kartläggning av nära 2 800 tillståndspliktiga privata utförare och cirka 10 400 företrädare identifierade 87 personer med direkta kopplingar till riskmiljöer; de hade kontrollerat 99 verksamheter under den granskade femårsperioden. En sådan kartläggningsuppgift är inte en dom och visar inte att varje berörd verksamhet har bedrivit brottslighet. Klassningen bekräftat avser den dokumenterade strukturella risken och IVO:s fattade tillsynsbeslut.",
+    "osint": {
+      "l": "Svensk OSINT — Den sårbara välfärden (2026-08-26)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498287732650164224"
+    },
     "sources": [
       {
         "l": "Polismyndigheten m.fl. — Organiserad brottslighet i välfärden (2026, PDF)",
@@ -2482,6 +2486,11 @@
         "l": "IVO — Förhindrar oseriösa och kriminella aktörer inom vård och omsorg (2026)",
         "t": "authority",
         "url": "https://www.ivo.se/aktuellt/nyheter/2026/ivo-forhindrar-oseriosa-och-kriminella-aktorer-inom-vard-och-omsorg/"
+      },
+      {
+        "l": "Acta Publica — Den sårbara välfärden (2026)",
+        "t": "report",
+        "url": "https://actapublica.se/nyheter/rapport-den-sarbara-valfarden/"
       }
     ]
   },
@@ -4397,6 +4406,43 @@
         "l": "UNT — SD:s toppnamn i Sigtuna festade med Hells Angels (2022-10-03)",
         "t": "media",
         "url": "https://www.unt.se/nyheter/sigtuna/artikel/sd-toppnamn-festade-med-hells-angels-vi-akte-dit-och-kakade-hamburgare/r34gw6el"
+      }
+    ]
+  },
+  {
+    "id": "c185",
+    "title": "Gudhemsgården — omkring 15 fick lämna SiS efter uppgifter om gängkopplingar",
+    "date": "2026-08",
+    "loc": {
+      "m": "Falköping",
+      "r": "Västra Götaland",
+      "lat": 58.1735,
+      "lng": 13.5507,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "Omkring 15 personer vid SiS ungdomshem Gudhemsgården utanför Falköping fick lämna verksamheten. SiS bekräftade att ett antal sommarvikarier arbetsbefriades före vikariatens slut och att ett mindre antal provanställningar avslutades sedan uppgifter hade gjort personerna olämpliga för arbete på hemmet. Medier rapporterade att polisunderrättelser pekade på kopplingar till grov organiserad brottslighet och Dödspatrullen, men SiS och polisen hade inte offentligt bekräftat de konkreta nätverkskopplingarna. Fallet klassas därför som en indikation.",
+    "osint": {
+      "l": "Svensk OSINT — Omkring 15 lämnar SiS-hem efter uppgifter om gängkopplingar (2026-08-26)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498368727600787456"
+    },
+    "sources": [
+      {
+        "l": "Sveriges Radio — Uppgift: 15 anställda får lämna SiS-hem efter misstänkta gängkopplingar (2026-08-26)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/uppgift-15-anstallda-far-sparken-fran-sis-hem-kriminella-kopplingar"
+      },
+      {
+        "l": "Expressen — Femtontal fick lämna SiS-hem efter uppgifter om gängkopplingar (2026-08-26)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/krim/femtontal-sparkade-fran-sis-hem-efter-misstankt-gangkoppling/"
+      },
+      {
+        "l": "Publikt — Fick lämna ungdomshem efter misstänkta gängkopplingar (2026-08-28)",
+        "t": "media",
+        "url": "https://www.publikt.se/nyhet/fick-ga-fran-ungdomshem-hade-misstankta-gangkopplingar-27985"
       }
     ]
   }
