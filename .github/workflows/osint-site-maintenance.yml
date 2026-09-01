@@ -163,15 +163,15 @@ jobs:
                   row_start = index.rfind('<a href="modules.html#mod-map" class="cp-row">', 0, tpos)
                   if row_start >= 0:
                       bot_row = '''<a href="modules.html#mod-map" class="cp-row">
-        <div class="cp-status ind"></div>
-        <div class="cp-tcell">
-          <div class="cp-title">Botkyrka — misstänkta oegentligheter granskas av infiltrationskommission</div>
-          <div class="cp-meta">Botkyrka · Indikation · Kaliber 15–16 juni 2026 · Regeringen 26 juni 2026</div>
-        </div>
-        <div class="cp-sector">Kommun/politik</div>
-        <div class="cp-year">2026</div>
-      </a>
-      '''
+                  <div class="cp-status ind"></div>
+                  <div class="cp-tcell">
+                    <div class="cp-title">Botkyrka — misstänkta oegentligheter granskas av infiltrationskommission</div>
+                    <div class="cp-meta">Botkyrka · Indikation · Kaliber 15–16 juni 2026 · Regeringen 26 juni 2026</div>
+                  </div>
+                  <div class="cp-sector">Kommun/politik</div>
+                  <div class="cp-year">2026</div>
+                </a>
+                '''
                       index = index[:row_start] + bot_row + index[row_start:]
                       note('OK changed: surfaced Botkyrka case on homepage')
                   else:
@@ -241,13 +241,13 @@ jobs:
 
           # Update the prominent overview link from the 2024 annual cross-agency report to 2025.
           old_overview = '''<a href="https://www.ekobrottsmyndigheten.se/wp-content/uploads/2025/04/rapport-organiseradbrottslighet-2024.pdf" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:9px;padding:10px 13px;background:var(--bg-mid);border:1px solid var(--border-s);text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-s)'">
-        <span style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex-shrink:0;margin-top:1px">Rapport</span>
-        <span style="font-family:var(--fm);font-size:9px;color:var(--muted);line-height:1.4">Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet 2024 (PDF)</span>
-      </a>'''
+                  <span style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex-shrink:0;margin-top:1px">Rapport</span>
+                  <span style="font-family:var(--fm);font-size:9px;color:var(--muted);line-height:1.4">Ekobrottsmyndigheten — Myndigheter mot organiserad brottslighet 2024 (PDF)</span>
+                </a>'''
           new_overview = '''<a href="https://polisen.se/8e4d12f09a3e80cc10e4416846bd947a/siteassets/dokument/organiserad_brottslighet/rapport_organiseradbrottslighet_2025.pdf" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:9px;padding:10px 13px;background:var(--bg-mid);border:1px solid var(--border-s);text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-s)'">
-        <span style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex-shrink:0;margin-top:1px">Rapport</span>
-        <span style="font-family:var(--fm);font-size:9px;color:var(--muted);line-height:1.4">Polismyndigheten — Myndigheter i samverkan mot den organiserade brottsligheten 2025 (PDF)</span>
-      </a>'''
+                  <span style="font-family:var(--fm);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex-shrink:0;margin-top:1px">Rapport</span>
+                  <span style="font-family:var(--fm);font-size:9px;color:var(--muted);line-height:1.4">Polismyndigheten — Myndigheter i samverkan mot den organiserade brottsligheten 2025 (PDF)</span>
+                </a>'''
           modules = replace_once(modules, old_overview, new_overview, 'overview annual report 2024 → 2025')
 
           # Enrich the existing cautious Botkyrka case with the reporting that prompted renewed scrutiny.
