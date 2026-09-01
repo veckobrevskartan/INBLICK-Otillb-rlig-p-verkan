@@ -1,0 +1,23 @@
+OK changed: Källor aligned vertically on homepage
+OK changed: mobile Källor height reset
+OK already: Visuella modeller to Förstå in homepage nav
+MISS: one-column homepage hero
+MISS: hide Påverkanskedjan from homepage hero
+MISS: homepage map CTA
+OK moved: visual model card to Förstå
+OK already: Botkyrka homepage case
+MISS: clarify 680 as 2024 metric and link MGL 2025
+MISS: Källor aligned vertically in modules
+MISS: mobile Källor height reset in modules
+OK already/MISS: no repeated source footer before mod-sources
+OK already: Visuella modeller to Förstå in modules tabs
+OK moved: Visuella modeller mobile tab to Förstå
+OK changed: renumbered 14 mobile module tabs
+OK changed: correct MGL cadence
+MISS: overview annual report 2024 → 2025
+MISS: c133 government source exact string
+OK already/MISS: featured MCF card not found
+OK changed: added 4 current authority sources to ordinary catalogue
+OK changed: moved MCF into ordinary source catalogue
+validator_exit=0
+OK: 152 unika fall, 300 unika fallkällor och 965 externa HTTPS-länkar utan spårningsparametrar.
