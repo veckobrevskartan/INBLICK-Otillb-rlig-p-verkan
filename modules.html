@@ -4887,7 +4887,7 @@ function getCaseCoding(c){
     {code:'BRIBERY',re:/\bmuta|mutor|mutbrott|bestick|otillbörlig förmån|gåva|korrupt/},
     {code:'ACCESS',re:/registerslag|slagningar|obehörig åtkomst|dataintrång|lämnat ut|lämnade ut|röjt|läckt|sekretessbelagd|informationsläck/},
     {code:'PROCUREMENT',re:/riggad upphandling|otillbörlig tilldelning|styrt anbud|manipulerad upphandling|upphandlingskorruption|avtalsmanipulation|falska faktur|överfaktur/},
-    {code:'PLACEMENT',re:/placerad möjliggörare|placerades i|rekryterats efter|sökte anställning|falsk examen|falskt examens|anställdes trots/},
+    {code:'PLACEMENT',re:/placerad möjliggörare|placerades i|sökte anställning.*(?:för att|i syfte)|tog (?:ett )?(?:sommar)?jobb.*för att hjälpa|anställdes.*(?:för att hjälpa|i syfte att)/},
     {code:'SOCIAL_ENGINEERING',re:/falsk identitet|utgav sig|vilseled|falska handling|förfalsk/},
     {code:'SABOTAGE',re:/sabotage|anlade brand|skadegörelse|förstörde|förstöra|sätta.*ur funktion/},
     {code:'BENEFIT_FRAUD',re:/bidragsbedrä|felaktiga utbetal|falska utbetal|ersättningsbedrä|assistansbedrä|välfärdsbedrä|bidrag.*aldrig genomför/},
