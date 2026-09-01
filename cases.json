@@ -4445,5 +4445,229 @@
         "url": "https://www.publikt.se/nyhet/fick-ga-fran-ungdomshem-hade-misstankta-gangkopplingar-27985"
       }
     ]
+  },
+  {
+    "id": "c186",
+    "title": "Polismyndigheten/Noa — analytiker dömd efter läcka av 15 underrättelsehandlingar",
+    "date": "2025-05",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "En analytiker vid Polismyndigheten dömdes till ett år och sex månaders fängelse efter att ha lämnat 15 handlingar med sekretessbelagd underrättelseinformation till en man som själv förekom i materialet och hade kopplingar till kriminella nätverk. Materialet omfattade bland annat uppgifter om Södertäljenätverket.",
+    "osint": {
+      "l": "Svensk OSINT — Polisanställd läckte känslig data till man med kriminella kopplingar (2025-05-26)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_polisanst%C3%A4lld-l%C3%A4ckte-k%C3%A4nslig-data-till-man-activity-7333082180681633792-hASz"
+    },
+    "sources": [
+      {
+        "l": "Dagens Juridik — Polisanställd läckte känslig data till man med koppling till kriminella (2025-05-26)",
+        "t": "court",
+        "url": "https://www.dagensjuridik.se/nyheter/polisanstalld-lackte-kanslig-data-till-man-med-koppling-till-kriminella/"
+      },
+      {
+        "l": "Aftonbladet — Åtal om läcka av känsliga polisuppgifter till gängkriminell (2024-09-25)",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/a/0VLw72/atal-polisanstalld-lackte-kansliga-uppgifter-till-gangkriminell"
+      }
+    ]
+  },
+  {
+    "id": "c187",
+    "title": "Helsingborg — fyra dömda efter beställd brandattack mot socialsekreterares bostad",
+    "date": "2026-07",
+    "loc": {
+      "m": "Helsingborg",
+      "r": "Skåne",
+      "lat": 56.0465,
+      "lng": 12.6945,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "summary": "Fyra personer dömdes efter en brandattack mot en socialsekreterares bostadsdörr. Enligt åtalet och domsrapporteringen var dådet en beställd hämndaktion för ett beslut inom socialtjänsten i Ängelholms kommun. En 19-årig man dömdes till 14 års fängelse för bland annat anstiftan till grov mordbrand och en tonårsflicka dömdes för mordbrand. Fallet visar hur myndighetsutövning kan angripas utanför arbetsplatsen och genom en inhyrd utförare.",
+    "osint": {
+      "l": "Svensk OSINT — 16-årig flicka döms för brandattack mot socialsekreterare (2026-07-20)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485250687115784193"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Fyra döms efter hämndaktion mot socialsekreterare (2026-07)",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/helsingborg/tande-eld-pa-socialsekreterares-dorr-fyra-doms-for-hamndaktion"
+      },
+      {
+        "l": "Sveriges Radio — Misstänkt hämnd: tonåring lejdes att mörda socialsekreterare (2026-06-23)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/tonaringar-infor-ratta-efter-brandattack"
+      }
+    ]
+  },
+  {
+    "id": "c188",
+    "title": "Landskrona — kommunanställd röjde skyddad verksamhetsadress och klientidentitet",
+    "date": "2026-08",
+    "loc": {
+      "m": "Landskrona",
+      "r": "Skåne",
+      "lat": 55.8708,
+      "lng": 12.8302,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "INSIDER",
+    "status": "CONFIRMED",
+    "summary": "En anställd inom Landskronas individ- och familjeförvaltning fick en skriftlig varning efter att ha tagit med en obehörig person till en verksamhet med skyddad adress. Enligt kommunens arbetsrättsliga hantering röjdes även en klients identitet och den utomstående fick insyn i passage- och larmrutiner. Det finns inget öppet belägg för avsiktlig extern påverkan; fallet redovisas som ett dokumenterat internt röjande med tydlig skyddskonsekvens.",
+    "osint": {
+      "l": "Svensk OSINT — Kommunanställd röjde skyddad verksamhetsadress och klientidentitet (2026-08-21)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496820119516676096"
+    },
+    "sources": [
+      {
+        "l": "Helsingborgs Dagblad — Kommunanställd varnas efter röjd skyddad adress (2026-08-21)",
+        "t": "media",
+        "url": "https://www.hd.se/landskrona/kommunanstalld-varnas-rojde-skyddad-adress-valdigt-allvarligt/"
+      }
+    ]
+  },
+  {
+    "id": "c189",
+    "title": "Stockholm — polis arbetade på skjutbana där gängkopplade personer tränade",
+    "date": "2026-03",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "municipality"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "En polis togs ur tjänst efter rapportering om att han under mer än tio år arbetat extra som bokare och skjutinstruktör på en privat skjutbana där personer med kopplingar till grova kriminella nätverk tränade. Polismyndigheten hade enligt granskningen uppmanat honom att sluta. Senare rapportering uppgav att säkerhetsklassningen hade dragits in och att anställningen riskerade att avslutas. Fallet är inte en dom om att polisen avsiktligt hjälpt ett nätverk och redovisas därför som en indikation om bisyssla, kontroll och säkerhetsprövning.",
+    "osint": {
+      "l": "Svensk OSINT — Polis riskerar avsked efter att ha utbildat gängkopplade personer i skytte (2026-07-21)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485582800583065602"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Polis avstängd efter arbete på skjutbana med gängkopplingar (2026-03-30)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/polis-avstangd-arbetade-pa-skjutbana-med-gangkopplingar"
+      },
+      {
+        "l": "Sveriges Radio — Polis kopplas till skjutbana där gängkriminella tränade (2026-03-30)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/dns-granskning-polis-kopplas-till-skjutbana-dar-gangkriminella-tranade"
+      },
+      {
+        "l": "Dagens Nyheter — Polis var skjutinstruktör åt kriminella och riskerar avsked (2026-07-21)",
+        "t": "media",
+        "url": "https://www.dn.se/sverige/polis-var-skjutinstruktor-at-kriminella-riskerar-avsked/"
+      }
+    ]
+  },
+  {
+    "id": "c190",
+    "title": "Göteborg — socialsekreterare avskedades efter dold relation till Hells Angels-ledare",
+    "date": "2025-03",
+    "loc": {
+      "m": "Göteborg",
+      "r": "Västra Götaland",
+      "lat": 57.7089,
+      "lng": 11.9746,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "CONFIRMED",
+    "summary": "Göteborgs stad avskedade en socialsekreterare efter att kommunen bedömt att hon medvetet undanhållit en flerårig samborelation med en högt uppsatt Hells Angels-medlem. Enheten arbetade med personer som ville lämna kriminalitet. Socialsekreteraren invände att hon inte själv arbetade direkt med avhopparverksamheten och motsatte sig kommunens bedömning. Klassningen bekräftat avser relationen, arbetsrollen och avskedandet; öppna källor visar inte att något enskilt ärende faktiskt påverkades.",
+    "osint": {
+      "l": "Svensk OSINT — Socialsekreterare var sambo med Hells Angels-ledare (2025-03-04)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_socialsekreterare-var-sambo-med-hells-angels-ledare-activity-7302918540158799872-gaoj"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Socialsekreterare var sambo med Hells Angels-ledare (2025-03-04)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vast/socialsekreterare-var-sambo-med-hells-angels-ledare"
+      }
+    ]
+  },
+  {
+    "id": "c191",
+    "title": "Södertälje — socialtjänstchef hade relation med Foxtrot-ledare verksam inom HVB",
+    "date": "2025-04",
+    "loc": {
+      "m": "Södertälje",
+      "r": "Stockholm",
+      "lat": 59.1955,
+      "lng": 17.6253,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "summary": "En gruppchef inom Södertäljes socialtjänst, med ansvar för placeringar av barn och unga, hade under 2021 en relation med en ledande person i Foxtrotnätverket. Mannen hade samtidigt ledande roller i bolag som tog emot placerade ungdomar och hade gett kommunen råd om val av hem. Chefen uppgav att relationen varit kortvarig och inte påverkat arbetet. Hon arbetar inte längre i kommunens socialtjänst. Något påverkat placeringsbeslut eller brott har inte fastställts, därför redovisas fallet som en indikation om jäv och säkerhetsrisk.",
+    "osint": {
+      "l": "Svensk OSINT — Socialtjänstchef hade relation med ledande figur i Foxtrot (2025-04-12)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_socialtj%C3%A4nstchef-i-s%C3%B6dert%C3%A4lje-var-ihop-med-activity-7316763687539638273-5gl3"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Chef vid socialtjänsten var ihop med gängledare i Foxtrot (2025-04-12)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/sodertalje/socialtjanstchef-i-sodertalje-var-ihop-med-gangledare-i-foxtrot"
+      },
+      {
+        "l": "SVT Nyheter — Kommunen frågar mer om privatlivet efter Foxtrot-relationen (2025-04-18)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/sodertalje/socialtjanstchef-var-ihop-med-foxtrot-topp-kommunen-fragar-mer-om-privatlivet-nu"
+      }
+    ]
+  },
+  {
+    "id": "c192",
+    "title": "Kriminalvården — organiserad brottslighet i upphandlad vård och utslussning",
+    "date": "2025-04",
+    "loc": {
+      "m": "Sverige",
+      "r": "Nationellt",
+      "lat": 62.01,
+      "lng": 15.52,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "ORGANIZED_CRIME",
+    "status": "CONFIRMED",
+    "summary": "En intern rapport från Kriminalvårdens säkerhetsavdelning, granskad av Ekot, beskrev hur flera vård- och utslussningsleverantörer hade ägare, styrelsepersoner eller anställda med kopplingar till organiserad brottslighet. Rapporten pekade också på fall där tidigare klienter anställts med lönebidrag och där personer från leverantörer med avslutade avtal senare återkommit i nya ramavtal genom förändrade bolagsstrukturer. Klassningen bekräftat avser rapportens dokumenterade leverantörsrisk och Kriminalvårdens avtalsåtgärder; den innebär inte att varje berört företag eller anställd är dömd för brott.",
+    "osint": {
+      "l": "Svensk OSINT — Kriminella anställda hos vårdbolag som säljer tjänster till Kriminalvården (2025-04-23)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_kriminella-anst%C3%A4lls-av-v%C3%A5rdbolag-som-s%C3%A4ljer-activity-7321963892929114114-mejr"
+    },
+    "sources": [
+      {
+        "l": "Sveriges Radio Ekot — Kriminella anställs av vårdbolag som säljer tjänster till Kriminalvården (2025-04-23)",
+        "t": "report",
+        "url": "https://www.sverigesradio.se/artikel/vardbolag-som-saljer-tjanster-till-kriminalvarden-anlitar-kriminella"
+      },
+      {
+        "l": "Sveriges Radio — Ivo larmades om HVB-anställdas kriminella kopplingar men gav nytt tillstånd (2024-11-27)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/ivo-larmades-om-hvb-anstalldas-kriminella-kopplingar-gav-nytt-tillstand"
+      },
+      {
+        "l": "Sveriges Radio — Domstol underkände stopp av leverantör när kraven saknades i upphandlingen (2025-01-12)",
+        "t": "court",
+        "url": "https://www.sverigesradio.se/artikel/domen-fel-att-stoppa-bolag-dar-personal-kopplats-till-kriminella"
+      }
+    ]
   }
 ]

@@ -200,7 +200,7 @@ if (!questionsMatch) {
 if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 152) errors.push(`Förväntade 152 fall, hittade ${cases.length}`);
+if (cases.length !== 159) errors.push(`Förväntade 159 fall, hittade ${cases.length}`);
 
 for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
   const count = cases.filter(item => item.actor === actor).length;
