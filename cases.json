@@ -4669,5 +4669,175 @@
         "url": "https://www.sverigesradio.se/artikel/domen-fel-att-stoppa-bolag-dar-personal-kopplats-till-kriminella"
       }
     ]
+  },
+  {
+    "id": "c193",
+    "title": "Norrköping — fem fortsatt misstänkta i misstänkt fakturafusk i byggentreprenader",
+    "date": "2026-09",
+    "loc": {
+      "m": "Norrköping",
+      "r": "Östergötland",
+      "lat": 58.5877,
+      "lng": 16.1924,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Utredningen om misstänkt fakturafusk kopplat till byggentreprenader åt Norrköpings kommun fortsätter. En ny kammaråklagare har tagit över som förundersökningsledare och uppgett att de fem tidigare misstankarna kvarstår. Det öppna materialet beskriver misstänkta manipulerade fakturor och betalningar, inte ett fastställt byggtekniskt fel eller en lagakraftvunnen dom. Fallet redovisas därför som en indikation på upphandlings- och betalningskontroll.",
+    "osint": {
+      "l": "Svensk OSINT — Fem fortsatt misstänkta i Norrköpings stora fakturahärva (2026-09)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502317959474966529"
+    },
+    "sources": [
+      {
+        "l": "Norrköpings Tidningar — fakturahärvan (länk via Svensk OSINT)",
+        "t": "media",
+        "url": "https://lnkd.in/db-mgCCK"
+      },
+      {
+        "l": "Sveriges Radio — uppföljning av utredningen (länk via Svensk OSINT)",
+        "t": "media",
+        "url": "https://lnkd.in/dXSwymiP"
+      },
+      {
+        "l": "Ekobrottsmyndigheten — underlag (länk via Svensk OSINT)",
+        "t": "authority",
+        "url": "https://lnkd.in/d5DqFRer"
+      }
+    ]
+  },
+  {
+    "id": "c194",
+    "title": "Storbritannien — Reform UK-toppar lämnar efter uppgifter om utländsk partifinansiering",
+    "date": "2026-09",
+    "loc": {
+      "m": "London",
+      "r": "England",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "p": "municipality"
+    },
+    "sector": "LEGAL",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "Två seniora medarbetare i Reform UK lämnade sina roller efter en dold kameragranskning om hur utländsk finansiering kunde användas i strid med brittiska donationsregler. Partiet meddelade en intern utredning och Nigel Farage förnekade brott. Reuters rapporterade att Electoral Commission granskar uppgifterna; någon slutlig rättslig bedömning av partiets ansvar är inte redovisad. Fallet klassas därför som en indikation om utländsk finansiering och politisk integritet, inte som fastställt brott.",
+    "osint": {
+      "l": "Svensk OSINT — Reform UK-toppar lämnar efter avslöjande om utländsk partifinansiering (2026-09)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501901565725929472"
+    },
+    "sources": [
+      {
+        "l": "Reuters — Senior aides to Reform UK's Farage step down after foreign funding sting (2026-09-04)",
+        "t": "media",
+        "url": "https://www.reuters.com/world/uk/senior-reform-uk-figures-step-down-after-allegations-electoral-law-breach-2026-09-04/"
+      },
+      {
+        "l": "The Guardian — Farage aides step down after undercover report (2026-09-04)",
+        "t": "media",
+        "url": "https://www.theguardian.com/politics/2026/sep/04/nigel-farage-aides-step-down-after-undercover-report-reform-uk-investigation-political-donation-rules-breach"
+      }
+    ]
+  },
+  {
+    "id": "c195",
+    "title": "Riksdagen/Regeringskansliet — SD-tjänsteperson med uppgifter om proryska kopplingar",
+    "date": "2026-09",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "municipality"
+    },
+    "sector": "SECURITY",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "Expo har rapporterat att en SD-tjänsteperson i riksdagen under flera år spridit proryska narrativ och haft kontakter med miljöer med kopplingar till ryska statsaktörer. Personen är sambo med Gustav Gellerbrant, chef för SD:s samordningskansli i Regeringskansliet. Efter granskningen lämnade Gellerbrant sitt passerkort och Regeringskansliet genomförde en ny säkerhetsprövning. Öppna källor visar inte att skyddad information läckt eller att ett offentligt beslut faktiskt påverkats; posten redovisas därför som en indikation om åtkomst-, lojalitets- och säkerhetsprövningsrisk.",
+    "osint": {
+      "l": "Svensk OSINT — SD-tjänsteperson med Rysslandskopplingar utlöser säkerhetsstrid (2026-09)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501893096239067136"
+    },
+    "sources": [
+      {
+        "l": "Expo — Den okända sekreteraren ”Elena” (2026-09-03)",
+        "t": "report",
+        "url": "https://expo.se/fordjupning/den-okanda-sekreteraren-elena/"
+      },
+      {
+        "l": "Expo — Varför placerar SD en prorysk tjänsteman i KU? (2026-09)",
+        "t": "report",
+        "url": "https://expo.se/kommentar/varfor-placerar-sd-en-prorysk-tjansteman-i-ku/"
+      },
+      {
+        "l": "SVT Nyheter — Gustav Gellerbrant om Expos avslöjande (2026-09-06)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/inrikes/gustav-gellerbrant-om-expos-avslojande-losryckta-uppgifter"
+      },
+      {
+        "l": "Sveriges Radio — Gustav Gellerbrant lämnar Regeringskansliet (2026-09-05)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/gustav-gellerbrant-lamnar-regeringskansliet"
+      }
+    ]
+  },
+  {
+    "id": "c196",
+    "title": "Åland/Kökar — rysk-finsk företagare tog över Sandvik gästhamn och camping",
+    "date": "2026-09",
+    "loc": {
+      "m": "Kökar",
+      "r": "Åland",
+      "lat": 59.9208,
+      "lng": 20.9008,
+      "p": "municipality"
+    },
+    "sector": "TRANSPORT",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "summary": "En företagare med finskt och ryskt medborgarskap tog över Sandvik gästhamn och camping på Kökar genom ett aktieköp i Sandvik hällor AB. Enligt Ålands Radio och Yle innebar upplägget att någon ny prövning av jordförvärv eller näringsrätt inte genomfördes, samtidigt som medier kartlagt kontakter mellan bolagets styrelse och en rysk organisation med band till den ryska statsapparaten. Öppna källor fastställer inte olaglig verksamhet eller statlig styrning; fallet redovisas som en indikation om ägar- och infrastrukturkontroll.",
+    "osint": {
+      "l": "Svensk OSINT — Rysk-finsk företagare tog över gästhamn på Kökar (2026-09)",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501571516724166669"
+    },
+    "sources": [
+      {
+        "l": "Yle — Ålands Radio: Rysk medborgare köpte gästhamn på Kökar (2026-09-03)",
+        "t": "media",
+        "url": "https://yle.fi/a/7-10104669"
+      }
+    ]
+  },
+  {
+    "id": "c197",
+    "title": "Arbetsförmedlingen/Rusta och matcha — privata jobbcoacher erbjöd sig att kringgå kontroll",
+    "date": "2026-09",
+    "loc": {
+      "m": "Sverige",
+      "r": "Nationellt",
+      "lat": 62.01,
+      "lng": 15.52,
+      "p": "approximate"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "INDICATION",
+    "summary": "SVT:s Uppdrag granskning och SVT Nyheter kontaktade 100 privata Rusta och matcha-kontor. I dolda inspelningar erbjöd sig fler än hälften enligt granskningen att dölja svartarbete, frånvaro eller upplägg som begränsade kvinnors deltagande i arbetsmarknaden. Det visar en dokumenterad kontroll- och leverantörsrisk i en skattefinansierad tjänst, men inte att varje leverantör eller enskild coach faktiskt har fuskat. Fallet redovisas därför som en indikation.",
+    "osint": {
+      "l": "Svensk OSINT — SVT avslöjar omfattande fusk hos Arbetsförmedlingens privata jobbcoacher (2026-09)",
+      "url": "https://www.linkedin.com/posts/svensk-osint_dolda-inspelningar-visar-jobbcoacher-villiga-activity-7500843622578163713-R4Iz?utm_source=share&utm_medium=member_ios&rcm=ACoAADjG1qsB-0UCM_-IZE_s41MHtz1tWTArOik"
+    },
+    "sources": [
+      {
+        "l": "SVT Nyheter — Dolda inspelningar visar: Jobbcoacher villiga att lura Arbetsförmedlingen (2026-09-02)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/dolda-inspelningar-visar-jobbcoacher-villiga-att-lura-arbetsformedlingen"
+      },
+      {
+        "l": "SVT Nyheter — Efter SVT:s granskning: Rusta och matcha ifrågasätts (2026-09-02)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/efter-svts-granskning-johan-britz-l-vill-lagga-ner-rusta-och-matcha"
+      }
+    ]
   }
 ]
