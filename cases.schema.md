@@ -1,6 +1,6 @@
 # INBLICK – kodschema för fall
 
-Detta schema beskriver den redaktionella kodning som bör användas när ett fall uppdateras eller när den textbaserade kodningen i sambandsgrafen ersätts med manuellt verifierade fält.
+Den här kodboken beskriver vilka uppgifter som kan anges för ett fall och hur de ska kontrolleras mot källmaterialet. Den kan användas när ett fall fördjupas eller när textbaserad kodning ersätts med manuellt verifierade fält.
 
 ## Grundprincip
 
