@@ -46,7 +46,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .nav-category,.nav-source{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 13px;transition:.2s;background:none;border:0;cursor:pointer;white-space:nowrap}
 .nav-source{height:100%;box-sizing:border-box}
 .nav-category:hover,.nav-category[aria-expanded="true"],.nav-source:hover{color:var(--accent);background:var(--accent-g)}
-.nav-category .nl-rom{font-family:var(--fd);font-style:italic;font-size:12px;color:var(--accent);opacity:.6;margin-right:1px}
+.nav-category .nl-rom{display:none}
 .nav-chevron{font-size:9px;color:var(--accent);opacity:.65;transition:.2s}
 .nav-category[aria-expanded="true"] .nav-chevron{transform:rotate(180deg)}
 .nav-submenu{display:none;position:absolute;top:56px;left:0;min-width:230px;list-style:none;background:rgba(10,22,40,.98);backdrop-filter:blur(16px);border:1px solid var(--border);border-top:2px solid var(--accent);padding:7px 0;box-shadow:0 14px 42px rgba(0,0,0,.5)}
@@ -114,8 +114,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .thesis-body strong{color:var(--text);font-weight:500}
 
 /* ─── SECTION HEADERS ─── */
-.section-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:11px}
-.section-eyebrow .se-rom{font-family:var(--fd);font-style:italic;font-size:15px;opacity:.7}
+.section-eyebrow{font-family:var(--fb);font-size:13px;line-height:1.45;letter-spacing:.02em;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.section-eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex-shrink:0}
+.section-eyebrow .se-rom{display:none}
 .section-title{font-family:var(--fd);font-size:clamp(32px,4vw,50px);font-weight:300;line-height:1.08;margin-bottom:16px;letter-spacing:-.01em}
 .section-title em{font-style:italic;color:var(--accent)}
 .section-intro{font-size:14px;color:var(--muted);max-width:600px;line-height:1.8}
@@ -129,7 +130,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .part-roman{font-family:var(--fd);font-size:clamp(40px,5vw,64px);font-weight:300;font-style:italic;color:var(--accent);line-height:.9;flex-shrink:0}
 .part-headtext{flex:1}
 .part-name{font-family:var(--fd);font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.05;margin-bottom:4px}
-.part-q{font-family:var(--fm);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.part-q{font-family:var(--fb);font-size:13px;color:var(--muted)}
 .part-desc{font-size:13.5px;color:var(--muted);line-height:1.75;max-width:560px;margin:18px 0 26px}
 .part-conf{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:26px;display:flex;align-items:center;gap:8px}
 .part-conf::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
@@ -140,7 +141,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 @media(max-width:540px){.part-cards{grid-template-columns:1fr}}
 .mcard{background:var(--bg-card);padding:26px 24px 22px;text-decoration:none;display:flex;flex-direction:column;gap:11px;transition:.2s;position:relative;border-top:2px solid transparent;min-height:180px}
 .mcard:hover{background:var(--bg-mid)}
-.mc-kicker{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.mc-kicker{font-family:var(--fb);font-size:12px;color:var(--muted)}
 .mc-title{font-family:var(--fd);font-size:23px;font-weight:400;color:var(--text);line-height:1.08}
 .mc-desc{font-size:12.5px;color:var(--muted);line-height:1.6;flex:1}
 .mc-foot{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;margin-top:auto;padding-top:13px;border-top:1px solid var(--border-s);display:flex;align-items:center;justify-content:space-between}
@@ -311,7 +312,7 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
 .journey-card::after{content:"\2192";position:absolute;right:22px;bottom:14px;font:300 42px var(--fd);color:var(--journey);opacity:.45;transition:.2s}
 .journey-card:hover{transform:translateY(-3px);border-color:var(--journey);background:var(--bg-mid)}
 .journey-card:hover::after{transform:translateX(5px);opacity:.9}
-.journey-kicker{font:9px var(--fm);letter-spacing:.16em;text-transform:uppercase;color:var(--journey);margin-bottom:20px}
+.journey-kicker{font:600 13px var(--fb);color:var(--journey);margin-bottom:16px}
 .journey-title{font:400 clamp(27px,3vw,39px)/1.05 var(--fd);margin-bottom:12px}
 .journey-card:nth-child(n+3) .journey-title{font-size:28px}
 .journey-text{max-width:430px;font-size:13.5px;line-height:1.7;color:var(--muted);padding-right:22px}
@@ -468,7 +469,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="journey-intro reveal">
       <div>
         <p class="section-eyebrow">Jag vill…</p>
-        <h2 class="section-title" id="journey-title">Välj din väg in i <em>materialet</em></h2>
+        <h2 class="section-title" id="journey-title">Vad vill du <em>undersöka?</em></h2>
       </div>
       <p class="section-intro">Börja med din fråga. Du kan gå direkt till fall, mönster, bedömning eller praktiskt arbetsstöd och fördjupa dig när det behövs.</p>
     </div>
@@ -522,7 +523,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="situation-grid">
       <div class="reveal">
         <p class="section-eyebrow">Lägesbild</p>
-        <h2 class="section-title" id="situation-title">Materialet skiljer <em>belägg från signal</em></h2>
+        <h2 class="section-title" id="situation-title">En signal är <em>inte ett bevis</em></h2>
         <p class="section-intro">En röd flagga är inte ett bevis. Det analytiskt intressanta är kombinationer, förändringar över tid och hur individ, arbetsmiljö, tillgångar och organisationens egna reaktioner samverkar.</p>
         <div class="pathway" aria-label="Förenklad utvecklingsväg för insiderrisk">
           <div class="pathway-step" style="--step:var(--purple)"><small>01</small><strong>Sårbarhet</strong><span>Personliga eller situationella förutsättningar.</span></div>
@@ -550,14 +551,13 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="wrap">
     <div class="parts-intro reveal">
         <p class="section-eyebrow">Verkets struktur</p>
-      <h2 class="section-title">Femton moduler i<br><em>fyra tydliga delar</em></h2>
+      <h2 class="section-title">Fyra sätt att använda<br><em>de femton modulerna</em></h2>
       <p class="section-intro">Förstå fenomenet, utforska materialet, bedöm sårbarheten och gå vidare till konkreta åtgärder. Modulerna kan läsas var för sig eller som en sammanhängande väg.</p>
     </div>
 
     <!-- DEL I — FÖRSTÅ -->
     <div class="part-block reveal">
       <div class="part-head">
-        <div class="part-roman">I</div>
         <div class="part-headtext">
           <div class="part-name">Förstå</div>
           <div class="part-q">Vad är hotet — och hur fungerar det?</div>
@@ -619,7 +619,6 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <!-- DEL II — UTFORSKA -->
     <div class="part-block reveal">
       <div class="part-head">
-        <div class="part-roman">II</div>
         <div class="part-headtext">
           <div class="part-name">Utforska</div>
           <div class="part-q">Vilka fall och samband finns i materialet?</div>
@@ -645,7 +644,6 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <!-- DEL III — BEDÖMA -->
     <div class="part-block reveal">
       <div class="part-head">
-        <div class="part-roman">III</div>
         <div class="part-headtext">
           <div class="part-name">Bedöma</div>
           <div class="part-q">Var är min organisation exponerad?</div>
@@ -671,7 +669,6 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <!-- DEL IV — AGERA -->
     <div class="part-block reveal">
       <div class="part-head">
-        <div class="part-roman">IV</div>
         <div class="part-headtext">
           <div class="part-name">Agera</div>
           <div class="part-q">Hur bygger jag motståndskraft?</div>
@@ -734,8 +731,8 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="evidence-section">
   <div class="wrap">
     <div class="reveal">
-      <p class="section-eyebrow"><span class="se-rom">§</span>Metod</p>
-      <h2 class="section-title">Hur vi <em>klassar källor</em></h2>
+      <p class="section-eyebrow">Källor och metod</p>
+      <h2 class="section-title">Så bedöms <em>underlagen</em></h2>
       <p class="section-intro">Alla uppgifter är inte lika säkra. Därför skiljer databasen mellan bekräftade fall och indikationer. Av 165 fall stöds 112 av dom, myndighetsbeslut eller annan tydlig dokumentation. De övriga 53 är märkta som indikationer.</p>
     </div>
     <div class="evidence-grid reveal">
@@ -765,8 +762,8 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="actors-section">
   <div class="wrap">
     <div class="reveal">
-      <p class="section-eyebrow"><span class="se-rom">I</span>Förstå · Aktörer</p>
-      <h2 class="section-title">Fyra <em>aktörsmiljöer</em></h2>
+      <p class="section-eyebrow">Aktörer</p>
+      <h2 class="section-title">Vem försöker påverka – <em>och varför?</em></h2>
       <p class="section-intro">Aktörer har olika mål och tidsperspektiv, men kan använda samma vägar in. Därför behöver skyddet ta höjd för flera aktörsmiljöer samtidigt.</p>
     </div>
     <div class="actor-grid reveal">
@@ -807,8 +804,8 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="cases-section">
   <div class="wrap">
     <div class="reveal">
-      <p class="section-eyebrow"><span class="se-rom">II</span>Bedöma · Falldatabasen</p>
-      <h2 class="section-title">Svenska fall och <em>jämförelsepunkter</em></h2>
+      <p class="section-eyebrow">Fallbiblioteket</p>
+      <h2 class="section-title">Se fallen i sitt <em>sammanhang</em></h2>
       <p class="section-intro">Här är ett urval av de 165 fallen från 2002–2026. I händelsedatabasen kan du filtrera hela materialet, använda både karta och fallförteckning samt öppna källorna bakom varje fall.</p>
     </div>
     <div class="case-list reveal">
@@ -931,7 +928,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="cta-section reveal">
   <div class="wrap">
     <p class="cta-eyebrow">Börja läsa</p>
-    <h2 class="cta-title">Fördjupa dig i<br><em>materialet</em></h2>
+    <h2 class="cta-title">Fortsätt till det<br><em>du behöver</em></h2>
     <p class="cta-sub">Välj den modul som motsvarar frågan du arbetar med. Materialet är fritt att läsa, använda och dela.</p>
     <div class="cta-actions">
       <a href="modules.html" class="btn-primary">Öppna verket →</a>
