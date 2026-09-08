@@ -810,6 +810,25 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+/* Enkel kopieringsspärr för sidans text. Redigerbara fält lämnas öppna. */
+function installCopyGuard(){
+  const isEditable=target=>target?.closest?.('input, textarea, select, [contenteditable="true"]');
+  const blockCopy=event=>{
+    if(isEditable(event.target))return;
+    event.preventDefault();
+  };
+  document.addEventListener('copy',blockCopy,true);
+  document.addEventListener('cut',blockCopy,true);
+  document.addEventListener('selectstart',blockCopy,true);
+  document.addEventListener('keydown',event=>{
+    if(isEditable(event.target))return;
+    if((event.ctrlKey||event.metaKey)&&['c','x'].includes(event.key.toLowerCase())){
+      event.preventDefault();
+    }
+  },true);
+}
+installCopyGuard();
 </script>
 </body>
 </html>
