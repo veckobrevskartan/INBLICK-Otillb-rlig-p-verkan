@@ -120,7 +120,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .section-title em{font-style:italic;color:var(--accent)}
 .section-intro{font-size:14px;color:var(--muted);max-width:600px;line-height:1.8}
 
-/* ─── DE TRE DELARNA (Förstå/Bedöma/Agera) ─── */
+/* ─── DE FYRA DELARNA (Förstå/Utforska/Bedöma/Agera) ─── */
 .parts-section{padding:88px 0}
 .parts-intro{margin-bottom:8px}
 .part-block{margin-top:64px}
@@ -289,6 +289,81 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
   .osint-stats{grid-template-columns:1fr}
 }
 
+/* ─── ORIENTERANDE STARTSIDA ─── */
+.hero{min-height:auto;padding:118px 0 72px}
+.hero-layout{grid-template-columns:minmax(0,980px);padding:0;justify-content:start}
+.hero-title{max-width:900px}
+.hero-lead{max-width:720px;font-size:16px}
+.hero-search{display:grid;grid-template-columns:1fr auto;max-width:760px;margin:0 0 24px;background:var(--bg-card);border:1px solid rgba(184,151,58,.42);box-shadow:0 18px 55px rgba(0,0,0,.22)}
+.hero-search input{min-width:0;min-height:58px;padding:0 19px;background:transparent;border:0;color:var(--text);font:15px var(--fb);outline:none}
+.hero-search input::placeholder{color:var(--dim)}
+.hero-search button{min-width:132px;border:0;background:var(--accent);color:var(--bg);font:600 10px var(--fm);letter-spacing:.13em;text-transform:uppercase;cursor:pointer}
+.hero-search button:hover{background:var(--accent-l)}
+.hero-meta{grid-template-columns:repeat(4,minmax(120px,1fr));width:min(100%,760px);gap:0;border:1px solid var(--border-s);padding:0}
+.hero-meta-item{padding:20px 18px;background:rgba(14,30,56,.68);border-right:1px solid var(--border-s)}
+.hero-meta-item:last-child{border-right:0}
+.journeys{padding:34px 0 88px}
+.journey-intro{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:26px}
+.journey-intro .section-intro{max-width:480px}
+.journey-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.journey-card{--journey:var(--accent);grid-column:span 4;min-height:220px;padding:26px;display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--border-s);border-top:3px solid var(--journey);text-decoration:none;transition:.2s;position:relative;overflow:hidden}
+.journey-card:nth-child(1),.journey-card:nth-child(2){grid-column:span 6;min-height:250px}
+.journey-card::after{content:"\2192";position:absolute;right:22px;bottom:14px;font:300 42px var(--fd);color:var(--journey);opacity:.45;transition:.2s}
+.journey-card:hover{transform:translateY(-3px);border-color:var(--journey);background:var(--bg-mid)}
+.journey-card:hover::after{transform:translateX(5px);opacity:.9}
+.journey-kicker{font:9px var(--fm);letter-spacing:.16em;text-transform:uppercase;color:var(--journey);margin-bottom:20px}
+.journey-title{font:400 clamp(27px,3vw,39px)/1.05 var(--fd);margin-bottom:12px}
+.journey-card:nth-child(n+3) .journey-title{font-size:28px}
+.journey-text{max-width:430px;font-size:13.5px;line-height:1.7;color:var(--muted);padding-right:22px}
+.journey-meta{margin-top:auto;padding-top:20px;font:8px var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.situation{padding:86px 0;background:var(--bg-mid);border-block:1px solid var(--border-s)}
+.situation-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:54px;align-items:start}
+.evidence-viz{background:var(--bg-card);border:1px solid var(--border-s);padding:28px}
+.evidence-viz-head{display:flex;justify-content:space-between;gap:18px;margin-bottom:24px}
+.evidence-viz-title{font:400 27px var(--fd)}
+.evidence-viz-total{font:9px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.evidence-bar{display:flex;height:24px;overflow:hidden;background:var(--border-s);margin-bottom:14px}
+.evidence-bar span:first-child{width:67.88%;background:var(--green)}
+.evidence-bar span:last-child{width:32.12%;background:var(--accent)}
+.evidence-legend{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.evidence-legend-item{padding:16px;border-left:3px solid var(--legend);background:rgba(255,255,255,.025)}
+.evidence-legend-item strong{display:block;font:300 34px var(--fd);color:var(--legend)}
+.evidence-legend-item span{display:block;font-size:12px;color:var(--muted);line-height:1.5}
+.evidence-caution{margin-top:20px;padding-top:18px;border-top:1px solid var(--border-s);font-size:12px;line-height:1.7;color:var(--muted)}
+.pathway{margin-top:26px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--border-s)}
+.pathway-step{padding:17px 13px;background:var(--bg-card);border-top:3px solid var(--step);min-height:128px}
+.pathway-step small{display:block;font:8px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--step);margin-bottom:8px}
+.pathway-step strong{display:block;font:400 17px/1.15 var(--fd);margin-bottom:7px}
+.pathway-step span{font-size:11px;line-height:1.55;color:var(--muted)}
+.part-cards{grid-template-columns:repeat(12,1fr);gap:10px;background:none}
+.mcard{grid-column:span 4;border:1px solid var(--border-s)}
+.part-cards .mcard:first-child{grid-column:span 8}
+.part-cards .mcard:first-child .mc-title{font-size:30px}
+.part-cards .mcard:first-child .mc-desc{max-width:650px}
+
+@media(max-width:860px){
+  .journey-card,.journey-card:nth-child(1),.journey-card:nth-child(2){grid-column:span 6}
+  .situation-grid{grid-template-columns:1fr;gap:34px}
+  .pathway{grid-template-columns:1fr 1fr}
+  .pathway-step:last-child{grid-column:1/-1}
+  .mcard,.part-cards .mcard:first-child{grid-column:span 6}
+}
+@media(max-width:600px){
+  .hero{padding:96px 0 52px}
+  .hero-search{grid-template-columns:1fr}
+  .hero-search button{min-height:48px}
+  .hero-meta{grid-template-columns:1fr 1fr}
+  .hero-meta-item:nth-child(2){border-right:0}
+  .hero-meta-item:nth-child(-n+2){border-bottom:1px solid var(--border-s)}
+  .journey-intro{align-items:start;flex-direction:column}
+  .journey-card,.journey-card:nth-child(1),.journey-card:nth-child(2){grid-column:1/-1;min-height:0}
+  .journey-text{font-size:14px}
+  .evidence-legend{grid-template-columns:1fr}
+  .pathway{grid-template-columns:1fr}
+  .pathway-step:last-child{grid-column:auto}
+  .mcard,.part-cards .mcard:first-child{grid-column:1/-1}
+}
+
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 body.copy-protected,body.copy-protected *{user-select:none!important;-webkit-user-select:none!important;-moz-user-select:none!important}
 body.copy-protected input,body.copy-protected textarea,body.copy-protected select,body.copy-protected [contenteditable="true"]{user-select:text!important;-webkit-user-select:text!important;-moz-user-select:text!important}
@@ -317,16 +392,21 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         </ul>
       </li>
       <li class="nav-group">
-        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-bedoma" onclick="toggleHomeNav(this)"><span class="nl-rom">II</span>Bedöma <span class="nav-chevron">▾</span></button>
-        <ul class="nav-submenu" id="home-bedoma">
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-utforska" onclick="toggleHomeNav(this)"><span class="nl-rom">II</span>Utforska <span class="nav-chevron">▾</span></button>
+        <ul class="nav-submenu" id="home-utforska">
           <li><a href="modules.html#mod-map">Händelser &amp; fall</a></li>
-          <li><a href="modules.html#mod-assess">Organisationstestet</a></li>
-          <li><a href="modules.html#mod-inds">Indikatorer</a></li>
           <li><a href="modules.html#mod-graph">Sambandsgraf</a></li>
         </ul>
       </li>
       <li class="nav-group">
-        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-agera" onclick="toggleHomeNav(this)"><span class="nl-rom">III</span>Agera <span class="nav-chevron">▾</span></button>
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-bedoma" onclick="toggleHomeNav(this)"><span class="nl-rom">III</span>Bedöma <span class="nav-chevron">▾</span></button>
+        <ul class="nav-submenu" id="home-bedoma">
+          <li><a href="modules.html#mod-assess">Organisationstestet</a></li>
+          <li><a href="modules.html#mod-inds">Indikatorer</a></li>
+        </ul>
+      </li>
+      <li class="nav-group">
+        <button class="nav-category" type="button" aria-expanded="false" aria-controls="home-agera" onclick="toggleHomeNav(this)"><span class="nl-rom">IV</span>Agera <span class="nav-chevron">▾</span></button>
         <ul class="nav-submenu" id="home-agera">
           <li><a href="modules.html#mod-tools">Verktygslådan</a></li>
           <li><a href="modules.html#mod-culture">Säkerhetskultur</a></li>
@@ -348,7 +428,11 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       <div>
         <h1 class="hero-title">Otillbörlig påverkan<br><em>i offentlig verksamhet</em></h1>
         <p class="hero-sub">När påverkan får fäste i offentlig sektor</p>
-        <p class="hero-lead">Otillbörlig påverkan börjar sällan med ett uppenbart brott. Ofta börjar den med en kontakt, en tjänst eller en liten avvikelse som ingen reagerar på. Här samlas <strong>165 fall och 15 moduler med spårbara källor</strong> som visar hur påverkan kan växa fram och vilka åtgärder som kan minska sårbarheten innan en liten avvikelse blir ett större problem.</p>
+        <p class="hero-lead">En kunskaps- och analysplattform för att förstå hur otillbörlig påverkan växer fram, utforska dokumenterade fall och omsätta mönster i organisatoriskt skydd.</p>
+        <form class="hero-search" action="modules.html" method="get" role="search">
+          <input type="search" name="q" aria-label="Sök i hela materialet" placeholder="Sök fall, plats, aktör, metod eller kontrollbrist…" autocomplete="off">
+          <button type="submit">Sök materialet</button>
+        </form>
         <div class="hero-actions">
           <a href="modules.html" class="btn-primary">Öppna verket →</a>
           <a href="modules.html#mod-assess" class="btn-ghost">Organisationstestet</a>
@@ -364,16 +448,56 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
             <span class="hero-meta-lab">Analys-<br>moduler</span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-val">Direkt</span>
-            <span class="hero-meta-lab">Spårbara<br>källor</span>
+            <span class="hero-meta-val">112</span>
+            <span class="hero-meta-lab">Bekräftade<br>fall</span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-val">4</span>
-            <span class="hero-meta-lab">Aktörs-<br>miljöer</span>
+            <span class="hero-meta-val">752</span>
+            <span class="hero-meta-lab">Käll-<br>hänvisningar</span>
           </div>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEM INGÅNGAR ═══ -->
+<section class="journeys" aria-labelledby="journey-title">
+  <div class="wrap">
+    <div class="journey-intro reveal">
+      <div>
+        <p class="section-eyebrow">Jag vill…</p>
+        <h2 class="section-title" id="journey-title">Välj din väg in i <em>materialet</em></h2>
+      </div>
+      <p class="section-intro">Börja med din fråga. Du kan gå direkt till fall, mönster, bedömning eller praktiskt arbetsstöd och fördjupa dig när det behövs.</p>
+    </div>
+    <div class="journey-grid reveal">
+      <a class="journey-card" style="--journey:var(--accent)" href="modules.html#mod-chain">
+        <span class="journey-kicker">Förstå fenomenet</span><span class="journey-title">Hur får påverkan fäste?</span>
+        <span class="journey-text">Följ utvecklingen från kartläggning och relation till normalisering, kontrollförlust och möjlig handling.</span>
+        <span class="journey-meta">Påverkanskedjan · teori · juridik</span>
+      </a>
+      <a class="journey-card" style="--journey:var(--green)" href="modules.html#mod-map">
+        <span class="journey-kicker">Utforska fallen</span><span class="journey-title">Vad har faktiskt hänt?</span>
+        <span class="journey-text">Sök och filtrera 165 fall efter sektor, aktör, metod, upptäcktsväg, utfall, status och tidsperiod.</span>
+        <span class="journey-meta">Fallkort · karta · originalkällor</span>
+      </a>
+      <a class="journey-card" style="--journey:var(--purple)" href="modules.html#mod-graph">
+        <span class="journey-kicker">Se mönstren</span><span class="journey-title">Vad visar fallen tillsammans?</span>
+        <span class="journey-text">Jämför aktörer, sektorer, metoder, kontrollbrister och upptäcktsvägar.</span>
+        <span class="journey-meta">Tvärfallsanalys · samband</span>
+      </a>
+      <a class="journey-card" style="--journey:var(--accent)" href="modules.html#mod-assess">
+        <span class="journey-kicker">Bedöm organisationen</span><span class="journey-title">Var är vi sårbara?</span>
+        <span class="journey-text">Gör självskattningen och undersök kombinationer av signaler utan att profilera personer.</span>
+        <span class="journey-meta">14 frågor · 25 indikatorer</span>
+      </a>
+      <a class="journey-card" style="--journey:var(--orange)" href="modules.html#mod-handle">
+        <span class="journey-kicker">Arbeta praktiskt</span><span class="journey-title">Vad gör vi nu?</span>
+        <span class="journey-text">Använd beslutsordning, checklistor, rollanalys och ett sexstegsflöde för att hantera signaler.</span>
+        <span class="journey-meta">Verktyg · kultur · ärendehantering</span>
+      </a>
     </div>
   </div>
 </section>
@@ -392,13 +516,42 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </div>
 </section>
 
-<!-- ═══ DE TRE DELARNA ═══ -->
+<!-- ═══ LÄGESBILD OCH UTVECKLINGSFÖRLOPP ═══ -->
+<section class="situation" aria-labelledby="situation-title">
+  <div class="wrap">
+    <div class="situation-grid">
+      <div class="reveal">
+        <p class="section-eyebrow">Lägesbild</p>
+        <h2 class="section-title" id="situation-title">Materialet skiljer <em>belägg från signal</em></h2>
+        <p class="section-intro">En röd flagga är inte ett bevis. Det analytiskt intressanta är kombinationer, förändringar över tid och hur individ, arbetsmiljö, tillgångar och organisationens egna reaktioner samverkar.</p>
+        <div class="pathway" aria-label="Förenklad utvecklingsväg för insiderrisk">
+          <div class="pathway-step" style="--step:var(--purple)"><small>01</small><strong>Sårbarhet</strong><span>Personliga eller situationella förutsättningar.</span></div>
+          <div class="pathway-step" style="--step:var(--orange)"><small>02</small><strong>Stressor</strong><span>Förändring, konflikt, press eller missnöje.</span></div>
+          <div class="pathway-step" style="--step:var(--accent)"><small>03</small><strong>Beteende</strong><span>Observerbara avvikelser eller förändringar.</span></div>
+          <div class="pathway-step" style="--step:var(--green)"><small>04</small><strong>Respons</strong><span>Organisationen bromsar, missar eller förstärker.</span></div>
+          <div class="pathway-step" style="--step:#B94A48"><small>05</small><strong>Handling</strong><span>Ett möjligt utfall, inte en given slutpunkt.</span></div>
+        </div>
+      </div>
+      <div class="evidence-viz reveal" aria-label="Fördelning av bekräftade fall och indikationer">
+        <div class="evidence-viz-head"><span class="evidence-viz-title">165 dokumenterade fall</span><span class="evidence-viz-total">2002–2026</span></div>
+        <div class="evidence-bar" aria-hidden="true"><span></span><span></span></div>
+        <div class="evidence-legend">
+          <div class="evidence-legend-item" style="--legend:var(--green)"><strong>112</strong><span>bekräftade fall med tydlig dokumentation</span></div>
+          <div class="evidence-legend-item" style="--legend:var(--accent)"><strong>53</strong><span>indikationer som ska läsas försiktigt</span></div>
+        </div>
+        <p class="evidence-caution">Statusen beskriver underlagets styrka. Den ska inte användas som ett omdöme om en person, och en enskild signal ska aldrig ensam ligga till grund för en anklagelse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DE FYRA DELARNA ═══ -->
 <section class="parts-section">
   <div class="wrap">
     <div class="parts-intro reveal">
         <p class="section-eyebrow">Verkets struktur</p>
-      <h2 class="section-title">Femton moduler i<br><em>tre delar</em></h2>
-      <p class="section-intro">Den första delen beskriver hur påverkan fungerar och hur materialet ska läsas. Därefter följer material för att bedöma den egna verksamhetens sårbarhet och välja konkreta åtgärder. Modulerna kan läsas var för sig eller som en sammanhängande väg genom materialet.</p>
+      <h2 class="section-title">Femton moduler i<br><em>fyra tydliga delar</em></h2>
+      <p class="section-intro">Förstå fenomenet, utforska materialet, bedöm sårbarheten och gå vidare till konkreta åtgärder. Modulerna kan läsas var för sig eller som en sammanhängande väg.</p>
     </div>
 
     <!-- DEL I — FÖRSTÅ -->
@@ -463,34 +616,22 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       </div>
     </div>
 
-    <!-- DEL II — BEDÖMA -->
+    <!-- DEL II — UTFORSKA -->
     <div class="part-block reveal">
       <div class="part-head">
         <div class="part-roman">II</div>
         <div class="part-headtext">
-          <div class="part-name">Bedöma</div>
-          <div class="part-q">Var är min organisation exponerad?</div>
+          <div class="part-name">Utforska</div>
+          <div class="part-q">Vilka fall och samband finns i materialet?</div>
         </div>
       </div>
-      <p class="part-desc">Den andra delen sätter fallen i relation till den egna verksamheten. Karta, varningssignaler, självskattning och sambandsgraf visar var sårbarheter kan finnas och vilka frågor som behöver undersökas.</p>
+      <p class="part-desc">Den andra delen är datalagret: den sökbara fallförteckningen, kartan och sambandsanalysen som gör det möjligt att gå från översikt till ett enskilt fall.</p>
       <div class="part-cards">
         <a href="modules.html#mod-map" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Händelsedatabas</div>
           <div class="mc-title">Händelser &amp; fall</div>
           <div class="mc-desc">Utforska 165 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör och källäge och öppna källorna direkt från varje fall.</div>
           <div class="mc-foot" style="color:var(--green)"><span>165 fall · 13 verksamhetsmiljöer</span><span class="mc-arrow">→</span></div>
-        </a>
-        <a href="modules.html#mod-assess" class="mcard" style="border-top-color:var(--purple)">
-          <div class="mc-kicker">Självskattning</div>
-          <div class="mc-title">Organisations&shy;testet</div>
-          <div class="mc-desc">Besvara 14 frågor inom sju områden och få en enkel bild av organisationens styrkor och brister. Svaren stannar i din webbläsare.</div>
-          <div class="mc-foot" style="color:var(--purple)"><span>14 frågor · lokal beräkning</span><span class="mc-arrow">→</span></div>
-        </a>
-        <a href="modules.html#mod-inds" class="mcard" style="border-top-color:var(--accent)">
-          <div class="mc-kicker">Indikatorbibliotek</div>
-          <div class="mc-title">Tidiga varnings&shy;signaler</div>
-          <div class="mc-desc">25 sökbara indikatorer med konkreta svenska fallexempel. Filtrera på kategori, allvarlighetsgrad eller aktörstyp. Källbelagda med RiR, Brå och Statskontoret.</div>
-          <div class="mc-foot" style="color:var(--accent)"><span>25 indikatorer · 6 kategorier</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-graph" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Nätverksgraf</div>
@@ -501,16 +642,42 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       </div>
     </div>
 
-    <!-- DEL III — AGERA -->
+    <!-- DEL III — BEDÖMA -->
     <div class="part-block reveal">
       <div class="part-head">
         <div class="part-roman">III</div>
+        <div class="part-headtext">
+          <div class="part-name">Bedöma</div>
+          <div class="part-q">Var är min organisation exponerad?</div>
+        </div>
+      </div>
+      <p class="part-desc">Den tredje delen sätter mönstren i relation till den egna verksamheten. Självskattning och indikatorbibliotek hjälper läsaren att formulera frågor för fortsatt kontroll.</p>
+      <div class="part-cards">
+        <a href="modules.html#mod-assess" class="mcard" style="border-top-color:var(--purple)">
+          <div class="mc-kicker">Självskattning</div>
+          <div class="mc-title">Organisations&shy;testet</div>
+          <div class="mc-desc">Besvara 14 frågor inom sju områden och få en enkel bild av organisationens styrkor och brister. Svaren stannar i din webbläsare.</div>
+          <div class="mc-foot" style="color:var(--purple)"><span>14 frågor · lokal beräkning</span><span class="mc-arrow">→</span></div>
+        </a>
+        <a href="modules.html#mod-inds" class="mcard" style="border-top-color:var(--accent)">
+          <div class="mc-kicker">Indikatorbibliotek</div>
+          <div class="mc-title">Tidiga varnings&shy;signaler</div>
+          <div class="mc-desc">25 sökbara indikatorer med svenska fallexempel. Filtrera på kategori, allvarlighetsgrad eller aktörstyp och bedöm alltid kombinationer och förändring över tid.</div>
+          <div class="mc-foot" style="color:var(--accent)"><span>25 indikatorer · 6 kategorier</span><span class="mc-arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- DEL IV — AGERA -->
+    <div class="part-block reveal">
+      <div class="part-head">
+        <div class="part-roman">IV</div>
         <div class="part-headtext">
           <div class="part-name">Agera</div>
           <div class="part-q">Hur bygger jag motståndskraft?</div>
         </div>
       </div>
-      <p class="part-desc">Den tredje delen går från analys till praktiskt arbete. Den tar upp utsatta roller, säkerhetskultur och ett tydligt arbetssätt för situationer där en signal eller misstanke behöver hanteras.</p>
+      <p class="part-desc">Den fjärde delen går från analys till praktiskt arbete. Den tar upp utsatta roller, säkerhetskultur och ett tydligt arbetssätt för situationer där en signal eller misstanke behöver hanteras.</p>
       <div class="part-cards">
         <a href="modules.html#mod-tools" class="mcard" style="border-top-color:var(--accent)">
           <div class="mc-kicker">Operativa verktyg</div>
@@ -780,7 +947,8 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       <div class="footer-brand">Svensk OSINT — <span>INBLICK</span> — Den öppna attackytan — 2026</div>
       <div class="footer-links">
         <a href="modules.html#mod-chain">Förstå</a>
-        <a href="modules.html#mod-map">Bedöma</a>
+        <a href="modules.html#mod-map">Utforska</a>
+        <a href="modules.html#mod-assess">Bedöma</a>
         <a href="modules.html#mod-tools">Agera</a>
         <a href="modules.html#mod-sources">Källor</a>
       </div>

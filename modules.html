@@ -321,7 +321,7 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .map-ready-cue .cue-action{margin-left:auto;font-family:var(--fm);font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
 .map-ready-cue.pulse{animation:mapCue .8s ease-out}
 @keyframes mapCue{0%{border-color:var(--accent);background:rgba(184,151,58,.16)}100%{border-color:rgba(74,123,111,.28);background:rgba(74,123,111,.08)}}
-.map-workspace{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr);gap:12px;align-items:start;margin-bottom:60px}
+.map-workspace{display:grid;grid-template-columns:1fr;gap:18px;align-items:start;margin-bottom:60px}
 .map-visual{min-width:0}
 .map-legend{display:flex;flex-wrap:wrap;gap:12px;padding:9px 14px;background:var(--bg-card);border:1px solid var(--border-s);margin-top:8px}
 .leg-item{display:flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.09em;color:var(--muted)}
@@ -343,17 +343,17 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .src-tag{font-family:var(--fm);font-size:8px;padding:3px 7px;border:1px solid var(--border-s);color:var(--muted)}
 .src-tag.court{border-color:rgba(74,123,111,.3);color:var(--green)}.src-tag.report{border-color:rgba(184,151,58,.25);color:var(--accent)}
 .src-tag.src-link,.src-tag.court.src-link,.src-tag.report.src-link{color:var(--link)}
-.case-browser{margin:0;min-width:0;background:var(--bg-mid);border:1px solid var(--border-s);padding:16px}
+.case-browser{order:-1;margin:0;min-width:0;background:var(--bg-mid);border:1px solid var(--border-s);padding:20px}
 .case-browser-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:14px;border-bottom:1px solid var(--border-s)}
 .case-browser-title{font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.1}
 .case-browser-count{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:5px}
 .case-search-label{display:flex;flex-direction:column;gap:5px;min-width:min(320px,100%);font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .case-search{width:100%;min-height:40px;padding:8px 11px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:var(--fb);font-size:13px;outline:none}
 .case-search:focus{border-color:var(--accent)}
-.case-list{display:grid;grid-template-columns:1fr;gap:2px;background:var(--border-s);margin-top:2px;max-height:480px;overflow-y:auto;scrollbar-color:var(--border) var(--bg-card);scrollbar-width:thin}
+.case-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:transparent;margin-top:14px;max-height:none;overflow:visible}
 .case-list-item{display:flex;flex-direction:column;gap:8px;min-height:156px;padding:17px 18px;background:var(--bg-card);border:0;border-left:3px solid transparent;color:inherit;text-align:left;text-decoration:none;cursor:pointer;font:inherit;transition:.14s}
-.map-workspace .case-list-item{min-height:0;padding:13px 14px;gap:6px}
-.map-workspace .case-list-summary{-webkit-line-clamp:2}
+.map-workspace .case-list-item{min-height:220px;padding:18px;gap:8px;border:1px solid var(--border-s);border-top:3px solid var(--card-accent,var(--border-s))}
+.map-workspace .case-list-summary{-webkit-line-clamp:3}
 .case-list-item:hover{background:var(--bg-mid);border-left-color:var(--accent)}
 .case-list-item.active{background:var(--bg-mid);border-left-color:var(--green);box-shadow:inset 0 0 0 1px rgba(74,123,111,.28)}
 .case-list-item:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
@@ -363,9 +363,18 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .case-list-summary{font-size:11.5px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .case-list-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
 .case-list-tag{font-family:var(--fm);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;border:1px solid var(--border-s);color:var(--muted)}
+.case-list-mechanism{font-size:11.5px;line-height:1.55;color:var(--text);padding-top:8px;border-top:1px solid var(--border-s)}
+.case-list-mechanism strong{display:block;margin-bottom:3px;font:7.5px var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 .case-list-empty{grid-column:1/-1;padding:32px 20px;background:var(--bg-card);text-align:center;color:var(--muted);font-size:13px;line-height:1.7}
-@media(max-width:1050px){.map-workspace{grid-template-columns:1fr}.case-browser{order:-1}.case-list{max-height:460px}.case-browser-head{align-items:stretch;flex-direction:column}.case-search-label{min-width:100%}}
-@media(max-width:600px){.map-ready-cue{align-items:flex-start;flex-wrap:wrap}.map-ready-cue .cue-action{width:100%;margin-left:33px}.map-case-panel{padding:18px 16px}.case-browser{padding:12px}}
+.case-browser-more{display:none;width:100%;min-height:44px;margin-top:10px;border:1px solid var(--border);background:var(--bg-card);color:var(--accent);font:9px var(--fm);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.case-browser-more.show{display:block}.case-browser-more:hover{background:var(--bg-surf)}
+.case-filter-selects{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr)) auto;gap:8px;margin:12px 0}
+.case-filter-field{display:flex;flex-direction:column;gap:5px;font:8px var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.case-filter-field select{width:100%;min-height:40px;padding:7px 30px 7px 10px;border:1px solid var(--border-s);background:var(--bg-card);color:var(--text);font:12px var(--fb)}
+.case-filter-reset{align-self:end;min-height:40px;padding:0 15px;border:1px solid var(--border);background:transparent;color:var(--accent);font:8px var(--fm);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.case-filter-summary{min-height:22px;font-size:11.5px;line-height:1.6;color:var(--muted)}
+@media(max-width:1050px){.case-list{grid-template-columns:repeat(2,minmax(0,1fr))}.case-browser-head{align-items:stretch;flex-direction:column}.case-search-label{min-width:100%}.case-filter-selects{grid-template-columns:repeat(2,minmax(0,1fr))}.case-filter-reset{align-self:stretch}}
+@media(max-width:600px){.map-ready-cue{align-items:flex-start;flex-wrap:wrap}.map-ready-cue .cue-action{width:100%;margin-left:33px}.map-case-panel{padding:18px 16px}.case-browser{padding:12px}.case-list{grid-template-columns:1fr}.case-filter-selects{grid-template-columns:1fr}.map-workspace .case-list-item{min-height:0}.case-list-title{font-size:20px}.case-list-summary,.case-list-mechanism{font-size:13px}}
 [data-case-link]:active{filter:brightness(1.25);transform:translateY(1px)}
 .case-toast{position:fixed;right:20px;bottom:20px;z-index:260;width:min(420px,calc(100vw - 32px));padding:13px 16px;background:var(--bg-surf);border:1px solid var(--green);box-shadow:0 12px 40px rgba(0,0,0,.45);color:var(--text);font-size:12px;line-height:1.45;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .18s,transform .18s}
 .case-toast.show{opacity:1;transform:none}
@@ -1506,22 +1515,30 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <li><a href="#mod-visuals" id="tab-visuals">Visuella modeller</a></li>
         </ul>
       </div>
+      <!-- UTFORSKA -->
+      <div class="cat-group">
+        <button class="cat-label" id="cat-utforska" type="button" aria-expanded="false" aria-controls="ctabs-utforska" title="Visa moduler under Utforska" onclick="toggleCat('utforska')">
+          <span class="cat-roman">II</span>Utforska<span class="cat-chevron">▾</span>
+        </button>
+        <ul class="cat-tabs" id="ctabs-utforska">
+          <li><a href="#mod-map" id="tab-map">Händelser &amp; fall</a></li>
+          <li><a href="#mod-graph" id="tab-graph">Sambandsgraf</a></li>
+        </ul>
+      </div>
       <!-- BEDÖMA -->
       <div class="cat-group">
         <button class="cat-label" id="cat-bedoma" type="button" aria-expanded="false" aria-controls="ctabs-bedoma" title="Visa moduler under Bedöma" onclick="toggleCat('bedoma')">
-          <span class="cat-roman">II</span>Bedöma<span class="cat-chevron">▾</span>
+          <span class="cat-roman">III</span>Bedöma<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-bedoma">
-          <li><a href="#mod-map" id="tab-map">Händelser &amp; fall</a></li>
           <li><a href="#mod-assess" id="tab-assess">Organisationstestet</a></li>
           <li><a href="#mod-inds" id="tab-inds">Indikatorer</a></li>
-          <li><a href="#mod-graph" id="tab-graph">Sambandsgraf</a></li>
         </ul>
       </div>
       <!-- AGERA -->
       <div class="cat-group">
         <button class="cat-label" id="cat-agera" type="button" aria-expanded="false" aria-controls="ctabs-agera" title="Visa moduler under Agera" onclick="toggleCat('agera')">
-          <span class="cat-roman">III</span>Agera<span class="cat-chevron">▾</span>
+          <span class="cat-roman">IV</span>Agera<span class="cat-chevron">▾</span>
         </button>
         <ul class="cat-tabs" id="ctabs-agera">
           <li><a href="#mod-tools" id="tab-tools">Verktygslådan</a></li>
@@ -1571,20 +1588,21 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <a href="#mod-visuals" class="mobile-tab-btn" id="mtab-visuals">
       <span class="mtb-num">07</span>Visuella modeller
     </a>
-    <div class="mob-cat-hdr">II — Bedöma</div>
+    <div class="mob-cat-hdr">II — Utforska</div>
     <a href="#mod-map" class="mobile-tab-btn" id="mtab-map">
       <span class="mtb-num">08</span>Händelser &amp; fall
     </a>
+    <a href="#mod-graph" class="mobile-tab-btn" id="mtab-graph">
+      <span class="mtb-num">11</span>Sambandsgraf
+    </a>
+    <div class="mob-cat-hdr">III — Bedöma</div>
     <a href="#mod-assess" class="mobile-tab-btn" id="mtab-assess">
       <span class="mtb-num">09</span>Organisationstestet
     </a>
     <a href="#mod-inds" class="mobile-tab-btn" id="mtab-inds">
       <span class="mtb-num">10</span>Indikatorer
     </a>
-    <a href="#mod-graph" class="mobile-tab-btn" id="mtab-graph">
-      <span class="mtb-num">11</span>Sambandsgraf
-    </a>
-    <div class="mob-cat-hdr">III — Agera</div>
+    <div class="mob-cat-hdr">IV — Agera</div>
     <a href="#mod-tools" class="mobile-tab-btn" id="mtab-tools">
       <span class="mtb-num">12</span>Verktygslådan
     </a>
@@ -1707,9 +1725,9 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="module" id="mod-map">
 <div class="wrap">
   <div class="sec-head reveal">
-    <p class="eyebrow">08 · Bedöma · Händelser och fall</p>
+    <p class="eyebrow">08 · Utforska · Händelser och fall</p>
     <h1 class="sec-title">Dokumenterade<br><em>händelser</em></h1>
-    <p class="sec-intro">Utforska 165 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör eller om uppgifterna är bekräftade eller en indikation. Resultatet visas både på kartan och i den sökbara fallförteckningen.</p>
+    <p class="sec-intro">Utforska 165 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör, metod, upptäcktsväg, utfall, källäge eller tidsperiod. Resultatet visas både som fallkort och på kartan.</p>
   </div>
   <div class="map-stats reveal" id="mapStats"></div>
   <div class="filter-bar reveal">
@@ -1743,6 +1761,30 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <button class="fb" data-f="status" data-v="CONFIRMED">Bekräftat</button>
     <button class="fb" data-f="status" data-v="INDICATION">Indikation</button>
   </div>
+  <div class="case-filter-selects reveal" aria-label="Fördjupade fallfilter">
+    <label class="case-filter-field">Metod
+      <select id="caseMethodFilter">
+        <option value="ALL">Alla metoder</option><option value="RELATION">Relation eller nätverk</option><option value="THREAT">Hot, press eller tvång</option><option value="BRIBERY">Muta eller korruption</option><option value="ACCESS">Åtkomst eller informationsröjande</option><option value="PROCUREMENT">Upphandling eller avtal</option><option value="PLACEMENT">Placering eller rekrytering</option><option value="SOCIAL_ENGINEERING">Vilseledning</option><option value="SABOTAGE">Sabotage</option><option value="BENEFIT_FRAUD">Bidrags- eller ersättningsmissbruk</option><option value="FOREIGN_TECH">Spioneri eller tekniköverföring</option><option value="UNKNOWN">Okänt/ej belagt</option>
+      </select>
+    </label>
+    <label class="case-filter-field">Upptäcktsväg
+      <select id="caseDiscoveryFilter">
+        <option value="ALL">Alla upptäcktsvägar</option><option value="INTERNAL_LOG">Intern kontroll eller logg</option><option value="WHISTLEBLOWER">Rapportör eller kollega</option><option value="JOURNALISM">Journalistik eller OSINT</option><option value="POLICE">Polis eller förundersökning</option><option value="SECURITY">Säkerhets-/underrättelsearbete</option><option value="AUDIT">Revision eller tillsyn</option><option value="COURT">Domstolsprocess</option><option value="UNKNOWN">Okänt/ej belagt</option>
+      </select>
+    </label>
+    <label class="case-filter-field">Utfall
+      <select id="caseOutcomeFilter">
+        <option value="ALL">Alla utfall</option><option value="COMPLETED">Handling genomförd</option><option value="INTERRUPTED">Avbrutet eller stoppat</option><option value="PARTIAL">Delvis genomfört</option><option value="UNCLEAR">Okänt/ej belagt</option>
+      </select>
+    </label>
+    <label class="case-filter-field">Tidsperiod
+      <select id="casePeriodFilter">
+        <option value="ALL">Hela perioden</option><option value="2002-2015">2002–2015</option><option value="2016-2020">2016–2020</option><option value="2021-2023">2021–2023</option><option value="2024-2026">2024–2026</option>
+      </select>
+    </label>
+    <button class="case-filter-reset" type="button" onclick="resetCaseBrowserFilters()">Rensa filter</button>
+  </div>
+  <div class="case-filter-summary reveal" id="caseFilterSummary" aria-live="polite">Alla fall visas.</div>
   <div class="map-ready-cue reveal" id="mapReadyCue" aria-live="polite"><strong>165</strong><span>dokumenterade fall är laddade och visas i förteckningen.</span><span class="cue-action">Välj ett fall eller en kartmarkör →</span></div>
   <div class="map-case-panel" id="case-detail" tabindex="-1">
     <div class="mcp-top"><div class="mcp-title" id="mcp-title"></div><button class="mcp-close" onclick="closeCase()">✕</button></div>
@@ -1772,6 +1814,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         </label>
       </div>
       <div class="case-list" id="caseList" aria-live="polite"></div>
+      <button class="case-browser-more" id="caseListMore" type="button">Visa 12 fall till</button>
     </section>
   </div>
   <div class="case-toast" id="caseToast" role="status" aria-live="polite"></div>
@@ -3852,7 +3895,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="module" id="mod-graph">
 <div class="wrap">
   <div class="sec-head reveal">
-    <p class="eyebrow">11 · Bedöma · Sambandsanalys · 165 fall</p>
+    <p class="eyebrow">11 · Utforska · Sambandsanalys · 165 fall</p>
     <h1 class="sec-title">Sambands<em>grafen</em></h1>
     <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Grafen startar stabilt, rör sig kort och dämpat och landar sedan så att mönster går att jämföra. Klicka på en aktör, sektor eller ett fall för att se detaljer och använd filtren för att avgränsa materialet.</p>
   </div>
@@ -8825,8 +8868,9 @@ const CHAIN=[{"step":"Kartläggning","title":"Det börjar med öppna källor","d
 let graphReady=false,mapReady=false;
 // Kategori → modular mapping
 const CAT_MAP={
-  forsta:['chain','sectors','actors','legal','infopav','theory','visuals'],
-  bedoma:['map','assess','inds','graph'],
+  forsta:['method','chain','sectors','actors','legal','infopav','theory','visuals'],
+  utforska:['map','graph'],
+  bedoma:['assess','inds'],
   agera:['tools','culture','handle']
 };
 function getCat(key){
@@ -9047,7 +9091,7 @@ function renderChain(i){
 }
 
 /* ══ MAP ══ */
-let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL'},caseSearchQuery='',activeCaseId=null,caseToastTimer=null;
+let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL',method:'ALL',discovery:'ALL',outcome:'ALL',period:'ALL'},caseSearchQuery='',activeCaseId=null,caseToastTimer=null,caseVisibleLimit=12;
 let leafletLoadPromise=null;
 function initCaseBrowser(){
   document.querySelectorAll('#mod-map .fb[data-f]').forEach(btn=>{
@@ -9055,14 +9099,24 @@ function initCaseBrowser(){
       document.querySelectorAll(`#mod-map .fb[data-f="${this.dataset.f}"]`).forEach(b=>b.classList.remove('active'));
       this.classList.add('active');
       mapFilters[this.dataset.f]=this.dataset.v;
+      caseVisibleLimit=12;
       renderCaseViews();
     });
+  });
+  [
+    ['caseMethodFilter','method'],['caseDiscoveryFilter','discovery'],['caseOutcomeFilter','outcome'],['casePeriodFilter','period']
+  ].forEach(([id,key])=>{
+    const select=document.getElementById(id);
+    if(select)select.addEventListener('change',()=>{mapFilters[key]=select.value;caseVisibleLimit=12;renderCaseViews();});
   });
   const search=document.getElementById('caseSearch');
   if(search)search.addEventListener('input',function(){
     caseSearchQuery=this.value.trim();
+    caseVisibleLimit=12;
     renderCaseViews();
   });
+  const more=document.getElementById('caseListMore');
+  if(more)more.addEventListener('click',()=>{caseVisibleLimit+=12;renderCaseList();});
   renderCaseViews();
 }
 function normalizedCaseText(value){
@@ -9071,11 +9125,20 @@ function normalizedCaseText(value){
 function getFilteredCases(){
   const query=normalizedCaseText(caseSearchQuery);
   return CASES.filter(c=>{
+    const coding=getCaseCoding(c);
     if(mapFilters.sector!=='ALL'&&c.sector!==mapFilters.sector)return false;
     if(mapFilters.actor!=='ALL'&&c.actor!==mapFilters.actor)return false;
     if(mapFilters.status!=='ALL'&&c.status!==mapFilters.status)return false;
+    if(mapFilters.method!=='ALL'&&!coding.methods.includes(mapFilters.method))return false;
+    if(mapFilters.discovery!=='ALL'&&!coding.discovery.includes(mapFilters.discovery))return false;
+    if(mapFilters.outcome!=='ALL'&&coding.outcome!==mapFilters.outcome)return false;
+    if(mapFilters.period!=='ALL'){
+      const year=parseInt(String(c.date||'').slice(0,4),10),[from,to]=mapFilters.period.split('-').map(Number);
+      if(!Number.isFinite(year)||year<from||year>to)return false;
+    }
     if(query){
-      const haystack=normalizedCaseText([c.title,c.summary,c.date,c.loc?.m,c.loc?.r,SECTOR_LABELS[c.sector],ACTOR_LABELS[c.actor]].join(' '));
+      const codingLabels=[...coding.methods.map(key=>PATTERN_CODEBOOK.method[key]),...coding.discovery.map(key=>PATTERN_CODEBOOK.discovery[key]),...coding.gaps.map(key=>PATTERN_CODEBOOK.gap[key]),PATTERN_CODEBOOK.outcome[coding.outcome]];
+      const haystack=normalizedCaseText([c.title,c.summary,c.date,c.loc?.m,c.loc?.r,SECTOR_LABELS[c.sector],ACTOR_LABELS[c.actor],...codingLabels].join(' '));
       if(!haystack.includes(query))return false;
     }
     return true;
@@ -9087,10 +9150,12 @@ function renderCaseViews(){
   updateMapStats();
 }
 function resetCaseBrowserFilters(){
-  mapFilters={sector:'ALL',actor:'ALL',status:'ALL'};
+  mapFilters={sector:'ALL',actor:'ALL',status:'ALL',method:'ALL',discovery:'ALL',outcome:'ALL',period:'ALL'};
   caseSearchQuery='';
+  caseVisibleLimit=12;
   const search=document.getElementById('caseSearch');
   if(search)search.value='';
+  ['caseMethodFilter','caseDiscoveryFilter','caseOutcomeFilter','casePeriodFilter'].forEach(id=>{const select=document.getElementById(id);if(select)select.value='ALL';});
   document.querySelectorAll('#mod-map .fb[data-f]').forEach(btn=>btn.classList.toggle('active',btn.dataset.v==='ALL'));
   renderCaseViews();
 }
@@ -9183,17 +9248,34 @@ function renderCaseList(){
   const count=document.getElementById('caseListCount');
   if(!list||!count)return;
   const filtered=getFilteredCases();
-  count.textContent=`${filtered.length} av ${CASES.length} fall visas`;
+  const visible=filtered.slice(0,caseVisibleLimit);
+  count.textContent=`${visible.length} av ${filtered.length} matchande fall visas`;
+  const more=document.getElementById('caseListMore');
+  if(more){more.classList.toggle('show',filtered.length>visible.length);more.textContent=`Visa ${Math.min(12,filtered.length-visible.length)} fall till`;}
+  const summary=document.getElementById('caseFilterSummary');
+  if(summary){
+    const labels=[];
+    if(mapFilters.sector!=='ALL')labels.push(SECTOR_LABELS[mapFilters.sector]||mapFilters.sector);
+    if(mapFilters.actor!=='ALL')labels.push(ACTOR_LABELS[mapFilters.actor]||mapFilters.actor);
+    if(mapFilters.status!=='ALL')labels.push(mapFilters.status==='CONFIRMED'?'Bekräftat':'Indikation');
+    if(mapFilters.method!=='ALL')labels.push(PATTERN_CODEBOOK.method[mapFilters.method]);
+    if(mapFilters.discovery!=='ALL')labels.push(PATTERN_CODEBOOK.discovery[mapFilters.discovery]);
+    if(mapFilters.outcome!=='ALL')labels.push(PATTERN_CODEBOOK.outcome[mapFilters.outcome]);
+    if(mapFilters.period!=='ALL')labels.push(mapFilters.period.replace('-', '–'));
+    if(caseSearchQuery)labels.push(`Sökning: ”${caseSearchQuery}”`);
+    summary.textContent=labels.length?`Aktiva filter: ${labels.join(' · ')}`:'Alla fall visas. Välj filter eller sök på ett ord för att avgränsa.';
+  }
   if(!filtered.length){
     list.innerHTML='<div class="case-list-empty">Inga fall matchar de valda filtren och sökningen. Ändra ett filter eller rensa sökfältet.</div>';
     return;
   }
-  list.innerHTML=filtered.map(c=>`<a id="case-list-${c.id}" class="case-list-item${c.id===activeCaseId?' active':''}" href="?case=${c.id}#case-detail" data-case-id="${c.id}" data-case-link="${c.id}"${c.id===activeCaseId?' aria-current="true"':''}>
+  list.innerHTML=visible.map(c=>{const coding=getCaseCoding(c),method=coding.methods[0],outcome=coding.outcome;return `<a id="case-list-${c.id}" class="case-list-item${c.id===activeCaseId?' active':''}" style="--card-accent:${c.status==='CONFIRMED'?'var(--green)':'var(--accent)'}" href="?case=${c.id}#case-detail" data-case-id="${c.id}" data-case-link="${c.id}"${c.id===activeCaseId?' aria-current="true"':''}>
     <div class="case-list-top"><span class="case-list-meta">${escHtml(c.date)} · ${escHtml(c.loc?.m||'')}</span><span class="badge b-${c.status==='CONFIRMED'?'conf':'ind'}">${c.status==='CONFIRMED'?'Bekräftat':'Indikation'}</span></div>
     <div class="case-list-title">${escHtml(c.title)}</div>
     <div class="case-list-summary">${escHtml(c.summary)}</div>
+    <div class="case-list-mechanism"><strong>Primär mekanism</strong>${escHtml(PATTERN_CODEBOOK.method[method]||method)} · ${escHtml(PATTERN_CODEBOOK.outcome[outcome]||outcome)}</div>
     <div class="case-list-tags"><span class="case-list-tag">${escHtml(SECTOR_LABELS[c.sector]||c.sector)}</span><span class="case-list-tag">${escHtml(ACTOR_LABELS[c.actor]||c.actor)}</span></div>
-  </a>`).join('');
+  </a>`;}).join('');
 }
 function updateMapStats(){
   const filtered=getFilteredCases(),tot=filtered.length,conf=filtered.filter(c=>c.status==='CONFIRMED').length;
@@ -10552,10 +10634,14 @@ function buildGlobalSearchIndex(){
     });
   });
 
-  if(typeof CASES!=='undefined')CASES.forEach(item=>add({
-    kind:'case',typeLabel:'FALL',title:item.title,text:item.summary||'',keywords:`${searchObjectText(item)} ${ALABELS?.[item.actor]||''} ${SLABELS?.[item.sector]||''}`,caseId:item.id,
-    moduleKey:'map',moduleLabel:'Händelser & fall',meta:`${item.loc?.m||'Plats ej angiven'} · ${item.date||''} · ${item.status==='CONFIRMED'?'Bekräftat':'Indikation'}`
-  }));
+  if(typeof CASES!=='undefined')CASES.forEach(item=>{
+    const coding=getCaseCoding(item);
+    const codingTerms=[...coding.methods.map(key=>PATTERN_CODEBOOK.method[key]),...coding.discovery.map(key=>PATTERN_CODEBOOK.discovery[key]),...coding.gaps.map(key=>PATTERN_CODEBOOK.gap[key]),PATTERN_CODEBOOK.outcome[coding.outcome]].join(' ');
+    add({
+      kind:'case',typeLabel:'FALL',title:item.title,text:item.summary||'',keywords:`${searchObjectText(item)} ${ALABELS?.[item.actor]||''} ${SLABELS?.[item.sector]||''} ${codingTerms}`,caseId:item.id,
+      moduleKey:'map',moduleLabel:'Händelser & fall',meta:`${item.loc?.m||'Plats ej angiven'} · ${item.date||''} · ${item.status==='CONFIRMED'?'Bekräftat':'Indikation'}`
+    });
+  });
   if(typeof INDICATORS!=='undefined')INDICATORS.forEach(item=>add({
     kind:'indicator',typeLabel:'INDIKATOR',title:item.title,text:item.desc||item.description||'',keywords:searchObjectText(item),indicatorId:item.id,
     moduleKey:'inds',moduleLabel:'Indikatorer',meta:item.sev==='HIGH'?'Hög allvarlighet':'Medel'
@@ -10743,6 +10829,13 @@ function initGlobalSearch(){
       e.preventDefault();const item=items[searchActiveIndex>=0?searchActiveIndex:0];activateSearchEntry(item.dataset.searchId);
     }
   });
+  const incomingQuery=new URLSearchParams(window.location.search).get('q')?.trim();
+  if(incomingQuery&&incomingQuery.length>=2){
+    inp.value=incomingQuery;
+    clr.style.display='block';
+    renderGlobalSearch(incomingQuery);
+    setTimeout(()=>inp.focus({preventScroll:true}),80);
+  }
 }
 function closeSearch(options={}){
   const results=document.getElementById('searchResults'),input=document.getElementById('globalSearchInput');
