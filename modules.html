@@ -13876,6 +13876,41 @@ function selectCultAction(id,options={}){
   else{grid?.after(detail);detail.classList.remove('mobile-inline-detail');}
 }
 
+/* Källor: visa källtitel och bädda in URL:en i länken i stället för att skriva ut den. */
+function cleanSourceLinkLabels(){
+  document.querySelectorAll('#mod-sources .src-group a[href]').forEach(link=>{
+    const label=link.querySelector('span:last-child');
+    if(!label)return;
+    const original=label.textContent.trim();
+    const cleaned=original.replace(/\s+https?:\/\/\S+$/i,'').trim();
+    if(cleaned===original)return;
+    const title=cleaned.replace(/\s*↗\s*$/,'').trim();
+    label.textContent=title+' ↗';
+    link.setAttribute('aria-label',title+' – öppna källa');
+  });
+}
+
+/* Enkel kopieringsspärr för sidans text. Redigerbara fält lämnas öppna. */
+function installCopyGuard(){
+  const isEditable=target=>target?.closest?.('input, textarea, select, [contenteditable="true"]');
+  const blockCopy=event=>{
+    if(isEditable(event.target))return;
+    event.preventDefault();
+  };
+  document.addEventListener('copy',blockCopy,true);
+  document.addEventListener('cut',blockCopy,true);
+  document.addEventListener('selectstart',blockCopy,true);
+  document.addEventListener('keydown',event=>{
+    if(isEditable(event.target))return;
+    if((event.ctrlKey||event.metaKey)&&['c','x'].includes(event.key.toLowerCase())){
+      event.preventDefault();
+    }
+  },true);
+}
+
+cleanSourceLinkLabels();
+installCopyGuard();
+
 </script>
 <div class="mobile-reader-dock" id="mobileReaderDock" aria-hidden="true" aria-label="Mobil läsnavigering">
   <button type="button" onclick="mobileReaderToChoices()">↑ Till valen</button>
