@@ -668,7 +668,7 @@ html:not(.js-ready) .theory-subnav{display:none}
 @media(max-width:560px){.sat-inputs{grid-template-columns:1fr}.sat-plus{min-height:20px}.sat-flow,.case-flow,.evidence-grid,.deep-dive-grid{grid-template-columns:1fr}.sat-stage:not(:last-child)::after{content:"↓";right:50%;top:auto;bottom:-13px}.sat-figure{padding:16px}}
 
 /* ─── GRAPH ─── */
-#graphCanvas{width:100%;height:100%;cursor:grab;display:block}
+#graphCanvas{width:100%;height:100%;cursor:pointer;display:block}
 #graphWrap{position:relative;background:var(--bg-card);border:1px solid var(--border-s);height:540px}
 @media(max-width:600px){#graphWrap{height:380px}}
 
@@ -3618,7 +3618,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="sec-head reveal">
     <p class="eyebrow">11 · Bedöma · Sambandsanalys · 164 fall</p>
     <h1 class="sec-title">Sambands<em>grafen</em></h1>
-    <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Klicka på en punkt för detaljer, dra i grafen för att utforska och rulla eller nyp för att zooma.</p>
+    <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Grafen ligger i ett stabilt läge så att mönster går att jämföra. Klicka på en aktör, sektor eller ett fall för att se detaljer och använd filtren för att avgränsa materialet.</p>
   </div>
   <div class="filter-bar reveal">
     <span class="fb" style="cursor:default;color:var(--dim);border:none;padding:0">Aktör</span>
@@ -3642,7 +3642,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="leg-item"><div class="leg-dot" style="background:#9B4FBB"></div>Extremism</div>
     <div class="leg-item"><div class="leg-dot" style="background:#4A7B6F"></div>Ekonomiskt intresse</div>
     <div class="leg-item"><div class="leg-dot" style="background:rgba(240,237,230,.15);border:1px solid rgba(184,151,58,.4)"></div>Sektor</div>
-    <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Dra · Scrolla · Klicka</div>
+    <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Filtera · Klicka</div>
   </div>
   <div id="graphDetail" style="display:none;background:var(--bg-card);border:1px solid var(--border);padding:22px 26px;margin-top:2px">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px">
@@ -9883,18 +9883,10 @@ function gStart(){
   gCtx.scale(devicePixelRatio,devicePixelRatio);
   const ld=document.getElementById('graphLoading');if(ld)ld.style.display='none';
   gBuild();
-  gCanvas.addEventListener('mousedown',gMD);
-  gCanvas.addEventListener('mousemove',gMM);
-  gCanvas.addEventListener('mouseup',gMU);
-  gCanvas.addEventListener('mouseleave',()=>{gDragging=null;gPanStart=null;gCanvas.style.cursor='grab'});
-  gCanvas.addEventListener('wheel',gWh,{passive:false});
   gCanvas.addEventListener('click',gCk);
-  // Touch
-  gCanvas.addEventListener('touchstart',gTS,{passive:false});
-  gCanvas.addEventListener('touchmove',gTM,{passive:false});
-  gCanvas.addEventListener('touchend',()=>{gDragging=null});
   if(gRaf)cancelAnimationFrame(gRaf);
-  (function loop(){gTick++;gSim();gDraw();gRaf=requestAnimationFrame(loop);})();
+  gRaf=null;
+  gDraw();
 }
 
 function gBuild(){
@@ -9903,9 +9895,12 @@ function gBuild(){
   const actors=new Set(fc.map(c=>c.actor));
   const sectors=new Set(fc.map(c=>c.sector));
   const aArr=[...actors];
+  const actorAngles=new Map();
+  const actorRadius=Math.min(gW,gH)*0.27;
   aArr.forEach((a,i)=>{
     const ang=(i/aArr.length)*Math.PI*2-Math.PI/2;
-    gNodes.push({id:a,type:'actor',label:ALABELS[a]||a,x:gW/2+Math.cos(ang)*75,y:gH/2+Math.sin(ang)*75,vx:0,vy:0,r:22,color:ACOLORS[a]||'#888'});
+    actorAngles.set(a,ang);
+    gNodes.push({id:a,type:'actor',label:ALABELS[a]||a,x:gW/2+Math.cos(ang)*actorRadius,y:gH/2+Math.sin(ang)*actorRadius,vx:0,vy:0,r:22,color:ACOLORS[a]||'#888'});
   });
   if(gShowSectors){
     const sArr=[...sectors];
@@ -9915,11 +9910,21 @@ function gBuild(){
       gNodes.push({id:s,type:'sector',label:SLABELS[s]||s,x:gW/2+Math.cos(ang)*r,y:gH/2+Math.sin(ang)*r,vx:0,vy:0,r:14,color:'rgba(184,151,58,.5)'});
     });
   }
-  fc.forEach((c,i)=>{
+  const actorCaseCounts={};
+  fc.forEach(c=>{actorCaseCounts[c.actor]=(actorCaseCounts[c.actor]||0)+1;});
+  const actorCaseIndex={};
+  fc.forEach(c=>{
     const an=gNodes.find(n=>n.id===c.actor);
     if(!an)return;
-    const ang=(i/fc.length)*Math.PI*2;
-    const r=55+Math.random()*110;
+    const slot=actorCaseIndex[c.actor]||0;
+    actorCaseIndex[c.actor]=slot+1;
+    const total=actorCaseCounts[c.actor];
+    const slotsPerRing=Math.max(8,Math.ceil(Math.sqrt(total)*1.8));
+    const ring=Math.floor(slot/slotsPerRing);
+    const slotInRing=slot%slotsPerRing;
+    const slotsInThisRing=Math.min(slotsPerRing,total-ring*slotsPerRing);
+    const ang=actorAngles.get(c.actor)+(slotInRing/Math.max(1,slotsInThisRing))*Math.PI*2+(ring%2?0.16:0);
+    const r=62+ring*25;
     gNodes.push({id:c.id,type:'case',label:c.title.substring(0,42)+(c.title.length>42?'…':''),full:c.title,
       actor:c.actor,sector:c.sector,status:c.status,date:c.date,summary:c.summary,
       x:an.x+Math.cos(ang)*r,y:an.y+Math.sin(ang)*r,vx:0,vy:0,
@@ -10044,8 +10049,8 @@ let gLastCk=0;
 function gCk(e){
   const now=Date.now();if(now-gLastCk<300)return;gLastCk=now;
   const[sx,sy]=gRC(e);const n=gAt(sx,sy);
-  if(n===gSelNode){gSelNode=null;gHideGD();return;}
-  gSelNode=n;if(n)gShowGD(n);else gHideGD();
+  if(n===gSelNode){gSelNode=null;gHideGD();gDraw();return;}
+  gSelNode=n;if(n)gShowGD(n);else gHideGD();gDraw();
 }
 function gTS(e){e.preventDefault();const t=e.touches[0];const r=gCanvas.getBoundingClientRect();const sx=t.clientX-r.left,sy=t.clientY-r.top;const n=gAt(sx,sy);if(n){gDragging=n;n.dragging=true;}else gPanStart={x:t.clientX-gTx.x,y:t.clientY-gTx.y};}
 function gTM(e){e.preventDefault();const t=e.touches[0];const r=gCanvas.getBoundingClientRect();const sx=t.clientX-r.left,sy=t.clientY-r.top;if(gDragging){const[wx,wy]=gS2W(sx,sy);gDragging.x=wx;gDragging.y=wy;gDragging.vx=0;gDragging.vy=0;}else if(gPanStart){gTx.x=t.clientX-gPanStart.x;gTx.y=t.clientY-gPanStart.y;}}
@@ -10073,25 +10078,26 @@ function gShowGD(n){
     document.getElementById('gd-body').textContent=Object.entries(ba).map(([a,n])=>`${ALABELS[a]}: ${n} fall`).join(' · ');
     document.getElementById('gd-conn').textContent='';
   }
-  p.style.display='block';p.scrollIntoView({behavior:'smooth',block:'nearest'});
+  p.style.display='block';
 }
-function gHideGD(){document.getElementById('graphDetail').style.display='none';}
+function gHideGD(){document.getElementById('graphDetail').style.display='none';gDraw();}
 
 function gFilterActor(f){
   gActorF=f;
   document.querySelectorAll('[id^="gfa-"]').forEach(b=>b.classList.remove('active'));
   const map={all:'all',CRIMINAL_NETWORK:'cn',FOREIGN_POWER:'fp',EXTREMIST:'ex',ECONOMIC_INTEREST:'ei'};
   const btn=document.getElementById('gfa-'+map[f]);if(btn)btn.classList.add('active');
-  gSelNode=null;gHideGD();gBuild();gTick=0;
+  gSelNode=null;gHideGD();gBuild();gDraw();gTick=0;
 }
 function gToggleSectors(){
   gShowSectors=!gShowSectors;
   document.getElementById('gvs').classList.toggle('active',gShowSectors);
-  gBuild();gTick=0;
+  gBuild();gDraw();gTick=0;
 }
 function gToggleLabels(){
   gShowLabels=!gShowLabels;
   document.getElementById('gvl').classList.toggle('active',gShowLabels);
+  gDraw();
 }
 
 
