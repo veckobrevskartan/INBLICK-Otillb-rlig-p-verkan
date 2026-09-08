@@ -10425,17 +10425,18 @@ let GLOBAL_SEARCH_INDEX=[];
 let searchActiveIndex=-1;
 
 const SEARCH_GROUPS=[
-  {kind:'page',label:'Sidinnehåll',limit:10},
-  {kind:'case',label:'Fall',limit:7},
-  {kind:'indicator',label:'Indikatorer',limit:5},
-  {kind:'sector',label:'Sektormiljöer',limit:4},
-  {kind:'source',label:'Källor',limit:6}
+  {kind:'page',label:'Sidinnehåll',limit:12},
+  {kind:'case',label:'Fall',limit:12},
+  {kind:'indicator',label:'Indikatorer',limit:8},
+  {kind:'sector',label:'Sektormiljöer',limit:6},
+  {kind:'source',label:'Källor',limit:8}
 ];
 
 function searchCompact(value){return String(value||'').replace(/\s+/g,' ').trim();}
 function searchNormalise(value){
-  return searchCompact(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('sv-SE');
+  return searchCompact(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('sv-SE').replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
 }
+function searchTerms(value){return searchNormalise(value).split(' ').filter(term=>term.length>1||/^\d+$/.test(term));}
 function searchStripHtml(value){
   const box=document.createElement('div');box.innerHTML=String(value||'');
   return searchCompact(box.textContent||'');
@@ -10491,16 +10492,27 @@ function buildGlobalSearchIndex(){
   const add=entry=>{
     const fullTitle=searchCompact(entry.title);
     entry.title=fullTitle.length>220?fullTitle.slice(0,217)+'…':fullTitle;
-    entry.text=searchCompact(`${fullTitle} ${entry.text||''}`);
+    entry.text=searchCompact(entry.text||'');
+    entry.meta=searchCompact(entry.meta||'');
+    entry.keywords=searchCompact(entry.keywords||'');
     if(!entry.title||entry.title.length<2)return;
     const duplicateKey=`${entry.kind}:${entry.moduleKey||''}:${searchNormalise(entry.title)}`;
     const existing=duplicateMap.get(duplicateKey);
     if(existing){
       if(!searchNormalise(existing.text).includes(searchNormalise(entry.text)))existing.text+=' '+entry.text;
+      if(entry.meta&&!searchNormalise(existing.meta).includes(searchNormalise(entry.meta)))existing.meta+=' '+entry.meta;
+      if(entry.keywords&&!searchNormalise(existing.keywords).includes(searchNormalise(entry.keywords)))existing.keywords+=' '+entry.keywords;
+      existing._textNorm=searchNormalise(existing.text);
+      existing._metaNorm=searchNormalise(existing.meta);
+      existing._keywordsNorm=searchNormalise(existing.keywords);
       if(entry.action&&!existing.action)existing.action=entry.action;
       if(entry.targetId&&!existing.targetId)existing.targetId=entry.targetId;
       return existing;
     }
+    entry._titleNorm=searchNormalise(entry.title);
+    entry._textNorm=searchNormalise(entry.text);
+    entry._metaNorm=searchNormalise(entry.meta);
+    entry._keywordsNorm=searchNormalise(entry.keywords);
     entry.searchId='search-entry-'+entries.length;
     entries.push(entry);duplicateMap.set(duplicateKey,entry);return entry;
   };
@@ -10508,7 +10520,7 @@ function buildGlobalSearchIndex(){
     if(!Array.isArray(items))return;
     items.forEach((item,index)=>add({
       kind:'page',moduleKey:config.moduleKey,moduleLabel:config.moduleLabel||searchModuleLabel(document.getElementById('mod-'+config.moduleKey)),
-      typeLabel:config.typeLabel||searchTypeLabel(config.moduleKey),title:config.title(item,index),text:searchObjectText(item),
+      typeLabel:config.typeLabel||searchTypeLabel(config.moduleKey),title:config.title(item,index),text:config.text?config.text(item,index):searchObjectText(item),keywords:config.keywords?config.keywords(item,index):searchObjectText(item),scope:'structured',
       targetId:config.targetId,action:{type:config.action,value:config.value?config.value(item,index):index}
     }));
   };
@@ -10529,32 +10541,32 @@ function buildGlobalSearchIndex(){
     const moduleKey=module.id.slice(4),moduleLabel=searchModuleLabel(module);
     let targetIndex=0;
     const moduleHeading=module.querySelector('.sec-title,h1')||module;
-    if(!['map','sources'].includes(moduleKey))add({kind:'page',moduleKey,moduleLabel,typeLabel:'MODUL',title:moduleLabel,text:searchCompact(module.textContent),targetId:ensureSearchTargetId(moduleHeading,moduleKey,targetIndex++)});
+    if(!['map','sources'].includes(moduleKey))add({kind:'page',moduleKey,moduleLabel,typeLabel:'MODUL',title:moduleLabel,text:searchCompact(module.textContent),scope:'module',targetId:ensureSearchTargetId(moduleHeading,moduleKey,targetIndex++)});
     module.querySelectorAll(titleSelector).forEach(element=>{
       if(element.closest('#caseList,#case-detail,#searchResults'))return;
       const title=searchCandidateTitle(element);
       if(!title||title.length<2)return;
       const target=element.tagName==='SUMMARY'?element.parentElement:element;
       const block=searchPreferredBlock(element,module);
-      add({kind:'page',moduleKey,moduleLabel,typeLabel:searchTypeLabel(moduleKey),title,text:searchCompact(block.textContent),targetId:ensureSearchTargetId(target,moduleKey,targetIndex++)});
+      add({kind:'page',moduleKey,moduleLabel,typeLabel:searchTypeLabel(moduleKey),title,text:searchCompact(block.textContent),scope:'section',targetId:ensureSearchTargetId(target,moduleKey,targetIndex++)});
     });
   });
 
   if(typeof CASES!=='undefined')CASES.forEach(item=>add({
-    kind:'case',typeLabel:'FALL',title:item.title,text:searchObjectText(item),caseId:item.id,
-    moduleKey:'map',moduleLabel:'Händelser & fall',meta:`${item.loc?.m||'Plats ej angiven'} · ${item.date||''}`
+    kind:'case',typeLabel:'FALL',title:item.title,text:item.summary||'',keywords:`${searchObjectText(item)} ${ALABELS?.[item.actor]||''} ${SLABELS?.[item.sector]||''}`,caseId:item.id,
+    moduleKey:'map',moduleLabel:'Händelser & fall',meta:`${item.loc?.m||'Plats ej angiven'} · ${item.date||''} · ${item.status==='CONFIRMED'?'Bekräftat':'Indikation'}`
   }));
   if(typeof INDICATORS!=='undefined')INDICATORS.forEach(item=>add({
-    kind:'indicator',typeLabel:'INDIKATOR',title:item.title,text:searchObjectText(item),indicatorId:item.id,
+    kind:'indicator',typeLabel:'INDIKATOR',title:item.title,text:item.desc||item.description||'',keywords:searchObjectText(item),indicatorId:item.id,
     moduleKey:'inds',moduleLabel:'Indikatorer',meta:item.sev==='HIGH'?'Hög allvarlighet':'Medel'
   }));
   if(typeof SECTORS!=='undefined')SECTORS.forEach(item=>add({
-    kind:'sector',typeLabel:'SEKTOR',title:item.name,text:searchObjectText(item),sectorId:item.id,
+    kind:'sector',typeLabel:'SEKTOR',title:item.name,text:item.desc_long||'',keywords:searchObjectText(item),sectorId:item.id,
     moduleKey:'sectors',moduleLabel:'Sektormiljöer',meta:`${item.risk||''} risk`
   }));
   const localSector=typeof LOCAL_GOV_SECTOR!=='undefined'?LOCAL_GOV_SECTOR:null;
   if(localSector&&!entries.some(entry=>entry.kind==='sector'&&entry.sectorId===localSector.id))add({
-    kind:'sector',typeLabel:'SEKTOR',title:localSector.name,text:searchObjectText(localSector),sectorId:localSector.id,
+    kind:'sector',typeLabel:'SEKTOR',title:localSector.name,text:localSector.desc_long||'',keywords:searchObjectText(localSector),sectorId:localSector.id,
     moduleKey:'sectors',moduleLabel:'Sektormiljöer',meta:`${localSector.risk||''} risk`
   });
 
@@ -10564,23 +10576,38 @@ function buildGlobalSearchIndex(){
     sourceModule.querySelectorAll('a[href]').forEach(link=>{
       const title=searchCompact(link.textContent||link.title);
       if(!title||title.length<4)return;
-      add({kind:'source',typeLabel:'KÄLLA',title,text:`${link.title||''} ${link.href}`,moduleKey:'sources',moduleLabel:'Källförteckning',targetId:ensureSearchTargetId(link,'sources',sourceIndex++)});
+      add({kind:'source',typeLabel:'KÄLLA',title,text:link.title||'',keywords:link.href,moduleKey:'sources',moduleLabel:'Källförteckning',targetId:ensureSearchTargetId(link,'sources',sourceIndex++)});
     });
   }
   GLOBAL_SEARCH_INDEX=entries;
 }
 
 function scoreSearchEntry(entry,query){
-  const normalQuery=searchNormalise(query),terms=normalQuery.split(' ').filter(Boolean);
-  const title=searchNormalise(entry.title),body=searchNormalise(entry.text);
-  if(!terms.every(term=>title.includes(term)||body.includes(term)))return -1;
+  const normalQuery=searchNormalise(query),terms=searchTerms(query);
+  const title=entry._titleNorm||searchNormalise(entry.title),body=entry._textNorm||searchNormalise(entry.text),meta=entry._metaNorm||searchNormalise(entry.meta),keywords=entry._keywordsNorm||searchNormalise(entry.keywords);
+  if(!terms.length||!terms.every(term=>title.includes(term)||body.includes(term)||meta.includes(term)||keywords.includes(term)))return -1;
   let score=0;
-  if(title===normalQuery)score+=160;
-  else if(title.startsWith(normalQuery))score+=110;
-  else if(title.includes(normalQuery))score+=85;
-  if(body.includes(normalQuery))score+=25;
-  terms.forEach(term=>{if(title.startsWith(term))score+=24;else if(title.includes(term))score+=16;if(body.includes(term))score+=3;});
-  if(entry.kind==='page')score+=8;
+  const phraseInTitle=title.includes(normalQuery),phraseInBody=body.includes(normalQuery),phraseInMeta=meta.includes(normalQuery);
+  if(title===normalQuery)score+=320;
+  else if(title.startsWith(normalQuery))score+=260;
+  else if(phraseInTitle)score+=210;
+  if(phraseInBody)score+=70;
+  if(phraseInMeta)score+=35;
+  terms.forEach(term=>{
+    if(title===term)score+=85;
+    else if(title.startsWith(term))score+=42;
+    else if(title.includes(term))score+=28;
+    if(meta.includes(term))score+=9;
+    if(body.includes(term))score+=5;
+    if(keywords.includes(term))score+=1;
+  });
+  if(entry.kind==='case')score+=38;
+  else if(entry.kind==='indicator')score+=24;
+  else if(entry.kind==='sector')score+=18;
+  else if(entry.kind==='page')score+=entry.scope==='module'?0:12;
+  else if(entry.kind==='source')score-=4;
+  if(entry.scope==='module'&&!phraseInTitle)score-=30;
+  if(!phraseInTitle&&!phraseInMeta&&body.length>2400)score-=Math.min(35,Math.round(body.length/1600));
   return score;
 }
 function searchExcerpt(text,query,maxLength=190){
