@@ -3618,7 +3618,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="sec-head reveal">
     <p class="eyebrow">11 · Bedöma · Sambandsanalys · 164 fall</p>
     <h1 class="sec-title">Sambands<em>grafen</em></h1>
-    <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Grafen ligger i ett stabilt läge så att mönster går att jämföra. Klicka på en aktör, sektor eller ett fall för att se detaljer och använd filtren för att avgränsa materialet.</p>
+    <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Grafen startar stabilt, rör sig kort och dämpat och landar sedan så att mönster går att jämföra. Klicka på en aktör, sektor eller ett fall för att se detaljer och använd filtren för att avgränsa materialet.</p>
   </div>
   <div class="filter-bar reveal">
     <span class="fb" style="cursor:default;color:var(--dim);border:none;padding:0">Aktör</span>
@@ -9887,6 +9887,20 @@ function gStart(){
   if(gRaf)cancelAnimationFrame(gRaf);
   gRaf=null;
   gDraw();
+  gAnimateGraph();
+}
+
+function gAnimateGraph(){
+  if(gRaf)cancelAnimationFrame(gRaf);
+  gTick=0;
+  const loop=()=>{
+    gTick++;
+    const moving=gSim();
+    gDraw();
+    if(moving)gRaf=requestAnimationFrame(loop);
+    else gRaf=null;
+  };
+  gRaf=requestAnimationFrame(loop);
 }
 
 function gBuild(){
@@ -9932,18 +9946,19 @@ function gBuild(){
     gEdges.push({s:c.id,t:c.actor,type:'actor'});
     if(gShowSectors&&sectors.has(c.sector))gEdges.push({s:c.id,t:c.sector,type:'sector'});
   });
-  gNodes.forEach(n=>{n.x=Math.max(60,Math.min(gW-60,n.x));n.y=Math.max(60,Math.min(gH-60,n.y));});
+  gNodes.forEach(n=>{n.x=Math.max(60,Math.min(gW-60,n.x));n.y=Math.max(60,Math.min(gH-60,n.y));n.homeX=n.x;n.homeY=n.y;});
   document.getElementById('gcount').textContent=fc.length+' fall';
 }
 
 function gNById(id){return gNodes.find(n=>n.id===id)}
 function gSim(){
-  const cool=Math.max(0.01,0.998-gTick*0.00008);
+  if(gTick>150)return false;
+  let motion=0;
   for(let i=0;i<gNodes.length;i++){
     for(let j=i+1;j<gNodes.length;j++){
       const a=gNodes[i],b=gNodes[j];
       const dx=b.x-a.x,dy=b.y-a.y,d=Math.max(1,Math.sqrt(dx*dx+dy*dy));
-      const f=2000/(d*d);
+      const f=Math.min(0.45,90/(d*d));
       a.vx-=dx/d*f;a.vy-=dy/d*f;b.vx+=dx/d*f;b.vy+=dy/d*f;
     }
   }
@@ -9951,18 +9966,24 @@ function gSim(){
     const s=gNById(e.s),t=gNById(e.t);if(!s||!t)return;
     const dx=t.x-s.x,dy=t.y-s.y,d=Math.max(1,Math.sqrt(dx*dx+dy*dy));
     const ideal=e.type==='actor'?115:195;
-    const f=(d-ideal)*0.011;
+    const f=(d-ideal)*0.0014;
     if(!s.dragging){s.vx+=dx/d*f;s.vy+=dy/d*f;}
     if(!t.dragging){t.vx-=dx/d*f;t.vy-=dy/d*f;}
   });
   gNodes.forEach(n=>{
     if(n.dragging)return;
-    n.vx+=(gW/2-n.x)*0.0007;n.vy+=(gH/2-n.y)*0.0007;
-    n.vx*=0.83;n.vy*=0.83;
-    n.x+=n.vx*cool;n.y+=n.vy*cool;
+    n.vx+=(n.homeX-n.x)*0.012+(gW/2-n.x)*0.00015;
+    n.vy+=(n.homeY-n.y)*0.012+(gH/2-n.y)*0.00015;
+    n.vx*=0.72;n.vy*=0.72;
+    n.vx=Math.max(-0.8,Math.min(0.8,n.vx));n.vy=Math.max(-0.8,Math.min(0.8,n.vy));
+    n.x+=n.vx;n.y+=n.vy;
+    n.x=Math.max(n.homeX-36,Math.min(n.homeX+36,n.x));
+    n.y=Math.max(n.homeY-36,Math.min(n.homeY+36,n.y));
     n.x=Math.max(n.r+2,Math.min(gW-n.r-2,n.x));
     n.y=Math.max(n.r+2,Math.min(gH-n.r-2,n.y));
+    motion+=Math.abs(n.vx)+Math.abs(n.vy);
   });
+  return gTick<30||motion>0.12;
 }
 
 function gDraw(){
@@ -10087,12 +10108,12 @@ function gFilterActor(f){
   document.querySelectorAll('[id^="gfa-"]').forEach(b=>b.classList.remove('active'));
   const map={all:'all',CRIMINAL_NETWORK:'cn',FOREIGN_POWER:'fp',EXTREMIST:'ex',ECONOMIC_INTEREST:'ei'};
   const btn=document.getElementById('gfa-'+map[f]);if(btn)btn.classList.add('active');
-  gSelNode=null;gHideGD();gBuild();gDraw();gTick=0;
+  gSelNode=null;gHideGD();gBuild();gDraw();gAnimateGraph();
 }
 function gToggleSectors(){
   gShowSectors=!gShowSectors;
   document.getElementById('gvs').classList.toggle('active',gShowSectors);
-  gBuild();gDraw();gTick=0;
+  gBuild();gDraw();gAnimateGraph();
 }
 function gToggleLabels(){
   gShowLabels=!gShowLabels;
