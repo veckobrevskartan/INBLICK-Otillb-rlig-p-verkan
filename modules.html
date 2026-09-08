@@ -1106,6 +1106,33 @@ html:not(.js-ready) .theory-subnav{display:none}
 .cdr-text{font-size:12.5px;color:var(--muted);line-height:1.7;padding-top:18px;border-top:1px solid var(--border-s)}
 .cdr-text b{color:var(--text);font-weight:500}
 
+/* No Dark Corners — kontroll som gemensam arbetsform */
+.ndc-intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:20px 0 18px}
+.ndc-intro>div{background:var(--bg-card);padding:22px}
+.ndc-intro h3{font-family:var(--fd);font-size:23px;font-weight:400;line-height:1.15;margin:0 0 10px;color:var(--text)}
+.ndc-intro p{font-size:12.5px;line-height:1.72;color:var(--muted);margin:0 0 10px}
+.ndc-intro p:last-child{margin-bottom:0}
+.ndc-callout{border-left:3px solid var(--accent);background:var(--bg-mid)!important;display:flex;align-items:center}
+.ndc-callout p{font-family:var(--fd);font-size:20px;line-height:1.28;color:var(--text);margin:0}
+.ndc-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:18px 0 22px}
+.ndc-principle{background:var(--bg-card);padding:20px 18px;border-top:2px solid var(--stage-c,var(--accent))}
+.ndc-principle span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--stage-c,var(--accent))}
+.ndc-principle h4{font-family:var(--fd);font-size:19px;font-weight:400;line-height:1.15;margin:8px 0 7px;color:var(--text)}
+.ndc-principle p{font-size:11.5px;line-height:1.65;color:var(--muted);margin:0}
+.ndc-loop{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-s);border:1px solid var(--border-s);margin:18px 0 16px}
+.ndc-loop article{background:var(--bg-card);padding:18px 16px}
+.ndc-loop span{font-family:var(--fd);font-size:25px;font-weight:300;color:var(--green)}
+.ndc-loop strong{display:block;font-size:12.5px;font-weight:500;margin:8px 0 5px;color:var(--text)}
+.ndc-loop p{font-size:11px;line-height:1.6;color:var(--muted);margin:0}
+.ndc-translation{padding:18px 20px;background:rgba(74,123,111,.07);border-left:2px solid var(--green);margin:16px 0}
+.ndc-translation h3{font-family:var(--fd);font-size:21px;font-weight:400;margin:0 0 8px;color:var(--text)}
+.ndc-translation p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 9px}
+.ndc-translation p:last-child{margin-bottom:0}
+.ndc-boundary{font-size:11.5px;line-height:1.68;color:var(--muted);padding:13px 16px;background:var(--bg-card);border:1px solid var(--border-s);margin-top:14px}
+.ndc-boundary strong{color:var(--text);font-weight:500}
+@media(max-width:850px){.ndc-intro{grid-template-columns:1fr}.ndc-principles{grid-template-columns:1fr 1fr}.ndc-loop{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.ndc-principles,.ndc-loop{grid-template-columns:1fr}.ndc-intro>div{padding:18px}.ndc-callout p{font-size:18px}}
+
 /* Stark vs tystnad */
 .cult-compare{display:flex;flex-direction:column;gap:2px;background:var(--border-s);border:1px solid var(--border-s)}
 .cc-row{background:var(--bg-card);cursor:pointer;transition:.15s}
@@ -12847,6 +12874,65 @@ function showHandle(id,options={}){
 
   <div class="policy-core reveal"><div class="policy-core-label">Kultur och strategi</div><div>Det ofta återgivna uttrycket <strong>”culture eats strategy for breakfast”</strong> fångar en praktisk poäng, oavsett den osäkra tillskrivningen: strategin anger vad organisationen vill, men vardagskulturen avgör vad människor faktiskt gör när regler, tidspress, lojaliteter och resultatkrav kolliderar.</div></div>
 
+  <!-- NO DARK CORNERS -->
+  <div id="no-dark-corners" class="reveal cult-block">
+    <div class="cult-head">
+      <div class="cult-eyebrow">Fördjupning · Catrantzos 2010</div>
+      <div class="cult-title">Kontroll som blir en del av arbetet</div>
+      <div class="cult-lead">Nick Catrantzos artikel <em>No Dark Corners: A Different Answer to Insider Threats</em> är äldre och skriven med kritisk infrastruktur i fokus. Den är ändå användbar här eftersom den ställer en grundfråga: vad händer när kontroll uppfattas som en separat övervakningsfunktion i stället för som en gemensam del av arbetet?</div>
+    </div>
+
+    <div class="ndc-intro">
+      <div>
+        <h3>Från laser till ficklampa</h3>
+        <p>Catrantzos beskriver en organisation som förlitar sig på ett fåtal specialiserade kontrollfunktioner som om de med en laser ska hitta varje avvikelse. Problemet är att kontrollen då blir smal, sen och lätt att kringgå. Medarbetare lämnar säkerheten till ”de ansvariga” och kontrollfunktionen får begränsad insyn i den vardag där relationer, genvägar och små undantag uppstår.</p>
+        <p>Alternativet är en bredare ”ficklampa”: fler medarbetare ser vad som händer, förstår varför insyn behövs och kan agera tidigt. Säkerhetsfunktionen försvinner inte. Den blir i stället tillgänglig för arbetsgruppen och används för att stödja, triagera och ingripa när den lokala kontrollen inte räcker.</p>
+      </div>
+      <div class="ndc-callout">
+        <p>Frågan är inte bara om kontroll finns. Frågan är vad kontroll betyder för dem som ska använda den.</p>
+      </div>
+    </div>
+
+    <div class="ndc-principles">
+      <article class="ndc-principle" style="--stage-c:#A94932">
+        <span>01 · Nära introduktion</span>
+        <h4>Close probation</h4>
+        <p>Den nya medarbetaren lämnas inte ensam i känsliga arbetsmoment innan arbetssätt, omdöme och samspel blivit synliga. Översatt till svensk praktik handlar det inte om generell misstänksamhet, utan om tydliga förväntningar, handledning, tät återkoppling och aktiv uppföljning av roller med hög åtkomst eller diskretion.</p>
+      </article>
+      <article class="ndc-principle" style="--stage-c:#B8973A">
+        <span>02 · Synligt arbete</span>
+        <h4>Transparency on the job</h4>
+        <p>Kritiska uppgifter, beslut och åtkomster ska så långt det är möjligt ha en kunnig kollega eller chef inom faktisk eller virtuell insyn. Det minskar mörka hörn och gör avvikelser möjliga att upptäcka utan att varje medarbetare behöver övervakas i hemlighet.</p>
+      </article>
+      <article class="ndc-principle" style="--stage-c:#3F7668">
+        <span>03 · Gemensam kontroll</span>
+        <h4>Team self-monitoring</h4>
+        <p>Kontroll blir en del av teamets yrkesstolthet: ”hur kan vi göra detta säkrare och bättre?” Återkommande samtal, synliga mått och vardaglig återkoppling gör gruppen till tidig upptäcktsplats. Medarbetaren blir en <em>co-pilot</em>, inte en angivare eller internutredare.</p>
+      </article>
+    </div>
+
+    <div class="cult-head" style="margin-top:34px">
+      <div class="cult-eyebrow">Analytisk översättning · händelse till lärande</div>
+      <div class="cult-title">Så byggs en godkänd kontrollkultur över tid</div>
+      <div class="cult-lead">Artikeln handlar främst om insiderhot i kritisk infrastruktur. Kopplingen till otillbörlig påverkan är en analytisk översättning: en kontroll blir accepterad när medarbetare upplever att den hjälper dem att skydda arbetet, få stöd och rätta processer — inte när den bara används för att hitta syndabockar.</div>
+    </div>
+    <div class="ndc-loop">
+      <article><span>01</span><strong>Händelsen blir synlig</strong><p>En ovanlig kontakt, en genväg, ett eget misstag eller en kontrollbrist behandlas som relevant arbetsinformation. Även ”nästan-händelser” får värde innan de blivit skada.</p></article>
+      <article><span>02</span><strong>Rapportering lönar sig</strong><p>Den som berättar får mottagande, stöd och en tydlig nästa väg. Första reaktionen är inte automatisk skuld, men inte heller passivitet eller tystnad.</p></article>
+      <article><span>03</span><strong>Teamet lär tillsammans</strong><p>Rätt funktioner skiljer fakta från tolkning, prövar alternativa förklaringar och diskuterar hur arbetssättet kan bli säkrare. Skyddade uppgifter ska inte spridas för att skapa falsk öppenhet.</p></article>
+      <article><span>04</span><strong>Kontrollen förändras</strong><p>Återkommande avvikelser leder till ändrad process, behörighet, bemanning eller stöd. Återkopplingen visar att rapporteringen haft effekt och gör nästa rapport mer sannolik.</p></article>
+    </div>
+
+    <div class="ndc-translation">
+      <h3>Kontroll som stöd — inte kontrollteater</h3>
+      <p>En organisation kan ha loggar, policydokument och rapporteringskanaler utan att ha verklig kontroll. Om ingen tittar på avvikelserna, om rapportören inte får återkoppling eller om samma undantag fortsätter att accepteras blir kontrollen en föreställning: den syns i styrningen men påverkar inte beteendet.</p>
+      <p>No Dark Corners pekar i stället mot en kontroll som syns i själva arbetsflödet. Kollegan kan ställa en motfråga, chefen kan fånga upp en signal, säkerhetsfunktionen kan hjälpa till och organisationen kan visa vad som ändrades efteråt. På så sätt värderas rapporterade händelser som underlag för skydd och lärande — inte bara som bevis på att någon brutit mot en regel.</p>
+    </div>
+
+    <div class="ndc-boundary"><strong>Metodgräns:</strong> Catrantzos byggde artikeln på en Delphi-studie och presenterade modellen som ett alternativ som behöver prövas och följas upp, inte som en färdig evidensbaserad standard. Särskilt tanken på nära uppföljning, synlighet och kollegial kontroll måste anpassas till svensk arbetsrätt, dataskydd, säkerhetsskydd och behovet av att skydda rapportörer. Modellen ska stärka saklig kontroll — inte legitimera generell övervakning eller kollektiv misstanke.</div>
+    <div class="op-source-row"><a href="https://www.hsaj.org/articles/83" target="_blank" rel="noopener noreferrer">Catrantzos, N. (2010) — originalartikel ↗</a><a href="https://www.hsaj.org/resources/uploads/2022/05/6.2.5.pdf" target="_blank" rel="noopener noreferrer">PDF-version ↗</a></div>
+  </div>
+
   <div class="edu-stack reveal">
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Digital utbildning · Säkerhetskultur och ledning</span><span class="edu-summary-meta">NPSA · 2025</span></summary>
@@ -13041,7 +13127,7 @@ function showHandle(id,options={}){
   </div>
 
   <div class="legal-srcnote reveal">
-    Källor: <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener noreferrer">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://www.npsa.gov.uk/security-best-practices/security-culture/introduction-security-culture" target="_blank" rel="noopener noreferrer">NPSA — Security Culture ↗</a> och <a href="https://www.npsa.gov.uk/resources/embedding-security-behaviours-using-5es" target="_blank" rel="noopener noreferrer">5Es ↗</a>. <a href="https://discovery.ucl.ac.uk/1419506/" target="_blank" rel="noopener noreferrer">Kirlappos, Beautement &amp; Sasse (2013) — <em>Comply or Die Is Dead</em> ↗</a>. <a href="https://www.consultdss.com/content-hub/four-steps-resilient-sustainable-safety-culture/" target="_blank" rel="noopener noreferrer">dss+ — Bradley Curve ↗</a>. <a href="https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/visselblasarlagen/" target="_blank" rel="noopener noreferrer">Arbetsmiljöverket — visselblåsarlagen ↗</a>. <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener noreferrer">NPSA — Insider Data Collection Study ↗</a>. Bradley-stegen är en anpassad reflektionsmodell från arbetsmiljösäkerhet, inte en validerad skala för insider- eller korruptionsrisk.
+    Källor: <a href="https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/infiltration-i-staten---tre-myndigheters-arbete-for-att-motverka-illojalt-beteende.html" target="_blank" rel="noopener noreferrer">Riksrevisionen RiR 2026:3 <em>Infiltration i staten</em> ↗</a>. <a href="https://www.hsaj.org/articles/83" target="_blank" rel="noopener noreferrer">Catrantzos (2010), <em>No Dark Corners</em> ↗</a>. <a href="https://www.npsa.gov.uk/security-best-practices/security-culture/introduction-security-culture" target="_blank" rel="noopener noreferrer">NPSA — Security Culture ↗</a> och <a href="https://www.npsa.gov.uk/resources/embedding-security-behaviours-using-5es" target="_blank" rel="noopener noreferrer">5Es ↗</a>. <a href="https://discovery.ucl.ac.uk/1419506/" target="_blank" rel="noopener noreferrer">Kirlappos, Beautement &amp; Sasse (2013) — <em>Comply or Die Is Dead</em> ↗</a>. <a href="https://www.consultdss.com/content-hub/four-steps-resilient-sustainable-safety-culture/" target="_blank" rel="noopener noreferrer">dss+ — Bradley Curve ↗</a>. <a href="https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/visselblasarlagen/" target="_blank" rel="noopener noreferrer">Arbetsmiljöverket — visselblåsarlagen ↗</a>. <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener noreferrer">NPSA — Insider Data Collection Study ↗</a>. Bradley-stegen är en anpassad reflektionsmodell från arbetsmiljösäkerhet, inte en validerad skala för insider- eller korruptionsrisk. No Dark Corners är en äldre forskningsbaserad modell och används här som analytiskt diskussionsstöd, inte som svensk metodstandard.
   </div>
 </div>
 </div>
