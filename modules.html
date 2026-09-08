@@ -537,6 +537,25 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 @media(max-width:420px){.beskt-grid{grid-template-columns:1fr}.beskt-figure{padding:6px}}
 .theory-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);margin-bottom:48px}
 @media(max-width:560px){.theory-grid-2{grid-template-columns:1fr}}
+.research-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--border-s);margin:18px 0 24px}
+.research-flow-step{background:var(--bg-card);padding:15px 14px;min-height:150px;border-top:3px solid var(--stage-c,var(--accent))}
+.research-flow-step span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--stage-c,var(--accent))}
+.research-flow-step strong{display:block;font-family:var(--fd);font-size:18px;font-weight:400;line-height:1.15;margin:7px 0 6px}
+.research-flow-step p{font-size:11px;color:var(--muted);line-height:1.55;margin:0}
+.research-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--border-s);margin-top:18px}
+.research-source-card{background:var(--bg-card);padding:0 15px}
+.research-source-card summary{padding:15px 0;font-family:var(--fd);font-size:17px;font-weight:400;line-height:1.2;cursor:pointer}
+.research-source-card summary::marker{color:var(--accent)}
+.research-source-body{padding:0 0 16px;font-size:11.5px;color:var(--muted);line-height:1.65}
+.research-source-body p{margin:0 0 10px}
+.research-source-body a{color:var(--text);text-decoration:underline;text-decoration-color:var(--accent-d);text-underline-offset:3px}
+.extremism-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--border-s);margin:18px 0 20px}
+.extremism-flow article{background:var(--bg-card);padding:16px 15px;border-top:3px solid var(--stage-c,var(--purple))}
+.extremism-flow span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--stage-c,var(--purple))}
+.extremism-flow strong{display:block;font-family:var(--fd);font-size:18px;font-weight:400;line-height:1.15;margin:7px 0 6px}
+.extremism-flow p{font-size:11px;color:var(--muted);line-height:1.58;margin:0}
+@media(max-width:760px){.research-flow{grid-template-columns:1fr 1fr}.research-source-grid{grid-template-columns:1fr}.extremism-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.research-flow,.extremism-flow{grid-template-columns:1fr}}
 .theory-card{background:var(--bg-card);padding:24px}
 .theory-big-letter{font-family:var(--fd);font-size:52px;font-weight:300;line-height:1;margin-bottom:8px}
 .theory-cat{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}
@@ -2361,6 +2380,26 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </div>
   <div class="card-grid-2 reveal" id="actorGrid"></div>
   <div class="actor-detail reveal" id="actorDetail"></div>
+  <details class="edu-card reveal" id="violent-extremism-framework" style="margin-top:28px">
+    <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Våldsbejakande extremism · fyra gränssnitt</span><span class="edu-summary-meta">CVE · Brå · analysstöd</span></summary>
+    <div class="edu-body">
+      <div class="edu-kicker">Tillägg till aktörsmatrisen</div>
+      <div class="edu-title">Ideologi, relationer, institutioner och pengar</div>
+      <p>Våldsbejakande extremism kan vara relevant i en analys av otillbörlig påverkan när ideologiska mål möter relationer, offentliga verksamheter eller ekonomiska flöden. CVE:s kunskapsöversikt beskriver miljöerna och utvecklingen i Sverige. För den praktiska bedömningen behöver man däremot skilja mellan en ideologisk miljö, en konkret aktör, en faktisk handling och ett verifierat säkerhetsproblem.</p>
+      <div class="extremism-flow" role="img" aria-label="Fyra gränssnitt i analysen av våldsbejakande extremism">
+        <article style="--stage-c:#9B4FBB"><span>01 · Narrativ</span><strong>Legitimitet</strong><p>Våld, hot eller antidemokratiska mål kan rättfärdigas genom berättelser om orättvisa, identitet och tillhörighet.</p></article>
+        <article style="--stage-c:#B8973A"><span>02 · Relationer</span><strong>Rekrytering</strong><p>Kontakter, gemenskaper och digitala ekokammare kan förstärka normer eller föra människor närmare en våldsbejakande miljö.</p></article>
+        <article style="--stage-c:#4A7B6F"><span>03 · Institutioner</span><strong>Åtkomst</strong><p>Skolor, föreningar, välfärd och andra offentliga gränssnitt kan behöva bedömas utifrån uppdrag, finansiering, styrning och faktisk påverkan.</p></article>
+        <article style="--stage-c:#C45C2E"><span>04 · Resurser</span><strong>Finansiering</strong><p>Bedrägerier, bidrag, insamlingar och penningflöden kan skapa kapacitet – men varje påstående kräver ett tydligt källäge.</p></article>
+      </div>
+      <div class="model-reading-note"><strong>Analysregel:</strong> en åsikt, religiös tillhörighet, föreningskontakt eller social medieaktivitet är inte i sig bevis på våldsbejakande extremism eller otillbörlig påverkan. Följ i stället konkreta handlingar, uttalade mål, hot, våldslegitimering, finansiering, styrning och faktisk användning av en position eller verksamhet.</div>
+      <details class="research-source-card" style="margin-top:16px">
+        <summary>Vad kan läggas till i en lägesbild?</summary>
+        <div class="research-source-body"><p>Beskriv miljö och aktörer separat. Ange vilken myndighet, domstol, forskare eller journalist som står bakom varje uppgift. Markera om uppgiften gäller misstanke, åtal, dom, administrativt beslut eller analytisk bedömning. Lägg särskild vikt vid skolor, offentliga kontrakt, föreningsbidrag, digital propaganda och finansieringsflöden när de faktiskt kan beläggas.</p><p>Det bifogade underlaget innehåller relevanta uppslag om bland annat skolor, offentlig finansiering, digital radikalisering och terrorfinansiering. Namngivna påståenden och äldre sifferuppgifter behöver däremot verifieras mot primärkällan innan de används som fall eller indikatorer.</p></div>
+      </details>
+      <div class="op-source-row reveal"><a href="https://cve.se/publikationer/valdsbejakandeextremismisverigekunskapsoversikt20232024.5.330134c518f384e69b3fb5.html" target="_blank" rel="noopener noreferrer">CVE · Våldsbejakande extremism i Sverige 2023/2024 ↗</a><a href="https://bra.se/amnen/valdsbejakande-extremism" target="_blank" rel="noopener noreferrer">Brå/CVE · våldsbejakande extremism ↗</a><a href="https://www.regeringen.se/rattsliga-dokument/proposition/2024/11/prop.-20242546" target="_blank" rel="noopener noreferrer">Regeringen · CVE:s granskningsuppgift ↗</a></div>
+    </div>
+  </details>
 </div>
 </section>
 
@@ -2615,6 +2654,56 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     </div>
     <div class="model-reading-note"><strong>Utgångspunkt för läsningen:</strong> en stressor eller ett personlighetsdrag är en möjlig bakgrundsfaktor. En konkret överträdelse, otillåten åtkomst eller hotfull planering är däremot ett observerbart beteende. Åtgärden bör styras av beteendets allvar, åtkomsten, konsekvensen och alternativa förklaringar.</div>
   </div>
+  <details class="edu-card reveal" id="insider-research-map" style="margin-top:18px">
+    <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Forskningskarta · från människa till organisation</span><span class="edu-summary-meta">Shaw · Greitzer · Nurse · CERT</span></summary>
+    <div class="edu-body">
+      <div class="edu-kicker">Så kompletterar källorna varandra</div>
+      <div class="edu-title">Insiderrisk är ett förlopp – inte en personlighetstyp</div>
+      <p>De här studierna pekar åt samma håll: risk uppstår i samspelet mellan individ, situation, åtkomst, organisation och respons. En enskild signal har därför begränsat värde. För analysen är kombinationer, förändringar över tid och organisationens förmåga att fånga upp information mer användbara.</p>
+      <div class="research-flow" role="img" aria-label="Forskningskarta från person och situation via stressorer och observationer till organisatorisk respons och utfall">
+        <div class="research-flow-step" style="--stage-c:#648A80"><span>01 · Shaw &amp; Sellers</span><strong>Person och kontext</strong><p>Utgångspunkter och faktisk åtkomst skapar förutsättningar, men är inte en prognos.</p></div>
+        <div class="research-flow-step" style="--stage-c:#B8973A"><span>02 · Shaw</span><strong>Stressorer och motiv</strong><p>Press, konflikt eller förändrade behov kan påverka handlingsutrymmet.</p></div>
+        <div class="research-flow-step" style="--stage-c:#9B4FBB"><span>03 · Greitzer &amp; Nurse</span><strong>Observationer</strong><p>Beteende, ordval, tekniska spår och sociala signaler behöver ses i sammanhang.</p></div>
+        <div class="research-flow-step" style="--stage-c:#4A7B6F"><span>04 · Lang &amp; Pfleeger</span><strong>Organisatorisk respons</strong><p>Stöd, rapportering, kontroll och samverkan kan dämpa eller missa utvecklingen.</p></div>
+        <div class="research-flow-step" style="--stage-c:#C45C2E"><span>05 · CERT &amp; Band</span><strong>Utfall och lärande</strong><p>Jämför avbrutna, fullföljda och upprepade förlopp och ändra kontrollen efteråt.</p></div>
+      </div>
+      <div class="model-reading-note"><strong>Praktiskt handgrepp:</strong> bygg en tidslinje med fem kolumner: förändring · stressor eller omständighet · åtkomst · observerat beteende · organisationens respons. Markera vad som är belagt, vad som är uppgift och vad som fortfarande är en hypotes.</div>
+      <div class="research-source-grid">
+        <details class="research-source-card">
+          <summary>Shaw &amp; Sellers · Critical Pathway</summary>
+          <div class="research-source-body"><p>Modellen visar hur personliga förutsättningar, stressorer och observerbara beteenden kan kopplas till organisatorisk respons och möjlig insiderhandling. Den tydliggör också var intervention kan ske.</p><a href="https://www.cia.gov/resources/csi/studies-in-intelligence/volume-59-no-2/application-of-the-critical-path-method-to-evaluate-insider-risks/" target="_blank" rel="noopener noreferrer">CIA · hela artikeln ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>Band, Cappelli, Moore, Shaw &amp; Trzeciak</summary>
+          <div class="research-source-body"><p>Jämförelsen mellan IT-sabotage och spionage visar att psykologiska, organisatoriska, tekniska och situationella faktorer behöver analyseras tillsammans.</p><a href="https://www.sei.cmu.edu/library/comparing-insider-it-sabotage-and-espionage-a-model-based-analysis/" target="_blank" rel="noopener noreferrer">Carnegie Mellon/SEI · rapporten ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>Greitzer · beteende och ordanvändning</summary>
+          <div class="research-source-body"><p>Studien är relevant för indikatorarbetet eftersom den undersöker hur beteende- och ordmönster kan bidra till att upptäcka förändringar. Den ersätter inte mänsklig bedömning och ska inte användas som automatisk profilering.</p><a href="https://www.pnnl.gov/publications/psychosocial-modeling-insider-threat-risk-based-behavioral-and-word-use-analysis" target="_blank" rel="noopener noreferrer">PNNL · artikel och referens ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>Greitzer m.fl. · SOFIT</summary>
+          <div class="research-source-body"><p>SOFIT samlar sociotekniska och organisatoriska faktorer i samma analys. Det stärker sidan argument mot checklistor där en enda avvikelse får bära hela riskbedömningen.</p><a href="https://ieeexplore.ieee.org/document/8424651/" target="_blank" rel="noopener noreferrer">IEEE · SOFIT ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>Nurse m.fl. · attackens beståndsdelar</summary>
+          <div class="research-source-body"><p>Oxford-gruppens ramverk kopplar motiv, individ, mänskliga faktorer, tekniska och beteendemässiga indikatorer till händelseförloppet. Det passar som bro mellan fallanalys och indikatorbibliotek.</p><a href="https://ora.ox.ac.uk/objects/uuid%3Afc75cb77-1cd8-4513-b863-20b7202c52be" target="_blank" rel="noopener noreferrer">Oxford · artikel och PDF ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>Pfleeger m.fl. · fyra analysnivåer</summary>
+          <div class="research-source-body"><p>Organisation, miljö, system och individ behöver hållas ihop. Modellen hjälper läsaren att inte leta efter hela förklaringen i individens egenskaper.</p><a href="https://doi.org/10.1109/TIFS.2009.2039591" target="_blank" rel="noopener noreferrer">IEEE · Insiders Behaving Badly ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>Homoliak m.fl. · forskningsfältets karta</summary>
+          <div class="research-source-body"><p>Översikten systematiserar definitioner, taxonomier, fallstudier, beteendemodeller och motåtgärder. Använd den för att hitta vidare primärkällor, inte som en ersättning för fallens originalunderlag.</p><a href="https://doi.org/10.1145/3303771" target="_blank" rel="noopener noreferrer">ACM · surveyartikeln ↗</a></div>
+        </details>
+        <details class="research-source-card">
+          <summary>CERT/SEI och NPSA · från forskning till praktik</summary>
+          <div class="research-source-body"><p>CERT:s sjunde upplaga bygger på analys av cirka 3 000 insiderfall och NPSA:s insiderstudie visar värdet av att sammanföra information som annars ligger i olika delar av organisationen.</p><a href="https://www.sei.cmu.edu/library/common-sense-guide-to-mitigating-insider-threats-seventh-edition/" target="_blank" rel="noopener noreferrer">CERT/SEI · Common Sense Guide ↗</a> · <a href="https://www.npsa.gov.uk/resources/insider-data-collection-study-report-main-findings" target="_blank" rel="noopener noreferrer">NPSA · Insider Data Collection Study ↗</a></div>
+        </details>
+      </div>
+    </div>
+  </details>
   <div class="edu-stack reveal">
     <details class="edu-card">
       <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Utbildningsserie · Indicators, rapportering och utfall</span><span class="edu-summary-meta">DCSA/CDSE</span></summary>
