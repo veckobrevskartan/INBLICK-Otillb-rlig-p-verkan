@@ -3615,6 +3615,31 @@ window.INBLICK_CASE_CODING = {
 /* Visuell och funktionell efterbehandling för den publicerade modulsidan. */
 (function(){
   const styleId='inblick-runtime-fixes';
+  const moduleFlow=[
+    ['method','Metod & begrepp'],['chain','Påverkanskedjan'],['sectors','Sektormiljöer'],['actors','Aktörsmatrisen'],
+    ['legal','Juridisk ram'],['infopav','Informationspåverkan'],['theory','Teorier och modeller'],['visuals','Visuella modeller'],
+    ['map','Händelser & fall'],['graph','Sambandsgraf'],['assess','Organisationstestet'],['inds','Indikatorer'],
+    ['tools','Verktygslådan'],['culture','Säkerhetskultur'],['handle','Hantera ärende'],['sources','Källor']
+  ];
+  function addModuleFlow(){
+    document.querySelectorAll('.module[id^="mod-"]').forEach((module)=>{
+      if(module.querySelector('.module-flow-nav'))return;
+      const key=module.id.slice(4);
+      const index=moduleFlow.findIndex(([id])=>id===key);
+      if(index<0)return;
+      const previous=moduleFlow[(index-1+moduleFlow.length)%moduleFlow.length];
+      const next=moduleFlow[(index+1)%moduleFlow.length];
+      const flow=document.createElement('div');
+      flow.className='module-flow-nav';
+      flow.setAttribute('role','navigation');
+      flow.setAttribute('aria-label','Navigera mellan moduler');
+      flow.innerHTML=`
+        <a class="module-flow-link module-flow-prev" href="#mod-${previous[0]}"><span class="module-flow-arrow" aria-hidden="true">←</span><span><small>Föregående del</small><strong>${previous[1]}</strong></span></a>
+        <span class="module-flow-current" aria-hidden="true">${index+1} / ${moduleFlow.length}</span>
+        <a class="module-flow-link module-flow-next" href="#mod-${next[0]}"><span><small>Nästa del</small><strong>${next[1]}</strong></span><span class="module-flow-arrow" aria-hidden="true">→</span></a>`;
+      module.appendChild(flow);
+    });
+  }
   function installRuntimeFixes(){
     if(!document.getElementById(styleId)){
       const style=document.createElement('style');
@@ -3629,6 +3654,15 @@ window.INBLICK_CASE_CODING = {
         .sr-item-copy{min-width:0;overflow-wrap:anywhere}
         .module img,.module figure,.module .source-figure,.module .book-figure,.module .book-source-frame{min-width:0;max-width:100%}
         .module img{height:auto}
+        .module-flow-nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:64px 0 8px;padding:10px 0 0;border-top:1px solid var(--border);scroll-margin-top:80px}
+        .module-flow-link{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 14px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);text-decoration:none;transition:.18s}
+        .module-flow-link:hover{background:var(--bg-mid);border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
+        .module-flow-link small{display:block;font:9px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+        .module-flow-link strong{display:block;font:16px var(--fd);font-weight:400;line-height:1.15;margin-top:3px}
+        .module-flow-next{justify-content:flex-end;text-align:right}
+        .module-flow-arrow{font-size:24px;color:var(--accent);line-height:1}
+        .module-flow-current{font:9px var(--fm);letter-spacing:.12em;color:var(--dim);white-space:nowrap}
+        @media(max-width:700px){.module-flow-nav{grid-template-columns:1fr 1fr}.module-flow-current{display:none}.module-flow-next{grid-column:2}.module-flow-prev{grid-column:1}}
         @media(max-width:900px){#globalSearchInput{width:min(30vw,150px)!important}.sr-item{padding-left:16px;padding-right:16px}}
       `;
       document.head.appendChild(style);
@@ -3641,6 +3675,7 @@ window.INBLICK_CASE_CODING = {
     }
     const input=document.getElementById('globalSearchInput');
     if(input)input.setAttribute('aria-description','Sökningen visar träffar från hela materialet och öppnar valt fall eller avsnitt.');
+    addModuleFlow();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installRuntimeFixes,{once:true});
   else installRuntimeFixes();

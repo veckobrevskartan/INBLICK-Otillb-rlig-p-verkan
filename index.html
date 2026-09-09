@@ -39,6 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#000;backdrop-fil
 .nav-i{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1180px;margin:0 auto;padding:0 52px}
 .nav-brand{display:flex;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
 .nav-brand-logo{display:block;width:148px;height:34px;object-fit:contain;mix-blend-mode:screen;opacity:.95}
+.nav-brand-inblick{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--text);letter-spacing:.02em;margin-left:9px;line-height:1}
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
 .nav-name{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--text);letter-spacing:.02em}
 .nav-links{display:flex;gap:0;list-style:none;align-items:stretch;height:56px}
@@ -60,6 +61,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#000;backdrop-fil
 @media(max-width:900px){
   .nav-i{padding:0 22px}
   .nav-brand-logo{width:132px;height:31px}
+  .nav-brand-inblick{font-size:17px;margin-left:7px}
   .nav-menu-toggle{display:flex;margin-left:auto}
   .nav-cta{margin-left:6px;padding:8px 11px}
   .nav-links{display:none;position:fixed;top:56px;left:0;right:0;height:calc(100vh - 56px);overflow-y:auto;background:rgba(10,22,40,.99);padding:14px 22px 32px;align-items:stretch;flex-direction:column;border-top:1px solid var(--border)}
@@ -81,8 +83,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#000;backdrop-fil
 .hero-bg{position:absolute;inset:0;opacity:.035;pointer-events:none}
 .hero-bg-grid{width:100%;height:100%;background-image:linear-gradient(rgba(184,151,58,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(184,151,58,.4) 1px,transparent 1px);background-size:72px 72px}
 .site-watermark{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('assets/svensk-osint-fingeravtryck.png') center 42%/min(46vw,460px) auto no-repeat;opacity:.035;mix-blend-mode:screen}
-.hero-brand{margin-bottom:26px;max-width:300px}
-.hero-brand img{display:block;width:min(100%,300px);height:auto;mix-blend-mode:screen;opacity:.9}
 .hero-layout{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;position:relative;z-index:1;padding:72px 0}
 @media(max-width:980px){.hero-layout{padding:56px 0}}
 .hero-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -383,6 +383,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="nav-i">
     <a href="index.html" class="nav-brand">
       <img class="nav-brand-logo" src="assets/svensk-osint-logo.png" alt="Svensk OSINT">
+      <span class="nav-brand-inblick">INBLICK</span>
     </a>
     <ul class="nav-links" id="homeNavLinks">
       <li class="nav-group">
@@ -432,7 +433,6 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="wrap" style="width:100%">
     <div class="hero-layout">
       <div>
-        <div class="hero-brand"><img src="assets/svensk-osint-inblick-2026.png" alt="Svensk OSINT INBLICK 2026"></div>
         <h1 class="hero-title">Otillbörlig påverkan<br><em>i offentlig verksamhet</em></h1>
         <p class="hero-sub">När påverkan får fäste i offentlig sektor</p>
         <p class="hero-lead">En kunskaps- och analysplattform för att förstå hur otillbörlig påverkan växer fram, utforska dokumenterade fall och omsätta mönster i organisatoriskt skydd.</p>

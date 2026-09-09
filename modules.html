@@ -27,6 +27,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#000;backdrop-fil
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:1200px;margin:0 auto;padding:0 52px}
 .nav-brand{display:flex;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
 .nav-brand-logo{display:block;width:148px;height:34px;object-fit:contain;mix-blend-mode:screen;opacity:.95}
+.nav-brand-inblick{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--text);letter-spacing:.02em;margin-left:9px;line-height:1}
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
 .nav-name{font-family:var(--fd);font-size:18px;font-weight:500;color:var(--text)}
 /* Desktop tabs — hidden on mobile */
@@ -124,6 +125,7 @@ body.menu-open{overflow:hidden}
   .nav-hamburger{display:flex}
   .nav-inner{padding:0 16px;gap:12px}
   .nav-brand-logo{width:132px;height:31px}
+  .nav-brand-inblick{font-size:17px;margin-left:7px}
   .nav-back-link{display:none}
   #globalSearchInput{width:140px}
   #globalSearchInput:focus{width:160px}
@@ -569,28 +571,28 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .research-flow-step p{font-size:11px;color:var(--muted);line-height:1.55;margin:0}
 .research-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--border-s);margin-top:18px}
 .research-source-card{background:var(--bg-card);padding:0 15px}
-.research-source-card summary{padding:15px 0;font-family:var(--fd);font-size:17px;font-weight:400;line-height:1.2;cursor:pointer}
+.research-source-card summary{padding:15px 0;font-family:var(--fd);font-size:18px;font-weight:400;line-height:1.25;cursor:pointer}
 .research-source-card summary::marker{color:var(--accent)}
 .research-source-body{padding:0 0 16px;font-size:11.5px;color:var(--muted);line-height:1.65}
 .research-source-body p{margin:0 0 10px}
 .research-source-body a{color:var(--text);text-decoration:underline;text-decoration-color:var(--accent-d);text-underline-offset:3px}
 .extremism-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--border-s);margin:18px 0 20px}
 .extremism-flow article{background:var(--bg-card);padding:16px 15px;border-top:3px solid var(--stage-c,var(--purple))}
-.extremism-flow span{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--stage-c,var(--purple))}
+.extremism-flow span{font-family:var(--fm);font-size:10px;letter-spacing:.10em;text-transform:uppercase;color:var(--stage-c,var(--purple));font-weight:500}
 .extremism-flow strong{display:block;font-family:var(--fd);font-size:18px;font-weight:400;line-height:1.15;margin:7px 0 6px}
 .extremism-flow p{font-size:11px;color:var(--muted);line-height:1.58;margin:0}
 @media(max-width:760px){.research-flow{grid-template-columns:1fr 1fr}.research-source-grid{grid-template-columns:1fr}.extremism-flow{grid-template-columns:1fr 1fr}}
 @media(max-width:420px){.research-flow,.extremism-flow{grid-template-columns:1fr}}
 .theory-card{background:var(--bg-card);padding:24px}
 .theory-big-letter{font-family:var(--fd);font-size:52px;font-weight:300;line-height:1;margin-bottom:8px}
-.theory-cat{font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}
+.theory-cat{font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px;font-weight:500}
 .theory-card-title{font-family:var(--fd);font-size:20px;font-weight:400;margin-bottom:8px;line-height:1.15}
 .theory-card-desc{font-size:12px;color:var(--muted);line-height:1.65}
 .theory-num{font-family:var(--fd);font-size:42px;font-weight:300;line-height:1;margin-bottom:8px}
 .theory-note{font-size:13px;color:var(--text);line-height:1.75;padding-left:12px;border-left:2px solid var(--accent);margin-bottom:10px}
 .theory-operational{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-s);margin:0 0 18px}
 .theory-operational>div{background:var(--bg-card);padding:20px}
-.theory-op-k{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.theory-op-k{font-family:var(--fm);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin-bottom:7px;font-weight:500}
 .theory-op-t{font-family:var(--fd);font-size:19px;font-weight:400;line-height:1.2;margin-bottom:7px}
 .theory-op-p{font-size:12px;color:var(--muted);line-height:1.65}
 .pmt-flow{display:grid;grid-template-columns:1fr 44px 1fr 44px 1fr;gap:8px;align-items:stretch;margin:0 0 18px}
@@ -601,15 +603,15 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 @media(max-width:760px){.theory-operational{grid-template-columns:1fr}.pmt-flow{grid-template-columns:1fr}.pmt-arrow{transform:rotate(90deg);min-height:28px}}
 .conflict-section{border-top:1px solid var(--border-s);padding-top:44px;margin-top:8px;scroll-margin-top:128px}
 .conflict-deep-dive{scroll-margin-top:92px}
-.theory-index-label{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:0 0 10px;padding:0 2px}
-.theory-index-label strong{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--text)}
-.theory-index-label span{font-family:var(--fb);font-size:13px;letter-spacing:.01em;color:var(--muted)}
+.theory-index-label{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:0 0 10px;padding:10px 2px 12px;border-bottom:1px solid var(--border-s)}
+.theory-index-label strong{font-family:var(--fd);font-size:24px;font-weight:400;color:var(--text)}
+.theory-index-label span{font-family:var(--fb);font-size:14px;letter-spacing:.01em;color:var(--muted)}
 .theory-subnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin:0 0 34px;padding:2px;background:var(--border-s);border:1px solid var(--border-s)}
 .theory-subtab{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 13px;background:var(--bg-card);border:0;border-top:2px solid transparent;color:var(--muted);cursor:pointer;text-align:left;transition:.16s}
 .theory-subtab:hover{background:var(--bg-mid);color:var(--text)}
 .theory-subtab[aria-selected="true"]{background:var(--bg-mid);border-top-color:var(--accent);color:var(--text)}
 .theory-subtab-n{font-family:var(--fd);font-size:17px;font-style:italic;color:var(--accent);opacity:.8;flex-shrink:0}
-.theory-subtab-t{font-family:var(--fm);font-size:8px;letter-spacing:.09em;text-transform:uppercase;line-height:1.35}
+.theory-subtab-t{font-family:var(--fm);font-size:10px;letter-spacing:.07em;text-transform:uppercase;line-height:1.4;font-weight:500}
 .theory-panel{display:block;min-height:48vh;scroll-margin-top:128px}
 html.js-ready .theory-panel{display:none}
 html.js-ready .theory-panel.is-active{display:block}
@@ -1501,6 +1503,24 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 button,[onclick]{touch-action:manipulation}
 .mobile-reader-dock{display:none}
 
+/* Valbara delar ska synas som valbara även på större skärmar. */
+@media(min-width:821px){
+  #mod-sectors .sec-nav-item,#actorGrid .ac,.legal-rung,.cni,.ani,.theory-subtab,.handle-sub,
+  .ip-vec-tab,.ip-mech,.brop-step,.check-tab,.ca-card{position:relative;padding-right:48px}
+  #mod-sectors .sec-nav-item::after,#actorGrid .ac::after,.legal-rung::after,.cni::after,.ani::after,
+  .theory-subtab::after,.handle-sub::after,.ip-vec-tab::after,.ip-mech::after,.brop-step::after,
+  .check-tab::after,.ca-card::after{
+    content:'+';position:absolute;right:16px;top:50%;transform:translateY(-50%);
+    display:flex;align-items:center;justify-content:center;width:27px;height:27px;border:1px solid rgba(184,151,58,.62);border-radius:50%;background:rgba(184,151,58,.06);
+    font-family:var(--fm);font-size:17px;font-weight:300;color:var(--accent);line-height:1;animation:disclosureCuePulse 3.8s ease-out infinite
+  }
+  #mod-sectors .sec-nav-item.active::after,#actorGrid .ac.sel::after,.legal-rung.active::after,
+  .cni.active::after,.ani.active::after,.theory-subtab[aria-selected="true"]::after,.handle-sub.active::after,
+  .ip-vec-tab.active::after,.ip-mech.active::after,.brop-step.active::after,.check-tab.active::after,.ca-card.active::after{
+    content:'−';animation:none;border-color:rgba(74,123,111,.72);background:rgba(74,123,111,.1);color:#8FC4B7
+  }
+}
+
 body.copy-protected,body.copy-protected *{user-select:none!important;-webkit-user-select:none!important;-moz-user-select:none!important}
 body.copy-protected input,body.copy-protected textarea,body.copy-protected select,body.copy-protected [contenteditable="true"]{user-select:text!important;-webkit-user-select:text!important;-moz-user-select:text!important}
 </style>
@@ -1512,6 +1532,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
       <img class="nav-brand-logo" src="assets/svensk-osint-logo.png" alt="Svensk OSINT">
+      <span class="nav-brand-inblick">INBLICK</span>
     </a>
     <nav class="cat-nav" id="catNav">
       <!-- FÖRSTÅ -->
@@ -2457,7 +2478,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       <div class="model-reading-note"><strong>Analysregel:</strong> en åsikt, religiös tillhörighet, föreningskontakt eller social medieaktivitet är inte i sig bevis på våldsbejakande extremism eller otillbörlig påverkan. Följ i stället konkreta handlingar, uttalade mål, hot, våldslegitimering, finansiering, styrning och faktisk användning av en position eller verksamhet.</div>
       <details class="research-source-card" style="margin-top:16px">
         <summary>Vad kan läggas till i en lägesbild?</summary>
-        <div class="research-source-body"><p>Beskriv miljö och aktörer separat. Ange vilken myndighet, domstol, forskare eller journalist som står bakom varje uppgift. Markera om uppgiften gäller misstanke, åtal, dom, administrativt beslut eller analytisk bedömning. Lägg särskild vikt vid skolor, offentliga kontrakt, föreningsbidrag, digital propaganda och finansieringsflöden när de faktiskt kan beläggas.</p><p>Det bifogade underlaget innehåller relevanta uppslag om bland annat skolor, offentlig finansiering, digital radikalisering och terrorfinansiering. Namngivna påståenden och äldre sifferuppgifter behöver däremot verifieras mot primärkällan innan de används som fall eller indikatorer.</p></div>
+        <div class="research-source-body"><p>Beskriv miljö och aktörer separat. Ange vilken myndighet, domstol, forskare eller journalist som står bakom varje uppgift. Markera om uppgiften gäller misstanke, åtal, dom, administrativt beslut eller analytisk bedömning. Lägg särskild vikt vid skolor, offentliga kontrakt, föreningsbidrag, digital propaganda och finansieringsflöden när de faktiskt kan beläggas.</p></div>
       </details>
       <div class="op-source-row reveal"><a href="https://cve.se/publikationer/valdsbejakandeextremismisverigekunskapsoversikt20232024.5.330134c518f384e69b3fb5.html" target="_blank" rel="noopener noreferrer">CVE · Våldsbejakande extremism i Sverige 2023/2024 ↗</a><a href="https://bra.se/amnen/valdsbejakande-extremism" target="_blank" rel="noopener noreferrer">Brå/CVE · våldsbejakande extremism ↗</a><a href="https://www.regeringen.se/rattsliga-dokument/proposition/2024/11/prop.-20242546" target="_blank" rel="noopener noreferrer">Regeringen · CVE:s granskningsuppgift ↗</a></div>
     </div>
@@ -10892,12 +10913,15 @@ function searchExcerpt(text,query,maxLength=190){
 }
 function renderGlobalSearch(query){
   const input=document.getElementById('globalSearchInput'),results=document.getElementById('searchResults');
+  const pageY=window.scrollY;
   const matches=GLOBAL_SEARCH_INDEX.map(entry=>({entry,score:scoreSearchEntry(entry,query)})).filter(hit=>hit.score>=0).sort((a,b)=>b.score-a.score||a.entry.title.localeCompare(b.entry.title,'sv'));
   searchActiveIndex=-1;
   input.removeAttribute('aria-activedescendant');
   if(!matches.length){
     results.innerHTML=`<div class="sr-empty">Inga träffar för ”${escHtml(query)}”. Prova ett bredare begrepp eller en annan stavning.</div>`;
-    results.classList.add('open');input.setAttribute('aria-expanded','true');return;
+    results.classList.add('open');input.setAttribute('aria-expanded','true');
+    if(Math.abs(window.scrollY-pageY)>1)window.scrollTo(0,pageY);
+    return;
   }
   let shown=0;
   let html=`<div class="sr-status"><span class="sr-status-main">${matches.length} träffar på hela sidan</span><span class="sr-status-hint">↑↓ navigera · Enter öppna · Esc stäng</span></div><div role="listbox" aria-label="Träffar för ${escHtml(query)}">`;
@@ -10914,6 +10938,7 @@ function renderGlobalSearch(query){
   });
   html+='</div>';
   results.innerHTML=html;results.classList.add('open');input.setAttribute('aria-expanded','true');
+  if(Math.abs(window.scrollY-pageY)>1)window.scrollTo(0,pageY);
 }
 function moveSearchSelection(delta){
   const input=document.getElementById('globalSearchInput');
