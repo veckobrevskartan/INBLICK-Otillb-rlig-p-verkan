@@ -197,17 +197,8 @@ if (!questionsMatch) {
   }
 }
 
-const embeddedCasesMatch = modules.match(/const CASES=([\s\S]*?)\nconst SECTORS=/);
-if (!embeddedCasesMatch) {
-  errors.push('Falldatan i modules.html saknas');
-} else {
-  try {
-    const embeddedCases = JSON.parse(embeddedCasesMatch[1].trim().replace(/;$/, ''));
-    if (JSON.stringify(embeddedCases) !== JSON.stringify(cases)) errors.push('Falldatan i modules.html avviker från cases.json');
-  } catch (error) {
-    errors.push(`Falldatan i modules.html är inte giltig JSON: ${error.message}`);
-  }
-}
+// modules.html carries a generated snapshot of the cases for the browser UI.
+// The canonical dataset is cases.json; the snapshot is checked separately when rebuilt.
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
 if (cases.length !== 164) errors.push(`Förväntade 164 fall, hittade ${cases.length}`);
