@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>INBLICK — Den öppna attackytan | Svensk OSINT</title>
-<meta name="description" content="Se hur otillbörlig påverkan får fäste i offentlig sektor och vad organisationer kan göra åt den. 165 fall, 15 moduler och spårbara källor."/>
+<meta name="description" content="Se hur otillbörlig påverkan får fäste i offentlig sektor och vad organisationer kan göra åt den. 171 fall, 14 analysmoduler och spårbara källor."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -78,6 +78,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.94
 .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(transparent,var(--bg));pointer-events:none;z-index:2}
 .hero-bg{position:absolute;inset:0;opacity:.035;pointer-events:none}
 .hero-bg-grid{width:100%;height:100%;background-image:linear-gradient(rgba(184,151,58,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(184,151,58,.4) 1px,transparent 1px);background-size:72px 72px}
+.site-watermark{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('assets/svensk-osint-fingeravtryck.png') center 42%/min(46vw,460px) auto no-repeat;opacity:.035;mix-blend-mode:screen}
+.hero-brand{margin-bottom:26px;max-width:300px}
+.hero-brand img{display:block;width:min(100%,300px);height:auto;mix-blend-mode:screen;opacity:.9}
 .hero-layout{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;position:relative;z-index:1;padding:72px 0}
 @media(max-width:980px){.hero-layout{padding:56px 0}}
 .hero-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -318,21 +321,21 @@ footer{padding:36px 0;border-top:1px solid var(--border-s)}
 .journey-text{max-width:430px;font-size:13.5px;line-height:1.7;color:var(--muted);padding-right:22px}
 .journey-meta{margin-top:auto;padding-top:20px;font:8px var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .situation{padding:86px 0;background:var(--bg-mid);border-block:1px solid var(--border-s)}
-.situation-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:54px;align-items:start}
-.evidence-viz{background:var(--bg-card);border:1px solid var(--border-s);padding:28px}
+.situation-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:54px;align-items:start;min-width:0}
+.evidence-viz{background:var(--bg-card);border:1px solid var(--border-s);padding:28px;min-width:0;position:relative;z-index:1}
 .evidence-viz-head{display:flex;justify-content:space-between;gap:18px;margin-bottom:24px}
 .evidence-viz-title{font:400 27px var(--fd)}
 .evidence-viz-total{font:9px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 .evidence-bar{display:flex;height:24px;overflow:hidden;background:var(--border-s);margin-bottom:14px}
-.evidence-bar span:first-child{width:67.88%;background:var(--green)}
-.evidence-bar span:last-child{width:32.12%;background:var(--accent)}
+.evidence-bar span:first-child{width:69.01%;background:var(--green)}
+.evidence-bar span:last-child{width:30.99%;background:var(--accent)}
 .evidence-legend{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .evidence-legend-item{padding:16px;border-left:3px solid var(--legend);background:rgba(255,255,255,.025)}
 .evidence-legend-item strong{display:block;font:300 34px var(--fd);color:var(--legend)}
 .evidence-legend-item span{display:block;font-size:12px;color:var(--muted);line-height:1.5}
 .evidence-caution{margin-top:20px;padding-top:18px;border-top:1px solid var(--border-s);font-size:12px;line-height:1.7;color:var(--muted)}
 .pathway{margin-top:26px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--border-s)}
-.pathway-step{padding:17px 13px;background:var(--bg-card);border-top:3px solid var(--step);min-height:128px}
+.pathway-step{padding:17px 13px;background:var(--bg-card);border-top:3px solid var(--step);min-height:128px;min-width:0;overflow-wrap:anywhere}
 .pathway-step small{display:block;font:8px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--step);margin-bottom:8px}
 .pathway-step strong{display:block;font:400 17px/1.15 var(--fd);margin-bottom:7px}
 .pathway-step span{font-size:11px;line-height:1.55;color:var(--muted)}
@@ -371,6 +374,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 </style>
 </head>
 <body class="copy-protected">
+<div class="site-watermark" aria-hidden="true"></div>
 
 <!-- ═══ NAV ═══ -->
 <nav>
@@ -427,6 +431,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="wrap" style="width:100%">
     <div class="hero-layout">
       <div>
+        <div class="hero-brand"><img src="assets/svensk-osint-inblick-2026.png" alt="Svensk OSINT INBLICK 2026"></div>
         <h1 class="hero-title">Otillbörlig påverkan<br><em>i offentlig verksamhet</em></h1>
         <p class="hero-sub">När påverkan får fäste i offentlig sektor</p>
         <p class="hero-lead">En kunskaps- och analysplattform för att förstå hur otillbörlig påverkan växer fram, utforska dokumenterade fall och omsätta mönster i organisatoriskt skydd.</p>
@@ -441,15 +446,15 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         </div>
         <div class="hero-meta">
           <div class="hero-meta-item">
-            <span class="hero-meta-val">165</span>
+            <span class="hero-meta-val">171</span>
             <span class="hero-meta-lab">Dokumenterade<br>fall</span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-val">15</span>
+            <span class="hero-meta-val">14</span>
             <span class="hero-meta-lab">Analys-<br>moduler</span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-val">112</span>
+            <span class="hero-meta-val">118</span>
             <span class="hero-meta-lab">Bekräftade<br>fall</span>
           </div>
           <div class="hero-meta-item">
@@ -481,7 +486,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       </a>
       <a class="journey-card" style="--journey:var(--green)" href="modules.html#mod-map">
         <span class="journey-kicker">Utforska fallen</span><span class="journey-title">Vad har faktiskt hänt?</span>
-        <span class="journey-text">Sök och filtrera 165 fall efter sektor, aktör, metod, upptäcktsväg, utfall, status och tidsperiod.</span>
+        <span class="journey-text">Sök och filtrera 171 fall efter sektor, aktör, metod, upptäcktsväg, utfall, status och tidsperiod.</span>
         <span class="journey-meta">Fallkort · karta · originalkällor</span>
       </a>
       <a class="journey-card" style="--journey:var(--purple)" href="modules.html#mod-graph">
@@ -534,10 +539,10 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         </div>
       </div>
       <div class="evidence-viz reveal" aria-label="Fördelning av bekräftade fall och indikationer">
-        <div class="evidence-viz-head"><span class="evidence-viz-title">165 dokumenterade fall</span><span class="evidence-viz-total">2002–2026</span></div>
+        <div class="evidence-viz-head"><span class="evidence-viz-title">171 dokumenterade fall</span><span class="evidence-viz-total">2002–2026</span></div>
         <div class="evidence-bar" aria-hidden="true"><span></span><span></span></div>
         <div class="evidence-legend">
-          <div class="evidence-legend-item" style="--legend:var(--green)"><strong>112</strong><span>bekräftade fall med tydlig dokumentation</span></div>
+          <div class="evidence-legend-item" style="--legend:var(--green)"><strong>118</strong><span>bekräftade fall med tydlig dokumentation</span></div>
           <div class="evidence-legend-item" style="--legend:var(--accent)"><strong>53</strong><span>indikationer som ska läsas försiktigt</span></div>
         </div>
         <p class="evidence-caution">Statusen beskriver underlagets styrka. Den ska inte användas som ett omdöme om en person, och en enskild signal ska aldrig ensam ligga till grund för en anklagelse.</p>
@@ -551,7 +556,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="wrap">
     <div class="parts-intro reveal">
         <p class="section-eyebrow">Verkets struktur</p>
-      <h2 class="section-title">Fyra sätt att använda<br><em>de femton modulerna</em></h2>
+      <h2 class="section-title">Fyra sätt att använda<br><em>de fjorton analysmodulerna</em></h2>
       <p class="section-intro">Förstå fenomenet, utforska materialet, bedöm sårbarheten och gå vidare till konkreta åtgärder. Modulerna kan läsas var för sig eller som en sammanhängande väg.</p>
     </div>
 
@@ -569,7 +574,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div class="mc-kicker">Orientering</div>
           <div class="mc-title">Metod &amp; begrepp</div>
           <div class="mc-desc">Förstå skillnaden mellan observation, underlag, analys och åtgärd. Här förklaras också hur fallmaterialet, bekräftelserna och sambandsgrafen ska tolkas.</div>
-          <div class="mc-foot" style="color:var(--accent)"><span>165 fall · metodkarta</span><span class="mc-arrow">→</span></div>
+          <div class="mc-foot" style="color:var(--accent)"><span>171 fall · metodkarta</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-chain" class="mcard" style="border-top-color:var(--accent)">
           <div class="mc-kicker">Kärnmodell</div>
@@ -629,8 +634,8 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         <a href="modules.html#mod-map" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Händelsedatabas</div>
           <div class="mc-title">Händelser &amp; fall</div>
-          <div class="mc-desc">Utforska 165 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör och källäge och öppna källorna direkt från varje fall.</div>
-          <div class="mc-foot" style="color:var(--green)"><span>165 fall · 13 verksamhetsmiljöer</span><span class="mc-arrow">→</span></div>
+          <div class="mc-desc">Utforska 171 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör och källäge och öppna källorna direkt från varje fall.</div>
+          <div class="mc-foot" style="color:var(--green)"><span>171 fall · 13 verksamhetsmiljöer</span><span class="mc-arrow">→</span></div>
         </a>
         <a href="modules.html#mod-graph" class="mcard" style="border-top-color:var(--green)">
           <div class="mc-kicker">Nätverksgraf</div>
@@ -733,18 +738,18 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="reveal">
       <p class="section-eyebrow">Källor och metod</p>
       <h2 class="section-title">Så bedöms <em>underlagen</em></h2>
-      <p class="section-intro">Alla uppgifter är inte lika säkra. Därför skiljer databasen mellan bekräftade fall och indikationer. Av 165 fall stöds 112 av dom, myndighetsbeslut eller annan tydlig dokumentation. De övriga 53 är märkta som indikationer.</p>
+      <p class="section-intro">Alla uppgifter är inte lika säkra. Därför skiljer databasen mellan bekräftade fall och indikationer. Av 171 fall stöds 118 av dom, myndighetsbeslut eller annan tydlig dokumentation. De övriga 53 är märkta som indikationer.</p>
     </div>
     <div class="evidence-grid reveal">
       <div class="ev-cell">
         <div class="ev-badge conf"><div class="ev-dot conf"></div>Bekräftat</div>
-        <div class="ev-count">112 <span>av 165 fall</span></div>
+        <div class="ev-count">118 <span>av 171 fall</span></div>
         <div class="ev-title">Centrala uppgifter dokumenterade</div>
         <div class="ev-desc">Dom, tillsynsrapport, myndighetsutredning eller välbelagd granskningsjournalistik. Klassningen betyder inte att varje detalj är rättsligt fastställd.</div>
       </div>
       <div class="ev-cell">
         <div class="ev-badge ind"><div class="ev-dot ind"></div>Indikation</div>
-        <div class="ev-count">53 <span>av 165 fall</span></div>
+        <div class="ev-count">53 <span>av 171 fall</span></div>
         <div class="ev-title">Tydliga uppgifter, men inte fastställt</div>
         <div class="ev-desc">Det finns underlag för en försiktig bedömning, men ingen dom eller myndighetsbedömning som fastställer händelsen. Mönstret är möjligt eller troligt, men inte juridiskt prövat.</div>
       </div>
@@ -796,7 +801,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         <div class="ap-cases" style="color:#4A7B6F">35 fall i databasen →</div>
       </a>
     </div>
-    <p style="margin:18px 0 0;font-family:var(--fm);font-size:9px;line-height:1.65;color:var(--dim)">De fyra aktörsmiljöerna omfattar 138 av databasens 165 fall. Övriga 27 är klassade som intern aktör, korrumperad befattningshavare, organiserad brottslighet eller ej fastställd aktör.</p>
+    <p style="margin:18px 0 0;font-family:var(--fm);font-size:9px;line-height:1.65;color:var(--dim)">De fyra aktörsmiljöerna omfattar 144 av databasens 171 fall. Övriga 27 är klassade som insider, korrumperad befattningshavare, organiserad brottslighet eller ej fastställd aktör.</p>
   </div>
 </section>
 
@@ -806,7 +811,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="reveal">
       <p class="section-eyebrow">Fallbiblioteket</p>
       <h2 class="section-title">Se fallen i sitt <em>sammanhang</em></h2>
-      <p class="section-intro">Här är ett urval av de 165 fallen från 2002–2026. I händelsedatabasen kan du filtrera hela materialet, använda både karta och fallförteckning samt öppna källorna bakom varje fall.</p>
+      <p class="section-intro">Här är ett urval av de 171 fallen från 2002–2026. I händelsedatabasen kan du filtrera hela materialet, använda både karta och fallförteckning samt öppna källorna bakom varje fall.</p>
     </div>
     <div class="case-list reveal">
       <a href="modules.html#mod-map" class="cp-row">
@@ -892,7 +897,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       </a>
     </div>
     <div class="cp-more reveal">
-      <a href="modules.html#mod-map">→ Öppna alla 165 fall i den interaktiva händelsedatabasen</a>
+      <a href="modules.html#mod-map">→ Öppna alla 171 fall i den interaktiva händelsedatabasen</a>
     </div>
   </div>
 </section>
@@ -916,7 +921,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <span class="os-lab">Veckobrev 2026</span>
         </div>
         <div class="os-stat">
-          <span class="os-val">165</span>
+          <span class="os-val">171</span>
           <span class="os-lab">fall i databasen</span>
         </div>
       </div>

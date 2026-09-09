@@ -3524,5 +3524,132 @@ window.INBLICK_CASE_CODING = {
       "https://www.svt.se/nyheter/lokalt/skane/dolda-inspelningar-visar-jobbcoacher-villiga-att-lura-arbetsformedlingen",
       "https://www.svt.se/nyheter/lokalt/skane/efter-svts-granskning-johan-britz-l-vill-lagga-ner-rusta-och-matcha"
     ]
+  },
+  "c198": {
+    "coding": {
+      "methods": ["BRIBERY", "ACCESS"],
+      "discovery": ["COURT"],
+      "gaps": ["VETTING", "DUTIES"],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": ["https://www.svd.se/a/f1bc346a-f371-3d45-a9f3-3da16b547734/tjansteman-domd-for-mutbrott"]
+  },
+  "c199": {
+    "coding": {
+      "methods": ["BRIBERY", "PROCUREMENT"],
+      "discovery": ["JOURNALISM"],
+      "gaps": ["DUTIES", "SUPPLIER"],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://press.systembolaget.se/pressmeddelanden/2012/systembolaget-overklagar-dom-for-att-sakra-nolltolerans-mot-korruption/",
+      "https://www.sverigesradio.se/avsnitt/mutskandalen-pa-systembolaget"
+    ]
+  },
+  "c200": {
+    "coding": {
+      "methods": ["BRIBERY", "PROCUREMENT"],
+      "discovery": ["COURT"],
+      "gaps": ["DUTIES", "SUPPLIER"],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.aklagare.se/for-media/pressmeddelanden/2013/februari/atal-for-grovt-mutbrott/",
+      "https://www.publikt.se/nyhet/chef-i-kriminalvarden-far-fangelse-16922",
+      "https://www.svt.se/nyheter/lokalt/ost/hovrattsdom-i-mutmalet"
+    ]
+  },
+  "c201": {
+    "coding": {
+      "methods": ["BRIBERY", "PROCUREMENT"],
+      "discovery": ["COURT"],
+      "gaps": ["SUPPLIER", "CONFLICT"],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.sverigesradio.se/artikel/5775615",
+      "https://www.byggnadsarbetaren.se/hovratt-slar-fast-mutdom/"
+    ]
+  },
+  "c202": {
+    "coding": {
+      "methods": ["BRIBERY", "SOCIAL_ENGINEERING"],
+      "discovery": ["COURT"],
+      "gaps": ["SCREENING", "DUTIES"],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.institutetmotmutor.se/en/courtcases/tingsratten-domer-till-ansvar-for-grovt-mutbrott-respektive-medhjalp-till-grovt-mutbrott-i-samband-med-myndighetsutovning-vid-migrationsverket/",
+      "https://www.svt.se/nyheter/lokalt/skane/handlaggare-pa-migrationsverket-atalas-for-mutbrott"
+    ]
+  },
+  "c203": {
+    "coding": {
+      "methods": ["BRIBERY", "PROCUREMENT"],
+      "discovery": ["COURT"],
+      "gaps": ["DUTIES", "SUPPLIER"],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": ["https://www.sverigesradio.se/artikel/4848533"]
   }
 };
+
+/* Visuell och funktionell efterbehandling för den publicerade modulsidan. */
+(function(){
+  const styleId='inblick-runtime-fixes';
+  function installRuntimeFixes(){
+    if(!document.getElementById(styleId)){
+      const style=document.createElement('style');
+      style.id=styleId;
+      style.textContent=`
+        .site-watermark{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('assets/svensk-osint-fingeravtryck.png') center 42%/min(42vw,460px) auto no-repeat;opacity:.035;mix-blend-mode:screen}
+        .nav-inner,.module,.mobile-drawer,#searchResults{position:relative}
+        .nav-inner,.module{z-index:1}
+        .nav-brand{align-items:center;gap:8px}
+        .nav-brand-logo{display:block;width:62px;height:38px;object-fit:contain;mix-blend-mode:screen;opacity:.9;flex:none}
+        .nav-search-wrap,#globalSearchInput,#searchResults{min-width:0;max-width:100%}
+        .sr-item-copy{min-width:0;overflow-wrap:anywhere}
+        .module img,.module figure,.module .source-figure,.module .book-figure,.module .book-source-frame{min-width:0;max-width:100%}
+        .module img{height:auto}
+        @media(max-width:900px){.nav-brand-logo{width:48px;height:32px}.nav-name{font-size:16px}#globalSearchInput{width:min(30vw,150px)!important}.sr-item{padding-left:16px;padding-right:16px}}
+      `;
+      document.head.appendChild(style);
+    }
+    if(!document.querySelector('.site-watermark')){
+      const mark=document.createElement('div');
+      mark.className='site-watermark';
+      mark.setAttribute('aria-hidden','true');
+      document.body.prepend(mark);
+    }
+    const brand=document.querySelector('.nav-brand');
+    if(brand&&!brand.querySelector('.nav-brand-logo')){
+      const logo=document.createElement('img');
+      logo.className='nav-brand-logo';
+      logo.src='assets/svensk-osint-inblick-2026.png';
+      logo.alt='Svensk OSINT INBLICK 2026';
+      brand.prepend(logo);
+    }
+    const input=document.getElementById('globalSearchInput');
+    if(input)input.setAttribute('aria-description','Sökningen visar träffar från hela materialet och öppnar valt fall eller avsnitt.');
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installRuntimeFixes,{once:true});
+  else installRuntimeFixes();
+})();

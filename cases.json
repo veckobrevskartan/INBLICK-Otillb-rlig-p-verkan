@@ -4839,5 +4839,206 @@
         "url": "https://www.svt.se/nyheter/lokalt/skane/efter-svts-granskning-johan-britz-l-vill-lagga-ner-rusta-och-matcha"
       }
     ]
+  },
+  {
+    "id": "c115",
+    "title": "Nya Kastets skola i Gävle — ägarprövning, risk för otillbörlig påverkan och bokföringsbrott",
+    "date": "2020-11",
+    "loc": {
+      "m": "Gävle",
+      "r": "Gävleborg",
+      "lat": 60.6749,
+      "lng": 17.1413,
+      "p": "jitter"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "EXTREMIST",
+    "status": "CONFIRMED",
+    "summary": "Skolinspektionen stängde Nya Kastets skola efter en ägar- och ledningsprövning. Myndigheten hänvisade till uppgifter från Säkerhetspolisen om kopplingar till extremistnätverk och risk för radikalisering eller otillbörlig påverkan inom skolverksamheten, samt bedömde att den nya ägaren inte intog en självständig hållning gentemot den tidigare ägaren. Den tidigare ägaren och rektorn dömdes senare till sex månaders fängelse och näringsförbud för grovt bokföringsbrott; skolan fick även företagsbot.",
+    "sources": [
+      {
+        "l": "Skolinspektionen stänger Nya Kastets skola — Svenska Dagbladet/TT",
+        "t": "news",
+        "url": "https://www.svd.se/a/zggpO5/skolinspektionen-stanger-nya-kastets-skola"
+      },
+      {
+        "l": "SVT — Fängelse för bokföringsbrott för Nya Kastets ägare",
+        "t": "news",
+        "url": "https://www.svt.se/nyheter/lokalt/gavleborg/fangelse-for-bokforingsbrott-for-nya-kastets-agare"
+      },
+      {
+        "l": "Sveriges Radio — Tidigare rektorn till Nya Kastets skola döms till fängelse",
+        "t": "news",
+        "url": "https://sverigesradio.se/artikel/tidigare-rektorn-till-nya-kastets-skola-doms-till-fangelse"
+      },
+      {
+        "l": "SVT — Bolaget bakom nedlagda Nya Kastets skola i konkurs",
+        "t": "news",
+        "url": "https://www.svt.se/nyheter/lokalt/gavleborg/nya-kastets-skola-forsatts-i-konkurs"
+      }
+    ]
+  },
+  {
+    "id": "c198",
+    "title": "Migrationsverket Stockholm — tjänsteman tog betalt för medborgarskap",
+    "date": "2003-12",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "En tjänsteman vid Migrationsverket dömdes till två års fängelse efter att ha tagit emot pengar för att bevilja svenskt medborgarskap. Domen omfattade även grovt tjänstefel och förskingring. Fallet visar hur beslut med stort individuellt värde kan exploateras när en tjänsteperson har både tillgång till ärenden och ett betydande handlingsutrymme.",
+    "sources": [
+      {
+        "l": "Svenska Dagbladet — Tjänsteman dömd för mutbrott (2003-12-01)",
+        "t": "media",
+        "url": "https://www.svd.se/a/f1bc346a-f371-3d45-a9f3-3da16b547734/tjansteman-domd-for-mutbrott"
+      }
+    ]
+  },
+  {
+    "id": "c199",
+    "title": "Systembolaget — butikschefer tog emot mutor från leverantörer",
+    "date": "2003-01",
+    "loc": {
+      "m": "Sverige",
+      "r": "Nationellt",
+      "lat": 62.01,
+      "lng": 15.52,
+      "p": "approximate"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Systembolagets muthärva 2003 omfattade leverantörer som mutade butikschefer för kommersiella fördelar. Systembolaget uppgav senare att 77 butikschefer hade avskedats och att 15 leverantörsmedarbetare fällts för korruptionsbrott. Fallet synliggör hur många små beslut och relationer kan skapa en samlad korruptionsrisk i en inköps- och försäljningskedja.",
+    "sources": [
+      {
+        "l": "Systembolaget — Bakgrunden till muthärvan 2003",
+        "t": "authority",
+        "url": "https://press.systembolaget.se/pressmeddelanden/2012/systembolaget-overklagar-dom-for-att-sakra-nolltolerans-mot-korruption/"
+      },
+      {
+        "l": "Sveriges Radio — Mutskandalen på Systembolaget",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/avsnitt/mutskandalen-pa-systembolaget"
+      }
+    ]
+  },
+  {
+    "id": "c200",
+    "title": "Kriminalvården — fastighetschef dömd i omfattande byggmuthärva",
+    "date": "2014-09",
+    "loc": {
+      "m": "Östersund",
+      "r": "Jämtland",
+      "lat": 63.18,
+      "lng": 14.64,
+      "p": "approximate"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "En tidigare fastighetschef inom Kriminalvården dömdes för grovt mutbrott efter att ha styrt uppdrag i samband med projektering av anstalter och häkten mot betalningar via en mellanhand. Åtalet omfattade byggprojekt på flera orter och hovrätten skärpte senare straffet till tre år och sex månader. Fallet visar hur långvariga leverantörsrelationer, stora projekt och en koncentrerad beställarroll kan skapa ett allvarligt kontrollgap.",
+    "sources": [
+      {
+        "l": "Åklagarmyndigheten — Åtal för grovt mutbrott (2013-02-07)",
+        "t": "authority",
+        "url": "https://www.aklagare.se/for-media/pressmeddelanden/2013/februari/atal-for-grovt-mutbrott/"
+      },
+      {
+        "l": "Publikt — Chef i Kriminalvården får fängelse (2014-09-02)",
+        "t": "media",
+        "url": "https://www.publikt.se/nyhet/chef-i-kriminalvarden-far-fangelse-16922"
+      },
+      {
+        "l": "SVT — Skärpt straff i muthärvan (2016-03-31)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/ost/hovrattsdom-i-mutmalet"
+      }
+    ]
+  },
+  {
+    "id": "c201",
+    "title": "Falun — kommunanställda dömda i Peab-affären",
+    "date": "2014-02",
+    "loc": {
+      "m": "Falun",
+      "r": "Dalarna",
+      "lat": 60.61,
+      "lng": 15.63,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "Sex personer dömdes efter Peab-affären i Falun: kommunanställda hade tagit emot bland annat en konferenshelg och en resa som betalats av byggföretaget. Tingsrätten dömde samtliga till dagsböter och hovrätten fastställde senare domarna. Underlaget visar inte bara enskilda gåvor utan en leverantörsrelation där representation och kommunens inköp hade kommit för nära varandra.",
+    "sources": [
+      {
+        "l": "Sveriges Radio — Falu kommun: skönt med en dom i Peab-härvan (2014-02-04)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/5775615"
+      },
+      {
+        "l": "Byggnadsarbetaren — Hovrätt slår fast mutdom (2015-05-29)",
+        "t": "media",
+        "url": "https://www.byggnadsarbetaren.se/hovratt-slar-fast-mutdom/"
+      }
+    ]
+  },
+  {
+    "id": "c202",
+    "title": "Migrationsverket Malmö — uppehållsrätter såldes mot betalning",
+    "date": "2015-05",
+    "loc": {
+      "m": "Malmö",
+      "r": "Skåne",
+      "lat": 55.605,
+      "lng": 13.003,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "I ett mål om myndighetsutövning vid Migrationsverket dömdes en person till tre års fängelse för sju fall av grovt mutbrott och medhjälp till grov urkundsförfalskning. Enligt domreferatet hade omkring 450 000 kronor betalats för att tillhandahålla bevis om registrerad uppehållsrätt. En medåtalad dömdes för medhjälp, medan en annan åtalad friades.",
+    "sources": [
+      {
+        "l": "Institutet Mot Mutor — Tingsrätten dömer i mål om myndighetsutövning vid Migrationsverket (2015-05-20)",
+        "t": "court",
+        "url": "https://www.institutetmotmutor.se/en/courtcases/tingsratten-domer-till-ansvar-for-grovt-mutbrott-respektive-medhjalp-till-grovt-mutbrott-i-samband-med-myndighetsutovning-vid-migrationsverket/"
+      },
+      {
+        "l": "SVT — Handläggare på Migrationsverket åtalas för mutbrott (2014-11-07)",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/skane/handlaggare-pa-migrationsverket-atalas-for-mutbrott"
+      }
+    ]
+  },
+  {
+    "id": "c203",
+    "title": "Norrköping — stadsbyggnadstjänsteman dömd efter byggmuta",
+    "date": "2011-12",
+    "loc": {
+      "m": "Norrköping",
+      "r": "Östergötland",
+      "lat": 58.5877,
+      "lng": 16.1924,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "ECONOMIC_INTEREST",
+    "status": "CONFIRMED",
+    "summary": "En tidigare tjänsteman på Norrköpings stadsbyggnadskontor dömdes till ett år och tre månaders fängelse efter att ha låtit ett byggföretag utföra arbeten på hans sommarhus utan betalning. Omkring 300 000 kronor fakturerades kommunen under förevändning att arbetena gällde ett skoltak. Kommunen konstaterade samtidigt stora brister i den interna kontrollen.",
+    "sources": [
+      {
+        "l": "Sveriges Radio — Fängelse för mutbrott i Norrköping (2011-12-09)",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/4848533"
+      }
+    ]
   }
 ]
