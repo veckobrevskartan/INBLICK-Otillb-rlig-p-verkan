@@ -23,9 +23,10 @@ body::before{content:"";position:fixed;left:0;top:0;bottom:0;width:3px;backgroun
 .wrap{max-width:1200px;margin:0 auto;padding:0 52px}
 
 /* ─── NAV (desktop + mobile) ─── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#000;backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:1200px;margin:0 auto;padding:0 52px}
-.nav-brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-brand{display:flex;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
+.nav-brand-logo{display:block;width:148px;height:34px;object-fit:contain;mix-blend-mode:screen;opacity:.95}
 .nav-ser{font-family:var(--fm);font-size:9px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase}
 .nav-name{font-family:var(--fd);font-size:18px;font-weight:500;color:var(--text)}
 /* Desktop tabs — hidden on mobile */
@@ -122,6 +123,7 @@ body.menu-open{overflow:hidden}
   .cat-nav{display:none}
   .nav-hamburger{display:flex}
   .nav-inner{padding:0 16px;gap:12px}
+  .nav-brand-logo{width:132px;height:31px}
   .nav-back-link{display:none}
   #globalSearchInput{width:140px}
   #globalSearchInput:focus{width:160px}
@@ -1509,8 +1511,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <span class="nav-ser">Svensk OSINT</span>
-      <span class="nav-name">INBLICK</span>
+      <img class="nav-brand-logo" src="assets/svensk-osint-logo.png" alt="Svensk OSINT">
     </a>
     <nav class="cat-nav" id="catNav">
       <!-- FÖRSTÅ -->

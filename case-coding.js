@@ -3621,15 +3621,15 @@ window.INBLICK_CASE_CODING = {
       style.id=styleId;
       style.textContent=`
         .site-watermark{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('assets/svensk-osint-fingeravtryck.png') center 42%/min(42vw,460px) auto no-repeat;opacity:.035;mix-blend-mode:screen}
-        .nav-inner,.module,.mobile-drawer,#searchResults{position:relative}
+        .nav-inner,.module,.mobile-drawer{position:relative}
         .nav-inner,.module{z-index:1}
-        .nav-brand{align-items:center;gap:8px}
-        .nav-brand-logo{display:block;width:62px;height:38px;object-fit:contain;mix-blend-mode:screen;opacity:.9;flex:none}
+        nav{background:#000!important}
         .nav-search-wrap,#globalSearchInput,#searchResults{min-width:0;max-width:100%}
+        #searchResults{position:fixed!important;top:52px!important;left:0!important;right:0!important;z-index:210!important}
         .sr-item-copy{min-width:0;overflow-wrap:anywhere}
         .module img,.module figure,.module .source-figure,.module .book-figure,.module .book-source-frame{min-width:0;max-width:100%}
         .module img{height:auto}
-        @media(max-width:900px){.nav-brand-logo{width:48px;height:32px}.nav-name{font-size:16px}#globalSearchInput{width:min(30vw,150px)!important}.sr-item{padding-left:16px;padding-right:16px}}
+        @media(max-width:900px){#globalSearchInput{width:min(30vw,150px)!important}.sr-item{padding-left:16px;padding-right:16px}}
       `;
       document.head.appendChild(style);
     }
@@ -3638,14 +3638,6 @@ window.INBLICK_CASE_CODING = {
       mark.className='site-watermark';
       mark.setAttribute('aria-hidden','true');
       document.body.prepend(mark);
-    }
-    const brand=document.querySelector('.nav-brand');
-    if(brand&&!brand.querySelector('.nav-brand-logo')){
-      const logo=document.createElement('img');
-      logo.className='nav-brand-logo';
-      logo.src='assets/svensk-osint-inblick-2026.png';
-      logo.alt='Svensk OSINT INBLICK 2026';
-      brand.prepend(logo);
     }
     const input=document.getElementById('globalSearchInput');
     if(input)input.setAttribute('aria-description','Sökningen visar träffar från hela materialet och öppnar valt fall eller avsnitt.');
