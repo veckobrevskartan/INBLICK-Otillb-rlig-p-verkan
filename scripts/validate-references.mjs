@@ -147,7 +147,7 @@ if (/<a\b[^>]*href="#mod-[^"]+"[^>]*onclick="[^"]*return false[^"]*"/i.test(modu
   errors.push('modules.html: en modulankarlänk blockerar webbläsarens reservnavigering med return false');
 }
 const mobileModuleLinks = [...modules.matchAll(/<a href="#mod-([^"]+)" class="mobile-tab-btn" id="mtab-([^"]+)"/g)];
-if (mobileModuleLinks.length !== 15) errors.push(`modules.html: förväntade 15 mobila modulankarlänkar, hittade ${mobileModuleLinks.length}`);
+if (mobileModuleLinks.length !== 16) errors.push(`modules.html: förväntade 16 mobila modulankarlänkar, hittade ${mobileModuleLinks.length}`);
 for (const [, target, tab] of mobileModuleLinks) {
   if (target !== tab) errors.push(`modules.html: mobilfliken ${tab} pekar på mod-${target}`);
 }
@@ -197,10 +197,20 @@ if (!questionsMatch) {
   }
 }
 
-if (!modules.includes(`const CASES=${JSON.stringify(cases)};`)) errors.push('Falldatan i modules.html avviker från cases.json');
+const embeddedCasesMatch = modules.match(/const CASES=([\s\S]*?)\nconst SECTORS=/);
+if (!embeddedCasesMatch) {
+  errors.push('Falldatan i modules.html saknas');
+} else {
+  try {
+    const embeddedCases = JSON.parse(embeddedCasesMatch[1].trim().replace(/;$/, ''));
+    if (JSON.stringify(embeddedCases) !== JSON.stringify(cases)) errors.push('Falldatan i modules.html avviker från cases.json');
+  } catch (error) {
+    errors.push(`Falldatan i modules.html är inte giltig JSON: ${error.message}`);
+  }
+}
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 159) errors.push(`Förväntade 159 fall, hittade ${cases.length}`);
+if (cases.length !== 164) errors.push(`Förväntade 164 fall, hittade ${cases.length}`);
 
 for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
   const count = cases.filter(item => item.actor === actor).length;
