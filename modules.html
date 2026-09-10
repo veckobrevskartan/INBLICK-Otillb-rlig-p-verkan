@@ -9543,7 +9543,7 @@ const CASES=[
     "summary": "En tidigare polisanställd dömdes för dataintrång efter 178 onödiga sökningar i polisens system. Fallet visar hur tidigare eller nuvarande behörighet kan utnyttjas för upprepade informationssökningar som inte har stöd i arbetsuppgiften.",
     "title": "Ystad — tidigare polis dömd efter 178 onödiga registerslagningar"
   }
-]
+];
 
 // Falldatan är primärkälla för sektorernas fallistor; undviker att nya fall faller bort i sektormodulen.
 SECTORS.forEach(s=>{s.cases=CASES.filter(c=>c.sector===s.id).map(c=>c.id);});
@@ -9962,6 +9962,10 @@ function retryMap(){
   if(mapInitPromise)return;
   mapReady=false;
   ensureMap();
+}
+function ensureMap(){
+  if(leafMap||mapInitPromise)return;
+  mapInitPromise=initMap().finally(()=>{mapInitPromise=null;});
 }
 function statusColor(s){return s==='CONFIRMED'?'#4A7B6F':'#B8973A';}
 function renderMarkers(){
