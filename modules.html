@@ -9623,7 +9623,7 @@ function show(key,options={}){
     const cue=document.getElementById('mapReadyCue');
     if(cue){cue.classList.remove('pulse');void cue.offsetWidth;cue.classList.add('pulse');}
   }
-  if(safeKey==='map'&&!mapReady){mapReady=true;setTimeout(initMap,60);}
+  if(safeKey==='map')setTimeout(ensureMap,60);
   if(safeKey==='graph'&&!graphReady){graphReady=true;setTimeout(gStart,60);}
   triggerReveals();
 }
@@ -9790,7 +9790,7 @@ function renderChain(i){
 
 /* ══ MAP ══ */
 let leafMap,mapMarkers=[],mapFilters={sector:'ALL',actor:'ALL',status:'ALL',method:'ALL',discovery:'ALL',outcome:'ALL',period:'ALL'},caseSearchQuery='',activeCaseId=null,caseToastTimer=null,caseVisibleLimit=12;
-let leafletLoadPromise=null;
+let leafletLoadPromise=null,mapInitPromise=null;
 function initCaseBrowser(){
   const filterPanel=document.getElementById('caseFilterPanel');
   if(filterPanel&&window.matchMedia('(max-width:600px)').matches)filterPanel.removeAttribute('open');
@@ -9898,14 +9898,32 @@ function initCaseNavigation(){
 function loadLeaflet(){
   if(window.L)return Promise.resolve(window.L);
   if(leafletLoadPromise)return leafletLoadPromise;
-  leafletLoadPromise=new Promise((resolve,reject)=>{
-    const script=document.createElement('script');
-    const timeout=setTimeout(()=>reject(new Error('Leaflet tog för lång tid att ladda')),10000);
-    script.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
-    script.async=true;
-    script.onload=()=>{clearTimeout(timeout);window.L?resolve(window.L):reject(new Error('Leaflet saknas efter laddning'));};
-    script.onerror=()=>{clearTimeout(timeout);reject(new Error('Leaflet kunde inte laddas'));};
-    document.head.appendChild(script);
+  const sources=[
+    'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js',
+    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+    'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'
+  ];
+  leafletLoadPromise=(async()=>{
+    for(const src of sources){
+      try{
+        await new Promise((resolve,reject)=>{
+          const script=document.createElement('script');
+          const timeout=setTimeout(()=>reject(new Error('timeout')),7000);
+          script.async=true;
+          script.src=src;
+          script.onload=()=>{clearTimeout(timeout);window.L?resolve():reject(new Error('Leaflet saknas efter laddning'));};
+          script.onerror=()=>{clearTimeout(timeout);reject(new Error('kunde inte ladda '+src));};
+          document.head.appendChild(script);
+        });
+        if(window.L)return window.L;
+      }catch(error){
+        console.warn('Leaflet-källa misslyckades:',src,error);
+      }
+    }
+    throw new Error('Ingen Leaflet-källa kunde laddas');
+  })().catch(error=>{
+    leafletLoadPromise=null;
+    throw error;
   });
   return leafletLoadPromise;
 }
@@ -9915,20 +9933,35 @@ async function initMap(){
   mapContainer.innerHTML='<div style="display:grid;place-items:center;height:100%;font-family:var(--fm);font-size:10px;letter-spacing:.1em;color:var(--muted)">Laddar kartan…</div>';
   try{
     await loadLeaflet();
+    if(!window.L)throw new Error('Leaflet saknas efter laddning');
+    if(leafMap){
+      try{leafMap.remove();}catch(error){console.warn('Kunde inte rensa tidigare karta:',error);}
+      leafMap=null;
+      mapMarkers=[];
+    }
+    mapContainer.innerHTML='';
+    leafMap=window.L.map('map-container',{center:[63,16],zoom:4,zoomControl:true,attributionControl:true});
+    window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      maxZoom:19,
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-bidragsgivare'
+    }).addTo(leafMap);
+    renderCaseViews();
+    mapReady=true;
   }catch(error){
     mapReady=false;
-    leafletLoadPromise=null;
-    mapContainer.innerHTML='<div style="display:grid;place-items:center;height:100%;padding:24px;text-align:center;color:var(--muted);line-height:1.7">Kartan kunde inte laddas just nu. Övriga moduler fungerar fortfarande. Gå till en annan modul och öppna kartan igen för ett nytt försök.</div>';
-    console.error('Kunde inte ladda kartbiblioteket:',error);
-    return;
+    if(leafMap){
+      try{leafMap.remove();}catch(cleanupError){console.warn('Kunde inte rensa trasig karta:',cleanupError);}
+      leafMap=null;
+      mapMarkers=[];
+    }
+    mapContainer.innerHTML='<div style="display:grid;place-items:center;height:100%;gap:12px;padding:24px;text-align:center;color:var(--muted);line-height:1.7">Kartan kunde inte laddas just nu.<br><button type="button" class="btn-g" onclick="retryMap()">Försök igen</button></div>';
+    console.error('Kunde inte initiera kartan:',error);
   }
-  mapContainer.innerHTML='';
-  leafMap=L.map('map-container',{center:[63,16],zoom:4,zoomControl:true,attributionControl:true});
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:19,
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-bidragsgivare'
-  }).addTo(leafMap);
-  renderCaseViews();
+}
+function retryMap(){
+  if(mapInitPromise)return;
+  mapReady=false;
+  ensureMap();
 }
 function statusColor(s){return s==='CONFIRMED'?'#4A7B6F':'#B8973A';}
 function renderMarkers(){
