@@ -3527,21 +3527,39 @@ window.INBLICK_CASE_CODING = {
   },
   "c198": {
     "coding": {
-      "methods": ["BRIBERY", "ACCESS"],
-      "discovery": ["COURT"],
-      "gaps": ["VETTING", "DUTIES"],
+      "methods": [
+        "BRIBERY",
+        "ACCESS"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "VETTING",
+        "DUTIES"
+      ],
       "outcome": "COMPLETED"
     },
     "basis": "RECORD_REVIEW",
     "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
     "source_count": 1,
-    "source_urls": ["https://www.svd.se/a/f1bc346a-f371-3d45-a9f3-3da16b547734/tjansteman-domd-for-mutbrott"]
+    "source_urls": [
+      "https://www.svd.se/a/f1bc346a-f371-3d45-a9f3-3da16b547734/tjansteman-domd-for-mutbrott"
+    ]
   },
   "c199": {
     "coding": {
-      "methods": ["BRIBERY", "PROCUREMENT"],
-      "discovery": ["JOURNALISM"],
-      "gaps": ["DUTIES", "SUPPLIER"],
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "DUTIES",
+        "SUPPLIER"
+      ],
       "outcome": "COMPLETED"
     },
     "basis": "RECORD_REVIEW",
@@ -3554,9 +3572,17 @@ window.INBLICK_CASE_CODING = {
   },
   "c200": {
     "coding": {
-      "methods": ["BRIBERY", "PROCUREMENT"],
-      "discovery": ["COURT"],
-      "gaps": ["DUTIES", "SUPPLIER"],
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "DUTIES",
+        "SUPPLIER"
+      ],
       "outcome": "COMPLETED"
     },
     "basis": "RECORD_REVIEW",
@@ -3570,9 +3596,17 @@ window.INBLICK_CASE_CODING = {
   },
   "c201": {
     "coding": {
-      "methods": ["BRIBERY", "PROCUREMENT"],
-      "discovery": ["COURT"],
-      "gaps": ["SUPPLIER", "CONFLICT"],
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "SUPPLIER",
+        "CONFLICT"
+      ],
       "outcome": "COMPLETED"
     },
     "basis": "RECORD_REVIEW",
@@ -3585,9 +3619,17 @@ window.INBLICK_CASE_CODING = {
   },
   "c202": {
     "coding": {
-      "methods": ["BRIBERY", "SOCIAL_ENGINEERING"],
-      "discovery": ["COURT"],
-      "gaps": ["SCREENING", "DUTIES"],
+      "methods": [
+        "BRIBERY",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "SCREENING",
+        "DUTIES"
+      ],
       "outcome": "COMPLETED"
     },
     "basis": "RECORD_REVIEW",
@@ -3600,17 +3642,196 @@ window.INBLICK_CASE_CODING = {
   },
   "c203": {
     "coding": {
-      "methods": ["BRIBERY", "PROCUREMENT"],
-      "discovery": ["COURT"],
-      "gaps": ["DUTIES", "SUPPLIER"],
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "DUTIES",
+        "SUPPLIER"
+      ],
       "outcome": "COMPLETED"
     },
     "basis": "RECORD_REVIEW",
     "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
     "source_count": 1,
-    "source_urls": ["https://www.sverigesradio.se/artikel/4848533"]
+    "source_urls": [
+      "https://www.sverigesradio.se/artikel/4848533"
+    ]
+  },
+  "c204": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "BENEFIT_FRAUD",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "COURT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "SUPPLIER",
+        "CONFLICT",
+        "DUTIES"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.gp.se/nyheter/goteborg/lista-goteborgs-mutharva-i-sammanfattning.0f5afd30-105b-48fb-8408-041920785f99",
+      "https://www.dagensjuridik.se/nyheter/tidigare-friad-poseidon-anstalld-falls-i-hovratten-mutbrott-tvingas-bota-20-000-kronor/",
+      "https://www.hemhyra.se/nyheter/anstalld-hos-poseidon-fick-jacuzzi-doms-for-mutbrott/"
+    ]
+  },
+  "c205": {
+    "coding": {
+      "methods": [
+        "BENEFIT_FRAUD",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "JOURNALISM",
+        "AUDIT"
+      ],
+      "gaps": [
+        "SUPPLIER",
+        "GOVERNANCE"
+      ],
+      "outcome": "STOPPED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.svt.se/nyheter/lokalt/vast/kommunanstallda-lat-sig-bjudas-pa-krogen-av-datajatte",
+      "https://www.svt.se/nyheter/lokalt/vast/mututredning-om-uddevallas-julfester"
+    ]
+  },
+  "c206": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "SUPPLIER",
+        "DUTIES"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.svt.se/nyheter/lokalt/stockholm/tjansteman-pa-sl-atalad-for-mutbrott"
+    ]
+  },
+  "c207": {
+    "coding": {
+      "methods": [
+        "PLACEMENT",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM",
+        "COURT"
+      ],
+      "gaps": [
+        "VETTING",
+        "GOVERNANCE"
+      ],
+      "outcome": "STOPPED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.sverigesradio.se/artikel/5636816"
+    ]
+  },
+  "c208": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "ACCESS"
+      ],
+      "discovery": [
+        "WHISTLEBLOWER",
+        "INTERNAL_LOG"
+      ],
+      "gaps": [
+        "ACCESS",
+        "DUTIES",
+        "LOGGING"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.svt.se/nyheter/inrikes/anstalld-pa-migrationsverket-misstanks-ha-salt-arbetstillstand"
+    ]
+  },
+  "c209": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM",
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "STOPPED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.svt.se/nyheter/lokalt/stockholm/madeleine-sjostedt-utreds-for-mutbrott",
+      "https://sverigesradio.se/artikel/6274118"
+    ]
+  },
+  "c210": {
+    "coding": {
+      "methods": [
+        "BENEFIT_FRAUD",
+        "ACCESS"
+      ],
+      "discovery": [
+        "AUDIT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "DUTIES",
+        "LOGGING",
+        "GOVERNANCE"
+      ],
+      "outcome": "STOPPED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.gp.se/nyheter/goteborg/hamnchef-vid-grefab-tvingas-ga.f808c4d9-751d-4796-a841-509cb64f5093"
+    ]
   }
 };
+;
 
 /* Visuell och funktionell efterbehandling för den publicerade modulsidan. */
 (function(){
