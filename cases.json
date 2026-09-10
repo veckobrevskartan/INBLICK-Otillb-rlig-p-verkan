@@ -5221,5 +5221,311 @@
     "status": "INDICATION",
     "summary": "Efter en kontroll av vinterförvarade båtar i det kommunala hamnbolaget Grefab upptäcktes skillnader mellan uppställda båtar och bokförda hyror. Hamnchefen hade enligt bolagets uppgifter haft obetalda båtplatser sedan 2010 och redovisade flera betalningar först efter kontrollen. Han fick lämna tjänsten och fick fem månadslöner i avgångsvederlag. Grefab polisanmälde misstankar om mutbrott, förskingring och tjänstefel; hamnchefen nekade till fel. Fallet redovisas som indikation, inte som lagakraftvunnen dom.",
     "title": "Grefab — hamnchef lämnade efter uppgifter om obetalda båtplatser"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2021-05",
+    "id": "c211",
+    "loc": {
+      "lat": 61.83,
+      "lng": 16.1,
+      "m": "Ljusdal",
+      "p": "municipality",
+      "r": "Gävleborg"
+    },
+    "sector": "LOCAL_GOV",
+    "sources": [
+      {
+        "l": "Sveriges Radio — Hovrätten fastställer domen mot Markus Evensson",
+        "t": "court",
+        "url": "https://www.sverigesradio.se/artikel/hovratten-faststaller-domen-mot-markus-evenssons"
+      },
+      {
+        "l": "SVT Gävleborg — Hovrätten slår fast att Ljusdals tidigare kommunalråd tagit emot muta",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/gavleborg/hovratten-slar-fast-att-ljusdals-tidigare-kommunalrad-tagit-emot-muta"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "Ljusdals tidigare kommunalråd dömdes efter att ha tagit emot en privat resa till Skottland från en företagare. Tingsrättens dom från 2021 fastställdes av hovrätten 2022; påföljden blev 40 dagsböter. Fallet visar hur en personlig förmån kan skapa beroende och rubba förtroendet för kommunala beslut.",
+    "title": "Ljusdal — tidigare kommunalråd dömd efter Skottlandsresa"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2025-01",
+    "id": "c212",
+    "loc": {
+      "lat": 62.39,
+      "lng": 17.31,
+      "m": "Sundsvall",
+      "p": "municipality",
+      "r": "Västernorrland"
+    },
+    "sector": "PROCUREMENT",
+    "sources": [
+      {
+        "l": "SVT Västernorrland — Andra tingsrättsdomen i Skifu-affären",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/vasternorrland/andra-tingsrattsdomen-i-skifu-affaren-sankt-straff-for-tidigare-vdn"
+      },
+      {
+        "l": "SVT Västernorrland — Tidigare chef döms till fängelse i Skifu-härvan",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/vasternorrland/skifuharvan-i-sundsvall-tidigare-chef-doms-till-fangelse--c2z0le"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "Sundsvalls tingsrätt dömde Skifus tidigare vd till fängelse för grovt tagande av muta i samband med kommunal verksamhet och leverantörsrelationer. Domen omfattade bland annat förmåner kopplade till en lägenhet och sponsring; den tidigare vd:n ålades också att betala tillbaka mer än 2,2 miljoner kronor. Den första domen hade undanröjts på grund av en jävig nämndeman och den nya domen överklagades, så posten beskriver en tingsrättsdom och inte ett slutligt avgörande.",
+    "title": "Sundsvall/Skifu — tidigare vd dömd i kommunal muthärva"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-02",
+    "id": "c214",
+    "loc": {
+      "lat": 59.36,
+      "lng": 18,
+      "m": "Solna",
+      "p": "municipality",
+      "r": "Stockholm"
+    },
+    "sector": "LOCAL_GOV",
+    "sources": [
+      {
+        "l": "SVT Stockholm — Kvinna åtalas misstänkt för Mick Jagger-bluff",
+        "t": "court",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/kvinna-atalas-misstankt-for-mick-jagger-bluff"
+      },
+      {
+        "l": "Omni — Ekonomisekreterare döms efter 179 överföringar",
+        "t": "court",
+        "url": "https://omni.se/a/ArLGWx"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "En ekonomisekreterare i Solna kommun dömdes efter 179 överföringar från kommunens konton till egna konton. Totalt handlade det om cirka 18,3 miljoner kronor under 2019–2023; pengarna användes bland annat till utlandsbetalningar, lån och kryptovaluta. Fallet visar hur intern åtkomst och bristande uppföljning kan utnyttjas under lång tid.",
+    "title": "Solna — ekonomisekreterare dömd efter 18,3 miljoner i överföringar"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2026-03",
+    "id": "c215",
+    "loc": {
+      "lat": 58.39,
+      "lng": 13.85,
+      "m": "Skövde",
+      "p": "municipality",
+      "r": "Västra Götaland"
+    },
+    "sector": "SOCIAL",
+    "sources": [
+      {
+        "l": "Sveriges Radio — Vårdanställd döms för mutbrott men 92-åring får inte tillbaka bostad",
+        "t": "court",
+        "url": "https://www.sverigesradio.se/artikel/vardanstalld-doms-for-mutbrott-men-92-aring-far-inte-tillbaka-bostad"
+      },
+      {
+        "l": "Sveriges Radio — Vårdare fick bostad värd 900 000 kronor",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/vardare-fick-bostad-vard-900-000-kronor-atalas-for-grovt-bedrageri"
+      },
+      {
+        "l": "Dagens Samhälle — Anställd fick lägenhet av brukare",
+        "t": "media",
+        "url": "https://www.dagenssamhalle.se/styrning-och-beslut/juridik/anstalld-fick-lagenhet-av-brukare-polisanmals-av-kommunen/"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "En tidigare kommunanställd inom äldreomsorgen i Skövde dömdes för grovt tagande av muta efter att ha fått en bostadsrätt värd omkring 900 000 kronor av en 92-årig brukare. Kommunen polisanmälde saken efter att uppgifterna kom fram. Fallet visar hur en beroenderelation i omsorgen kan utnyttjas för privat vinning.",
+    "title": "Skövde — vårdanställd dömd efter att ha fått brukares bostad"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2024-06",
+    "id": "c216",
+    "loc": {
+      "lat": 57.71,
+      "lng": 11.97,
+      "m": "Göteborg",
+      "p": "municipality",
+      "r": "Västra Götaland"
+    },
+    "sector": "PROCUREMENT",
+    "sources": [
+      {
+        "l": "Dagens Samhälle — Kommunal tjänsteman mutades och döms till böter",
+        "t": "court",
+        "url": "https://www.dagenssamhalle.se/samhalle-och-valfard/kommunala-bolag/kommunal-tjansteman-mutades-doms-till-boter/"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "En tjänsteman vid ett kommunalt bolag i Göteborg dömdes till böter efter att ha fått resor och stora summor pengar av en vän. Vännens företag fick samtidigt uppdrag värda miljoner. Fallet visar hur vänskapsrelationer kan kombineras med beställarmakt och privata förmåner; uppgifterna i den öppna källan används utan att identifiera bolaget eller personen.",
+    "title": "Göteborg — tjänsteman vid kommunalt bolag dömd efter vänskapskorruption"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2026-06",
+    "id": "c217",
+    "loc": {
+      "lat": 59.4,
+      "lng": 18.35,
+      "m": "Vaxholm",
+      "p": "municipality",
+      "r": "Stockholm"
+    },
+    "sector": "PROCUREMENT",
+    "sources": [
+      {
+        "l": "SVT Stockholm — Vaxholms kommunchef arbetsbefrias efter kritik mot kajrenovering",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/stockholm/vaxholms-kommunchef-arbetsbefrias-efter-kritik-mot-kajrenovering"
+      },
+      {
+        "l": "Upphandling24 — Polisanmälan efter kajupphandling",
+        "t": "media",
+        "url": "https://upphandling24.se/polisanmals-efter-kajupphandling/"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Vaxholms kommunchef arbetsbefriades efter en extern granskning av en kajrenovering på omkring 60 miljoner kronor. Granskningen pekade på allvarliga brister i upphandling och avtalshantering och kommunen gjorde en polisanmälan. Källorna visar en dokumenterad kontroll- och upphandlingsrisk, men inte att brott är fastställt.",
+    "title": "Vaxholm — kommunchef arbetsbefriad efter kritik mot kajupphandling"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-06",
+    "id": "c218",
+    "loc": {
+      "lat": 58.41,
+      "lng": 15.62,
+      "m": "Östergötland",
+      "p": "approximate",
+      "r": "Östergötland"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "sources": [
+      {
+        "l": "SVT Öst — Polis misstänks ha tagit betalt för sökningar",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/ost/polis-misstanks-ha-tagit-betalt-for-sokningar-atalas-for-dataintrang"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "En tidigare polis anställd i Region Öst åtalades misstänkt för behörighetsmissbruk och grovt dataintrång efter otillåtna registerslagningar 2019–2021. Enligt åtalet ska personen ha fått 8 000 kronor via Swish för en sökning; användning av polisens drivmedelskort ingick också i misstankarna. Den åtalade förnekade brott.",
+    "title": "Region Öst — tidigare polis åtalad efter betalda registerslagningar"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2025-09",
+    "id": "c219",
+    "loc": {
+      "lat": 57.71,
+      "lng": 11.97,
+      "m": "Göteborg",
+      "p": "municipality",
+      "r": "Västra Götaland"
+    },
+    "sector": "SOCIAL",
+    "sources": [
+      {
+        "l": "Omni — Två socialsekreterare åtalas efter brister i LVU-utredning",
+        "t": "media",
+        "url": "https://omni.se/a/rPoMn3"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Två socialsekreterare i Göteborg åtalades efter en allvarligt bristfällig utredning av ett barn enligt LVU. Föräldrarna hade inte fått möjlighet att bemöta uppgifterna; förvaltningsrätten avslog senare ansökan när bristerna blev tydliga. En av de åtalade misstänktes också för obehöriga journalslagningar. Posten beskriver åtalet och handläggningsbristerna, inte en fällande dom.",
+    "title": "Göteborg — socialsekreterare åtalade efter bristfällig LVU-utredning"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2025-05",
+    "id": "c220",
+    "loc": {
+      "lat": 59.33,
+      "lng": 18.07,
+      "m": "Stockholm",
+      "p": "municipality",
+      "r": "Stockholm"
+    },
+    "sector": "PROCUREMENT",
+    "sources": [
+      {
+        "l": "Omni — Tidigare Newsec-anställd misstänks ha sålt svarta hyreskontrakt",
+        "t": "media",
+        "url": "https://omni.se/a/yEdVlJ"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "En tidigare anställd vid fastighetsförvaltaren Newsec misstänktes ha sålt upp till 140 svarta hyreskontrakt under cirka två och ett halvt år. Personen greps efter att bolaget polisanmält saken och misstankarna gällde bland annat grovt brott mot jordabalken och grov trolöshet mot huvudman. Det finns inget verifierat domslut i det öppna underlaget.",
+    "title": "Stockholm/Newsec — tidigare anställd misstänkt för försäljning av svarta kontrakt"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-01",
+    "id": "c221",
+    "loc": {
+      "lat": 59.43,
+      "lng": 17.95,
+      "m": "Attunda",
+      "p": "approximate",
+      "r": "Stockholm"
+    },
+    "sector": "SOCIAL",
+    "sources": [
+      {
+        "l": "Omni — God man lurade dement kvinna på lägenhet och döms",
+        "t": "court",
+        "url": "https://omni.se/god-man-lurade-dement-kvinna-pa-lagenhet-doms/a/9pOqkM"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "En god man dömdes efter att ha fått en 95-årig kvinna med demens att föra över en lägenhet värd omkring 1,4 miljoner kronor. Domstolen dömde för två fall av grovt bedrägeri. Fallet visar hur en formell förtroenderoll och tillgång till en utsatt persons ekonomi kan användas för att skapa privat vinning.",
+    "title": "Attunda — god man dömd efter att ha lurat dement kvinna på lägenhet"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2023-09",
+    "id": "c222",
+    "loc": {
+      "lat": 62.39,
+      "lng": 17.31,
+      "m": "Sundsvall",
+      "p": "municipality",
+      "r": "Västernorrland"
+    },
+    "sector": "LOCAL_GOV",
+    "sources": [
+      {
+        "l": "SVT Västernorrland — Kommunanställda använde tjänstebilen privat",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vasternorrland/intern-granskning-visar-kommunanstallda-i-sundsvall-anvande-tjanstebilen-privat--lap646"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "En intern granskning i Sundsvalls kommun visade avvikande användning av kommunens tjänstebilar under 2020–2022. Uppgifterna omfattade 82 förare och cirka 2,7 miljoner resor; granskningen pekade på privat användning och andra avvikelser men fastställde inte brottsligt uppsåt hos varje förare. Fallet redovisas därför som en indikation på intern kontrollrisk.",
+    "title": "Sundsvall — intern granskning visade privat användning av tjänstebilar"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-07",
+    "id": "c223",
+    "loc": {
+      "lat": 55.43,
+      "lng": 13.82,
+      "m": "Ystad",
+      "p": "municipality",
+      "r": "Skåne"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "sources": [
+      {
+        "l": "Ystads Allehanda — Ex-anställd hos polisen döms för dataintrång",
+        "t": "court",
+        "url": "https://www.ystadsallehanda.se/ystad/ex-anstalld-hos-polisen-doms-for-dataintrang-178-onodiga-sokningar/"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "En tidigare polisanställd dömdes för dataintrång efter 178 onödiga sökningar i polisens system. Fallet visar hur tidigare eller nuvarande behörighet kan utnyttjas för upprepade informationssökningar som inte har stöd i arbetsuppgiften.",
+    "title": "Ystad — tidigare polis dömd efter 178 onödiga registerslagningar"
   }
 ]
