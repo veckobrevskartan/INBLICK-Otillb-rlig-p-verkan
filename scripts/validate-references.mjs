@@ -156,7 +156,7 @@ if (modules.includes('<button class="mobile-tab-btn"')) {
 }
 
 let chainItems = [];
-for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 25], ['CHAIN', 7]]) {
+for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 26], ['CHAIN', 7]]) {
   const match = modules.match(new RegExp(`const ${name}=(\\[[^\\n]*\\]);`));
   if (!match) {
     errors.push(`modules.html: ${name} saknas — en eller flera moduler kan inte starta`);
@@ -201,7 +201,7 @@ if (!questionsMatch) {
 // The canonical dataset is cases.json; the snapshot is checked separately when rebuilt.
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 164) errors.push(`Förväntade 164 fall, hittade ${cases.length}`);
+if (cases.length !== 198) errors.push(`Förväntade 198 fall, hittade ${cases.length}`);
 
 for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
   const count = cases.filter(item => item.actor === actor).length;
