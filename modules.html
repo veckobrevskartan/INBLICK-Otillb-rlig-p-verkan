@@ -2538,7 +2538,18 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   Sektionens CSS-klasser är prefixade med three-chairs- för att minimera
   risken för krockar med sidans befintliga design.
 -->
-<div id="three-chairs" class="three-chairs" aria-labelledby="three-chairs-title">
+<div class="theory-index-label reveal"><span>Välj område</span><strong>Öppna den del du vill läsa</strong></div>
+  <div class="theory-subnav reveal" id="theory-submenu" role="tablist" aria-label="Underkategorier i Teorier och modeller">
+    <button class="theory-subtab" id="theory-tab-core" type="button" role="tab" aria-selected="true" aria-controls="theory-panel-core" data-theory-tab="core"><span class="theory-subtab-n">01</span><span class="theory-subtab-t">Kärnmodeller</span></button>
+    <button class="theory-subtab" id="theory-tab-organisation" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-organisation" data-theory-tab="organisation" tabindex="-1"><span class="theory-subtab-n">02</span><span class="theory-subtab-t">Organisation &amp; fall</span></button>
+    <button class="theory-subtab" id="theory-tab-behaviour" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-behaviour" data-theory-tab="behaviour" tabindex="-1"><span class="theory-subtab-n">03</span><span class="theory-subtab-t">Beteende &amp; påverkan</span></button>
+    <button class="theory-subtab" id="theory-tab-conflict" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-conflict" data-theory-tab="conflict" tabindex="-1"><span class="theory-subtab-n">04</span><span class="theory-subtab-t">Konflikt &amp; arbetsmiljö</span></button>
+    <button class="theory-subtab" id="theory-tab-kks" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-kks" data-theory-tab="kks" tabindex="-1"><span class="theory-subtab-n">05</span><span class="theory-subtab-t">Krav · kontroll · stöd</span></button>
+    <button class="theory-subtab" id="theory-tab-insider" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-insider" data-theory-tab="insider" tabindex="-1"><span class="theory-subtab-n">06</span><span class="theory-subtab-t">Personalsäkerhet &amp; prövning</span></button>
+    <button class="theory-subtab" id="theory-tab-protection" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-protection" data-theory-tab="protection" tabindex="-1"><span class="theory-subtab-n">07</span><span class="theory-subtab-t">Relationer &amp; skydd</span></button>
+  </div>
+
+  <div id="three-chairs" class="three-chairs" aria-labelledby="three-chairs-title">
   <style>
     .three-chairs {
       --tc-ink: var(--text);
@@ -2589,15 +2600,15 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       border: 1px solid var(--tc-line);
       border-radius: 1rem;
       background: var(--bg-card);
-      box-shadow: 0 12px 32px rgba(22, 48, 71, .10);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .22);
     }
 
     .three-chairs__hero img {
       display: block;
       width: 100%;
       height: auto;
-      min-height: 300px;
-      object-fit: cover;
+      min-height: 0;
+      object-fit: contain;
     }
 
     .three-chairs__hero figcaption {
@@ -2646,9 +2657,11 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     .three-chairs__keywords li {
       padding: .2rem .55rem;
       border-radius: 999px;
-      background: #e7edef;
-      color: var(--tc-ink);
-      font-size: .82rem;
+      background: rgba(184,151,58,.14);
+      border: 1px solid rgba(184,151,58,.32);
+      color: var(--accent);
+      font-size: .72rem;
+      letter-spacing: .03em;
     }
 
     .three-chairs__questions,
@@ -2898,18 +2911,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 </div>
 
 
-<div class="theory-index-label reveal"><span>Välj område</span><strong>Öppna den del du vill läsa</strong></div>
-  <div class="theory-subnav reveal" id="theory-submenu" role="tablist" aria-label="Underkategorier i Teorier och modeller">
-    <button class="theory-subtab" id="theory-tab-core" type="button" role="tab" aria-selected="true" aria-controls="theory-panel-core" data-theory-tab="core"><span class="theory-subtab-n">01</span><span class="theory-subtab-t">Kärnmodeller</span></button>
-    <button class="theory-subtab" id="theory-tab-organisation" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-organisation" data-theory-tab="organisation" tabindex="-1"><span class="theory-subtab-n">02</span><span class="theory-subtab-t">Organisation &amp; fall</span></button>
-    <button class="theory-subtab" id="theory-tab-behaviour" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-behaviour" data-theory-tab="behaviour" tabindex="-1"><span class="theory-subtab-n">03</span><span class="theory-subtab-t">Beteende &amp; påverkan</span></button>
-    <button class="theory-subtab" id="theory-tab-conflict" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-conflict" data-theory-tab="conflict" tabindex="-1"><span class="theory-subtab-n">04</span><span class="theory-subtab-t">Konflikt &amp; arbetsmiljö</span></button>
-    <button class="theory-subtab" id="theory-tab-kks" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-kks" data-theory-tab="kks" tabindex="-1"><span class="theory-subtab-n">05</span><span class="theory-subtab-t">Krav · kontroll · stöd</span></button>
-    <button class="theory-subtab" id="theory-tab-insider" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-insider" data-theory-tab="insider" tabindex="-1"><span class="theory-subtab-n">06</span><span class="theory-subtab-t">Personalsäkerhet &amp; prövning</span></button>
-    <button class="theory-subtab" id="theory-tab-protection" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-protection" data-theory-tab="protection" tabindex="-1"><span class="theory-subtab-n">07</span><span class="theory-subtab-t">Relationer &amp; skydd</span></button>
-  </div>
-
-  <div class="theory-panel is-active" id="theory-panel-core" role="tabpanel" aria-labelledby="theory-tab-core" data-theory-panel="core">
+<div class="theory-panel is-active" id="theory-panel-core" role="tabpanel" aria-labelledby="theory-tab-core" data-theory-panel="core">
   <div class="theory-panel-intro"><strong>Kärnmodeller</strong><span>mål · möjliggörare · insider · motiv · situation · utvecklingsväg</span></div>
   <div class="edu-stack reveal">
     <details class="edu-card">
