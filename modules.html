@@ -2595,7 +2595,9 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     }
 
     .three-chairs__hero {
-      margin: 1.8rem 0 2rem;
+      width: 100%;
+      max-width: 720px;
+      margin: 1.6rem auto 1.9rem;
       overflow: hidden;
       border: 1px solid var(--tc-line);
       border-radius: 1rem;
@@ -2605,10 +2607,11 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 
     .three-chairs__hero img {
       display: block;
-      width: 100%;
-      height: auto;
-      min-height: 0;
-      object-fit: contain;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+      object-fit: contain !important;
     }
 
     .three-chairs__hero figcaption {
