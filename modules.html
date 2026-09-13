@@ -1558,6 +1558,23 @@ button,[onclick]{touch-action:manipulation}
 
 body.copy-protected,body.copy-protected *{user-select:none!important;-webkit-user-select:none!important;-moz-user-select:none!important}
 body.copy-protected input,body.copy-protected textarea,body.copy-protected select,body.copy-protected [contenteditable="true"]{user-select:text!important;-webkit-user-select:text!important;-moz-user-select:text!important}
+
+/* ─── LÄSBARHETSPASS ─── */
+.module li+li{margin-top:.48em}
+.module ul,.module ol{margin-bottom:1.05em}
+.module .three-chairs__hero{max-width:960px;margin-left:auto;margin-right:auto}
+.module .three-chairs__hero img{display:block;width:100%;height:auto}
+#mod-sectors [style*="minmax(230px,1fr)"]{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:1px!important;
+}
+@media(max-width:860px){
+  #mod-sectors [style*="minmax(230px,1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:560px){
+  #mod-sectors [style*="minmax(230px,1fr)"]{grid-template-columns:1fr!important}
+  .module .three-chairs__hero{margin-left:0;margin-right:0}
+}
 </style>
 </head>
 <body class="copy-protected">
@@ -1935,7 +1952,22 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       </div>
     </div>
   </details>
-  <div class="reveal" style="margin:0 0 48px">
+    <div style="background:var(--bg-mid);padding:28px" id="sectorPanelWrap">
+<div class="sector-panel show" id="sp-LOCAL_GOV">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
+        <div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#B8973A;margin-bottom:5px">Tvärsektoriell miljö</div>
+          <div style="font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.1">Kommuner och regioner</div>
+          <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Nära invånaren — många vägar till påverkan</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#B8973A;line-height:1">27</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">kopplade fall</div>
+          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#B8973A;margin-top:3px">HÖG RISK</div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(184,151,58,.05);border-left:2px solid #B8973A"><a href="https://bra.se/rapporter/arkiv/2025-04-01-otillaten-paverkan-fran-kriminella-och-extremistiska-grupperingar" target="_blank" rel="noopener">Brå (2025) ↗</a> beskriver kommunanställda och kommunpolitiker som särskilt sårbara eftersom den som försöker påverka ofta finns nära och stödet på lokal nivå kan vara ojämnt. <a href="https://bra.se/statistik/statistik-fran-enkatundersokningar/politikernas-trygghetsundersokning" target="_blank" rel="noopener">Politikernas trygghetsundersökning 2025 ↗</a> visar att 25,4 procent av de förtroendevalda uppgav utsatthet under 2024 och att 2,9 procent utsatts för korruptionsförsök.</div>
+  <div class="reveal sector-local-support" style="margin:0 0 48px">
     <p class="eyebrow">Stöd för kommuner och regioner</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Börja där <em>besluten fattas</em></h2>
     <p style="font-size:14px;color:var(--muted);max-width:760px;line-height:1.75;margin-bottom:20px">Kommuner och regioner behöver inte börja med att leta efter en viss typ av person. Börja med beslut, åtkomst och kontaktvägar: var finns handlingsutrymme, vilken information eller resurs skyddas och vem kan upptäcka en avvikelse?</p>
@@ -2061,21 +2093,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#5A3A3A">HÖG</span>
     </div>
 </div>
-    <div style="background:var(--bg-mid);padding:28px" id="sectorPanelWrap">
-<div class="sector-panel show" id="sp-LOCAL_GOV">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
-        <div>
-          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#B8973A;margin-bottom:5px">Tvärsektoriell miljö</div>
-          <div style="font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.1">Kommuner och regioner</div>
-          <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Nära invånaren — många vägar till påverkan</div>
-        </div>
-        <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#B8973A;line-height:1">27</div>
-          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">kopplade fall</div>
-          <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#B8973A;margin-top:3px">HÖG RISK</div>
-        </div>
-      </div>
-      <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(184,151,58,.05);border-left:2px solid #B8973A"><a href="https://bra.se/rapporter/arkiv/2025-04-01-otillaten-paverkan-fran-kriminella-och-extremistiska-grupperingar" target="_blank" rel="noopener">Brå (2025) ↗</a> beskriver kommunanställda och kommunpolitiker som särskilt sårbara eftersom den som försöker påverka ofta finns nära och stödet på lokal nivå kan vara ojämnt. <a href="https://bra.se/statistik/statistik-fran-enkatundersokningar/politikernas-trygghetsundersokning" target="_blank" rel="noopener">Politikernas trygghetsundersökning 2025 ↗</a> visar att 25,4 procent av de förtroendevalda uppgav utsatthet under 2024 och att 2,9 procent utsatts för korruptionsförsök.</div>
+
       <details class="edu-card" style="margin:0 0 18px">
         <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Rapporter och utredningar · Kommunal motståndskraft</span><span class="edu-summary-meta">2026 · 2023</span></summary>
         <div class="edu-body">
@@ -10268,7 +10286,7 @@ document.addEventListener('click',function(e){
 });
 function show(key,options={}){
   const requested=document.getElementById('mod-'+key);
-  const safeKey=requested?key:'chain';
+  const safeKey=requested?key:'method';
   document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
   document.querySelectorAll('.cat-tabs a').forEach(a=>a.classList.remove('active'));
   document.querySelectorAll('.cat-tabs a').forEach(a=>a.removeAttribute('aria-current'));
@@ -10395,6 +10413,7 @@ function initTheoryTabs(){
 }
 
 const MODULE_GUIDES={
+  method:'Börja med de tre frågorna: vad hände, vilken roll blev sårbar och vad gjorde organisationen efteråt.',
   chain:'Välj ett av de sju stegen för att öppna fördjupningen.',
   map:'Använd samma filter för kartan och fallförteckningen. Sökfältet begränsar båda vyerna, och varje fall öppnar källorna och den fullständiga beskrivningen.',
   sectors:'Välj en sektormiljö i listan för att öppna analysen.',
@@ -11459,7 +11478,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const requestedCaseId=new URLSearchParams(window.location.search).get('case');
   const validRequestedCase=CASES.some(c=>c.id===requestedCaseId);
   const deepAnchor=validRequestedCase?null:getDeepAnchor();
-  const hashKey=validRequestedCase?'map':deepAnchor?deepAnchor.key:window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'chain';
+  const hashKey=validRequestedCase?'map':deepAnchor?deepAnchor.key:window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'method';
   const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
   // ACTORS deklareras efter sektordatan. Synkronisera därför först när hela skriptet har utvärderats.
   ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});
