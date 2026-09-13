@@ -11584,6 +11584,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   initDisclosureCues();
   buildSectorQuickNav();
   initMobileDetailAccordions();
+  selectSector('LOCAL_GOV');
   const resolvedDeepAnchor=validRequestedCase?null:(deepAnchor||getDeepAnchor());
   if(resolvedDeepAnchor)openDeepAnchor(resolvedDeepAnchor);
   if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
