@@ -11479,7 +11479,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   const validRequestedCase=CASES.some(c=>c.id===requestedCaseId);
   const deepAnchor=validRequestedCase?null:getDeepAnchor();
   const hashKey=validRequestedCase?'map':deepAnchor?deepAnchor.key:window.location.hash.startsWith('#mod-')?window.location.hash.slice(5):'method';
-  const startMod=document.getElementById('mod-'+hashKey)?hashKey:'chain';
+  const startMod=document.getElementById('mod-'+hashKey)?hashKey:'method';
   // ACTORS deklareras efter sektordatan. Synkronisera därför först när hela skriptet har utvärderats.
   ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});
   document.querySelectorAll('a[href^="#mod-"]').forEach(link=>link.addEventListener('click',()=>{
