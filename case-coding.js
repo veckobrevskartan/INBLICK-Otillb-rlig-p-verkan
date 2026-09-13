@@ -3829,6 +3829,176 @@ window.INBLICK_CASE_CODING = {
     "source_urls": [
       "https://www.gp.se/nyheter/goteborg/hamnchef-vid-grefab-tvingas-ga.f808c4d9-751d-4796-a841-509cb64f5093"
     ]
+  },
+  "c224": {
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "DUTIES",
+        "GOVERNANCE"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.nt.se/nyheter/norrkoping/artikel/rostmottagare-avstangd-efter-incident-i-mirum-galleria/jvznoypr"
+    ]
+  },
+  "c225": {
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "DUTIES",
+        "GOVERNANCE"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.nt.se/nyheter/valdemarsvik/artikel/valarbetare-avstangd-efter-incident-i-valdemarsvik/l78oy70j"
+    ]
+  },
+  "c226": {
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.smp.se/alvesta/filmning-och-otillaten-paverkan-flera-incidenter-i-alvestas-vallokaler/"
+    ]
+  },
+  "c227": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.expressen.se/nyheter/politik/jonas-attenius-s-hotad-i-goteborg/",
+      "https://www.dn.se/sverige/man-gick-till-attack-mot-s-toppen/"
+    ]
+  },
+  "c228": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://polisen.se/aktuellt/handelser/2026/september/8/8-september-17.28-valdhot-mot-tjansteman-goteborg/"
+    ]
+  },
+  "c229": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://polisen.se/aktuellt/handelser/2026/september/9/9-september-11.19-olaga-hot-soderhamn/"
+    ]
+  },
+  "c230": {
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE",
+        "DUTIES"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbGlMLW12Ymd0WWtnLXEtSlFMTGxVM1QtTkFvc25BWUstd0gzb0t0YTFUZTBoVjdaV1FBYkJNUUFlTVJ2dHVCSFRCUkwyeUtnbHA5QTVwcHNGUE1SNVFaVHFwU0d1MGdGVjM1RU5JWVBCT3NoMzZQbERSdVFFdnpnZ2k1ZlVCbHo1YVFkOERB?oc=5",
+      "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNc1NrRS1TeGs1ZHBrWHZ0S0pfdm1aQzRhR2JmWGprakR0NDZSMHYwSVFYMFRzSl84NzRicGxFMUlsVkhwaWNhR2NxeGlqRm9XdWtfOTJOY3IwTlo2cW9YYWJldU9feFNJQ0pzczE1ZGZ0c2pYeWhnZGFGWVhfOFg2T1p3cDJDaUJ6WXZOSnhfX2NZQ1F5X3RzTlpQSF9kRVVCeHFpbGdjMTFUSUE?oc=5"
+    ]
+  },
+  "c231": {
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.blt.se/nyheter/moderaterna-jo-anmaler-bidrag-till-toppolitikerns-forening-det-luktar-fiffel/",
+      "https://www.blt.se/nyheter/toppolitikerns-forening-fick-skattepengar-for-idrott-anlaggningen-anvands-som-loppislager/"
+    ]
   }
 };
 ;

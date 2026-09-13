@@ -5527,5 +5527,204 @@
     "status": "CONFIRMED",
     "summary": "En tidigare polisanställd dömdes för dataintrång efter 178 onödiga sökningar i polisens system. Fallet visar hur tidigare eller nuvarande behörighet kan utnyttjas för upprepade informationssökningar som inte har stöd i arbetsuppgiften.",
     "title": "Ystad — tidigare polis dömd efter 178 onödiga registerslagningar"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-09",
+    "id": "c224",
+    "loc": {
+      "lat": 58.5877,
+      "lng": 16.1924,
+      "m": "Norrköping",
+      "p": "municipality",
+      "r": "Östergötland"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "sources": [
+      {
+        "l": "Norrköpings Tidningar — Röstmottagare plockas bort efter incident i vallokal (2026-09-08)",
+        "t": "media",
+        "url": "https://www.nt.se/nyheter/norrkoping/artikel/rostmottagare-avstangd-efter-incident-i-mirum-galleria/jvznoypr"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "En röstmottagare i Mirum galleria anmäldes för att ha försökt påverka en väljare. Valnämndens ordförande uppgav att förtroendet för personen saknades och röstmottagaren togs permanent bort från uppdraget. Den administrativa åtgärden är dokumenterad, men det öppna underlaget ger inte en fullständig eller rättsligt prövad beskrivning av själva händelsen.",
+    "title": "Norrköping — röstmottagare togs bort efter uppgift om påverkan på väljare"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-09",
+    "id": "c225",
+    "loc": {
+      "lat": 58.2031,
+      "lng": 16.6023,
+      "m": "Valdemarsvik",
+      "p": "municipality",
+      "r": "Östergötland"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "sources": [
+      {
+        "l": "Norrköpings Tidningar — Valarbetare avstängd efter incident i Valdemarsvik (2026-09-10)",
+        "t": "media",
+        "url": "https://www.nt.se/nyheter/valdemarsvik/artikel/valarbetare-avstangd-efter-incident-i-valdemarsvik/l78oy70j"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "En röstmottagare stängdes av från sitt uppdrag efter uppgifter om att personen hade talat politik i vallokalen och uttryckt sig negativt om en folkgrupp. Avstängningen och valkansliets reaktion är dokumenterade, medan de bakomliggande uppgifterna inte är rättsligt prövade i det öppna underlaget.",
+    "title": "Valdemarsvik — röstmottagare stängdes av efter politiska uttalanden i vallokal"
+  },
+  {
+    "actor": "UNKNOWN",
+    "date": "2026-09",
+    "id": "c226",
+    "loc": {
+      "lat": 56.8992,
+      "lng": 14.5556,
+      "m": "Alvesta",
+      "p": "municipality",
+      "r": "Kronoberg"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "sources": [
+      {
+        "l": "Smålandsposten — Filmning och otillåten påverkan i Alvestas vallokaler (2026-09-10)",
+        "t": "media",
+        "url": "https://www.smp.se/alvesta/filmning-och-otillaten-paverkan-flera-incidenter-i-alvestas-vallokaler/"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "En kandidat till kommunfullmäktige uppgavs ha spelat in en politisk reklamfilm med sig själv i en röstningslokal. Händelsen var en av flera valincidenter som rapporterades till länsstyrelsen. Det öppna underlaget beskriver en rapporterad händelse, inte ett slutligt avgörande om regelbrott eller ansvar.",
+    "title": "Alvesta — kandidat uppgavs ha spelat in politisk reklamfilm i röstningslokal"
+  },
+  {
+    "actor": "UNKNOWN",
+    "date": "2026-09",
+    "id": "c227",
+    "loc": {
+      "lat": 57.7049,
+      "lng": 11.9346,
+      "m": "Göteborg",
+      "p": "municipality",
+      "r": "Västra Götaland"
+    },
+    "sector": "LOCAL_GOV",
+    "sources": [
+      {
+        "l": "Expressen — Jonas Attenius hotad i Göteborg (2026-09-12)",
+        "t": "media",
+        "url": "https://www.expressen.se/nyheter/politik/jonas-attenius-s-hotad-i-goteborg/"
+      },
+      {
+        "l": "Dagens Nyheter — Man gick till attack mot S-toppen (2026-09-12)",
+        "t": "media",
+        "url": "https://www.dn.se/sverige/man-gick-till-attack-mot-s-toppen/"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Göteborgs kommunstyrelseordförande Jonas Attenius uppgav att en man under valarbete vid Klippans ångbåtsbrygga kallade honom landsförrädare och hotade att kasta honom i vattnet. Händelsen polisanmäldes som misstänkt olaga hot. Posten beskriver anmälan och Attenius uppgifter; någon rättslig prövning har inte redovisats.",
+    "title": "Göteborg — kommunstyrelsens ordförande uppgav att han hotades under valarbete"
+  },
+  {
+    "actor": "UNKNOWN",
+    "date": "2026-09",
+    "id": "c228",
+    "loc": {
+      "lat": 57.7049,
+      "lng": 11.9346,
+      "m": "Göteborg",
+      "p": "municipality",
+      "r": "Västra Götaland"
+    },
+    "sector": "TRANSPORT",
+    "sources": [
+      {
+        "l": "Polismyndigheten — Två ärenden om våld och hot mot biljettkontrollanter (2026-09-08)",
+        "t": "authority",
+        "url": "https://polisen.se/aktuellt/handelser/2026/september/8/8-september-17.28-valdhot-mot-tjansteman-goteborg/"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Polisen rapporterade två separata händelser samma eftermiddag där biljettkontrollanter i Göteborg utsattes för hot eller våld i samband med kontrollarbete. I det ena ärendet greps en man misstänkt för försök till våld och hot mot tjänsteman. I det andra upprättades även en motanmälan om tjänstefel. Uppgifterna är preliminära och skuld är inte fastställd.",
+    "title": "Göteborg — två biljettkontrollanter utsattes för hot eller våld i tjänsten"
+  },
+  {
+    "actor": "UNKNOWN",
+    "date": "2026-09",
+    "id": "c229",
+    "loc": {
+      "lat": 61.3037,
+      "lng": 17.0592,
+      "m": "Söderhamn",
+      "p": "municipality",
+      "r": "Gävleborg"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "sources": [
+      {
+        "l": "Polismyndigheten — Man gripen efter hot mot valarbetare (2026-09-09)",
+        "t": "authority",
+        "url": "https://polisen.se/aktuellt/handelser/2026/september/9/9-september-11.19-olaga-hot-soderhamn/"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Polisen uppgav att en man greps efter hot mot valarbetare i Söderhamn. Den offentliga händelsenotisen innehåller inga närmare omständigheter eller uppgifter om ett rättsligt utfall. Fallet redovisas därför som en indikation på hot riktat mot en demokratisk funktion, inte som fastställd skuld.",
+    "title": "Söderhamn — man greps efter uppgifter om hot mot valarbetare"
+  },
+  {
+    "actor": "INSIDER",
+    "date": "2026-09",
+    "id": "c230",
+    "loc": {
+      "lat": 65.5848,
+      "lng": 22.1567,
+      "m": "Region Norrbotten",
+      "p": "approximate",
+      "r": "Norrbotten"
+    },
+    "sector": "HEALTH",
+    "sources": [
+      {
+        "l": "Läkartidningen — Norrbotten medger jäv vid chefsrekrytering (2026-09-09)",
+        "t": "media",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbGlMLW12Ymd0WWtnLXEtSlFMTGxVM1QtTkFvc25BWUstd0gzb0t0YTFUZTBoVjdaV1FBYkJNUUFlTVJ2dHVCSFRCUkwyeUtnbHA5QTVwcHNGUE1SNVFaVHFwU0d1MGdGVjM1RU5JWVBCT3NoMzZQbERSdVFFdnpnZ2k1ZlVCbHo1YVFkOERB?oc=5"
+      },
+      {
+        "l": "Kuriren — Region Norrbotten medger jäv till JO (2026-09-08)",
+        "t": "media",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNc1NrRS1TeGs1ZHBrWHZ0S0pfdm1aQzRhR2JmWGprakR0NDZSMHYwSVFYMFRzSl84NzRicGxFMUlsVkhwaWNhR2NxeGlqRm9XdWtfOTJOY3IwTlo2cW9YYWJldU9feFNJQ0pzczE1ZGZ0c2pYeWhnZGFGWVhfOFg2T1p3cDJDaUJ6WXZOSnhfX2NZQ1F5X3RzTlpQSF9kRVVCeHFpbGdjMTFUSUE?oc=5"
+      }
+    ],
+    "status": "CONFIRMED",
+    "summary": "Region Norrbotten medgav i ett svar till JO att en chef var jävig när chefen deltog i rekryteringen av sin partner till psykiatrin. Regionen uppgav att chefen inte borde ha deltagit och att rekryteringen skulle göras om. Klassningen bekräftat avser regionens egen jävsbedömning och korrigerande åtgärd, inte något påstående om brott.",
+    "title": "Region Norrbotten — medgav jäv när chef deltog i rekrytering av sin partner"
+  },
+  {
+    "actor": "ECONOMIC_INTEREST",
+    "date": "2026-09",
+    "id": "c231",
+    "loc": {
+      "lat": 56.2777,
+      "lng": 14.534,
+      "m": "Olofström",
+      "p": "municipality",
+      "r": "Blekinge"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "sources": [
+      {
+        "l": "Blekinge Läns Tidning — Moderaterna JO-anmäler bidrag till toppolitikerns förening (2026-09-07)",
+        "t": "media",
+        "url": "https://www.blt.se/nyheter/moderaterna-jo-anmaler-bidrag-till-toppolitikerns-forening-det-luktar-fiffel/"
+      },
+      {
+        "l": "Blekinge Läns Tidning — Förening fick stöd trots öde plan och lokaler som magasin (2026-09-07)",
+        "t": "media",
+        "url": "https://www.blt.se/nyheter/toppolitikerns-forening-fick-skattepengar-for-idrott-anlaggningen-anvands-som-loppislager/"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Efter en granskning av kommunala stöd till Gränums IF gjorde Moderaterna i Olofström en JO-anmälan och begärde extern juridisk granskning. Föreningen, vars ordförande var vice kommunalråd, hade enligt rapporteringen fått närmare 80 000 kronor i stöd trots att fotbollsplanen stod öde och lokaler användes som magasin. Uppgifterna visar en möjlig intressekonflikt; JO-anmälan och granskningen fastställer inte att bidragsbesluten påverkats otillbörligt.",
+    "title": "Olofström — föreningsbidrag till vice kommunalråds förening JO-anmäldes"
   }
 ]
