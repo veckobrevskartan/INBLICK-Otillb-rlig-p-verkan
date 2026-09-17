@@ -581,9 +581,8 @@ window.INBLICK_CASE_CODING = {
     },
     "basis": "RECORD_REVIEW",
     "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
-    "source_count": 2,
+    "source_count": 1,
     "source_urls": [
-      "https://www.jensnylander.com/vinnovakonsult-fick-riggat-guldavtal/",
       "https://www.breakit.se/artikel/39553/jens-nylander-offentligt-anstallda-har-mjolkat-vinnova-pa-hundratals-miljoner"
     ]
   },
@@ -1539,9 +1538,8 @@ window.INBLICK_CASE_CODING = {
     },
     "basis": "RECORD_REVIEW",
     "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
-    "source_count": 2,
+    "source_count": 1,
     "source_urls": [
-      "https://www.jensnylander.com/energimyndighetens-grona-laddfiasko/",
       "https://www.svd.se/a/Pp4wxJ/jens-nylander-avslojar-den-grona-bidragskapitalismen"
     ]
   },
