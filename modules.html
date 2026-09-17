@@ -694,6 +694,13 @@ html:not(.js-ready) .theory-subnav{display:none}
 .arch-status span{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--status-c,var(--accent));margin-bottom:7px}
 .arch-status strong{display:block;font-family:var(--fd);font-size:19px;font-weight:400;line-height:1.2;margin-bottom:6px}
 .arch-status p{font-size:11.5px;color:var(--muted);line-height:1.62;margin:0}
+.arch-sourcebar{margin:0 0 42px;padding:16px 18px;background:rgba(14,30,56,.72);border:1px solid var(--border);border-left:3px solid var(--accent)}
+.arch-sourcebar-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:11px}
+.arch-sourcebar-head strong{font-family:var(--fd);font-size:20px;font-weight:400;color:var(--text)}
+.arch-sourcebar-head span{font-family:var(--fm);font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.arch-sourcebar-links{display:flex;flex-wrap:wrap;gap:7px}
+.arch-sourcebar-links a{display:inline-flex;align-items:center;padding:7px 9px;background:var(--bg-card);border:1px solid var(--border-s);font-family:var(--fm);font-size:8.5px;letter-spacing:.03em;color:var(--accent);text-decoration:none;transition:.15s}
+.arch-sourcebar-links a:hover{background:var(--bg-mid);border-color:var(--accent);color:var(--text)}
 .arch-section{margin:0 0 54px}
 .arch-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:19px}
 .arch-section-kicker{font-family:var(--fm);font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
@@ -782,7 +789,7 @@ html:not(.js-ready) .theory-subnav{display:none}
   .arch-orbit{min-height:560px}.arch-node{width:142px}.arch-orbit::before{inset:92px 125px}.arch-core{width:214px}.arch-scenario{grid-template-columns:repeat(2,minmax(0,1fr))}.arch-scenario article:nth-child(5)::after{display:block}.arch-scenario article:nth-child(even)::after{display:none}.arch-scenario article:last-child{grid-column:1/-1;min-height:132px}
 }
 @media(max-width:760px){
-  .arch-embedded{margin-top:48px;padding-top:34px}.arch-embedded-label{display:block}.arch-embedded-label strong{display:block;margin-top:6px}
+  .arch-embedded{margin-top:48px;padding-top:34px}.arch-embedded-label{display:none}
   .arch-hero{padding:26px 22px}.arch-status{grid-template-columns:1fr}.arch-section-head{display:block}.arch-section-note{text-align:left;margin-top:8px;max-width:620px}
   .arch-orbit{display:grid;grid-template-columns:1fr 1fr;gap:2px;min-height:0;margin-bottom:2px;background:var(--border-s);border:1px solid var(--border-s)}
   .arch-orbit::before,.arch-orbit::after{display:none}.arch-core{position:static;grid-column:1/-1;transform:none;width:auto;aspect-ratio:auto;border-radius:0;min-height:150px;padding:25px}
@@ -3691,6 +3698,17 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       <article style="--status-c:var(--orange)"><span>Status</span><strong>Ett koncept under utveckling</strong><p>ARCHETYPE bör inte beskrivas som en etablerad eller vetenskapligt validerad underrättelsemodell. Larsson beskriver den själv som ett koncept han arbetar med.</p></article>
       <article style="--status-c:var(--green)"><span>Kunskapsgrund</span><strong>Kända mekanismer</strong><p>Delarna har tydliga beröringspunkter med HUMINT, kontraspionage, elicitation, social påverkan och forskning om insiderproblematik.</p></article>
       <article style="--status-c:var(--accent)"><span>Bidrag</span><strong>En sammanhållen analyslins</strong><p>Det nya ligger främst i hur flera befintliga perspektiv förs ihop och används för att läsa en relation från angriparens håll.</p></article>
+    </div>
+
+    <div class="arch-sourcebar reveal" aria-label="Källor till ARCHETYPE-modellen">
+      <div class="arch-sourcebar-head"><strong>Källor till modellen</strong><span>Öppna originalkällan</span></div>
+      <div class="arch-sourcebar-links">
+        <a href="https://www.linkedin.com/pulse/n%C3%A4r-spionage-inte-ser-ut-som-petter-larsson-yf5se" target="_blank" rel="noopener noreferrer">Larsson · ARCHETYPE ↗</a>
+        <a href="https://www.cia.gov/resources/csi/studies-in-intelligence/volume-57-no-1/an-alternative-framework-for-agent-recruitment-from-mice-to-rascls/" target="_blank" rel="noopener noreferrer">CIA · MICE och RASCLS ↗</a>
+        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jip.1482" target="_blank" rel="noopener noreferrer">Wiley · social engineering ↗</a>
+        <a href="https://www.npsa.gov.uk/national-security-act/defending-democracy/countering-espionage-and-foreign-interference" target="_blank" rel="noopener noreferrer">NPSA · påverkan och cultivation ↗</a>
+        <a href="#archetype-references">Fullständig referenslista ↓</a>
+      </div>
     </div>
 
     <section class="arch-section reveal" aria-labelledby="arch-map-title">
