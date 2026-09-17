@@ -733,7 +733,7 @@ html:not(.js-ready) .theory-subnav{display:none}
 .arch-legend{max-width:930px;margin:12px auto 0;padding:12px 15px;background:rgba(74,123,111,.07);border-left:2px solid var(--green);font-size:11.5px;line-height:1.65;color:var(--muted)}
 .arch-legend strong{color:var(--text);font-weight:500}
 .arch-lens-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-s);border:1px solid var(--border-s)}
-.arch-lens{background:var(--bg-card)}
+.arch-lens{background:var(--bg-card);scroll-margin-top:96px}
 .arch-lens summary{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;min-height:72px;padding:14px 18px;cursor:pointer;list-style:none}
 .arch-lens summary::-webkit-details-marker{display:none}
 .arch-lens summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
@@ -3713,7 +3713,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       </div>
       <div class="arch-detail" id="archetypeDetail" role="region" aria-live="polite">
         <div class="arch-detail-head"><span class="arch-detail-letter">A</span><span class="arch-detail-name">Access</span></div>
-        <div class="arch-detail-body"><h3 class="arch-detail-question">Vem bär på det som en motståndare vill åt?</h3><p class="arch-detail-copy">Sök faktisk kunskap, åtkomst och erfarenhet – inte bara hög befattning eller formell behörighet. Tyst kunskap om svagheter, beroenden och verkliga beslutsvägar kan vara mer värdefull än ett enskilt dokument.</p><a class="arch-detail-link" href="#arch-lens-access">Läs hela avsnittet ↓</a></div>
+        <div class="arch-detail-body"><h3 class="arch-detail-question">Vem bär på det som en motståndare vill åt?</h3><p class="arch-detail-copy">Sök faktisk kunskap, åtkomst och erfarenhet – inte bara hög befattning eller formell behörighet. Tyst kunskap om svagheter, beroenden och verkliga beslutsvägar kan vara mer värdefull än ett enskilt dokument.</p><a class="arch-detail-link" href="#arch-lens-access" onclick="return openArchetypeSection('access',event)">Läs hela avsnittet ↓</a></div>
       </div>
       <div class="arch-legend"><strong>Så ska bilden läsas:</strong> ARCHETYPE är en uppsättning frågor, inte en poängmodell. Flera linser kan vara relevanta samtidigt och en träff är inte ett tecken på skuld.</div>
     </section>
@@ -10690,11 +10690,22 @@ function placeArchetypeDetail(key,{scroll=false}={}){
     detail.classList.remove('arch-detail-inline');
   }
 }
+function openArchetypeSection(key,event){
+  if(event)event.preventDefault();
+  const target=document.getElementById(`arch-lens-${key}`);
+  if(!target)return false;
+  target.open=true;
+  const url=new URL(window.location.href);
+  url.hash=`#${target.id}`;
+  history.replaceState(null,'',url);
+  setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),40);
+  return false;
+}
 function selectArchetypeLens(key,{scroll=true}={}){
   const lens=ARCHETYPE_LENSES[key],detail=document.getElementById('archetypeDetail');
   if(!lens||!detail)return;
   document.querySelectorAll('.arch-node[data-arch]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.arch===key?'true':'false'));
-  detail.innerHTML=`<div class="arch-detail-head"><span class="arch-detail-letter">${lens.letter}</span><span class="arch-detail-name">${lens.name}</span></div><div class="arch-detail-body"><h3 class="arch-detail-question">${lens.question}</h3><p class="arch-detail-copy">${lens.copy}</p><a class="arch-detail-link" href="#arch-lens-${key}">Läs hela avsnittet ↓</a></div>`;
+  detail.innerHTML=`<div class="arch-detail-head"><span class="arch-detail-letter">${lens.letter}</span><span class="arch-detail-name">${lens.name}</span></div><div class="arch-detail-body"><h3 class="arch-detail-question">${lens.question}</h3><p class="arch-detail-copy">${lens.copy}</p><a class="arch-detail-link" href="#arch-lens-${key}" onclick="return openArchetypeSection('${key}',event)">Läs hela avsnittet ↓</a></div>`;
   placeArchetypeDetail(key,{scroll});
 }
 
