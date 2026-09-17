@@ -675,6 +675,10 @@ html:not(.js-ready) .theory-subnav{display:none}
 @media(max-width:440px){.theory-subnav{grid-template-columns:1fr}.theory-subtab{min-height:48px}}
 
 /* ARCHETYPE — interaktiv analysmodell */
+.arch-embedded{margin-top:64px;padding-top:48px;border-top:1px solid var(--border-s)}
+.arch-embedded-label{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:0 0 20px}
+.arch-embedded-label span{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.arch-embedded-label strong{font-family:var(--fd);font-size:28px;font-weight:300;color:var(--text)}
 .arch-hero{position:relative;overflow:hidden;padding:34px 36px;margin:0 0 30px;background:linear-gradient(135deg,rgba(184,151,58,.13),rgba(14,30,56,.94) 48%,rgba(74,123,111,.12));border:1px solid var(--border)}
 .arch-hero::after{content:'ARCHETYPE';position:absolute;right:-18px;bottom:-26px;font-family:var(--fd);font-size:clamp(72px,11vw,142px);font-weight:300;letter-spacing:.02em;color:rgba(240,237,230,.025);pointer-events:none;white-space:nowrap}
 .arch-meta{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
@@ -778,12 +782,14 @@ html:not(.js-ready) .theory-subnav{display:none}
   .arch-orbit{min-height:560px}.arch-node{width:142px}.arch-orbit::before{inset:92px 125px}.arch-core{width:214px}.arch-scenario{grid-template-columns:repeat(2,minmax(0,1fr))}.arch-scenario article:nth-child(5)::after{display:block}.arch-scenario article:nth-child(even)::after{display:none}.arch-scenario article:last-child{grid-column:1/-1;min-height:132px}
 }
 @media(max-width:760px){
+  .arch-embedded{margin-top:48px;padding-top:34px}.arch-embedded-label{display:block}.arch-embedded-label strong{display:block;margin-top:6px}
   .arch-hero{padding:26px 22px}.arch-status{grid-template-columns:1fr}.arch-section-head{display:block}.arch-section-note{text-align:left;margin-top:8px;max-width:620px}
   .arch-orbit{display:grid;grid-template-columns:1fr 1fr;gap:2px;min-height:0;margin-bottom:2px;background:var(--border-s);border:1px solid var(--border-s)}
   .arch-orbit::before,.arch-orbit::after{display:none}.arch-core{position:static;grid-column:1/-1;transform:none;width:auto;aspect-ratio:auto;border-radius:0;min-height:150px;padding:25px}
   .arch-node,.arch-node:hover,.arch-node[aria-pressed="true"]{--node-x:0;position:static;width:auto;min-height:68px;transform:none!important;border:0;border-top:2px solid transparent;box-shadow:none}
   .arch-node[aria-pressed="true"]{border-top-color:var(--accent);outline:0}
   .arch-detail{grid-template-columns:1fr}.arch-detail-head{display:grid;grid-template-columns:auto 1fr;align-items:center;justify-content:start;gap:12px;padding:17px 20px;border-right:0;border-bottom:1px solid var(--border-s)}.arch-detail-letter{margin:0;font-size:37px}.arch-detail-body{padding:19px 20px}
+  .arch-detail.arch-detail-inline{grid-column:1/-1;width:100%;margin:0;scroll-margin-top:96px;border-left:3px solid var(--accent)}
   .arch-lens-grid,.arch-bridge,.arch-paths,.arch-use{grid-template-columns:1fr}.arch-prompts{grid-template-columns:1fr}
 }
 @media(max-width:460px){.arch-orbit{grid-template-columns:1fr}.arch-core{grid-column:auto}.arch-lens-grid,.arch-scenario{grid-template-columns:1fr}.arch-scenario article::after{display:none!important}.arch-scenario article:last-child{grid-column:auto}.arch-scenario article{min-height:0}}
@@ -2680,7 +2686,6 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <button class="theory-subtab" id="theory-tab-kks" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-kks" data-theory-tab="kks" tabindex="-1"><span class="theory-subtab-n">05</span><span class="theory-subtab-t">Krav · kontroll · stöd</span></button>
     <button class="theory-subtab" id="theory-tab-insider" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-insider" data-theory-tab="insider" tabindex="-1"><span class="theory-subtab-n">06</span><span class="theory-subtab-t">Personalsäkerhet &amp; prövning</span></button>
     <button class="theory-subtab" id="theory-tab-protection" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-protection" data-theory-tab="protection" tabindex="-1"><span class="theory-subtab-n">07</span><span class="theory-subtab-t">Relationer &amp; skydd</span></button>
-    <button class="theory-subtab" id="theory-tab-archetype" type="button" role="tab" aria-selected="false" aria-controls="theory-panel-archetype" data-theory-tab="archetype" tabindex="-1"><span class="theory-subtab-n">08</span><span class="theory-subtab-t">ARCHETYPE</span></button>
   </div>
 
   <div id="three-chairs" class="three-chairs" aria-labelledby="three-chairs-title">
@@ -3601,7 +3606,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </div>
 
   <div class="theory-panel" id="theory-panel-behaviour" role="tabpanel" aria-labelledby="theory-tab-behaviour" data-theory-panel="behaviour">
-  <div class="theory-panel-intro"><strong>Beteende och påverkan</strong><span>skyddsmotivation · förmåga · sociala normer · påverkansprinciper</span></div>
+  <div class="theory-panel-intro"><strong>Beteende och påverkan</strong><span>skyddsmotivation · förmåga · sociala normer · påverkansprinciper · ARCHETYPE</span></div>
   <div class="reveal">
     <p class="eyebrow">Rogers · Protection Motivation Theory</p>
     <h2 style="font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;margin-bottom:10px">Protection Motivation Theory <em>(PMT)</em></h2>
@@ -3668,6 +3673,226 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div style="background:var(--bg-card);padding:20px"><div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:7px">U — Gemenskap</div><div style="font-family:var(--fd);font-size:18px;font-weight:400;margin-bottom:7px">Unity</div><div style="font-size:12px;color:var(--muted);line-height:1.65">En gemensam identitet — ”en av oss” — kan göra en begäran svårare att avvisa och förstärka lojalitet till gruppen framför organisationen.</div></div>
   </div>
   <div class="op-source-row reveal"><a href="https://www.influenceatwork.com/7-principles-of-persuasion/" target="_blank" rel="noopener">Cialdini — sju principer för påverkan ↗</a><a href="https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk" target="_blank" rel="noopener">Brå 2024 — relationsbyggande vid rekrytering ↗</a></div>
+
+  <div class="arch-embedded" id="archetype">
+    <div class="arch-embedded-label reveal"><span>Fördjupning · Beteende och påverkan</span><strong>ARCHETYPE</strong></div>
+
+    <section class="arch-hero reveal" id="archetype-intro" aria-labelledby="archetype-title">
+      <div class="arch-meta">
+        <span class="arch-pill">Petter Larsson · 2026</span>
+        <span class="arch-pill">Angriparperspektiv</span>
+        <span class="arch-pill caution">Konceptuell modell · inte validerad metod</span>
+      </div>
+      <h2 class="arch-title" id="archetype-title">ARCHETYPE<em>När en normal kontakt förändras</em></h2>
+      <p class="arch-lead"><strong>Petter Larsson ger en intressant modell med ARCHETYPE, ett sätt att förstå hur en kontakt som från början ser helt normal ut kan utvecklas till en säkerhetsrisk.</strong> Modellen vänder på perspektivet. I stället för att börja med frågan om vem som är illojal eller sårbar frågar man: Om en främmande aktör vill komma åt en organisations kunskap, förmåga eller beslut genom en människa – vem skulle aktören välja, hur skulle kontakten tas och hur skulle relationen kunna utvecklas över tid? (Larsson, 2026).</p>
+    </section>
+
+    <div class="arch-status reveal" aria-label="Modellens kunskapsstatus">
+      <article style="--status-c:var(--orange)"><span>Status</span><strong>Ett koncept under utveckling</strong><p>ARCHETYPE bör inte beskrivas som en etablerad eller vetenskapligt validerad underrättelsemodell. Larsson beskriver den själv som ett koncept han arbetar med.</p></article>
+      <article style="--status-c:var(--green)"><span>Kunskapsgrund</span><strong>Kända mekanismer</strong><p>Delarna har tydliga beröringspunkter med HUMINT, kontraspionage, elicitation, social påverkan och forskning om insiderproblematik.</p></article>
+      <article style="--status-c:var(--accent)"><span>Bidrag</span><strong>En sammanhållen analyslins</strong><p>Det nya ligger främst i hur flera befintliga perspektiv förs ihop och används för att läsa en relation från angriparens håll.</p></article>
+    </div>
+
+    <section class="arch-section reveal" aria-labelledby="arch-map-title">
+      <div class="arch-section-head">
+        <div><div class="arch-section-kicker">Interaktiv översikt · välj ett begrepp</div><h2 class="arch-section-title" id="arch-map-title">Tio linser runt samma relation</h2></div>
+        <p class="arch-section-note">Begreppen samverkar. Placeringen i cirkeln visar inte en rangordning eller en fast följd.</p>
+      </div>
+      <div class="arch-orbit" role="group" aria-label="ARCHETYPE:s tio analyslinser">
+        <div class="arch-core"><small>Analysens mittpunkt</small><strong>Relation i förändring</strong><span>mellan människa, aktör och organisation</span></div>
+        <button class="arch-node" type="button" data-arch="access" aria-pressed="true" aria-controls="archetypeDetail" onclick="selectArchetypeLens('access')"><span class="arch-node-letter">A</span><span><span class="arch-node-word">Access</span><span class="arch-node-prompt">Vem har värdet?</span></span></button>
+        <button class="arch-node" type="button" data-arch="resonance" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('resonance')"><span class="arch-node-letter">R</span><span><span class="arch-node-word">Resonance</span><span class="arch-node-prompt">Vad får fäste?</span></span></button>
+        <button class="arch-node" type="button" data-arch="connection" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('connection')"><span class="arch-node-letter">C</span><span><span class="arch-node-word">Connection</span><span class="arch-node-prompt">Vilken väg in?</span></span></button>
+        <button class="arch-node" type="button" data-arch="hole" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('hole')"><span class="arch-node-letter">H</span><span><span class="arch-node-word">Hole</span><span class="arch-node-prompt">Var finns luckan?</span></span></button>
+        <button class="arch-node" type="button" data-arch="evolvability" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('evolvability')"><span class="arch-node-letter">E</span><span><span class="arch-node-word">Evolvability</span><span class="arch-node-prompt">Hur förändras det?</span></span></button>
+        <button class="arch-node" type="button" data-arch="trust" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('trust')"><span class="arch-node-letter">T</span><span><span class="arch-node-word">Trust</span><span class="arch-node-prompt">När blir det normalt?</span></span></button>
+        <button class="arch-node" type="button" data-arch="patterns" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('patterns')"><span class="arch-node-letter">P</span><span><span class="arch-node-word">Patterns</span><span class="arch-node-prompt">Vad bildar mönster?</span></span></button>
+        <button class="arch-node" type="button" data-arch="you" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('you')"><span class="arch-node-letter">Y</span><span><span class="arch-node-word">You</span><span class="arch-node-prompt">Kan personen agera?</span></span></button>
+        <button class="arch-node" type="button" data-arch="place" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('place')"><span class="arch-node-letter">P</span><span><span class="arch-node-word">Place</span><span class="arch-node-prompt">Var sker kontakten?</span></span></button>
+        <button class="arch-node" type="button" data-arch="exposure" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('exposure')"><span class="arch-node-letter">E</span><span><span class="arch-node-word">Exposure</span><span class="arch-node-prompt">Vem är synlig?</span></span></button>
+      </div>
+      <div class="arch-detail" id="archetypeDetail" role="region" aria-live="polite">
+        <div class="arch-detail-head"><span class="arch-detail-letter">A</span><span class="arch-detail-name">Access</span></div>
+        <div class="arch-detail-body"><h3 class="arch-detail-question">Vem bär på det som en motståndare vill åt?</h3><p class="arch-detail-copy">Sök faktisk kunskap, åtkomst och erfarenhet – inte bara hög befattning eller formell behörighet. Tyst kunskap om svagheter, beroenden och verkliga beslutsvägar kan vara mer värdefull än ett enskilt dokument.</p><a class="arch-detail-link" href="#arch-lens-access">Läs hela avsnittet ↓</a></div>
+      </div>
+      <div class="arch-legend"><strong>Så ska bilden läsas:</strong> ARCHETYPE är en uppsättning frågor, inte en poängmodell. Flera linser kan vara relevanta samtidigt och en träff är inte ett tecken på skuld.</div>
+    </section>
+
+    <section class="arch-section reveal" aria-labelledby="arch-lenses-title">
+      <div class="arch-section-head">
+        <div><div class="arch-section-kicker">Fördjupning</div><h2 class="arch-section-title" id="arch-lenses-title">Vad de tio begreppen fångar</h2></div>
+        <p class="arch-section-note">Öppna varje fält för en mer utförlig beskrivning och en fråga att ta med in i analysen.</p>
+      </div>
+      <div class="arch-lens-grid">
+        <details class="arch-lens" id="arch-lens-access" open>
+          <summary><span class="arch-lens-letter">A</span><span><span class="arch-lens-title">Access</span><span class="arch-lens-question">Vem bär på det som en motståndare vill åt?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Access handlar om vem som faktiskt har tillgång till det en motståndare söker. Det behöver inte vara den högst säkerhetsklassade personen eller den som har de bredaste tekniska behörigheterna. Det kan vara en projektledare som känner till svagheter i ett system, en forskare med unik kunskap, en ingenjör som förstår en produktionsprocess eller en inköpare som känner till vilka leverantörer verksamheten är beroende av.</p>
+            <p>I många fall är det inte ett dokument som är mest värdefullt utan människans erfarenhet. En specialist kan veta vilka lösningar som har misslyckats, vilka genvägar som används, vilka personer som fattar de verkliga besluten eller vilka delar av verksamheten som är mest sårbara. Sådan kunskap finns inte alltid dokumenterad.</p>
+            <p>Det ligger nära klassisk HUMINT, där en värvningsprocess ofta börjar med att personer med rätt tillgång identifieras och bedöms innan en relation utvecklas och en känsligare fråga ställs. Förloppet brukar beskrivas med <em>spotting, assessing, developing, recruiting</em> och <em>handling</em> (Burkett, 2013).</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vilka människor skulle vara särskilt värdefulla för någon som vill förstå, påverka eller återskapa vår verksamhet?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-resonance">
+          <summary><span class="arch-lens-letter">R</span><span><span class="arch-lens-title">Resonance</span><span class="arch-lens-question">Vad får relationen att fästa?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Resonance handlar om vad som gör kontakten viktig eller attraktiv för personen. Det kan vara uppskattning, pengar, status, karriärmöjligheter, gemenskap, ideologisk samhörighet eller känslan av att bli sedd och förstådd. Personen behöver inte ha en tydlig ”svaghet”. Det kan räcka att den externa aktören erbjuder något som uppfattas som positivt.</p>
+            <p>Här finns en koppling till MICE, där drivkrafter ofta delas in i <em>Money, Ideology, Coercion/Compromise</em> och <em>Ego</em>. RASCLS breddar bilden med bland annat reciprocitet, auktoritet, knapphet, åtagande, gillande och social bekräftelse (Burkett, 2013).</p>
+            <p>Den som får hjälp, uppmärksamhet eller möjligheter kan efter hand känna en vilja att återgälda detta. Det behöver inte börja med något otillåtet.</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vad erbjuder relationen som personen inte får – eller upplever sig få – någon annanstans?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-connection">
+          <summary><span class="arch-lens-letter">C</span><span><span class="arch-lens-title">Connection</span><span class="arch-lens-question">Hur kommer aktören fram till personen?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Connection handlar om vägen fram till målpersonen. Kontakten kan uppstå på en konferens, genom LinkedIn, via ett forskningssamarbete, en gammal kollega, en leverantör, en rekryterare, en kund eller ett konsultuppdrag.</p>
+            <p>Den första kontakten kan vara helt legitim. En forskare som vill diskutera ett gemensamt ämne behöver inte ha dolda avsikter, och en rekryterare som kontaktar en specialist gör normalt sitt arbete. Det intressanta är vad som händer därefter.</p>
+            <p>NPSA använder begreppet <em>elicitation</em> för försök att få en person att dela information genom till synes vardagliga samtal eller önskemål om icke-offentlig kunskap. Samtalet kan vara socialt eller professionellt och frågorna kan var för sig framstå som fullt normala (NPSA, 2026).</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vilka legitima kontaktvägar gör våra nyckelpersoner nåbara, och hur kan en kontakt förflyttas vidare?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-hole">
+          <summary><span class="arch-lens-letter">H</span><span><span class="arch-lens-title">Hole</span><span class="arch-lens-question">Var finns öppningen?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Hole är den lucka som gör att relationen kan utvecklas utan att någon reagerar. Det kan vara otydliga regler för bisysslor, utlandsresor, externa konsultuppdrag eller forskningssamarbeten. Det kan också saknas rutiner för att följa upp externa kontakter eller en känd väg för att ta upp en kontakt som börjar kännas obekväm.</p>
+            <p>Luckan behöver inte vara teknisk. Den kan finnas mellan organisatoriska processer. HR ser en del av bilden, säkerhetsfunktionen en annan och chefen en tredje. Ingen ser utvecklingen i sin helhet.</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vilken organisatorisk gråzon gör att kontakten kan fortsätta utan stöd, insyn eller rimlig uppföljning?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-evolvability">
+          <summary><span class="arch-lens-letter">E</span><span><span class="arch-lens-title">Evolvability</span><span class="arch-lens-question">Hur förändras relationen?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Evolvability handlar om att en relation kan ändra karaktär. Ett första samtal kan följas av fler kontakter och leda till en lunch, en resa, ett konsultuppdrag eller ett gemensamt projekt. Efter ett tag ställs frågor som ligger lite utanför det ursprungliga ämnet, och därefter ytterligare några.</p>
+            <p>Varje steg kan se ganska oskyldigt ut. Det är först när utvecklingen betraktas över tid som mönstret blir tydligt. Den socialpsykologiska principen <em>foot-in-the-door</em> beskriver hur den som först accepterar en liten begäran kan bli mer benägen att senare acceptera en större. Liknande mekanismer används inom social engineering, där små steg flyttar gränsen för vad som uppfattas som normalt (Bullée et al., 2018).</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Har kontaktens innehåll, frekvens, kanal eller förväntningar förändrats stegvis?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-trust">
+          <summary><span class="arch-lens-letter">T</span><span><span class="arch-lens-title">Trust</span><span class="arch-lens-question">När känns kontakten inte längre främmande?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Trust handlar om förtroende. En fråga som hade känts märklig från en okänd person kan uppfattas helt annorlunda när den kommer från någon man har känt i flera år. En långvarig relation kan därför vara användbar för en aktör som vill påverka eller inhämta information.</p>
+            <p>Förtroendet behöver inte vara falskt. Två personer kan utveckla en genuin vänskap samtidigt som relationen används för andra syften. Det gör situationen svår att upptäcka och värdera. RASCLS visar hur reciprocitet, gillande och tidigare åtaganden kan påverka hur nya önskemål tas emot (Burkett, 2013).</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vilka frågor eller tjänster har blivit möjliga därför att relationen nu upplevs som trygg?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-patterns">
+          <summary><span class="arch-lens-letter">P</span><span><span class="arch-lens-title">Patterns</span><span class="arch-lens-question">Vilka små förändringar bildar ett mönster?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Patterns handlar om att se hur flera små saker hänger ihop. En resa, ett nytt konsultuppdrag eller en ny utländsk kontakt behöver inte betyda något. Men om samma person samtidigt börjar resa mer, får nya externa ersättningar, bygger återkommande kontakter med samma aktörer och efterfrågar information utanför det normala arbetsbehovet blir bilden en annan.</p>
+            <p>Analysen gäller kombinationen och förändringen över tid, inte den enskilda händelsen. Det är relevant både vid insiderproblematik och otillbörlig påverkan, där förlopp ofta utvecklas gradvis utan en tydlig brytpunkt.</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vilka oberoende förändringar sammanfaller, och finns det rimliga alternativa förklaringar?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-you">
+          <summary><span class="arch-lens-letter">Y</span><span><span class="arch-lens-title">You</span><span class="arch-lens-question">Kan individen själv reagera och berätta?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>You flyttar tillbaka perspektivet till personen. En medarbetare kan själv märka att relationen har förändrats: frågorna blir fler, kontakten mer påträngande, erbjudandet känns inte längre lika oskyldigt eller det börjar uppstå förväntningar.</p>
+            <p>Personen behöver då kunna prata med säkerhetsfunktionen utan att känna att det automatiskt innebär att hon eller han betraktas som misstänkt. Om säkerhetsfunktionen bara uppfattas som kontrollerande finns en risk att människor väntar för länge med att berätta om sådant som känns fel.</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vet medarbetaren när och hur en förändrad kontakt kan tas upp, och möts en tidig signal med stöd?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-place">
+          <summary><span class="arch-lens-letter">P</span><span><span class="arch-lens-title">Place</span><span class="arch-lens-question">Var sker kontakten?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Place handlar om miljön där relationen skapas och utvecklas. Arbetsplatsen är bara en arena. Kontakter kan uppstå på konferenser, universitet, hotell, mässor, restauranger, sociala medier, branschträffar eller under internationella resor.</p>
+            <p>Miljön påverkar hur en fråga uppfattas. Det som skulle kännas märkligt på ett säkerhetsklassat kontor kan upplevas som normalt under en middag efter en konferens.</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> I vilka miljöer blir yrkesmässiga gränser otydligare och organisationens stöd mer avlägset?</p>
+          </div>
+        </details>
+
+        <details class="arch-lens" id="arch-lens-exposure">
+          <summary><span class="arch-lens-letter">E</span><span><span class="arch-lens-title">Exposure</span><span class="arch-lens-question">Hur lätt är personen att hitta och nå?</span></span></summary>
+          <div class="arch-lens-body">
+            <p>Exposure handlar om hur exponerad en person är för externa kontakter. En specialist som reser mycket, deltar i internationella konferenser, publicerar forskning, föreläser eller har en framträdande profil på LinkedIn är lättare att kartlägga än någon som arbetar helt internt.</p>
+            <p>Exponering är inte något negativt. Många verksamheter är beroende av internationella kontakter och öppna nätverk. Frågan är om organisationen vet vilka personer som genom sina roller blir särskilt synliga och attraktiva för externa aktörer.</p>
+            <p class="arch-question"><strong>Analysfråga:</strong> Vilka skyddsvärden, roller och kontaktvägar går att kartlägga öppet – och vilket stöd får de mest synliga personerna?</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="arch-section reveal" id="archetype-example" aria-labelledby="arch-example-title">
+      <div class="arch-section-head">
+        <div><div class="arch-section-kicker">Konkret exempel · svensk teknisk lösning</div><h2 class="arch-section-title" id="arch-example-title">Från legitim kontakt till förändrade frågor</h2></div>
+        <p class="arch-section-note">Här ordnas linserna som ett möjligt händelseförlopp. Det är ett exempel, inte modellens enda ordning.</p>
+      </div>
+      <div class="arch-scenario">
+        <article style="--step-c:var(--accent)"><span class="arch-scenario-n">01 · Access</span><strong>Rätt kunskap</strong><p>En ingenjör utanför ledningen har arbetat med tekniken i tio år och känner till sådant som aldrig dokumenterats.</p></article>
+        <article style="--step-c:var(--green)"><span class="arch-scenario-n">02 · Exposure</span><strong>Synlig specialist</strong><p>Ingenjörens internationella roll, föredrag och öppna profil gör personen lätt att identifiera och kartlägga.</p></article>
+        <article style="--step-c:var(--purple)"><span class="arch-scenario-n">03 · Place</span><strong>Konferensen</strong><p>Den professionella miljön gör spontana samtal, nätverkande och nya kontakter naturliga.</p></article>
+        <article style="--step-c:var(--accent)"><span class="arch-scenario-n">04 · Connection</span><strong>Forskaren tar kontakt</strong><p>En forskare från ett annat land inleder ett till synes legitimt samtal om ett gemensamt ämne.</p></article>
+        <article style="--step-c:var(--orange)"><span class="arch-scenario-n">05 · Resonance</span><strong>Erkännande</strong><p>Ingenjören får uppskattning, professionell bekräftelse och erbjudanden om internationella projekt.</p></article>
+        <article style="--step-c:var(--orange)"><span class="arch-scenario-n">06 · Hole</span><strong>Otydliga regler</strong><p>Organisationen saknar tydliga rutiner för externa forskningssamarbeten, konsultuppdrag och uppföljning.</p></article>
+        <article style="--step-c:var(--accent)"><span class="arch-scenario-n">07 · Evolvability</span><strong>Relationen växer</strong><p>Sporadiska samtal blir regelbundna möten, middagar, resor och gemensamma projekt under det följande året.</p></article>
+        <article style="--step-c:var(--green)"><span class="arch-scenario-n">08 · Trust</span><strong>Vän och kollega</strong><p>Forskaren uppfattas inte längre som en extern kontakt. Frågor som tidigare hade stuckit ut känns nu vardagliga.</p></article>
+        <article style="--step-c:var(--purple)"><span class="arch-scenario-n">09 · Patterns</span><strong>Frågorna förskjuts</strong><p>Offentliga uppgifter följs av projekterfarenheter och till sist tekniska detaljer och interna problem.</p></article>
+        <article style="--step-c:var(--green)"><span class="arch-scenario-n">10 · You</span><strong>Tidig rapportering</strong><p>Ingenjören behöver förstå förändringen och veta att kontakten kan tas upp utan att automatiskt bli misstänkliggjord.</p></article>
+      </div>
+      <div class="arch-scenario-note"><strong>Det avgörande är kombinationen:</strong> varje möte, fråga, resa eller möjlighet kan ha en rimlig förklaring. Först när förändringen och sambanden följs över tid går det att se att relationen kan ha fått en annan funktion.</div>
+    </section>
+
+    <section class="arch-section reveal" aria-labelledby="arch-bridge-title">
+      <div class="arch-section-head">
+        <div><div class="arch-section-kicker">Koppling till etablerad kunskap</div><h2 class="arch-section-title" id="arch-bridge-title">Vad ARCHETYPE bygger vidare på</h2></div>
+        <p class="arch-section-note">Likheterna stärker modellens relevans, men gör den inte i sig vetenskapligt validerad.</p>
+      </div>
+      <div class="arch-bridge">
+        <article style="--bridge-c:var(--accent)"><div class="arch-bridge-k">HUMINT · spotting och utveckling</div><h3>Access, Exposure och Connection</h3><p>Att identifiera en person med rätt tillgång, bedöma nåbarhet och utveckla en kontakt ligger nära beskrivningar av spotting, assessing, developing, recruiting och handling (Burkett, 2013).</p></article>
+        <article style="--bridge-c:var(--green)"><div class="arch-bridge-k">MICE och RASCLS · drivkrafter och påverkan</div><h3>Resonance och Trust</h3><p>MICE fångar pengar, ideologi, tvång eller kompromettering och ego. RASCLS visar hur reciprocitet, auktoritet, knapphet, åtagande, gillande och social bekräftelse kan göra relationen mer bindande.</p></article>
+        <article style="--bridge-c:var(--purple)"><div class="arch-bridge-k">Elicitation och cultivation · samtal och relation</div><h3>Connection, Place och Evolvability</h3><p>NPSA beskriver både hur information kan lockas fram i vardagliga samtal och hur långsiktigt relationsbyggande kan användas för inhämtning, rekrytering eller påverkan. Professionella nätverk, forskning och arbetsmöjligheter kan då få en annan funktion över tid.</p></article>
+        <article style="--bridge-c:var(--orange)"><div class="arch-bridge-k">Social engineering · små åtaganden</div><h3>Evolvability, Patterns och Hole</h3><p><em>Foot-in-the-door</em> och närliggande forskning visar hur små, till synes harmlösa steg kan flytta gränser. Organisatoriska luckor gör förändringen svårare att se och lättare att normalisera.</p></article>
+      </div>
+      <div class="arch-paths" aria-label="Två sätt att läsa ett säkerhetsförlopp">
+        <div class="arch-path"><div class="arch-path-label">Sent ingripande</div><div class="arch-path-flow"><span>Spioneri</span><i>→</i><span>Informationsöverföring</span><i>→</i><span>Utredning</span></div></div>
+        <div class="arch-path"><div class="arch-path-label">Tidigare analys</div><div class="arch-path-flow"><span>Värdefull person</span><i>→</i><span>Exponering</span><i>→</i><span>Kontakt</span><i>→</i><span>Relation</span><i>→</i><span>Förtroende</span><i>→</i><span>Små åtaganden</span><i>→</i><span>Gränsförskjutning</span><i>→</i><span>Beroende eller konkurrerande lojalitet</span><i>→</i><span>Handling</span></div></div>
+      </div>
+    </section>
+
+    <section class="arch-section reveal" aria-labelledby="arch-use-title">
+      <div class="arch-section-head">
+        <div><div class="arch-section-kicker">Användning och begränsning</div><h2 class="arch-section-title" id="arch-use-title">Relevant för mer än informationsläckage</h2></div>
+      </div>
+      <div class="arch-use">
+        <div class="arch-use-main">
+          <h3>Otillbörlig påverkan inom den vanliga rollen</h3>
+          <p>Samma process behöver inte sluta med att någon lämnar ut hemlig information. En relation kan påverka vilka personer som rekryteras, vilka leverantörer som väljs, hur ett tillsynsärende hanteras, vilka frågor en chef driver eller vilka beslut som framstår som rimliga.</p>
+          <p>En extern aktör behöver alltså inte få en person att ”byta sida”. Det kan räcka att successivt påverka hur personen agerar inom sin vanliga roll. Där blir modellen användbar för arbete med insiderrisk och otillbörlig påverkan: den riktar uppmärksamheten mot förändrade relationer, växande beroenden och små steg som tillsammans får större betydelse.</p>
+        </div>
+        <div class="arch-use-guard">
+          <h3>Använd inte modellen som en bevislista</h3>
+          <p>Vanliga professionella relationer, utlandsresor, bisysslor, forskning och internationella samarbeten får inte behandlas som misstänkta bara för att de passar in på delar av modellen.</p>
+          <p>ARCHETYPE saknar validerade indikatorer och tröskelvärden. Slutsatser om en enskild person kräver kontext, proportionalitet, rättsligt stöd och annan information.</p>
+        </div>
+      </div>
+      <div class="arch-prompts" aria-label="Fyra frågor för proportionerlig användning">
+        <span>Vad har faktiskt förändrats?</span>
+        <span>Vilka relationer eller beroenden har blivit viktigare?</span>
+        <span>Ger flera faktorer tillsammans en annan bild än var och en för sig?</span>
+        <span>Finns det en rimlig alternativ förklaring?</span>
+      </div>
+    </section>
+
+    <section class="arch-section reveal" id="archetype-references" aria-labelledby="arch-ref-title">
+      <div class="arch-section-head">
+        <div><div class="arch-section-kicker">Referenser</div><h2 class="arch-section-title" id="arch-ref-title">Källor och fortsatt läsning</h2></div>
+      </div>
+      <ol class="arch-refs">
+        <li><cite>Burkett, R. (2013). <em>An alternative framework for agent recruitment: From MICE to RASCLS.</em> Studies in Intelligence, 57(1). Central Intelligence Agency.</cite><a href="https://www.cia.gov/resources/csi/studies-in-intelligence/volume-57-no-1/an-alternative-framework-for-agent-recruitment-from-mice-to-rascls/" target="_blank" rel="noopener noreferrer">https://www.cia.gov/resources/csi/studies-in-intelligence/volume-57-no-1/an-alternative-framework-for-agent-recruitment-from-mice-to-rascls/</a></li>
+        <li><cite>Bullée, J.-W. H., Montoya, L., Pieters, W., Junger, M., &amp; Hartel, P. (2018). <em>On the anatomy of social engineering attacks – A literature-based dissection of successful attacks.</em> Journal of Investigative Psychology and Offender Profiling, 15(1), 20–45.</cite><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jip.1482" target="_blank" rel="noopener noreferrer">https://onlinelibrary.wiley.com/doi/full/10.1002/jip.1482</a></li>
+        <li><cite>Larsson, P. (2026, 16 september). <em>När spionage inte ser ut som spionage.</em> LinkedIn.</cite><a href="https://www.linkedin.com/pulse/n%C3%A4r-spionage-inte-ser-ut-som-petter-larsson-yf5se" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/pulse/n%C3%A4r-spionage-inte-ser-ut-som-petter-larsson-yf5se</a></li>
+        <li><cite>National Protective Security Authority. (2026). <em>Countering espionage and foreign interference.</em></cite><a href="https://www.npsa.gov.uk/national-security-act/defending-democracy/countering-espionage-and-foreign-interference" target="_blank" rel="noopener noreferrer">https://www.npsa.gov.uk/national-security-act/defending-democracy/countering-espionage-and-foreign-interference</a></li>
+      </ol>
+    </section>
+  </div>
+  </div>
 
   </div>
 
@@ -4444,225 +4669,6 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </div>
   </div>
 
-  <div class="theory-panel" id="theory-panel-archetype" role="tabpanel" aria-labelledby="theory-tab-archetype" data-theory-panel="archetype">
-    <div class="theory-panel-intro"><strong>ARCHETYPE</strong><span>målval · relationsbyggande · organisatoriska luckor · förändring över tid</span></div>
-
-    <section class="arch-hero reveal" id="archetype-intro" aria-labelledby="archetype-title">
-      <div class="arch-meta">
-        <span class="arch-pill">Petter Larsson · 2026</span>
-        <span class="arch-pill">Angriparperspektiv</span>
-        <span class="arch-pill caution">Konceptuell modell · inte validerad metod</span>
-      </div>
-      <h2 class="arch-title" id="archetype-title">ARCHETYPE<em>När en normal kontakt förändras</em></h2>
-      <p class="arch-lead"><strong>Petter Larsson ger en intressant modell med ARCHETYPE, ett sätt att förstå hur en kontakt som från början ser helt normal ut kan utvecklas till en säkerhetsrisk.</strong> Modellen vänder på perspektivet. I stället för att börja med frågan om vem som är illojal eller sårbar frågar man: Om en främmande aktör vill komma åt en organisations kunskap, förmåga eller beslut genom en människa – vem skulle aktören välja, hur skulle kontakten tas och hur skulle relationen kunna utvecklas över tid? (Larsson, 2026).</p>
-    </section>
-
-    <div class="arch-status reveal" aria-label="Modellens kunskapsstatus">
-      <article style="--status-c:var(--orange)"><span>Status</span><strong>Ett koncept under utveckling</strong><p>ARCHETYPE bör inte beskrivas som en etablerad eller vetenskapligt validerad underrättelsemodell. Larsson beskriver den själv som ett koncept han arbetar med.</p></article>
-      <article style="--status-c:var(--green)"><span>Kunskapsgrund</span><strong>Kända mekanismer</strong><p>Delarna har tydliga beröringspunkter med HUMINT, kontraspionage, elicitation, social påverkan och forskning om insiderproblematik.</p></article>
-      <article style="--status-c:var(--accent)"><span>Bidrag</span><strong>En sammanhållen analyslins</strong><p>Det nya ligger främst i hur flera befintliga perspektiv förs ihop och används för att läsa en relation från angriparens håll.</p></article>
-    </div>
-
-    <section class="arch-section reveal" aria-labelledby="arch-map-title">
-      <div class="arch-section-head">
-        <div><div class="arch-section-kicker">Interaktiv översikt · välj ett begrepp</div><h2 class="arch-section-title" id="arch-map-title">Tio linser runt samma relation</h2></div>
-        <p class="arch-section-note">Begreppen samverkar. Placeringen i cirkeln visar inte en rangordning eller en fast följd.</p>
-      </div>
-      <div class="arch-orbit" role="group" aria-label="ARCHETYPE:s tio analyslinser">
-        <div class="arch-core"><small>Analysens mittpunkt</small><strong>Relation i förändring</strong><span>mellan människa, aktör och organisation</span></div>
-        <button class="arch-node" type="button" data-arch="access" aria-pressed="true" aria-controls="archetypeDetail" onclick="selectArchetypeLens('access')"><span class="arch-node-letter">A</span><span><span class="arch-node-word">Access</span><span class="arch-node-prompt">Vem har värdet?</span></span></button>
-        <button class="arch-node" type="button" data-arch="resonance" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('resonance')"><span class="arch-node-letter">R</span><span><span class="arch-node-word">Resonance</span><span class="arch-node-prompt">Vad får fäste?</span></span></button>
-        <button class="arch-node" type="button" data-arch="connection" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('connection')"><span class="arch-node-letter">C</span><span><span class="arch-node-word">Connection</span><span class="arch-node-prompt">Vilken väg in?</span></span></button>
-        <button class="arch-node" type="button" data-arch="hole" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('hole')"><span class="arch-node-letter">H</span><span><span class="arch-node-word">Hole</span><span class="arch-node-prompt">Var finns luckan?</span></span></button>
-        <button class="arch-node" type="button" data-arch="evolvability" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('evolvability')"><span class="arch-node-letter">E</span><span><span class="arch-node-word">Evolvability</span><span class="arch-node-prompt">Hur förändras det?</span></span></button>
-        <button class="arch-node" type="button" data-arch="trust" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('trust')"><span class="arch-node-letter">T</span><span><span class="arch-node-word">Trust</span><span class="arch-node-prompt">När blir det normalt?</span></span></button>
-        <button class="arch-node" type="button" data-arch="patterns" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('patterns')"><span class="arch-node-letter">P</span><span><span class="arch-node-word">Patterns</span><span class="arch-node-prompt">Vad bildar mönster?</span></span></button>
-        <button class="arch-node" type="button" data-arch="you" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('you')"><span class="arch-node-letter">Y</span><span><span class="arch-node-word">You</span><span class="arch-node-prompt">Kan personen agera?</span></span></button>
-        <button class="arch-node" type="button" data-arch="place" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('place')"><span class="arch-node-letter">P</span><span><span class="arch-node-word">Place</span><span class="arch-node-prompt">Var sker kontakten?</span></span></button>
-        <button class="arch-node" type="button" data-arch="exposure" aria-pressed="false" aria-controls="archetypeDetail" onclick="selectArchetypeLens('exposure')"><span class="arch-node-letter">E</span><span><span class="arch-node-word">Exposure</span><span class="arch-node-prompt">Vem är synlig?</span></span></button>
-      </div>
-      <div class="arch-detail" id="archetypeDetail" role="region" aria-live="polite">
-        <div class="arch-detail-head"><span class="arch-detail-letter">A</span><span class="arch-detail-name">Access</span></div>
-        <div class="arch-detail-body"><h3 class="arch-detail-question">Vem bär på det som en motståndare vill åt?</h3><p class="arch-detail-copy">Sök faktisk kunskap, åtkomst och erfarenhet – inte bara hög befattning eller formell behörighet. Tyst kunskap om svagheter, beroenden och verkliga beslutsvägar kan vara mer värdefull än ett enskilt dokument.</p><a class="arch-detail-link" href="#arch-lens-access">Läs hela avsnittet ↓</a></div>
-      </div>
-      <div class="arch-legend"><strong>Så ska bilden läsas:</strong> ARCHETYPE är en uppsättning frågor, inte en poängmodell. Flera linser kan vara relevanta samtidigt och en träff är inte ett tecken på skuld.</div>
-    </section>
-
-    <section class="arch-section reveal" aria-labelledby="arch-lenses-title">
-      <div class="arch-section-head">
-        <div><div class="arch-section-kicker">Fördjupning</div><h2 class="arch-section-title" id="arch-lenses-title">Vad de tio begreppen fångar</h2></div>
-        <p class="arch-section-note">Öppna varje fält för en mer utförlig beskrivning och en fråga att ta med in i analysen.</p>
-      </div>
-      <div class="arch-lens-grid">
-        <details class="arch-lens" id="arch-lens-access" open>
-          <summary><span class="arch-lens-letter">A</span><span><span class="arch-lens-title">Access</span><span class="arch-lens-question">Vem bär på det som en motståndare vill åt?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Access handlar om vem som faktiskt har tillgång till det en motståndare söker. Det behöver inte vara den högst säkerhetsklassade personen eller den som har de bredaste tekniska behörigheterna. Det kan vara en projektledare som känner till svagheter i ett system, en forskare med unik kunskap, en ingenjör som förstår en produktionsprocess eller en inköpare som känner till vilka leverantörer verksamheten är beroende av.</p>
-            <p>I många fall är det inte ett dokument som är mest värdefullt utan människans erfarenhet. En specialist kan veta vilka lösningar som har misslyckats, vilka genvägar som används, vilka personer som fattar de verkliga besluten eller vilka delar av verksamheten som är mest sårbara. Sådan kunskap finns inte alltid dokumenterad.</p>
-            <p>Det ligger nära klassisk HUMINT, där en värvningsprocess ofta börjar med att personer med rätt tillgång identifieras och bedöms innan en relation utvecklas och en känsligare fråga ställs. Förloppet brukar beskrivas med <em>spotting, assessing, developing, recruiting</em> och <em>handling</em> (Burkett, 2013).</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vilka människor skulle vara särskilt värdefulla för någon som vill förstå, påverka eller återskapa vår verksamhet?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-resonance">
-          <summary><span class="arch-lens-letter">R</span><span><span class="arch-lens-title">Resonance</span><span class="arch-lens-question">Vad får relationen att fästa?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Resonance handlar om vad som gör kontakten viktig eller attraktiv för personen. Det kan vara uppskattning, pengar, status, karriärmöjligheter, gemenskap, ideologisk samhörighet eller känslan av att bli sedd och förstådd. Personen behöver inte ha en tydlig ”svaghet”. Det kan räcka att den externa aktören erbjuder något som uppfattas som positivt.</p>
-            <p>Här finns en koppling till MICE, där drivkrafter ofta delas in i <em>Money, Ideology, Coercion/Compromise</em> och <em>Ego</em>. RASCLS breddar bilden med bland annat reciprocitet, auktoritet, knapphet, åtagande, gillande och social bekräftelse (Burkett, 2013).</p>
-            <p>Den som får hjälp, uppmärksamhet eller möjligheter kan efter hand känna en vilja att återgälda detta. Det behöver inte börja med något otillåtet.</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vad erbjuder relationen som personen inte får – eller upplever sig få – någon annanstans?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-connection">
-          <summary><span class="arch-lens-letter">C</span><span><span class="arch-lens-title">Connection</span><span class="arch-lens-question">Hur kommer aktören fram till personen?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Connection handlar om vägen fram till målpersonen. Kontakten kan uppstå på en konferens, genom LinkedIn, via ett forskningssamarbete, en gammal kollega, en leverantör, en rekryterare, en kund eller ett konsultuppdrag.</p>
-            <p>Den första kontakten kan vara helt legitim. En forskare som vill diskutera ett gemensamt ämne behöver inte ha dolda avsikter, och en rekryterare som kontaktar en specialist gör normalt sitt arbete. Det intressanta är vad som händer därefter.</p>
-            <p>NPSA använder begreppet <em>elicitation</em> för försök att få en person att dela information genom till synes vardagliga samtal eller önskemål om icke-offentlig kunskap. Samtalet kan vara socialt eller professionellt och frågorna kan var för sig framstå som fullt normala (NPSA, 2026).</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vilka legitima kontaktvägar gör våra nyckelpersoner nåbara, och hur kan en kontakt förflyttas vidare?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-hole">
-          <summary><span class="arch-lens-letter">H</span><span><span class="arch-lens-title">Hole</span><span class="arch-lens-question">Var finns öppningen?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Hole är den lucka som gör att relationen kan utvecklas utan att någon reagerar. Det kan vara otydliga regler för bisysslor, utlandsresor, externa konsultuppdrag eller forskningssamarbeten. Det kan också saknas rutiner för att följa upp externa kontakter eller en känd väg för att ta upp en kontakt som börjar kännas obekväm.</p>
-            <p>Luckan behöver inte vara teknisk. Den kan finnas mellan organisatoriska processer. HR ser en del av bilden, säkerhetsfunktionen en annan och chefen en tredje. Ingen ser utvecklingen i sin helhet.</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vilken organisatorisk gråzon gör att kontakten kan fortsätta utan stöd, insyn eller rimlig uppföljning?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-evolvability">
-          <summary><span class="arch-lens-letter">E</span><span><span class="arch-lens-title">Evolvability</span><span class="arch-lens-question">Hur förändras relationen?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Evolvability handlar om att en relation kan ändra karaktär. Ett första samtal kan följas av fler kontakter och leda till en lunch, en resa, ett konsultuppdrag eller ett gemensamt projekt. Efter ett tag ställs frågor som ligger lite utanför det ursprungliga ämnet, och därefter ytterligare några.</p>
-            <p>Varje steg kan se ganska oskyldigt ut. Det är först när utvecklingen betraktas över tid som mönstret blir tydligt. Den socialpsykologiska principen <em>foot-in-the-door</em> beskriver hur den som först accepterar en liten begäran kan bli mer benägen att senare acceptera en större. Liknande mekanismer används inom social engineering, där små steg flyttar gränsen för vad som uppfattas som normalt (Bullée et al., 2018).</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Har kontaktens innehåll, frekvens, kanal eller förväntningar förändrats stegvis?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-trust">
-          <summary><span class="arch-lens-letter">T</span><span><span class="arch-lens-title">Trust</span><span class="arch-lens-question">När känns kontakten inte längre främmande?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Trust handlar om förtroende. En fråga som hade känts märklig från en okänd person kan uppfattas helt annorlunda när den kommer från någon man har känt i flera år. En långvarig relation kan därför vara användbar för en aktör som vill påverka eller inhämta information.</p>
-            <p>Förtroendet behöver inte vara falskt. Två personer kan utveckla en genuin vänskap samtidigt som relationen används för andra syften. Det gör situationen svår att upptäcka och värdera. RASCLS visar hur reciprocitet, gillande och tidigare åtaganden kan påverka hur nya önskemål tas emot (Burkett, 2013).</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vilka frågor eller tjänster har blivit möjliga därför att relationen nu upplevs som trygg?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-patterns">
-          <summary><span class="arch-lens-letter">P</span><span><span class="arch-lens-title">Patterns</span><span class="arch-lens-question">Vilka små förändringar bildar ett mönster?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Patterns handlar om att se hur flera små saker hänger ihop. En resa, ett nytt konsultuppdrag eller en ny utländsk kontakt behöver inte betyda något. Men om samma person samtidigt börjar resa mer, får nya externa ersättningar, bygger återkommande kontakter med samma aktörer och efterfrågar information utanför det normala arbetsbehovet blir bilden en annan.</p>
-            <p>Analysen gäller kombinationen och förändringen över tid, inte den enskilda händelsen. Det är relevant både vid insiderproblematik och otillbörlig påverkan, där förlopp ofta utvecklas gradvis utan en tydlig brytpunkt.</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vilka oberoende förändringar sammanfaller, och finns det rimliga alternativa förklaringar?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-you">
-          <summary><span class="arch-lens-letter">Y</span><span><span class="arch-lens-title">You</span><span class="arch-lens-question">Kan individen själv reagera och berätta?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>You flyttar tillbaka perspektivet till personen. En medarbetare kan själv märka att relationen har förändrats: frågorna blir fler, kontakten mer påträngande, erbjudandet känns inte längre lika oskyldigt eller det börjar uppstå förväntningar.</p>
-            <p>Personen behöver då kunna prata med säkerhetsfunktionen utan att känna att det automatiskt innebär att hon eller han betraktas som misstänkt. Om säkerhetsfunktionen bara uppfattas som kontrollerande finns en risk att människor väntar för länge med att berätta om sådant som känns fel.</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vet medarbetaren när och hur en förändrad kontakt kan tas upp, och möts en tidig signal med stöd?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-place">
-          <summary><span class="arch-lens-letter">P</span><span><span class="arch-lens-title">Place</span><span class="arch-lens-question">Var sker kontakten?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Place handlar om miljön där relationen skapas och utvecklas. Arbetsplatsen är bara en arena. Kontakter kan uppstå på konferenser, universitet, hotell, mässor, restauranger, sociala medier, branschträffar eller under internationella resor.</p>
-            <p>Miljön påverkar hur en fråga uppfattas. Det som skulle kännas märkligt på ett säkerhetsklassat kontor kan upplevas som normalt under en middag efter en konferens.</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> I vilka miljöer blir yrkesmässiga gränser otydligare och organisationens stöd mer avlägset?</p>
-          </div>
-        </details>
-
-        <details class="arch-lens" id="arch-lens-exposure">
-          <summary><span class="arch-lens-letter">E</span><span><span class="arch-lens-title">Exposure</span><span class="arch-lens-question">Hur lätt är personen att hitta och nå?</span></span></summary>
-          <div class="arch-lens-body">
-            <p>Exposure handlar om hur exponerad en person är för externa kontakter. En specialist som reser mycket, deltar i internationella konferenser, publicerar forskning, föreläser eller har en framträdande profil på LinkedIn är lättare att kartlägga än någon som arbetar helt internt.</p>
-            <p>Exponering är inte något negativt. Många verksamheter är beroende av internationella kontakter och öppna nätverk. Frågan är om organisationen vet vilka personer som genom sina roller blir särskilt synliga och attraktiva för externa aktörer.</p>
-            <p class="arch-question"><strong>Analysfråga:</strong> Vilka skyddsvärden, roller och kontaktvägar går att kartlägga öppet – och vilket stöd får de mest synliga personerna?</p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="arch-section reveal" id="archetype-example" aria-labelledby="arch-example-title">
-      <div class="arch-section-head">
-        <div><div class="arch-section-kicker">Konkret exempel · svensk teknisk lösning</div><h2 class="arch-section-title" id="arch-example-title">Från legitim kontakt till förändrade frågor</h2></div>
-        <p class="arch-section-note">Här ordnas linserna som ett möjligt händelseförlopp. Det är ett exempel, inte modellens enda ordning.</p>
-      </div>
-      <div class="arch-scenario">
-        <article style="--step-c:var(--accent)"><span class="arch-scenario-n">01 · Access</span><strong>Rätt kunskap</strong><p>En ingenjör utanför ledningen har arbetat med tekniken i tio år och känner till sådant som aldrig dokumenterats.</p></article>
-        <article style="--step-c:var(--green)"><span class="arch-scenario-n">02 · Exposure</span><strong>Synlig specialist</strong><p>Ingenjörens internationella roll, föredrag och öppna profil gör personen lätt att identifiera och kartlägga.</p></article>
-        <article style="--step-c:var(--purple)"><span class="arch-scenario-n">03 · Place</span><strong>Konferensen</strong><p>Den professionella miljön gör spontana samtal, nätverkande och nya kontakter naturliga.</p></article>
-        <article style="--step-c:var(--accent)"><span class="arch-scenario-n">04 · Connection</span><strong>Forskaren tar kontakt</strong><p>En forskare från ett annat land inleder ett till synes legitimt samtal om ett gemensamt ämne.</p></article>
-        <article style="--step-c:var(--orange)"><span class="arch-scenario-n">05 · Resonance</span><strong>Erkännande</strong><p>Ingenjören får uppskattning, professionell bekräftelse och erbjudanden om internationella projekt.</p></article>
-        <article style="--step-c:var(--orange)"><span class="arch-scenario-n">06 · Hole</span><strong>Otydliga regler</strong><p>Organisationen saknar tydliga rutiner för externa forskningssamarbeten, konsultuppdrag och uppföljning.</p></article>
-        <article style="--step-c:var(--accent)"><span class="arch-scenario-n">07 · Evolvability</span><strong>Relationen växer</strong><p>Sporadiska samtal blir regelbundna möten, middagar, resor och gemensamma projekt under det följande året.</p></article>
-        <article style="--step-c:var(--green)"><span class="arch-scenario-n">08 · Trust</span><strong>Vän och kollega</strong><p>Forskaren uppfattas inte längre som en extern kontakt. Frågor som tidigare hade stuckit ut känns nu vardagliga.</p></article>
-        <article style="--step-c:var(--purple)"><span class="arch-scenario-n">09 · Patterns</span><strong>Frågorna förskjuts</strong><p>Offentliga uppgifter följs av projekterfarenheter och till sist tekniska detaljer och interna problem.</p></article>
-        <article style="--step-c:var(--green)"><span class="arch-scenario-n">10 · You</span><strong>Tidig rapportering</strong><p>Ingenjören behöver förstå förändringen och veta att kontakten kan tas upp utan att automatiskt bli misstänkliggjord.</p></article>
-      </div>
-      <div class="arch-scenario-note"><strong>Det avgörande är kombinationen:</strong> varje möte, fråga, resa eller möjlighet kan ha en rimlig förklaring. Först när förändringen och sambanden följs över tid går det att se att relationen kan ha fått en annan funktion.</div>
-    </section>
-
-    <section class="arch-section reveal" aria-labelledby="arch-bridge-title">
-      <div class="arch-section-head">
-        <div><div class="arch-section-kicker">Koppling till etablerad kunskap</div><h2 class="arch-section-title" id="arch-bridge-title">Vad ARCHETYPE bygger vidare på</h2></div>
-        <p class="arch-section-note">Likheterna stärker modellens relevans, men gör den inte i sig vetenskapligt validerad.</p>
-      </div>
-      <div class="arch-bridge">
-        <article style="--bridge-c:var(--accent)"><div class="arch-bridge-k">HUMINT · spotting och utveckling</div><h3>Access, Exposure och Connection</h3><p>Att identifiera en person med rätt tillgång, bedöma nåbarhet och utveckla en kontakt ligger nära beskrivningar av spotting, assessing, developing, recruiting och handling (Burkett, 2013).</p></article>
-        <article style="--bridge-c:var(--green)"><div class="arch-bridge-k">MICE och RASCLS · drivkrafter och påverkan</div><h3>Resonance och Trust</h3><p>MICE fångar pengar, ideologi, tvång eller kompromettering och ego. RASCLS visar hur reciprocitet, auktoritet, knapphet, åtagande, gillande och social bekräftelse kan göra relationen mer bindande.</p></article>
-        <article style="--bridge-c:var(--purple)"><div class="arch-bridge-k">Elicitation och cultivation · samtal och relation</div><h3>Connection, Place och Evolvability</h3><p>NPSA beskriver både hur information kan lockas fram i vardagliga samtal och hur långsiktigt relationsbyggande kan användas för inhämtning, rekrytering eller påverkan. Professionella nätverk, forskning och arbetsmöjligheter kan då få en annan funktion över tid.</p></article>
-        <article style="--bridge-c:var(--orange)"><div class="arch-bridge-k">Social engineering · små åtaganden</div><h3>Evolvability, Patterns och Hole</h3><p><em>Foot-in-the-door</em> och närliggande forskning visar hur små, till synes harmlösa steg kan flytta gränser. Organisatoriska luckor gör förändringen svårare att se och lättare att normalisera.</p></article>
-      </div>
-      <div class="arch-paths" aria-label="Två sätt att läsa ett säkerhetsförlopp">
-        <div class="arch-path"><div class="arch-path-label">Sent ingripande</div><div class="arch-path-flow"><span>Spioneri</span><i>→</i><span>Informationsöverföring</span><i>→</i><span>Utredning</span></div></div>
-        <div class="arch-path"><div class="arch-path-label">Tidigare analys</div><div class="arch-path-flow"><span>Värdefull person</span><i>→</i><span>Exponering</span><i>→</i><span>Kontakt</span><i>→</i><span>Relation</span><i>→</i><span>Förtroende</span><i>→</i><span>Små åtaganden</span><i>→</i><span>Gränsförskjutning</span><i>→</i><span>Beroende eller konkurrerande lojalitet</span><i>→</i><span>Handling</span></div></div>
-      </div>
-    </section>
-
-    <section class="arch-section reveal" aria-labelledby="arch-use-title">
-      <div class="arch-section-head">
-        <div><div class="arch-section-kicker">Användning och begränsning</div><h2 class="arch-section-title" id="arch-use-title">Relevant för mer än informationsläckage</h2></div>
-      </div>
-      <div class="arch-use">
-        <div class="arch-use-main">
-          <h3>Otillbörlig påverkan inom den vanliga rollen</h3>
-          <p>Samma process behöver inte sluta med att någon lämnar ut hemlig information. En relation kan påverka vilka personer som rekryteras, vilka leverantörer som väljs, hur ett tillsynsärende hanteras, vilka frågor en chef driver eller vilka beslut som framstår som rimliga.</p>
-          <p>En extern aktör behöver alltså inte få en person att ”byta sida”. Det kan räcka att successivt påverka hur personen agerar inom sin vanliga roll. Där blir modellen användbar för arbete med insiderrisk och otillbörlig påverkan: den riktar uppmärksamheten mot förändrade relationer, växande beroenden och små steg som tillsammans får större betydelse.</p>
-        </div>
-        <div class="arch-use-guard">
-          <h3>Använd inte modellen som en bevislista</h3>
-          <p>Vanliga professionella relationer, utlandsresor, bisysslor, forskning och internationella samarbeten får inte behandlas som misstänkta bara för att de passar in på delar av modellen.</p>
-          <p>ARCHETYPE saknar validerade indikatorer och tröskelvärden. Slutsatser om en enskild person kräver kontext, proportionalitet, rättsligt stöd och annan information.</p>
-        </div>
-      </div>
-      <div class="arch-prompts" aria-label="Fyra frågor för proportionerlig användning">
-        <span>Vad har faktiskt förändrats?</span>
-        <span>Vilka relationer eller beroenden har blivit viktigare?</span>
-        <span>Ger flera faktorer tillsammans en annan bild än var och en för sig?</span>
-        <span>Finns det en rimlig alternativ förklaring?</span>
-      </div>
-    </section>
-
-    <section class="arch-section reveal" id="archetype-references" aria-labelledby="arch-ref-title">
-      <div class="arch-section-head">
-        <div><div class="arch-section-kicker">Referenser</div><h2 class="arch-section-title" id="arch-ref-title">Källor och fortsatt läsning</h2></div>
-      </div>
-      <ol class="arch-refs">
-        <li><cite>Burkett, R. (2013). <em>An alternative framework for agent recruitment: From MICE to RASCLS.</em> Studies in Intelligence, 57(1). Central Intelligence Agency.</cite><a href="https://www.cia.gov/resources/csi/studies-in-intelligence/volume-57-no-1/an-alternative-framework-for-agent-recruitment-from-mice-to-rascls/" target="_blank" rel="noopener noreferrer">https://www.cia.gov/resources/csi/studies-in-intelligence/volume-57-no-1/an-alternative-framework-for-agent-recruitment-from-mice-to-rascls/</a></li>
-        <li><cite>Bullée, J.-W. H., Montoya, L., Pieters, W., Junger, M., &amp; Hartel, P. (2018). <em>On the anatomy of social engineering attacks – A literature-based dissection of successful attacks.</em> Journal of Investigative Psychology and Offender Profiling, 15(1), 20–45.</cite><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jip.1482" target="_blank" rel="noopener noreferrer">https://onlinelibrary.wiley.com/doi/full/10.1002/jip.1482</a></li>
-        <li><cite>Larsson, P. (2026, 16 september). <em>När spionage inte ser ut som spionage.</em> LinkedIn.</cite><a href="https://www.linkedin.com/pulse/n%C3%A4r-spionage-inte-ser-ut-som-petter-larsson-yf5se" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/pulse/n%C3%A4r-spionage-inte-ser-ut-som-petter-larsson-yf5se</a></li>
-        <li><cite>National Protective Security Authority. (2026). <em>Countering espionage and foreign interference.</em></cite><a href="https://www.npsa.gov.uk/national-security-act/defending-democracy/countering-espionage-and-foreign-interference" target="_blank" rel="noopener noreferrer">https://www.npsa.gov.uk/national-security-act/defending-democracy/countering-espionage-and-foreign-interference</a></li>
-      </ol>
-    </section>
-  </div>
-</div>
 </section>
 
 <!-- ══════════════════════════════════════════════════════
@@ -10670,11 +10676,26 @@ const ARCHETYPE_LENSES={
   place:{letter:'P',name:'Place',question:'Var sker kontakten?',copy:'Konferensen, middagen, resan eller den digitala plattformen påverkar vad som känns normalt. Sammanhanget kan göra en fråga mindre avvikande än den hade varit på arbetsplatsen.'},
   exposure:{letter:'E',name:'Exposure',question:'Hur lätt är personen att hitta och nå?',copy:'Synlighet genom forskning, föredrag, resor och sociala medier är ofta nödvändig och positiv. Organisationen behöver ändå förstå vilka roller och skyddsvärden som går att kartlägga öppet.'}
 };
-function selectArchetypeLens(key){
+function placeArchetypeDetail(key,{scroll=false}={}){
+  const detail=document.getElementById('archetypeDetail');
+  const orbit=document.querySelector('.arch-orbit');
+  const button=document.querySelector(`.arch-node[data-arch="${key}"]`);
+  if(!detail||!orbit||!button)return;
+  if(window.matchMedia('(max-width:760px)').matches){
+    button.insertAdjacentElement('afterend',detail);
+    detail.classList.add('arch-detail-inline');
+    if(scroll)setTimeout(()=>detail.scrollIntoView({behavior:'smooth',block:'start'}),40);
+  }else{
+    orbit.insertAdjacentElement('afterend',detail);
+    detail.classList.remove('arch-detail-inline');
+  }
+}
+function selectArchetypeLens(key,{scroll=true}={}){
   const lens=ARCHETYPE_LENSES[key],detail=document.getElementById('archetypeDetail');
   if(!lens||!detail)return;
   document.querySelectorAll('.arch-node[data-arch]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.arch===key?'true':'false'));
   detail.innerHTML=`<div class="arch-detail-head"><span class="arch-detail-letter">${lens.letter}</span><span class="arch-detail-name">${lens.name}</span></div><div class="arch-detail-body"><h3 class="arch-detail-question">${lens.question}</h3><p class="arch-detail-copy">${lens.copy}</p><a class="arch-detail-link" href="#arch-lens-${key}">Läs hela avsnittet ↓</a></div>`;
+  placeArchetypeDetail(key,{scroll});
 }
 
 function selectTheoryTab(key,options={}){
@@ -11846,6 +11867,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   initializers.forEach(([name,init])=>{
     try{init();}catch(error){console.error(`Kunde inte initiera ${name}:`,error);}
   });
+  placeArchetypeDetail(document.querySelector('.arch-node[aria-pressed="true"]')?.dataset.arch||'access');
   initDisclosureCues();
   initMobileDetailAccordions();
   const initialSector=document.querySelector('#mod-sectors .sec-nav-item.active')?.id?.replace(/^sni-/,'')||'LOCAL_GOV';
@@ -11856,6 +11878,10 @@ window.addEventListener('DOMContentLoaded',()=>{
   if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
 });
 mobileDetailMQ.addEventListener('change',()=>{const activeSector=document.querySelector('#mod-sectors .sec-nav-item.active'),activePanel=activeSector?document.getElementById('sp-'+activeSector.id.replace(/^sni-/,'')):null;if(!isMobileDetail())clearMobileReader();initMobileDetailAccordions();if(activeSector&&activePanel?.classList.contains('mobile-inline-detail'))setMobileReader(activeSector,activePanel,'inline',false,true);else if(activeSector&&!document.querySelector('#mod-sectors .sector-panel.mobile-inline-detail'))selectSector(activeSector.id.replace(/^sni-/,''),{forceOpen:true});});
+window.matchMedia('(max-width:760px)').addEventListener('change',()=>{
+  const selected=document.querySelector('.arch-node[aria-pressed="true"]');
+  if(selected)placeArchetypeDetail(selected.dataset.arch);
+});
 window.addEventListener('hashchange',()=>{
   if(window.location.hash.startsWith('#mod-')){show(window.location.hash.slice(5));return;}
   const deepAnchor=getDeepAnchor();
