@@ -806,11 +806,6 @@
     "sector": "PROCUREMENT",
     "sources": [
       {
-        "l": "Jens Nylander — Vinnovakonsult fick riggat guldavtal på 8,6 Mkr",
-        "t": "media",
-        "url": "https://www.jensnylander.com/vinnovakonsult-fick-riggat-guldavtal/"
-      },
-      {
         "l": "Breakit — Offentligt anställda har mjölkat Vinnova på hundratals miljoner",
         "t": "media",
         "url": "https://www.breakit.se/artikel/39553/jens-nylander-offentligt-anstallda-har-mjolkat-vinnova-pa-hundratals-miljoner"
@@ -2142,11 +2137,6 @@
     },
     "sector": "AUTHORITY",
     "sources": [
-      {
-        "l": "Jens Nylander — Energimyndighetens gröna laddfiasko (Nordron AB)",
-        "t": "media",
-        "url": "https://www.jensnylander.com/energimyndighetens-grona-laddfiasko/"
-      },
       {
         "l": "SvD — Gröna bidragskapitalismen: laddstationer som aldrig byggdes",
         "t": "media",
@@ -5295,11 +5285,6 @@
         "l": "SVT Stockholm — Kvinna åtalas misstänkt för Mick Jagger-bluff",
         "t": "court",
         "url": "https://www.svt.se/nyheter/lokalt/stockholm/kvinna-atalas-misstankt-for-mick-jagger-bluff"
-      },
-      {
-        "l": "Omni — Ekonomisekreterare döms efter 179 överföringar",
-        "t": "court",
-        "url": "https://omni.se/a/ArLGWx"
       }
     ],
     "status": "CONFIRMED",
