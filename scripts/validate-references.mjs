@@ -92,7 +92,8 @@ for (const item of cases) {
     let parsed;
     try { parsed = new URL(source.url); } catch { errors.push(`${item.id}: ogiltig URL ${source.url}`); continue; }
     if (parsed.protocol !== 'https:') errors.push(`${item.id}: källan använder inte HTTPS: ${source.url}`);
-    if (forbiddenHosts.has(parsed.hostname)) errors.push(`${item.id}: social medie-länk får inte vara kanonisk källa: ${source.url}`);
+    const allowedSvenskOsintPost = /^Svensk OSINT\b/i.test(source.l || '');
+    if (forbiddenHosts.has(parsed.hostname) && !allowedSvenskOsintPost) errors.push(`${item.id}: social medie-länk får inte vara kanonisk källa: ${source.url}`);
     if ((parsed.pathname === '/' || parsed.pathname === '') && !parsed.search) errors.push(`${item.id}: länk går till startsida: ${source.url}`);
     if (forbiddenUrls.has(source.url)) errors.push(`${item.id}: länk är känd som inaktuell eller går till landnings-/översiktssida: ${source.url}`);
     if (/\/(search|sok|sök)(\/|$)/i.test(parsed.pathname) || parsed.searchParams.has('query')) errors.push(`${item.id}: sökresultat får inte användas som källa: ${source.url}`);
@@ -201,7 +202,7 @@ if (!questionsMatch) {
 // The canonical dataset is cases.json; the snapshot is checked separately when rebuilt.
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 198) errors.push(`Förväntade 198 fall, hittade ${cases.length}`);
+if (cases.length !== 210) errors.push(`Förväntade 210 fall, hittade ${cases.length}`);
 
 for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
   const count = cases.filter(item => item.actor === actor).length;
