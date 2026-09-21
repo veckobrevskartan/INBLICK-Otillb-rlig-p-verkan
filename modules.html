@@ -2085,7 +2085,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </details>
   <div class="reveal sector-workspace">
     <div class="sector-nav-list" id="sectorNav">
-    <div class="sec-nav-item active" id="sni-LOCAL_GOV" onclick="selectSector('LOCAL_GOV')" style="border-left-color:var(--accent)">
+    <div class="sec-nav-item" id="sni-LOCAL_GOV" onclick="selectSector('LOCAL_GOV')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Kommuner och regioner</span>
         <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">27</span>
@@ -2192,7 +2192,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     </div>
 </div>
     <div class="sector-panel-stack" id="sectorPanelWrap">
-<div class="sector-panel show" id="sp-LOCAL_GOV">
+<div class="sector-panel" id="sp-LOCAL_GOV">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
         <div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#B8973A;margin-bottom:5px">Tvärsektoriell miljö</div>
@@ -10755,7 +10755,6 @@ function show(key,options={}){
   else if(document.documentElement.classList.contains('js-ready')){
     const activeSector=document.querySelector('#mod-sectors .sec-nav-item.active'),activePanel=activeSector?document.getElementById('sp-'+activeSector.id.replace(/^sni-/,'')):null;
     if(activeSector&&activePanel?.classList.contains('mobile-inline-detail'))setMobileReader(activeSector,activePanel,'inline',false,true);
-    else selectSector(activeSector?.id?.replace(/^sni-/,'')||'LOCAL_GOV',{forceOpen:true});
   }
   if(mt)mt.classList.add('active');
   const nextHash=options.anchor?'#'+options.anchor:'#mod-'+safeKey;
@@ -11400,7 +11399,6 @@ function restoreResponsiveDetailLayout(){
     if(bropFlow&&bropDetail){bropFlow.after(bropDetail);bropDetail.classList.remove('mobile-inline-detail','mobile-collapsed');}
     if(checkTabs&&checkPanel){checkTabs.after(checkPanel);checkPanel.classList.remove('mobile-inline-detail','mobile-collapsed');}
     if(cultActions&&cultDetail){cultActions.after(cultDetail);cultDetail.classList.remove('mobile-inline-detail','mobile-collapsed');}
-    if(sectorWrap&&!document.querySelector('.sec-nav-item.active'))selectSector('LOCAL_GOV');
     if(legalLadder&&!document.querySelector('.legal-rung.active'))selectLegal('muta');
     if(chainNav&&!document.querySelector('.cni.active'))selectChain(0,{forceOpen:true});
     if(assessNav&&!document.querySelector('.ani.active'))goQ(0,{forceOpen:true});
@@ -12009,9 +12007,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   placeArchetypeDetail(document.querySelector('.arch-node[aria-pressed="true"]')?.dataset.arch||'access');
   initDisclosureCues();
   initMobileDetailAccordions();
-  const initialSector=document.querySelector('#mod-sectors .sec-nav-item.active')?.id?.replace(/^sni-/,'')||'LOCAL_GOV';
-  if(startMod==='sectors'&&document.getElementById('sectorPanelWrap')&&!document.querySelector('#mod-sectors .sector-panel.mobile-inline-detail'))selectSector(initialSector,{forceOpen:true});
-  else if(startMod!=='sectors')clearMobileReader();
+  if(startMod!=='sectors')clearMobileReader();
   const resolvedDeepAnchor=validRequestedCase?null:(deepAnchor||getDeepAnchor());
   if(resolvedDeepAnchor)openDeepAnchor(resolvedDeepAnchor);
   if(validRequestedCase)setTimeout(()=>openLinkedCase(requestedCaseId,{updateUrl:false,behavior:'auto'}),100);
