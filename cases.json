@@ -5726,13 +5726,13 @@
     "sector": "AUTHORITY",
     "sources": [
       {
-        "l": "Helsingborgs Dagblad — Fick inte bidrag, dödshotade handläggare",
+        "l": "Pressen.se — återger Helsingborgs Dagblads uppgifter om hot mot handläggare",
         "t": "media",
-        "url": "https://www.hd.se/landskrona/fick-inte-bidrag-dodhotade-handlaggare/"
+        "url": "https://www.pressen.se/1363156820.html"
       }
     ],
     "status": "INDICATION",
-    "summary": "En 27-årig man från Landskrona misstänks ha dödshotat en Försäkringskassans handläggare och hennes familj efter att ha nekats aktivitetsstöd. Uppgifterna kommer från medierapportering och någon rättslig prövning av skuld har inte redovisats. Fallet visar hur hot kan riktas mot själva myndighetsutövningen och skapa press på den som fattar eller verkställer beslut.",
+    "summary": "En 27-årig man från Landskrona misstänks enligt en återpublicerad sammanfattning av Helsingborgs Dagblads artikel ha hotat en handläggare på Försäkringskassan och hennes familj efter att ha nekats aktivitetsstöd. Originalartikeln är för närvarande inte åtkomlig via den tidigare länken. Rättslig prövning av skuld har inte verifierats.",
     "title": "Landskrona — handläggare uppges ha dödshotats efter beslut om aktivitetsstöd"
   },
   {
