@@ -1706,6 +1706,16 @@ button,[onclick]{touch-action:manipulation}
 
 body.copy-protected,body.copy-protected *{user-select:none!important;-webkit-user-select:none!important;-moz-user-select:none!important}
 body.copy-protected input,body.copy-protected textarea,body.copy-protected select,body.copy-protected [contenteditable="true"]{user-select:text!important;-webkit-user-select:text!important;-moz-user-select:text!important}
+
+/* Vägledning om distansarbete i säkerhetskultur */
+.remote-work-guide{margin:34px 0;padding:28px;border:1px solid var(--border);background:var(--bg-card)}
+.remote-work-guide h2{font:400 clamp(27px,3vw,42px)/1.12 var(--fd);margin:12px 0 16px}
+.remote-work-intro{max-width:850px;font-size:14px;line-height:1.75;color:var(--muted);margin-bottom:20px}
+.remote-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.remote-work-card{padding:20px;background:var(--bg-mid);border-top:3px solid var(--accent)}
+.remote-work-card h3{font:400 23px/1.2 var(--fd);margin:0 0 12px}
+.remote-work-card p{font-size:13px;line-height:1.7;color:var(--muted)}
+@media(max-width:850px){.remote-work-grid{grid-template-columns:1fr}.remote-work-guide{padding:20px}}
 </style>
 </head>
 <body class="copy-protected">
@@ -15692,6 +15702,18 @@ function showHandle(id,options={}){
   </div>
 
   <div class="policy-core reveal"><div class="policy-core-label">Kultur och strategi</div><div>Det ofta återgivna uttrycket <strong>”culture eats strategy for breakfast”</strong> fångar en praktisk poäng, oavsett den osäkra tillskrivningen: strategin anger vad organisationen vill, men vardagskulturen avgör vad människor faktiskt gör när regler, tidspress, lojaliteter och resultatkrav kolliderar.</div></div>
+
+  <section class="remote-work-guide reveal" id="distansarbete" aria-labelledby="distansarbete-title">
+    <p class="eyebrow">Aktuell vägledning</p>
+    <h2 id="distansarbete-title">Distansarbete kräver <em>fortsatt närvaro</em></h2>
+    <p class="remote-work-intro">CISA:s uppdaterade Insider Threat Mitigation Guide (9 september 2026) betonar att medarbetare som arbetar hemma eller på andra platser behöver ha regelbunden kontakt med kollegor, chefer och andra i organisationen. Det gör samarbetet bättre, men ger också fler möjligheter att upptäcka när en persons arbetsrelaterade beteende förändras.</p>
+    <div class="remote-work-grid">
+      <div class="remote-work-card"><h3>Kontakt bygger tillhörighet</h3><p>Återkommande samtal handlar inte bara om uppföljning. De håller relationen till arbetsplatsen levande, gör det lättare att be om hjälp och skapar förutsättningar för tillit och lojalitet. Den som känner sig sedd och delaktig är också lättare att nå när något börjar skava.</p></div>
+      <div class="remote-work-card"><h3>Lär känna normalbilden</h3><p>Uppsikt betyder inte att följa varje minut eller läsa privata meddelanden. Det betyder att känna till hur arbetet normalt utförs och reagera varsamt på tydliga förändringar: oförklarlig tillbakadragenhet, återkommande regelbrott, märkliga arbetstider, ovanligt intresse för behörigheter eller tecken på press och konflikter.</p></div>
+      <div class="remote-work-card"><h3>Gör kontakten användbar</h3><p>Blanda arbetsavstämningar med enskilda samtal där medarbetaren får beskriva hinder och oro. Ha tydliga vägar för att rapportera avvikelser, erbjud stöd och dokumentera sakliga iakttagelser. Åtgärder ska bygga på konkreta omständigheter, inte på distansarbete i sig eller på en enskild förändring.</p></div>
+    </div>
+    <p style="margin:18px 0 0;font-family:var(--fm);font-size:9px;line-height:1.65;color:var(--dim)">Källa: <a href="https://www.cisa.gov/news-events/news/cisa-releases-updated-insider-threat-guide-new-insights-mitigate-physical-and-cyber-threats" target="_blank" rel="noopener">CISA, Insider Threat Mitigation Guide, 9 september 2026</a>. Formuleringarna om tillhörighet och lojalitet är en praktisk slutsats för INBLICK; CISA:s vägledning gäller regelbunden kontakt, samarbete och uppmärksamhet på beteendeförändringar.</p>
+  </section>
 
   <!-- NO DARK CORNERS -->
   <div id="no-dark-corners" class="reveal cult-block">
