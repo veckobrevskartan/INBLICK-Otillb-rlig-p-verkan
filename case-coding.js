@@ -4017,7 +4017,7 @@ window.INBLICK_CASE_CODING = {
 (function(){
   const styleId='inblick-runtime-fixes';
   const moduleFlow=[
-    ['method','Metod & begrepp'],['chain','Påverkanskedjan'],['sectors','Sektormiljöer'],['actors','Aktörsmatrisen'],
+    ['chain','Påverkanskedjan'],['sectors','Sektormiljöer'],['actors','Aktörsmatrisen'],
     ['legal','Juridisk ram'],['infopav','Informationspåverkan'],['theory','Teorier och modeller'],['visuals','Visuella modeller'],
     ['map','Händelser & fall'],['graph','Sambandsgraf'],['assess','Organisationstestet'],['inds','Indikatorer'],
     ['tools','Verktygslådan'],['culture','Säkerhetskultur'],['handle','Hantera ärende'],['sources','Källor']
@@ -4026,17 +4026,18 @@ window.INBLICK_CASE_CODING = {
     document.querySelectorAll('.module[id^="mod-"]').forEach((module)=>{
       if(module.querySelector('.module-flow-nav'))return;
       const key=module.id.slice(4);
-      const index=moduleFlow.findIndex(([id])=>id===key);
+      const availableFlow=moduleFlow.filter(([id])=>document.getElementById('mod-'+id));
+      const index=availableFlow.findIndex(([id])=>id===key);
       if(index<0)return;
-      const previous=moduleFlow[(index-1+moduleFlow.length)%moduleFlow.length];
-      const next=moduleFlow[(index+1)%moduleFlow.length];
+      const previous=availableFlow[(index-1+availableFlow.length)%availableFlow.length];
+      const next=availableFlow[(index+1)%availableFlow.length];
       const flow=document.createElement('div');
       flow.className='module-flow-nav';
       flow.setAttribute('role','navigation');
       flow.setAttribute('aria-label','Navigera mellan moduler');
       flow.innerHTML=`
         <a class="module-flow-link module-flow-prev" href="#mod-${previous[0]}"><span class="module-flow-arrow" aria-hidden="true">←</span><span><small>Föregående del</small><strong>${previous[1]}</strong></span></a>
-        <span class="module-flow-current" aria-hidden="true">${index+1} / ${moduleFlow.length}</span>
+        <span class="module-flow-current" aria-hidden="true">${index+1} / ${availableFlow.length}</span>
         <a class="module-flow-link module-flow-next" href="#mod-${next[0]}"><span><small>Nästa del</small><strong>${next[1]}</strong></span><span class="module-flow-arrow" aria-hidden="true">→</span></a>`;
       module.appendChild(flow);
     });
