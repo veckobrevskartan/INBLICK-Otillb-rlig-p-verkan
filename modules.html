@@ -1907,7 +1907,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="sec-head reveal">
     <p class="eyebrow">Händelser och fall</p>
     <h1 class="sec-title">Fall att<br><em>utforska</em></h1>
-    <p class="sec-intro">Utforska 220 svenska och relevanta internationella fall från 2002–2026. Filtrera på sektor, aktör, metod, upptäcktsväg, utfall, källäge eller tidsperiod. Resultatet visas både som fallkort och på kartan.</p>
+    <p class="sec-intro">Utforska 220 svenska och relevanta internationella fall från 2003–2026. Filtrera på sektor, aktör, metod, upptäcktsväg, utfall, källäge eller tidsperiod. Resultatet visas både som fallkort och på kartan.</p>
   </div>
   <div class="map-stats reveal" id="mapStats"></div>
   <details class="case-filter-panel reveal" id="caseFilterPanel" open>
@@ -1966,9 +1966,9 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     </label>
     <button class="case-filter-reset" type="button" onclick="resetCaseBrowserFilters()">Rensa filter</button>
   </div>
-  <div class="case-filter-summary" id="caseFilterSummary" aria-live="polite">Alla fall visas.</div>
+  <div class="case-filter-summary" id="caseFilterSummary" aria-live="polite">Alla fall ingår i urvalet.</div>
   </details>
-  <div class="map-ready-cue reveal" id="mapReadyCue" aria-live="polite"><strong>220</strong><span>fall visas på kartan och i fallbiblioteket.</span><span class="cue-action">Välj en kartmarkör eller ett fall →</span></div>
+  <div class="map-ready-cue reveal" id="mapReadyCue" aria-live="polite"><strong>220</strong><span>fall ingår i urvalet. Förteckningen visar 12 åt gången.</span><span class="cue-action">Välj en kartmarkör eller ett fall →</span></div>
   <div class="map-case-panel" id="case-detail" tabindex="-1">
     <div class="mcp-top"><div class="mcp-title" id="mcp-title"></div><button class="mcp-close" onclick="closeCase()">✕</button></div>
     <div class="mcp-badges" id="mcp-badges"></div>
@@ -11578,7 +11578,7 @@ function renderCaseList(){
     if(mapFilters.outcome!=='ALL')labels.push(PATTERN_CODEBOOK.outcome[mapFilters.outcome]);
     if(mapFilters.period!=='ALL')labels.push(mapFilters.period.replace('-', '–'));
     if(caseSearchQuery)labels.push(`Sökning: ”${caseSearchQuery}”`);
-    summary.textContent=labels.length?`Aktiva filter: ${labels.join(' · ')}`:'Alla fall visas. Välj filter eller sök på ett ord för att avgränsa.';
+    summary.textContent=labels.length?`Aktiva filter: ${labels.join(' · ')}`:'Alla fall ingår i urvalet. Välj filter eller sök på ett ord för att avgränsa.';
   }
   if(!filtered.length){
     list.innerHTML='<div class="case-list-empty">Inga fall matchar de valda filtren och sökningen. Ändra ett filter eller rensa sökfältet.</div>';
@@ -11599,12 +11599,12 @@ function updateMapStats(){
   const stats=document.getElementById('mapStats');
   if(!stats)return;
   stats.innerHTML=`
-    <div><div class="mstat-val">${tot}</div><div class="mstat-lab">Visade fall</div></div>
+    <div><div class="mstat-val">${tot}</div><div class="mstat-lab">Matchande fall</div></div>
     <div><div class="mstat-val">${conf}</div><div class="mstat-lab">Bekräftade</div></div>
     <div><div class="mstat-val">${tot-conf}</div><div class="mstat-lab">Indikationer</div></div>
     <div><div class="mstat-val">${period}</div><div class="mstat-lab">Tidsperiod</div></div>`;
   const cue=document.getElementById('mapReadyCue');
-  if(cue)cue.innerHTML=`<strong>${tot}</strong><span>${tot===CASES.length?'fall visas på kartan och i fallbiblioteket.':'fall matchar de aktiva filtren och visas nu.'}</span><span class="cue-action">Välj en kartmarkör eller ett fall →</span>`;
+  if(cue)cue.innerHTML=`<strong>${tot}</strong><span>${tot===CASES.length?'fall ingår i urvalet. Förteckningen visar 12 åt gången.':'fall matchar de aktiva filtren. Förteckningen visar 12 åt gången.'}</span><span class="cue-action">Välj en kartmarkör eller ett fall →</span>`;
 }
 function showCaseToast(c){
   const toast=document.getElementById('caseToast');
