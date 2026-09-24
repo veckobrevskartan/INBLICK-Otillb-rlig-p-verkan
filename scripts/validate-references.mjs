@@ -148,7 +148,7 @@ if (/<a\b[^>]*href="#mod-[^"]+"[^>]*onclick="[^"]*return false[^"]*"/i.test(modu
   errors.push('modules.html: en modulankarlänk blockerar webbläsarens reservnavigering med return false');
 }
 const mobileModuleLinks = [...modules.matchAll(/<a href="#mod-([^"]+)" class="mobile-tab-btn" id="mtab-([^"]+)"/g)];
-if (mobileModuleLinks.length !== 16) errors.push(`modules.html: förväntade 16 mobila modulankarlänkar, hittade ${mobileModuleLinks.length}`);
+if (mobileModuleLinks.length !== 15) errors.push(`modules.html: förväntade 15 mobila modulankarlänkar, hittade ${mobileModuleLinks.length}`);
 for (const [, target, tab] of mobileModuleLinks) {
   if (target !== tab) errors.push(`modules.html: mobilfliken ${tab} pekar på mod-${target}`);
 }
