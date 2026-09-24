@@ -202,7 +202,7 @@ if (!questionsMatch) {
 // The canonical dataset is cases.json; the snapshot is checked separately when rebuilt.
 if (!modules.includes(`const ACTORS=${JSON.stringify(actors)};`)) errors.push('Aktörsdatan i modules.html avviker från actors.json');
 if (!modules.includes(`const INDICATORS=${JSON.stringify(indicators)};`)) errors.push('Indikatordatan i modules.html avviker från indicators.json');
-if (cases.length !== 210) errors.push(`Förväntade 210 fall, hittade ${cases.length}`);
+if (cases.length !== 220) errors.push(`Förväntade 220 fall, hittade ${cases.length}`);
 
 for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC_INTEREST']) {
   const count = cases.filter(item => item.actor === actor).length;
