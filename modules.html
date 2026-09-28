@@ -419,6 +419,9 @@ html.js-ready .reveal.visible{opacity:1;transform:none}
 .ac-goal{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:11px}
 .ac-methods{display:flex;flex-wrap:wrap;gap:4px}
 .ac-method{font-family:var(--fm);font-size:7px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-s);color:var(--dim)}
+/* Sektortexterna använder läsbar brödtext i stället för aktörskortens små etiketter. */
+#mod-sectors .sector-panel .ac-method{font-family:var(--fb);font-size:12px;line-height:1.45;letter-spacing:0;text-transform:none;color:var(--muted);background:var(--bg);padding:7px 10px;border:0;border-left:2px solid var(--accent)}
+@media(max-width:680px){#mod-sectors .sector-panel [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}}
 .ac-cta{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-top:10px;opacity:1;transition:.15s}
 .ac:hover .ac-cta{opacity:1}
 .actor-detail{display:none;background:var(--bg-mid);border-top:2px solid var(--border);padding:28px;margin-bottom:40px}
