@@ -208,20 +208,20 @@ for (const actor of ['CRIMINAL_NETWORK', 'FOREIGN_POWER', 'EXTREMIST', 'ECONOMIC
   const count = cases.filter(item => item.actor === actor).length;
   if (!index.includes(`${count} fall i databasen`)) errors.push(`index.html: inaktuell aktörsräknare för ${actor}, förväntade ${count}`);
 }
-if (!modules.includes('ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];if(key)a.cases=CASES.filter(c=>c.actor===key).map(c=>c.id);});')) {
-  errors.push('modules.html: aktörernas fallistor synkroniseras inte med CASES');
-}
-if (!modules.includes('const ACTOR_CASE_KEYS=')) {
-  errors.push('modules.html: ACTOR_CASE_KEYS saknas — aktörsmodulen kan inte starta');
-}
-const actorsDeclarationIndex = modules.indexOf('const ACTORS=');
-const actorKeysDeclarationIndex = modules.indexOf('const ACTOR_CASE_KEYS=');
-const actorsSyncIndex = modules.indexOf('ACTORS.forEach(a=>{const key=ACTOR_CASE_KEYS[a.id];');
-if (actorKeysDeclarationIndex !== -1 && actorsDeclarationIndex !== -1 && actorKeysDeclarationIndex > actorsDeclarationIndex) {
-  errors.push('modules.html: ACTOR_CASE_KEYS deklareras efter ACTORS');
-}
-if (actorsSyncIndex !== -1 && actorsSyncIndex < actorsDeclarationIndex) {
-  errors.push('modules.html: ACTORS används före deklarationen — huvudskriptet avbryts i webbläsaren');
+// Actor cards intentionally feature a curated selection, while the map and graph
+// use all cases. A featured reference must exist and match the actor category.
+const actorKeys = {
+  'criminal-network': 'CRIMINAL_NETWORK',
+  'foreign-power': 'FOREIGN_POWER',
+  extremist: 'EXTREMIST',
+  'economic-interest': 'ECONOMIC_INTEREST',
+};
+for (const actor of actors) {
+  for (const id of actor.cases ?? []) {
+    const item = cases.find(entry => entry.id === id);
+    if (!item) errors.push(`actors.json: ${actor.id} pekar på ett saknat fall ${id}`);
+    else if (item.actor !== actorKeys[actor.id]) errors.push(`actors.json: ${id} hör till ${item.actor}, inte ${actor.id}`);
+  }
 }
 if (/<script\s+src=["'][^"']*leaflet[^"']*["'][^>]*><\/script>/i.test(modules)) {
   errors.push('modules.html: Leaflet får inte vara ett parserblockerande skript');
