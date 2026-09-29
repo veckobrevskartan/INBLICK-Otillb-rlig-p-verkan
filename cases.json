@@ -259,7 +259,7 @@
     "title": "Helsingborgs hamn — hamnarbetare insider i kokainhärva"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2024-05",
     "id": "c10",
     "loc": {
@@ -288,7 +288,7 @@
       }
     ],
     "status": "CONFIRMED",
-    "summary": "Säkerhetsskyddsklassificerade uppgifter i Lantmäteriets öppna arkiv (Arken) lämnades ut utan sekretessprövning under många år. Ledningen kände till problemet sedan 2018 men agerade inte förrän panikstängning maj 2024. Ds 2026:2: 'aktörer som vill Sverige illa har kunnat kartlägga och sammanställa känsliga uppgifter — den skadan går inte att reparera.' Generaldirektören avgick.",
+    "summary": "Säkerhetsskyddsklassificerade uppgifter i Lantmäteriets öppna arkiv (Arken) lämnades ut utan sekretessprövning under många år. Ledningen kände till problemet sedan 2018 men agerade inte förrän panikstängning maj 2024. Ds 2026:2: 'aktörer som vill Sverige illa har kunnat kartlägga och sammanställa känsliga uppgifter — den skadan går inte att reparera.' Generaldirektören avgick. Ingen främmande makt är belagd som aktör bakom den bristande hanteringen.",
     "title": "Lantmäteriet — säkerhetsklassade kartuppgifter röjda utan sekretessprövning under år"
   },
   {
@@ -638,7 +638,7 @@
     "title": "Gängkopplad kvinna avslöjades på Migrationsverket — fick jobb på socialkontor"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2017-01",
     "id": "c24",
     "loc": {
@@ -667,7 +667,7 @@
       }
     ],
     "status": "CONFIRMED",
-    "summary": "Transportstyrelsen lämnade ut sekretessklassificerade uppgifter — fordon, körkort, militär personal, vittnen under skydd — till utländska IT-underleverantörer utan säkerhetsskyddsgranskning. GD dömdes för vårdslöshet med hemlig uppgift. Skandalen ledde till riksdagskris och ministerflykt. Strukturellt analogt med Lantmäteriet-fallet tio år senare.",
+    "summary": "Transportstyrelsen lämnade ut sekretessklassificerade uppgifter — fordon, körkort, militär personal, vittnen under skydd — till utländska IT-underleverantörer utan säkerhetsskyddsgranskning. GD dömdes för vårdslöshet med hemlig uppgift. Skandalen ledde till riksdagskris och ministerflykt. Strukturellt analogt med Lantmäteriet-fallet tio år senare. Ingen främmande makt är belagd som aktör bakom den bristande hanteringen.",
     "title": "Transportstyrelsen — sekretessklassad data till utländska IT-leverantörer"
   },
   {
@@ -1568,7 +1568,7 @@
     "title": "Ericsson — IT-konsulten C.R. dömdes till 3 år för att ha hackat och stulit källkod"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2018-12",
     "id": "c67",
     "loc": {
@@ -1952,7 +1952,7 @@
     "title": "Kommunal chef dömd — svindlade 5,5 miljoner kronor från fem skånska kommuner"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2023-01",
     "id": "c86",
     "loc": {
@@ -1976,11 +1976,11 @@
       }
     ],
     "status": "CONFIRMED",
-    "summary": "Säpo varnade om kinesiska gästforskare vid svenska universitet med kopplingar till kinesisk militär. I ett särskilt rapporterat fall bedrev Q.F. missilrelaterad forskning vid Lunds universitet och arbetar enligt DN senare för Kinas högsta militärledning. Säpo identifierade även kinesiska forskare som var officerare i PLA och tog patent för Kinas försvarsuniversitet inom samma områden som de forskat om i Sverige.",
+    "summary": "Säpo varnade om kinesiska gästforskare vid svenska universitet med kopplingar till kinesisk militär. I ett särskilt rapporterat fall bedrev Q.F. missilrelaterad forskning vid Lunds universitet och arbetar enligt DN senare för Kinas högsta militärledning. Säpo identifierade även kinesiska forskare som var officerare i PLA och tog patent för Kinas försvarsuniversitet inom samma områden som de forskat om i Sverige. Underlaget visar inte att någon otillåten tekniköverföring skedde under tiden i Sverige.",
     "title": "Lunds universitet — Q.F. forskade om missiler och arbetar nu för Kinas militärledning"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2021-01",
     "id": "c87",
     "loc": {
@@ -4730,7 +4730,7 @@
     "title": "Storbritannien — Reform UK-toppar lämnar efter uppgifter om utländsk partifinansiering"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2026-09",
     "id": "c195",
     "loc": {
@@ -4772,7 +4772,7 @@
     "title": "Riksdagen/Regeringskansliet — SD-tjänsteperson med uppgifter om proryska kopplingar"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2026-09",
     "id": "c196",
     "loc": {
@@ -5782,7 +5782,7 @@
     "title": "Amsterdam — tidigare kommunmedarbetare åtalas för registeruppgifter till kriminella"
   },
   {
-    "actor": "FOREIGN_POWER",
+    "actor": "UNKNOWN",
     "date": "2026-09",
     "id": "c235",
     "loc": {
