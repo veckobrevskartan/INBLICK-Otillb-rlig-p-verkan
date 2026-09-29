@@ -1719,6 +1719,26 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 .remote-work-card h3{font:400 23px/1.2 var(--fd);margin:0 0 12px}
 .remote-work-card p{font-size:13px;line-height:1.7;color:var(--muted)}
 @media(max-width:850px){.remote-work-grid{grid-template-columns:1fr}.remote-work-guide{padding:20px}}
+
+/* Smala skärmar: navigering och stegvisa övningar. */
+.module [id]{scroll-margin-top:72px}
+@media(max-width:600px){
+  .nav-search-wrap{min-width:0;flex:1}
+  #globalSearchInput,#globalSearchInput:focus{width:100%;min-width:0;box-sizing:border-box}
+  .nav-brand{flex-shrink:0}
+  .scenario-card>summary,.escalation-card>summary{font-size:14px;letter-spacing:0;text-transform:none;padding:14px 12px;min-height:48px;align-items:flex-start}
+  .scenario-body,.escalation-body{padding:0 12px 14px;font-size:15px;line-height:1.7}
+  .scenario-body .scenario-card{border-left:2px solid var(--accent);margin-top:12px}
+  #mod-tools [style*="grid-template-columns:repeat(3,1fr)"],
+  #mod-tools [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:minmax(0,1fr)!important}
+  .mobile-drawer{padding-bottom:calc(30px + env(safe-area-inset-bottom));overscroll-behavior:contain}
+}
+@media(max-width:460px){
+  .nav-brand-inblick{display:none}
+  .nav-brand-logo{width:112px;height:30px}
+  .nav-inner{gap:8px}
+}
+
 </style>
 </head>
 <body class="copy-protected">
@@ -13435,6 +13455,7 @@ function toggleMobileDrawer(){
   h.setAttribute('aria-expanded',String(open));
   h.setAttribute('aria-label',open?'Stäng modulmenyn':'Öppna modulmenyn');
   document.body.classList.toggle('menu-open',open);
+  if(open)d.querySelector('.mobile-tab-btn.active, .mobile-tab-btn')?.focus();
 }
 function closeMobileDrawer(){
   document.getElementById('mobileDrawer').classList.remove('open');
@@ -13446,6 +13467,18 @@ function closeMobileDrawer(){
 }
 
 
+window.addEventListener('keydown',event=>{
+  const drawer=document.getElementById('mobileDrawer');
+  if(!drawer?.classList.contains('open'))return;
+  if(event.key==='Escape'){
+    event.preventDefault();closeMobileDrawer();document.getElementById('navHamburger')?.focus();
+  }else if(event.key==='Tab'){
+    const items=[document.getElementById('navHamburger'),...drawer.querySelectorAll('a[href],button')].filter(el=>el&&el.getClientRects().length);
+    const first=items[0],last=items[items.length-1];
+    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+  }
+});
 
 function showHandle(id,options={}){
   const p=document.getElementById('handle-'+id);
