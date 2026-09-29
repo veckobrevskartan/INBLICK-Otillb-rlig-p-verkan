@@ -34,12 +34,10 @@
       "c07",
       "c08",
       "c09",
-      "c11",
       "c15",
       "c22",
       "c26",
       "c27",
-      "c29",
       "c32",
       "c33",
       "c34"
@@ -60,7 +58,7 @@
       "Teknologistöld",
       "Utnyttjande av systembrister"
     ],
-    "note": "Säkerhetspolisen beskriver en ökad rysk vilja att ta risker och genomföra sabotage. Fallen vid Transportstyrelsen och Lantmäteriet visar samtidigt att en främmande makt kan dra nytta av svaga system utan att först rekrytera en insider. I GRU-fallet kunde information från Försvarsmakten och Säkerhetspolisen lämnas vidare under sex år innan brottsligheten avslöjades.",
+    "note": "Säkerhetspolisen beskriver rysk underrättelseverksamhet och en ökad vilja att ta risker. De kopplade fallen här gäller dokumenterat spioneri eller utländska påtryckningar. Transportstyrelsens och Lantmäteriets informationssäkerhetsbrister kan ha skapat möjligheter för andra aktörer, men underlaget belägger inte att en främmande makt låg bakom dessa brister.",
     "source": "Säkerhetspolisen 2025–2026 — Ryssland, Kina och Iran",
     "sourceUrl": "https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html",
     "indicators": [
@@ -72,8 +70,9 @@
     ],
     "cases": [
       "c03",
-      "c10",
-      "c24"
+      "c53",
+      "c65",
+      "c142"
     ]
   },
   {
@@ -91,7 +90,7 @@
       "Informationspåverkan mot beslutsprocess",
       "Finansiering via offentliga bidrag"
     ],
-    "note": "Statskontoret beskriver hur skadorna kan drabba både den utsatta personen, anhöriga, verksamheten och tilliten till förvaltningen. Acta Publicas granskning visar att personer och bolag med extremistkopplingar kan framstå som legitima och därför passera vanliga kontroller. Ett exempel är övervakare inom Kriminalvården som haft ansvar för dömda med koppling till samma miljöer.",
+    "note": "Statskontoret beskriver hur otillåten påverkan kan skada både den utsatta personen och verksamhetens handlingsförmåga. Acta Publicas kartläggning visar kopplingar mellan personer i extremistmiljöer och offentligt finansierade verksamheter. En sådan koppling är en uppgift att pröva, inte ett bevis på infiltration eller att varje berörd verksamhet har missbrukats.",
     "source": "Acta Publica 2020 — Möjliggörarna",
     "sourceUrl": "https://actapublica.se/nyheter/rapport-mojliggorarna/",
     "indicators": [
@@ -102,9 +101,9 @@
       "Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"
     ],
     "cases": [
-      "c14",
       "c16",
-      "c18"
+      "c18",
+      "c57"
     ]
   },
   {
@@ -133,11 +132,8 @@
       "Inbjudningar till resor eller evenemang utan tydlig affärsmässig motivering"
     ],
     "cases": [
-      "c06",
       "c12",
-      "c13",
       "c17",
-      "c21",
       "c28",
       "c30",
       "c31"
