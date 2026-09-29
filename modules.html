@@ -1821,14 +1821,14 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
       <span class="mtb-num">08</span>Händelser &amp; fall
     </a>
     <a href="#mod-graph" class="mobile-tab-btn" id="mtab-graph">
-      <span class="mtb-num">11</span>Sambandsgraf
+      <span class="mtb-num">09</span>Sambandsgraf
     </a>
     <div class="mob-cat-hdr">Bedöma</div>
     <a href="#mod-assess" class="mobile-tab-btn" id="mtab-assess">
-      <span class="mtb-num">09</span>Organisationstestet
+      <span class="mtb-num">10</span>Organisationstestet
     </a>
     <a href="#mod-inds" class="mobile-tab-btn" id="mtab-inds">
-      <span class="mtb-num">10</span>Indikatorer
+      <span class="mtb-num">11</span>Indikatorer
     </a>
     <div class="mob-cat-hdr">Agera</div>
     <a href="#mod-tools" class="mobile-tab-btn" id="mtab-tools">
@@ -2623,10 +2623,11 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </div>
   <div class="card-grid-2 reveal" id="actorGrid"></div>
   <div class="actor-detail reveal" id="actorDetail"></div>
-  <details class="edu-card reveal" id="violent-extremism-framework" style="margin-top:28px">
+  <template id="extremismActorTemplate">
+  <details class="edu-card" id="violent-extremism-framework" style="margin-top:28px">
     <summary><span class="edu-arrow" aria-hidden="true">▸</span><span class="edu-summary-title">Våldsbejakande extremism · fyra gränssnitt</span><span class="edu-summary-meta">CVE · Brå · analysstöd</span></summary>
     <div class="edu-body">
-      <div class="edu-kicker">Tillägg till aktörsmatrisen</div>
+      <div class="edu-kicker">Fördjupning om extremistisk miljö</div>
       <div class="edu-title">Ideologi, relationer, institutioner och pengar</div>
       <p>Våldsbejakande extremism kan vara relevant i en analys av otillbörlig påverkan när ideologiska mål möter relationer, offentliga verksamheter eller ekonomiska flöden. CVE:s kunskapsöversikt beskriver miljöerna och utvecklingen i Sverige. För den praktiska bedömningen behöver man däremot skilja mellan en ideologisk miljö, en konkret aktör, en faktisk handling och ett verifierat säkerhetsproblem.</p>
       <div class="extremism-flow" role="img" aria-label="Fyra gränssnitt i analysen av våldsbejakande extremism">
@@ -2640,9 +2641,10 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
         <summary>Vad kan läggas till i en lägesbild?</summary>
         <div class="research-source-body"><p>Beskriv miljö och aktörer separat. Ange vilken myndighet, domstol, forskare eller journalist som står bakom varje uppgift. Markera om uppgiften gäller misstanke, åtal, dom, administrativt beslut eller analytisk bedömning. Lägg särskild vikt vid skolor, offentliga kontrakt, föreningsbidrag, digital propaganda och finansieringsflöden när de faktiskt kan beläggas.</p></div>
       </details>
-      <div class="op-source-row reveal"><a href="https://cve.se/publikationer/valdsbejakandeextremismisverigekunskapsoversikt20232024.5.330134c518f384e69b3fb5.html" target="_blank" rel="noopener noreferrer">CVE · Våldsbejakande extremism i Sverige 2023/2024 ↗</a><a href="https://bra.se/amnen/valdsbejakande-extremism" target="_blank" rel="noopener noreferrer">Brå/CVE · våldsbejakande extremism ↗</a><a href="https://www.regeringen.se/rattsliga-dokument/proposition/2024/11/prop.-20242546" target="_blank" rel="noopener noreferrer">Regeringen · CVE:s granskningsuppgift ↗</a></div>
+      <div class="op-source-row"><a href="https://cve.se/publikationer/valdsbejakandeextremismisverigekunskapsoversikt20232024.5.330134c518f384e69b3fb5.html" target="_blank" rel="noopener noreferrer">CVE · Våldsbejakande extremism i Sverige 2023/2024 ↗</a><a href="https://bra.se/amnen/valdsbejakande-extremism" target="_blank" rel="noopener noreferrer">Brå/CVE · våldsbejakande extremism ↗</a><a href="https://www.regeringen.se/rattsliga-dokument/proposition/2024/11/prop.-20242546" target="_blank" rel="noopener noreferrer">Regeringen · CVE:s granskningsuppgift ↗</a></div>
     </div>
   </details>
+  </template>
 </div>
 </section>
 
@@ -4684,14 +4686,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="ind-method-card"><div class="ind-method-n">04</div><div class="ind-method-title">Välj åtgärd</div><div class="ind-method-copy">Anpassa åtgärden till konsekvens och säkerhetsbehov: stödjande samtal, åtkomstkontroll, säkring av loggar eller formell utredning.</div></div>
   </div>
 
-  <div class="ind-cisa-card reveal" style="margin:0 0 24px;padding:18px 20px;background:var(--bg-mid);border:1px solid var(--border);border-left:3px solid var(--accent)">
-    <p class="eyebrow" style="margin-bottom:8px">CISA · 2026 · hybrid- och distansarbete</p>
-    <h2 style="font-family:var(--fd);font-size:25px;font-weight:400;line-height:1.15;margin-bottom:8px">Distansarbete är inte risken — avståndet kan göra förändringar svårare att se</h2>
-    <p style="font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:10px">När man inte möts varje dag försvinner en del av den spontana kontakten. Det kan göra det svårare att märka att någon isolerar sig, blir ovanligt defensiv, börjar arbeta på andra tider eller plötsligt hanterar information på ett nytt sätt. CISA rekommenderar därför regelbunden kontakt mellan chefer, kollegor och distansarbetande medarbetare. Det handlar inte om att övervaka hemmet eller läsa in skuld i ett förändrat beteende. Det handlar om att behålla arbetsgemenskapen, skapa en kanal där problem kan tas upp och upptäcka avvikelser tidigt.</p>
-    <p style="font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:10px">Regelbunden kontakt är också en lojalitetsfråga. Medarbetare som får återkoppling, stöd och insyn i beslut har lättare att känna ansvar för verksamheten. Därför bör distansarbete kombineras med planerade avstämningar, en tillgänglig chef, tydliga vägar för att rapportera oro och samma krav på informationssäkerhet som på kontoret.</p>
-    <p style="font-size:12px;color:var(--text);line-height:1.7"><strong>Skyddsräcke:</strong> skilj mellan uppsikt och övervakning. Bedöm mönster över tid och mot arbetsuppgifterna. Ett enskilt sent arbetspass eller mindre social kontakt är inte i sig ett tecken på illojalitet.</p>
-    <a href="https://www.cisa.gov/news-events/news/cisa-releases-updated-insider-threat-guide-new-insights-mitigate-physical-and-cyber-threats" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-family:var(--fm);font-size:9px;color:var(--link)">CISA — Updated Insider Threat Guide (2026) ↗</a>
-  </div>
+  <p class="ind-guardrail reveal">Distansarbete kan göra förändringar svårare att upptäcka. Läs den samlade vägledningen om kontakt och uppföljning under <a href="#mod-culture">Säkerhetskultur →</a>.</p>
   <div class="ind-guardrail reveal"><strong>Att väga in:</strong> stress, psykisk ohälsa, ekonomiska problem, politiska uppfattningar och privata relationer säger i sig inget om illojalitet. De blir relevanta först när de kan kopplas till observerbara handlingar, faktisk tillgång eller en konkret sårbarhet. Indikatorerna fungerar bäst som underlag för bättre frågor, inte som personprofil.</div>
   <div class="op-source-row reveal">
     <a href="https://doi.org/10.1016/j.ijcip.2018.12.001" target="_blank" rel="noopener">Bell, Rogers &amp; Pearce (2019) ↗</a>
@@ -4774,7 +4769,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="sec-head reveal">
     <p class="eyebrow">Sambandsanalys av 232 fall</p>
     <h1 class="sec-title">Sambands<em>grafen</em></h1>
-    <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Grafen startar stabilt, rör sig kort och dämpat och landar sedan så att mönster går att jämföra. Klicka på en aktör, sektor eller ett fall för att se detaljer och använd filtren för att avgränsa materialet.</p>
+    <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Välj en aktörstyp eller klicka på en nod för att se kopplingar och fall. Använd filtren för att avgränsa materialet.</p>
   </div>
   <div class="filter-bar reveal">
     <span class="fb" style="cursor:default;color:var(--dim);border:none;padding:0">Aktör</span>
@@ -4798,7 +4793,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="leg-item"><div class="leg-dot" style="background:#9B4FBB"></div>Extremism</div>
     <div class="leg-item"><div class="leg-dot" style="background:#4A7B6F"></div>Ekonomiskt intresse</div>
     <div class="leg-item"><div class="leg-dot" style="background:rgba(240,237,230,.15);border:1px solid rgba(184,151,58,.4)"></div>Sektor</div>
-    <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Filtera · Klicka</div>
+    <div class="leg-item" style="margin-left:auto;font-family:var(--fm);font-size:8px;color:var(--dim)">Filtrera · Klicka</div>
   </div>
   <div id="graphDetail" style="display:none;background:var(--bg-card);border:1px solid var(--border);padding:22px 26px;margin-top:2px">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px">
@@ -12204,7 +12199,7 @@ function buildActors(){
       <div class="ac-horizon">Tidshorisont: ${a.horizon}</div>
       <div class="ac-goal">${a.goal}</div>
       <div class="ac-methods">${a.methods.map(m=>`<span class="ac-method">${m}</span>`).join('')}</div>
-      <div class="ac-cta">Klicka för detaljer →</div>`;
+      <div class="ac-cta">${a.id==='extremist'?'Öppna detaljer och fördjupning':'Öppna detaljer'} →</div>`;
     el.addEventListener('mouseenter',()=>{if(selActor!==a.id)el.style.borderTopColor=a.color;});
     el.addEventListener('mouseleave',()=>{if(selActor!==a.id)el.style.borderTopColor='transparent';});
     el.onclick=()=>selectActor(a.id,el);
@@ -12226,6 +12221,7 @@ function selectActor(id,el){
     <div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">${a.sub} · ${a.horizon}</div>
   </div>
   ${a.desc_long ? `<div style="margin-bottom:24px">${a.desc_long.split('\\n\\n').map(p=>`<p style="font-size:13px;color:var(--text);line-height:1.8;margin:0 0 14px">${p.trim()}</p>`).join('')}</div>` : ''}
+  ${id==='extremist' ? document.getElementById('extremismActorTemplate')?.innerHTML||'' : ''}
   <div class="ad-grid">
     <div>
       <div class="ad-sec-lbl">Analytisk bedömning</div>
@@ -15423,9 +15419,9 @@ function showHandle(id,options={}){
 
   <!-- GRÅZONSSPEKTRUM -->
   <div class="reveal" style="margin-top:64px">
-    <div class="legal-subhead">Spektrumet — från fängelse till fullt lagligt</div>
+    <div class="legal-subhead">Från brott till andra kontrollfrågor</div>
     <div class="legal-spectrum" id="legalSpectrum"></div>
-    <p class="legal-spectrum-note">Otillbörlig påverkan som analytiskt begrepp (MSB, SKR) täcker hela skalan. Endast den vänstra delen är straffbar — men hela skalan är säkerhetsrelevant. Det är i glidningen mellan fälten skadan uppstår.</p>
+    <p class="legal-spectrum-note">Straffrätt, arbetsrätt, jäv och intern kontroll har olika trösklar. Beskriv först handlingen och välj därefter rätt prövning och åtgärd; ett olämpligt agerande är inte automatiskt ett brott.</p>
   </div>
 
   <!-- KRITISKA BEGREPP -->
@@ -15483,7 +15479,7 @@ function showHandle(id,options={}){
   <!-- KOGNITIVA MEKANISMER -->
   <div class="reveal" style="margin-top:64px">
     <div class="ip-subhead">Fem kognitiva mekanismer som utnyttjas</div>
-    <p class="ip-sub-lead">Påverkan utnyttjar inte bara svaga system utan också mänskliga reaktioner. Varje mekanism är en dokumenterad psykologisk hävstång. Klicka för fallexempel.</p>
+    <p class="ip-sub-lead">Påverkan utnyttjar inte bara svaga system utan också mänskliga reaktioner. Mekanismerna hjälper till att förstå möjliga reaktioner; de bevisar inte avsikten bakom en enskild händelse. Öppna ett kort för exempel och källäge.</p>
     <div class="ip-mech-grid" id="ipMechGrid"></div>
     <div class="ip-mech-detail" id="ipMechDetail"></div>
   </div>
@@ -15491,7 +15487,7 @@ function showHandle(id,options={}){
   <!-- STATLIGA AKTÖRER -->
   <div class="reveal" style="margin-top:64px">
     <div class="ip-subhead">Statliga aktörer använder flera metoder samtidigt</div>
-    <p class="ip-sub-lead">Statsunderstödda aktörer kan kombinera cyberintrång, rekrytering av mänskliga källor och påverkansbudskap i samma kampanj. Tre profiler dominerar hotbilden mot Sverige.</p>
+    <p class="ip-sub-lead">Statsunderstödda aktörer kan kombinera cyberintrång, rekrytering av mänskliga källor och påverkansbudskap i samma kampanj. Här jämförs Ryssland, Kina och Iran utifrån Säkerhetspolisens öppna lägesbild.</p>
     <div class="ip-actor-grid" id="ipActorGrid"></div>
   </div>
 
@@ -15505,7 +15501,7 @@ function showHandle(id,options={}){
   </div>
 
   <div class="legal-srcnote reveal">
-    Källor: <a href="https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html" target="_blank" rel="noopener">Säkerhetspolisen — Ryssland, Kina och Iran ↗</a>. <a href="https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer" target="_blank" rel="noopener">Myndigheten för psykologiskt försvar — påverkanskampanjer ↗</a>. <a href="https://skr.se/demokratiutveckling/otillatenpaverkan.9088.html" target="_blank" rel="noopener">SKR — <em>Otillåten påverkan</em> ↗</a>. <a href="https://www.iranintl.com/en/202405088817" target="_blank" rel="noopener">Iran International — UANI:s granskning av IRGC och svenska lärosäten (2024) ↗</a>. <a href="https://www.mcf.se/sv/amnesomraden/skydd-mot-olyckor-och-farliga-amnen/farligt-gods/transportskydd/" target="_blank" rel="noopener">MCF — <em>Transportskydd</em> (MCF0079) ↗</a>. <a href="https://kronofogden.se/om-kronofogden/nyheter-och-press/pressmeddelande/2026-05-07-ny-lagesbild-beskriver-organiserad-brottslighet" target="_blank" rel="noopener">SMOB — <em>Samhällsgemensam lägesbild 2026</em> ↗</a>.
+    Källor: <a href="https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html" target="_blank" rel="noopener">Säkerhetspolisen — Ryssland, Kina och Iran ↗</a>. <a href="https://mpf.se/kunskap-och-stod/formageportalen/forebygga/paverkanskampanjer" target="_blank" rel="noopener">Myndigheten för psykologiskt försvar — påverkanskampanjer ↗</a>. <a href="https://skr.se/demokratiutveckling/otillatenpaverkan.9088.html" target="_blank" rel="noopener">SKR — <em>Otillåten påverkan</em> ↗</a>.
   </div>
 </div>
 </div>
