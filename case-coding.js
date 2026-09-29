@@ -1397,7 +1397,7 @@ window.INBLICK_CASE_CODING = {
   "c86": {
     "coding": {
       "methods": [
-        "FOREIGN_TECH"
+        "UNKNOWN"
       ],
       "discovery": [
         "UNKNOWN"
@@ -1418,7 +1418,7 @@ window.INBLICK_CASE_CODING = {
   "c87": {
     "coding": {
       "methods": [
-        "FOREIGN_TECH"
+        "UNKNOWN"
       ],
       "discovery": [
         "UNKNOWN"
