@@ -175,6 +175,10 @@ for (const [name, expected] of [['SECTORS', 12], ['ACTORS', 4], ['INDICATORS', 2
 const knownCaseIds = new Set(cases.map(item => item.id));
 for (const step of chainItems) {
   for (const ref of step.cases || []) {
+    if (typeof ref === 'object' && ref.targetId) {
+      if (!modules.includes(`id="${ref.targetId}"`)) errors.push(`modules.html: påverkanskedjans steg ${step.step} hänvisar till saknat sidmål ${ref.targetId}`);
+      continue;
+    }
     const caseId = typeof ref === 'string' ? ref : ref.id;
     if (!knownCaseIds.has(caseId)) errors.push(`modules.html: påverkanskedjans steg ${step.step} hänvisar till saknat fall ${caseId}`);
   }
