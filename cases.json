@@ -648,7 +648,7 @@
       "p": "municipality",
       "r": "Örebro"
     },
-    "sector": "TRANSPORT",
+    "sector": "AUTHORITY",
     "sources": [
       {
         "l": "SVT Nyheter — Transportstyrelsens säkerhetsskandal: detta har hänt",
@@ -1014,7 +1014,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "SVT — Kommuntjänsteman döms för mutbrott",
@@ -1118,7 +1118,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "LEGAL",
+    "sector": "FINANCE",
     "sources": [
       {
         "l": "TV4 — Toppmäklare döms till fängelse",
@@ -1212,7 +1212,7 @@
       "p": "approximate",
       "r": "Nationellt"
     },
-    "sector": "AUTHORITY",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "SVT Nyheter — Eritreas skatteindrivning anmäls",
@@ -1301,7 +1301,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "AUTHORITY",
+    "sector": "IT",
     "sources": [
       {
         "l": "Expo — Vaccinläckan: extremismkopplingar och bristande kontroll",
@@ -1550,7 +1550,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "DEFENCE",
+    "sector": "IT",
     "sources": [
       {
         "l": "Evertiq — Ericsson hacker gets three years",
@@ -1578,7 +1578,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "DEFENCE",
+    "sector": "IT",
     "sources": [
       {
         "l": "Aftonbladet — Larm om mystisk skåpbil vid serverhall",
@@ -1700,7 +1700,7 @@
       "p": "jitter",
       "r": "Västra Götaland"
     },
-    "sector": "AUTHORITY",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "SVT Nyheter Väst — Misstänkt valfusk utreds i Göteborg",
@@ -1873,7 +1873,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "AUTHORITY",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "SVT Nyheter Södertälje — Kyrkohärvan i Södertälje: 17 dömda",
@@ -1901,7 +1901,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "HEALTH",
+    "sector": "SOCIAL",
     "sources": [
       {
         "l": "Assistanskoll — Hårda domar i ELMA-målet i Södertälje (2014)",
@@ -1934,7 +1934,7 @@
       "p": "municipality",
       "r": "Skåne"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "SVT Nyheter Helsingborg — Kommunal chef svindlade miljoner och döms till fängelse",
@@ -1962,7 +1962,7 @@
       "p": "municipality",
       "r": "Skåne"
     },
-    "sector": "AUTHORITY",
+    "sector": "RESEARCH",
     "sources": [
       {
         "l": "Dagens Nyheter — Forskaren arbetar nu för Kinas högsta militärledning",
@@ -1990,7 +1990,7 @@
       "p": "approximate",
       "r": "Nationellt"
     },
-    "sector": "AUTHORITY",
+    "sector": "RESEARCH",
     "sources": [
       {
         "l": "UANI — Investigation alleges IRGC-linked procurement through Swedish universities",
@@ -2051,7 +2051,7 @@
       "p": "approximate",
       "r": "Nationellt"
     },
-    "sector": "DEFENCE",
+    "sector": "IT",
     "sources": [
       {
         "l": "Reuters Investigates — Operation Cloud Hopper and Ericsson",
@@ -2084,7 +2084,7 @@
       "p": "municipality",
       "r": "Västra Götaland"
     },
-    "sector": "AUTHORITY",
+    "sector": "PROCUREMENT",
     "sources": [
       {
         "l": "Expressen — Mutor utreds: Tjänsteman skulle ge gräddfil till bygglov",
@@ -2107,7 +2107,7 @@
       "p": "municipality",
       "r": "Västra Götaland"
     },
-    "sector": "AUTHORITY",
+    "sector": "PROCUREMENT",
     "sources": [
       {
         "l": "Fastighetsnytt — En dömd i bygglovshärva i Lysekil",
@@ -2158,7 +2158,7 @@
       "p": "municipality",
       "r": "Västra Götaland"
     },
-    "sector": "HEALTH",
+    "sector": "SOCIAL",
     "sources": [
       {
         "l": "SVT Nyheter — Härvan av bidragsfusk växer",
@@ -2298,7 +2298,7 @@
       "p": "approximate",
       "r": "Stockholm"
     },
-    "sector": "AUTHORITY",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "Aftonbladet — om kommunala bedrägerier",
@@ -2859,7 +2859,7 @@
       "p": "approximate",
       "r": "Nationellt"
     },
-    "sector": "AUTHORITY",
+    "sector": "PROCUREMENT",
     "sources": [
       {
         "l": "Institutet Mot Mutor — Krog- och resefallet",
@@ -2956,7 +2956,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "Regeringen — En infiltrationskommission mot otillåten påverkan, Dir. 2026:63 (25 juni 2026)",
@@ -3091,7 +3091,7 @@
       "p": "municipality",
       "r": "Skåne"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "Helsingborgs Dagblad — politiker med band till gängkriminella lämnar uppdrag",
@@ -3142,7 +3142,7 @@
       "p": "municipality",
       "r": "Västerbotten"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "SVT — Länsstyrelsen granskar kommunalrådets husaffär i Åsele",
@@ -3170,7 +3170,7 @@
       "p": "municipality",
       "r": "Skåne"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "Helsingborgs Dagblad — Hotade att spränga kommunal förvaltning, får fängelse",
@@ -3503,7 +3503,7 @@
       "l": "Svensk OSINT — Demokrativägledare sparkas efter uppgifter om gängkontakter (2025-W31)",
       "url": "https://www.linkedin.com/posts/svensk-osint_demokrativ%C3%A4gledare-sparkas-f%C3%B6r-g%C3%A4ngkontakter-activity-7356567223777320961-XtGR"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "Expressen — Demokrativägledare sparkas för gängkontakter (2025-07-31)",
@@ -3628,7 +3628,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "SVT Nyheter — Upplands-Bro agerar bank åt friskolor, KD-politiker kopplas till räntefria lån (2026-06-11)",
@@ -4712,7 +4712,7 @@
       "l": "Svensk OSINT — Reform UK-toppar lämnar efter avslöjande om utländsk partifinansiering (2026-09)",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501901565725929472"
     },
-    "sector": "LEGAL",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "Reuters — Senior aides to Reform UK's Farage step down after foreign funding sting (2026-09-04)",
@@ -4744,7 +4744,7 @@
       "l": "Svensk OSINT — SD-tjänsteperson med Rysslandskopplingar utlöser säkerhetsstrid (2026-09)",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501893096239067136"
     },
-    "sector": "SECURITY",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "Expo — Den okända sekreteraren ”Elena” (2026-09-03)",
@@ -5149,7 +5149,7 @@
       "p": "municipality",
       "r": "Stockholm"
     },
-    "sector": "MIGRATION",
+    "sector": "AUTHORITY",
     "sources": [
       {
         "l": "SVT Nyheter — Anställd på Migrationsverket misstänks ha sålt arbetstillstånd (2024-02-13)",
@@ -5769,7 +5769,7 @@
       "p": "municipality",
       "r": "Noord-Holland"
     },
-    "sector": "AUTHORITY",
+    "sector": "LOCAL_GOV",
     "sources": [
       {
         "l": "Svensk OSINT — Tidigare kommunanställd i Amsterdam åtalad",
@@ -5976,7 +5976,7 @@
       "p": "municipality",
       "r": "Västerbotten"
     },
-    "sector": "IT",
+    "sector": "CIVIL_SOCIETY",
     "sources": [
       {
         "l": "Svensk OSINT — lång fängelsedom i 764-målet",
@@ -6509,7 +6509,7 @@
       "p": "municipality",
       "r": "Liège"
     },
-    "sector": "DEFENCE",
+    "sector": "RESEARCH",
     "sources": [
       {
         "l": "Qu4tre — aktionen och gruppens uppgift",
