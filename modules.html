@@ -13369,10 +13369,11 @@ function highlightSearchTarget(target){
   target.classList.add('search-target-hit');
   const previous=target.getAttribute('tabindex');
   if(!target.matches('a,button,input,summary,[tabindex]'))target.setAttribute('tabindex','-1');
-  if(isMobileDetail()){
-    const align=()=>scrollMobileReaderTarget(target,'auto');
-    align();requestAnimationFrame(align);setTimeout(align,180);
-  }else target.scrollIntoView({behavior:'smooth',block:'center'});
+  const align=()=>{
+    if(isMobileDetail())scrollMobileReaderTarget(target,'auto');
+    else target.scrollIntoView({behavior:'auto',block:'center'});
+  };
+  align();requestAnimationFrame(align);setTimeout(align,180);setTimeout(align,700);
   try{target.focus({preventScroll:true});}catch(_){/* Fokus är en förbättring, inte ett krav. */}
   setTimeout(()=>{target.classList.remove('search-target-hit');if(previous===null)target.removeAttribute('tabindex');else target.setAttribute('tabindex',previous);},2600);
 }
