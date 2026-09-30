@@ -13369,12 +13369,14 @@ function highlightSearchTarget(target){
   target.classList.add('search-target-hit');
   const previous=target.getAttribute('tabindex');
   if(!target.matches('a,button,input,summary,[tabindex]'))target.setAttribute('tabindex','-1');
+  try{target.focus({preventScroll:true});}catch(_){/* Fokus är en förbättring, inte ett krav. */}
   const align=()=>{
     if(isMobileDetail())scrollMobileReaderTarget(target,'instant');
     else target.scrollIntoView({behavior:'instant',block:'center'});
   };
-  align();requestAnimationFrame(align);setTimeout(align,180);setTimeout(align,700);
-  try{target.focus({preventScroll:true});}catch(_){/* Fokus är en förbättring, inte ett krav. */}
+  align();requestAnimationFrame(align);
+  [120,320,700,1200,1800].forEach(delay=>setTimeout(align,delay));
+  window.visualViewport?.addEventListener('resize',align,{once:true});
   setTimeout(()=>{target.classList.remove('search-target-hit');if(previous===null)target.removeAttribute('tabindex');else target.setAttribute('tabindex',previous);},2600);
 }
 function runStructuredSearchAction(entry){
@@ -13421,6 +13423,7 @@ function openPageSearchEntry(entry){
 function activateSearchEntry(searchId){
   const entry=GLOBAL_SEARCH_INDEX.find(item=>item.searchId===searchId);
   if(!entry)return;
+  document.getElementById('globalSearchInput')?.blur();
   closeSearch();
   if(entry.kind==='case'){srGoCase(entry.caseId);return;}
   if(entry.kind==='indicator'){srGoInd(entry.indicatorId);return;}
