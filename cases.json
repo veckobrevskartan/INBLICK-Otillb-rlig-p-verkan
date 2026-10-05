@@ -6753,7 +6753,7 @@
       "m": "Solna",
       "r": "Stockholm",
       "lat": 59.36,
-      "lng": 18.0,
+      "lng": 18,
       "p": "city"
     },
     "sector": "DEFENCE",
@@ -7233,6 +7233,191 @@
       "basis": "EDITORIAL"
     },
     "source_note": "Detta är ett pågående rättsfall. Uppgifterna beskriver åtalet och åklagarnas påståenden; ingen skuld är fastställd.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c279",
+    "title": "Bulgarien — uppgifter om avledda vägmedel och flygningar utlöser ambassadörsåterkallelse",
+    "date": "2026-09-18",
+    "loc": {
+      "m": "Sofia",
+      "r": "Bulgarien",
+      "lat": 42.6977,
+      "lng": 23.3219,
+      "p": "city"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Bulgariens inrikesminister uppgav att medel från offentliga kontrakt för vägräcken ska ha förts via ett bolag utan verklig verksamhet och använts till 36 flygningar för parlamentsledamoten Delyan Peevski, till ett värde av över fem miljoner euro. Enligt ministern ägdes bolaget av Bulgariens ambassadör i Förenade arabemiratens far; regeringen begärde att ambassadören skulle återkallas. Peevski förnekade uppgifterna och sade att han och familjen betalat flygningarna. Uppgifterna var föremål för vidare myndighetsprövning och utgör inte en fastställd skuld.",
+    "sources": [
+      {
+        "l": "Radio Bulgaria — Interior Minister on alleged diversion of road funds for Peevski flights, 18 Sep 2026",
+        "t": "media",
+        "url": "https://bnrnews.bg/en/post/530546/interior-minister-over-euro5m-in-diverted-road-funds-paid-for-peevski-flights"
+      },
+      {
+        "l": "Bulgarian MFA — ambassador urgently recalled to Sofia, 18 Sep 2026",
+        "t": "authority",
+        "url": "https://www.mfa.government.bg/en/news/49125"
+      }
+    ],
+    "coding": {
+      "methods": [],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Radio Bulgaria återger inrikesministerns uppgifter, inte ett domstolsavgörande. Återkallelsen av ambassadören är en administrativ åtgärd och innebär inte i sig att ambassadören misstänks för brott.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c280",
+    "title": "Ungern — tidigare kulturminister misstänks för missbruk av offentliga kulturmedel",
+    "date": "2026-09-28",
+    "loc": {
+      "m": "Budapest",
+      "r": "Ungern",
+      "lat": 47.4979,
+      "lng": 19.0402,
+      "p": "city"
+    },
+    "sector": "AUTHORITY",
+    "actor": "CORRUPT_OFFICIAL",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Efter att parlamentet hävt hans immunitet greps och förhördes tidigare kulturministern Balázs Hankó som misstänkt. Åklagare misstänker att 17,3 miljarder forint ur Nationella kulturfonden fördelats under 2025–2026 i strid med fondens ändamål. Hankó har bestridit misstankarna; uppgifterna är inte en dom eller ett fastställt skuldavgörande.",
+    "sources": [
+      {
+        "l": "Associated Press — Hungarian Parliament lifts immunity of Hankó and Seszták, 28 Sep 2026",
+        "t": "media",
+        "url": "https://apnews.com/article/5e424cfeab316a0fe8fc8d551c49d397"
+      },
+      {
+        "l": "The Guardian — former ministers detained over suspected misuse and bribery, 29 Sep 2026",
+        "t": "media",
+        "url": "https://www.theguardian.com/world/2026/sep/29/two-former-hungarian-ministers-detained-over-suspected-bribery-misuse-public-funds"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "GOVERNANCE"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Beloppet och misstanken återges som åklagarnas påstående. Hankó förnekar brott; inget skuldavgörande redovisas i de angivna källorna.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c281",
+    "title": "Ungern — tidigare utvecklingsminister misstänks för mutor kopplade till Volánbusz",
+    "date": "2026-09-28",
+    "loc": {
+      "m": "Budapest",
+      "r": "Ungern",
+      "lat": 47.4979,
+      "lng": 19.0402,
+      "p": "city"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CORRUPT_OFFICIAL",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Tidigare utvecklingsminister Miklós Seszták greps efter att parlamentet hävt hans immunitet i en utredning om mutor kopplade till Volánbusz och leverantörer. Åklagare misstänker att Seszták och en annan tidigare tjänsteman tagit emot mer än 11 miljarder forint i otillbörliga förmåner 2015–2018; en domstol beslutade den 30 september om häktning. Misstankarna är inte en lagakraftvunnen dom.",
+    "sources": [
+      {
+        "l": "Associated Press — Hungarian Parliament lifts immunity of Hankó and Seszták, 28 Sep 2026",
+        "t": "media",
+        "url": "https://apnews.com/article/5e424cfeab316a0fe8fc8d551c49d397"
+      },
+      {
+        "l": "The Guardian — former ministers detained over suspected misuse and bribery, 29 Sep 2026",
+        "t": "media",
+        "url": "https://www.theguardian.com/world/2026/sep/29/two-former-hungarian-ministers-detained-over-suspected-bribery-misuse-public-funds"
+      },
+      {
+        "l": "Telex — court orders arrest in Volánbusz investigation, 30 Sep 2026",
+        "t": "media",
+        "url": "https://telex.hu/english/2026/09/30/court-orders-arrest-of-former-orban-era-minister"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "POLICE",
+        "COURT"
+      ],
+      "gaps": [
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Uppgifterna beskriver misstankar och ett frihetsberövande under pågående utredning, inte fastställd skuld.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c282",
+    "title": "Angola — konsultfirma uppges ha tränat statsanställda i dold nätpåverkan",
+    "date": "2026-02",
+    "loc": {
+      "m": "Luanda",
+      "r": "Angola",
+      "lat": -8.839,
+      "lng": 13.289,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "summary": "Citizen Lab dokumenterade digital infrastruktur och granskade en slutrapport som enligt forskarna pekar på att konsultbolaget BlackCore genomförde ett utbildningsprogram för angolanska statsanställda med en övervakad påverkanskampanj på sociala medier. Materialet beskriver falska profiler och över 40 publicerade innehållsdelar. Forskarna kunde inte självständigt bekräfta deltagarnas identiteter eller kampanjens effekt; kopplingen gäller en kommersiell leverantör och innebär inte att någon utländsk stat styrde insatsen.",
+    "sources": [
+      {
+        "l": "Citizen Lab — BlackCore’s Influence Operations for Hire, 17 Sep 2026",
+        "t": "report",
+        "url": "https://citizenlab.ca/research/blackcores-influence-operations-for-hire/"
+      },
+      {
+        "l": "VIGINUM — technical report on Rokh Solis, 11 Jun 2026",
+        "t": "authority",
+        "url": "https://www.sgdsn.gouv.fr/files/files/viginum/Publications/20260611_SGDSN_VIGINUM_Rapport-technique_Rokh-Solis.pdf"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Citizen Lab bedömer att träningen sannolikt ägde rum, men kunde inte självständigt bekräfta identiteterna i materialet eller den faktiska effekten. Ingen attribution till en utländsk stat görs här.",
     "last_updated": "2026-10-05"
   }
 ]
