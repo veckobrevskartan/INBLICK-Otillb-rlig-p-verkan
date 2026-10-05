@@ -6986,5 +6986,99 @@
     },
     "source_note": "Bekräftat avser revisionskritiken. Den pågående brottsutredningen och eventuellt otillbörligt inflytande redovisas som skilda frågor.",
     "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c274",
+    "title": "Finland — misstänkta intrång hos riksdagsledamöters bostäder",
+    "date": "2026-10-01",
+    "loc": {
+      "m": "Helsingfors",
+      "r": "Finland",
+      "lat": 60.1699,
+      "lng": 24.9384,
+      "p": "city"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Flera finländska riksdagsledamöter har under det senaste året rapporterat misstänkta intrång i sina bostäder. Inget verkar ha stulits eller förstörts, men små tecken har väckt misstanke, bland annat dörrar som stått öppna eller lampor som tänts utan att ledamoten minns att det skett. Helsingforspolisen och Centralkriminalpolisen utreder uppgifterna. Premiärminister Petteri Orpo har sagt att en främmande makt är en möjlig förklaring, men någon aktör eller något motiv är inte fastställt.",
+    "sources": [
+      {
+        "l": "Yle — Police suspect MPs targeted in series of break-ins, 1 oktober 2026",
+        "t": "media",
+        "url": "https://yle.fi/a/74-20249362"
+      },
+      {
+        "l": "The Guardian — Finnish PM comments on suspected intrusions, 1 oktober 2026",
+        "t": "media",
+        "url": "https://www.theguardian.com/world/2026/oct/01/finland-suspected-break-ins-mp-homes-foreign-power"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT",
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Polisutredningen är i ett tidigt skede. Uppgifterna stöder misstänkta intrång och en möjlig främmande makt som hypotes, men inte rysk inblandning, samordning eller påverkan på val.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c275",
+    "title": "Sverige — sex personer åtalas efter misstänkt insiderhandel i Pharming–Abliva-affären",
+    "date": "2026-09-28",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Sverige",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "approximate"
+    },
+    "sector": "FINANCE",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Ekobrottsmyndigheten har väckt åtal mot sex personer för grovt insiderbrott i samband med Pharmings planerade uppköp av det svenska forskningsbolaget Abliva. Åtalet gäller misstänkt användning och vidareförmedling av insiderinformation före budet, som offentliggjordes i december 2024 med en premie på 227 procent. Åtalet och den påstådda informationskedjan är inte en lagakraftvunnen dom.",
+    "sources": [
+      {
+        "l": "Ekobrottsmyndigheten — åtal mot sex personer för grovt insiderbrott, 28 september 2026",
+        "t": "authority",
+        "url": "https://www.ekobrottsmyndigheten.se/om-oss/press/aktuellt/nyheter/atal-mot-sex-personer-gallande-grovt-insiderbrott/"
+      },
+      {
+        "l": "Realtid — uppgifter om rådgivare och informationskedja i Abliva-målet",
+        "t": "media",
+        "url": "https://www.realtid.se/juridik/advokaten-visste-om-budet-i-forvag-nu-atalas-han-och-fem-till/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "ACCESS",
+        "CONFLICT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Åtalet är verifierat av Ekobrottsmyndigheten. Skuld, motiv och den exakta informationskedjan ska inte beskrivas som fastställda före dom.",
+    "last_updated": "2026-10-05"
   }
 ]
