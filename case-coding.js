@@ -1993,10 +1993,13 @@ window.INBLICK_CASE_CODING = {
     },
     "basis": "RECORD_REVIEW",
     "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
-    "source_count": 2,
+    "source_count": 5,
     "source_urls": [
       "https://www.domstol.se/nyheter/2025/06/fangelsestraff-for-flera-personer-i-det-sa-kallade-think-pink-malet/",
-      "https://www.transportarbetaren.se/think-pink-i-fangelse/"
+      "https://www.transportarbetaren.se/think-pink-i-fangelse/",
+      "https://www.domstol.se/nyheter/2026/06/dom-i-mal-om-grova-miljobrott--nmtthink-pink/",
+      "https://www.aftonbladet.se/nyheter/a/5p9KeK/hd-tar-inte-upp-think-pink-malet",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7511516081996599296"
     ]
   },
   "c125": {
@@ -3998,18 +4001,477 @@ window.INBLICK_CASE_CODING = {
       "https://www.blt.se/nyheter/toppolitikerns-forening-fick-skattepengar-for-idrott-anlaggningen-anvands-som-loppislager/"
     ]
   },
-  "c232": {"coding":{"methods":["THREAT"],"discovery":["JOURNALISM"],"gaps":["GOVERNANCE","REPORTING"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.hd.se/landskrona/fick-inte-bidrag-dodhotade-handlaggare/"]},
-  "c233": {"coding":{"methods":["BRIBERY","PROCUREMENT","RELATION"],"discovery":["WHISTLEBLOWER","JOURNALISM","AUDIT"],"gaps":["CONFLICT","CONTRACT","DUTIES","REPORTING"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506964032348909568"]},
-  "c234": {"coding":{"methods":["ACCESS","BRIBERY"],"discovery":["POLICE","JOURNALISM"],"gaps":["ACCESS","LOGGING","VETTING"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506966182760062977"]},
-  "c235": {"coding":{"methods":["SOCIAL_ENGINEERING"],"discovery":["SECURITY","JOURNALISM"],"gaps":["GOVERNANCE","LOGGING"],"outcome":"COMPLETED"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506961547898896384"]},
-  "c236": {"coding":{"methods":["THREAT","SABOTAGE"],"discovery":["SECURITY","JOURNALISM"],"gaps":["PHYSICAL","GOVERNANCE"],"outcome":"INTERRUPTED"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506960363972816897"]},
-  "c237": {"coding":{"methods":["FOREIGN_TECH","PLACEMENT","RELATION"],"discovery":["SECURITY","JOURNALISM"],"gaps":["SCREENING","VETTING","ACCESS"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7505617199215280128"]},
-  "c238": {"coding":{"methods":["PROCUREMENT"],"discovery":["AUDIT","JOURNALISM"],"gaps":["DUTIES","SUPPLIER","CONTRACT","GOVERNANCE"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7505620626921996289"]},
-  "c239": {"coding":{"methods":["PROCUREMENT","BRIBERY"],"discovery":["AUDIT","JOURNALISM"],"gaps":["DUTIES","CONFLICT","CONTRACT"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506965912210706433"]},
-  "c240": {"coding":{"methods":["BENEFIT_FRAUD"],"discovery":["AUDIT","POLICE","JOURNALISM"],"gaps":["GOVERNANCE","CONTRACT","REPORTING"],"outcome":"UNCLEAR"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506953409019813888"]},
-  "c241": {"coding":{"methods":["SABOTAGE"],"discovery":["SECURITY","JOURNALISM"],"gaps":["PHYSICAL","GOVERNANCE"],"outcome":"COMPLETED"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7505591765593366528"]},
-  "c242": {"coding":{"methods":["FOREIGN_TECH","SABOTAGE","PLACEMENT"],"discovery":["SECURITY","JOURNALISM"],"gaps":["PHYSICAL","VETTING","GOVERNANCE"],"outcome":"PARTIAL"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/feed/update/urn:li:activity:7506960996230508545"]},
-  "c243": {"coding":{"methods":["RELATION","THREAT","SOCIAL_ENGINEERING"],"discovery":["COURT","JOURNALISM"],"gaps":["REPORTING","VETTING"],"outcome":"COMPLETED"},"basis":"RECORD_REVIEW","source_review":"PENDING_PRIMARY_SOURCE_REVIEW","source_count":1,"source_urls":["https://www.linkedin.com/posts/svensk-osint_l%C3%A5ngt-f%C3%A4ngelsestraff-f%C3%B6r-%C3%A5talad-i-uppm%C3%A4rksammat-activity-7506439302403305473-N1tX"]}
+  "c232": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.hd.se/landskrona/fick-inte-bidrag-dodhotade-handlaggare/"
+    ]
+  },
+  "c233": {
+    "coding": {
+      "methods": [
+        "RELATION",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "WHISTLEBLOWER",
+        "JOURNALISM",
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "CONTRACT",
+        "DUTIES",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "ATTRIBUTED_REPORTING_AND_AUTHORITY_STATEMENTS",
+    "source_count": 5,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506964032348909568",
+      "https://www.sydsvenskan.se/lund/p-chef-kopte-solpaneler-for-miljoner-av-sina-kompisar/",
+      "https://www.mynewsdesk.com/se/lkpab/pressreleases/extern-utredning-av-moejlig-intressekonflikt-paa-lkp-3461431",
+      "https://www.mynewsdesk.com/se/lund/pressreleases/lkp-s-styrelse-tillsaetter-tillfoerordnad-vd-under-paagaaende-extern-utredning-3462045",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7511334851787186176"
+    ]
+  },
+  "c234": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "BRIBERY"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING",
+        "VETTING"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506966182760062977"
+    ]
+  },
+  "c235": {
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "LOGGING"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506961547898896384"
+    ]
+  },
+  "c236": {
+    "coding": {
+      "methods": [
+        "THREAT",
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506960363972816897"
+    ]
+  },
+  "c237": {
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH",
+        "PLACEMENT",
+        "RELATION"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "SCREENING",
+        "VETTING",
+        "ACCESS"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7505617199215280128"
+    ]
+  },
+  "c238": {
+    "coding": {
+      "methods": [
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "AUDIT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "DUTIES",
+        "SUPPLIER",
+        "CONTRACT",
+        "GOVERNANCE"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7505620626921996289"
+    ]
+  },
+  "c239": {
+    "coding": {
+      "methods": [
+        "PROCUREMENT",
+        "BRIBERY"
+      ],
+      "discovery": [
+        "AUDIT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "DUTIES",
+        "CONFLICT",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506965912210706433"
+    ]
+  },
+  "c240": {
+    "coding": {
+      "methods": [
+        "BENEFIT_FRAUD"
+      ],
+      "discovery": [
+        "AUDIT",
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "CONTRACT",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506953409019813888"
+    ]
+  },
+  "c241": {
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7505591765593366528"
+    ]
+  },
+  "c242": {
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH",
+        "SABOTAGE",
+        "PLACEMENT"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "VETTING",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7506960996230508545"
+    ]
+  },
+  "c243": {
+    "coding": {
+      "methods": [
+        "RELATION",
+        "THREAT",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "COURT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "REPORTING",
+        "VETTING"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "RECORD_REVIEW",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.linkedin.com/posts/svensk-osint_l%C3%A5ngt-f%C3%A4ngelsestraff-f%C3%B6r-%C3%A5talad-i-uppm%C3%A4rksammat-activity-7506439302403305473-N1tX"
+    ]
+  },
+  "c266": {
+    "coding": {
+      "methods": [
+        "BRIBERY"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.hemhyra.se/nyheter/lagenheten-i-harnosand-var-inte-bra-nog-forsokte-muta-migrationsverket-for-ett-kontrakt-i-stockholm/",
+      "https://lagenta.se/dom/2026/givande-av-muta-sodertorns-2",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7512408611965440000"
+    ]
+  },
+  "c267": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "BRIBERY"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.tagesschau.de/inland/razzia-geldwaesche-banden-hells-angels-100.html",
+      "https://www.presseportal.de/blaulicht/pm/50510/6363142",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7511527753762885632"
+    ]
+  },
+  "c268": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.aftonbladet.se/nyheter/a/e7AEra/man-atalas-for-hot-mot-mp-sprakror",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7510597356405460993"
+    ]
+  },
+  "c269": {
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-09-30-person-doms-for-grov-obehorig-befattning-med-hemlig-uppgift.html",
+      "https://www.aklagare.se/for-media/pressmeddelanden/2025/maj/atal-vackt-for-grov-obehorig-befattning-med-hemlig-uppgift/",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7511515571507744769"
+    ]
+  },
+  "c270": {
+    "coding": {
+      "methods": [
+        "RELATION",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.mi5.gov.uk/mi5-issues-espionage-alert-cgtri-%E4%B8%AD%E5%9B%BD%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7512411928934260736"
+    ]
+  },
+  "c271": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://ssu.gov.ua/novyny/sbu-vykryla-ahenturnu-merezhu-hru-rf-u-kharkovi-yaka-zaimalasia-koryhuvanniam-udariv-po-mistu-ta-stezhyla-za-ukrainskymy-viiskovymy-video",
+      "https://www.ukrinform.net/rubric-crime/4170387-sbu-exposes-gru-agents-who-collected-data-on-military-personnel-and-guided-strikes-on-kharkiv.html",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7512463795840143360"
+    ]
+  },
+  "c272": {
+    "coding": {
+      "methods": [
+        "PLACEMENT",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.bta.bg/en/news/1215492-chinese-national-given-suspended-sentence-in-bulgaria-on-espionage-charges",
+      "https://sgs.justice.bg/bg/news1/39596",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7512462751965982720"
+    ]
+  },
+  "c273": {
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 4,
+    "source_urls": [
+      "https://www.riksrevisjonen.no/rapporter-mappe/no-2020-2021/undersokelse-av-utenriksdepartementets-tildeling-av-tilskudd-til-international-peace-institute-ipi/",
+      "https://www.stortinget.no/no/Hva-skjer-pa-Stortinget/Nyhetsarkiv/Hva-skjer-nyheter/2025-2026/horing-om-kontroll-og-kultur-i-utenrikstjenesten/",
+      "https://www.reuters.com/world/norway-parliament-probes-epstein-links-politicians-diplomats-2026-09-30/",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7511525079701323779"
+    ]
+  }
 };
 ;
 

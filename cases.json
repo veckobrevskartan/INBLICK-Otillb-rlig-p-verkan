@@ -2753,7 +2753,7 @@
   },
   {
     "actor": "ORGANIZED_CRIME",
-    "date": "2025-06",
+    "date": "2026-09",
     "id": "c124",
     "loc": {
       "lat": 59.233,
@@ -2773,11 +2773,28 @@
         "l": "Transportarbetaren — Långa fängelsestraff i Think Pink-målet (2025-06-17)",
         "t": "news",
         "url": "https://www.transportarbetaren.se/think-pink-i-fangelse/"
+      },
+      {
+        "l": "Svea hovrätt — dom B 9076-25, 16 juni 2026",
+        "t": "court",
+        "url": "https://www.domstol.se/nyheter/2026/06/dom-i-mal-om-grova-miljobrott--nmtthink-pink/"
+      },
+      {
+        "l": "Aftonbladet/TT — HD nekar prövningstillstånd, 29 september 2026",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/a/5p9KeK/hd-tar-inte-upp-think-pink-malet"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511516081996599296"
       }
     ],
     "status": "CONFIRMED",
-    "summary": "Södertörns tingsrätt dömde 10 av 11 åtalade i det dittills största miljöbrottmålet i Sverige. Återvinningsbolaget NMT Think Pink transporterade farligt avfall med bland annat bly, kvicksilver och arsenik till 21 platser i stället för korrekt behandling. Vd:n F.V., även känd som B.N., dömdes till sex års fängelse, tio års näringsförbud och ytterligare fängelse för ekobrott. Fem huvudtilltalade ska solidariskt betala omkring en kvarts miljard kronor i skadestånd. Hovrätten behandlar överklaganden 2026.",
-    "title": "Think Pink-härvan — Sveriges största miljöbrottmål, 21 platser, kvarts miljard i skadestånd, 6 år fängelse"
+    "summary": "Svea hovrätt dömde den 16 juni 2026 fyra huvudtilltalade för grova miljöbrott på 18 platser inom Think Pink-koncernens verksamhet 2015–2020. Straffen blev mellan två och fem års fängelse. Det tidigare gifta paret med bestämmande inflytande över koncernen ska betala över 200 miljoner kronor i skadestånd, främst till Botkyrka och Västerås kommuner. Miljökonsulten som dömdes i tingsrätten frikändes helt i hovrätten. Den 29 september rapporterades att HD nekat prövningstillstånd, vilket innebär att hovrättsdomen står fast utan ny sakprövning i HD. Fallet belyser leverantörsuppföljning och följderna av brottslig avfallshantering; det belägger inte i sig att kommunala beslutsfattare korrumperats.",
+    "title": "Think Pink — hovrättsdom står fast efter nekat prövningstillstånd",
+    "legal_status": "CONVICTION",
+    "last_updated": "2026-10-05"
   },
   {
     "actor": "CRIMINAL_NETWORK",
@@ -5752,11 +5769,32 @@
         "l": "Svensk OSINT — Granskning av LKP i Lund",
         "t": "media",
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506964032348909568"
+      },
+      {
+        "l": "Sydsvenskan — solpanelsinköpen, 1 oktober 2026",
+        "t": "media",
+        "url": "https://www.sydsvenskan.se/lund/p-chef-kopte-solpaneler-for-miljoner-av-sina-kompisar/"
+      },
+      {
+        "l": "LKP — extern granskning av möjliga intressekonflikter",
+        "t": "authority",
+        "url": "https://www.mynewsdesk.com/se/lkpab/pressreleases/extern-utredning-av-moejlig-intressekonflikt-paa-lkp-3461431"
+      },
+      {
+        "l": "Lunds kommun — tillförordnad vd under utredningen",
+        "t": "authority",
+        "url": "https://www.mynewsdesk.com/se/lund/pressreleases/lkp-s-styrelse-tillsaetter-tillfoerordnad-vd-under-paagaaende-extern-utredning-3462045"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511334851787186176"
       }
     ],
     "status": "INDICATION",
-    "summary": "LKP, Lunds kommunala parkeringsbolag, granskas av PwC efter visselblåsarlarm om intressekonflikter, obehöriga inköp, chefsrekrytering av en anställds dotters sambo och misstänkta mutor. Tre ledande personer har arbetsbefriats. Uppgifterna är inte styrkta och utredningen pågår.",
-    "title": "Lund — kommunalt parkeringsbolag granskas efter larm om inköp och intressekonflikter"
+    "summary": "LKP, Lunds kommunala parkeringsbolag, granskas externt efter larm om intressekonflikter, inköp och rekryteringar. Sydsvenskan rapporterade den 1 oktober 2026 att en tidigare byggchef beställt solpaneler för drygt fem miljoner kronor från leverantörer som han kände sedan tidigare och att bolaget inte kunde hitta dokumentation som visar hur inköpen upphandlades. LKP och Lunds kommun har redovisat att en extern granskning pågår och att vd:n arbetsbefriats under utredningen. De nya inköpsuppgifterna kompletterar samma ärende. Det är inte fastställt att inköpen utgjorde mutbrott eller att upphandlingsreglerna överträddes.",
+    "title": "Lund — kommunalt parkeringsbolag granskas efter larm om inköp och intressekonflikter",
+    "last_updated": "2026-10-05"
   },
   {
     "actor": "CRIMINAL_NETWORK",
@@ -6553,5 +6591,400 @@
     "status": "INDICATION",
     "summary": "Polisen registrerade en anmälan om olaga hot i Varberg den 26 september. Medier uppger att hotet riktades mot tidigare statsminister Stefan Löfven före ett offentligt framträdande, men polisen har inte bekräftat målsägandens identitet eller ett politiskt motiv. Ingen gärningsperson var gripen vid den första rapporteringen.",
     "title": "Varberg — uppgift om dödshot mot tidigare statsminister"
+  },
+  {
+    "id": "c266",
+    "title": "Migrationsverket — man dömd efter erbjudande om pengar till boendehandläggare",
+    "date": "2026-09",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "city"
+    },
+    "sector": "AUTHORITY",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "legal_status": "CONVICTION",
+    "summary": "En man dömdes den 24 september 2026 av Södertörns tingsrätt för givande av muta efter ett möte med en boendehandläggare i Stockholm den 13 mars 2025. Enligt domsreferatet lade han fram ett kuvert med kontanter i samband med en begäran om hjälp att få ett annat boende. Handläggaren hade inte det slutliga beslutet om boendet. Mannen förnekade mutförsök och förklarade pengarna som ett sätt att visa betalningsförmåga. Tingsrätten bedömde att erbjudandet var kopplat till tjänsteutövningen. Domen kunde överklagas. Underlaget visar inte att handläggaren tog emot pengar eller ändrade något beslut.",
+    "sources": [
+      {
+        "l": "Hem & Hyra — domsreferat om mutförsöket",
+        "t": "media",
+        "url": "https://www.hemhyra.se/nyheter/lagenheten-i-harnosand-var-inte-bra-nog-forsokte-muta-migrationsverket-for-ett-kontrakt-i-stockholm/"
+      },
+      {
+        "l": "Lagenta — referat av Södertörns tingsrätts dom",
+        "t": "media",
+        "url": "https://lagenta.se/dom/2026/givande-av-muta-sodertorns-2"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512408611965440000"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Dom återgiven i medier och domsreferat. Bekräftat avser den rapporterade tingsrättsdomen, inte laga kraft eller att påverkan lyckades.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c267",
+    "title": "Duisburg — polis och kommunanställda misstänks ha hjälpt kriminellt nätverk",
+    "date": "2026-09",
+    "loc": {
+      "m": "Duisburg",
+      "r": "Tyskland",
+      "lat": 51.4344,
+      "lng": 6.7623,
+      "p": "city"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "CRIMINAL_NETWORK",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "I en penningtvättsutredning kring en kriminell miljö som tyska medier identifierar som Hells Angels misstänks en polis och två anställda i Duisburgs kommun ha lämnat vidare tjänsteuppgifter. En tredje kommunanställd utreds separat för misstänkt mottagande av pengar i utbyte mot förmåner. Utredningen blev offentlig i samband med den europeiska insatsen den 30 september 2026. Uppgifterna visar misstänkta kontaktvägar mellan organiserad brottslighet och flera offentliga funktioner. Skuld, exakt informationsinnehåll och följderna av de misstänkta läckorna är inte fastställda i det redovisade underlaget.",
+    "sources": [
+      {
+        "l": "Tagesschau — informationsläckor och mutmisstanke i Duisburg",
+        "t": "media",
+        "url": "https://www.tagesschau.de/inland/razzia-geldwaesche-banden-hells-angels-100.html"
+      },
+      {
+        "l": "Polizei Duisburg — insatsens resultat, 1 oktober 2026",
+        "t": "authority",
+        "url": "https://www.presseportal.de/blaulicht/pm/50510/6363142"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511527753762885632"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "BRIBERY"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Tagesschau återger åklagaruppgifter om de offentligt anställda; polisens pressmeddelande beskriver den större insatsen.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c268",
+    "title": "Varberg — åtal om hot mot Miljöpartiets språkrör i anslutning till AI-video",
+    "date": "2026-09",
+    "loc": {
+      "m": "Varberg",
+      "r": "Halland",
+      "lat": 57.1056,
+      "lng": 12.2508,
+      "p": "city"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "En man åtalas vid Varbergs tingsrätt för olaga hot mot Miljöpartiets språkrör. Enligt rapporteringen publicerades en hotfull kommentar i anslutning till en AI-genererad video där språkrören avbildades i tvångströjor och masker. Händelsen polisanmäldes av partiets säkerhetsansvarige. Den åtalade har ifrågasatt att han själv skrev kommentaren. Fallet belyser hur bild, text och publiceringssammanhang kan kombineras i hot mot förtroendevalda. Åtalet är inte en dom och AI-användningen i sig ska inte likställas med brott.",
+    "sources": [
+      {
+        "l": "Aftonbladet/TT — åtal för hot mot MP-språkrör",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/a/e7AEra/man-atalas-for-hot-mot-mp-sprakror"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510597356405460993"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Åtal återgivet i medier. Kartpunkten anger domstolsorten, inte en fastställd plats där kommentaren skrevs.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c269",
+    "title": "FMV — tidigare anställd dömd för obehörig hantering av hemliga uppgifter",
+    "date": "2026-09",
+    "loc": {
+      "m": "Solna",
+      "r": "Stockholm",
+      "lat": 59.36,
+      "lng": 18.0,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "CONVICTION",
+    "summary": "Solna tingsrätt dömde en tidigare FMV-anställd för grov obehörig befattning med hemlig uppgift. Enligt Säkerhetspolisens besked den 30 september 2026 blev påföljden villkorlig dom och 200 dagsböter. Uppgifterna hade erhållits genom tidigare befattningar och rörde förhållanden av stor betydelse för Sveriges försvar. Åtalet beskrev pärmar eller mappar och en USB-sticka med hemligt material. Fallet belyser kontrollen av information som någon redan har fått tillgång till när anställningen förändras eller avslutas. Åtalet byggde inte på ett syfte att gå främmande makt tillhanda; fallet ska därför inte beskrivas som spioneri eller belagd extern rekrytering.",
+    "sources": [
+      {
+        "l": "Säkerhetspolisen — besked om tingsrättsdomen, 30 september 2026",
+        "t": "authority",
+        "url": "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-09-30-person-doms-for-grov-obehorig-befattning-med-hemlig-uppgift.html"
+      },
+      {
+        "l": "Åklagarmyndigheten — åtal, 28 maj 2025",
+        "t": "authority",
+        "url": "https://www.aklagare.se/for-media/pressmeddelanden/2025/maj/atal-vackt-for-grov-obehorig-befattning-med-hemlig-uppgift/"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511515571507744769"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Åklagarens uppgifter om händelseförloppet hålls isär från Säkerhetspolisens besked om domen. Kartpunkten anger domstolsorten.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c270",
+    "title": "Storbritannien — MI5 varnar för dold forskningsfinansiering via CGTRI",
+    "date": "2026-09",
+    "loc": {
+      "m": "London",
+      "r": "Storbritannien",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "p": "city"
+    },
+    "sector": "RESEARCH",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "MI5 varnade den 30 september 2026 för China General Technology Research Institute, CGTRI, som enligt myndigheten finansierar forskning som stärker den kinesiska säkerhetstjänsten MSS tekniska spionageförmåga. Över 100 akademiker med brittisk koppling uppges ha medverkat i projekt. MI5 framhåller att forskare och universitet kan ha deltagit i god tro utan kännedom om den slutliga finansiären. Fallet belyser hur professionella samarbeten och finansiering kan ge tillgång till kunskap utan att medverkande personer medvetet hjälper en underrättelsetjänst. Varningen är en myndighetsbedömning, inte en dom mot forskarna.",
+    "sources": [
+      {
+        "l": "MI5 — Espionage Alert om CGTRI, 30 september 2026",
+        "t": "authority",
+        "url": "https://www.mi5.gov.uk/mi5-issues-espionage-alert-cgtri-%E4%B8%AD%E5%9B%BD%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512411928934260736"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "MI5:s bedömning är verifierbar som myndighetsuttalande; bakomliggande underrättelsematerial är inte offentligt redovisat. London markerar varningen på nationell nivå.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c271",
+    "title": "Charkiv — telekomanställda misstänks ha använt tjänsteåtkomst åt GRU",
+    "date": "2026-10",
+    "loc": {
+      "m": "Charkiv",
+      "r": "Ukraina",
+      "lat": 49.9935,
+      "lng": 36.2304,
+      "p": "city"
+    },
+    "sector": "IT",
+    "actor": "FOREIGN_POWER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "SBU uppgav den 2 oktober 2026 att fyra personer gripits i ett misstänkt GRU-nätverk. Bland dem finns enligt utredningen en säkerhetschef vid en mobiloperatör och en underordnad. De ska ha använt tjänsteåtkomst för att ta fram samtals- och positionsuppgifter om militärer och rättsväsendets personal, bland annat en åklagare och domare. En annan misstänkt arbetade vid ett försvarsföretag och ska ha lämnat uppgifter om sin arbetsplats. Fallet belyser möjligheten att missbruka även säkerhetsfunktioners behörigheter. Uppgifterna kommer från ukrainska myndigheter i en pågående utredning; de misstänktas skuld är inte fastställd genom dom.",
+    "sources": [
+      {
+        "l": "SBU — misstänkt GRU-nätverk i Charkiv, 2 oktober 2026",
+        "t": "authority",
+        "url": "https://ssu.gov.ua/novyny/sbu-vykryla-ahenturnu-merezhu-hru-rf-u-kharkovi-yaka-zaimalasia-koryhuvanniam-udariv-po-mistu-ta-stezhyla-za-ukrainskymy-viiskovymy-video"
+      },
+      {
+        "l": "Ukrinform — telekomanställdas misstänkta tjänsteåtkomst",
+        "t": "media",
+        "url": "https://www.ukrinform.net/rubric-crime/4170387-sbu-exposes-gru-agents-who-collected-data-on-military-personnel-and-guided-strikes-on-kharkiv.html"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512463795840143360"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "SBU är part i den väpnade konflikten. Ukrinforms rapportering återger samma myndighetsuppgifter och är inte oberoende bekräftelse av skuld.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c272",
+    "title": "Bulgarien — dom efter rekrytering för kinesisk underrättelseinhämtning",
+    "date": "2026-10",
+    "loc": {
+      "m": "Sofia",
+      "r": "Bulgarien",
+      "lat": 42.6977,
+      "lng": 23.3219,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "status": "CONFIRMED",
+    "legal_status": "CONVICTION",
+    "summary": "En kinesisk universitetslärare dömdes den 1 oktober 2026 av Sofias stadsdomstol till tre års villkorligt fängelse med fem års prövotid, enligt BTA:s domstolsrapportering. Han hade förmått en bulgarisk man att ställa sig till Kinas förfogande för insamling av statshemligheter. Enligt rapporteringen försökte han också få mannen att söka chefsbefattningen vid säkerhetstjänsten SANS för att skapa framtida åtkomst. Underlaget visar inte att mannen fick befattningen. Domen kunde överklagas inom 15 dagar. Fallet belyser rekrytering före ett tänkt tillträde till en känslig roll, inte en bekräftad infiltration av SANS ledning.",
+    "sources": [
+      {
+        "l": "BTA — domstolsrapportering om spionagemålet, 1 oktober 2026",
+        "t": "media",
+        "url": "https://www.bta.bg/en/news/1215492-chinese-national-given-suspended-sentence-in-bulgaria-on-espionage-charges"
+      },
+      {
+        "l": "Sofias stadsdomstol — förhandlingskalender",
+        "t": "court",
+        "url": "https://sgs.justice.bg/bg/news1/39596"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512462751965982720"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "PLACEMENT",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "BTA rapporterar från domstolen. Bekräftat avser den rapporterade domen; den tilltänkta placeringen och laga kraft är inte belagda.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c273",
+    "title": "Norge — IPI-bidrag visar brister i jävsprövning och uppföljning",
+    "date": "2026-09",
+    "loc": {
+      "m": "Oslo",
+      "r": "Norge",
+      "lat": 59.9139,
+      "lng": 10.7522,
+      "p": "city"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "Riksrevisjonen konstaterade 2021 betydande brister i norska UD:s hantering av bidrag till International Peace Institute, IPI, bland annat otillräcklig kontroll av medlens användning och bristande hantering av jävsfrågor. Under perioden 2007–2012 omfattade stödet 58,2 miljoner norska kronor. Stortingets utfrågningar den 30 september och 1 oktober 2026 tog åter upp kontroll och kultur i utrikesförvaltningen efter Epsteinrelaterade avslöjanden. Den tidigare IPI-chefen utreds för korruption och förnekar brott. Revisionskritiken är dokumenterad, men innebär inte att korruptionsmisstankarna eller påverkan på norsk utrikespolitik är bevisade.",
+    "sources": [
+      {
+        "l": "Riksrevisjonen — granskning av UD:s IPI-bidrag, 2021",
+        "t": "authority",
+        "url": "https://www.riksrevisjonen.no/rapporter-mappe/no-2020-2021/undersokelse-av-utenriksdepartementets-tildeling-av-tilskudd-til-international-peace-institute-ipi/"
+      },
+      {
+        "l": "Stortinget — utfrågning om kontroll och kultur, 2026",
+        "t": "authority",
+        "url": "https://www.stortinget.no/no/Hva-skjer-pa-Stortinget/Nyhetsarkiv/Hva-skjer-nyheter/2025-2026/horing-om-kontroll-og-kultur-i-utenrikstjenesten/"
+      },
+      {
+        "l": "Reuters — utfrågningen och den separata korruptionsutredningen",
+        "t": "media",
+        "url": "https://www.reuters.com/world/norway-parliament-probes-epstein-links-politicians-diplomats-2026-09-30/"
+      },
+      {
+        "l": "Svensk OSINT — fördjupning och referenser",
+        "t": "media",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511525079701323779"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Bekräftat avser revisionskritiken. Den pågående brottsutredningen och eventuellt otillbörligt inflytande redovisas som skilda frågor.",
+    "last_updated": "2026-10-05"
   }
 ]
