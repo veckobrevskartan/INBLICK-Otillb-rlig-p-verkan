@@ -5836,6 +5836,16 @@
         "l": "Svensk OSINT — Matrjosjka/Operation Overload och Holiday",
         "t": "media",
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506961547898896384"
+      },
+      {
+        "l": "MPF — Botnätverket Holiday användes mot Sverige, 1 september 2026",
+        "t": "authority",
+        "url": "https://mpf.se/om-oss/nyheter/2026/2026-09-01-botnatverket-holiday-anvandes-mot-sverige---kunde-stangas-ner-efter-kartlaggning-av-mpf"
+      },
+      {
+        "l": "MPF/NCSC — Inga större informations- eller cyberangrepp mot svenska valet, 14 september 2026",
+        "t": "authority",
+        "url": "https://mpf.se/om-oss/nyheter/2026/2026-09-14-inga-storre-informations--eller-cyberangrepp-mot-svenska-valet"
       }
     ],
     "status": "INDICATION",
@@ -7079,6 +7089,150 @@
       "basis": "EDITORIAL"
     },
     "source_note": "Åtalet är verifierat av Ekobrottsmyndigheten. Skuld, motiv och den exakta informationskedjan ska inte beskrivas som fastställda före dom.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c276",
+    "title": "Estland — branden vid Milrem Robotics bedöms vara ryskt beställt sabotage",
+    "date": "2026-08-15",
+    "loc": {
+      "m": "Tallinn",
+      "r": "Estland",
+      "lat": 59.437,
+      "lng": 24.7536,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "En brand i en byggnad som används av försvarsteknikföretaget Milrem Robotics i Tallinn den 15 augusti bedöms av Estlands regering och säkerhetstjänst vara ett sabotage beställt av ryska specialtjänster. Tre lettiska medborgare misstänks ha utfört brandattentatet och har överlämnats till Estland. Den estniska attributionen bygger på säkerhetsunderrättelser och är inte en lagakraftvunnen dom eller en rysk medgivelse.",
+    "sources": [
+      {
+        "l": "Estlands regering — Russia Responsible for Arson Attack on Milrem, 29 september 2026",
+        "t": "authority",
+        "url": "https://valitsus.ee/en/news/russia-responsible-arson-attack-milrem"
+      },
+      {
+        "l": "Estlands åklagarmyndighet — Potential case of arson in Tallinn, 18 augusti 2026",
+        "t": "authority",
+        "url": "https://www.prokuratuur.ee/en/news/potential-case-arson-tallinn"
+      },
+      {
+        "l": "Lettlands säkerhetstjänst — tre medborgare gripna misstänkta för brandattentat, 16 augusti 2026",
+        "t": "authority",
+        "url": "https://vdd.gov.lv/en/news/press-releases/vdd-detains-three-latvian-citizens-on-suspicion-of-arson-in-estonia"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT",
+        "ACCESS"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Brandattentatet och gripandena är dokumenterade. Estlands slutsats om rysk beställning är en myndighetsattribution baserad på säkerhetsunderrättelser; den ska inte beskrivas som slutligt fastställd i domstol.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c277",
+    "title": "EU — Xenia Fedorova sanktionerad för rysk informationsmanipulation",
+    "date": "2026-09-24",
+    "loc": {
+      "m": "Paris",
+      "r": "Frankrike",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "p": "city"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "CONFIRMED",
+    "legal_status": "SANCTIONED",
+    "summary": "EU:s råd beslutade den 24 september att sanktionera Xenia Fedorova, tidigare chef för information vid RT France, för utländsk informationsmanipulation och påverkan. EU anger att hon fortsatt sprida narrativ i franska medier som ligger i linje med ryska myndigheters budskap om Ukraina, NATO och EU:s stöd till Ukraina. Posten avser den dokumenterade EU-sanktionen och den beskrivna verksamheten, inte en domstolsdom.",
+    "sources": [
+      {
+        "l": "Europeiska unionens råd — Russian hybrid threats: EU lists Xenia Fedorova, 24 september 2026",
+        "t": "authority",
+        "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/09/24/russian-hybrid-threats-eu-lists-xenia-fedorova-over-information-manipulation-activities/"
+      },
+      {
+        "l": "EUR-Lex — Council Implementing Regulation (EU) 2026/2165",
+        "t": "law",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2165"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "EU:s restriktiva åtgärd är bekräftad. Formuleringarna om informationsmanipulation återges som EU:s bedömning och ska inte utvidgas till påståenden om hemlig finansiering eller brottsligt ansvar utan ytterligare underlag.",
+    "last_updated": "2026-10-05"
+  },
+  {
+    "id": "c278",
+    "title": "Frankrike — Rachida Dati prövas för misstänkt korruption och inflytandehandel",
+    "date": "2026-09-16",
+    "loc": {
+      "m": "Paris",
+      "r": "Frankrike",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "p": "city"
+    },
+    "sector": "LEGAL",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "UNDER_TRIAL",
+    "summary": "Rachida Dati, tidigare fransk minister och borgmästare i Paris, ställdes inför rätta i september i ett mål om misstänkt passiv korruption, inflytandehandel och missbruk av förtroendeställning. Åklagarsidan hävdar att ersättningar från Renault och Carlos Ghosn kan ha varit kopplade till arbete och kontakter i Europaparlamentet. Rättegången pågår och skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Transparency International France — Dati–Ghosn-rättegången, 15 september 2026",
+        "t": "report",
+        "url": "https://transparency-france.org/2026/09/15/proces-dati-ghosn-transparency-international-france-se-constitue-partie-civile/"
+      },
+      {
+        "l": "Le Monde — Prosecutors request suspended prison time for former French PM Bayrou in embezzlement trial, 29 september 2026",
+        "t": "media",
+        "url": "https://www.lemonde.fr/en/france/article/2026/09/16/french-ex-minister-dati-goes-on-trial-in-renault-corruption-case_6757578_7.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Detta är ett pågående rättsfall. Uppgifterna beskriver åtalet och åklagarnas påståenden; ingen skuld är fastställd.",
     "last_updated": "2026-10-05"
   }
 ]
