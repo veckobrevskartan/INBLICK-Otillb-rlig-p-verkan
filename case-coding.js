@@ -4501,6 +4501,27 @@ window.INBLICK_CASE_CODING = {
       "https://www.ekobrottsmyndigheten.se/om-oss/press/aktuellt/nyheter/atal-mot-sex-personer-gallande-grovt-insiderbrott/",
       "https://www.realtid.se/juridik/advokaten-visste-om-budet-i-forvag-nu-atalas-han-och-fem-till/"
     ]
+  },
+  "c276": {
+    "coding": {"methods":["THREAT","ACCESS"],"discovery":["SECURITY"],"gaps":["PHYSICAL","UNKNOWN"],"outcome":"PARTIAL"},
+    "basis":"EDITORIAL",
+    "source_review":"PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count":3,
+    "source_urls":["https://valitsus.ee/en/news/russia-responsible-arson-attack-milrem","https://www.prokuratuur.ee/en/news/potential-case-arson-tallinn","https://vdd.gov.lv/en/news/press-releases/vdd-detains-three-latvian-citizens-on-suspicion-of-arson-in-estonia"]
+  },
+  "c277": {
+    "coding": {"methods":["THREAT"],"discovery":["SECURITY"],"gaps":["UNKNOWN"],"outcome":"COMPLETED"},
+    "basis":"EDITORIAL",
+    "source_review":"PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count":2,
+    "source_urls":["https://www.consilium.europa.eu/en/press/press-releases/2026/09/24/russian-hybrid-threats-eu-lists-xenia-fedorova-over-information-manipulation-activities/","https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2165"]
+  },
+  "c278": {
+    "coding": {"methods":["BRIBERY","RELATION"],"discovery":["COURT"],"gaps":["CONFLICT","CONTRACT"],"outcome":"UNCLEAR"},
+    "basis":"EDITORIAL",
+    "source_review":"PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count":2,
+    "source_urls":["https://transparency-france.org/2026/09/15/proces-dati-ghosn-transparency-international-france-se-constitue-partie-civile/","https://www.lemonde.fr/en/france/article/2026/09/16/french-ex-minister-dati-goes-on-trial-in-renault-corruption-case_6757578_7.html"]
   }
 };
 ;
