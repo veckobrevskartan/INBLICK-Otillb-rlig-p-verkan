@@ -4471,6 +4471,36 @@ window.INBLICK_CASE_CODING = {
       "https://www.reuters.com/world/norway-parliament-probes-epstein-links-politicians-diplomats-2026-09-30/",
       "https://www.linkedin.com/feed/update/urn:li:activity:7511525079701323779"
     ]
+  },
+  "c274": {
+    "coding": {
+      "methods": ["THREAT", "ACCESS"],
+      "discovery": ["POLICE"],
+      "gaps": ["PHYSICAL", "UNKNOWN"],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://yle.fi/a/74-20249362",
+      "https://www.theguardian.com/world/2026/oct/01/finland-suspected-break-ins-mp-homes-foreign-power"
+    ]
+  },
+  "c275": {
+    "coding": {
+      "methods": ["ACCESS", "RELATION"],
+      "discovery": ["COURT"],
+      "gaps": ["ACCESS", "CONFLICT"],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.ekobrottsmyndigheten.se/om-oss/press/aktuellt/nyheter/atal-mot-sex-personer-gallande-grovt-insiderbrott/",
+      "https://www.realtid.se/juridik/advokaten-visste-om-budet-i-forvag-nu-atalas-han-och-fem-till/"
+    ]
   }
 };
 ;
