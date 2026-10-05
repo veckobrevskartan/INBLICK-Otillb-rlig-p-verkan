@@ -7291,7 +7291,7 @@
   },
   {
     "id": "c280",
-    "title": "Ungern — tidigare kulturminister misstänks för missbruk av offentliga kulturmedel",
+    "title": "Ungern — tidigare kulturminister misstänks för missbruk av kulturfondsmedel",
     "date": "2026-09-28",
     "loc": {
       "m": "Budapest",
@@ -7305,17 +7305,17 @@
     "role": "ENABLER",
     "status": "INDICATION",
     "legal_status": "SUSPECTED",
-    "summary": "Efter att parlamentet hävt hans immunitet greps och förhördes tidigare kulturministern Balázs Hankó som misstänkt. Åklagare misstänker att 17,3 miljarder forint ur Nationella kulturfonden fördelats under 2025–2026 i strid med fondens ändamål. Hankó har bestridit misstankarna; uppgifterna är inte en dom eller ett fastställt skuldavgörande.",
+    "summary": "Tidigare kultur- och innovationsministern Balázs Hankó greps och förhördes som misstänkt efter att hans immunitet hävts. Enligt åklagarmyndigheten misstänks offentliga medel från Nationella kulturfonden ha använts i 1 079 fall till andra ändamål än de tillåtna mellan september 2025 och mars 2026, med en uppskattad budgetskada på 17,3 miljarder forint. Hankó förnekar brott; utredningen är separat från Sesztáks Volánbuszärende.",
     "sources": [
       {
-        "l": "Associated Press — Hungarian Parliament lifts immunity of Hankó and Seszták, 28 Sep 2026",
-        "t": "media",
-        "url": "https://apnews.com/article/5e424cfeab316a0fe8fc8d551c49d397"
+        "l": "Ungerns riksåklagarmyndighet — Hankó Balázs parlamentsledamot gripen och förhörd, 29 september 2026",
+        "t": "authority",
+        "url": "https://ugyeszseg.hu/az-ugyeszseg-orizetbe-vette-dr-hanko-balazs-orszaggyulesi-kepviselot/"
       },
       {
-        "l": "The Guardian — former ministers detained over suspected misuse and bribery, 29 Sep 2026",
+        "l": "Euronews — Hungarian parliament lifts immunity in separate criminal cases, 28 september 2026",
         "t": "media",
-        "url": "https://www.theguardian.com/world/2026/sep/29/two-former-hungarian-ministers-detained-over-suspected-bribery-misuse-public-funds"
+        "url": "https://www.euronews.com/2026/09/28/hungarian-parliament-lifts-immunity-of-pm-and-orban-era-ministers-in-separate-criminal-cas"
       }
     ],
     "coding": {
@@ -7332,12 +7332,12 @@
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Beloppet och misstanken återges som åklagarnas påstående. Hankó förnekar brott; inget skuldavgörande redovisas i de angivna källorna.",
+    "source_note": "Åklagarmyndighetens uppgifter gäller misstankar i en utredning om kulturfondens bidrag. Hankó har inte dömts; detta är ett separat ärende från Sesztáks mututredning.",
     "last_updated": "2026-10-05"
   },
   {
     "id": "c281",
-    "title": "Ungern — tidigare utvecklingsminister misstänks för mutor kopplade till Volánbusz",
+    "title": "Ungern — tidigare utvecklingsminister misstänks för mutor i Volánbuszärende",
     "date": "2026-09-28",
     "loc": {
       "m": "Budapest",
@@ -7351,22 +7351,17 @@
     "role": "ENABLER",
     "status": "INDICATION",
     "legal_status": "SUSPECTED",
-    "summary": "Tidigare utvecklingsminister Miklós Seszták greps efter att parlamentet hävt hans immunitet i en utredning om mutor kopplade till Volánbusz och leverantörer. Åklagare misstänker att Seszták och en annan tidigare tjänsteman tagit emot mer än 11 miljarder forint i otillbörliga förmåner 2015–2018; en domstol beslutade den 30 september om häktning. Misstankarna är inte en lagakraftvunnen dom.",
+    "summary": "Tidigare utvecklingsminister Miklós Seszták greps i en separat mututredning som gäller Volánbusz transporttjänster och bussinköp 2015–2018. Åklagarsidan uppgav att Seszták och en tidigare chef för det statliga tillgångsbolaget via en mellanhand ska ha tagit emot mer än 11 miljarder forint från företag med Volánbuszkontrakt. Domstol beslutade den 30 september om häktning. Seszták nekar till brott; misstankarna är inte fastställda genom dom.",
     "sources": [
       {
-        "l": "Associated Press — Hungarian Parliament lifts immunity of Hankó and Seszták, 28 Sep 2026",
+        "l": "Ungerska nyhetsbyrån MTI — Court orders detention of Miklós Seszták in Volánbusz bribery investigation, 30 september 2026",
         "t": "media",
-        "url": "https://apnews.com/article/5e424cfeab316a0fe8fc8d551c49d397"
+        "url": "https://mti.hu/hirek/2026/09/30/elrendelte-sesztak-miklos-letartoztatasat-a-birosag"
       },
       {
-        "l": "The Guardian — former ministers detained over suspected misuse and bribery, 29 Sep 2026",
+        "l": "Euronews — Hungarian parliament lifts immunity in separate criminal cases, 28 september 2026",
         "t": "media",
-        "url": "https://www.theguardian.com/world/2026/sep/29/two-former-hungarian-ministers-detained-over-suspected-bribery-misuse-public-funds"
-      },
-      {
-        "l": "Telex — court orders arrest in Volánbusz investigation, 30 Sep 2026",
-        "t": "media",
-        "url": "https://telex.hu/english/2026/09/30/court-orders-arrest-of-former-orban-era-minister"
+        "url": "https://www.euronews.com/2026/09/28/hungarian-parliament-lifts-immunity-of-pm-and-orban-era-ministers-in-separate-criminal-cas"
       }
     ],
     "coding": {
@@ -7384,7 +7379,7 @@
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Uppgifterna beskriver misstankar och ett frihetsberövande under pågående utredning, inte fastställd skuld.",
+    "source_note": "Detta är en annan utredning än Hankós: den gäller misstänkta mutor knutna till Volánbusz och leverantörer. Seszták nekar till brott och har inte dömts.",
     "last_updated": "2026-10-05"
   },
   {
