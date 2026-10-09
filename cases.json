@@ -3226,11 +3226,40 @@
         "l": "Säkerhetspolisen — Fällande dom i spionerimål",
         "t": "authority",
         "url": "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-07-29-fallande-dom-i-spionerimal.html"
+      },
+      {
+        "l": "Säkerhetspolisen — Döms för försök till spioneri, 6 oktober 2026",
+        "t": "authority",
+        "url": "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-10-06-doms-for-forsok-till-spioneri.html"
+      },
+      {
+        "l": "Säkerhetspolisen via TT — besked om Svea hovrätts dom, 6 oktober 2026",
+        "t": "authority",
+        "url": "https://via.tt.se/pressmeddelande/4581568/doms-for-forsok-till-spioneri?lang=sv&publisherId=3236713"
       }
     ],
     "status": "CONFIRMED",
-    "summary": "Stockholms tingsrätt dömde i juli 2026 en tidigare konsult vid Försvarsmakten för försök till spioneri och två fall av ofredande. Enligt domstolen försökte personen röja uppgifter som hade förvärvats under den tidigare anställningen till ryska myndigheter och reste till Ryssland för att etablera kontakt med rysk underrättelsetjänst. Påföljden blev rättspsykiatrisk vård med särskild utskrivningsprövning.",
-    "title": "Stockholms tingsrätt — tidigare Försvarsmaktskonsult dömd för försök till spioneri för Ryssland"
+    "summary": "Stockholms tingsrätt dömde i juli 2026 en tidigare konsult vid Försvarsmakten för försök till spioneri och två fall av ofredande. Enligt domstolen försökte personen röja uppgifter som hade förvärvats under den tidigare anställningen till ryska myndigheter och reste till Ryssland för att etablera kontakt med rysk underrättelsetjänst. Påföljden blev rättspsykiatrisk vård med särskild utskrivningsprövning. Den 6 oktober fastställde Svea hovrätt tingsrättens dom och påföljd. Veckans uppföljning gäller samma gärningar och räknas inte som ett nytt fall. En separat misstanke om stämpling till mord utreds fortfarande och ingår inte i denna dom.",
+    "title": "Svea hovrätt — dom mot tidigare Försvarsmaktskonsult för försök till spioneri fastställs",
+    "legal_status": "CONVICTION",
+    "role": "INSIDER",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09",
+    "source_note": "Tingsrättens dom och Säkerhetspolisens hovrättsbesked avser samma gärningar. Misstanken om stämpling till mord är en separat, pågående förundersökning och ska inte beskrivas som en del av den fastställda domen.",
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    }
   },
   {
     "actor": "FOREIGN_POWER",
@@ -7354,11 +7383,6 @@
     "summary": "Tidigare utvecklingsminister Miklós Seszták greps i en separat mututredning som gäller Volánbusz transporttjänster och bussinköp 2015–2018. Åklagarsidan uppgav att Seszták och en tidigare chef för det statliga tillgångsbolaget via en mellanhand ska ha tagit emot mer än 11 miljarder forint från företag med Volánbuszkontrakt. Domstol beslutade den 30 september om häktning. Seszták nekar till brott; misstankarna är inte fastställda genom dom.",
     "sources": [
       {
-        "l": "Ungerska nyhetsbyrån MTI — Court orders detention of Miklós Seszták in Volánbusz bribery investigation, 30 september 2026",
-        "t": "media",
-        "url": "https://mti.hu/hirek/2026/09/30/elrendelte-sesztak-miklos-letartoztatasat-a-birosag"
-      },
-      {
         "l": "Euronews — Hungarian parliament lifts immunity in separate criminal cases, 28 september 2026",
         "t": "media",
         "url": "https://www.euronews.com/2026/09/28/hungarian-parliament-lifts-immunity-of-pm-and-orban-era-ministers-in-separate-criminal-cas"
@@ -7875,7 +7899,7 @@
     "sector": "SECURITY",
     "actor": "FOREIGN_POWER",
     "status": "INDICATION",
-    "summary": "Danmarks säkerhetspolis PET uppgav den 24 september att myndigheten ser konkret rysk riskbenägenhet samt planering och förberedelser för sabotage i Danmark, främst mot försvarsindustrin och leverantörer kopplade till militärt stöd till Ukraina. PET varnar för att kritisk infrastruktur och andra samhällsviktiga funktioner kan komma i fråga om hotet breddas. Bedömningen offentliggör inte enskilda mål, tidpunkter eller misstänkta gärningspersoner och är inte en redovisning av ett genomfört attentat.",
+    "summary": "Danmarks säkerhetspolis PET uppgav den 24 september att myndigheten ser konkret rysk riskbenägenhet samt planering och förberedelser för sabotage i Danmark, främst mot försvarsindustrin och leverantörer kopplade till militärt stöd till Ukraina. PET varnar för att kritisk infrastruktur och andra samhällsviktiga funktioner kan komma i fråga om hotet breddas. Bedömningen offentliggör inte enskilda mål, tidpunkter eller misstänkta gärningspersoner och är inte en redovisning av ett genomfört attentat. Reuters rapporterade den 7 oktober, med förtydligande den 8 oktober, att en PET-företrädare beskrivit aktiv planering och försök att genomföra sabotage mot danska försvarsleverantörer. Företrädaren redovisade inte vilka försök som avbrutits eller några genomförda attentat i Danmark. Ryssland bestrider anklagelserna.",
     "sources": [
       {
         "l": "Politiets Efterretningstjeneste (PET) — Et mere alvorligt sikkerhedspolitisk billede kan også få konsekvenser i Danmark, 24 september 2026",
@@ -7886,6 +7910,11 @@
         "l": "PET — PET ser planlægning og forberedelse af russisk sabotageaktivitet i Danmark, 5 september 2026",
         "t": "authority",
         "url": "https://pet.dk/pet/nyhedsliste/pet-ser-planlaegning-og-forberedelse-af-russisk-sabotageaktivitet-i-danmark/2026/09/05"
+      },
+      {
+        "l": "Reuters — PET om sabotageförsök mot danska försvarsleverantörer, 7 oktober 2026, förtydligad 8 oktober",
+        "t": "media",
+        "url": "https://www.reuters.com/business/aerospace-defense/denmark-says-russia-has-conducted-sabotage-attacks-against-its-defense-firms-2026-10-07/"
       }
     ],
     "coding": {
@@ -7901,7 +7930,571 @@
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Detta är PET:s offentliga hotbedömning, inte en verifierad redogörelse för ett specifikt sabotage. Ingen misstänkt eller konkret måltavla pekas ut.",
-    "last_updated": "2026-10-05"
+    "source_note": "PET:s bedömning och konferensuttalandet återgivet av Reuters offentliggör inte ett individuellt attentat. Reuters förtydligade den 8 oktober situationen i Danmark till planering och försök; en äldre rubrik ska inte användas som bevis för fullbordade sabotage.",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c294",
+    "title": "Riksdagen — hotbrev till Mohamed Ali utreds av Säkerhetspolisen",
+    "date": "2026-10-05",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Stockholm",
+      "lat": 59.33,
+      "lng": 18.07,
+      "p": "approximate"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Aftonbladet rapporterade den 5 oktober att riksdagsledamoten Mohamed Ali fått ett brev med krav på att lämna riksdagen och ett hot om konsekvenser om han stannar. Partiet bekräftade brevet. Säkerhetspolisen bekräftade samma dag att myndigheten tagit över en utredning om olaga hot mot en skyddsperson, utan att själv namnge personen. Avsändaren och eventuell koppling till andra aktörer är inte fastställda. Veckans tillägg gäller utredningsbeskedet; brevet uppges ha kommit under den föregående helgen.",
+    "sources": [
+      {
+        "l": "Aftonbladet — Uppgifter: Hot mot Mohamed Ali utreds, 5 oktober 2026",
+        "t": "media",
+        "url": "https://www.aftonbladet.se/nyheter/a/qyLeWz/uppgifter-hot-mot-mohamed-ali-utreds-lamna-riksdagen"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Identifieringen av mottagaren kommer från medier och partiet. Detta är ett separat hotärende från c254; någon koppling mellan ärendena är inte belagd. Kartpunkten avser riksdagen, inte mottagarens bostad.",
+    "reported_at": "2026-10-05",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c295",
+    "title": "Berngau — två kommunala handläggare dödade under vapentillsyn",
+    "date": "2026-10-08",
+    "loc": {
+      "m": "Berngau",
+      "r": "Tyskland",
+      "lat": 49.257,
+      "lng": 11.401,
+      "p": "approximate"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Två anställda vid Landratsamt Neumarkt sköts ihjäl under en rutinmässig vapenkontroll i Berngau den 8 oktober. Bayerns inrikesministerium bekräftade dödsfallen och uppgav den 9 oktober att den misstänkte hade gripits under natten. Angreppet drabbade personer som utförde offentlig tillsyn. Det offentliga underlaget klargör ännu inte motivet eller om avsikten var att ändra ett beslut eller hindra fortsatt kontroll. Fallet märks därför som indikation på otillbörlig påverkan trots att det dödliga våldet är bekräftat.",
+    "sources": [
+      {
+        "l": "Bayerns inrikesministerium — myndighetsanställda dödade vid vapenkontroll i Berngau, 9 oktober 2026",
+        "t": "authority",
+        "url": "https://www.stmi.bayern.de/presse-und-medien/pressemitteilungen/detail/einladung-herrmann-informiert-ueber-die-aktuelle-lage-behoerdenmitarbeiter-des-landratsamts-neumarkt-bei-waffenkontrolle-in-berngau-erschossen-22485/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Myndighetskällan stöder våldet i tillsynssituationen och gripandet. Motiv och den misstänktes rättsliga ansvar är inte fastställda. THREAT omfattar här våld; COMPLETED avser angreppet, inte en belagd förändring av tillsynsbeslut.",
+    "reported_at": "2026-10-09",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c296",
+    "title": "BND — tidigare chef och byråchef misstänks ha utnyttjat hemliga uppgifter",
+    "date": "2026-10-06",
+    "loc": {
+      "m": "Berlin",
+      "r": "Tyskland",
+      "lat": 52.52,
+      "lng": 13.405,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "FOREIGN_POWER",
+    "role": "INSIDER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Tysklands federala åklagare lät den 6 oktober gripa den tidigare BND-chefen A.H. och den tidigare byråchefen M.D. Enligt åklagaren misstänks M.D. ha försett A.H. med interna underrättelsehandlingar mot betalning, så att materialet kunde användas i privat konsultverksamhet. Åklagaren beskriver också kontakter med två utländska underrättelseapparater men namnger inte staterna. Misstankarna rör bland annat spioneri och försök till landsförräderi. Den 7 oktober bekräftades att häktningsbesluten verkställts. Materialet uppmärksammades vid en husrannsakan i en annan utredning 2025. Skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Generalbundesanwalt — gripanden för misstänkt spioneri och landsförräderi, 6 oktober 2026",
+        "t": "authority",
+        "url": "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-06-10-2026.html"
+      },
+      {
+        "l": "Generalbundesanwalt — häktningsbesluten verkställda, 7 oktober 2026",
+        "t": "authority",
+        "url": "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-07-10-2026-2.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "BRIBERY",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Sammanfattningen återger åklagarens misstankar. Betalning och kontakter med utländska underrättelsetjänster är inte domstolsfastställda. Ingen attribution till ett namngivet land görs. Berlin anger BND:s verksamhetsmiljö; gripandena skedde i Bayern och Nordrhein-Westfalen.",
+    "reported_at": "2026-10-06",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c297",
+    "title": "Royal Navy — underrättelseanställd åtalad för hantering av skyddade uppgifter",
+    "date": "2026-10-08",
+    "loc": {
+      "m": "London",
+      "r": "Storbritannien",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "INSIDER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "En anställd i Royal Navys underrättelseverksamhet, T.Y., åtalades den 8 oktober för två brott enligt National Security Act. Enligt åklagarens uppgifter i domstol hade han säkerhetsklassad systemåtkomst, kopierade skyddat material och avsåg att föra uppgifter vidare till Ryssland. Den påstådda gärningsperioden är november 2024–maj 2025; veckans utveckling gäller åtalet efter ett nytt gripande den 6 oktober. Han frihetsberövades i väntan på fortsatt domstolsprövning. Någon dom eller bekräftad genomförd överföring redovisas inte.",
+    "sources": [
+      {
+        "l": "Sky News — Royal Navy serviceman charged with National Security Act offences, 8 oktober 2026",
+        "t": "media",
+        "url": "https://news.sky.com/story/royal-navy-serviceman-charged-with-national-security-act-offences-13596375"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "POLICE",
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Rysslandskopplingen och uppgifterna om åtkomst återges som åklagarens påståenden i domstol. London anger domstolsorten, inte en fastställd plats för den misstänkta informationshanteringen.",
+    "reported_at": "2026-10-08",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c298",
+    "title": "Valmiera — åtal om muta för förmånligt kommunalt hyresavtal",
+    "date": "2026-10-06",
+    "loc": {
+      "m": "Valmiera",
+      "r": "Lettland",
+      "lat": 57.538,
+      "lng": 25.425,
+      "p": "approximate"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "EXTERNAL_SUPPLIER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Lettlands åklagarmyndighet överlämnade den 6 oktober ett mål till Vidzemes distriktsdomstol om en misstänkt muta till en kommunal tjänsteperson. En företagsledare och en medhjälpare åtalas efter att enligt åklagaren ha erbjudit konjak och 1 000 euro kontant i november 2025 för att få ett förmånligt hyresavtal. Företaget behövde andra lokaler när kommunens tidigare uthyrda lokaler skulle renoveras. Även ett förfarande mot bolaget har inletts. Åtalet visar den påstådda kopplingen mellan förmån och kommunalt avtalsbeslut; de åtalades skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Lettlands åklagarmyndighet via LV portāls — Tiesās divas personas par kukuļa došanu pašvaldības amatpersonai, 9 oktober 2026",
+        "t": "authority",
+        "url": "https://lvportals.lv/dienaskartiba/395611-tiesas-divas-personas-par-kukula-dosanu-pasvaldibas-amatpersonai-2026"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY"
+      ],
+      "discovery": [
+        "UNKNOWN"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Primärkällan är åklagarmyndighetens pressmeddelande, publicerat av LV portāls. Gärningen är äldre; veckans utveckling är att målet överlämnades till domstol. Varken ett påverkat hyresbeslut eller skuld anges som fastställt.",
+    "reported_at": "2026-10-09",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c299",
+    "title": "Litauen — journalister uppger trakasserier efter granskning av Bankera",
+    "date": "2026-10-08",
+    "loc": {
+      "m": "Vilnius",
+      "r": "Litauen",
+      "lat": 54.687,
+      "lng": 25.279,
+      "p": "approximate"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "OCCRP rapporterade den 9 oktober att journalister vid 15min uppgett att de följts, utsatts för misskreditering och fått upprepade klagomål till tillsynsorgan efter sin granskning av kryptoprojektet Bankera. Kulturministern fördömde de rapporterade trakasserierna den 8 oktober. Bankera bekräftade att bolaget lämnat klagomål till tillsynsorgan men förnekade trakasserier och kännedom om övervakning. Fallet gäller uppgiven press mot granskande journalistik. Ett klagomål är inte i sig otillbörlig påverkan; vem som eventuellt utfört fysisk övervakning och med vilket syfte är inte fastställt.",
+    "sources": [
+      {
+        "l": "OCCRP — Lithuanian Minister Condemns Intimidation Campaign Against Investigative Reporters, 9 oktober 2026",
+        "t": "media",
+        "url": "https://www.occrp.org/en/news/lithuanian-minister-condemns-intimidation-campaign-against-investigative-reporters"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "OCCRP medverkade i den ursprungliga granskningen och är inte en oberoende bekräftelse av alla trakasseriuppgifter. Bolagets bestridande redovisas. Vilnius är en ungefärlig nationell referenspunkt, inte en utpekad övervakningsplats.",
+    "reported_at": "2026-10-09",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c300",
+    "title": "CIA — tidigare chef erkänner bedrägeri med ett påhittat hemligt program",
+    "date": "2026-10-06",
+    "loc": {
+      "m": "Virginia",
+      "r": "USA",
+      "lat": 38.95,
+      "lng": -77.146,
+      "p": "approximate"
+    },
+    "sector": "AUTHORITY",
+    "actor": "INSIDER",
+    "role": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "GUILTY_PLEA",
+    "summary": "USA:s justitiedepartement uppgav den 6 oktober att en tidigare högt placerad CIA-anställd, D.J.R., erkänt bedrägeri som orsakat staten en förlust på cirka 194 miljoner dollar. Han hade fått sin befattning delvis genom osanna uppgifter om utbildning och militär erfarenhet och använde ett påhittat Special Access Program för att få tillgång till statliga pengar för egen vinning. CIA:s interna utredning ledde till att ärendet överlämnades till FBI. Erkännandet är veckans nya rättsliga steg. Påföljden ska bestämmas i januari 2027 och var ännu inte beslutad.",
+    "sources": [
+      {
+        "l": "USA:s justitiedepartement — Former Federal Employee Pleads Guilty to Defrauding the Federal Government of Approximately $194 Million, 6 oktober 2026",
+        "t": "authority",
+        "url": "https://www.justice.gov/opa/pr/former-federal-employee-pleads-guilty-defrauding-federal-government-approximately-194"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "INTERNAL_LOG",
+        "POLICE"
+      ],
+      "gaps": [
+        "SCREENING"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Bekräftat avser den erkända bedrägerihandlingen, inte en utdömd påföljd. Kontrollkodningen avser de osanna meriter som enligt rättshandlingarna bidrog till befattningen. Kartpunkten anger CIA:s verksamhetsmiljö i Virginia, inte en privat bostad.",
+    "reported_at": "2026-10-06",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c301",
+    "title": "TD Bank — anställd erkänner mutor och undanröjande av bankkontroller",
+    "date": "2026-10-06",
+    "loc": {
+      "m": "Florida",
+      "r": "USA",
+      "lat": 26.011,
+      "lng": -80.149,
+      "p": "approximate"
+    },
+    "sector": "FINANCE",
+    "actor": "CRIMINAL_NETWORK",
+    "role": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "GUILTY_PLEA",
+    "summary": "En tidigare TD Bank-anställd, G.A., erkände den 6 oktober att han tagit emot mutor och hjälpt till att tvätta över 4,8 miljoner dollar till Colombia. Enligt USA:s justitiedepartement öppnade han falska konton, utfärdade hundratals kort till medgärningspersoner och hävde bankens spärrar på kort som hade flaggats för misstänkt bedrägeri. Han fick mer än 8 000 dollar i mutor. Handlingarna skedde 2022–2023; veckans utveckling är erkännandet. Påföljden ska bestämmas i mars 2027. Fallet visar hur en insider kan använda ordinarie bankfunktioner för att sätta kontroller ur spel.",
+    "sources": [
+      {
+        "l": "USA:s justitiedepartement — Former TD Bank Employee Pleads Guilty to Accepting Bribes, Laundering $4.8 Million to Colombia, 6 oktober 2026",
+        "t": "authority",
+        "url": "https://www.justice.gov/opa/pr/former-td-bank-employee-pleads-guilty-accepting-bribes-laundering-48-million-colombia"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "ACCESS"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Bekräftat avser de erkända gärningarna. Behörighetskodningen avser det dokumenterade missbruket av konton, kort och spärrfunktioner, inte en fullständig teknisk granskning. Kartpunkten är ungefärlig och pekar inte ut en privat adress.",
+    "reported_at": "2026-10-06",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c302",
+    "title": "Leipzig/Halle — ny granskning av misstänkt sabotage mot transportflygplan",
+    "date": "2026-08-04",
+    "loc": {
+      "m": "Leipzig/Halle",
+      "r": "Tyskland",
+      "lat": 51.424,
+      "lng": 12.236,
+      "p": "approximate"
+    },
+    "sector": "TRANSPORT",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "The Insider publicerade den 8 oktober en granskning av ett misstänkt sabotageförsök mot ett An-124-flygplan på Leipzig/Halle flygplats den 4 augusti. Enligt granskningen träffade en drönare med sprängladdning flygplanet utan att laddningen detonerade. Planet användes i transporter med koppling till militärt stöd till Ukraina. Journalisterna beskriver en möjlig kedja från rysk underrättelsetjänst via mellanhänder till personer som skulle utföra angreppet. Veckans tillägg är den nya granskningen av den äldre händelsen. Den redovisade ansvarskedjan är inte fastställd i domstol.",
+    "sources": [
+      {
+        "l": "The Insider — granskning av drönarangreppet mot ett An-124 på Leipzig/Halle, 8 oktober 2026",
+        "t": "media",
+        "url": "https://theins.ru/inv/297778"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Journalisternas attribution och kedja av mellanhänder är uppgifter i en granskning, inte ett domstolsavgörande. Utfallet avser att den rapporterade sprängladdningen inte detonerade. Originalartikeln är på ryska.",
+    "reported_at": "2026-10-08",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c303",
+    "title": "London — rättegång om misstänkt Iranrelaterat våldsplanerande mot journalister",
+    "date": "2026-10-06",
+    "loc": {
+      "m": "London",
+      "r": "Storbritannien",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "p": "approximate"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Vid en rättegång som inleddes denna vecka lade åklagare den 6 oktober fram påståenden om att tre män kartlagt Iran International-journalister i Storbritannien för att förbereda allvarligt våld och tysta kritiska röster. Den påstådda spaningen skedde 2024–2025. Åklagaren kopplar den till iransk underrättelsetjänst. Samtliga åtalade nekar till brott och bestrider centrala delar av syftet eller sin kännedom. Veckans utveckling är domstolsprövningen, inte en ny genomförd attack. Skuld och ansvarskedja är ännu inte fastställda.",
+    "sources": [
+      {
+        "l": "Reuters — Three Iranians on trial in UK for spying on dissident journalists, 6 oktober 2026",
+        "t": "media",
+        "url": "https://www.reuters.com/business/media-telecom/three-iranians-trial-uk-spying-dissident-journalists-2026-10-06/"
+      },
+      {
+        "l": "Iran International — domstolsrapportering om den påstådda spaningen, 6 oktober 2026",
+        "t": "media",
+        "url": "https://www.iranintl.com/en/202610064415"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Källorna återger åtalet och försvarets invändningar. Iran International är också den berörda medieorganisationen; Reuters ger separat domstolsrapportering.",
+    "reported_at": "2026-10-06",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c304",
+    "title": "Luleå — jäv i beslut att inte utreda en orosanmälan",
+    "date": "2026-10-08",
+    "loc": {
+      "m": "Luleå",
+      "r": "Norrbotten",
+      "lat": 65.5848,
+      "lng": 22.1547,
+      "p": "municipality"
+    },
+    "sector": "SOCIAL",
+    "actor": "INSIDER",
+    "role": "INSIDER",
+    "status": "INDICATION",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "Luleå kommun meddelade den 8 oktober att kommunen anmält risk för allvarligt missförhållande till IVO efter jäv vid handläggning av en orosanmälan. Beslutet att inte inleda utredning hade fattats av en anställd med en nära personlig relation till någon med anknytning till ärendet. Förhållandet upptäcktes när nya uppgifter ledde till en genomgång av den tidigare handläggningen. Kommunen utreder händelsen enligt lex Sarah. Jävet är kommunens redovisade bedömning; en avsikt att gynna någon eller ett brottsligt påverkansförlopp är inte fastställt.",
+    "sources": [
+      {
+        "l": "Luleå kommun — Luleå kommun anmäler risk för allvarligt missförhållande, 8 oktober 2026",
+        "t": "authority",
+        "url": "https://www.lulea.se/kommun--politik/pressrum/pressrum/2026-10-08-lulea-kommun-anmaler-risk-for-allvarligt-missforhallande.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "INTERNAL_LOG"
+      ],
+      "gaps": [
+        "CONFLICT"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Kommunens primärkälla beskriver relationen, beslutet och den interna upptäckten. Genomfört avser det tidigare handläggningsbeslutet. Sambandet mellan relationen och beslutets innehåll är fortfarande en utredningsfråga.",
+    "reported_at": "2026-10-08",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c305",
+    "title": "Hässleholm — hovrätten fastställer dom för bildbaserade hot mot kommunpolitiker",
+    "date": "2026-10-09",
+    "loc": {
+      "m": "Hässleholm",
+      "r": "Skåne",
+      "lat": 56.158,
+      "lng": 13.767,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "CONFIRMED",
+    "legal_status": "CONVICTION",
+    "summary": "Norra Skåne rapporterade den 9 oktober att hovrätten fastställt en dom mot O.L. för två fall av hot mot tjänsteman. Hoten riktades mot kommunpolitikern Kenny Hansson genom publicering av bilder ur tv-serien South Park på Facebook. Tingsrätten hade dömt i april 2026. Veckans utveckling är hovrättens prövning av samma gärningar. Fallet visar att bildmaterial och publiceringssammanhang kan ingå i ett rättsligt bedömt hot; det innebär inte att varje liknande bild i sig är brottslig.",
+    "sources": [
+      {
+        "l": "Norra Skåne — Kennybilder var hot: hovrätten fastställer domen, 9 oktober 2026",
+        "t": "media",
+        "url": "https://www.nsk.se/hassleholm/kennybilder-var-hot-oddvar-lonnerkrantz-doms-i-hovratten/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Domen återges i den öppet läsbara delen av tidningens domsrapportering. Själva domskälen har inte lästs; målnummer, exakt beslutsanknytning och laga kraft anges därför inte.",
+    "reported_at": "2026-10-09",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "c306",
+    "title": "Danske Bank — tidigare anställd åtalad om mutor i bolånebeslut",
+    "date": "2026-10-07",
+    "loc": {
+      "m": "Sverige",
+      "r": "Nationell referenspunkt",
+      "lat": 62,
+      "lng": 15,
+      "p": "approximate"
+    },
+    "sector": "FINANCE",
+    "actor": "INSIDER",
+    "role": "INSIDER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Dagens industri rapporterade den 7 oktober att en tidigare Danske Bank-anställd åtalas för mutbrott och trolöshet mot huvudman. Enligt tidningens återgivning av Ekobrottsmyndighetens uppgifter ska han ha fått över 400 000 kronor genom att bevilja bolån till personer med bristande kreditvärdighet. Tidningen uppger att bankens egna kontroller inte upptäckte den misstänkta brottsligheten och att EBM kom mannen på spåren i efterhand. Uppgifterna beskriver misstänkt privat ersättning kopplad till kreditbeslut. Någon skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Dagens industri — Bankman åtalas för mutor, 7 oktober 2026",
+        "t": "media",
+        "url": "https://www.di.se/nyheter/bankman-atalas-for-mutor/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Underlaget är artikelns öppna ingress och bildtext. Fullständig artikel och åtalsunderlag har inte lästs, så detaljer om kontrollernas utformning lämnas okända. Kartpunkten är nationell och anger inte bankkontor, bostad eller brottsplats.",
+    "reported_at": "2026-10-07",
+    "last_updated": "2026-10-09",
+    "last_verified": "2026-10-09"
   }
 ]

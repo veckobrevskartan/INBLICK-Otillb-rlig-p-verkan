@@ -2345,19 +2345,22 @@ window.INBLICK_CASE_CODING = {
         "FOREIGN_TECH"
       ],
       "discovery": [
-        "UNKNOWN"
+        "SECURITY",
+        "COURT"
       ],
       "gaps": [
         "UNKNOWN"
       ],
       "outcome": "UNCLEAR"
     },
-    "basis": "RECORD_REVIEW",
-    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
-    "source_count": 2,
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 4,
     "source_urls": [
       "https://www.domstol.se/nyheter/2026/07/dom-i-mal-om-forsok-till-spioneri-m-m/",
-      "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-07-29-fallande-dom-i-spionerimal.html"
+      "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-07-29-fallande-dom-i-spionerimal.html",
+      "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2026-10-06-doms-for-forsok-till-spioneri.html",
+      "https://via.tt.se/pressmeddelande/4581568/doms-for-forsok-till-spioneri?lang=sv&publisherId=3236713"
     ]
   },
   "c143": {
@@ -4474,9 +4477,17 @@ window.INBLICK_CASE_CODING = {
   },
   "c274": {
     "coding": {
-      "methods": ["THREAT", "ACCESS"],
-      "discovery": ["POLICE"],
-      "gaps": ["PHYSICAL", "UNKNOWN"],
+      "methods": [
+        "THREAT",
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
       "outcome": "UNCLEAR"
     },
     "basis": "EDITORIAL",
@@ -4489,9 +4500,17 @@ window.INBLICK_CASE_CODING = {
   },
   "c275": {
     "coding": {
-      "methods": ["ACCESS", "RELATION"],
-      "discovery": ["COURT"],
-      "gaps": ["ACCESS", "CONFLICT"],
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "ACCESS",
+        "CONFLICT"
+      ],
       "outcome": "UNCLEAR"
     },
     "basis": "EDITORIAL",
@@ -4503,25 +4522,363 @@ window.INBLICK_CASE_CODING = {
     ]
   },
   "c276": {
-    "coding": {"methods":["THREAT","ACCESS"],"discovery":["SECURITY"],"gaps":["PHYSICAL","UNKNOWN"],"outcome":"PARTIAL"},
-    "basis":"EDITORIAL",
-    "source_review":"PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
-    "source_count":3,
-    "source_urls":["https://valitsus.ee/en/news/russia-responsible-arson-attack-milrem","https://www.prokuratuur.ee/en/news/potential-case-arson-tallinn","https://vdd.gov.lv/en/news/press-releases/vdd-detains-three-latvian-citizens-on-suspicion-of-arson-in-estonia"]
+    "coding": {
+      "methods": [
+        "THREAT",
+        "ACCESS"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://valitsus.ee/en/news/russia-responsible-arson-attack-milrem",
+      "https://www.prokuratuur.ee/en/news/potential-case-arson-tallinn",
+      "https://vdd.gov.lv/en/news/press-releases/vdd-detains-three-latvian-citizens-on-suspicion-of-arson-in-estonia"
+    ]
   },
   "c277": {
-    "coding": {"methods":["THREAT"],"discovery":["SECURITY"],"gaps":["UNKNOWN"],"outcome":"COMPLETED"},
-    "basis":"EDITORIAL",
-    "source_review":"PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
-    "source_count":2,
-    "source_urls":["https://www.consilium.europa.eu/en/press/press-releases/2026/09/24/russian-hybrid-threats-eu-lists-xenia-fedorova-over-information-manipulation-activities/","https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2165"]
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.consilium.europa.eu/en/press/press-releases/2026/09/24/russian-hybrid-threats-eu-lists-xenia-fedorova-over-information-manipulation-activities/",
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2165"
+    ]
   },
   "c278": {
-    "coding": {"methods":["BRIBERY","RELATION"],"discovery":["COURT"],"gaps":["CONFLICT","CONTRACT"],"outcome":"UNCLEAR"},
-    "basis":"EDITORIAL",
-    "source_review":"PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
-    "source_count":2,
-    "source_urls":["https://transparency-france.org/2026/09/15/proces-dati-ghosn-transparency-international-france-se-constitue-partie-civile/","https://www.lemonde.fr/en/france/article/2026/09/16/french-ex-minister-dati-goes-on-trial-in-renault-corruption-case_6757578_7.html"]
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://transparency-france.org/2026/09/15/proces-dati-ghosn-transparency-international-france-se-constitue-partie-civile/",
+      "https://www.lemonde.fr/en/france/article/2026/09/16/french-ex-minister-dati-goes-on-trial-in-renault-corruption-case_6757578_7.html"
+    ]
+  },
+  "c293": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "SECURITY"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://pet.dk/pet/nyhedsliste/et-mere-alvorligt-sikkerhedspolitisk-billede-kan-ogsaa-faa-konsekvenser-i-danmark/2026/09/24",
+      "https://pet.dk/pet/nyhedsliste/pet-ser-planlaegning-og-forberedelse-af-russisk-sabotageaktivitet-i-danmark/2026/09/05",
+      "https://www.reuters.com/business/aerospace-defense/denmark-says-russia-has-conducted-sabotage-attacks-against-its-defense-firms-2026-10-07/"
+    ]
+  },
+  "c294": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.aftonbladet.se/nyheter/a/qyLeWz/uppgifter-hot-mot-mohamed-ali-utreds-lamna-riksdagen"
+    ]
+  },
+  "c295": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.stmi.bayern.de/presse-und-medien/pressemitteilungen/detail/einladung-herrmann-informiert-ueber-die-aktuelle-lage-behoerdenmitarbeiter-des-landratsamts-neumarkt-bei-waffenkontrolle-in-berngau-erschossen-22485/"
+    ]
+  },
+  "c296": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "BRIBERY",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-06-10-2026.html",
+      "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-07-10-2026-2.html"
+    ]
+  },
+  "c297": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "POLICE",
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://news.sky.com/story/royal-navy-serviceman-charged-with-national-security-act-offences-13596375"
+    ]
+  },
+  "c298": {
+    "coding": {
+      "methods": [
+        "BRIBERY"
+      ],
+      "discovery": [
+        "UNKNOWN"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://lvportals.lv/dienaskartiba/395611-tiesas-divas-personas-par-kukula-dosanu-pasvaldibas-amatpersonai-2026"
+    ]
+  },
+  "c299": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.occrp.org/en/news/lithuanian-minister-condemns-intimidation-campaign-against-investigative-reporters"
+    ]
+  },
+  "c300": {
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "INTERNAL_LOG",
+        "POLICE"
+      ],
+      "gaps": [
+        "SCREENING"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.justice.gov/opa/pr/former-federal-employee-pleads-guilty-defrauding-federal-government-approximately-194"
+    ]
+  },
+  "c301": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "ACCESS"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.justice.gov/opa/pr/former-td-bank-employee-pleads-guilty-accepting-bribes-laundering-48-million-colombia"
+    ]
+  },
+  "c302": {
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://theins.ru/inv/297778"
+    ]
+  },
+  "c303": {
+    "coding": {
+      "methods": [
+        "THREAT",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.reuters.com/business/media-telecom/three-iranians-trial-uk-spying-dissident-journalists-2026-10-06/",
+      "https://www.iranintl.com/en/202610064415"
+    ]
+  },
+  "c304": {
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "INTERNAL_LOG"
+      ],
+      "gaps": [
+        "CONFLICT"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.lulea.se/kommun--politik/pressrum/pressrum/2026-10-08-lulea-kommun-anmaler-risk-for-allvarligt-missforhallande.html"
+    ]
+  },
+  "c305": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "COURT"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.nsk.se/hassleholm/kennybilder-var-hot-oddvar-lonnerkrantz-doms-i-hovratten/"
+    ]
+  },
+  "c306": {
+    "coding": {
+      "methods": [
+        "BRIBERY"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.di.se/nyheter/bankman-atalas-for-mutor/"
+    ]
   }
 };
 ;
