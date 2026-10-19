@@ -7733,7 +7733,7 @@
     "role": "TARGET",
     "status": "INDICATION",
     "legal_status": "SUSPECTED",
-    "summary": "En brand skadade elförsörjning och reservgenerator vid en Starlink-markstation i Wola Krobowska. Polens riksåklagarmyndighet öppnade en utredning om sabotage, terrorbrott och uppgav att det fanns grundad misstanke om att gärningspersonerna handlat på uppdrag av ryska specialtjänster för att störa Starlink-kommunikation. Ingen person hade delgivits misstanke när åklagaren offentliggjorde uppgifterna; attributionen är en utredningshypotes, inte ett fastställt förhållande.",
+    "summary": "En brand skadade elförsörjning och reservgenerator vid en Starlink-markstation i Wola Krobowska den 23 september. Polens riksåklagarmyndighet öppnade en utredning om sabotage och terrorbrott och uppgav att det fanns grundad misstanke om att gärningspersonerna handlat på uppdrag av ryska specialtjänster för att störa Starlink-kommunikation. Den 12 oktober meddelade polska myndigheter att två turkiska medborgare gripits i Tyskland misstänkta för att ha anlagt branden. Polens samordnare för säkerhetstjänster sade att rysk underrättelsetjänst låg bakom, medan premiärminister Donald Tusk kallade händelsen hybridkrigföring. Gripandena och myndigheternas attribution är inte detsamma som en fällande dom eller slutligt fastställd styrning.",
     "sources": [
       {
         "l": "Polens riksåklagarmyndighet — Starlink-markstationen i Wola Krobowska, 25 september 2026",
@@ -7744,6 +7744,11 @@
         "l": "Onet — Prosecutors launch investigation into fire at Starlink station, 25 september 2026",
         "t": "media",
         "url": "https://wiadomosci.onet.pl/warszawa/pozar-w-stacji-starlink-prokuratura-wszczela-sledztwo-akt-dywersji/8mrbpx9"
+      },
+      {
+        "l": "Associated Press — Poland blames Russia for suspected Starlink station sabotage, 13 oktober 2026",
+        "t": "media",
+        "url": "https://apnews.com/article/d609c35778de4a8223b56bf45b0c48d1"
       }
     ],
     "coding": {
@@ -7760,8 +7765,8 @@
       "outcome": "PARTIAL",
       "basis": "EDITORIAL"
     },
-    "source_note": "Åklagaren säger att ingen person ännu delgivits misstanke och anger rysk specialtjänst som en välgrundad utredningshypotes. Det är inte en lagakraftvunnen dom eller fastställd attribution.",
-    "last_updated": "2026-10-05"
+    "source_note": "Branden i september finns tidigare registrerad. Oktoberuppdateringen gäller gripandet av två turkiska medborgare i Tyskland och polska myndigheters attribution till rysk underrättelsetjänst. De misstänkta är inte dömda; attributionen är myndigheternas bedömning.",
+    "last_updated": "2026-10-19"
   },
   {
     "id": "c290",
@@ -8548,5 +8553,99 @@
     "status": "INDICATION",
     "summary": "Inför och under de franska protesterna i oktober 2026 spreds äldre videoklipp som felaktigt framställdes som aktuella bilder av oroligheterna. AFP identifierade bland annat material från en kurdisk demonstration 2022, New York 2023 och franska pensionsprotester 2023. Le Monde beskrev dessutom ett dussintal TikTok-konton som skapats eller bytt namn den 9 september och publicerade AI-genererade affischer om protestdagen 17 oktober. Frankrikes utrikesministerium uppgav att officiella iranska konton hade spridit falska uppgifter om elevprotesterna och kallade upp Irans ambassadör. Denna myndighetsanklagelse belägger inte att Iran organiserade protesterna eller drev de identifierade kontona. Viginum hade tidigare beskrivit den utländska aktiviteten som mycket begränsad och utan nämnvärt genomslag. Fallet dokumenterar vilseledande och syntetiskt innehåll i ett polariserat protestläge; ansvar, samordning och faktisk effekt är inte fastställda.",
     "title": "Frankrike — vilseledande videor och AI-genererade protestaffischer sprids kring demonstrationer"
+  },
+  {
+    "id": "c308",
+    "title": "Bulgarien — myndigheter utreder uppgiven brand vid Starlink-antenner nära Sofia",
+    "date": "2026-10-13",
+    "loc": {
+      "m": "Sofiaområdet",
+      "r": "Bulgarien",
+      "lat": 42.6977,
+      "lng": 23.3219,
+      "p": "approximate"
+    },
+    "sector": "IT",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "INVESTIGATION",
+    "summary": "Bulgariens premiärminister Rumen Radev bekräftade den 14 oktober att myndigheterna utredde ett angrepp mot Starlink-antenner nära Sofia och sade att arbetet bedrevs intensivt tillsammans med partnerorgan. Associated Press uppgav att oppositionspolitiker hävdade att två maskerade personer hade tänt eld på 11 av 17 antenner vid en anläggning i området. Radev lämnade inga detaljer med hänvisning till den pågående utredningen, och uppgiften om antal och händelseförlopp har inte bekräftats oberoende. Ingen offentlig attribution till en statlig aktör har gjorts.",
+    "sources": [
+      {
+        "l": "Associated Press — Bulgaria says Russia was likely behind Black Sea drone strikes as rescue operations continue, 14 oktober 2026",
+        "t": "media",
+        "url": "https://apnews.com/article/8746f7f536b245dda36fb2b8778fc542"
+      },
+      {
+        "l": "Agence France-Presse via Arab News — Bulgaria probing report that Starlink antennas set on fire, 14 oktober 2026",
+        "t": "media",
+        "url": "https://www.arabnews.com/world/bulgaria-probing-report-that-starlink-antennas-set-on-fire-3006297"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Premiärministern bekräftade en utredning om ett angrepp mot Starlink-antenner. Uppgiften om 11 av 17 nedbrända antenner kommer från oppositionspolitiker och är inte självständigt verifierad. Ingen aktörsattribution är offentlig.",
+    "last_updated": "2026-10-19",
+    "last_verified": "2026-10-19"
+  },
+  {
+    "id": "c309",
+    "title": "Litauen — försök till brandattentat mot företag med Starlink-utrustning avvärjs",
+    "date": "2026-10-18",
+    "loc": {
+      "m": "Litauen",
+      "r": "Litauen",
+      "lat": 55.1694,
+      "lng": 23.8813,
+      "p": "national"
+    },
+    "sector": "IT",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "INVESTIGATION",
+    "summary": "Litauiska myndigheter uppgav den 18 oktober att ett försök att anlägga brand vid ett företag som hanterar Starlink-utrustning hade avvärjts. Enligt den offentliga rapporteringen försökte gärningspersonerna antända nio Starlink-antenner och en styrenhet; utrustningen skulle användas för Ukrainas kommunikation. Litauens nationella krishanteringscentrum bedömde att försöket var en Rysslandskopplad sabotagehandling avsedd att försvåra Ukrainas militära verksamhet. Det är myndigheternas preliminära attribution medan utredningen pågår; någon slutlig rättslig prövning redovisas inte i källorna.",
+    "sources": [
+      {
+        "l": "Reuters — Lithuania says attempted Starlink arson was Russia-linked sabotage, 18 oktober 2026",
+        "t": "media",
+        "url": "https://www.reuters.com/business/media-telecom/lithuania-says-attempted-starlink-arson-was-russia-linked-sabotage-2026-10-18/"
+      },
+      {
+        "l": "The Kyiv Independent — Lithuania foils arson attack on Starlink equipment, suspects Russian involvement, 18 oktober 2026",
+        "t": "media",
+        "url": "https://kyivindependent.com/lithuania-foils-arson-attack-on-starlink-equipment-suspects-russian-involvement/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Attentatsförsöket och myndigheternas Rysslandskoppling hålls isär. Den senare är en preliminär myndighetsbedömning, inte en fastställd dom.",
+    "last_updated": "2026-10-19",
+    "last_verified": "2026-10-19"
   }
 ]

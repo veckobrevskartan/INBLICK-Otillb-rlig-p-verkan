@@ -4879,6 +4879,52 @@ window.INBLICK_CASE_CODING = {
     "source_urls": [
       "https://www.di.se/nyheter/bankman-atalas-for-mutor/"
     ]
+  },
+  "c308": {
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://apnews.com/article/8746f7f536b245dda36fb2b8778fc542",
+      "https://www.arabnews.com/world/bulgaria-probing-report-that-starlink-antennas-set-on-fire-3006297"
+    ]
+  },
+  "c309": {
+    "coding": {
+      "methods": [
+        "SABOTAGE"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.reuters.com/business/media-telecom/lithuania-says-attempted-starlink-arson-was-russia-linked-sabotage-2026-10-18/",
+      "https://kyivindependent.com/lithuania-foils-arson-attack-on-starlink-equipment-suspects-russian-involvement/"
+    ]
   }
 };
 ;
