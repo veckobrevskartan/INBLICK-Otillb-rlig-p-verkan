@@ -8496,5 +8496,57 @@
     "reported_at": "2026-10-07",
     "last_updated": "2026-10-09",
     "last_verified": "2026-10-09"
+  },
+  {
+    "actor": "UNKNOWN",
+    "coding": {
+      "basis": "EDITORIAL",
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "outcome": "PARTIAL"
+    },
+    "date": "2026-10-07",
+    "id": "c307",
+    "last_updated": "2026-10-19",
+    "last_verified": "2026-10-19",
+    "legal_status": "REPORTING_ONLY",
+    "loc": {
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "m": "Frankrike",
+      "p": "national",
+      "r": "Frankrike"
+    },
+    "reported_at": "2026-10-19",
+    "role": "TARGET",
+    "sector": "INFORMATION_ENVIRONMENT",
+    "source_note": "Källsamlingen beskriver återanvända och felaktigt kontextualiserade videor samt TikTok-konton med AI-genererade protestaffischer. Källorna ger inte stöd för att en utländsk aktör organiserade protesterna. Frankrikes anklagelse mot Iran återges som myndighetsuppgift; eventuell attribution av de enskilda kontona och materialens genomslag är inte fastställd.",
+    "sources": [
+      {
+        "l": "Agence France-Presse — Attention à ces vidéos décontextualisées qui n’ont rien à voir avec les manifestations lycéennes en France, 8 oktober 2026",
+        "t": "media",
+        "url": "https://lnkd.in/dXER-pcx"
+      },
+      {
+        "l": "Le Monde — How a TikTok rumor about the Yellow Vests’ return spread, 19 september 2026",
+        "t": "media",
+        "url": "https://lnkd.in/dBuAh5Cn"
+      },
+      {
+        "l": "Frankrikes utrikesministerium — Iran – Convocation de l’ambassadeur de la République islamique d’Iran, 7 oktober 2026",
+        "t": "authority",
+        "url": "https://lnkd.in/dJWZTzyF"
+      }
+    ],
+    "status": "INDICATION",
+    "summary": "Inför och under de franska protesterna i oktober 2026 spreds äldre videoklipp som felaktigt framställdes som aktuella bilder av oroligheterna. AFP identifierade bland annat material från en kurdisk demonstration 2022, New York 2023 och franska pensionsprotester 2023. Le Monde beskrev dessutom ett dussintal TikTok-konton som skapats eller bytt namn den 9 september och publicerade AI-genererade affischer om protestdagen 17 oktober. Frankrikes utrikesministerium uppgav att officiella iranska konton hade spridit falska uppgifter om elevprotesterna och kallade upp Irans ambassadör. Denna myndighetsanklagelse belägger inte att Iran organiserade protesterna eller drev de identifierade kontona. Viginum hade tidigare beskrivit den utländska aktiviteten som mycket begränsad och utan nämnvärt genomslag. Fallet dokumenterar vilseledande och syntetiskt innehåll i ett polariserat protestläge; ansvar, samordning och faktisk effekt är inte fastställda.",
+    "title": "Frankrike — vilseledande videor och AI-genererade protestaffischer sprids kring demonstrationer"
   }
 ]
