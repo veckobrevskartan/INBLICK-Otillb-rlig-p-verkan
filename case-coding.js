@@ -4789,13 +4789,17 @@ window.INBLICK_CASE_CODING = {
       "gaps": [
         "UNKNOWN"
       ],
-      "outcome": "INTERRUPTED"
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
     },
     "basis": "EDITORIAL",
     "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
-    "source_count": 1,
+    "source_count": 4,
     "source_urls": [
-      "https://theins.ru/inv/297778"
+      "https://theins.ru/inv/297778",
+      "https://www.bundesregierung.de/breg-de/aktuelles/reaktion-angriff-leipzig-2451522",
+      "https://www.lsm.lv/raksts/zinas/arzemes/19.10.2026-latvijas-pase-bizness-krievija-un-diversija-leipciga-kas-ir-olegs-levuskins.a668064/",
+      "https://www.tagesschau.de/investigativ/ndr-wdr/leipzig-drohne-saboteur-100.html"
     ]
   },
   "c303": {
@@ -4925,76 +4929,296 @@ window.INBLICK_CASE_CODING = {
       "https://www.reuters.com/business/media-telecom/lithuania-says-attempted-starlink-arson-was-russia-linked-sabotage-2026-10-18/",
       "https://kyivindependent.com/lithuania-foils-arson-attack-on-starlink-equipment-suspects-russian-involvement/"
     ]
+  },
+  "c310": {
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE",
+        "SECURITY"
+      ],
+      "gaps": [
+        "ACCESS",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.polskieradio.pl/400/7764/artykul/3743776,reservist-wegen-spionageverdachts-festgenommen",
+      "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/poland-detains-polish-ukrainian-dual-national-suspected-of-spying"
+    ]
+  },
+  "c311": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://via.tt.se/pressmeddelande/4605202/enkopings-kommun-polisanmaler-brott-mot-tystnadsplikt?publisherId=3236045",
+      "https://op.europa.eu/sv/web/public-procurement/procurement-details/-/procurement/5154c4e5-b002-4a25-8541-02c54b186c92",
+      "https://upphandling24.se/lagbrott-fran-talarstolen/"
+    ]
+  },
+  "c312": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "COURT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "SUPPLIER"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.lsm.lv/raksts/zinas/latvija/21.10.2026-tiesa-bijuso-valsts-policijas-galvenas-kartibas-policijas-parvaldes-prieksnieku-krapsi-atzist-par-vainigu-radaru-iepirkuma-lieta.a668503/"
+    ]
+  },
+  "c313": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.tvl.be/nieuws/politieagente-27-krijgt-jaar-cel-met-uitstel-voor-drugsbezit-en-doorspelen-van-politiegegevens-183756"
+    ]
+  },
+  "c314": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "LOGGING",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.security.com/blog-post/swallowtail-russia-nato-targets",
+      "https://therecord.media/european-defense-contractors-fancy-bear-espionage",
+      "https://www.cisa.gov/sites/default/files/2023-04/apt28-exploits-known-vulnerability-to-carry-out-reconnaissance-and-deploy-malware-on-cisco-routers-uk.pdf"
+    ]
+  },
+  "c315": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "SECURITY",
+        "POLICE"
+      ],
+      "gaps": [
+        "ACCESS",
+        "PHYSICAL"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://ssu.gov.ua/en/novyny/sbu-zatrymala-v-odesi-koryhuvalnytsiu-fsb-yaka-navodyla-udary-voroha-po-portu-ta-obiektakh-natshvardii"
+    ]
+  },
+  "c316": {
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING",
+        "RELATION"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://zt.npu.gov.ua/news/maksym-tsutskiridze-politseiski-zhytomyrshchyny-zatrymaly-17-richnu-divchynu-iaka-za-danymy-slidstva-dopomahala-fsb-otruiuvaty-ukrainskykh-viiskovykh",
+      "https://apnews.com/article/115cc3b8c7945fc68c182852d60856a2"
+    ]
+  },
+  "c317": {
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH",
+        "ACCESS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "LOGGING",
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://citizenlab.ca/research/pegasus-spyware-serbian-pro-democracy/"
+    ]
+  },
+  "c318": {
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://citizenlab.ca/research/pegasus-spyware-serbian-pro-democracy/"
+    ]
+  },
+  "c319": {
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE",
+        "COURT"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://news.met.police.uk/news/man-arrested-in-cyprus-in-first-overseas-national-security-act-investigation-511576",
+      "https://en.sigmalive.com/cyprus-rejects-uk-request-to-extradite-akrotiri-spy-suspect/",
+      "https://www.cyprus-mail.com/2026/09/30/supreme-court-rejects-appeal-in-military-espionage-investigation"
+    ]
+  },
+  "c320": {
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.theins.org/en/inv/298635"
+    ]
+  },
+  "c321": {
+    "coding": {
+      "methods": [
+        "SABOTAGE",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "JOURNALISM",
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.gov.pl/web/po-gliwice/sledztwo-w-sprawie-proby-zwerbowania-za-posrednictwem-internetu-osoby-gotowej-do-podpalenia-zakladow-flytronic-sa-w-gliwicach",
+      "https://pl.vot-tak.tv/95939733/polska-fabryka-dronow-podpalenie",
+      "https://www.polskieradio.pl/395/7784/artykul/3745452%2Cpoland-probes-alleged-plot-to-set-fire-to-drone-factory"
+    ]
   }
 };
-;
-
-/* Visuell och funktionell efterbehandling för den publicerade modulsidan. */
-(function(){
-  const styleId='inblick-runtime-fixes';
-  const moduleFlow=[
-    ['chain','Påverkanskedjan'],['sectors','Sektormiljöer'],['actors','Aktörsmatrisen'],
-    ['legal','Juridisk ram'],['infopav','Informationspåverkan'],['theory','Teorier och modeller'],['visuals','Visuella modeller'],
-    ['map','Händelser & fall'],['graph','Sambandsgraf'],['assess','Organisationstestet'],['inds','Indikatorer'],
-    ['tools','Verktygslådan'],['culture','Säkerhetskultur'],['handle','Hantera ärende'],['sources','Källor']
-  ];
-  function addModuleFlow(){
-    document.querySelectorAll('.module[id^="mod-"]').forEach((module)=>{
-      if(module.querySelector('.module-flow-nav'))return;
-      const key=module.id.slice(4);
-      const availableFlow=moduleFlow.filter(([id])=>document.getElementById('mod-'+id));
-      const index=availableFlow.findIndex(([id])=>id===key);
-      if(index<0)return;
-      const previous=availableFlow[(index-1+availableFlow.length)%availableFlow.length];
-      const next=availableFlow[(index+1)%availableFlow.length];
-      const flow=document.createElement('div');
-      flow.className='module-flow-nav';
-      flow.setAttribute('role','navigation');
-      flow.setAttribute('aria-label','Navigera mellan moduler');
-      flow.innerHTML=`
-        <a class="module-flow-link module-flow-prev" href="#mod-${previous[0]}"><span class="module-flow-arrow" aria-hidden="true">←</span><span><small>Föregående del</small><strong>${previous[1]}</strong></span></a>
-        <span class="module-flow-current" aria-hidden="true">${index+1} / ${availableFlow.length}</span>
-        <a class="module-flow-link module-flow-next" href="#mod-${next[0]}"><span><small>Nästa del</small><strong>${next[1]}</strong></span><span class="module-flow-arrow" aria-hidden="true">→</span></a>`;
-      module.appendChild(flow);
-    });
-  }
-  function installRuntimeFixes(){
-    if(!document.getElementById(styleId)){
-      const style=document.createElement('style');
-      style.id=styleId;
-      style.textContent=`
-        .site-watermark{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('assets/svensk-osint-fingeravtryck.png') center 42%/min(42vw,460px) auto no-repeat;opacity:.035;mix-blend-mode:screen}
-        .nav-inner,.module,.mobile-drawer{position:relative}
-        .nav-inner,.module{z-index:1}
-        nav{background:#000!important}
-        .nav-search-wrap,#globalSearchInput,#searchResults{min-width:0;max-width:100%}
-        #searchResults{position:fixed!important;top:52px!important;left:0!important;right:0!important;z-index:210!important}
-        .sr-item-copy{min-width:0;overflow-wrap:anywhere}
-        .module img,.module figure,.module .source-figure,.module .book-figure,.module .book-source-frame{min-width:0;max-width:100%}
-        .module img{height:auto}
-        .module-flow-nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:64px 0 8px;padding:10px 0 0;border-top:1px solid var(--border);scroll-margin-top:80px}
-        .module-flow-link{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 14px;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);text-decoration:none;transition:.18s}
-        .module-flow-link:hover{background:var(--bg-mid);border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
-        .module-flow-link small{display:block;font:9px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-        .module-flow-link strong{display:block;font:16px var(--fd);font-weight:400;line-height:1.15;margin-top:3px}
-        .module-flow-next{justify-content:flex-end;text-align:right}
-        .module-flow-arrow{font-size:24px;color:var(--accent);line-height:1}
-        .module-flow-current{font:9px var(--fm);letter-spacing:.12em;color:var(--dim);white-space:nowrap}
-        @media(max-width:700px){.module-flow-nav{grid-template-columns:1fr 1fr}.module-flow-current{display:none}.module-flow-next{grid-column:2}.module-flow-prev{grid-column:1}}
-        @media(max-width:900px){#globalSearchInput{width:min(30vw,150px)!important}.sr-item{padding-left:16px;padding-right:16px}}
-      `;
-      document.head.appendChild(style);
-    }
-    if(!document.querySelector('.site-watermark')){
-      const mark=document.createElement('div');
-      mark.className='site-watermark';
-      mark.setAttribute('aria-hidden','true');
-      document.body.prepend(mark);
-    }
-    const input=document.getElementById('globalSearchInput');
-    if(input)input.setAttribute('aria-description','Sökningen visar träffar från hela materialet och öppnar valt fall eller avsnitt.');
-    addModuleFlow();
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installRuntimeFixes,{once:true});
-  else installRuntimeFixes();
-})();

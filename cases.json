@@ -6333,11 +6333,34 @@
         "l": "SVT — sammanställning och bemötanden",
         "t": "media",
         "url": "https://www.svt.se/nyheter/inrikes/detta-vet-vi-misstankt-v-valfusk-i-borlange"
+      },
+      {
+        "l": "Åklagarmyndigheten — lägesrapport: tre misstänkta, 22 oktober 2026",
+        "t": "authority",
+        "url": "https://www.aklagare.se/for-media/pressmeddelanden/2026/oktober/lagesrapport-i-arende-om-otillborligt-verkande-vid-rostning-i-borlange/"
+      },
+      {
+        "l": "Åklagarmyndigheten — utredningsåtgärder och husrannsakningar, 20 oktober 2026",
+        "t": "authority",
+        "url": "https://www.aklagare.se/for-media/pressmeddelanden/2026/oktober/uppdatering-i-arende-om-otillborligt-verkande-vid-rostning-i-borlange/"
+      },
+      {
+        "l": "Sveriges Radio — tre misstänkta i valfuskutredningen i Borlänge, 22 oktober 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/just-nu-tre-misstankta-i-valfuskutredningen-i-borlange"
+      },
+      {
+        "l": "Borlänge kommun — intern genomgång av vallokalerna, 2 oktober 2026",
+        "t": "authority",
+        "url": "https://www.borlange.se/nyheter/aktuellt/arkiv/2026-10-02-inga-tecken-pa-systematiskt-valfusk-i-kommunens-vallokaler"
       }
     ],
     "status": "INDICATION",
-    "summary": "Riksenheten mot korruption utreder misstänkt otillbörligt verkande vid röstning efter uppgifter om skjutsade väljare, förkryssade valsedlar och erbjudanden om förmåner. Förundersökningen återupptogs den 21 september. Den 23 september förekom tre personer som misstänkta i handlingar, men ingen hade då delgivits misstanke. Mohamed Abdukardir Ali har förnekat delaktighet; personrösterna och valresultatet är inte i sig bevis för brott.",
-    "title": "Borlänge — utredning om misstänkt påverkan på personröster"
+    "summary": "Riksenheten mot korruption utreder misstänkt otillbörligt verkande vid röstning i Borlänge efter valet 2026. Den 22 oktober uppgav Åklagarmyndigheten att tre personer är misstänkta och att offentliga försvarare begärts för kommande förhör. Domstolshandlingar som Sveriges Radio rapporterat visar misstankar om otillbörlig påverkan på väljare och mottagande av otillbörlig förmån; det är inte en fällande dom. Borlänge kommuns interna genomgång fann inga belägg för systematiskt eller organiserat valfusk i kommunens vallokaler, men den granskningen omfattade inte all misstänkt verksamhet utanför lokalerna. Identiteterna hålls utanför sammanfattningen.",
+    "title": "Borlänge — utredning om misstänkt påverkan på personröster",
+    "source_note": "Åklagarmyndighetens uppgift att tre personer är misstänkta och att förhör förbereds skiljs från de mer detaljerade misstankarna i domstolshandlingar som rapporterats av Sveriges Radio. Ingen skuld är fastställd. Kommunens egen genomgång gäller röstmottagning i kommunens lokaler och utesluter inte andra utredningsspår.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
   },
   {
     "actor": "UNKNOWN",
@@ -8288,7 +8311,7 @@
   },
   {
     "id": "c302",
-    "title": "Leipzig/Halle — ny granskning av misstänkt sabotage mot transportflygplan",
+    "title": "Leipzig/Halle — utredning pekar på misstänkt logistikansvarig för drönarsabotage",
     "date": "2026-08-04",
     "loc": {
       "m": "Leipzig/Halle",
@@ -8302,12 +8325,27 @@
     "role": "ENABLER",
     "status": "INDICATION",
     "legal_status": "REPORTING_ONLY",
-    "summary": "The Insider publicerade den 8 oktober en granskning av ett misstänkt sabotageförsök mot ett An-124-flygplan på Leipzig/Halle flygplats den 4 augusti. Enligt granskningen träffade en drönare med sprängladdning flygplanet utan att laddningen detonerade. Planet användes i transporter med koppling till militärt stöd till Ukraina. Journalisterna beskriver en möjlig kedja från rysk underrättelsetjänst via mellanhänder till personer som skulle utföra angreppet. Veckans tillägg är den nya granskningen av den äldre händelsen. Den redovisade ansvarskedjan är inte fastställd i domstol.",
+    "summary": "En drönare med sprängladdning riktades mot ett An-124-flygplan på Leipzig/Halle flygplats den 4 augusti 2026; laddningen detonerade inte. Den tyska regeringen tillskrev den 1 september Ryssland det politiska ansvaret, med hänvisning till polisfynd, tillvägagångssätt och underrättelseuppgifter, samtidigt som de straffrättsliga utredningarna fortsatte. LSM rapporterade den 19 oktober att Lettlands säkerhetstjänst VDD bekräftat att den lettiske medborgaren Oleg Levushkin förekommer i den tyska utredningen. Journalistiska granskningar pekar ut honom som misstänkt logistisk samordnare och beskriver kontakter med en GRU-officer; hans personliga koppling till GRU och skuld är inte fastställda i domstol.",
     "sources": [
       {
         "l": "The Insider — granskning av drönarangreppet mot ett An-124 på Leipzig/Halle, 8 oktober 2026",
         "t": "media",
         "url": "https://theins.ru/inv/297778"
+      },
+      {
+        "l": "Tysklands regering — politisk attribution av attacken till Ryssland, 4 september 2026",
+        "t": "authority",
+        "url": "https://www.bundesregierung.de/breg-de/aktuelles/reaktion-angriff-leipzig-2451522"
+      },
+      {
+        "l": "LSM/LTV — Oļegs Ļevuškins och Leipzigsabotaget, 19 oktober 2026",
+        "t": "media",
+        "url": "https://www.lsm.lv/raksts/zinas/arzemes/19.10.2026-latvijas-pase-bizness-krievija-un-diversija-leipciga-kas-ir-olegs-levuskins.a668064/"
+      },
+      {
+        "l": "Tagesschau/WDR/NDR — misstänkt samordnare och kontakt med GRU-officer, 15 september 2026",
+        "t": "media",
+        "url": "https://www.tagesschau.de/investigativ/ndr-wdr/leipzig-drohne-saboteur-100.html"
       }
     ],
     "coding": {
@@ -8323,10 +8361,10 @@
       "outcome": "INTERRUPTED",
       "basis": "EDITORIAL"
     },
-    "source_note": "Journalisternas attribution och kedja av mellanhänder är uppgifter i en granskning, inte ett domstolsavgörande. Utfallet avser att den rapporterade sprängladdningen inte detonerade. Originalartikeln är på ryska.",
-    "reported_at": "2026-10-08",
-    "last_updated": "2026-10-09",
-    "last_verified": "2026-10-09"
+    "source_note": "Den tyska regeringens politiska attribution av ansvar till Ryssland bygger enligt regeringen på polis- och underrättelseunderlag; den är inte en domstolsfastställd straffrättslig slutsats. VDD:s uppgift att Levushkin förekommer i utredningen återges av LSM. Påstådd organisatörsroll och GRU-kontakter kommer från journalistiska granskningar, inte en dom.",
+    "reported_at": "2026-10-19",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
   },
   {
     "id": "c303",
@@ -8519,8 +8557,8 @@
     },
     "date": "2026-10-07",
     "id": "c307",
-    "last_updated": "2026-10-19",
-    "last_verified": "2026-10-19",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26",
     "legal_status": "REPORTING_ONLY",
     "loc": {
       "lat": 48.8566,
@@ -8532,7 +8570,7 @@
     "reported_at": "2026-10-19",
     "role": "TARGET",
     "sector": "INFORMATION_ENVIRONMENT",
-    "source_note": "Källsamlingen beskriver återanvända och felaktigt kontextualiserade videor samt TikTok-konton med AI-genererade protestaffischer. Källorna ger inte stöd för att en utländsk aktör organiserade protesterna. Frankrikes anklagelse mot Iran återges som myndighetsuppgift; eventuell attribution av de enskilda kontona och materialens genomslag är inte fastställd.",
+    "source_note": "Källorna visar återanvänt och felaktigt kontextualiserat material, AI-genererade affischer samt ryska FIMI-kanalers förstärkning och uppmaningar kring redan utlysta protester. De visar inte att utländska aktörer skapade eller kontrollerade den lokala mobiliseringen. Frankrikes uppgift om iranska officiella konton är myndighetsattribution, men belägger inte ägarskap eller drivning av de enskilda kontona. Räckvidd och effekt är inte fastställda.",
     "sources": [
       {
         "l": "Agence France-Presse — Old videos falsely linked to France's high school protests, 8 oktober 2026",
@@ -8548,10 +8586,15 @@
         "l": "Frankrikes utrikesministerium — Iran: Summoning of the Ambassador, 7 oktober 2026",
         "t": "authority",
         "url": "https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/iran-convocation-de-l-ambassadeur-de-la-republique-islamique-d-iran"
+      },
+      {
+        "l": "EK Strategies — From Amplification to Interference in German and French Protests, 8 oktober 2026",
+        "t": "report",
+        "url": "https://ekstrategies.org/articles/from-amplification-to-interference-in-german-and-french-protests"
       }
     ],
     "status": "INDICATION",
-    "summary": "Inför och under de franska protesterna i oktober 2026 spreds äldre videoklipp som felaktigt framställdes som aktuella bilder av oroligheterna. AFP identifierade bland annat material från en kurdisk demonstration 2022, New York 2023 och franska pensionsprotester 2023. Le Monde beskrev dessutom ett dussintal TikTok-konton som skapats eller bytt namn den 9 september och publicerade AI-genererade affischer om protestdagen 17 oktober. Frankrikes utrikesministerium uppgav att officiella iranska konton hade spridit falska uppgifter om elevprotesterna och kallade upp Irans ambassadör. Denna myndighetsanklagelse belägger inte att Iran organiserade protesterna eller drev de identifierade kontona. Viginum hade tidigare beskrivit den utländska aktiviteten som mycket begränsad och utan nämnvärt genomslag. Fallet dokumenterar vilseledande och syntetiskt innehåll i ett polariserat protestläge; ansvar, samordning och faktisk effekt är inte fastställda.",
+    "summary": "Inför och under franska protester i september–oktober spreds äldre videor som felaktigt framställdes som aktuella och TikTok-konton publicerade AI-genererade protestaffischer. EK Strategies rapporterade dessutom att ryska FIMI-kanaler återpublicerade redan annonserade franska mobiliseringar, uppmanade en fransk publik att följa de tyska protesterna och i ett fall föreslog våld mot en myndighetsbyggnad. De lokala organisatörerna hade utlyst aktionerna före kanalernas förstärkning. Frankrikes utrikesministerium uppgav att officiella iranska konton spridit falska uppgifter om elevprotesterna, men detta visar inte att Iran organiserade protesterna eller drev de identifierade kontona. Källorna dokumenterar informationspåverkan kring en befintlig mobilisering; organisering, genomslag och faktisk effekt är inte fastställda.",
     "title": "Frankrike — vilseledande videor och AI-genererade protestaffischer sprids kring demonstrationer"
   },
   {
@@ -8647,5 +8690,576 @@
     "source_note": "Attentatsförsöket och myndigheternas Rysslandskoppling hålls isär. Den senare är en preliminär myndighetsbedömning, inte en fastställd dom.",
     "last_updated": "2026-10-19",
     "last_verified": "2026-10-19"
+  },
+  {
+    "id": "c310",
+    "title": "Łódź — reservsoldat häktad misstänkt för spionage",
+    "date": "2026-10-16",
+    "loc": {
+      "m": "Łódź",
+      "r": "Łódzkie",
+      "lat": 51.7592,
+      "lng": 19.455,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "UNKNOWN",
+    "role": "INSIDER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Militärpolis grep den 16 oktober en reservsoldat som deltog i en officersutbildning vid Militärmedicinska akademin i Łódź. En militärdomstol beslutade den 19 oktober om tre månaders häktning på misstanke om spioneri. Polens försvarsminister uppgav att mannen hade rekognoscerat vissa militära anläggningar. Vilken utländsk underrättelsetjänst som i så fall skulle ha varit uppdragsgivare är inte offentliggjort. Uppgifter i pressen om beslagtagna dokument, stämplar, kontanter och guld har inte bekräftats av åklagaren i den rapportering som granskats; det finns inte heller offentlig uppgift om att information överförts.",
+    "sources": [
+      {
+        "l": "Polska Radio — reservsoldat häktad misstänkt för spionage, 19 oktober 2026",
+        "t": "media",
+        "url": "https://www.polskieradio.pl/400/7764/artykul/3743776,reservist-wegen-spionageverdachts-festgenommen"
+      },
+      {
+        "l": "Reuters — Polish military police detain reservist suspected of spying, 19 oktober 2026",
+        "t": "media",
+        "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/poland-detains-polish-ukrainian-dual-national-suspected-of-spying"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE",
+        "SECURITY"
+      ],
+      "gaps": [
+        "ACCESS",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Häktning och misstanke är bekräftade av militärpolis/försvarsminister och återgivna av nyhetskällor. Land eller tjänst som skulle ha varit uppdragsgivare är okänt; uppgifter om föremål vid gripandet är inte införda eftersom de saknar offentlig bekräftelse.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c311",
+    "title": "Enköping — revisionsordförande anmäld efter röjande i upphandling",
+    "date": "2026-09-08",
+    "loc": {
+      "m": "Enköping",
+      "r": "Uppsala län",
+      "lat": 59.6361,
+      "lng": 17.0777,
+      "p": "municipality"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "UNKNOWN",
+    "role": "INSIDER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Enköpings kommun beslutade den 20 oktober att polisanmäla kommunrevisionens ordförande efter att han vid fullmäktiges sammanträde den 8 september uppgett vilka intressenter som laddat ner underlaget i en pågående upphandling av revisionstjänster. Upphandlingen hade ett uppskattat värde på 20 miljoner kronor. Kommunen bedömer uppgifterna som sekretessbelagda; den anmälde har förnekat att han gjort fel. Underlaget visar inte att upphandlingen styrdes, att någon leverantör fick en fördel eller att ett avtal påverkades.",
+    "sources": [
+      {
+        "l": "Enköpings kommun — polisanmäler brott mot tystnadsplikt, 20 oktober 2026",
+        "t": "authority",
+        "url": "https://via.tt.se/pressmeddelande/4605202/enkopings-kommun-polisanmaler-brott-mot-tystnadsplikt?publisherId=3236045"
+      },
+      {
+        "l": "EU:s publikationsbyrå — upphandling av revisionstjänster, uppskattat värde 20 miljoner kronor",
+        "t": "authority",
+        "url": "https://op.europa.eu/sv/web/public-procurement/procurement-details/-/procurement/5154c4e5-b002-4a25-8541-02c54b186c92"
+      },
+      {
+        "l": "Upphandling24 — uppgifter om anmälan och den anmäldes svar, 21 oktober 2026",
+        "t": "media",
+        "url": "https://upphandling24.se/lagbrott-fran-talarstolen/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Kommunens beslut att polisanmäla, upphandlingens uppskattade värde och den anmäldes bestridande är dokumenterade. Det är inte fastställt att sekretessbrott begåtts eller att upphandlingens konkurrens eller utfall påverkats.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c312",
+    "title": "Riga — tidigare polischefer dömda i radarupphandling",
+    "date": "2018",
+    "loc": {
+      "m": "Riga",
+      "r": "Lettland",
+      "lat": 56.9496,
+      "lng": 24.1052,
+      "p": "city"
+    },
+    "sector": "PROCUREMENT",
+    "actor": "CORRUPT_OFFICIAL",
+    "role": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "CONVICTION",
+    "summary": "Rigas stadsdomstol dömde den 21 oktober 2026 två tidigare polisanställda i en upphandling av videoradarutrustning från 2018. Den tidigare chefen för ordningspolisen dömdes för tjänstemissbruk och röjande av sekretessbelagd information; en tidigare kollega dömdes för medhjälp. Enligt åtalet utformades specifikationer som motsvarade en leverantörs produkter och information lämnades till en anbudsgivare före annonsering. LSM rapporterade att de dömda avsåg att överklaga; avgörandet var därför inte slutligt vid rapporteringen.",
+    "sources": [
+      {
+        "l": "LSM/LTV — dom i målet om polisens videoradarupphandling, 21 oktober 2026",
+        "t": "media",
+        "url": "https://www.lsm.lv/raksts/zinas/latvija/21.10.2026-tiesa-bijuso-valsts-policijas-galvenas-kartibas-policijas-parvaldes-prieksnieku-krapsi-atzist-par-vainigu-radaru-iepirkuma-lieta.a668503/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "COURT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "SUPPLIER"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Dom och brottsrubricering rapporteras av LSM/LTV. Sammanfattningen skiljer domstolens avgörande i första instans från slutlig rättskraft; rapporteringen anger att överklagande avsågs.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c313",
+    "title": "Limburg — polis dömd för att ha sökt uppgifter åt narkotikasäljare",
+    "date": "2025",
+    "loc": {
+      "m": "Hasselt",
+      "r": "Limburg",
+      "lat": 50.9307,
+      "lng": 5.3325,
+      "p": "city"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "CORRUPT_OFFICIAL",
+    "role": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "CONVICTION",
+    "summary": "En domstol i Hasselt dömde den 22 oktober 2026 en polis till tolv månaders villkorligt fängelse och 8 000 euro i böter. Hon använde polisens databas för att kontrollera en registreringsskylt åt en person som försåg henne med narkotika. Domen omfattade även narkotikabrott. Källan visar missbruk av tjänsteåtkomst för en privat kontakt; den styrker inte utpressning eller att uppgifterna användes i en bredare kriminell operation.",
+    "sources": [
+      {
+        "l": "TV Limburg — polis dömd för narkotikainnehav och utlämning av polisuppgifter, 22 oktober 2026",
+        "t": "media",
+        "url": "https://www.tvl.be/nieuws/politieagente-27-krijgt-jaar-cel-met-uitstel-voor-drugsbezit-en-doorspelen-van-politiegegevens-183756"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Domen och sökningen i polisdatabasen rapporteras av TV Limburg. Inga uppgifter har lagts till om utpressning eller vidare spridning eftersom källan inte visar att detta skett.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c314",
+    "title": "Europa — APT28 kartlagt försvars- och polisorganisationer i två Natoländer",
+    "date": "2026-07-24",
+    "loc": {
+      "m": "Två ej namngivna Natoländer",
+      "r": "Europa",
+      "lat": 50,
+      "lng": 15,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Symantecs Threat Hunter Team rapporterade den 20 oktober att gruppen Swallowtail, även kallad APT28/Fancy Bear, gjort intrång hos en marin varvsbyggare, en tillverkare av militära flygmotorer och en brottsbekämpande myndighet i två Natoländer. I det mest detaljerade intrånget användes Hookedge, stulna autentiseringsuppgifter och en beständig SSH-tunnel. Amerikanska och brittiska myndighetskällor identifierar APT28 med den ryska militära underrättelsetjänsten GRU. Symantec har inte namngett länderna eller målen; det är inte offentligt fastställt om känsliga data faktiskt hämtades ut.",
+    "sources": [
+      {
+        "l": "Symantec — Swallowtail: Russian Espionage Group Targets Defense Firms in Two NATO Countries, 20 oktober 2026",
+        "t": "report",
+        "url": "https://www.security.com/blog-post/swallowtail-russia-nato-targets"
+      },
+      {
+        "l": "The Record — försvarsleverantörer hackade i två Natoländer, 20 oktober 2026",
+        "t": "media",
+        "url": "https://therecord.media/european-defense-contractors-fancy-bear-espionage"
+      },
+      {
+        "l": "CISA/NCSC/NSA/FBI — gemensam rådgivning om APT28 och GRU, 2023",
+        "t": "authority",
+        "url": "https://www.cisa.gov/sites/default/files/2023-04/apt28-exploits-known-vulnerability-to-carry-out-reconnaissance-and-deploy-malware-on-cisco-routers-uk.pdf"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "LOGGING",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Intrång och verktyg rapporteras av Symantec; statlig attribution bygger på myndigheters identifiering av APT28 som GRU-enhet. Offentliga källor namnger inte målen eller länderna och bekräftar inte dataexfiltration. Kartmarkören är endast en grov europeisk regional position.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c315",
+    "title": "Odesa — misstänkt FSB-agent kartlade hamn och militära mål",
+    "date": "2026-10-19",
+    "loc": {
+      "m": "Odesa",
+      "r": "Odesa oblast",
+      "lat": 46.4825,
+      "lng": 30.7233,
+      "p": "city"
+    },
+    "sector": "SECURITY",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Ukrainas säkerhetstjänst SBU uppger att en kvinna greps i Odesa den 19 oktober, misstänkt för att på FSB:s uppdrag ha kartlagt Nationalgardets positioner, raffinaderier och hamnlogistik för möjliga robot- och drönarangrepp. SBU säger att hon använde kollektivtrafik och Google Maps för att registrera mål och greps under rekognosering. Hon är misstänkt för högförräderi under krigslagar; skuldfrågan är inte avgjord.",
+    "sources": [
+      {
+        "l": "Ukrainas säkerhetstjänst SBU — gripande av misstänkt FSB-agent i Odesa, 19 oktober 2026",
+        "t": "authority",
+        "url": "https://ssu.gov.ua/en/novyny/sbu-zatrymala-v-odesi-koryhuvalnytsiu-fsb-yaka-navodyla-udary-voroha-po-portu-ta-obiektakh-natshvardii"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "SECURITY",
+        "POLICE"
+      ],
+      "gaps": [
+        "ACCESS",
+        "PHYSICAL"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Uppgifterna om rekrytering, målval och gripande kommer från SBU:s utredningsuppgifter. Ingen dom finns; sammanfattningen identifierar inte den misstänkta.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c316",
+    "title": "Ukraina — 17-åring misstänks ha hjälpt rysk handler att förgifta soldater",
+    "date": "2026-10-09",
+    "loc": {
+      "m": "Zhytomyr och fyra andra regioner",
+      "r": "Ukraina",
+      "lat": 49.5,
+      "lng": 30.5,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Ukrainas nationella polis uppger att en 17-åring misstänks ha packat och postat kapslar med en dödlig dos metadon på instruktioner från en rysk kontakt. Två ukrainska militärer dog efter att ha fått försändelser i Zhytomyrregionen; polisen säger att utredningen gjorde det möjligt att förebygga fyra ytterligare dödsfall i andra regioner. Den minderåriga har delgivits misstanke om medhjälp till mord och narkotikabrott och frihetsberövats. Utredningen pågår, organisatören är inte offentligt identifierad och hennes namn utelämnas.",
+    "sources": [
+      {
+        "l": "Ukrainas nationella polis — gripande av 17-årig misstänkt i förgiftningsutredning, 23 oktober 2026",
+        "t": "authority",
+        "url": "https://zt.npu.gov.ua/news/maksym-tsutskiridze-politseiski-zhytomyrshchyny-zatrymaly-17-richnu-divchynu-iaka-za-danymy-slidstva-dopomahala-fsb-otruiuvaty-ukrainskykh-viiskovykh"
+      },
+      {
+        "l": "Associated Press — two Ukrainian soldiers killed in suspected poisoning plot, 23 oktober 2026",
+        "t": "media",
+        "url": "https://apnews.com/article/115cc3b8c7945fc68c182852d60856a2"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SOCIAL_ENGINEERING",
+        "RELATION"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Antalet döda, gripandet och misstankarna bygger på nationella polisens uppgifter. Den misstänkta är minderårig; inga identifierande detaljer tas med. Polisens attribution till en rysk handler är inte en domstolsfastställd slutsats.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c317",
+    "title": "Belgrad — Pegasus-infektion bekräftad hos universitetsrektor",
+    "date": "2026",
+    "loc": {
+      "m": "Belgrad",
+      "r": "Serbien",
+      "lat": 44.7866,
+      "lng": 20.4489,
+      "p": "city"
+    },
+    "sector": "CIVIL_SOCIETY",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "CONFIRMED",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Citizen Lab och SHARE Foundation fann med hög säkerhet att en iPhone som tillhör en rektor för Belgrads universitet infekterats med NSO Groups Pegasus under 2026. Rektorn var en offentlig anhängare av studenternas pro-demokratiska rörelse. Forensik på telefonen gjordes med hans samtycke. Källorna identifierar inte vem som beställde eller genomförde infektionen; fyndet bekräftar därför spionprogramsangreppet men inte att en serbisk myndighet låg bakom.",
+    "sources": [
+      {
+        "l": "Citizen Lab och SHARE Foundation — Targeting Democracy: Pegasus and Mercenary Spyware Attacks on Serbian Pro-Democracy Figures, 19 oktober 2026",
+        "t": "report",
+        "url": "https://citizenlab.ca/research/pegasus-spyware-serbian-pro-democracy/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH",
+        "ACCESS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "LOGGING",
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Citizen Lab bekräftar infektionen med hög säkerhet utifrån forensiska artefakter. Vem som stod bakom och den politiska beställningen är inte fastställda; målpersonen namnges inte här.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c318",
+    "title": "Belgrad — åklagarutredare får varning om riktat spionprogram",
+    "date": "2026-08-13",
+    "loc": {
+      "m": "Belgrad",
+      "r": "Serbien",
+      "lat": 44.7866,
+      "lng": 20.4489,
+      "p": "city"
+    },
+    "sector": "CRIMINAL_JUSTICE",
+    "actor": "UNKNOWN",
+    "role": "TARGET",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Citizen Lab uppger att en senior medarbetare vid Serbiens åklagarmyndighet för organiserad brottslighet fick en Apple Threat Notification den 13 augusti 2026, med en påminnelse senare samma månad. Citizen Lab bedömer notisen som en stark indikation på att enheten sannolikt utsatts för försök till riktad spionprogramsinfektion, men forensisk analys pågår och infektion är inte bekräftad. Det finns inte belägg för vem som låg bakom eller att angreppet hade samband med åklagarens korruptionsutredning.",
+    "sources": [
+      {
+        "l": "Citizen Lab och SHARE Foundation — Targeting Democracy: Pegasus and Mercenary Spyware Attacks on Serbian Pro-Democracy Figures, 19 oktober 2026",
+        "t": "report",
+        "url": "https://citizenlab.ca/research/pegasus-spyware-serbian-pro-democracy/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "FOREIGN_TECH"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Apple-varningen är en indikator på sannolik riktad attack, inte bevis på infektion. Citizen Lab uppger att den forensiska utredningen fortsätter. Ingen statlig attribution eller koppling till utredningen har fastställts.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c319",
+    "title": "Cypern — utlämningsavslag i utredning om spioneri mot Akrotiri",
+    "date": "2025-05",
+    "loc": {
+      "m": "RAF Akrotiri",
+      "r": "Cypern",
+      "lat": 34.5908,
+      "lng": 32.9879,
+      "p": "approximate"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Brittisk polis uppger att en man misstänks ha bedrivit fientlig spaning mot RAF Akrotiri mellan maj och juni 2025 och lämnat information till Irans revolutionsgarde (IRGC); brittiska åklagare har godkänt åtal enligt National Security Act. Den 23 oktober 2026 avslog en cypriotisk domstol Storbritanniens begäran om utlämning och ärendet ska åter till domstol i Limassol. Utlämningsbeslutet avgör inte skuldfrågan. Den misstänkte förnekar anklagelserna och någon dom i sak har inte rapporterats.",
+    "sources": [
+      {
+        "l": "Metropolitan Police — man arrested in Cyprus in first overseas National Security Act investigation, 31 juli 2026",
+        "t": "authority",
+        "url": "https://news.met.police.uk/news/man-arrested-in-cyprus-in-first-overseas-national-security-act-investigation-511576"
+      },
+      {
+        "l": "SigmaLive — Cyprus rejects UK request to extradite Akrotiri spy suspect, 23 oktober 2026",
+        "t": "media",
+        "url": "https://en.sigmalive.com/cyprus-rejects-uk-request-to-extradite-akrotiri-spy-suspect/"
+      },
+      {
+        "l": "Cyprus Mail — Supreme Court rejects appeal in military espionage investigation, 30 september 2026",
+        "t": "media",
+        "url": "https://www.cyprus-mail.com/2026/09/30/supreme-court-rejects-appeal-in-military-espionage-investigation"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "POLICE",
+        "COURT"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Britisk polis och åklagarmyndighet beskriver anklagelserna och åtalsbeslutet; cypriotisk rapportering beskriver utlämningsbeslutet. Utlämning har avslagits, men det är inte ett frikännande i sak. Den misstänktes identitet utelämnas.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c320",
+    "title": "Addis Abeba — journalistisk granskning pekar ut GRU-officer efter intrång vid AU-residens",
+    "date": "2025-04-28",
+    "loc": {
+      "m": "Addis Abeba",
+      "r": "Etiopien",
+      "lat": 9.032,
+      "lng": 38.7469,
+      "p": "city"
+    },
+    "sector": "SECURITY",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "The Insider rapporterade den 23 oktober 2026 att en man med ryska diplomatiska registreringsskyltar den 28 april 2025 följde efter en bil in i ett residens där Afrikanska unionens kommissionsordförande bodde och gick in i sovrummet där han vistades. Med hjälp av CCTV-bilder, ansiktsigenkänning och telefondata identifierade redaktionen mannen som en rysk militärattachés assistent och GRU-officer. Granskningen visar inte vad han sökte efter eller om något togs eller installerades; ingen offentlig rättslig utredning eller officiell bekräftelse har redovisats.",
+    "sources": [
+      {
+        "l": "The Insider — Uninvited guest: How a GRU spy connected to state hackers broke into the African Union’s diplomatic residence in Ethiopia, 23 oktober 2026",
+        "t": "media",
+        "url": "https://www.theins.org/en/inv/298635"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Identifiering och GRU-attribution bygger på The Insiders granskning, bland annat CCTV, ansiktsigenkänning och telefondata; detta är inte en myndighetsbekräftad eller rättsligt fastställd uppgift. Inget tyder på att föremål stals eller att AU:s beslut påverkades.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
+  },
+  {
+    "id": "c321",
+    "title": "Gliwice — rekrytering till sabotage mot drönarfabrik utreds",
+    "date": "2026-10-04",
+    "loc": {
+      "m": "Gliwice",
+      "r": "Schlesien",
+      "lat": 50.2945,
+      "lng": 18.6714,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "ENABLER",
+    "status": "INDICATION",
+    "legal_status": "INVESTIGATION",
+    "summary": "En journalist från Vot Tak, som svarade på en Telegram-annons under täckmantel, fick enligt sin granskning ett erbjudande på 20 000–30 000 dollar för att bränna Flytronics fabrik i Gliwice, som tillverkar drönare använda av Ukrainas försvar. Rekryteraren skickade även filmad rekognosering av området. Den 21 oktober öppnade åklagare en utredning om försök att rekrytera någon till sabotage till förmån för utländsk underrättelsetjänst och överlämnade ärendet till ABW. Vot Tak spårade kontot till ett ryskt telefonnummer; detta fastställer inte att ryska staten eller Belarusiska myndigheter stod bakom. Någon brandattack har inte rapporterats.",
+    "sources": [
+      {
+        "l": "Prokuratura Okręgowa w Gliwicach — utredning om rekryteringsförsök mot Flytronic, 22 oktober 2026",
+        "t": "authority",
+        "url": "https://www.gov.pl/web/po-gliwice/sledztwo-w-sprawie-proby-zwerbowania-za-posrednictwem-internetu-osoby-gotowej-do-podpalenia-zakladow-flytronic-sa-w-gliwicach"
+      },
+      {
+        "l": "Vot Tak/TVP — granskning av rekryteringsförsöket, 15 oktober 2026",
+        "t": "media",
+        "url": "https://pl.vot-tak.tv/95939733/polska-fabryka-dronow-podpalenie"
+      },
+      {
+        "l": "Polska Radio — utredningen har öppnats och lämnats till ABW, 23 oktober 2026",
+        "t": "media",
+        "url": "https://www.polskieradio.pl/395/7784/artykul/3745452%2Cpoland-probes-alleged-plot-to-set-fire-to-drone-factory"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SABOTAGE",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "JOURNALISM",
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Åklagarmyndigheten bekräftar att en utredning öppnats efter medierapportering och att det misstänkta rekryteringsförsöket gällde sabotage för en utländsk underrättelsetjänst. Rekryteringsdialogen och telefonnumret kommer från Vot Taks journalistiska granskning. Ingen skada inträffade och den påstådda uppdragsgivaren är inte fastställd.",
+    "last_updated": "2026-10-26",
+    "last_verified": "2026-10-26"
   }
 ]
