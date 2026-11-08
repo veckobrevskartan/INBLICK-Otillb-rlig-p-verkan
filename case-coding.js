@@ -5220,5 +5220,302 @@ window.INBLICK_CASE_CODING = {
       "https://pl.vot-tak.tv/95939733/polska-fabryka-dronow-podpalenie",
       "https://www.polskieradio.pl/395/7784/artykul/3745452%2Cpoland-probes-alleged-plot-to-set-fire-to-drone-factory"
     ]
+  },
+  "c322": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "THREAT"
+      ],
+      "discovery": [
+        "JOURNALISM",
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.nabu.gov.ua/en/news/operatciia-karfagen-vykryto-novu-zlochynnu-organizatciiu/",
+      "https://kyivindependent.com/suspects-in-high-profile-case-discussed-acid-attack-on-ukraines-top-investigative-journalist/",
+      "https://imi.org.ua/en/news/cherez-rozsliduvannya-pro-u420-uchasniki-narkosindikatu-planuvali-obliti-denisa-bigusa-kislotoyu"
+    ]
+  },
+  "c323": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "COURT",
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://riks.se/nyheter/atal-mejlade-dodshot-till-gunnar-strommer-m",
+      "https://kvartal.se/nyheter/artiklar/man-atalas-for-dodshot-mot-gunnar-strommer/cG9zdDoyNDUxNjE"
+    ]
+  },
+  "c324": {
+    "coding": {
+      "methods": [
+        "THREAT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "REPORTING"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.sverigesradio.se/artikel/skickade-tortyrbilder-till-rfsu-atalas-for-hot",
+      "https://www.aftonbladet.se/nyheter/a/PgMGW0/skane-skickade-tortyrbilder-till-rfsu-atalas-for-hatbrott"
+    ]
+  },
+  "c325": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "COURT",
+        "SECURITY"
+      ],
+      "gaps": [
+        "SCREENING",
+        "UNKNOWN"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.prokuratuur.ee/en/news/gru-recruited-dual-citizen-russian-institution-higher-education"
+    ]
+  },
+  "c326": {
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS",
+        "SOCIAL_ENGINEERING"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "SCREENING",
+        "REPORTING",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://elpais.com/espana/2026-11-07/un-profesor-buscado-por-la-audiencia-nacional-recluta-soldados-y-espias-espanoles-para-rusia.html",
+      "https://www.infobae.com/espana/2026/11/07/el-reclutamiento-al-ejercito-ruso-a-traves-de-telegram-que-ofrece-casi-25000-euros-y-que-vinculan-a-un-profesor-espanol-fugado-del-pais-somos-tus-angeles/"
+    ]
+  },
+  "c327": {
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.hs.fi/maailma/art-2000012395848.html"
+    ]
+  },
+  "c328": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "RELATION"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "VETTING",
+        "GOVERNANCE"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://news.err.ee/1610183218/russian-citizen-expelled-to-prevent-activities-that-threaten-estonia"
+    ]
+  },
+  "c329": {
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS",
+        "THREAT"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "UNKNOWN"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.esteri.it/it/sala_stampa/archivionotizie/comunicati/2026/11/tajani-dati-personali-diffusi-sul-dark-web-chiesto-di-trattare-minacce-ibride-al-prossimo-g7-esteri-solidarieta-a-lo-voi-gabrielli-e-tassan-zanin/",
+      "https://apnews.com/article/41b956d638e95528bef84fd856d5b5d6"
+    ]
+  },
+  "c330": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.reuters.com/world/europe/ukrainian-air-force-says-public-air-raid-alert-app-has-been-hacked-2026-11-01/",
+      "https://kyivindependent.com/ukraines-air-raid-alert-system-hacked-air-force-says-as-false-nuclear-chemical-warnings-sound/"
+    ]
+  },
+  "c331": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.reuters.com/world/europe/ukrainian-air-force-says-public-air-raid-alert-app-has-been-hacked-2026-11-01/",
+      "https://kyivindependent.com/ukraines-air-raid-alert-system-hacked-air-force-says-as-false-nuclear-chemical-warnings-sound/"
+    ]
+  },
+  "c332": {
+    "coding": {
+      "methods": [
+        "ACCESS",
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "INTERNAL_LOG",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING",
+        "UNKNOWN"
+      ],
+      "outcome": "INTERRUPTED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://kyivindependent.com/kyiv-independent-hit-by-suspected-russian-cyberattack/",
+      "https://therecord.media/ukraine-kyiv-independent-cyberattack"
+    ]
+  },
+  "c333": {
+    "coding": {
+      "methods": [
+        "PROCUREMENT",
+        "RELATION"
+      ],
+      "discovery": [
+        "SECURITY",
+        "POLICE"
+      ],
+      "gaps": [
+        "SUPPLIER",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.gov.pl/web/prokuratura-krajowa/zarzuty-szpiegostwa-na-rzecz-rosji-i-nielegalnego-obrotu-elementami-uzbrojenia",
+      "https://abw.gov.pl/pl/aktualnosci/2850%2CABW-uderza-w-grupe-dzialajaca-na-rzecz-rosyjskiego-wywiadu-Szesc-osob-zatrzymany.html",
+      "https://www.reuters.com/world/poland-arrest-four-probe-into-military-supplies-sent-russia-2026-11-05/"
+    ]
   }
 };
