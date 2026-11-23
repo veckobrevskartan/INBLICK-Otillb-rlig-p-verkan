@@ -8067,7 +8067,7 @@
     "role": "INSIDER",
     "status": "INDICATION",
     "legal_status": "SUSPECTED",
-    "summary": "Tysklands federala åklagare lät den 6 oktober gripa den tidigare BND-chefen A.H. och den tidigare byråchefen M.D. Enligt åklagaren misstänks M.D. ha försett A.H. med interna underrättelsehandlingar mot betalning, så att materialet kunde användas i privat konsultverksamhet. Åklagaren beskriver också kontakter med två utländska underrättelseapparater men namnger inte staterna. Misstankarna rör bland annat spioneri och försök till landsförräderi. Den 7 oktober bekräftades att häktningsbesluten verkställts. Materialet uppmärksammades vid en husrannsakan i en annan utredning 2025. Skuld är inte fastställd.",
+    "summary": "Tysklands federala åklagare lät den 6 oktober gripa den tidigare BND-chefen A.H. och den tidigare byråchefen M.D. Enligt åklagaren misstänks M.D. ha försett A.H. med interna underrättelsehandlingar mot betalning, så att materialet kunde användas i privat konsultverksamhet. Åklagaren beskriver också kontakter med två utländska underrättelseapparater men namnger inte staterna. Misstankarna rör bland annat spioneri och försök till landsförräderi. Den 7 oktober bekräftades att häktningsbesluten verkställts. Materialet uppmärksammades vid en husrannsakan i en annan utredning 2025. Skuld är inte fastställd. En uppföljande granskning från NDR/WDR/Süddeutsche Zeitung, publicerad av Tagesschau den 16 november, uppgav att utredarna säkrat över 2 000 handlingar hos Hanning och beskrev möjliga sätt som assistenten kan ha fört ut dokument, bland annat via ledningsbilens chaufförer och livvakter. Tidningen rapporterade också att BND under flera år godkänt assistentens sidoarbete åt Hanning. Vid publiceringen hade åtal ännu inte beslutats.",
     "sources": [
       {
         "l": "Generalbundesanwalt — gripanden för misstänkt spioneri och landsförräderi, 6 oktober 2026",
@@ -8078,6 +8078,11 @@
         "l": "Generalbundesanwalt — häktningsbesluten verkställda, 7 oktober 2026",
         "t": "authority",
         "url": "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-07-10-2026-2.html"
+      },
+      {
+        "l": "Tagesschau/NDR/WDR/Süddeutsche Zeitung — Wie gelangten die Geheimpapiere aus dem BND?, 16 november 2026",
+        "t": "media",
+        "url": "https://www.tagesschau.de/investigativ/ndr-wdr/bnd-hanning-108.html"
       }
     ],
     "coding": {
@@ -8095,10 +8100,10 @@
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Sammanfattningen återger åklagarens misstankar. Betalning och kontakter med utländska underrättelsetjänster är inte domstolsfastställda. Ingen attribution till ett namngivet land görs. Berlin anger BND:s verksamhetsmiljö; gripandena skedde i Bayern och Nordrhein-Westfalen.",
+    "source_note": "Sammanfattningen återger åklagarens misstankar. Betalning och kontakter med utländska underrättelsetjänster är inte domstolsfastställda. Ingen attribution till ett namngivet land görs. Berlin anger BND:s verksamhetsmiljö; gripandena skedde i Bayern och Nordrhein-Westfalen. Tagesschaus uppföljning återger uppgifter från den pågående utredningen och säkerhetskällor; hur dokumenten fördes ut är ännu inte rättsligt fastställt.",
     "reported_at": "2026-10-06",
-    "last_updated": "2026-10-09",
-    "last_verified": "2026-10-09"
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "c297",
@@ -9613,7 +9618,7 @@
     "role": "TARGET",
     "status": "INDICATION",
     "legal_status": "REPORTING_ONLY",
-    "summary": "Italiens utrikesdepartement bekräftade den 7 november att Antonio Tajanis personuppgifter hade publicerats på darknet. Tajani uppgav att aktörer även sökte ytterligare information om honom och hans familj och kopplade hotbilden till Italiens stöd för Ukraina. Premiärminister Giorgia Meloni beskrev händelsen som verksamhet från pro-ryska hackare, men de publicerade källorna fastställer inte vem som lade ut uppgifterna eller vem som låg bakom efterfrågan på mer information.",
+    "summary": "Italiens utrikesdepartement bekräftade den 7 november att Antonio Tajanis personuppgifter hade publicerats på darknet. ANSA rapporterade att NoName057(16) erbjöd belöning för uppgifter om 18 personer, däribland Tajani, åklagaren Francesco Lo Voi, polischefen Ivano Gabrielli och Avianos borgmästare Paolo Tassan-Zanin. Italienska företrädare beskrev aktörerna som pro-ryska, men källorna redovisar ingen offentlig teknisk attribution som fastställer vem som publicerade uppgifterna eller vem som låg bakom varje hot.",
     "sources": [
       {
         "l": "Italiens utrikesdepartement — personuppgifter om Tajani publicerade på darknet, 7 november 2026",
@@ -9624,6 +9629,16 @@
         "l": "Associated Press — Tajani säger att personuppgifter läckt och familjen hotas, 7 november 2026",
         "t": "media",
         "url": "https://apnews.com/article/41b956d638e95528bef84fd856d5b5d6"
+      },
+      {
+        "l": "ANSA — Hacker group places bounty on 18 people, including Tajani and officials, 7 november 2026",
+        "t": "media",
+        "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html"
+      },
+      {
+        "l": "ANSA English — Prosecutors open probe into publication of Tajani’s personal data, 9 november 2026",
+        "t": "media",
+        "url": "https://www.ansa.it/english/news/politics/2026/11/09/prosecutors-open-probe-into-publication-of-tajanis-personal-data-on-dark-web_8ef9c158-a752-41b9-a82c-c79d66542803.html"
       }
     ],
     "coding": {
@@ -9642,9 +9657,9 @@
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Personuppgifternas publicering bekräftas av utrikesdepartementet. Uppgiften om en rysk koppling kommer från italienska företrädare; teknisk attribution framgår inte av de använda källorna.",
-    "last_updated": "2026-11-08",
-    "last_verified": "2026-11-08"
+    "source_note": "Utrikesdepartementets bekräftelse styrker att personuppgifter publicerats. ANSA redovisar att NoName057(16) pekades ut i rapporteringen och att listan omfattade 18 personer; offentlig teknisk attribution till gruppen framgår inte av de använda källorna.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "c330",
@@ -9847,5 +9862,421 @@
     "source_note": "Åtal och utredningsuppgifter återges från polska myndigheter; ingen fällande dom redovisas. Påståendet om att gruppen arbetat för rysk underrättelsetjänst är en del av den pågående utredningen.",
     "last_updated": "2026-11-08",
     "last_verified": "2026-11-08"
+  },
+  {
+    "id": "c334",
+    "title": "Riksbanken — leverantörsresa inför it-upphandling ledde till interna regelbrott",
+    "date": "2026-02",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Sverige",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "city"
+    },
+    "sector": "FINANCE",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "EXTERNAL_SUPPLIER",
+    "status": "CONFIRMED",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "Riksbankens it-chef och två medarbetare reste till Tokyo i februari 2026 tillsammans med representanter för Fujitsu inför en it-upphandling värd 400 miljoner kronor. Riksbanken betalade flyg och hotell; Fujitsu bjöd på fyra måltider. En internutredning fann brott mot flera interna regler och de tre medarbetarna togs bort från upphandlingen. Riksbanken bedömde inte att Fujitsu fått en fördel och gjorde ingen polisanmälan, eftersom personalansvarsnämnden inte såg skälig misstanke om brott. Något mutbrott är inte fastställt.",
+    "sources": [
+      {
+        "l": "Sveriges Radio/Ekot — Riksbankens it-chef åkte med på lyxresa inför upphandling, 17 november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/riksbankens-it-chef-akte-med-pa-lyxresa-infor-upphandling"
+      },
+      {
+        "l": "Sveriges Radio/Ekot — Riksbanken valde att inte polisanmäla efter internutredning, 17 november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/riksbanken-avskrev-arende-om-misstankt-mutbrott-efter-resa"
+      },
+      {
+        "l": "Sveriges Radio/Ekot — Mejlet om Fujitsus intresse inför upphandlingen, november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/har-ar-mejlet-som-avslojar-it-chefen"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "AUDIT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Källorna styrker resan och interna regelbrott. Riksbanken bedömde att skälig misstanke om mutbrott saknades och att Fujitsu inte fått en fördel. Posten beskriver en dokumenterad styrnings- och representationsrisk, inte fastställd korruption.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c335",
+    "title": "Länsstyrelsen Blekinge — jävsbrister i 29 ärenden efter systematiskt arbetssätt",
+    "date": "2026-10-22",
+    "loc": {
+      "m": "Karlskrona",
+      "r": "Blekinge län",
+      "lat": 56.1612,
+      "lng": 15.5869,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "Länsstyrelsen Blekinges interna utredning fann att ett felaktigt arbetssätt hade använts under två år och lett till jävsbrister i 29 ärenden. I 24 fall bedömdes jäv inte ha påverkat utgången; i fem krävs fortsatt juridisk hantering. Myndighetens personalansvarsnämnd åtalsanmälde två chefer för tjänstefel. Länsstyrelsen uppgav att inget tydde på uppsåt eller personlig vinning och att den underordnade chefen följt sin chefs instruktioner. Någon brottslig skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Länsstyrelsen Blekinge — Två chefer åtalsanmäls efter att ha brutit mot jävsregler, 22 oktober 2026",
+        "t": "authority",
+        "url": "https://www.lansstyrelsen.se/blekinge/om-oss/nyheter-och-press/nyheter---blekinge/2026-10-22-tva-chefer-atalsanmals-efter-att-ha-brutit-mot-javsregler.html"
+      },
+      {
+        "l": "Länsstyrelsen Blekinge — Avdelningschef lämnar myndighet, 10 november 2026",
+        "t": "authority",
+        "url": "https://www.lansstyrelsen.se/blekinge/om-oss/nyheter-och-press/nyheter---blekinge/2026-11-10-avdelningschef-lamnar-myndighet.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Uppgifterna om 29 ärenden, beslutsutfall och åtgärder kommer från myndighetens interna utredning. Åtalsanmälan är inte en dom; myndigheten uppgav att den inte funnit tecken på uppsåt eller personlig vinning.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c336",
+    "title": "Kungälv — misstänkt mutbrott kopplat till kommunala markbolaget Bokab",
+    "date": "2026-11-10",
+    "loc": {
+      "m": "Kungälv",
+      "r": "Västra Götalands län",
+      "lat": 57.8688,
+      "lng": 11.9805,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Polisen genomförde den 10 november en insats i Kungälv efter misstankar om givande och tagande av muta. En av de misstänkta var enligt medier Bokabs vd; en företagare med nära affärssamarbete med bolaget greps också, och en tredje person förhördes misstänkt för medhjälp. Åklagaren uppgav den 13 november att de två anhållna släppts men att misstankarna kvarstod. SVT rapporterade senare att minst tre personer var misstänkta och att kommunen såg över rutinerna. Utredningen pågår och ingen skuld är fastställd.",
+    "sources": [
+      {
+        "l": "Polismyndigheten — Ekobrottsinsats i Kungälv, 10 november 2026",
+        "t": "authority",
+        "url": "https://polisen.se/aktuellt/handelser/2026/november/10/10-november-10.00-ekobrott-kungalv/"
+      },
+      {
+        "l": "Åklagarmyndigheten — Lägesbild i utredning om givande och tagande av muta i Kungälv, 13 november 2026",
+        "t": "authority",
+        "url": "https://www.aklagare.se/for-media/pressmeddelanden/2026/november/lagesbild-i-utredning-om-givande-och-tagande-av-muta-i-kungalv/"
+      },
+      {
+        "l": "SVT Nyheter — Minst tre misstänkta i mutbrottsutredning i Kungälv, 18 november 2026",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vast/minst-tre-misstankta-i-mutbrottsutredning-i-kungalv-kommunen-ser-over-rutiner"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Åklagarens uppgifter styrker att misstankarna kvarstod efter frigivningen. Kopplingen till Bokab och uppgifterna om markaffärer bygger på journalistisk rapportering. Brott och eventuell otillbörlig förmån är inte fastställda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c337",
+    "title": "Kungälv Energi — separat utredning om misstänkta mutförmåner",
+    "date": "2026-11-20",
+    "loc": {
+      "m": "Kungälv",
+      "r": "Västra Götalands län",
+      "lat": 57.8688,
+      "lng": 11.9805,
+      "p": "municipality"
+    },
+    "sector": "ENERGY_WATER",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "INVESTIGATION",
+    "summary": "Sveriges Radio återgav den 20 november Dagens Industris uppgifter om en separat polisutredning kring misstänkta mutbrott med koppling till Kungälv Energi. Uppgifterna gäller bland annat bjudresor, julbord, gokart och spabesök; personer vid bolaget ska ha lämnat sina tjänster efter att händelserna uppmärksammats. Källorna fastställer inte vem som betalat, vilka affärer förmånerna kan ha avsett eller vilka personer som misstänks. Det finns ingen bekräftad koppling mellan denna utredning och Bokab-ärendet.",
+    "sources": [
+      {
+        "l": "Sveriges Radio/P4 Göteborg — Mutbrott utreds inom ytterligare kommunalt bolag i Kungälv, 20 november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/misstankta-mutbrott-pa-annu-ett-kommunalt-bolag-i-kungalv"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Detta är en separat, journalistiskt rapporterad utredning. Betalare, misstänkta personer och eventuell koppling till konkreta beslut är inte offentligt klarlagda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c338",
+    "title": "Sverige — proryska artiklar förmedlades till Nya Tider och Free West Media",
+    "date": "2018-11",
+    "loc": {
+      "m": "Sverige",
+      "r": "Sverige",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "national"
+    },
+    "sector": "INFORMATION_ENVIRONMENT",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Dagens Nyheter publicerade den 21 november 2026 uppgifter från interna Telegramchattar som den tidigare biträdande chefredaktören Sanna Hill lämnat till tidningen. Chattarna uppges visa att den tyske skribenten Manuel Ochsenreiter under flera år förmedlade proryska texter till Nya Tider och Free West Media, bland annat en artikel 2018 under pseudonym. Enligt granskningen erbjöd Ochsenreiter Hill pengar för propagandavideor 2021, men inga filmer producerades och inga pengar betalades. Nya Tiders Vávra Suk bekräftade publicering av artiklar under pseudonymen men förnekade att redaktionen tagit emot pengar eller fungerat som redskap åt en rysk agent. Källorna fastställer inte rysk statlig styrning eller påverkan på ett svenskt beslut.",
+    "sources": [
+      {
+        "l": "Dagens Nyheter — Så gjorde Moskvas agent för att få ut propaganda i Sverige, 21 november 2026",
+        "t": "media",
+        "url": "https://www.dn.se/sverige/sa-gjorde-moskvas-agent-for-att-fa-ut-propaganda-i-sverige/"
+      },
+      {
+        "l": "Nya Tider — DN till attack mot Nya Tider, 18 november 2026",
+        "t": "media",
+        "url": "https://www.nyatider.se/dn-till-attack-mot-nya-tider/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Uppgifterna bygger på DN:s granskning av chattar och på Nya Tiders bemötande. Publiceringar under pseudonym uppges ha skett; betalning för publicering och rysk statlig styrning är inte fastställda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c339",
+    "title": "Gagauzien — ryskfinansierade kampanjannonser och samordnade konton",
+    "date": "2026-11-15",
+    "loc": {
+      "m": "Comrat",
+      "r": "Gagauzien, Moldavien",
+      "lat": 46.3167,
+      "lng": 28.6667,
+      "p": "city"
+    },
+    "sector": "INFORMATION_ENVIRONMENT",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Inför regionvalet den 15 november dokumenterade valobservatören Promo-LEX bland annat annonser till stöd för kandidaten Fiodor Gagauz som uppgavs vara finansierade från Ryssland. Observatörerna identifierade också 34 TikTok-konton som marknadsförde kandidaten och vars videor fått över 400 000 visningar. Gagauz sade att han saknade koppling till kontona och begärde att de skulle utredas. Promo-LEX noterade därutöver 61 möjliga fall av missbruk av administrativa resurser. Underlaget visar risker för insyn och otillbörlig kampanjpåverkan, men fastställer inte rysk statlig styrning, kontonas ansvariga eller att valresultatet manipulerades.",
+    "sources": [
+      {
+        "l": "Promo-LEX — Second observation report on the 15 November regional elections in ATU Gagauzia, 12 november 2026",
+        "t": "report",
+        "url": "https://promolex.md/en/promo-lex-launched-its-second-observation-report-on-the-15-november-regional-elections-in-atu-gagauzia/"
+      },
+      {
+        "l": "Promo-LEX — Summary of findings and conclusions on the 15 November regional elections, November 2026",
+        "t": "report",
+        "url": "https://promolex.md/en/promo-lex-om-summary-statement-of-findings-and-conclusions-on-the-regional-elections-in-atu-gagauzia-of-15-november-2026/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "REPORTING",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Promo-LEX dokumenterar kampanjaktiviteter och annonser men redovisar inte bevis för att en rysk myndighet styrde kontona eller påverkade valresultatet. Kandidaten förnekade koppling till TikTok-kontona.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c340",
+    "title": "Polen — två män misstänks för ryskstyrd spaning och fordonsbränder",
+    "date": "2026-11-03",
+    "loc": {
+      "m": "Mińsk Mazowiecki",
+      "r": "Masoviens vojvodskap",
+      "lat": 52.1795,
+      "lng": 21.5726,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "EXTERNAL_SUPPLIER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Polens säkerhetstjänst ABW uppger att två män på ryska underrättelsetjänsters uppdrag spanade på kritisk och militär infrastruktur och anlade fordonsbränder. Enligt utredarna bytte de registreringsskyltar till nummer som liknade dem på fordon i ukrainsk militär tjänst, möjligen för att rikta misstankar mot Ukraina. Männen greps i Mińsk Mazowiecki den 3 november, åtalades för spioneri och sabotage och häktades i tre månader. Uppgifterna kommer från en pågående utredning och skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Polens inre säkerhetsbyrå ABW — Två misstänkta för spionage och sabotage på uppdrag av Ryssland, 4 november 2026",
+        "t": "authority",
+        "url": "https://www.abw.gov.pl/pl/aktualnosci/2851,ABW-zatrzymala-dwoch-podejrzanych-o-szpiegostwo-i-dywersje-na-rzecz-Rosji.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SABOTAGE",
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "ABW redovisar myndighetens utredningsuppgifter; de misstänkta har inte dömts. Den möjliga avsikten att rikta misstankar mot Ukraina beskrivs som en hypotes i utredningen.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c341",
+    "title": "USA — tidigare IT-entreprenör erkänner spionage för Etiopien",
+    "date": "2021-12",
+    "loc": {
+      "m": "Washington, D.C.",
+      "r": "USA",
+      "lat": 38.9072,
+      "lng": -77.0369,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "GUILTY_PLEA",
+    "summary": "Abraham Teklu Lemma, tidigare IT-entreprenör med uppdrag för USA:s utrikesdepartement, justitiedepartement och National Reconnaissance Office, erkände den 3 november 2026 en konspiration för att lämna ut försvarsuppgifter till Etiopiens regering. Enligt det amerikanska justitiedepartementet utnyttjade han administratörsbehörighet för att ta ut hemligstämplade dokument, anteckningar och bilder, upp till nivån Top Secret/SCI, och lämna material till etiopiska företrädare från 2021 till gripandet i augusti 2023. Myndigheten uppger att delar av informationen användes i militära operationer. Påföljden är ännu inte fastställd; domstolsförhandling är planerad till april 2027.",
+    "sources": [
+      {
+        "l": "USA:s justitiedepartement — Former U.S. Government Contractor Pleads Guilty to Spying for Ethiopia, 3 november 2026",
+        "t": "authority",
+        "url": "https://www.justice.gov/opa/pr/former-us-government-contractor-pleads-guilty-spying-ethiopia"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "COURT",
+        "SECURITY"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Lemma har erkänt konspirationen. Uppgifterna om vilken militär användning materialet fått kommer från amerikanska myndigheter; fängelsestraffet är inte fastställt vid uppdateringen.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c342",
+    "title": "Kraków — falska narrativ sprids efter terrorattacken",
+    "date": "2026-11-07",
+    "loc": {
+      "m": "Kraków",
+      "r": "Lillpolens vojvodskap, Polen",
+      "lat": 50.0647,
+      "lng": 19.945,
+      "p": "city"
+    },
+    "sector": "INFORMATION_ENVIRONMENT",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Efter masskjutningen i Kraków den 7 november spreds falska uppgifter om bland annat gärningsmannens identitet och påstådd inblandning från Polens regering eller EU. Polens digitaliseringsministerium uppgav att NASK anmält över 2 000 konton till plattformar för moderering. Myndigheten uppskattade de mest spridda falska narrativens sammanlagda räckvidd till över 200 miljoner visningar. Uppgifterna belägger spridning efter attacken, men inte vem som organiserade den eller att en viss stat låg bakom.",
+    "sources": [
+      {
+        "l": "Polens digitaliseringsministerium/NASK — Disinformation narratives related to the terrorist attack in Kraków, 8 november 2026",
+        "t": "authority",
+        "url": "https://www.gov.pl/web/cyfryzacja/narracje-dezinformacyjne-zwiazane-z-zamachem-terrorystycznym-w-krakowie"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "REPORTING",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "NASK:s över 2 000 konton avser konton som anmäldes till plattformarnas moderering. Räckvidden på över 200 miljoner är ministeriets uppskattning för de största falska narrativen tillsammans; aktör och eventuell samordning är inte fastställda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
   }
 ]

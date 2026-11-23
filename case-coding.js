@@ -4668,10 +4668,11 @@ window.INBLICK_CASE_CODING = {
     },
     "basis": "EDITORIAL",
     "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
-    "source_count": 2,
+    "source_count": 3,
     "source_urls": [
       "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-06-10-2026.html",
-      "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-07-10-2026-2.html"
+      "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-07-10-2026-2.html",
+      "https://www.tagesschau.de/investigativ/ndr-wdr/bnd-hanning-108.html"
     ]
   },
   "c297": {
@@ -5410,10 +5411,12 @@ window.INBLICK_CASE_CODING = {
     },
     "basis": "EDITORIAL",
     "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
-    "source_count": 2,
+    "source_count": 4,
     "source_urls": [
       "https://www.esteri.it/it/sala_stampa/archivionotizie/comunicati/2026/11/tajani-dati-personali-diffusi-sul-dark-web-chiesto-di-trattare-minacce-ibride-al-prossimo-g7-esteri-solidarieta-a-lo-voi-gabrielli-e-tassan-zanin/",
-      "https://apnews.com/article/41b956d638e95528bef84fd856d5b5d6"
+      "https://apnews.com/article/41b956d638e95528bef84fd856d5b5d6",
+      "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html",
+      "https://www.ansa.it/english/news/politics/2026/11/09/prosecutors-open-probe-into-publication-of-tajanis-personal-data-on-dark-web_8ef9c158-a752-41b9-a82c-c79d66542803.html"
     ]
   },
   "c330": {
@@ -5516,6 +5519,220 @@ window.INBLICK_CASE_CODING = {
       "https://www.gov.pl/web/prokuratura-krajowa/zarzuty-szpiegostwa-na-rzecz-rosji-i-nielegalnego-obrotu-elementami-uzbrojenia",
       "https://abw.gov.pl/pl/aktualnosci/2850%2CABW-uderza-w-grupe-dzialajaca-na-rzecz-rosyjskiego-wywiadu-Szesc-osob-zatrzymany.html",
       "https://www.reuters.com/world/poland-arrest-four-probe-into-military-supplies-sent-russia-2026-11-05/"
+    ]
+  },
+  "c334": {
+    "coding": {
+      "methods": [
+        "RELATION",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "AUDIT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://www.sverigesradio.se/artikel/riksbankens-it-chef-akte-med-pa-lyxresa-infor-upphandling",
+      "https://www.sverigesradio.se/artikel/riksbanken-avskrev-arende-om-misstankt-mutbrott-efter-resa",
+      "https://www.sverigesradio.se/artikel/har-ar-mejlet-som-avslojar-it-chefen"
+    ]
+  },
+  "c335": {
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.lansstyrelsen.se/blekinge/om-oss/nyheter-och-press/nyheter---blekinge/2026-10-22-tva-chefer-atalsanmals-efter-att-ha-brutit-mot-javsregler.html",
+      "https://www.lansstyrelsen.se/blekinge/om-oss/nyheter-och-press/nyheter---blekinge/2026-11-10-avdelningschef-lamnar-myndighet.html"
+    ]
+  },
+  "c336": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 3,
+    "source_urls": [
+      "https://polisen.se/aktuellt/handelser/2026/november/10/10-november-10.00-ekobrott-kungalv/",
+      "https://www.aklagare.se/for-media/pressmeddelanden/2026/november/lagesbild-i-utredning-om-givande-och-tagande-av-muta-i-kungalv/",
+      "https://www.svt.se/nyheter/lokalt/vast/minst-tre-misstankta-i-mutbrottsutredning-i-kungalv-kommunen-ser-over-rutiner"
+    ]
+  },
+  "c337": {
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PENDING_PRIMARY_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.sverigesradio.se/artikel/misstankta-mutbrott-pa-annu-ett-kommunalt-bolag-i-kungalv"
+    ]
+  },
+  "c338": {
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://www.dn.se/sverige/sa-gjorde-moskvas-agent-for-att-fa-ut-propaganda-i-sverige/",
+      "https://www.nyatider.se/dn-till-attack-mot-nya-tider/"
+    ]
+  },
+  "c339": {
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "REPORTING",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 2,
+    "source_urls": [
+      "https://promolex.md/en/promo-lex-launched-its-second-observation-report-on-the-15-november-regional-elections-in-atu-gagauzia/",
+      "https://promolex.md/en/promo-lex-om-summary-statement-of-findings-and-conclusions-on-the-regional-elections-in-atu-gagauzia-of-15-november-2026/"
+    ]
+  },
+  "c340": {
+    "coding": {
+      "methods": [
+        "SABOTAGE",
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.abw.gov.pl/pl/aktualnosci/2851,ABW-zatrzymala-dwoch-podejrzanych-o-szpiegostwo-i-dywersje-na-rzecz-Rosji.html"
+    ]
+  },
+  "c341": {
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "COURT",
+        "SECURITY"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.justice.gov/opa/pr/former-us-government-contractor-pleads-guilty-spying-ethiopia"
+    ]
+  },
+  "c342": {
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "REPORTING",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "basis": "EDITORIAL",
+    "source_review": "PRIMARY_OR_ATTRIBUTED_SOURCE_REVIEW",
+    "source_count": 1,
+    "source_urls": [
+      "https://www.gov.pl/web/cyfryzacja/narracje-dezinformacyjne-zwiazane-z-zamachem-terrorystycznym-w-krakowie"
     ]
   }
 };

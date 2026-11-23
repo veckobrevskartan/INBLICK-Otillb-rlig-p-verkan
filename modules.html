@@ -1945,7 +1945,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   <div class="sec-head reveal">
     <p class="eyebrow">Händelser och fall</p>
     <h1 class="sec-title">Fall att<br><em>utforska</em></h1>
-    <p class="sec-intro">Utforska 300 svenska och relevanta internationella fall från 2003–2026. Filtrera på sektor, aktör, metod, upptäcktsväg, utfall, källäge eller tidsperiod. Resultatet visas både som fallkort och på kartan. ”Bekräftat” avser den beskrivna händelsen; aktör och motiv kan fortfarande vara okända.</p>
+    <p class="sec-intro">Utforska 309 svenska och relevanta internationella fall från 2003–2026. Filtrera på sektor, aktör, metod, upptäcktsväg, utfall, källäge eller tidsperiod. Resultatet visas både som fallkort och på kartan. ”Bekräftat” avser den beskrivna händelsen; aktör och motiv kan fortfarande vara okända.</p>
   </div>
   <div class="map-stats reveal" id="mapStats"></div>
   <details class="case-filter-panel reveal" id="caseFilterPanel" open>
@@ -1964,6 +1964,8 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <button class="fb" data-f="sector" data-v="FINANCE">Finans</button>
     <button class="fb" data-f="sector" data-v="LOCAL_GOV">Kommun/region</button>
     <button class="fb" data-f="sector" data-v="CIVIL_SOCIETY">Civilsamhälle</button>
+    <button class="fb" data-f="sector" data-v="ENERGY_WATER">Energi och vatten</button>
+    <button class="fb" data-f="sector" data-v="INFORMATION_ENVIRONMENT">Informationsmiljö</button>
     <button class="fb" data-f="sector" data-v="RESEARCH">Forskning</button>
     <button class="fb" data-f="sector" data-v="SECURITY">Säkerhet</button>
     <button class="fb" data-f="sector" data-v="IT">IT</button>
@@ -2008,7 +2010,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
   </div>
   <div class="case-filter-summary" id="caseFilterSummary" aria-live="polite">Alla fall ingår i urvalet.</div>
   </details>
-  <div class="map-ready-cue reveal" id="mapReadyCue" aria-live="polite"><strong>300</strong><span>fall ingår i urvalet. Förteckningen visar 12 åt gången.</span><span class="cue-action">Välj en kartmarkör eller ett fall →</span></div>
+  <div class="map-ready-cue reveal" id="mapReadyCue" aria-live="polite"><strong>309</strong><span>fall ingår i urvalet. Förteckningen visar 12 åt gången.</span><span class="cue-action">Välj en kartmarkör eller ett fall →</span></div>
   <div class="map-case-panel" id="case-detail" tabindex="-1">
     <div class="mcp-top"><div class="mcp-title" id="mcp-title"></div><button class="mcp-close" onclick="closeCase()">✕</button></div>
     <div class="mcp-badges" id="mcp-badges"></div>
@@ -2064,7 +2066,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="sec-nav-item" id="sni-LOCAL_GOV" onclick="selectSector('LOCAL_GOV')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Kommuner och regioner</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">40</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">41</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#B8973A">HÖG</span>
     </div>
@@ -2078,7 +2080,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="sec-nav-item" id="sni-AUTHORITY" onclick="selectSector('AUTHORITY')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Statliga myndigheter</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">27</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">32</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#B8973A">HÖG</span>
     </div>
@@ -2092,7 +2094,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="sec-nav-item" id="sni-CRIMINAL_JUSTICE" onclick="selectSector('CRIMINAL_JUSTICE')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Rättsväsende och kriminalvård</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">31</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">33</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#7A4A6B">HÖG</span>
     </div>
@@ -2106,7 +2108,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="sec-nav-item" id="sni-PROCUREMENT" onclick="selectSector('PROCUREMENT')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Upphandling, bygg och tillstånd</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">37</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">39</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7A2E">HÖG</span>
     </div>
@@ -2120,28 +2122,28 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="sec-nav-item" id="sni-DEFENCE" onclick="selectSector('DEFENCE')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Försvar och säkerhetsbranschen</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">20</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">28</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#3A4A6B">HÖG</span>
     </div>
     <div class="sec-nav-item" id="sni-FINANCE" onclick="selectSector('FINANCE')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Bank och finans</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">10</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">11</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#2E6B8F">HÖG</span>
     </div>
     <div class="sec-nav-item" id="sni-IT" onclick="selectSector('IT')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">IT och digital infrastruktur</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">9</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">11</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#3A6B5A">HÖG</span>
     </div>
     <div class="sec-nav-item" id="sni-ENERGY_WATER" onclick="selectSector('ENERGY_WATER')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Energi och vatten</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">0</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">1</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#4E8290">HÖG</span>
     </div>
@@ -2155,14 +2157,14 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="sec-nav-item" id="sni-CIVIL_SOCIETY" onclick="selectSector('CIVIL_SOCIETY')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Civilsamhälle och demokratiska processer</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">35</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">37</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B3A5A">MEDEL</span>
     </div>
     <div class="sec-nav-item" id="sni-SECURITY" onclick="selectSector('SECURITY')" style="border-left-color:transparent">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
         <span style="font-size:12px;color:var(--text)">Privat säkerhetssektor</span>
-        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">5</span>
+        <span style="font-family:var(--fm);font-size:8px;padding:1px 5px;border:1px solid var(--border-s);color:var(--dim)">8</span>
       </div>
       <span style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#5A3A3A">HÖG</span>
     </div>
@@ -2176,7 +2178,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Nära invånaren — många vägar till påverkan</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#B8973A;line-height:1">40</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#B8973A;line-height:1">41</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall i huvudkategorin</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#B8973A;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2296,7 +2298,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Tillgång till beslut och känslig information</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#B8973A;line-height:1">27</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#B8973A;line-height:1">32</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#B8973A;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2379,7 +2381,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Systemets väktare — systemets svagaste länk</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#7A4A6B;line-height:1">31</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#7A4A6B;line-height:1">33</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#7A4A6B;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2423,7 +2425,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Pengar, diskretion och minimal insyn</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#6B7A2E;line-height:1">37</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#6B7A2E;line-height:1">39</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7A2E;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2482,7 +2484,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Statliga spionagens primärmål</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#3A4A6B;line-height:1">20</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#3A4A6B;line-height:1">28</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#3A4A6B;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2506,7 +2508,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Pengarflödet — och de som vaktar det</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#2E6B8F;line-height:1">10</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#2E6B8F;line-height:1">11</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#2E6B8F;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2539,7 +2541,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Systemtillgång som universalnyckel</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#3A6B5A;line-height:1">9</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#3A6B5A;line-height:1">11</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#3A6B5A;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2560,7 +2562,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Påverkan underifrån — och inifrån</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#6B3A5A;line-height:1">35</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#6B3A5A;line-height:1">37</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B3A5A;margin-top:3px">MEDEL RISK</div>
         </div>
@@ -2594,7 +2596,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
           <div style="font-family:var(--fd);font-size:13px;font-weight:300;color:var(--muted);margin-top:5px;font-style:italic">Skyddets baksida — påverkan och insiderrisk i säkerhetsbranschen</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#5A3A3A;line-height:1">5</div>
+          <div style="font-family:var(--fd);font-size:34px;font-weight:300;color:#5A3A3A;line-height:1">8</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">fall</div>
           <div style="font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#5A3A3A;margin-top:3px">HÖG RISK</div>
         </div>
@@ -2609,13 +2611,13 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <div class="sector-panel" id="sp-ENERGY_WATER">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
     <div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#4E8290;margin-bottom:5px">Tvärsektoriell miljö</div><div style="font-family:var(--fd);font-size:28px;font-weight:300">Energi och vatten</div><div style="font-family:var(--fd);font-size:13px;color:var(--muted);margin-top:5px;font-style:italic">Samhällskritisk drift där fysisk och digital åtkomst möts</div></div>
-    <div style="text-align:right"><div style="font-family:var(--fd);font-size:34px;color:#4E8290;line-height:1">0</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:var(--muted)">direkt kopplade fall</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:#4E8290;margin-top:3px">HÖG RISK</div></div>
+    <div style="text-align:right"><div style="font-family:var(--fd);font-size:34px;color:#4E8290;line-height:1">1</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:var(--muted)">direkt kopplade fall</div><div style="font-family:var(--fm);font-size:8px;text-transform:uppercase;color:#4E8290;margin-top:3px">HÖG RISK</div></div>
   </div>
   <p style="font-size:14px;color:var(--text);line-height:1.8;margin:0 0 18px">Energi- och vattenverksamheter behöver hålla försörjningen igång även när en anläggning, ett styrsystem eller en leverantör faller bort. Personal och serviceföretag kan ha tillgång till både fysiska utrymmen och system som påverkar driften. Här handlar analysen om vad sådan åtkomst gör möjligt och hur avvikelser kan upptäckas innan de får stora följder. OT betyder driftteknik: system som styr eller övervakar exempelvis pumpar, ventiler och andra delar av en anläggning.</p>
   <div style="font-size:13px;color:var(--text);line-height:1.75;margin-bottom:20px;padding:14px 18px;background:rgba(78,130,144,.08);border-left:2px solid #4E8290"><strong>Analytisk miljö, inte ny fallkategori.</strong> Händelsedatabasens primära sektorkod ligger kvar. Här samlas sektorspecifika kontrollfrågor och fall som också har betydelse för energi- eller vattenmiljön.</div>
   <p style="font-size:13px;line-height:1.8;color:var(--text)"><a href="https://www.energimyndigheten.se/energiberedskap/sakerhetsskydd/" target="_blank" rel="noopener">Energimyndigheten ↗</a> beskriver säkerhetsskyddet inom bland annat fjärrvärme, gas och drivmedelsförsörjning. Myndighetens stöd om <a href="https://www.energimyndigheten.se/energiberedskap/informations--och-cybersakerhet/cybersakerhet-inom-energisektorn/" target="_blank" rel="noopener">cybersäkerhet i energisektorn ↗</a> betonar kopplingen mellan IT- och driftteknik. För dricksvatten lyfter <a href="https://kontrollwiki.livsmedelsverket.se/artikel/361/atgarder-mot-sabotage-och-annan-skadegorelse" target="_blank" rel="noopener">Livsmedelsverket ↗</a> skydd mot obehörigt tillträde till vattenverk, reservoarer, distributionsanläggningar och driftssystem.</p>
   <div class="sector-two-col"><div><div class="ad-sec-lbl">Exponerade gränssnitt</div><div class="stressor-item">Fjärråtkomst och leverantörsservice i OT- och styrsystem</div><div class="stressor-item">Nycklar, passerkort och ensamarbete vid obemannade anläggningar</div><div class="stressor-item">Underleverantörer i flera led med fysisk och digital åtkomst</div></div><div><div class="ad-sec-lbl">Kontrollfrågor</div><div class="stressor-item">Kan samma person ändra drift, larm och loggar utan samtidighetskontroll?</div><div class="stressor-item">Återkallas åtkomst omedelbart vid avslut eller leverantörsbyte?</div><div class="stressor-item">Testas reservrutiner och manuell drift utan ordinarie system?</div></div></div>
-  <p class="sector-case-note">Inget fall i databasen visar ännu en belagd påverkansaktör i energi- eller vattendrift. Kontrollfrågorna ovan bygger på sektorns offentliga vägledningar.</p>
+  <p class="sector-case-note">Ett rapporterat fall rör misstänkta mutförmåner vid Kungälv Energi. Det är inte klarlagt vem som betalat eller vilka affärer det gäller; någon påverkansaktör är inte fastställd. <a href="?case=c337#case-detail" data-case-link="c337">Läs om fallet →</a> Kontrollfrågorna ovan bygger på sektorns offentliga vägledningar.</p>
 </div>
 <div class="sector-panel" id="sp-RESEARCH">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-s)">
@@ -4712,7 +4714,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
 <section class="module" id="mod-graph">
 <div class="wrap">
   <div class="sec-head reveal">
-    <p class="eyebrow">Sambandsanalys av 300 fall</p>
+    <p class="eyebrow">Sambandsanalys av 309 fall</p>
     <h1 class="sec-title">Sambands<em>grafen</em></h1>
     <p class="sec-intro">Se hur fall, aktörer och sektorer hänger ihop. Välj en aktörskategori eller klicka på en nod för att se hur posterna har kodats. ”Ej fastställd” används när underlaget inte visar vem som låg bakom. Använd filtren för att avgränsa materialet.</p>
   </div>
@@ -4727,7 +4729,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="filter-sep"></div>
     <button class="fb active" id="gvs" onclick="gToggleSectors()">Sektornoder</button>
     <button class="fb" id="gvl" onclick="gToggleLabels()">Etiketter</button>
-    <span style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-left:auto" id="gcount">300 fall</span>
+    <span style="font-family:var(--fm);font-size:8px;color:var(--dim);margin-left:auto" id="gcount">309 fall</span>
   </div>
   <div id="graphWrap" class="reveal">
     <canvas id="graphCanvas"></canvas>
@@ -4756,7 +4758,7 @@ body.copy-protected input,body.copy-protected textarea,body.copy-protected selec
     <div class="cult-head">
       <div class="cult-eyebrow">Mönster · Beskrivande tvärfallsanalys</div>
       <div class="cult-title">Vad de strukturerade uppgifterna visar</div>
-      <div class="cult-lead">Modulen räknar samband som redan är kodade i de 300 fallen. Den visar fördelningar och koncentrationer, men säger inte att en aktörstyp orsakar ett visst utfall eller att materialet är representativt för alla händelser i Sverige.</div>
+      <div class="cult-lead">Modulen räknar samband som redan är kodade i de 309 fallen. Den visar fördelningar och koncentrationer, men säger inte att en aktörstyp orsakar ett visst utfall eller att materialet är representativt för alla händelser i Sverige.</div>
     </div>
     <p class="ind-guardrail">Diagrammen visar hela fallmaterialet och påverkas inte av grafens filter ovan. I kombinationsdiagrammen visas högst åtta kombinationer där båda uppgifterna är kodade. Fall med okänd metod, upptäcktsväg eller kontrollbrist ingår därför inte i dessa kombinationer. Ett fall kan ha flera koder och räknas i flera kombinationer.</p>
     <p id="patternCoverage" class="ind-guardrail"></p>
@@ -12854,7 +12856,7 @@ const CASES=[
     "role": "INSIDER",
     "status": "INDICATION",
     "legal_status": "SUSPECTED",
-    "summary": "Tysklands federala åklagare lät den 6 oktober gripa den tidigare BND-chefen A.H. och den tidigare byråchefen M.D. Enligt åklagaren misstänks M.D. ha försett A.H. med interna underrättelsehandlingar mot betalning, så att materialet kunde användas i privat konsultverksamhet. Åklagaren beskriver också kontakter med två utländska underrättelseapparater men namnger inte staterna. Misstankarna rör bland annat spioneri och försök till landsförräderi. Den 7 oktober bekräftades att häktningsbesluten verkställts. Materialet uppmärksammades vid en husrannsakan i en annan utredning 2025. Skuld är inte fastställd.",
+    "summary": "Tysklands federala åklagare lät den 6 oktober gripa den tidigare BND-chefen A.H. och den tidigare byråchefen M.D. Enligt åklagaren misstänks M.D. ha försett A.H. med interna underrättelsehandlingar mot betalning, så att materialet kunde användas i privat konsultverksamhet. Åklagaren beskriver också kontakter med två utländska underrättelseapparater men namnger inte staterna. Misstankarna rör bland annat spioneri och försök till landsförräderi. Den 7 oktober bekräftades att häktningsbesluten verkställts. Materialet uppmärksammades vid en husrannsakan i en annan utredning 2025. Skuld är inte fastställd. En uppföljande granskning från NDR/WDR/Süddeutsche Zeitung, publicerad av Tagesschau den 16 november, uppgav att utredarna säkrat över 2 000 handlingar hos Hanning och beskrev möjliga sätt som assistenten kan ha fört ut dokument, bland annat via ledningsbilens chaufförer och livvakter. Tidningen rapporterade också att BND under flera år godkänt assistentens sidoarbete åt Hanning. Vid publiceringen hade åtal ännu inte beslutats.",
     "sources": [
       {
         "l": "Generalbundesanwalt — gripanden för misstänkt spioneri och landsförräderi, 6 oktober 2026",
@@ -12865,6 +12867,11 @@ const CASES=[
         "l": "Generalbundesanwalt — häktningsbesluten verkställda, 7 oktober 2026",
         "t": "authority",
         "url": "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-07-10-2026-2.html"
+      },
+      {
+        "l": "Tagesschau/NDR/WDR/Süddeutsche Zeitung — Wie gelangten die Geheimpapiere aus dem BND?, 16 november 2026",
+        "t": "media",
+        "url": "https://www.tagesschau.de/investigativ/ndr-wdr/bnd-hanning-108.html"
       }
     ],
     "coding": {
@@ -12882,10 +12889,10 @@ const CASES=[
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Sammanfattningen återger åklagarens misstankar. Betalning och kontakter med utländska underrättelsetjänster är inte domstolsfastställda. Ingen attribution till ett namngivet land görs. Berlin anger BND:s verksamhetsmiljö; gripandena skedde i Bayern och Nordrhein-Westfalen.",
+    "source_note": "Sammanfattningen återger åklagarens misstankar. Betalning och kontakter med utländska underrättelsetjänster är inte domstolsfastställda. Ingen attribution till ett namngivet land görs. Berlin anger BND:s verksamhetsmiljö; gripandena skedde i Bayern och Nordrhein-Westfalen. Tagesschaus uppföljning återger uppgifter från den pågående utredningen och säkerhetskällor; hur dokumenten fördes ut är ännu inte rättsligt fastställt.",
     "reported_at": "2026-10-06",
-    "last_updated": "2026-10-09",
-    "last_verified": "2026-10-09"
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "c297",
@@ -14400,7 +14407,7 @@ const CASES=[
     "role": "TARGET",
     "status": "INDICATION",
     "legal_status": "REPORTING_ONLY",
-    "summary": "Italiens utrikesdepartement bekräftade den 7 november att Antonio Tajanis personuppgifter hade publicerats på darknet. Tajani uppgav att aktörer även sökte ytterligare information om honom och hans familj och kopplade hotbilden till Italiens stöd för Ukraina. Premiärminister Giorgia Meloni beskrev händelsen som verksamhet från pro-ryska hackare, men de publicerade källorna fastställer inte vem som lade ut uppgifterna eller vem som låg bakom efterfrågan på mer information.",
+    "summary": "Italiens utrikesdepartement bekräftade den 7 november att Antonio Tajanis personuppgifter hade publicerats på darknet. ANSA rapporterade att NoName057(16) erbjöd belöning för uppgifter om 18 personer, däribland Tajani, åklagaren Francesco Lo Voi, polischefen Ivano Gabrielli och Avianos borgmästare Paolo Tassan-Zanin. Italienska företrädare beskrev aktörerna som pro-ryska, men källorna redovisar ingen offentlig teknisk attribution som fastställer vem som publicerade uppgifterna eller vem som låg bakom varje hot.",
     "sources": [
       {
         "l": "Italiens utrikesdepartement — personuppgifter om Tajani publicerade på darknet, 7 november 2026",
@@ -14411,6 +14418,16 @@ const CASES=[
         "l": "Associated Press — Tajani säger att personuppgifter läckt och familjen hotas, 7 november 2026",
         "t": "media",
         "url": "https://apnews.com/article/41b956d638e95528bef84fd856d5b5d6"
+      },
+      {
+        "l": "ANSA — Hacker group places bounty on 18 people, including Tajani and officials, 7 november 2026",
+        "t": "media",
+        "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html"
+      },
+      {
+        "l": "ANSA English — Prosecutors open probe into publication of Tajani’s personal data, 9 november 2026",
+        "t": "media",
+        "url": "https://www.ansa.it/english/news/politics/2026/11/09/prosecutors-open-probe-into-publication-of-tajanis-personal-data-on-dark-web_8ef9c158-a752-41b9-a82c-c79d66542803.html"
       }
     ],
     "coding": {
@@ -14429,9 +14446,9 @@ const CASES=[
       "outcome": "UNCLEAR",
       "basis": "EDITORIAL"
     },
-    "source_note": "Personuppgifternas publicering bekräftas av utrikesdepartementet. Uppgiften om en rysk koppling kommer från italienska företrädare; teknisk attribution framgår inte av de använda källorna.",
-    "last_updated": "2026-11-08",
-    "last_verified": "2026-11-08"
+    "source_note": "Utrikesdepartementets bekräftelse styrker att personuppgifter publicerats. ANSA redovisar att NoName057(16) pekades ut i rapporteringen och att listan omfattade 18 personer; offentlig teknisk attribution till gruppen framgår inte av de använda källorna.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "c330",
@@ -14634,6 +14651,422 @@ const CASES=[
     "source_note": "Åtal och utredningsuppgifter återges från polska myndigheter; ingen fällande dom redovisas. Påståendet om att gruppen arbetat för rysk underrättelsetjänst är en del av den pågående utredningen.",
     "last_updated": "2026-11-08",
     "last_verified": "2026-11-08"
+  },
+  {
+    "id": "c334",
+    "title": "Riksbanken — leverantörsresa inför it-upphandling ledde till interna regelbrott",
+    "date": "2026-02",
+    "loc": {
+      "m": "Stockholm",
+      "r": "Sverige",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "city"
+    },
+    "sector": "FINANCE",
+    "actor": "ECONOMIC_INTEREST",
+    "role": "EXTERNAL_SUPPLIER",
+    "status": "CONFIRMED",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "Riksbankens it-chef och två medarbetare reste till Tokyo i februari 2026 tillsammans med representanter för Fujitsu inför en it-upphandling värd 400 miljoner kronor. Riksbanken betalade flyg och hotell; Fujitsu bjöd på fyra måltider. En internutredning fann brott mot flera interna regler och de tre medarbetarna togs bort från upphandlingen. Riksbanken bedömde inte att Fujitsu fått en fördel och gjorde ingen polisanmälan, eftersom personalansvarsnämnden inte såg skälig misstanke om brott. Något mutbrott är inte fastställt.",
+    "sources": [
+      {
+        "l": "Sveriges Radio/Ekot — Riksbankens it-chef åkte med på lyxresa inför upphandling, 17 november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/riksbankens-it-chef-akte-med-pa-lyxresa-infor-upphandling"
+      },
+      {
+        "l": "Sveriges Radio/Ekot — Riksbanken valde att inte polisanmäla efter internutredning, 17 november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/riksbanken-avskrev-arende-om-misstankt-mutbrott-efter-resa"
+      },
+      {
+        "l": "Sveriges Radio/Ekot — Mejlet om Fujitsus intresse inför upphandlingen, november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/har-ar-mejlet-som-avslojar-it-chefen"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "AUDIT",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Källorna styrker resan och interna regelbrott. Riksbanken bedömde att skälig misstanke om mutbrott saknades och att Fujitsu inte fått en fördel. Posten beskriver en dokumenterad styrnings- och representationsrisk, inte fastställd korruption.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c335",
+    "title": "Länsstyrelsen Blekinge — jävsbrister i 29 ärenden efter systematiskt arbetssätt",
+    "date": "2026-10-22",
+    "loc": {
+      "m": "Karlskrona",
+      "r": "Blekinge län",
+      "lat": 56.1612,
+      "lng": 15.5869,
+      "p": "municipality"
+    },
+    "sector": "AUTHORITY",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "legal_status": "ADMINISTRATIVE",
+    "summary": "Länsstyrelsen Blekinges interna utredning fann att ett felaktigt arbetssätt hade använts under två år och lett till jävsbrister i 29 ärenden. I 24 fall bedömdes jäv inte ha påverkat utgången; i fem krävs fortsatt juridisk hantering. Myndighetens personalansvarsnämnd åtalsanmälde två chefer för tjänstefel. Länsstyrelsen uppgav att inget tydde på uppsåt eller personlig vinning och att den underordnade chefen följt sin chefs instruktioner. Någon brottslig skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Länsstyrelsen Blekinge — Två chefer åtalsanmäls efter att ha brutit mot jävsregler, 22 oktober 2026",
+        "t": "authority",
+        "url": "https://www.lansstyrelsen.se/blekinge/om-oss/nyheter-och-press/nyheter---blekinge/2026-10-22-tva-chefer-atalsanmals-efter-att-ha-brutit-mot-javsregler.html"
+      },
+      {
+        "l": "Länsstyrelsen Blekinge — Avdelningschef lämnar myndighet, 10 november 2026",
+        "t": "authority",
+        "url": "https://www.lansstyrelsen.se/blekinge/om-oss/nyheter-och-press/nyheter---blekinge/2026-11-10-avdelningschef-lamnar-myndighet.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "RELATION"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "CONFLICT",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Uppgifterna om 29 ärenden, beslutsutfall och åtgärder kommer från myndighetens interna utredning. Åtalsanmälan är inte en dom; myndigheten uppgav att den inte funnit tecken på uppsåt eller personlig vinning.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c336",
+    "title": "Kungälv — misstänkt mutbrott kopplat till kommunala markbolaget Bokab",
+    "date": "2026-11-10",
+    "loc": {
+      "m": "Kungälv",
+      "r": "Västra Götalands län",
+      "lat": 57.8688,
+      "lng": 11.9805,
+      "p": "municipality"
+    },
+    "sector": "LOCAL_GOV",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "SUSPECTED",
+    "summary": "Polisen genomförde den 10 november en insats i Kungälv efter misstankar om givande och tagande av muta. En av de misstänkta var enligt medier Bokabs vd; en företagare med nära affärssamarbete med bolaget greps också, och en tredje person förhördes misstänkt för medhjälp. Åklagaren uppgav den 13 november att de två anhållna släppts men att misstankarna kvarstod. SVT rapporterade senare att minst tre personer var misstänkta och att kommunen såg över rutinerna. Utredningen pågår och ingen skuld är fastställd.",
+    "sources": [
+      {
+        "l": "Polismyndigheten — Ekobrottsinsats i Kungälv, 10 november 2026",
+        "t": "authority",
+        "url": "https://polisen.se/aktuellt/handelser/2026/november/10/10-november-10.00-ekobrott-kungalv/"
+      },
+      {
+        "l": "Åklagarmyndigheten — Lägesbild i utredning om givande och tagande av muta i Kungälv, 13 november 2026",
+        "t": "authority",
+        "url": "https://www.aklagare.se/for-media/pressmeddelanden/2026/november/lagesbild-i-utredning-om-givande-och-tagande-av-muta-i-kungalv/"
+      },
+      {
+        "l": "SVT Nyheter — Minst tre misstänkta i mutbrottsutredning i Kungälv, 18 november 2026",
+        "t": "media",
+        "url": "https://www.svt.se/nyheter/lokalt/vast/minst-tre-misstankta-i-mutbrottsutredning-i-kungalv-kommunen-ser-over-rutiner"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "PROCUREMENT"
+      ],
+      "discovery": [
+        "POLICE",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "CONTRACT"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Åklagarens uppgifter styrker att misstankarna kvarstod efter frigivningen. Kopplingen till Bokab och uppgifterna om markaffärer bygger på journalistisk rapportering. Brott och eventuell otillbörlig förmån är inte fastställda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c337",
+    "title": "Kungälv Energi — separat utredning om misstänkta mutförmåner",
+    "date": "2026-11-20",
+    "loc": {
+      "m": "Kungälv",
+      "r": "Västra Götalands län",
+      "lat": 57.8688,
+      "lng": 11.9805,
+      "p": "municipality"
+    },
+    "sector": "ENERGY_WATER",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "INVESTIGATION",
+    "summary": "Sveriges Radio återgav den 20 november Dagens Industris uppgifter om en separat polisutredning kring misstänkta mutbrott med koppling till Kungälv Energi. Uppgifterna gäller bland annat bjudresor, julbord, gokart och spabesök; personer vid bolaget ska ha lämnat sina tjänster efter att händelserna uppmärksammats. Källorna fastställer inte vem som betalat, vilka affärer förmånerna kan ha avsett eller vilka personer som misstänks. Det finns ingen bekräftad koppling mellan denna utredning och Bokab-ärendet.",
+    "sources": [
+      {
+        "l": "Sveriges Radio/P4 Göteborg — Mutbrott utreds inom ytterligare kommunalt bolag i Kungälv, 20 november 2026",
+        "t": "media",
+        "url": "https://www.sverigesradio.se/artikel/misstankta-mutbrott-pa-annu-ett-kommunalt-bolag-i-kungalv"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "BRIBERY",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "UNCLEAR",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Detta är en separat, journalistiskt rapporterad utredning. Betalare, misstänkta personer och eventuell koppling till konkreta beslut är inte offentligt klarlagda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c338",
+    "title": "Sverige — proryska artiklar förmedlades till Nya Tider och Free West Media",
+    "date": "2018-11",
+    "loc": {
+      "m": "Sverige",
+      "r": "Sverige",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "p": "national"
+    },
+    "sector": "INFORMATION_ENVIRONMENT",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Dagens Nyheter publicerade den 21 november 2026 uppgifter från interna Telegramchattar som den tidigare biträdande chefredaktören Sanna Hill lämnat till tidningen. Chattarna uppges visa att den tyske skribenten Manuel Ochsenreiter under flera år förmedlade proryska texter till Nya Tider och Free West Media, bland annat en artikel 2018 under pseudonym. Enligt granskningen erbjöd Ochsenreiter Hill pengar för propagandavideor 2021, men inga filmer producerades och inga pengar betalades. Nya Tiders Vávra Suk bekräftade publicering av artiklar under pseudonymen men förnekade att redaktionen tagit emot pengar eller fungerat som redskap åt en rysk agent. Källorna fastställer inte rysk statlig styrning eller påverkan på ett svenskt beslut.",
+    "sources": [
+      {
+        "l": "Dagens Nyheter — Så gjorde Moskvas agent för att få ut propaganda i Sverige, 21 november 2026",
+        "t": "media",
+        "url": "https://www.dn.se/sverige/sa-gjorde-moskvas-agent-for-att-fa-ut-propaganda-i-sverige/"
+      },
+      {
+        "l": "Nya Tider — DN till attack mot Nya Tider, 18 november 2026",
+        "t": "media",
+        "url": "https://www.nyatider.se/dn-till-attack-mot-nya-tider/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS",
+        "RELATION"
+      ],
+      "discovery": [
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "GOVERNANCE",
+        "REPORTING"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Uppgifterna bygger på DN:s granskning av chattar och på Nya Tiders bemötande. Publiceringar under pseudonym uppges ha skett; betalning för publicering och rysk statlig styrning är inte fastställda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c339",
+    "title": "Gagauzien — ryskfinansierade kampanjannonser och samordnade konton",
+    "date": "2026-11-15",
+    "loc": {
+      "m": "Comrat",
+      "r": "Gagauzien, Moldavien",
+      "lat": 46.3167,
+      "lng": 28.6667,
+      "p": "city"
+    },
+    "sector": "INFORMATION_ENVIRONMENT",
+    "actor": "UNKNOWN",
+    "status": "INDICATION",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Inför regionvalet den 15 november dokumenterade valobservatören Promo-LEX bland annat annonser till stöd för kandidaten Fiodor Gagauz som uppgavs vara finansierade från Ryssland. Observatörerna identifierade också 34 TikTok-konton som marknadsförde kandidaten och vars videor fått över 400 000 visningar. Gagauz sade att han saknade koppling till kontona och begärde att de skulle utredas. Promo-LEX noterade därutöver 61 möjliga fall av missbruk av administrativa resurser. Underlaget visar risker för insyn och otillbörlig kampanjpåverkan, men fastställer inte rysk statlig styrning, kontonas ansvariga eller att valresultatet manipulerades.",
+    "sources": [
+      {
+        "l": "Promo-LEX — Second observation report on the 15 November regional elections in ATU Gagauzia, 12 november 2026",
+        "t": "report",
+        "url": "https://promolex.md/en/promo-lex-launched-its-second-observation-report-on-the-15-november-regional-elections-in-atu-gagauzia/"
+      },
+      {
+        "l": "Promo-LEX — Summary of findings and conclusions on the 15 November regional elections, November 2026",
+        "t": "report",
+        "url": "https://promolex.md/en/promo-lex-om-summary-statement-of-findings-and-conclusions-on-the-regional-elections-in-atu-gagauzia-of-15-november-2026/"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "AUDIT"
+      ],
+      "gaps": [
+        "REPORTING",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Promo-LEX dokumenterar kampanjaktiviteter och annonser men redovisar inte bevis för att en rysk myndighet styrde kontona eller påverkade valresultatet. Kandidaten förnekade koppling till TikTok-kontona.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c340",
+    "title": "Polen — två män misstänks för ryskstyrd spaning och fordonsbränder",
+    "date": "2026-11-03",
+    "loc": {
+      "m": "Mińsk Mazowiecki",
+      "r": "Masoviens vojvodskap",
+      "lat": 52.1795,
+      "lng": 21.5726,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "EXTERNAL_SUPPLIER",
+    "status": "INDICATION",
+    "legal_status": "CHARGED",
+    "summary": "Polens säkerhetstjänst ABW uppger att två män på ryska underrättelsetjänsters uppdrag spanade på kritisk och militär infrastruktur och anlade fordonsbränder. Enligt utredarna bytte de registreringsskyltar till nummer som liknade dem på fordon i ukrainsk militär tjänst, möjligen för att rikta misstankar mot Ukraina. Männen greps i Mińsk Mazowiecki den 3 november, åtalades för spioneri och sabotage och häktades i tre månader. Uppgifterna kommer från en pågående utredning och skuld är inte fastställd.",
+    "sources": [
+      {
+        "l": "Polens inre säkerhetsbyrå ABW — Två misstänkta för spionage och sabotage på uppdrag av Ryssland, 4 november 2026",
+        "t": "authority",
+        "url": "https://www.abw.gov.pl/pl/aktualnosci/2851,ABW-zatrzymala-dwoch-podejrzanych-o-szpiegostwo-i-dywersje-na-rzecz-Rosji.html"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "SABOTAGE",
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "POLICE"
+      ],
+      "gaps": [
+        "PHYSICAL",
+        "GOVERNANCE"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "ABW redovisar myndighetens utredningsuppgifter; de misstänkta har inte dömts. Den möjliga avsikten att rikta misstankar mot Ukraina beskrivs som en hypotes i utredningen.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c341",
+    "title": "USA — tidigare IT-entreprenör erkänner spionage för Etiopien",
+    "date": "2021-12",
+    "loc": {
+      "m": "Washington, D.C.",
+      "r": "USA",
+      "lat": 38.9072,
+      "lng": -77.0369,
+      "p": "city"
+    },
+    "sector": "DEFENCE",
+    "actor": "FOREIGN_POWER",
+    "role": "INSIDER",
+    "status": "CONFIRMED",
+    "legal_status": "GUILTY_PLEA",
+    "summary": "Abraham Teklu Lemma, tidigare IT-entreprenör med uppdrag för USA:s utrikesdepartement, justitiedepartement och National Reconnaissance Office, erkände den 3 november 2026 en konspiration för att lämna ut försvarsuppgifter till Etiopiens regering. Enligt det amerikanska justitiedepartementet utnyttjade han administratörsbehörighet för att ta ut hemligstämplade dokument, anteckningar och bilder, upp till nivån Top Secret/SCI, och lämna material till etiopiska företrädare från 2021 till gripandet i augusti 2023. Myndigheten uppger att delar av informationen användes i militära operationer. Påföljden är ännu inte fastställd; domstolsförhandling är planerad till april 2027.",
+    "sources": [
+      {
+        "l": "USA:s justitiedepartement — Former U.S. Government Contractor Pleads Guilty to Spying for Ethiopia, 3 november 2026",
+        "t": "authority",
+        "url": "https://www.justice.gov/opa/pr/former-us-government-contractor-pleads-guilty-spying-ethiopia"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "ACCESS"
+      ],
+      "discovery": [
+        "COURT",
+        "SECURITY"
+      ],
+      "gaps": [
+        "ACCESS",
+        "LOGGING"
+      ],
+      "outcome": "COMPLETED",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "Lemma har erkänt konspirationen. Uppgifterna om vilken militär användning materialet fått kommer från amerikanska myndigheter; fängelsestraffet är inte fastställt vid uppdateringen.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "c342",
+    "title": "Kraków — falska narrativ sprids efter terrorattacken",
+    "date": "2026-11-07",
+    "loc": {
+      "m": "Kraków",
+      "r": "Lillpolens vojvodskap, Polen",
+      "lat": 50.0647,
+      "lng": 19.945,
+      "p": "city"
+    },
+    "sector": "INFORMATION_ENVIRONMENT",
+    "actor": "UNKNOWN",
+    "status": "CONFIRMED",
+    "legal_status": "REPORTING_ONLY",
+    "summary": "Efter masskjutningen i Kraków den 7 november spreds falska uppgifter om bland annat gärningsmannens identitet och påstådd inblandning från Polens regering eller EU. Polens digitaliseringsministerium uppgav att NASK anmält över 2 000 konton till plattformar för moderering. Myndigheten uppskattade de mest spridda falska narrativens sammanlagda räckvidd till över 200 miljoner visningar. Uppgifterna belägger spridning efter attacken, men inte vem som organiserade den eller att en viss stat låg bakom.",
+    "sources": [
+      {
+        "l": "Polens digitaliseringsministerium/NASK — Disinformation narratives related to the terrorist attack in Kraków, 8 november 2026",
+        "t": "authority",
+        "url": "https://www.gov.pl/web/cyfryzacja/narracje-dezinformacyjne-zwiazane-z-zamachem-terrorystycznym-w-krakowie"
+      }
+    ],
+    "coding": {
+      "methods": [
+        "INFORMATION_OPERATIONS"
+      ],
+      "discovery": [
+        "SECURITY",
+        "JOURNALISM"
+      ],
+      "gaps": [
+        "REPORTING",
+        "UNKNOWN"
+      ],
+      "outcome": "PARTIAL",
+      "basis": "EDITORIAL"
+    },
+    "source_note": "NASK:s över 2 000 konton avser konton som anmäldes till plattformarnas moderering. Räckvidden på över 200 miljoner är ministeriets uppskattning för de största falska narrativen tillsammans; aktör och eventuell samordning är inte fastställda.",
+    "last_updated": "2026-11-23",
+    "last_verified": "2026-11-23"
   }
 ];
 
@@ -14648,7 +15081,7 @@ SECTORS.forEach(s=>{
   if(description)s.desc_long=[...description.querySelectorAll(':scope > p')].map(p=>p.innerHTML).join('\n\n');
 });
 const ACTOR_LABELS={CRIMINAL_NETWORK:'Kriminellt nätverk',FOREIGN_POWER:'Främmande makt',EXTREMIST:'Extremistisk miljö',ECONOMIC_INTEREST:'Ekonomiskt intresse',CORRUPT_OFFICIAL:'Korrupt befattningshavare',ORGANIZED_CRIME:'Organiserad brottslighet',INSIDER:'Intern aktör',UNKNOWN:'Ej fastställd'};
-const SECTOR_LABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT',ENERGY_WATER:'Energi och vatten',RESEARCH:'Universitet och forskning'};
+const SECTOR_LABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT',ENERGY_WATER:'Energi och vatten',RESEARCH:'Universitet och forskning',INFORMATION_ENVIRONMENT:'Informationsmiljö'};
 const catLabels={ACCESS:'Åtkomst',BEHAVIOUR:'Beteende',CONTACT:'Kontakt',DIGITAL:'Digital',PROCUREMENT:'Upphandling',SOCIAL:'Socialt'};
 const actorNames={'criminal-network':'Kriminellt nätverk','foreign-power':'Främmande makt','extremist':'Extremism','economic-interest':'Ekonomiskt intresse'};
 const ACTORS=[{"id":"criminal-network","name":"Kriminellt nätverk","sub":"Organiserad brottslighet","color":"#C45C2E","goal":"Tillstånd, tillsyn, upphandling, bidrag, registeråtkomst, undvika lagföring","horizon":"Kort–medellång sikt","exposure":"HIGH","methods":["Relationsbygge","Möjliggörare (upparbetad)","Hot och skrämseltaktik","Vänskapskorruption","Placerad insider","Informationsinhämtning"],"note":"Brå uppskattade 2024 att omkring 700 möjliggörare var aktiva i Sverige. Rekryteringen sker ofta bland familj, vänner och bekanta. Samma person kan hjälpa flera nätverk och ge dem tillgång som annars är svår att få. I Polismyndighetens lägesbild motsvarar möjliggörarna omkring fem procent av de aktiva i kriminella nätverk, men de har stor betydelse för vad nätverken kan genomföra.","source":"Brå 2024 — Möjliggörare för kriminella nätverk","sourceUrl":"https://bra.se/rapporter/arkiv/2024-03-01-mojliggorare-for-kriminella-natverk","indicators":["Kontaktförsök från okända med koppling till pågående ärenden","Erbjudanden om tjänster, presenter eller intensivt socialt umgänge","Otillbörligt intresse för vem som hanterar specifika ärenden eller tillstånd","Frågor om interna rutiner, behörigheter, frånvaro eller driftstörningar","Oförklarlig ekonomisk förbättring hos medarbetare med känslig tillgång","Krypterad kommunikation med externa kontakter om interna frågor"],"cases":["c01","c02","c04","c05","c07","c08","c09","c15","c22","c26","c27","c32","c33","c34","c267"]},{"id":"foreign-power","name":"Främmande makt","sub":"Statligt eller statsunderstött","color":"#B8973A","goal":"Strategisk information, teknologitillgång, underrättelsedata, långsiktigt politiskt inflytande","horizon":"Lång sikt (år–decennier)","exposure":"HIGH","methods":["Systematisk OSINT-kartläggning","Rekrytering av insiders","Informationspåverkan och FIMI","Teknologistöld","Utnyttjande av systembrister"],"note":"Säkerhetspolisen beskriver rysk underrättelseverksamhet och en ökad vilja att ta risker. De kopplade fallen här gäller dokumenterat spioneri eller utländska påtryckningar. Transportstyrelsens och Lantmäteriets informationssäkerhetsbrister kan ha skapat möjligheter för andra aktörer, men underlaget belägger inte att en främmande makt låg bakom dessa brister.","source":"Säkerhetspolisen 2025–2026 — Ryssland, Kina och Iran","sourceUrl":"https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/ryssland-kina-och-iran.html","indicators":["Kontaktförsök från utländska organisationer med otydligt och brett formulerat syfte","Oväntat intresse för infrastrukturdetaljer, beslutsprocesser eller personalstruktur","Medarbetare med plötsliga ekonomiska förbättringar utan förklaring","Förfrågningar om känslig teknisk information under täckmantel av samarbete","IT-systembrister som möjliggör datainsamling utan enskild möjliggörare"],"cases":["c03","c53","c65","c142","c270","c271","c272"]},{"id":"extremist","name":"Extremistisk miljö","sub":"Ideologiskt driven","color":"#9B4FBB","goal":"Stoppa beslut, skrämma tjänstepersoner, delegitimera myndighet, finansiera verksamhet","horizon":"Kort–medellång sikt","exposure":"MEDIUM","methods":["Uthängning och doxxning","Samordnade trakasserier","Infiltration via legitima yrkesroller","Informationspåverkan mot beslutsprocess","Finansiering via offentliga bidrag"],"note":"Statskontoret beskriver hur otillåten påverkan kan skada både den utsatta personen och verksamhetens handlingsförmåga. Acta Publicas kartläggning visar kopplingar mellan personer i extremistmiljöer och offentligt finansierade verksamheter. En sådan koppling är en uppgift att pröva, inte ett bevis på infiltration eller att varje berörd verksamhet har missbrukats.","source":"Acta Publica 2020 — Möjliggörarna","sourceUrl":"https://actapublica.se/nyheter/rapport-mojliggorarna/","indicators":["Ökning av hotfulla meddelanden kring specifikt ärende eller beslut","Publicering av personuppgifter om medarbetare på externa plattformar","Samordnade negativa narrativ mot enskild tjänsteperson under kort tid","Kombination av digital trakassering och fysisk närvaro nära arbetsplats","Leverantörer med extremistbakgrund som uppträder legitimt vid bakgrundskontroll"],"cases":["c16","c18","c57"]},{"id":"economic-interest","name":"Ekonomiskt intresse","sub":"Kommersiell aktör","color":"#4A7B6F","goal":"Avtal, tillstånd, fördelaktig behandling i upphandling, tillsyn eller tilldelning","horizon":"Medellång sikt","exposure":"MEDIUM","methods":["Relationsbygge över tid","Informella leverantörskontakter","Gåvor och representation","Värvning efter avslutad tjänst","Förväntansskapande och beroenden"],"note":"Nära en tredjedel av alla mutgivare verkar inom bygg- och anläggningssektorn. Korruption växer ofta fram i långvariga leverantörsrelationer. I målet vid Akademiska sjukhuset betalades 4,76 miljoner kronor under sju år genom konsultfakturor, samtidigt som relationen utåt såg professionell och legitim ut.","source":"Sveriges Domstolar 2024 — mutmålet vid Akademiska sjukhuset","sourceUrl":"https://www.domstol.se/nyheter/2024/03/en-f.d.-overlakare-vid-akademiska-sjukhuset-har-domts-for-bl.a.-grovt-tagande-av-muta/","indicators":["Leverantörskontakter utanför dokumenterade upphandlingskanaler","Erbjudanden om framtida anställning till upphandlande personal","Onormalt intensivt socialt umgänge under känslig upphandlingsperiod","Informell marknadsdialog som påverkar kravspecifikationer","Inbjudningar till resor eller evenemang utan tydlig affärsmässig motivering"],"cases":["c12","c17","c28","c30","c31","c279","c282"]}];
@@ -15993,7 +16426,7 @@ let gActorF='all',gShowSectors=true,gShowLabels=false;
 let gDragging=null,gPanStart=null,gTx={x:0,y:0,s:1},gTick=0,gRaf=null;
 const ACOLORS={CRIMINAL_NETWORK:'#C45C2E',FOREIGN_POWER:'#B8973A',EXTREMIST:'#9B4FBB',ECONOMIC_INTEREST:'#4A7B6F',CORRUPT_OFFICIAL:'#2E7A6B',ORGANIZED_CRIME:'#B94A48',INSIDER:'#6B7A8F',UNKNOWN:'#7B8794'};
 const ALABELS={CRIMINAL_NETWORK:'Kriminellt nätverk',FOREIGN_POWER:'Främmande makt',EXTREMIST:'Extremistisk miljö',ECONOMIC_INTEREST:'Ekonomiskt intresse',CORRUPT_OFFICIAL:'Korrupt befattningshavare',ORGANIZED_CRIME:'Organiserad brottslighet',INSIDER:'Intern aktör',UNKNOWN:'Ej fastställd'};
-const SLABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT',ENERGY_WATER:'Energi och vatten',RESEARCH:'Universitet och forskning'};
+const SLABELS={LOCAL_GOV:'Kommuner och regioner',AUTHORITY:'Myndigheter',TRANSPORT:'Transport/Hamnar',SOCIAL:'Socialtjänst',CRIMINAL_JUSTICE:'Rättsväsende',PROCUREMENT:'Upphandling',LEGAL:'Juridik',HEALTH:'Hälso/sjukvård',FINANCE:'Finans',DEFENCE:'Försvar',CIVIL_SOCIETY:'Civilt samhälle',SECURITY:'Säkerhet',IT:'IT',ENERGY_WATER:'Energi och vatten',RESEARCH:'Universitet och forskning',INFORMATION_ENVIRONMENT:'Informationsmiljö'};
 
 function renderPatternRows(targetId,items,options={}){
   const target=document.getElementById(targetId);
